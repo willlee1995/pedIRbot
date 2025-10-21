@@ -1,0 +1,107 @@
+[
+  {
+    "id": "q1_en",
+    "question": "How long should my child fast before an interventional radiology procedure?",
+    "language": "en",
+    "category": "preparation",
+    "expected_topics": ["fasting", "food", "water", "time"]
+  },
+  {
+    "id": "q2_en",
+    "question": "What are the risks of embolization?",
+    "language": "en",
+    "category": "risks",
+    "expected_topics": ["complications", "bleeding", "infection"]
+  },
+  {
+    "id": "q3_en",
+    "question": "How long will my child need to stay in the hospital after the procedure?",
+    "language": "en",
+    "category": "post-procedure",
+    "expected_topics": ["recovery", "hospital stay", "discharge"]
+  },
+  {
+    "id": "q4_en",
+    "question": "Will my child need sedation or anesthesia?",
+    "language": "en",
+    "category": "preparation",
+    "expected_topics": ["sedation", "anesthesia", "pain"]
+  },
+  {
+    "id": "q5_en",
+    "question": "What should I bring to the hospital on the day of the procedure?",
+    "language": "en",
+    "category": "logistics",
+    "expected_topics": ["documents", "insurance", "arrival"]
+  },
+  {
+    "id": "q6_zh",
+    "question": "介入放射學手術前，我的孩子需要禁食多久？",
+    "language": "zh",
+    "category": "preparation",
+    "expected_topics": ["禁食", "食物", "水"]
+  },
+  {
+    "id": "q7_zh",
+    "question": "栓塞術有什麼風險？",
+    "language": "zh",
+    "category": "risks",
+    "expected_topics": ["併發症", "出血", "感染"]
+  },
+  {
+    "id": "q8_zh",
+    "question": "手術後我的孩子需要在醫院住多久？",
+    "language": "zh",
+    "category": "post-procedure",
+    "expected_topics": ["康復", "住院", "出院"]
+  },
+  {
+    "id": "q9_en",
+    "question": "What time should we arrive at the hospital?",
+    "language": "en",
+    "category": "logistics",
+    "expected_topics": ["arrival", "time", "check-in"]
+  },
+  {
+    "id": "q10_en",
+    "question": "Can I stay with my child during the procedure?",
+    "language": "en",
+    "category": "logistics",
+    "expected_topics": ["parent", "waiting", "procedure room"]
+  },
+  {
+    "id": "q11_en",
+    "question": "What medications should my child stop taking before the procedure?",
+    "language": "en",
+    "category": "preparation",
+    "expected_topics": ["medication", "anticoagulants", "stop"]
+  },
+  {
+    "id": "q12_en",
+    "question": "When can my child return to normal activities after the procedure?",
+    "language": "en",
+    "category": "post-procedure",
+    "expected_topics": ["recovery", "activities", "school"]
+  },
+  {
+    "id": "q13_zh",
+    "question": "手術期間我可以陪伴我的孩子嗎？",
+    "language": "zh",
+    "category": "logistics",
+    "expected_topics": ["家長", "等候", "手術室"]
+  },
+  {
+    "id": "q14_zh",
+    "question": "手術後何時可以恢復正常活動？",
+    "language": "zh",
+    "category": "post-procedure",
+    "expected_topics": ["康復", "活動", "上學"]
+  },
+  {
+    "id": "q15_en",
+    "question": "How do I contact the IR team if I have urgent questions before the procedure?",
+    "language": "en",
+    "category": "logistics",
+    "expected_topics": ["contact", "phone", "nurse"]
+  }
+]

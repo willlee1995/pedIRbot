@@ -1,0 +1,42 @@
+# Core Dependencies
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# LLM and Embeddings
+openai==1.12.0
+ollama==0.1.6
+
+# Vector Database and Retrieval
+chromadb==0.4.22
+sentence-transformers==2.3.1
+rank-bm25==0.2.2
+
+# Document Processing
+markitdown==0.0.1a2
+markdown==3.5.2
+beautifulsoup4==4.12.3
+lxml==5.1.0
+
+# Web Scraping
+requests==2.31.0
+urllib3==2.1.0
+
+# Data Processing
+numpy==1.26.3
+pandas==2.2.0
+
+# Web Framework (for API)
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+
+# Utilities
+tqdm==4.66.1
+loguru==0.7.2
+tenacity==8.2.3
+
+# Evaluation
+scikit-learn==1.4.0
+scipy==1.12.0
+openpyxl==3.1.2
+

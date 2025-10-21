@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# Environment variables
+.env
+.env.local
+
+# Vector database
+chroma_db/
+*.db
+
+# Evaluation results
+evaluation_results/
+comparison_results/
+
+# Logs
+*.log
+logs/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Knowledge Base (optional - keep out of version control if contains sensitive data)
+# KB/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Excel files (generated reports)
+*.xlsx
+
+# Test outputs
+test_outputs/
+
