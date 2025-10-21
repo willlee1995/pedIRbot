@@ -4,9 +4,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-venv/
-env/
-ENV/
 build/
 develop-eggs/
 dist/
@@ -23,50 +20,44 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual environments
+# Virtual Environment
 venv/
 ENV/
 env/
+.venv
 
-# Environment variables
-.env
-.env.local
-
-# Vector database
-chroma_db/
-*.db
-
-# Evaluation results
-evaluation_results/
-comparison_results/
-
-# Logs
-*.log
-logs/
-
-# IDEs
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
+# Environment
+.env
+.env.local
+
+# Database
+chroma_db/
+*.db
+*.sqlite
+
+# Logs
+*.log
+logs/
+
 # OS
 .DS_Store
 Thumbs.db
-desktop.ini
-
-# Knowledge Base (optional - keep out of version control if contains sensitive data)
-# KB/
-
-# Temporary files
-temp/
-tmp/
-*.tmp
-
-# Excel files (generated reports)
-*.xlsx
 
 # Test outputs
-test_outputs/
+test_data/outputs/
+*.xlsx
+evaluations/
 
+# Converted markdown (can regenerate)
+KB/md/
+
+# Temporary files
+*.tmp
+.cursor/

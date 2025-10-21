@@ -17,7 +17,11 @@
 
 - **[UV_GUIDE.md](UV_GUIDE.md)** - Python environment management with UV (recommended)
 - **[OLLAMA_EMBEDDINGS.md](OLLAMA_EMBEDDINGS.md)** - Using Ollama for local embeddings (privacy-focused)
+- **[OLLAMA_MODEL_CONTEXT_LIMITS.md](OLLAMA_MODEL_CONTEXT_LIMITS.md)** - 🚨 Model max input lengths and chunk size limits
 - **[EMBEDDING_MODEL_GUIDE.md](EMBEDDING_MODEL_GUIDE.md)** - Choosing and configuring embedding models
+- **[LOW_SIMILARITY_TROUBLESHOOTING.md](LOW_SIMILARITY_TROUBLESHOOTING.md)** - Fixing poor retrieval quality
+- **[TWO_STAGE_INGESTION.md](TWO_STAGE_INGESTION.md)** - 📝 **Two-stage document ingestion workflow**
+- **[RETRIEVAL_ANALYSIS_GUIDE.md](RETRIEVAL_ANALYSIS_GUIDE.md)** - Analyzing and inspecting matched documents
 - **[CHUNKING_EXPLAINED.md](CHUNKING_EXPLAINED.md)** - How document chunking works and avoiding data loss
 - **[SCRAPING_GUIDE.md](SCRAPING_GUIDE.md)** - Web scraping for SickKids content collection
 - **[MARKITDOWN_GUIDE.md](MARKITDOWN_GUIDE.md)** - Document conversion and processing

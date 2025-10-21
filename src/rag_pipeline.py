@@ -153,6 +153,23 @@ Every response you provide must end with the following disclaimer:
                 'is_emergency': False
             }
 
+        # Filter out low-quality matches (cosine similarity < 0.4)
+        MIN_RELEVANCE_SCORE = 0.4
+        high_quality_docs = [doc for doc in retrieved_docs if doc.get('score', 0) >= MIN_RELEVANCE_SCORE]
+
+        if not high_quality_docs:
+            logger.warning(f"All retrieved documents below quality threshold ({MIN_RELEVANCE_SCORE})")
+            logger.warning(f"Top score: {retrieved_docs[0].get('score', 0):.3f}")
+            return {
+                'response': "I'm sorry, I couldn't find sufficiently relevant information to answer that question confidently. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?",
+                'sources': [],
+                'is_emergency': False
+            }
+
+        # Use high-quality docs only
+        retrieved_docs = high_quality_docs
+        logger.info(f"Using {len(retrieved_docs)} high-quality documents (score >= {MIN_RELEVANCE_SCORE})")
+
         # Format context
         context = self._format_context(retrieved_docs)
 

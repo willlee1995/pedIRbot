@@ -32,14 +32,15 @@ class Settings(BaseSettings):
 
     # Application Settings
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR"] = "INFO"
-    max_chunk_size: int = 300  # Reduced for embeddinggemma compatibility
+    max_chunk_size: int = 400  # Reduced for embeddinggemma compatibility
     chunk_overlap: int = 50
+    min_relevance_score: float = 0.4  # Minimum similarity score for retrieval
 
     # Embedding Model Options
     embedding_provider: Literal["openai",
                                 "sentence-transformer", "ollama"] = "openai"
     sentence_transformer_model: str = "BAAI/bge-m3"
-    ollama_embedding_model: str = "embeddinggemma"
+    ollama_embedding_model: str = "qwen3-embedding:0.6b"
 
     # LLM Provider
     llm_provider: Literal["openai", "ollama"] = "openai"

@@ -28,11 +28,13 @@ The PedIR RAG backend includes web scrapers to collect content from **SickKids A
 Simple keyword-based scraper with two modes.
 
 **Search Mode** (searches site for keywords):
+
 ```bash
 python scripts/scrape_sickkids.py --mode search
 ```
 
 **Manual Mode** (scrapes specific URLs from file):
+
 ```bash
 python scripts/scrape_sickkids.py --mode manual --urls-file KB/SickKids/urls_to_scrape.txt
 ```
@@ -42,11 +44,13 @@ python scripts/scrape_sickkids.py --mode manual --urls-file KB/SickKids/urls_to_
 More sophisticated scraper with content filtering and sitemap support.
 
 **Using Sitemap**:
+
 ```bash
 python scripts/scrape_sickkids_advanced.py --sitemap
 ```
 
 **Manual URLs**:
+
 ```bash
 python scripts/scrape_sickkids_advanced.py --urls "https://www.aboutkidshealth.ca/article1" "https://www.aboutkidshealth.ca/article2"
 ```
@@ -56,11 +60,13 @@ python scripts/scrape_sickkids_advanced.py --urls "https://www.aboutkidshealth.c
 ### Step 1: Find Relevant URLs
 
 Visit AboutKidsHealth and search for relevant topics:
+
 ```
 https://www.aboutkidshealth.ca/
 ```
 
 Search for:
+
 - "image guided procedures"
 - "interventional radiology"
 - "fluoroscopy"
@@ -151,20 +157,20 @@ Each scraped page is saved as HTML with metadata:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="source" content="SickKids AboutKidsHealth">
-    <meta name="source_org" content="SickKids">
-    <meta name="url" content="https://...">
-    <meta name="scraped_date" content="2025-10-21">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="source" content="SickKids AboutKidsHealth" />
+    <meta name="source_org" content="SickKids" />
+    <meta name="url" content="https://..." />
+    <meta name="scraped_date" content="2025-10-21" />
     <title>Image-Guided Biopsy in Children</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Image-Guided Biopsy in Children</h1>
     <p><strong>Source:</strong> SickKids AboutKidsHealth</p>
-    <hr>
+    <hr />
     [Article content...]
-</body>
+  </body>
 </html>
 ```
 
@@ -201,6 +207,7 @@ python scripts/scrape_sickkids_advanced.py --sitemap --delay 2.0
 ### Content Relevance Filtering
 
 The advanced scraper automatically:
+
 - Filters URLs by keywords
 - Checks page content for relevance
 - Skips non-medical pages
@@ -209,6 +216,7 @@ The advanced scraper automatically:
 ### Progress Tracking
 
 Uses `tqdm` for progress bars:
+
 ```
 Scraping pages: 45/100 [████████░░] 45% ETA: 2m 15s
 ```
@@ -262,6 +270,7 @@ with open('KB/SickKids/scrape_metadata.json') as f:
 **Cause**: Network issues or site blocking
 
 **Solution**:
+
 ```bash
 # Increase timeout and delay
 --delay 3.0
@@ -291,7 +300,8 @@ python scripts/scrape_sickkids.py --mode manual --urls-file KB/SickKids/urls_to_
 
 **Cause**: Site structure changed or wrong content selectors
 
-**Solution**: 
+**Solution**:
+
 1. Inspect a sample page source
 2. Update content selectors in the scraper
 3. Report issue for script update
@@ -358,10 +368,12 @@ Useful search terms for AboutKidsHealth:
 Relevant areas to look for:
 
 1. **Imaging Procedures**
+
    - X-ray, CT, MRI, Ultrasound
    - Fluoroscopy-guided procedures
-   
+
 2. **Interventional Procedures**
+
    - Biopsies
    - Drainage procedures
    - Catheter placements
@@ -420,4 +432,3 @@ After scraping SickKids content:
 ---
 
 **Remember**: Be a good web citizen! Scrape responsibly. 🌐
-

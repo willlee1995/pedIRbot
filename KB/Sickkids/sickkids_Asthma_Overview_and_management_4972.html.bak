@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="source" content="SickKids AboutKidsHealth">
+    <meta name="source_org" content="SickKids">
+    <meta name="url" content="https://www.aboutkidshealth.ca/healthaz/respiratory/asthma-overview-and-management/?language=en">
+    <meta name="scraped_date" content="2025-10-21">
+    <meta name="category" content="Image Guidance">
+    <title>Asthma: Overview and management</title>
+</head>
+<body>
+    <h1>Asthma: Overview and management</h1>
+    <p><strong>Source:</strong> <a href="https://www.aboutkidshealth.ca/healthaz/respiratory/asthma-overview-and-management/?language=en">SickKids AboutKidsHealth</a></p>
+    <p><strong>Original URL:</strong> https://www.aboutkidshealth.ca/healthaz/respiratory/asthma-overview-and-management/?language=en</p>
+    <hr>
+    <article class="container" data-displaytemplate="Item_AKH-Article">
+<select aria-label="article language" class="link-list" id="lang-switch" onchange="window.location.href=this.value">
+<option style="display:none" value="none">English</option>
+<option class="cbs-Line1Link ms-noWrap ms-displayBlock article-lang" value="/healthaz/respiratory/asthma-overview-and-management/?language=en">English</option>
+<option class="cbs-Line1Link ms-noWrap ms-displayBlock article-lang" value="/healthaz/respiratory/asthma-overview-and-management/?language=zh-Hans">Chinese (Simplified)</option>
+<option class="cbs-Line1Link ms-noWrap ms-displayBlock article-lang" value="/healthaz/respiratory/asthma-overview-and-management/?language=fr">French</option>
+</select>
+<div id="article-container">
+<div class="col-md-12">
+<div class="jumbotron">
+<h1 id="article_title">Asthma: Overview and management</h1>
+<div dir="ltr">
+<a class="author" href="/about/contributors/">
+By SickKids staff                                </a>
+</div>
+</div>
+<div aria-hidden="true" id="wb-container">
+<div aria-roledescription="ReadSpeaker Audio Player" class="rs_skip rsbtn rs_preserve" id="webreader_button" role="widget"><a accesskey="L" class="rsbtn_play" href="//app-na.readspeaker.com/cgi-bin/rsent?customerid=6244&amp;lang=en_us&amp;readid=article-container&amp;url=" rel="nofollow" title="Listen to this article"> <span class="rsbtn_left rsimg rspart"> <span class="rsbtn_text"> <span id="listen">Listen</span> </span> </span> </a></div>
+</div>
+<div class="pdf-container rs_skip" style="display: block;">
+<a class="" href="/api/PDF?GeneratePdf&amp;pageURL=https://www.aboutkidshealth.ca/healthaz/respiratory/asthma-overview-and-management/?Print=true&amp;pageGuid=a2f0992b-fd3a-4738-a31b-f7b5e30bb49e" id="akh-pdf-download-button" onclick="">
+<i aria-hidden="true" class="material-icons">
+                                            download_for_offline
+                                        </i>
+<span class="pdf-label">
+                                            Download PDF
+                                        </span>
+</a>
+<!--
+                                    <a href="#" data-url="/api/PDF?GeneratePdf&amp;pageURL=https://www.aboutkidshealth.ca/healthaz/respiratory/asthma-overview-and-management/?Print=true&amp;pageGuid=a2f0992b-fd3a-4738-a31b-f7b5e30bb49e&amp;newPage=true"
+                                       id="akh-pdf-print-button"
+                                       class=""
+                                       onclick="">
+                                       -->
+<a href="#" id="akh-pdf-print-button">
+<i aria-hidden="true" class="material-icons">
+                                            print_for_offline
+                                        </i>
+<span class="pdf-label">
+                                            Print
+                                        </span>
+</a>
+<div class="pdfloader"></div>
+</div>
+<dialog class="contactModal" id="pdfAlert" style="z-index: 9999; position: relative; border-radius: 16px;">
+<p style="text-align:center">
+                                        PDF download is not available for Arabic and Urdu languages at this time. Please use the browser print function instead
+                                        <br/><br/>
+<button id="closeFeedbackButton" onclick="document.getElementById('pdfAlert').close();" style="background-color: #0059ad; align: center; color: #fff; margin: 0; text-transform: none; font-size: 1.1rem; padding: 5px; border-radius: 5px;">
+                                            Close
+                                        </button>
+</p>
+</dialog>
+<div id="webreader-section">
+<div class="panel-body" id="article-overview">
+<div id="brand-photo" style="display:none;">
+</div>
+<p>
+<p>Asthma is a condition that affects the lungs and causes breathing difficulties. Learn about symptoms, how it is diagnosed and managed, and how to care for your child after a hospital visit for asthma.</p></p>
+</div>
+<div class="panel panel-info clearfix">
+<div class="panel-body" id="key-points">
+<!-- Image gallery -->
+<div class="rs_skip rs_preserve" id="gallery-frame">
+<div id="image-gallery">
+<div class="slider-for hidden">
+</div>
+<div class="slider-nav hidden">
+</div>
+</div>
+</div>
+<h2>Key points</h2><ul><li>Asthma is a lifelong condition, but good asthma control can allow your child to live a normal life.</li><li>In children with asthma, certain conditions or triggers cause the airways to narrow, become swollen and produce mucus. This makes it hard to breathe.</li><li>The medicines you will use to treat your child's asthma are guided by an asthma action plan that you develop with your child's health-care provider. Asthma medicines include controller and reliever/rescue medicines. Your child will likely need more than one medication to manage their asthma.</li><li>The most effective way to control your child's asthma is to take medicines as prescribed and minimize exposure to the most common asthma triggers.</li><li>Early warning signs like persistent cough or tiring easily during physical activity can signal that asthma is worsening and needs more treatment. If you see danger signs like having difficulty speaking or turning blue, give rescue medication and go to the nearest Emergency Department.</li></ul>
+</div>
+</div>
+<div class="article-text" id="panel-container">
+<!-- For NON drugs type article, show the 'Expand All/Collapse All' CTA below the introduction field-->
+<div class="open-all-btn-wrapper">
+<button aria-controls="panel-container" aria-expanded="false" class="btn-success rs_skip rs_preserve" id="open-all-panels" type="button">
+<span class="pull-left clickable" data-close="Collapse All" data-expand="Expand All">Expand All</span>
+<i aria-hidden="true" class="mdi pull-right mdi-chevron-down"></i>
+</button>
+</div>
+<!-- For drugs type article, show the 'Expand All/Collapse All' CTA below the introduction field-->
+<!-- Accordions -->
+<div class="panel">
+<div aria-controls="article-IntroductionAccordion" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Introduction</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-IntroductionAccordion">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="IntroductionAccordion" id="article-IntroductionAccordion" role="tabpanel" style="display: none;">
+<figure>
+<span class="asset-image-title">Narrowing of airways in asthma</span><picture><source sizes="356px" srcset="/globalassets/assets/asthma_narrow_airways_med_ill_en.jpg?format=webp&amp;width=356&amp;quality=60 356w" type="image/webp"/><source sizes="356px" srcset="/globalassets/assets/asthma_narrow_airways_med_ill_en.jpg?width=356&amp;quality=60 356w"/><img alt="Normal airways, muscles and alveoli compared to those during an asthma attack" decoding="async" loading="lazy" src="/globalassets/assets/asthma_narrow_airways_med_ill_en.jpg?width=356&amp;quality=60" width="356"/></picture><figcaption class="asset-image-caption">During an asthma attack, the muscles around the airways get tight. The airways narrow, become swollen and produce mucus, making it hard to breathe.</figcaption></figure>
+<h2>What is asthma?</h2><p>Asthma is a chronic (long-term) condition where the lungs “overreact” to certain conditions or triggers. This leads to difficulty breathing. There are different reasons children develop asthma, but often the triggers cause inflammation in the lungs. While there is no cure for asthma, with proper management, children can play, exercise and lead normal healthy lives.</p><h2>How asthma affects your child’s lungs</h2><p>If your child has asthma, their airways (breathing passages) are extra sensitive and quick to react to certain conditions or triggers. When exposed to these triggers, the airways become inflamed, swollen and produce extra mucus, and the muscles around the airways tighten. When this happens, it blocks the flow of air into and out of the lungs. This makes it hard to breathe.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-SignsAndSymptoms" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Signs and symptoms</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-SignsAndSymptoms">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="SignsAndSymptoms" id="article-SignsAndSymptoms" role="tabpanel" style="display: none;">
+<figure class="asset-c-100"><span class="asset-anim-title">What happens during an asthma attack?</span>
+<div class="asset-animation asset-cv-animation"><iframe src="/assets/Animations/Animation/What happens during an asthma attach/WhatHappensDuringAsthmaAttack_CANVAS_EN .html"></iframe>  </div>
+<p class="sr-only">This click-through animation demonstrates what happens within the lungs during an asthma attack and how medications can help.</p>
+</figure>
+<h2>What are the signs and symptoms of asthma?</h2>
+<p>Asthma can affect different children in different ways. Common signs and symptoms include:</p>
+<ul>
+<li>coughing, especially at night or with exercise</li>
+<li>wheezing (high-pitched whistling sound when breathing in or out)</li>
+<li>chest tightness or heaviness</li>
+<li>feeling short of breath</li>
+</ul>
+<h2>Asthma symptoms are not always the same</h2>
+<p>Asthma symptoms can vary from child to child, even within the same family. Your child’s asthma may also look or feel different from one episode to the next. They may have different asthma symptoms triggered by different things.</p>
+<h2>Early warning signs</h2>
+<p>Asthma attacks (also called flare-ups or exacerbations) can happen suddenly, but often build up slowly over hours or days. Watching for early warning signs can help you identify if your child is having breathing problems. This can be especially helpful for younger children, who may not be able to tell you how they are feeling.</p>
+<p>Early warning signs of asthma in your child may include:</p>
+<ul>
+<li>waking up at night due to coughing or difficulty breathing, even if only occurring once during the week</li>
+<li>being unable to keep up with other children, or taking frequent breaks, while playing or exercising</li>
+<li>having trouble catching their breath, or breathing faster than usual</li>
+<li>coughing</li>
+<li>vomiting from coughing</li>
+<li>needing to take reliever medicine more than two days during the week</li>
+</ul>
+<p>If your child is experiencing early warning signs, follow the instructions on your child’s <a href="https://www.lung.ca/sites/default/files/LungAssociation_PediatricAsthmaActionPlan_EN.pdf">asthma action plan</a>. This may include giving reliever (rescue) medicine more often and limiting physical activity until their symptoms are improved.</p>
+<h2>Asthma danger signs</h2>
+<p>Your child may show physical changes when their asthma symptoms are serious or when their condition gets worse. It is important that you learn how to spot these signs to know when to seek help from a health-care provider.</p>
+<p>Asthma danger signs include:</p>
+<ul>
+<li>coughing or wheezing non-stop</li>
+<li>having difficulty feeding (babies) or having difficulty talking (children)</li>
+<li>feeling unusually sleepy or having trouble waking up</li>
+<li>“sucking in” of the skin around the neck or between/below the ribs while breathing</li>
+<li>appearing blue or grey around the mouth</li>
+<li>needing reliever medicine sooner than every four hours</li>
+</ul>
+<p><strong>If you see any of these danger signs, you need to act right away. Follow your child’s <a href="https://www.lung.ca/sites/default/files/LungAssociation_PediatricAsthmaActionPlan_EN.pdf">asthma action plan</a>, continue giving reliever (rescue) medicine, and go to the nearest Emergency Department or call 911 immediately.</strong></p>
+<h3>How do I know if my child is having trouble breathing?</h3>
+<div class="asset-video"><iframe src="https://www.youtube.com/embed/NPQJRr7R1SU?si=ooUYdsXcOEpwgM6x"></iframe><br/></div> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-CausesRiskFactors" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Causes, risk factors and prevalence</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-CausesRiskFactors">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="CausesRiskFactors" id="article-CausesRiskFactors" role="tabpanel" style="display: none;">
+<h2>How common is asthma?</h2><p>Asthma is one of the most common chronic (long-term) illnesses in children. Up to 20% of children and adolescents in Canada have asthma.</p><h2>What causes asthma?</h2><p>There is no single cause of asthma. Many different factors, including genetic factors (passed on through families) and environmental factors, work together to make the airways more inflamed and sensitive in children with asthma.</p><h2>Risk factors for asthma</h2><p>There are some factors that may make your child more likely to have asthma. These include:</p><ul><li>having <a href="/healthaz/allergy/allergies/">allergies</a> and/or <a href="/healthaz/dermatology/eczema-atopic-dermatitis/">eczema</a></li><li>having a family history of asthma, allergies and/or eczema</li><li>being exposed to tobacco smoke before birth and/or during childhood</li><li>having a respiratory infection called <a href="/healthaz/infectious-diseases/respiratory-syncytial-virus-rsv/">respiratory syncytial virus (RSV)</a> during childhood</li><li>being born early (premature) or with low birth weight</li></ul><p>Remember, these are only risk factors. They make it more likely that your child may have asthma, but not every child with these risk factors has asthma. Children can also get asthma even without having these risk factors. For example, your child can still have asthma even if there is no history of allergies, eczema, or asthma in your family.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-Diagnosis" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Diagnosis</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-Diagnosis">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="Diagnosis" id="article-Diagnosis" role="tabpanel" style="display: none;">
+<h2>How is asthma diagnosed?</h2><p>Early diagnosis and treatment of asthma and allergies are helpful to control asthma symptoms and prevent your child’s asthma from becoming worse.</p><p>To make a diagnosis of asthma, your child’s health-care provider will do the following:</p><ul><li>Ask you about your child’s current symptoms and past health, as well as the health of other family members, including asking about allergies and exposures to things that can affect breathing. This is called taking a medical and family history.</li><li>Physically examine your child, including listening to your child’s breathing with a stethoscope.</li><li>For children over the age of six or seven, they may order a test called <a href="/healthaz/respiratory/pulmonary-function-testing/">spirometry or pulmonary function testing (PFT)</a>. During this test, your child will be asked to breathe out as fast and as long as they can through a special tube. The tube is connected to a machine that measures your child’s breathing.</li></ul><p>It can sometimes be challenging for health-care providers to make a diagnosis of asthma in a young child, especially because that child may not be able to tell the provider how they are feeling. Asthma-like symptoms can also occur with other health problems. Your child’s health-care provider may need to see your child multiple times or give your child some medication before they can give a final diagnosis of asthma.</p><h2>Allergy tests</h2><p>Some children with asthma also have <a href="/healthaz/allergy/allergies/">allergies</a>. Being around things that your child is allergic to can make their asthma worse. Therefore, your child’s health-care provider may also order allergy testing. The most common type of allergy test is called a skin prick test. This is a quick test that can look for reactions to multiple allergens (allergic triggers). Results from this test take about 15 minutes.</p><p>You can read more about allergies and allergy testing in the <a href="/learninghub/allergy/">Allergy Learning Hub</a>.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-Treatment" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Treatment</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-Treatment">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="Treatment" id="article-Treatment" role="tabpanel" style="display: none;">
+<h2>How is asthma treated?</h2><p>Asthma can be treated with many different medicines. Asthma medications do not cure asthma, but they can help control your child’s asthma symptoms, prevent future asthma attacks, and keep your child's asthma from getting worse. Most children need more than one medication to help control their asthma.</p><h2>Developing an action plan for your child’s asthma</h2><p>Your child’s asthma medicines are part of an 
+   <a href="https://www.lung.ca/sites/default/files/LungAssociation_PediatricAsthmaActionPlan_EN.pdf">asthma action plan</a> that you will develop with your child’s health-care provider. The action plan tells you what to do if your child is well, having mild symptoms or having severe worsening. Remember that asthma symptoms may change over time. Have your child see their health-care provider regularly to monitor their asthma and adjust their action plan as needed.</p><h2>Types of asthma medicines</h2><p>Asthma medicines can be broken down into different groups, including reliever/rescue medications, controller medications, and other medications. Some asthma medicines are inhaled (breathed in) and some are swallowed. Inhaled medicines have been shown to be very safe in children.</p>
+<figure><span class="asset-image-title">Asthma relievers</span><picture><source sizes="356px" srcset="/globalassets/assets/illustrations/asthma_relievers_equip_ill_en.jpg?format=webp&amp;width=356&amp;quality=60 356w" type="image/webp"/><source sizes="356px" srcset="/globalassets/assets/illustrations/asthma_relievers_equip_ill_en.jpg?width=356&amp;quality=60 356w"/><img alt="Inhalers for asthma relief" decoding="async" loading="lazy" src="/globalassets/assets/illustrations/asthma_relievers_equip_ill_en.jpg?width=356&amp;quality=60" width="356"/></picture><figcaption class="asset-image-caption">There are many different kinds of reliever medicines for asthma. Reliever inhalers are usually blue.</figcaption></figure>
+<h3>Reliever/rescue medicine</h3><p>Reliever medicines are also called short-acting bronchodilators. "Broncho" refers to the airways, and "dilator" means expand, or open up. Short-acting bronchodilators provide quick relief for asthma symptoms during a flare-up. They are sometimes also used before exercise, to prevent worsening symptoms. Reliever medications work quickly, within just a few minutes, by relaxing the muscles around the airways. You will sometimes hear them called rescue medicines. Inhaled bronchodilators are available in two forms: puffers (<a href="/healthaz/respiratory/asthma-using-a-metered-dose-inhaler-mdi-with-a-spacer/">metered-dose aerosol inhalers [MDIs]</a>) or dry powder inhalers. A puffer can be used with a spacer in children and adults of all ages, while dry powder inhalers such as a 
+   <a href="/healthaz/respiratory/asthma-using-a-turbuhaler/">Turbuhaler</a> or a 
+   <a href="/healthaz/respiratory/asthma-using-a-diskus-inhaler/">Diskus</a> can be used without a spacer in some children over the age of eight.</p><p>Your child should always have their reliever/rescue medicine available in case they need to use it.</p><p>Examples of reliever medications include:</p><ul><li>
+<a href="/drugaz/salbutamol-by-inhalation/">salbutamol</a> (Ventolin®, Airomir®)</li><li>
+<a href="/drugaz/terbutaline/">terbutaline</a> (Bricanyl®)</li></ul>
+<figure><span class="asset-image-title">Asthma controllers</span><picture><source sizes="356px" srcset="/globalassets/assets/illustrations/asthma_controllers_equip_ill_en.jpg?format=webp&amp;width=356&amp;quality=60 356w" type="image/webp"/><source sizes="356px" srcset="/globalassets/assets/illustrations/asthma_controllers_equip_ill_en.jpg?width=356&amp;quality=60 356w"/><img alt="Inhalers and tablets for controlling asthma" decoding="async" loading="lazy" src="/globalassets/assets/illustrations/asthma_controllers_equip_ill_en.jpg?width=356&amp;quality=60" width="356"/></picture><figcaption class="asset-image-caption">There are different kinds of controller medicines for asthma. Controller inhalers are usually brown, red, or orange.</figcaption></figure>
+<h3>Controller/preventer medicine</h3><p>Controller medicines help to control the swelling (inflammation) of your child’s airways. They are used for long periods of time. Children with asthma will usually need to take a controller every day, even if they are feeling well, to reduce swelling and mucus in the airways and help prevent asthma attacks. Controller medicines should not be used as rescue medication during an asthma attack.</p><p>There are many different types of controller medications, including inhaled steroids (corticosteroids), inhaled long-acting bronchodilators (LABAs) and oral leukotriene receptor antagonists. Some children with asthma need multiple controller medicines to best manage their asthma symptoms.</p><p>
+<strong>Inhaled steroids</strong></p><p>Corticosteroids are hormones that bodies naturally produce. Inhaled corticosteroids are very similar to these hormones. They are used daily to treat mild, moderate, and severe asthma. On average, inhaled steroids usually take from two and four weeks to start working.</p><p>These are some examples of inhaled steroids:</p><ul><li>
+<a href="/drugaz/beclomethasone-for-inhalation/">beclomethasone</a> (Qvar®)</li><li>
+<a href="/drugaz/budesonide-for-inhalation/">budesonide</a> (Pulmicort®)</li><li>ciclesonide (Alvesco®)</li><li>
+<a href="/drugaz/fluticasone/">fluticasone</a> (Flovent®)</li></ul><p>
+<strong>Long-acting bronchodilators (LABAs)</strong></p><p>LABAs open up the muscles that surround the airways. Your child may take a LABA with an inhaled steroid, as they can help inhaled steroids to work better. They should not be used alone without inhaled steroids. Some examples of LABAs are:</p><ul><li>formoterol (Oxeze®)</li><li>
+<a href="/drugaz/salmeterol/">salmeterol</a> (Serevent®)</li></ul><p>
+<strong>Combination medicines</strong></p><p>Combination medicines are a combination of inhaled steroids and LABAs. Combination medicines are a convenient way to take both medicines at the same time. They may give better asthma control. Some combination medicines are used for children of all ages and others are used only in children 12 years of age or older.</p><p>Some examples of combination medicines are:</p><ul><li>fluticasone + salmeterol (Advair®)</li><li>budesonide + formoterol (Symbicort®)</li><li>mometasone + fomoterol (Zenhale®)</li></ul><p>
+<strong>Leukotriene receptor antagonists</strong></p><p>Leukotriene receptor antagonists are pills that are taken daily. They help to prevent swelling and constriction of the airways. These may be used on their own, or together with inhaled steroids.</p><p>An example of a leukotriene-receptor antagonist is:</p><ul><li>
+<a href="/drugaz/montelukast/">montelukast</a> (Singulair®)</li></ul><h3>Oral steroids</h3><p>Oral steroids are used for severe asthma attacks to help reduce inflammation and swelling of the airways. Oral steroids come in pill or liquid form.</p><p>Examples of oral steroids include:</p><ul><li>
+<a href="/drugaz/dexamethasone/">dexamethasone</a></li><li>
+<a href="/drugaz/prednisone-prednisolone-and-dexamethasone-corticosteroids-taken-for-a-short-time/">prednisolone</a></li><li>
+<a href="/drugaz/prednisone-prednisolone-and-dexamethasone-corticosteroids-taken-for-a-short-time/">prednisone</a></li></ul><p>If your child’s health-care provider has prescribed oral steroids, make sure your child takes the full course of this medication. This will help stop your child’s asthma from getting worse. The course of steroids may last anywhere from two to five days. There are usually no serious side effects if your child takes oral steroids for this length of time.</p><h3>Biologics</h3><p>Biologic medicines target specific cells in the immune system that have been found to trigger severe asthma symptoms. These medications may be considered if your child’s asthma symptoms have not been effectively managed by other types or combinations of controller medicines. Biologic medications are given through a small needle under the skin (subcutaneous injection).</p><p>There are many factors that go into making the decision to start biologics. Your child’s health-care provider will discuss these with you in detail if biologic medication is being considered for your child.</p><h2>Side effects</h2><p>All medicines have the potential to cause side effects. Please review the potential side effects of each medication with a pharmacist or health-care provider. If you are concerned about your child experiencing any side effects, talk to their health-care provider. Your child should not stop using their asthma medicines without talking to their health-care provider first.</p><h2>Administering your child’s asthma medicines</h2><p>It is important to learn the correct technique for administering your child’s asthma medication. The videos and articles linked below will teach you how to use a metered-dose inhaler (MDI) with a spacer, a Diskus inhaler and a Turbuhaler.</p><p>If you have any questions about your child’s medications, talk to a member of their health-care team.</p><h3>Metered-dose inhaler (MDI) with spacer</h3><ul><li>Video: 
+      <a href="https://www.youtube.com/watch?v=iWG2nBmk9oE">How to take your puffer with a spacer and mask</a></li><li>Video: 
+      <a href="https://www.youtube.com/watch?v=U76G3viq6-k">How to take your puffer with a mouthpiece spacer</a></li><li>Video: 
+      <a href="https://www.youtube.com/watch?v=joI111ALxV0">Puffer + mouthpiece spacer – making the wrong sound</a></li><li>Article: 
+      <a href="/healthaz/respiratory/asthma-using-a-metered-dose-inhaler-mdi-with-a-spacer/">Using an MDI with a spacer</a></li></ul><h3>Diskus inhaler</h3><ul><li>Video: 
+      <a href="https://www.youtube.com/watch?v=GggtgZ95dcc">How to take the Diskus inhaler</a></li><li>Article: 
+      <a href="/healthaz/respiratory/asthma-using-a-diskus-inhaler/">Using a Diskus inhaler</a></li></ul><h3>Turbuhaler</h3><ul><li>Video: 
+      <a href="https://www.youtube.com/watch?v=871PwtqU3-s">How to use your Turbuhaler</a></li><li>Article: 
+      <a href="/healthaz/respiratory/asthma-using-a-turbuhaler/">Using a Turbuhaler</a></li></ul> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-Prevention" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Prevention</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-Prevention">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="Prevention" id="article-Prevention" role="tabpanel" style="display: none;">
+<h2>How can I control my child’s asthma?</h2><p>There are two important things that you can do to help control your child’s asthma. The first is to make sure that your child is taking their medications as directed by their health-care provider. Many children with asthma need to take medication even when they are feeling well. The second way to help control your child’s asthma is to minimize exposure to triggers that can make their symptoms worse.</p><h2>Asthma triggers</h2><p>Asthma triggers are different for each person. You can work with your child’s primary health-care provider to help identify them.</p><p>The most common asthma triggers in children are infections caused by viruses such as <a href="/healthaz/infectious-diseases/colds-viral-upper-respiratory-infections/">colds</a> and the <a href="/healthaz/infectious-diseases/influenza-flu-an-overview/">flu</a>. To avoid getting sick, your child should <a href="/healthaz/prevention/hand-hygiene/">wash their hands</a> frequently and avoid contact with others who are sick. It is highly recommended that your child receives a flu shot annually in addition to their <a href="/healthaz/prevention/immunization-schedule-for-children/">routine vaccines</a>. Other possible asthma triggers include:</p><ul><li>allergens such as dust mites, animals or pollens</li><li>cigarette, cannabis or vape smoke</li><li>irritants such as air pollution or strong scents</li><li>changes of weather, cold air or humidity</li><li>strong emotions such as stress or anxiety</li></ul><p>You can read more about asthma triggers in <a href="/healthaz/respiratory/living-with-asthma/">Living with asthma</a>.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-HelpingYourChild" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Helping your child</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-HelpingYourChild">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="HelpingYourChild" id="article-HelpingYourChild" role="tabpanel" style="display: none;">
+<h2>Frequently asked questions</h2><h3>Will my child outgrow asthma?</h3><p>Asthma may be a lifelong condition for some children. It is difficult to predict. Your child’s asthma may be controlled for periods of time and uncontrolled at others. Some children are not bothered by their asthma as they get older.</p><h3>Is steroid medication dangerous for my child?</h3><p>Inhaled corticosteroids are some of the best medications for controlling asthma. There have been no long-term effects associated with low doses. The risks with higher doses of inhaled steroids are always balanced with the risks of uncontrolled asthma. In most cases, the risks of asthma outweigh any potential risks with inhaled steroids. Always talk to your child’s health-care provider to discuss the pros and cons of any medication. Your child will have their growth monitored at each visit to ensure they are growing adequately on the dose they are prescribed.</p><h3>Can my child benefit from moving to a different climate or city?</h3><p>It is not clear whether moving to another environment would help your child. Children may develop more triggers in their new environment that may aggravate their asthma.</p><h3>Should my child see an asthma specialist?</h3><p>Your child’s primary care provider has been trained to care for people with asthma. If their health-care provider is having difficulty controlling your child's asthma or your child is having frequent emergency department visits or hospital admissions for asthma, you may wish to be referred to an asthma specialist.</p><h3>Will an air cleaner help my child’s asthma?</h3><p>A HEPA (high-efficiency particulate air) filter has been proven to be effective in decreasing pet dander. It is not as effective at filtering smaller particles such as dust and pollen.</p><h3>How do I use a puffer to give asthma medicine to my child?</h3><p>It is always recommended to use a spacer with your child’s inhaler (also called puffers) to ensure the medicine is delivered directly to the lungs. Puffers should always be used with a spacer, regardless of a person’s age.</p><h3>My child does not like using their puffer. What can I do?</h3><p>Giving puffers may upset a young child. This is natural. Try to make it fun for your child by singing, counting, watching a video or showing them how to use the puffer on yourself or a teddy bear. Your child will become more comfortable with puffers over time.</p><h3>How do I know when my child’s puffer is empty?</h3><p>All puffers have a certain number of doses in them. While some inhalers have dose counters, the best way to know when a puffer is empty is to keep track of the number of doses used. This can be done by using a 
+   <a href="/healthaz/respiratory/metered-dose-inhaler-mdi-dose-counter-tool/">dose counting sheet</a>.</p><h3>How often do I need to replace my child’s spacer?</h3><p>Most spacers last about a year before you need to replace them. Ask your child’s health-care provider for a spacer prescription when it is time to replace your child’s spacer.</p><h3>How do I clean my child’s spacer?</h3><p>It is very important to wash the spacer regularly to clear any build-up of saliva and keep the spacer working properly.</p><p>Once a week, wash the spacer with soap and warm water by hand and let it air dry. If your child has a cold or virus, it should be cleaned more often to prevent the spread of infection.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-FollowUpCare" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Follow-up care</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-FollowUpCare">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="FollowUpCare" id="article-FollowUpCare" role="tabpanel" style="display: none;">
+<h2>Follow-up care</h2><p>After an asthma attack, it is very important that you follow up with your child’s primary care provider within one week of a visit to the hospital, even if your child feels better. This is to ensure that they continue to improve and stay healthy.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-ResourcesAccordion" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Resources</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-ResourcesAccordion">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="ResourcesAccordion" id="article-ResourcesAccordion" role="tabpanel" style="display: none;">
+<h2>Resources</h2><p><a href="https://www.lung.ca/">Lung Association</a></p><p><a href="https://asthma.ca/">Asthma Canada</a></p><p><a href="/learninghub/asthma/">AboutKidsHealth</a></p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-References" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">References</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-References">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="References" id="article-References" role="tabpanel" style="display: none;">
+<h2>References</h2>
+<p>“<a href="https://health-infobase.canada.ca/datalab/asthma-blog.html">Asthma in Canada.</a>” <em>Government of Canada</em>, 1 May 2018, <a href="https://health-infobase.canada.ca/datalab/asthma-blog.html">https://health-infobase.canada.ca/datalab/asthma-blog.html</a>.</p>
+<p>“<a href="https://www.lung.ca/sites/default/files/AsthmaMedicationsEN.pdf">Fact Sheet: Asthma Medications</a>.” <em>The Canadian Lung Association</em>, <a href="https://www.lung.ca/sites/default/files/AsthmaMedicationsEN.pdf">https://www.lung.ca/sites/default/files/AsthmaMedicationsEN.pdf</a>.</p> </div>
+</div>
+</div>
+<!-- panel footer -->
+<small class="pull-left" id="review-date">Last updated: March 21st 2024</small>
+</div>
+</div>
+</div>
+</article>
+</body>
+</html>

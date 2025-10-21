@@ -26,6 +26,14 @@ def main():
     print("=" * 60)
     print()
 
+    # Parse command line args for verbose mode
+    import argparse
+    parser = argparse.ArgumentParser(description="Interactive RAG chat interface")
+    parser.add_argument("--verbose", "-v", action="store_true", help="Show detailed document information")
+    args = parser.parse_args()
+
+    show_details = args.verbose
+
     # Initialize RAG system
     print("Initializing RAG system...")
     try:
@@ -43,7 +51,12 @@ def main():
         return
 
     # Interactive loop
-    print("Chat interface ready! (Type 'quit' to exit, 'stats' for info)")
+    print("Chat interface ready!")
+    print("Commands:")
+    print("  'quit' - Exit")
+    print("  'stats' - Show vector store statistics")
+    print("  'details' - Toggle detailed document display")
+    print("  'verbose' - Same as 'details'")
     print("-" * 60)
     print()
 
@@ -69,6 +82,12 @@ def main():
                 print()
                 continue
 
+            if query.lower() in ['details', 'verbose']:
+                show_details = not show_details
+                print(f"\nDetailed document display: {'ON ✅' if show_details else 'OFF ❌'}")
+                print()
+                continue
+
             # Generate response
             print("\nPedIR-Bot: ", end="", flush=True)
 
@@ -81,10 +100,48 @@ def main():
 
             # Show sources
             if result.get('sources'):
-                print(f"\n[Sources: {len(result['sources'])} documents]")
-                for i, source in enumerate(result['sources'][:3], 1):
-                    print(
-                        f"  {i}. {source['source_org']} - {source['filename']} (score: {source['score']:.3f})")
+                if show_details:
+                    # Detailed view
+                    print(f"\n{'='*60}")
+                    print(f"📚 MATCHED DOCUMENTS ({len(result['sources'])} total)")
+                    print(f"{'='*60}")
+
+                    for i, source in enumerate(result['sources'], 1):
+                        score = source.get('score', 0)
+
+                        # Score indicator
+                        if score >= 0.7:
+                            score_indicator = "✅"
+                        elif score >= 0.5:
+                            score_indicator = "⚠️"
+                        else:
+                            score_indicator = "❌"
+
+                        print(f"\n📄 Document {i} {score_indicator}")
+                        print(f"{'─'*60}")
+                        print(f"File:     {source['filename']}")
+                        print(f"Source:   {source['source_org']}")
+                        print(f"Score:    {score:.4f} {score_indicator}")
+                        print(f"Length:   {len(source.get('content', ''))} characters")
+
+                        # Show chunk content preview
+                        content = source.get('content', '')
+                        if content:
+                            preview_len = 200
+                            print(f"\nContent preview:")
+                            if len(content) > preview_len:
+                                print(f"{content[:preview_len]}...")
+                            else:
+                                print(content)
+
+                    print(f"\n{'='*60}")
+                else:
+                    # Compact view
+                    print(f"\n[Sources: {len(result['sources'])} documents]")
+                    for i, source in enumerate(result['sources'][:5], 1):
+                        score = source.get('score', 0)
+                        score_icon = "✅" if score >= 0.7 else "⚠️" if score >= 0.5 else "❌"
+                        print(f"  {i}. {source['source_org']} - {source['filename']} (score: {score:.3f}) {score_icon}")
 
             print()
 

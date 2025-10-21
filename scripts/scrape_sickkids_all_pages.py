@@ -45,8 +45,23 @@ class SickKidsAllPagesScraper:
 
         self.metadata = {"scraped_articles": [], "search_queries": []}
 
+        # Procedure-related keywords for filtering
+        self.procedure_keywords = [
+            "image guidance", "image guided", "biopsy", "drainage",
+            "insertion", "catheter", "picc", "cvl", "port",
+            "ablation", "embolization", "angioplasty", "sclerotherapy",
+            "tube", "line", "procedure", "intervention"
+        ]
+
+        self.exclude_keywords = [
+            "body image", "self-esteem", "mental health", "bulimia",
+            "anorexia", "guided meditation", "relaxation imagery",
+            "parenting", "nutrition", "sleep"
+        ]
+
         logger.info(f"Initialized SickKids all-pages scraper")
         logger.info(f"Output: {self.output_dir}")
+        logger.info(f"Filtering enabled: Will exclude non-procedure content")
 
     def get_all_article_urls(self, query: str, num_pages: int = 10) -> List[str]:
         """
@@ -83,16 +98,27 @@ class SickKidsAllPagesScraper:
                 # Extract article links
                 article_links = soup.find_all('a', class_='ms-srch-item-path')
 
+                logger.debug(f"   Found {len(article_links)} total links with class='ms-srch-item-path'")
+
                 page_urls = []
                 for link in article_links:
                     href = link.get('href')
                     if href:
                         full_url = urljoin(self.BASE_URL, href)
 
-                        # Filter for English language
+                        # Get title for filtering
+                        h3 = link.find('h3')
+                        title = h3.get_text().strip() if h3 else ""
+
+                        # Filter for English language and procedure-related content
                         if 'language=en' in full_url.lower() and full_url not in all_urls:
-                            page_urls.append(full_url)
-                            all_urls.append(full_url)
+                            # Filter out non-procedure content
+                            if self._is_procedure_related(title, full_url):
+                                page_urls.append(full_url)
+                                all_urls.append(full_url)
+                                logger.debug(f"   ✓ {title}")
+                            else:
+                                logger.debug(f"   ✗ Filtered out: {title}")
 
                 logger.info(f"   ✓ Found {len(page_urls)} article URLs on page {page}")
 
@@ -121,6 +147,15 @@ class SickKidsAllPagesScraper:
             response.raise_for_status()
 
             soup = BeautifulSoup(response.content, 'html.parser')
+
+            # Clean unwanted sections BEFORE extracting content
+            # Remove elements with data-propname="AtSickKids"
+            for elem in soup.find_all(attrs={'data-propname': 'AtSickKids'}):
+                elem.decompose()
+
+            # Remove elements with aria-controls="article-AtSickKids"
+            for elem in soup.find_all(attrs={'aria-controls': 'article-AtSickKids'}):
+                elem.decompose()
 
             # Extract title
             title_tag = soup.find('h1') or soup.find('title')
@@ -191,6 +226,33 @@ class SickKidsAllPagesScraper:
             f.write(html_content)
 
         return str(filepath)
+
+    def _is_procedure_related(self, title: str, url: str) -> bool:
+        """
+        Check if article is procedure-related.
+
+        Args:
+            title: Article title
+            url: Article URL
+
+        Returns:
+            True if procedure-related
+        """
+        title_lower = title.lower()
+        url_lower = url.lower()
+
+        # Exclude non-procedure content
+        for keyword in self.exclude_keywords:
+            if keyword in title_lower:
+                return False
+
+        # Include if contains procedure keywords
+        for keyword in self.procedure_keywords:
+            if keyword in title_lower or keyword in url_lower:
+                return True
+
+        # Default: exclude if not clearly procedure-related
+        return False
 
     def _save_metadata(self):
         """Save metadata."""

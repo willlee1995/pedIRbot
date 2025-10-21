@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="source" content="SickKids AboutKidsHealth">
+    <meta name="source_org" content="SickKids">
+    <meta name="url" content="https://www.aboutkidshealth.ca/healthaz/haematology/managing-sickle-cell-pain/?language=en">
+    <meta name="scraped_date" content="2025-10-21">
+    <meta name="category" content="Image Guidance">
+    <title>Managing sickle cell pain</title>
+</head>
+<body>
+    <h1>Managing sickle cell pain</h1>
+    <p><strong>Source:</strong> <a href="https://www.aboutkidshealth.ca/healthaz/haematology/managing-sickle-cell-pain/?language=en">SickKids AboutKidsHealth</a></p>
+    <p><strong>Original URL:</strong> https://www.aboutkidshealth.ca/healthaz/haematology/managing-sickle-cell-pain/?language=en</p>
+    <hr>
+    <article class="container" data-displaytemplate="Item_AKH-Article">
+<select aria-label="article language" class="link-list" id="lang-switch" onchange="window.location.href=this.value">
+<option style="display:none" value="none">English</option>
+<option class="cbs-Line1Link ms-noWrap ms-displayBlock article-lang" value="/healthaz/haematology/managing-sickle-cell-pain/?language=en">English</option>
+<option class="cbs-Line1Link ms-noWrap ms-displayBlock article-lang" value="/healthaz/haematology/managing-sickle-cell-pain/?language=fr">French</option>
+</select>
+<div id="article-container">
+<div class="col-md-12">
+<div class="jumbotron">
+<h1 id="article_title">Managing sickle cell pain</h1>
+<div dir="ltr">
+<a class="author" href="/about/contributors/">
+By SickKids staff                                </a>
+</div>
+</div>
+<div aria-hidden="true" id="wb-container">
+<div aria-roledescription="ReadSpeaker Audio Player" class="rs_skip rsbtn rs_preserve" id="webreader_button" role="widget"><a accesskey="L" class="rsbtn_play" href="//app-na.readspeaker.com/cgi-bin/rsent?customerid=6244&amp;lang=en_us&amp;readid=article-container&amp;url=" rel="nofollow" title="Listen to this article"> <span class="rsbtn_left rsimg rspart"> <span class="rsbtn_text"> <span id="listen">Listen</span> </span> </span> </a></div>
+</div>
+<div class="pdf-container rs_skip" style="display: block;">
+<a class="" href="/api/PDF?GeneratePdf&amp;pageURL=https://www.aboutkidshealth.ca/healthaz/haematology/managing-sickle-cell-pain/?Print=true&amp;pageGuid=f2f017d2-cbe0-40f6-bd6e-64c5d2c99770" id="akh-pdf-download-button" onclick="">
+<i aria-hidden="true" class="material-icons">
+                                            download_for_offline
+                                        </i>
+<span class="pdf-label">
+                                            Download PDF
+                                        </span>
+</a>
+<!--
+                                    <a href="#" data-url="/api/PDF?GeneratePdf&amp;pageURL=https://www.aboutkidshealth.ca/healthaz/haematology/managing-sickle-cell-pain/?Print=true&amp;pageGuid=f2f017d2-cbe0-40f6-bd6e-64c5d2c99770&amp;newPage=true"
+                                       id="akh-pdf-print-button"
+                                       class=""
+                                       onclick="">
+                                       -->
+<a href="#" id="akh-pdf-print-button">
+<i aria-hidden="true" class="material-icons">
+                                            print_for_offline
+                                        </i>
+<span class="pdf-label">
+                                            Print
+                                        </span>
+</a>
+<div class="pdfloader"></div>
+</div>
+<dialog class="contactModal" id="pdfAlert" style="z-index: 9999; position: relative; border-radius: 16px;">
+<p style="text-align:center">
+                                        PDF download is not available for Arabic and Urdu languages at this time. Please use the browser print function instead
+                                        <br/><br/>
+<button id="closeFeedbackButton" onclick="document.getElementById('pdfAlert').close();" style="background-color: #0059ad; align: center; color: #fff; margin: 0; text-transform: none; font-size: 1.1rem; padding: 5px; border-radius: 5px;">
+                                            Close
+                                        </button>
+</p>
+</dialog>
+<div id="webreader-section">
+<div class="panel-body" id="article-overview">
+<div id="brand-photo" style="display:none;">
+<picture><source sizes="356px" srcset="/globalassets/assets/icancopescd/managing_pain_scd_j4t.jpg?format=webp&amp;width=356&amp;quality=60 356w" type="image/webp"/><source sizes="356px" srcset="/globalassets/assets/icancopescd/managing_pain_scd_j4t.jpg?width=356&amp;quality=60 356w"/><img alt="" decoding="async" loading="lazy" src="/globalassets/assets/icancopescd/managing_pain_scd_j4t.jpg?width=356&amp;quality=60"/></picture>
+</div>
+<p>
+<p>Learn about the 3P approach to pain management, which is a combination of psychological, physical and pharmacological (medications) strategies.</p></p>
+</div>
+<div class="panel panel-info clearfix">
+<div class="panel-body" id="key-points">
+<!-- Image gallery -->
+<div class="rs_skip rs_preserve" id="gallery-frame">
+<div id="image-gallery">
+<div class="slider-for hidden">
+</div>
+<div class="slider-nav hidden">
+</div>
+</div>
+</div>
+<h2>Key points</h2><ul><li>The most effective way to manage pain is with a combination of psychological, physical and pharmacological methods. This is called the "3P approach". </li><li>Psychological strategies may include managing stress, practising mindfulness and learning to think differently about pain. </li><li>Physical strategies include exercising and finding comfort positions. </li><li>Pharmacological strategies are medications. These may be a combination of pain medications and other types of medications to manage sickle cell symptoms. </li></ul>
+</div>
+</div>
+<div class="article-text" id="panel-container">
+<!-- For NON drugs type article, show the 'Expand All/Collapse All' CTA below the introduction field-->
+<p>Pain is much like hunger and thirst—it requires you to do something to get some relief.</p><p>Even if pain cannot be eliminated, it can be reduced by changing the pain signals that reach the brain. The most effective way to change pain signals is through the “3P approach” to pain management.</p>
+<!-- For drugs type article, show the 'Expand All/Collapse All' CTA below the introduction field-->
+<h2>3P approach to pain management</h2><p>Pain is best treated with:</p><ul><li>psychological strategies, or methods<br/></li><li>physical strategies</li><li>pharmacological strategies<br/></li></ul><p>Together, these form the 3P approach to pain management. Check out this animation to learn more!</p><div class="asset-animation">
+<iframe src="/assets/Animations/Animation/3Ps_chronic_pain_management_SCD_EN.html"></iframe><br/></div><h2>Psychological strategies</h2><p>Psychological strategies include learning how to manage stress, practise mindfulness, relax tense muscles and think differently about pain. All these strategies can help people reduce pain. The goal is to find the strategies that will help your teen manage their pain in healthy ways and let them do the things they enjoy.</p><p>A number of psychological strategies are based on the principles of cognitive behavioural therapy (CBT).</p><h3>Cognitive behavioural therapy</h3><p>Cognitive behavioural therapy (CBT) is a form of psychological treatment. It focuses on how someone thinks and feels about pain (the “cognitive” part), what they do to manage pain (the “behavioural” part) and how other people respond to their pain.</p><p>The image below shows how what you think, what you do and how you feel are all related to each other.</p>
+<figure class="asset-c-100">
+<picture><source sizes="356px" srcset="/globalassets/assets/icancopescd/what_is_cbt_scd_j4t_en.png?format=webp&amp;width=356&amp;quality=60 356w" type="image/webp"/><source sizes="356px" srcset="/globalassets/assets/icancopescd/what_is_cbt_scd_j4t_en.png?width=356&amp;quality=60 356w"/><img alt="" decoding="async" loading="lazy" src="/globalassets/assets/icancopescd/what_is_cbt_scd_j4t_en.png?width=356&amp;quality=60" width="356"/></picture> </figure>
+<p>CBT has been used for over 30 years with people dealing with many different pain conditions. It can alter pain signals and change how someone perceives pain. It is one of the best methods for reducing pain and helping people do more of their everyday activities.<br/></p><p>Cognitive strategies help with thinking. They include:</p><ul><li>skills to manage stress</li><li>skills to improve communication and relationships</li><li>thinking in new ways (sometimes called cognitive coping skills)<br/></li></ul><p>Behavioural strategies relate to actions. They include:<br/></p><ul><li>deep breathing and relaxation</li><li>strategies to manage sleep problems</li><li>strategies to increase physical activity<br/></li></ul><p>Parent and caregiver strategies include ways to change responses to your teen’s pain and ways to reduce your own stress. They include:</p><ul><li>problem-solving skills</li><li>communication strategies</li><li>strategies to encourage positive behaviours and coping skills<br/></li></ul><p>Your teen will learn more about different psychological strategies to help manage pain throughout their skills modules.</p><h2>Physical strategies</h2><p>Physical strategies include finding positions of comfort and exercising. Learning how to get active in the right way can help your teen in a number of important ways. Leading a more active life can, for example:<br/></p><ul><li>improve blood flow</li><li>train the pain system to be less sensitive</li><li>reduce your teen’s pain<br/></li><li>improve your teen’s mood, sleep and energy levels<br/></li><li>improve your teen’s physical function and overall wellbeing<br/></li></ul><p>Your teen will learn more about physical strategies in the module on keeping a healthy lifestyle.</p><h2>Pharmacological strategies</h2><p>Pharmacological strategies are another name for medications. They can also be helpful when used with physical and psychological strategies.</p><p>Pain medications are designed to reduce pain signals at specific points in the pain pathway. Your teen’s health-care provider may recommend other medications or treatments to help manage other sickle cell disease symptoms, improve sleep, reduce anxiety and help manage your teen’s mood.</p><p>You can find more information on pharmacological strategies in the <a href="/healthaz/haematology/sickle-cell-disease-types-of-treatments-and-medications/">treatment and medications section of the sickle cell library</a>.</p>
+<!-- Accordions -->
+</div>
+<div class="drug-disclaimer">
+</div>
+<!-- panel footer -->
+<small class="pull-left" id="review-date">Last updated: February 21st 2024</small>
+</div>
+</div>
+</div>
+</article>
+</body>
+</html>

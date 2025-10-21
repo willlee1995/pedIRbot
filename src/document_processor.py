@@ -22,19 +22,27 @@ class DocumentChunk:
 class DocumentProcessor:
     """Process various document formats and chunk them for vectorization."""
 
-    def __init__(self, chunk_size: int = 512, chunk_overlap: int = 50):
+    def __init__(self, chunk_size: int = 512, chunk_overlap: int = 50, markdown_only: bool = False):
         """
         Initialize the document processor.
 
         Args:
             chunk_size: Maximum size of each chunk in characters
             chunk_overlap: Number of overlapping characters between chunks
+            markdown_only: If True, only process markdown files (no MarkItDown conversion)
         """
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
-        self.markitdown = MarkItDown()
-        logger.info(
-            "Initialized MarkItDown converter for unified document processing")
+        self.markdown_only = markdown_only
+
+        # Only initialize MarkItDown if we need conversion
+        if not markdown_only:
+            self.markitdown = MarkItDown()
+            logger.info(
+                "Initialized MarkItDown converter for unified document processing")
+        else:
+            self.markitdown = None
+            logger.info("Markdown-only mode: MarkItDown conversion disabled")
 
     def load_document(self, file_path: str) -> tuple[str, Dict[str, Any]]:
         """
@@ -61,6 +69,26 @@ class DocumentProcessor:
         # Detect source organization from path or filename
         metadata["source_org"] = self._detect_source_org(str(file_path))
 
+        # Markdown-only mode: read markdown directly without conversion
+        if self.markdown_only:
+            if file_path.suffix.lower() not in ['.md', '.markdown']:
+                logger.warning(f"Skipping non-markdown file in markdown-only mode: {file_path.name}")
+                return "", metadata
+
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    markdown_text = f.read()
+
+                # Convert markdown to plain text for chunking
+                text = self._markdown_to_text(markdown_text)
+                logger.debug(f"Loaded markdown file: {file_path.name} ({len(text)} chars)")
+                return text, metadata
+
+            except Exception as e:
+                logger.error(f"Failed to read markdown file {file_path.name}: {e}")
+                return "", metadata
+
+        # Standard mode: use MarkItDown for conversion
         try:
             # Use MarkItDown for unified conversion to Markdown
             logger.debug(
@@ -251,8 +279,12 @@ class DocumentProcessor:
 
         all_chunks = []
 
+        # Markdown-only mode: only process markdown files
+        if self.markdown_only:
+            file_patterns = ['*.md', '*.markdown']
+            logger.info("Markdown-only mode: Processing only .md and .markdown files")
         # Extended file patterns - MarkItDown supports many formats
-        if file_patterns is None:
+        elif file_patterns is None:
             file_patterns = [
                 '*.pdf', '*.docx', '*.doc', '*.pptx', '*.ppt',  # Office documents
                 '*.xlsx', '*.xls', '*.csv',  # Spreadsheets

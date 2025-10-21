@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="source" content="SickKids AboutKidsHealth">
+    <meta name="source_org" content="SickKids">
+    <meta name="url" content="https://www.aboutkidshealth.ca/healthaz/ophthalmology/retinopathy-of-prematurity-rop/?language=en">
+    <meta name="scraped_date" content="2025-10-21">
+    <meta name="category" content="Image Guidance">
+    <title>Retinopathy of prematurity (ROP)</title>
+</head>
+<body>
+    <h1>Retinopathy of prematurity (ROP)</h1>
+    <p><strong>Source:</strong> <a href="https://www.aboutkidshealth.ca/healthaz/ophthalmology/retinopathy-of-prematurity-rop/?language=en">SickKids AboutKidsHealth</a></p>
+    <p><strong>Original URL:</strong> https://www.aboutkidshealth.ca/healthaz/ophthalmology/retinopathy-of-prematurity-rop/?language=en</p>
+    <hr>
+    <article class="container" data-displaytemplate="Item_AKH-Article">
+<select aria-label="article language" class="link-list" id="lang-switch" onchange="window.location.href=this.value">
+<option style="display:none" value="none">English</option>
+<option class="cbs-Line1Link ms-noWrap ms-displayBlock article-lang" value="/healthaz/ophthalmology/retinopathy-of-prematurity-rop/?language=en">English</option>
+<option class="cbs-Line1Link ms-noWrap ms-displayBlock article-lang" value="/healthaz/ophthalmology/retinopathy-of-prematurity-rop/?language=fr">French</option>
+</select>
+<div id="article-container">
+<div class="col-md-12">
+<div class="jumbotron">
+<h1 id="article_title">Retinopathy of prematurity (ROP)</h1>
+<div dir="ltr">
+<a class="author" href="/about/contributors/">
+By SickKids staff                                </a>
+</div>
+</div>
+<div aria-hidden="true" id="wb-container">
+<div aria-roledescription="ReadSpeaker Audio Player" class="rs_skip rsbtn rs_preserve" id="webreader_button" role="widget"><a accesskey="L" class="rsbtn_play" href="//app-na.readspeaker.com/cgi-bin/rsent?customerid=6244&amp;lang=en_us&amp;readid=article-container&amp;url=" rel="nofollow" title="Listen to this article"> <span class="rsbtn_left rsimg rspart"> <span class="rsbtn_text"> <span id="listen">Listen</span> </span> </span> </a></div>
+</div>
+<div class="pdf-container rs_skip" style="display: block;">
+<a class="" href="/api/PDF?GeneratePdf&amp;pageURL=https://www.aboutkidshealth.ca/healthaz/ophthalmology/retinopathy-of-prematurity-rop/?Print=true&amp;pageGuid=8a9d9ab7-86c8-4d4b-876b-924d40868b9f" id="akh-pdf-download-button" onclick="">
+<i aria-hidden="true" class="material-icons">
+                                            download_for_offline
+                                        </i>
+<span class="pdf-label">
+                                            Download PDF
+                                        </span>
+</a>
+<!--
+                                    <a href="#" data-url="/api/PDF?GeneratePdf&amp;pageURL=https://www.aboutkidshealth.ca/healthaz/ophthalmology/retinopathy-of-prematurity-rop/?Print=true&amp;pageGuid=8a9d9ab7-86c8-4d4b-876b-924d40868b9f&amp;newPage=true"
+                                       id="akh-pdf-print-button"
+                                       class=""
+                                       onclick="">
+                                       -->
+<a href="#" id="akh-pdf-print-button">
+<i aria-hidden="true" class="material-icons">
+                                            print_for_offline
+                                        </i>
+<span class="pdf-label">
+                                            Print
+                                        </span>
+</a>
+<div class="pdfloader"></div>
+</div>
+<dialog class="contactModal" id="pdfAlert" style="z-index: 9999; position: relative; border-radius: 16px;">
+<p style="text-align:center">
+                                        PDF download is not available for Arabic and Urdu languages at this time. Please use the browser print function instead
+                                        <br/><br/>
+<button id="closeFeedbackButton" onclick="document.getElementById('pdfAlert').close();" style="background-color: #0059ad; align: center; color: #fff; margin: 0; text-transform: none; font-size: 1.1rem; padding: 5px; border-radius: 5px;">
+                                            Close
+                                        </button>
+</p>
+</dialog>
+<div id="webreader-section">
+<div class="panel-body" id="article-overview">
+<div id="brand-photo" style="display:none;">
+</div>
+<p>
+<p>Learn what retinopathy of prematurity is, how it is diagnosed and how it may be treated.</p></p>
+</div>
+<div class="panel panel-info clearfix">
+<div class="panel-body" id="key-points">
+<!-- Image gallery -->
+<div class="rs_skip rs_preserve" id="gallery-frame">
+<div id="image-gallery">
+<div class="slider-for hidden">
+</div>
+<div class="slider-nav hidden">
+</div>
+</div>
+</div>
+<h2>Key points</h2>
+<ul>
+<li>Retinopathy of prematurity (ROP) is an eye condition that can affect a premature baby's vision.</li>
+<li>Abnormal blood vessels form in the eye and can lead to bleeding, scarring and retinal detachment.</li>
+<li>Premature babies at risk for ROP have regular eye examinations until the blood vessels in the retina fully develop.</li>
+</ul>
+</div>
+</div>
+<div class="article-text" id="panel-container">
+<!-- For NON drugs type article, show the 'Expand All/Collapse All' CTA below the introduction field-->
+<div class="open-all-btn-wrapper">
+<button aria-controls="panel-container" aria-expanded="false" class="btn-success rs_skip rs_preserve" id="open-all-panels" type="button">
+<span class="pull-left clickable" data-close="Collapse All" data-expand="Expand All">Expand All</span>
+<i aria-hidden="true" class="mdi pull-right mdi-chevron-down"></i>
+</button>
+</div>
+<!-- For drugs type article, show the 'Expand All/Collapse All' CTA below the introduction field-->
+<!-- Accordions -->
+<div class="panel">
+<div aria-controls="article-IntroductionAccordion" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Introduction</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-IntroductionAccordion">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="IntroductionAccordion" id="article-IntroductionAccordion" role="tabpanel" style="display: none;">
+<p>Your <a href="/healthaz/neonatology/prematurity-overview/">premature baby</a> needs an eye exam by a paediatric ophthalmologist. This person is an eye doctor who specializes in checking and treating eye problems in children, including retina problems. This exam is important because premature babies may develop a condition called retinopathy of prematurity, or ROP.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-IntroAdditionalInfo" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">More information</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-IntroAdditionalInfo">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="IntroAdditionalInfo" id="article-IntroAdditionalInfo" role="tabpanel" style="display: none;">
+<h2>What is the retina?</h2>
+<p>The retina is the inside lining in the back of the eye. It is the part that absorbs the rays of light that enter the eye. The retina changes the rays into electrical signals. It then sends the signals to the brain as a picture. In this way, the retina is like a film in a camera: it turns the rays of light it receives into a picture that a person sees.</p>
+<figure class="asset-c-80"><span class="asset-image-title">Eye cross section</span> <picture><source sizes="356px" srcset="/globalassets/assets/illustrations/rop_normal_eye_med_ill_en.jpg?format=webp&amp;width=356&amp;quality=60 356w" type="image/webp"/><source sizes="356px" srcset="/globalassets/assets/illustrations/rop_normal_eye_med_ill_en.jpg?width=356&amp;quality=60 356w"/><img alt="The optic nerve, retina, retinal blood vessels, lens, iris, cornea, pupil and anterior chamber receiving image of balloons" decoding="async" loading="lazy" src="/globalassets/assets/illustrations/rop_normal_eye_med_ill_en.jpg?width=356&amp;quality=60" width="356"/></picture></figure>
+<h2>What is retinopathy of prematurity?</h2>
+<p>Retinopathy of prematurity (ROP) happens in premature babies when abnormal blood vessels start developing at the back of the eye.</p>
+<p>At about 16 weeks of pregnancy, the fetus’s retina begins to develop blood vessels. The blood vessels that feed the retina start at the back of the eye and grow toward the front. The retina is gradually and evenly covered in blood vessels. They finish forming just before the baby is born at full term.</p>
+<p>In a premature baby, these blood vessels have not finished forming. They continue to form after the baby is born. Most of the time, they will form normally and there will be no problem. But if smaller, abnormal vessels start developing, the condition is called ROP.</p>
+<figure class="asset-c-80"><span class="asset-image-title">Retinopathy of prematurity (ROP)</span> <picture><source sizes="356px" srcset="/globalassets/assets/illustrations/rop_med_ill_en.jpg?format=webp&amp;width=356&amp;quality=60 356w" type="image/webp"/><source sizes="356px" srcset="/globalassets/assets/illustrations/rop_med_ill_en.jpg?width=356&amp;quality=60 356w"/><img alt="The anatomy of a premature eye with scar tissue and excessive growth of retinal blood vessels" decoding="async" loading="lazy" src="/globalassets/assets/illustrations/rop_med_ill_en.jpg?width=356&amp;quality=60" width="356"/></picture>
+<figcaption class="asset-image-caption">If a baby is born very early, the blood vessels of the retina may not have grown enough or may grow abnormally. This is called retinopathy of prematurity (ROP).</figcaption>
+</figure> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-CausesRiskFactors" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Causes, risk factors and prevalence</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-CausesRiskFactors">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="CausesRiskFactors" id="article-CausesRiskFactors" role="tabpanel" style="display: none;">
+<h2>What can happen if a baby has ROP</h2>
+<p>Abnormal vessels can lead to bleeding and scarring in the retina. They may also cause the retina to separate, or move, from its normal place in the eye. This is called retinal detachment. This could lead to poor vision or even blindness.</p>
+<figure class="asset-c-80"><span class="asset-image-title">ROP with retinal detachment</span> <picture><source sizes="356px" srcset="/globalassets/assets/illustrations/rop_retinal_detachment_med_ill_en.jpg?format=webp&amp;width=356&amp;quality=60 356w" type="image/webp"/><source sizes="356px" srcset="/globalassets/assets/illustrations/rop_retinal_detachment_med_ill_en.jpg?width=356&amp;quality=60 356w"/><img alt="The anatomy of an eye with retinal detachment along the top and bottom" decoding="async" loading="lazy" src="/globalassets/assets/illustrations/rop_retinal_detachment_med_ill_en.jpg?width=356&amp;quality=60" width="356"/></picture>
+<figcaption class="asset-image-caption">ROP may cause the retina to separate from its normal place in the eye.</figcaption>
+</figure>
+<h2>How common is ROP?</h2>
+<p>Nobody really knows why abnormal blood vessels form. Some premature babies need extra oxygen to help them breathe. It is thought this oxygen treatment may play a part in ROP, even when it is closely monitored.</p>
+<p>Not all premature babies have ROP. Babies born before 28 weeks or who weigh less than 1000 g at birth are at the highest risk for developing severe ROP. The risk of ROP developing also depends on how well the retina has formed.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-Diagnosis" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Diagnosis</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-Diagnosis">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="Diagnosis" id="article-Diagnosis" role="tabpanel" style="display: none;">
+<h2>Checking your baby for ROP</h2>
+<p>In Canada, all premature babies with a birth weight of 1250 g or less, or who are born at or before 30 weeks and six days are routinely examined for ROP. They will likely be examined initially at four to six weeks after birth.</p>
+<p>The ophthalmologist will check your baby's eyes for any abnormal vessels. If these vessels are treated in time, it may help to stop retinal detachment.</p>
+<p>Here is what you can expect to happen during the exam.</p>
+<ul>
+<li>Your baby will have special eye drops to make the pupils bigger. The pupil is the dark area in the centre of the coloured part of the eye. The drops take 30 minutes to an hour to work, sometimes longer.</li>
+<li>Since your baby needs to be very still when their eyes are checked, they will be wrapped in a blanket and held down gently.</li>
+<li>The doctor will check the retina using an instrument with a bright light called an ophthalmoscope.</li>
+<li>Your baby will have eye drops to numb the surface of the eyeball.</li>
+<li>Once the eyeball is numb, the doctor will use an instrument called a speculum to hold your baby's eyelids apart. This is because your baby is too young to keep their eyes open.</li>
+<li>To get a good look at the eye, the doctor will also use an instrument called a depressor to gently move the eyeball.</li>
+<li>Sometimes, a photograph will be taken of the retina using a special camera.</li>
+</ul>
+<h3>Your baby should not feel any pain.</h3>
+<p>Being held down and having a bright light shone in their eyes will make your baby uncomfortable. They may cry during the exam, but they should not feel any pain.</p>
+<h2>Explaining the condition of your baby's eyes</h2>
+<p>After the exam, the doctor will explain the condition of your baby's eyes. Your baby's condition will be graded depending on how much the abnormal blood vessels have grown. The doctor will use the terms "zone", “type” and "stage".</p>
+<ul>
+<li>The zone is graded from 1 to 3. This explains how far the blood vessels have grown on the retina. Vessels go from Zone 1 to 3 as they grow. The second image on this page shows the zones.</li>
+<li>The stage explains the severity of the ROP. It is graded from 1 to 5. Stage 1 is the best (least severe) and Stage 5 is the worst (most severe).</li>
+<ul>
+<li>
+<p><strong>Stage 1 ROP</strong></p>
+<p>In Stage 1, there is a thin line between the area with blood vessels and the area where the blood vessels have not grown yet. At this stage, the vessels may grow normally on their own, but the condition must be watched.</p>
+</li>
+<li>
+<p><strong>Stage 2 ROP</strong></p>
+<p>In Stage 2, the line between the areas with and without blood vessels widens and thickens into a ridge. The condition may still resolve, or it may progress to Stage 3 ROP.</p>
+</li>
+<li>
+<p><strong>Stage 3 ROP</strong></p>
+<p>In Stage 3, new blood vessels start to grow along the ridge and extend into the clear gel that fills the eye, called vitreous body. These blood vessels can bleed and form scar tissue.</p>
+</li>
+<li>
+<p><strong>Stage 4A ROP</strong></p>
+<p>In Stage 4A, the abnormal blood vessels and scar tissue pull on the retina, partially detaching it. The centre of vision, called fovea, is not involved.</p>
+</li>
+<li>
+<p><strong>Stage 4B ROP</strong></p>
+<p>The retina is still only partially detached, but the fovea is affected. This usually leaves both the centre and peripheral vision impaired to some degree.</p>
+</li>
+<li>
+<p><strong>Stage 5 ROP</strong></p>
+<p>The retina is completely detached, severely affecting vision.</p>
+</li>
+</ul>
+<li>The terms ‘type 1’ and ‘type 2’ ROP are descriptions that are used to identify babies whose eyes show changes of ROP that require treatment (type 1) or show changes that do not require treatment but must be carefully monitored (type 2).</li>
+</ul>
+<h2>How often your baby's eyes will be checked</h2>
+<p>Your baby's eyes need to be checked often. Sometimes they will be checked every week or even every few days. The frequency of exams depends on different factors, such as the severity and location of ROP in the eye and how quickly normal blood vessels are forming. The formation of blood vessels is called vascularization. After each exam, the doctor will let you know when the next exam will happen.</p>
+<p>In the majority of cases, even when ROP develops, it will resolve on its own with minimal effect on your baby’s vision. However, it is very important to keep all the appointments because abnormal vessels can form fairly quickly. In approximately 5 per cent of babies, ROP will progress to the extent that is no longer safe to wait for it to resolve on its own.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-Treatment" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Treatment</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-Treatment">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="Treatment" id="article-Treatment" role="tabpanel" style="display: none;">
+<h2>Treating ROP</h2>
+<p>If your baby has ROP, the treatment will depend on your baby's eye condition. Your baby may need laser treatment, eye injections or even surgeries (operations) to repair retinal detachment. Your baby’s ophthalmologist will discuss the best treatment for your baby with you.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-FollowUpCare" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Follow-up care</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-FollowUpCare">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="FollowUpCare" id="article-FollowUpCare" role="tabpanel" style="display: none;">
+<h2>Caring for your child's eyes in the future</h2>
+<p>All premature babies need regular eye exams by an ophthalmologist, preferably a paediatric ophthalmologist.</p>
+<h3>If your baby's retinal blood vessels are normal</h3>
+<p>Your baby will still need to see an ophthalmologist regularly, but they will no longer need a retina specialist. Your child’s health-care provider may refer your child to a paediatric ophthalmologist in your area for check-ups.</p>
+<h3>If your baby has been treated for ROP</h3>
+<p>Your baby will continue to see a paediatric ophthalmologist who also specializes in retinal problems.</p>
+<p>When your baby's retinal condition is stable, their health-care provider may then refer them to a paediatric ophthalmologist in your area for continued check-ups.</p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-WhenToSeekMedicalAttention" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">When to seek medical attention</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-WhenToSeekMedicalAttention">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="WhenToSeekMedicalAttention" id="article-WhenToSeekMedicalAttention" role="tabpanel" style="display: none;">
+<h2>Regular check-ups are important</h2>
+<p>It is important that your child is seen by an ophthalmologist often. Even when the blood vessels are fully formed, there is a greater chance that a premature baby can have certain eye conditions in the future, such as:</p>
+<ul>
+<li>near-sightedness (myopia)</li>
+<li>cross eyes (<a href="/healthaz/ophthalmology/strabismus/">strabismus</a>)</li>
+<li>lazy eye (<a href="/healthaz/ophthalmology/amblyopia/">amblyopia</a>)</li>
+<li>a condition in which the rays of light are focused in each eye at a different point (anisometropia)</li>
+</ul>
+<p>The ophthalmologist will want to check your child's eyes for these conditions so that they can be treated.</p> </div>
+</div>
+</div>
+<!-- panel footer -->
+<small class="pull-left" id="review-date">Last updated: January 14th 2025</small>
+</div>
+</div>
+</div>
+</article>
+</body>
+</html>

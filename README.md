@@ -353,6 +353,27 @@ This implementation is based on the comprehensive research plan in `research.md`
 - Ethical considerations for clinical deployment
 - Governance and maintenance protocols
 
+## Documentation
+
+For detailed guides, see the documentation files:
+
+- **[CLEANUP_WORKFLOW.md](CLEANUP_WORKFLOW.md)** - 🧹 **Clean SickKids HTML metadata pollution**
+- **[docs/TWO_STAGE_INGESTION.md](docs/TWO_STAGE_INGESTION.md)** - 📝 **Two-stage ingestion workflow (convert → inspect → embed)**
+- **[URGENT_FIX_CHUNK_SIZE.md](URGENT_FIX_CHUNK_SIZE.md)** - 🚨 **Fix chunk truncation (data loss!)**
+- **[FIX_LOW_SCORES.md](FIX_LOW_SCORES.md)** - 🚨 **Fixing low similarity scores (<0.5)**
+- **[QUICKSTART.md](QUICKSTART.md)** - Get started in 5 minutes
+- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** - Detailed installation and configuration
+- **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Architecture overview
+- **[UV_GUIDE.md](docs/UV_GUIDE.md)** - Using `uv` for environment management
+- **[MARKITDOWN_GUIDE.md](docs/MARKITDOWN_GUIDE.md)** - Document conversion guide
+- **[OLLAMA_EMBEDDINGS.md](docs/OLLAMA_EMBEDDINGS.md)** - Using Ollama embedding models
+- **[OLLAMA_MODEL_CONTEXT_LIMITS.md](docs/OLLAMA_MODEL_CONTEXT_LIMITS.md)** - Model context limits and chunk sizing
+- **[EMBEDDING_MODEL_GUIDE.md](docs/EMBEDDING_MODEL_GUIDE.md)** - Choosing and configuring embedding models
+- **[LOW_SIMILARITY_TROUBLESHOOTING.md](docs/LOW_SIMILARITY_TROUBLESHOOTING.md)** - Troubleshooting retrieval quality
+- **[RETRIEVAL_ANALYSIS_GUIDE.md](docs/RETRIEVAL_ANALYSIS_GUIDE.md)** - Analyzing matched documents in detail
+- **[MARKDOWN_PREVIEW_GUIDE.md](docs/MARKDOWN_PREVIEW_GUIDE.md)** - Preview document conversions before ingestion
+- **[SCRAPING_GUIDE.md](docs/SCRAPING_GUIDE.md)** - Web scraping for knowledge base content
+
 ## Contributing
 
 To add new features:

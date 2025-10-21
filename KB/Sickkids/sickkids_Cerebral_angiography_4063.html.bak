@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="source" content="SickKids AboutKidsHealth">
+    <meta name="source_org" content="SickKids">
+    <meta name="url" content="https://www.aboutkidshealth.ca/healthaz/neurology/cerebral-angiography/?language=en">
+    <meta name="scraped_date" content="2025-10-21">
+    <meta name="category" content="Image Guidance">
+    <title>Cerebral angiography</title>
+</head>
+<body>
+    <h1>Cerebral angiography</h1>
+    <p><strong>Source:</strong> <a href="https://www.aboutkidshealth.ca/healthaz/neurology/cerebral-angiography/?language=en">SickKids AboutKidsHealth</a></p>
+    <p><strong>Original URL:</strong> https://www.aboutkidshealth.ca/healthaz/neurology/cerebral-angiography/?language=en</p>
+    <hr>
+    <article class="container" data-displaytemplate="Item_AKH-Article">
+<select aria-label="article language" class="link-list" id="lang-switch" onchange="window.location.href=this.value">
+<option style="display:none" value="none">English</option>
+<option class="cbs-Line1Link ms-noWrap ms-displayBlock article-lang" value="/healthaz/neurology/cerebral-angiography/?language=en">English</option>
+</select>
+<div id="article-container">
+<div class="col-md-12">
+<div class="jumbotron">
+<h1 id="article_title">Cerebral angiography</h1>
+<div dir="ltr">
+<a class="author" href="/about/contributors/">
+By SickKids staff                                </a>
+</div>
+</div>
+<div aria-hidden="true" id="wb-container">
+<div aria-roledescription="ReadSpeaker Audio Player" class="rs_skip rsbtn rs_preserve" id="webreader_button" role="widget"><a accesskey="L" class="rsbtn_play" href="//app-na.readspeaker.com/cgi-bin/rsent?customerid=6244&amp;lang=en_us&amp;readid=article-container&amp;url=" rel="nofollow" title="Listen to this article"> <span class="rsbtn_left rsimg rspart"> <span class="rsbtn_text"> <span id="listen">Listen</span> </span> </span> </a></div>
+</div>
+<div class="pdf-container rs_skip" style="display: block;">
+<a class="" href="/api/PDF?GeneratePdf&amp;pageURL=https://www.aboutkidshealth.ca/healthaz/neurology/cerebral-angiography/?Print=true&amp;pageGuid=37f5bb80-69fd-46af-ab30-d641e642ca5d" id="akh-pdf-download-button" onclick="">
+<i aria-hidden="true" class="material-icons">
+                                            download_for_offline
+                                        </i>
+<span class="pdf-label">
+                                            Download PDF
+                                        </span>
+</a>
+<!--
+                                    <a href="#" data-url="/api/PDF?GeneratePdf&amp;pageURL=https://www.aboutkidshealth.ca/healthaz/neurology/cerebral-angiography/?Print=true&amp;pageGuid=37f5bb80-69fd-46af-ab30-d641e642ca5d&amp;newPage=true"
+                                       id="akh-pdf-print-button"
+                                       class=""
+                                       onclick="">
+                                       -->
+<a href="#" id="akh-pdf-print-button">
+<i aria-hidden="true" class="material-icons">
+                                            print_for_offline
+                                        </i>
+<span class="pdf-label">
+                                            Print
+                                        </span>
+</a>
+<div class="pdfloader"></div>
+</div>
+<dialog class="contactModal" id="pdfAlert" style="z-index: 9999; position: relative; border-radius: 16px;">
+<p style="text-align:center">
+                                        PDF download is not available for Arabic and Urdu languages at this time. Please use the browser print function instead
+                                        <br/><br/>
+<button id="closeFeedbackButton" onclick="document.getElementById('pdfAlert').close();" style="background-color: #0059ad; align: center; color: #fff; margin: 0; text-transform: none; font-size: 1.1rem; padding: 5px; border-radius: 5px;">
+                                            Close
+                                        </button>
+</p>
+</dialog>
+<div id="webreader-section">
+<div class="panel-body" id="article-overview">
+<div id="brand-photo" style="display:none;">
+</div>
+<p>
+<p>A cerebral angiogram uses X-ray imaging and contrast dye to create a map of the blood vessels in the brain. Learn more about how it is performed.</p></p>
+</div>
+<div class="panel panel-info clearfix">
+<div class="panel-body" id="key-points">
+<!-- Image gallery -->
+<div class="rs_skip rs_preserve" id="gallery-frame">
+<div id="image-gallery">
+<div class="slider-for hidden">
+</div>
+<div class="slider-nav hidden">
+</div>
+</div>
+</div>
+<h2>Key points<br/></h2>
+<ul>
+<li>A cerebral angiogram uses X-ray imaging and contrast dye to create a map of the blood vessels in the brain. <br/></li>
+<li>Your child will most likely be given a general anesthetic.<br/></li>
+<li>Cerebral angiography can be performed through the wrist, back of the hand or through the top of the leg. <br/></li>
+</ul>
+</div>
+</div>
+<div class="article-text" id="panel-container">
+<!-- For NON drugs type article, show the 'Expand All/Collapse All' CTA below the introduction field-->
+<div class="open-all-btn-wrapper">
+<button aria-controls="panel-container" aria-expanded="false" class="btn-success rs_skip rs_preserve" id="open-all-panels" type="button">
+<span class="pull-left clickable" data-close="Collapse All" data-expand="Expand All">Expand All</span>
+<i aria-hidden="true" class="mdi pull-right mdi-chevron-down"></i>
+</button>
+</div>
+<!-- For drugs type article, show the 'Expand All/Collapse All' CTA below the introduction field-->
+<!-- Accordions -->
+<div class="panel">
+<div aria-controls="article-IntroductionAccordion" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Introduction</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-IntroductionAccordion">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="IntroductionAccordion" id="article-IntroductionAccordion" role="tabpanel" style="display: none;">
+<h2>What is cerebral angiography?<br/></h2>
+<figure><span class="asset-image-title">Cerebral angiography through the radial artery</span> <picture><source sizes="356px" srcset="/contentassets/96b3424bb0cf4b18a1fb18f31493b597/6_cerebral-angiogram-1.jpg?format=webp&amp;width=356&amp;height=479&amp;quality=60 356w" type="image/webp"/><source sizes="356px" srcset="/contentassets/96b3424bb0cf4b18a1fb18f31493b597/6_cerebral-angiogram-1.jpg?width=356&amp;height=479&amp;quality=60 356w"/><img alt="" decoding="async" height="479" loading="lazy" src="/contentassets/96b3424bb0cf4b18a1fb18f31493b597/6_cerebral-angiogram-1.jpg?width=356&amp;height=479&amp;quality=60" width="356"/></picture></figure>
+<p>Cerebral angiography is a procedure that uses contrast dye and X-rays to see the blood vessels inside your child’s brain. The series of X-rays that are created will show the flow of blood within the brain. Cerebral angiography is performed by an interventional neuroradiologist either through the radial artery (wrist), distal radial artery (back of the hand) or femoral artery at the top of the leg (groin).</p>
+<p>The X-ray images provided by cerebral angiography are called cerebral angiograms.<br/></p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-IntroAdditionalInfo" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">More information</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-IntroAdditionalInfo">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="IntroAdditionalInfo" id="article-IntroAdditionalInfo" role="tabpanel" style="display: none;">
+<h2>Reasons for cerebral angiography<br/></h2>
+<ul>
+<li>To help health-care providers identify narrowed, enlarged and blocked blood vessels and plan treatment<br/></li>
+<li>To determine if there are any abnormalities of the blood vessels such as:<br/>
+<ul>
+<li><a href="/healthaz/neurology/arteriovenous-malformation-avm/">arteriovenous malformations (AVMs)</a> – abnormal tangles<br/></li>
+<li>arteriovenous fistulas – irregular connections between arteries and veins<br/></li>
+<li><a href="/healthaz/neurology/brain-aneurysm/">aneurysms</a> – bulging or ballooning areas in parts of blood vessels<br/></li>
+</ul>
+</li>
+<li>To assess:<br/>
+<ul>
+<li>blood supply to certain brain tumors<br/></li>
+<li>abnormal vessel response to inflammation or infection – arteritis or arteriopathy<br/></li>
+<li>flow of blood in the brain in certain diseases<br/></li>
+</ul>
+</li>
+<li>To help health-care providers diagnose different diseases that involve blood vessels<br/></li>
+<li>To follow up after certain blood vessel surgeries/procedures in the brain<br/></li>
+</ul> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-ProcedureOverview" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Procedure Overview</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-ProcedureOverview">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="ProcedureOverview" id="article-ProcedureOverview" role="tabpanel" style="display: none;">
+<h2>About the procedure<br/></h2>
+<p>Cerebral angiography is performed in a special type of operating room called an “angio suite”. This space is completely equipped with the imaging technology needed to perform angiograms and minimally invasive embolization procedures. Cerebral angiography in children is usually performed under <a href="/healthaz/pain/anaesthesia/what-is-general-anesthesia/">general anesthesia</a>, and a team of experienced physicians, nurses and imaging technologists works together to ensure the safety and success of the procedure. <br/></p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-RisksOfTest" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Risks of test, treatment, procedure</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-RisksOfTest">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="RisksOfTest" id="article-RisksOfTest" role="tabpanel" style="display: none;">
+<h2>Risks of cerebral angiography<br/></h2>
+<p>Cerebral angiography is usually a low-risk procedure. Major complications are extremely rare in experienced centers. The risk may increase depending on your child’s age and condition.</p>
+<p>The risks of cerebral angiography include:<br/></p>
+<ul>
+<li>pain, bruising or bleeding in the groin, wrist or hand where the catheter was inserted<br/></li>
+<li>infection where the catheter was inserted<br/></li>
+<li>a bulge or weakness in the artery wall (pseudoaneurysm) where the catheter was inserted<br/></li>
+<li>poor circulation to the leg, wrist or hand where the catheter was inserted<br/></li>
+<li>clotting (blockage) of the accessed arteries<br/></li>
+<li>damage to the accessed arteries at the leg, wrist, or hand such as dissection, rupture, or blockage<br/></li>
+<li>bleeding in the brain or blockage of blood flow to part of the brain causing reduced function of organ and tissue (stroke, paralysis, organ loss)<br/></li>
+<li>allergy to X-ray contrast dye<br/></li>
+</ul> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-PreparingForProcedure" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Preparing for Procedure</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-PreparingForProcedure">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="PreparingForProcedure" id="article-PreparingForProcedure" role="tabpanel" style="display: none;">
+<h2>Planning for the procedure<br/></h2>
+<p>You and your child may have a meeting with the interventional neuroradiology team before the procedure, if needed. During the visit, you should expect the following:<br/></p>
+<ul>
+<li>A health assessment to make sure your child is healthy, and that it is safe to have <a href="/healthaz/pain/anaesthesia/what-is-general-anesthesia/">general anaesthesia</a> and to go ahead with the procedure.<br/></li>
+<li>An overview of the procedure and a review of the consent form.<br/></li>
+<li>Blood work, if needed.</li>
+</ul>
+<h2>Giving consent before the procedure<br/></h2>
+<p>Before the procedure, the interventional neuroradiology team will go over how and why the procedure is done, as well as the potential benefits and risks. They will also discuss what will be done to reduce these risks and will help you weigh benefits against the risks. It is important that you understand all potential risks and benefits of the cerebral angiography and that all your questions are answered. If you agree to the procedure, you can give consent for the cerebral angiography by signing the consent form. The procedure will not be done unless you give your consent.</p>
+<h2>How to prepare your child for the procedure<br/></h2>
+<p>Before any treatment, it is important to talk to your child about what will happen. When talking to your child, use words they can understand. Let your child know that medicines will be given to make them feel comfortable during the procedure.</p>
+<p>Children feel less anxious and scared when they know what to expect. Children also feel less worried when they see their parents are calm and supportive.</p>
+<h2>If your child becomes ill within two days before the procedure<br/></h2>
+<p>It is important that your child is healthy on the day of their procedure. If your child starts to feel unwell or has a fever within two days before the cerebral angiogram, let their health-care provider know. Your child’s procedure may need to be rebooked.</p>
+<h2>Food, drink and medicines before the procedure<br/></h2>
+<ul>
+<li><a href="https://www.sickkids.ca/siteassets/patients--visitors/planning-your-visit/coming-for-surgery/stop-eating-drinking-before-sedation.pdf">Your child’s stomach must be empty</a> before general anesthetic.<br/></li>
+<li>If your child has special needs during fasting, talk to their health-care provider to make a plan.<br/></li>
+<li>Your child can take their regular morning medicines with a sip of water up to two hours before the procedure.<br/></li>
+<li>Medicines such as <a href="/drugaz/asa-acetylsalicylic-acid/">acetylsalicylic acid (ASA)</a>, <a href="/drugaz/clopidogrel/">clopidogrel</a>, <a href="/drugaz/naproxen/">naproxen</a> or <a href="/drugaz/ibuprofen-for-fever-or-pain/">ibuprofen</a>, <a href="/drugaz/warfarin/">warfarin</a>, or enoxaparin may increase the risk of bleeding. If your child is on any of these medications, consult with your child’s health-care provider and the interventional neuroradiology team before the procedure to create a plan of care.<br/></li>
+</ul> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-Procedure" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Procedure</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-Procedure">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="Procedure" id="article-Procedure" role="tabpanel" style="display: none;">
+<h2>On the day of the cerebral angiography<br/></h2>
+<p>Arrive at the hospital two hours before the planned time for your child’s procedure. Once you are checked in, your child will be dressed in a hospital gown, weighed and assessed. You will also be able to speak to the interventional neuroradiologist who will be doing the cerebral angiography, and the anesthesiologist who will be giving your child medication to make them comfortable during the procedure.</p>
+<p>During the cerebral angiography, you will be asked to wait in the surgical waiting area.</p>
+<h2>Your child will have medicine for pain<br/></h2>
+<p>Cerebral angiography is not painful. Children are given medicine for treatments that may be frightening, uncomfortable or painful. For cerebral angiography, most children are given <a href="/healthaz/pain/anaesthesia/what-is-general-anesthesia/">general anaesthesia</a> as well as <a href="/healthaz/pain/anaesthesia/local-anesthesia/">local anaesthesia</a> at the groin, wrist or hand where the catheter is inserted to make sure they are comfortable. Occasionally, in older children, cerebral angiography is done with local anesthesia only.</p>
+<h2>How is a cerebral angiography done?</h2>
+<figure><span class="asset-image-title">Cerebral angiography through the femoral artery</span> <picture><source sizes="356px" srcset="/contentassets/96b3424bb0cf4b18a1fb18f31493b597/7_cerebral-angiogram-2.jpg?format=webp&amp;width=356&amp;height=479&amp;quality=60 356w" type="image/webp"/><source sizes="356px" srcset="/contentassets/96b3424bb0cf4b18a1fb18f31493b597/7_cerebral-angiogram-2.jpg?width=356&amp;height=479&amp;quality=60 356w"/><img alt="" decoding="async" height="479" loading="lazy" src="/contentassets/96b3424bb0cf4b18a1fb18f31493b597/7_cerebral-angiogram-2.jpg?width=356&amp;height=479&amp;quality=60" width="356"/></picture></figure>
+<p>The interventional neuroradiologist will insert a flexible tube, called a catheter, into an artery in the groin (the femoral artery), or in the wrist (the radial or ulnar artery) or back of the hand (distal radial artery). The catheter is then directed under X-ray guidance into the area that requires imaging. Next, contrast dye is injected through the catheter. The dye is a clear, colourless liquid that helps to outline the arteries in the brain, so they show up on X-rays, which are used to take pictures of the vessels.</p>
+<p>Most children will be given blood thinners during the procedure to prevent the blood in the artery from clotting and blocking the artery.</p>
+<p>When the procedure is finished, the catheter is taken out, and pressure is applied to the artery in the groin, wrist or hand to stop any bleeding. If done through the groin, the insertion site will have a small clear dressing. If done through the wrist or back of the hand, your child will have a compression band on the hand or wrist specifically designed to stop bleeding at the access site.</p>
+<p>Cerebral angiography can take between one to two hours, depending on how complex the arteries being examined are.<br/></p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-PostProcedure" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">After the procedure</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-PostProcedure">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="PostProcedure" id="article-PostProcedure" role="tabpanel" style="display: none;">
+<h2>After the cerebral angiography<br/></h2>
+<p>Once the procedure is complete, your child will be moved to the recovery area. The interventional neuroradiologist will come and talk to you about the details of the procedure. As soon as your child starts to wake up, you will be notified and taken to be with your child.</p>
+<p>If the cerebral angiography was performed through the groin, your child should remain on their back with their leg kept straight. Some pressure may be applied at the insertion site in the groin if further bleeding occurs. Slow ambulation can begin after four hours if there are no concerns at the accessed groin site, and your child may go home six hours after the procedure. </p>
+<p>If the cerebral angiography was performed through the wrist or back of the hand, your child should remain in the hospital for three to four hours after the procedure with their arm kept straight with the provided splint. Your child will also have a compression wrist band specifically designed to stop bleeding at the access site. The band will be removed before your child’s discharge home.</p>
+<p>Your child’s upper limb/wrist should be immobilized with the provided splint overnight.</p>
+<h2>Going home<br/></h2>
+<p>In most cases, children go home the same day as the procedure. This usually occurs about six hours after a cerebral angiography through the groin, and about three to four hours after a cerebral angiography through the wrist or back of the hand. The health-care team will let you know when they are well enough to go home.</p>
+<p>For more details on how to care for your child after cerebral angiography, please see <a href="/healthaz/other/angiography-through-the-radial-artery-wrist-caring-for-your-child-at-home-after-the-procedure/">Angiography through the radial artery (wrist): Caring for your child at home after the procedure</a> or <a href="/healthaz/other/angiography-through-the-femoral-artery-groin-caring-for-your-child-at-home-after-the-procedure/">Angiography through the femoral artery (groin): Caring for your child at home after the procedure</a>.<br/></p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-FollowUpCare" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">Follow-up care</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-FollowUpCare">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="FollowUpCare" id="article-FollowUpCare" role="tabpanel" style="display: none;">
+<h2>Results<br/></h2>
+<p>The health-care provider who ordered the procedure will receive the results of your child’s cerebral angiography. You will need to make an appointment with them to discuss your child’s results.<br/></p> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-WhenToSeekMedicalAttention" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">When to Seek Medical Attention</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-WhenToSeekMedicalAttention">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="WhenToSeekMedicalAttention" id="article-WhenToSeekMedicalAttention" role="tabpanel" style="display: none;">
+<h2>When to seek medical attention<br/></h2>
+<p>Call your child's health-care provider or go to the nearest Emergency Department right away if your child has any of the following:<br/></p>
+<ul>
+<li>Sudden severe headache<br/></li>
+<li>Sudden loss of vision in one or both eyes<br/></li>
+<li>Sudden weakness on one side of the body, in a limb or on the face<br/></li>
+<li>Sudden confusion or problems with speaking<br/></li>
+<li>Active bleeding or swelling at the access site<br/></li>
+<li>Pain, swelling or discoloration of the area below the access site<br/></li>
+</ul> </div>
+</div>
+<div class="panel">
+<div aria-controls="article-AtSickKids" aria-expanded="false" class="panel-heading clickable rs_preserve" role="button" tabindex="0">
+<span class="panel-heading-collapsable">At Sickkids</span>
+<span class="pull-right panel-heading-collapsable-icon" href="#article-AtSickKids">
+<i aria-hidden="true" class="mdi mdi-chevron-down"></i>
+</span>
+</div>
+<div class="panel-body list-group collapse out" data-propname="AtSickKids" id="article-AtSickKids" role="tabpanel" style="display: none;">
+<h2>At SickKids<br/></h2>
+<p>If you have any concerns in the first 48 hours, call the <a href="http://www.sickkids.ca/IGT/index.html">Image Guided Therapy (IGT) clinic</a> at (416) 813- 7654 ext. 201804. Speak to the IGT clinic nurse during working hours or leave a non-urgent message.</p>
+<p>If you have concerns and it is after working hours, see your primary care provider or go to the nearest Emergency Department. You can also call the Hospital for Sick Children switchboard at (416) 813-7500 and ask them to page a member of your child’s health-care team or the interventional radiology fellow on call.</p>
+<p>For more information on preparing your child for their procedure see <a href="/learninghub/coming-for-surgery/">Coming for surgery</a>.<br/></p> </div>
+</div>
+</div>
+<!-- panel footer -->
+<small class="pull-left" id="review-date">Last updated: May 10th 2024</small>
+</div>
+</div>
+</div>
+</article>
+</body>
+</html>
