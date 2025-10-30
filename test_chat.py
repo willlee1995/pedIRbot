@@ -1,9 +1,9 @@
 """Interactive chat interface for testing the RAG system."""
 from src.rag_pipeline import RAGPipeline
-from src.llm import get_llm_provider
-from src.retriever import HybridRetriever
+from src.retriever import AdvancedRetriever
 from src.vector_store import VectorStore
 from src.embeddings import get_embedding_model
+from src.llm import get_langchain_llm
 from config import settings
 from loguru import logger
 import sys
@@ -23,6 +23,7 @@ def main():
     print("=" * 60)
     print(f"Embedding Provider: {settings.embedding_provider}")
     print(f"LLM Provider: {settings.llm_provider}")
+    print(f"Using LangChain Agent Architecture")
     print("=" * 60)
     print()
 
@@ -30,24 +31,34 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description="Interactive RAG chat interface")
     parser.add_argument("--verbose", "-v", action="store_true", help="Show detailed document information")
+    parser.add_argument("--agent-verbose", action="store_true", help="Show agent intermediate steps")
     args = parser.parse_args()
 
     show_details = args.verbose
+
+    # Enable agent verbose mode if requested
+    if args.agent_verbose:
+        settings.agent_verbose = True
 
     # Initialize RAG system
     print("Initializing RAG system...")
     try:
         embedding_model = get_embedding_model()
         vector_store = VectorStore(embedding_model)
-        retriever = HybridRetriever(vector_store)
-        llm_provider = get_llm_provider()
-        rag_pipeline = RAGPipeline(retriever, llm_provider)
+
+        # Initialize retriever (optional, for direct retrieval)
+        retriever = AdvancedRetriever(vector_store, llm=get_langchain_llm())
+
+        # Initialize RAG pipeline with agent
+        rag_pipeline = RAGPipeline(vector_store, retriever=retriever)
 
         stats = vector_store.get_stats()
         print(f"✓ Vector store loaded: {stats['total_documents']} documents")
+        print(f"✓ LangChain Agent initialized")
         print()
     except Exception as e:
         print(f"✗ Error initializing RAG system: {e}")
+        logger.exception(e)
         return
 
     # Interactive loop
@@ -98,50 +109,33 @@ def main():
 
             print(result['response'])
 
-            # Show sources
+            # Show sources (from agent intermediate steps)
             if result.get('sources'):
                 if show_details:
                     # Detailed view
                     print(f"\n{'='*60}")
-                    print(f"📚 MATCHED DOCUMENTS ({len(result['sources'])} total)")
+                    print(f"📚 SOURCES USED BY AGENT ({len(result['sources'])} total)")
                     print(f"{'='*60}")
 
                     for i, source in enumerate(result['sources'], 1):
-                        score = source.get('score', 0)
-
-                        # Score indicator
-                        if score >= 0.7:
-                            score_indicator = "✅"
-                        elif score >= 0.5:
-                            score_indicator = "⚠️"
-                        else:
-                            score_indicator = "❌"
-
-                        print(f"\n📄 Document {i} {score_indicator}")
+                        print(f"\n📄 Source {i}")
                         print(f"{'─'*60}")
-                        print(f"File:     {source['filename']}")
-                        print(f"Source:   {source['source_org']}")
-                        print(f"Score:    {score:.4f} {score_indicator}")
-                        print(f"Length:   {len(source.get('content', ''))} characters")
-
-                        # Show chunk content preview
-                        content = source.get('content', '')
-                        if content:
-                            preview_len = 200
-                            print(f"\nContent preview:")
-                            if len(content) > preview_len:
-                                print(f"{content[:preview_len]}...")
-                            else:
-                                print(content)
+                        if isinstance(source, dict):
+                            tool_name = source.get('tool', 'Unknown')
+                            output_preview = source.get('output', '')[:200]
+                            print(f"Tool: {tool_name}")
+                            print(f"Output preview: {output_preview}...")
+                        else:
+                            print(f"Source: {source}")
 
                     print(f"\n{'='*60}")
                 else:
                     # Compact view
-                    print(f"\n[Sources: {len(result['sources'])} documents]")
+                    print(f"\n[Sources: {len(result['sources'])} used by agent]")
                     for i, source in enumerate(result['sources'][:5], 1):
-                        score = source.get('score', 0)
-                        score_icon = "✅" if score >= 0.7 else "⚠️" if score >= 0.5 else "❌"
-                        print(f"  {i}. {source['source_org']} - {source['filename']} (score: {score:.3f}) {score_icon}")
+                        if isinstance(source, dict):
+                            tool = source.get('tool', 'Unknown')
+                            print(f"  {i}. Tool: {tool}")
 
             print()
 
@@ -150,6 +144,7 @@ def main():
             break
         except Exception as e:
             print(f"\n✗ Error: {e}\n")
+            logger.exception(e)
             continue
 
 

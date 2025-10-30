@@ -1,210 +1,281 @@
-"""Hybrid retrieval combining semantic and keyword search."""
+"""LangChain-based retrieval system with SelfQueryRetriever and Reranker."""
 from typing import List, Dict, Any, Optional
-import numpy as np
-from rank_bm25 import BM25Okapi
+import functools
+
+from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.self_query.base import SelfQueryRetriever
+from langchain_core.documents import Document
+from langchain_core.language_models import BaseChatModel
 from loguru import logger
 
 from src.vector_store import VectorStore
 from config import settings
 
+# Try different import paths for CrossEncoderReranker
+try:
+    from langchain_community.cross_encoders import CrossEncoderReranker
+except ImportError:
+    try:
+        from langchain.retrievers.document_compressors import CrossEncoderReranker
+    except ImportError:
+        logger.warning("CrossEncoderReranker not available, reranking will be disabled")
+        CrossEncoderReranker = None
 
-class HybridRetriever:
-    """Hybrid retriever combining semantic (vector) and keyword (BM25) search."""
+# Import custom Qwen3 reranker
+try:
+    from src.qwen3_reranker import Qwen3Reranker
+    QWEN3_RERANKER_AVAILABLE = True
+except ImportError as e:
+    QWEN3_RERANKER_AVAILABLE = False
+    logger.debug(f"Qwen3Reranker not available: {e}")
+except Exception as e:
+    QWEN3_RERANKER_AVAILABLE = False
+    logger.warning(f"Qwen3Reranker import error: {e}")
 
-    def __init__(self, vector_store: VectorStore, alpha: float = None):
+
+class AdvancedRetriever:
+    """Advanced retriever using LangChain SelfQueryRetriever and Reranker."""
+
+    def __init__(
+        self,
+        vector_store: VectorStore,
+        llm: Optional[BaseChatModel] = None,
+        use_reranker: bool = None,
+        reranker_model: str = None,
+    ):
         """
-        Initialize hybrid retriever.
+        Initialize advanced retriever.
 
         Args:
-            vector_store: VectorStore instance for semantic search
-            alpha: Weight for semantic search (1-alpha for BM25). Default from settings.
+            vector_store: VectorStore instance
+            llm: LLM for SelfQueryRetriever (for query parsing)
+            use_reranker: Whether to use reranker (default from settings)
+            reranker_model: Reranker model name (default from settings)
         """
         self.vector_store = vector_store
-        self.alpha = alpha if alpha is not None else settings.hybrid_alpha
+        self.use_reranker = use_reranker if use_reranker is not None else settings.use_reranker
+        self.reranker_model = reranker_model or settings.reranker_model
 
-        # Initialize BM25 index
-        self.bm25_index = None
-        self.bm25_documents = []
-        self.bm25_metadata = []
-        self.bm25_ids = []
-
-        self._build_bm25_index()
-
-        logger.info(f"Initialized hybrid retriever with alpha={self.alpha}")
-
-    def _build_bm25_index(self):
-        """Build BM25 index from vector store contents."""
-        logger.info("Building BM25 index...")
-
-        # Get all documents from vector store
-        # Note: ChromaDB doesn't have a direct "get all" method, so we use peek
-        all_data = self.vector_store.collection.get(
-            include=["documents", "metadatas"]
+        # Get base retriever from vector store
+        base_retriever = vector_store.as_retriever(
+            search_kwargs={"k": settings.reranker_top_k if self.use_reranker else settings.top_k_retrieval}
         )
 
-        if not all_data['documents']:
-            logger.warning(
-                "No documents found in vector store. BM25 index is empty.")
-            return
+        # Setup SelfQueryRetriever if LLM is provided
+        if llm:
+            # Define metadata fields for filtering with enhanced structure
+            metadata_field_info = [
+                {
+                    "name": "source_org",
+                    "description": "The source organization (HKCH, SickKids, SIR, HKSIR, CIRSE)",
+                    "type": "string",
+                },
+                {
+                    "name": "filename",
+                    "description": "The name of the source file",
+                    "type": "string",
+                },
+                {
+                    "name": "procedure_type",
+                    "description": "The type of procedure (PICC, angioplasty, stent, biopsy, drainage, ablation, etc.)",
+                    "type": "string",
+                },
+                {
+                    "name": "related_procedures",
+                    "description": "List of related procedures mentioned in the document (e.g., ['PICC insertion', 'catheter placement'])",
+                    "type": "list[string]",
+                },
+                {
+                    "name": "category",
+                    "description": "The phase of care: 'pre-operative' (before procedure), 'perioperative' (during procedure), 'post-operative' (after procedure), or 'general' (overview/general information)",
+                    "type": "string",
+                },
+                {
+                    "name": "keywords",
+                    "description": "Important medical keywords or terms extracted from the document (e.g., ['insertion', 'removal', 'complications', 'care'])",
+                    "type": "list[string]",
+                },
+            ]
 
-        self.bm25_documents = all_data['documents']
-        self.bm25_metadata = all_data['metadatas']
-        self.bm25_ids = all_data['ids']
+            document_contents = "Information about pediatric interventional radiology procedures, including procedures, care instructions, complications, and patient education materials."
 
-        # Tokenize documents for BM25
-        tokenized_docs = [doc.lower().split() for doc in self.bm25_documents]
-        self.bm25_index = BM25Okapi(tokenized_docs)
+            try:
+                self.retriever = SelfQueryRetriever.from_llm(
+                    llm=llm,
+                    vectorstore=vector_store.vectorstore,
+                    document_contents=document_contents,
+                    metadata_field_info=metadata_field_info,
+                    verbose=True,
+                )
+                logger.info("Initialized SelfQueryRetriever with enhanced metadata fields (related_procedures, category, keywords)")
 
-        logger.info(
-            f"BM25 index built with {len(self.bm25_documents)} documents")
+                # Store reference to SelfQueryRetriever before it might be wrapped
+                self_query_retriever = self.retriever
 
-    def rebuild_bm25_index(self):
-        """Rebuild the BM25 index (call after adding new documents)."""
-        self._build_bm25_index()
+                # Wrap the _get_relevant_documents method to log structured query
+                original_method = self_query_retriever._get_relevant_documents
 
-    def _bm25_search(self, query: str, k: int) -> List[Dict[str, Any]]:
-        """
-        Perform BM25 keyword search.
+                @functools.wraps(original_method)
+                def wrapped_get_relevant_documents(query: str, *, run_manager=None):
+                    """Wrapper to intercept and log structured query during retrieval."""
+                    try:
+                        # Access the query_constructor (which is a RunnableBinding)
+                        query_constructor = self_query_retriever.query_constructor
 
-        Args:
-            query: Query text
-            k: Number of results to return
+                        # Prepare input for query_constructor (SelfQueryRetriever passes a dict with 'query')
+                        input_data = {"query": query}
 
-        Returns:
-            List of results with content, metadata, and scores
-        """
-        if self.bm25_index is None:
-            logger.warning("BM25 index not initialized")
-            return []
+                        # Invoke query_constructor to get structured query
+                        try:
+                            structured_query = query_constructor.invoke(input_data)
 
-        # Tokenize query
-        tokenized_query = query.lower().split()
+                            # Log the structured query
+                            logger.info("=" * 80)
+                            logger.info("STRUCTURED QUERY OUTPUT:")
+                            logger.info(f"Original Query: {query}")
+                            logger.info(f"✅ Parsed Query Text: {structured_query.query if hasattr(structured_query, 'query') else 'N/A'}")
+                            logger.info(f"✅ Metadata Filters: {structured_query.filter if hasattr(structured_query, 'filter') else 'N/A'}")
+                            logger.info(f"✅ Limit: {structured_query.limit if hasattr(structured_query, 'limit') else 'N/A'}")
 
-        # Get BM25 scores
-        scores = self.bm25_index.get_scores(tokenized_query)
+                            # Show filter details if available
+                            if hasattr(structured_query, 'filter') and structured_query.filter:
+                                logger.info("Filter Details:")
+                                import json
+                                try:
+                                    if hasattr(structured_query.filter, 'dict'):
+                                        filter_dict = structured_query.filter.dict()
+                                    elif hasattr(structured_query.filter, 'model_dump'):
+                                        filter_dict = structured_query.filter.model_dump()
+                                    elif hasattr(structured_query.filter, '__dict__'):
+                                        filter_dict = structured_query.filter.__dict__
+                                    else:
+                                        filter_dict = structured_query.filter
 
-        # Get top-k indices
-        top_k_indices = np.argsort(scores)[::-1][:k]
+                                    filter_str = json.dumps(filter_dict, indent=2, default=str)
+                                    logger.info(filter_str)
+                                except Exception:
+                                    logger.info(f"Filter (as string): {str(structured_query.filter)}")
+                            else:
+                                logger.info("⚠️  No metadata filters extracted")
+                            logger.info("=" * 80)
+                        except Exception as e:
+                            # If query construction fails, log warning but continue
+                            logger.warning(f"Failed to log structured query: {e}")
+                            logger.debug(f"Error type: {type(e).__name__}")
 
-        # Format results
-        results = []
-        for idx in top_k_indices:
-            if scores[idx] > 0:  # Only include non-zero scores
-                results.append({
-                    'content': self.bm25_documents[idx],
-                    'metadata': self.bm25_metadata[idx],
-                    'score': float(scores[idx]),
-                    'id': self.bm25_ids[idx]
-                })
+                        # Call the original method to perform actual retrieval
+                        return original_method(query, run_manager=run_manager)
+                    except Exception as e:
+                        logger.error(f"Error in wrapped_get_relevant_documents: {e}")
+                        logger.exception(e)
+                        # Re-raise to let the original error handling work
+                        raise
 
-        return results
+                # Replace the method
+                self_query_retriever._get_relevant_documents = wrapped_get_relevant_documents
 
-    def _merge_results(self,
-                       semantic_results: List[Dict[str, Any]],
-                       bm25_results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """
-        Merge and rerank results from semantic and BM25 search.
+                # Store reference to SelfQueryRetriever for use when wrapped in ContextualCompressionRetriever
+                self._self_query_retriever = self_query_retriever
 
-        Args:
-            semantic_results: Results from semantic search
-            bm25_results: Results from BM25 search
+            except Exception as e:
+                logger.warning(f"Failed to initialize SelfQueryRetriever: {e}. Using base retriever.")
+                logger.exception(e)
+                self.retriever = base_retriever
+        else:
+            logger.info("No LLM provided, using base retriever without SelfQuery")
+            self.retriever = base_retriever
 
-        Returns:
-            Merged and reranked results
-        """
-        # Normalize scores for each method
-        def normalize_scores(results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-            if not results:
-                return []
+        # Setup reranker if enabled
+        if self.use_reranker:
+            reranker = None
 
-            scores = [r['score'] for r in results]
-            min_score = min(scores)
-            max_score = max(scores)
+            # Try Qwen3 reranker first (preferred)
+            if QWEN3_RERANKER_AVAILABLE:
+                try:
+                    reranker = Qwen3Reranker(
+                        model_name="Qwen/Qwen3-Reranker-0.6B",
+                        top_n=settings.top_k_reranker,
+                    )
+                    logger.info("Initialized Qwen3 Reranker")
+                except Exception as e:
+                    logger.warning(f"Failed to initialize Qwen3 Reranker: {e}")
+                    logger.exception(e)
+                    # Note: CrossEncoderReranker requires BaseCrossEncoder instance, not a string
+                    # So we skip it and just disable reranking if Qwen3 fails
+                    reranker = None
 
-            if max_score == min_score:
-                return results
-
-            for r in results:
-                r['normalized_score'] = (
-                    r['score'] - min_score) / (max_score - min_score)
-
-            return results
-
-        semantic_results = normalize_scores(semantic_results)
-        bm25_results = normalize_scores(bm25_results)
-
-        # Combine scores
-        combined_scores = {}
-
-        # Add semantic scores
-        for result in semantic_results:
-            doc_id = result['id']
-            combined_scores[doc_id] = {
-                'content': result['content'],
-                'metadata': result['metadata'],
-                'score': self.alpha * result.get('normalized_score', 0),
-                'semantic_score': result['score'],
-                'bm25_score': 0
-            }
-
-        # Add BM25 scores
-        for result in bm25_results:
-            doc_id = result['id']
-            if doc_id in combined_scores:
-                combined_scores[doc_id]['score'] += (
-                    1 - self.alpha) * result.get('normalized_score', 0)
-                combined_scores[doc_id]['bm25_score'] = result['score']
+            # Use reranker if successfully initialized
+            if reranker is not None:
+                try:
+                    self.retriever = ContextualCompressionRetriever(
+                        base_compressor=reranker,
+                        base_retriever=self.retriever,
+                    )
+                    logger.info(f"Reranker enabled (top_n: {settings.top_k_reranker})")
+                except Exception as e:
+                    logger.warning(f"Failed to setup reranker: {e}. Using retriever without reranking.")
+                    logger.exception(e)
+                    self.use_reranker = False
             else:
-                combined_scores[doc_id] = {
-                    'content': result['content'],
-                    'metadata': result['metadata'],
-                    'score': (1 - self.alpha) * result.get('normalized_score', 0),
-                    'semantic_score': 0,
-                    'bm25_score': result['score']
-                }
+                logger.warning("No reranker available, disabling reranking")
+                self.use_reranker = False
 
-        # Sort by combined score
-        merged_results = sorted(
-            combined_scores.values(),
-            key=lambda x: x['score'],
-            reverse=True
-        )
+        logger.info(f"Initialized AdvancedRetriever (reranker: {self.use_reranker})")
 
-        return merged_results
-
-    def retrieve(self,
+    def retrieve(
+        self,
                  query: str,
                  k: int = None,
-                 filter_dict: Optional[Dict[str, Any]] = None) -> List[Dict[str, Any]]:
+        filter_dict: Optional[Dict[str, Any]] = None,
+    ) -> List[Dict[str, Any]]:
         """
-        Perform hybrid retrieval.
+        Perform retrieval with optional reranking.
 
         Args:
             query: Query text
             k: Number of results to return (default from settings)
-            filter_dict: Optional metadata filter for semantic search
+            filter_dict: Optional metadata filter (used if SelfQueryRetriever not available)
 
         Returns:
-            List of top-k results with content, metadata, and combined scores
+            List of results with content, metadata, and scores
         """
         k = k or settings.top_k_retrieval
 
-        # Perform semantic search
-        logger.debug(f"Performing semantic search for: {query[:50]}...")
-        semantic_results = self.vector_store.similarity_search(
-            query, k=k*2, filter_dict=filter_dict)
+        logger.debug(f"Retrieving documents for query: {query[:50]}...")
 
-        # Perform BM25 search (if index is available)
-        bm25_results = []
-        if self.bm25_index is not None:
-            logger.debug("Performing BM25 search...")
-            bm25_results = self._bm25_search(query, k=k*2)
+        # Use LangChain retriever
+        if filter_dict and not isinstance(self.retriever, SelfQueryRetriever):
+            # If filter_dict provided but not using SelfQueryRetriever, use direct search
+            results = self.vector_store.similarity_search(
+                query=query,
+                k=k,
+                filter_dict=filter_dict
+            )
+        else:
+            # Use LangChain retriever
+            # The structured query logging is now handled by the wrapper in __init__
+            docs = self.retriever.get_relevant_documents(query)
 
-        # Merge results
-        merged_results = self._merge_results(semantic_results, bm25_results)
+            # Convert LangChain Documents to our format
+            results = []
+            for doc in docs[:k]:
+                # Extract score if available
+                score = getattr(doc, 'score', None)
+                if score is None:
+                    score = 0.8  # Default score if not available
 
-        # Return top-k
-        final_results = merged_results[:k]
+                results.append({
+                    'content': doc.page_content,
+                    'metadata': doc.metadata,
+                    'score': score,
+                    'id': doc.metadata.get('chunk_id', doc.metadata.get('id', ''))
+                })
 
-        logger.info(f"Retrieved {len(final_results)} results for query")
-        return final_results
+        logger.info(f"Retrieved {len(results)} documents")
+        return results
+
+    def rebuild_index(self):
+        """Rebuild the retriever index (placeholder for future implementation)."""
+        logger.info("Rebuilding retriever index...")
+        # Note: LangChain retrievers automatically use the updated vector store
+        pass

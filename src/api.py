@@ -11,8 +11,8 @@ from loguru import logger
 from config import settings
 from src.embeddings import get_embedding_model
 from src.vector_store import VectorStore
-from src.retriever import HybridRetriever
-from src.llm import get_llm_provider
+from src.retriever import AdvancedRetriever
+from src.llm import get_langchain_llm
 from src.rag_pipeline import RAGPipeline
 
 
@@ -36,14 +36,11 @@ async def lifespan(app: FastAPI):
         # Initialize vector store
         vector_store = VectorStore(embedding_model)
 
-        # Initialize retriever
-        retriever = HybridRetriever(vector_store)
+        # Initialize retriever (optional, for direct retrieval)
+        retriever = AdvancedRetriever(vector_store, llm=get_langchain_llm())
 
-        # Initialize LLM provider
-        llm_provider = get_llm_provider()
-
-        # Initialize RAG pipeline
-        rag_pipeline = RAGPipeline(retriever, llm_provider)
+        # Initialize RAG pipeline with agent
+        rag_pipeline = RAGPipeline(vector_store, retriever=retriever)
 
         logger.info("RAG system initialized successfully")
 

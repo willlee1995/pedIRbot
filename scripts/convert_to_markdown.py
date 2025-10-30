@@ -14,6 +14,7 @@ from loguru import logger
 from markitdown import MarkItDown
 from tqdm import tqdm
 import re
+from bs4 import BeautifulSoup, Comment
 
 
 class MarkdownConverter:
@@ -74,6 +75,128 @@ class MarkdownConverter:
 
         return output_path
 
+    def _clean_html(self, html_content: str, file_path: Path) -> str:
+        """
+        Clean HTML before conversion to remove navigation, headers, footers, etc.
+
+        Args:
+            html_content: Raw HTML content
+            file_path: Path to the HTML file (for context)
+
+        Returns:
+            Cleaned HTML with only main content
+        """
+        try:
+            soup = BeautifulSoup(html_content, 'html.parser')
+
+            # FIRST: Extract main content area BEFORE cleaning (preserve structure)
+            content_selectors = [
+                '#panel-container',  # Most specific - contains all panels
+                '#article-container',
+                '.article-text',
+                'article',
+                'main',
+            ]
+
+            main_content = None
+            for selector in content_selectors:
+                main_content = soup.select_one(selector)
+                if main_content:
+                    logger.debug(f"Found main content in {selector} for {file_path.name}")
+                    break
+
+            # Also get article-overview separately
+            article_overview = soup.select_one('#article-overview')
+
+            # NOW clean the extracted content
+            work_soup = main_content if main_content else soup
+
+            # Remove script and style elements
+            for element in work_soup.find_all(['script', 'style', 'noscript']):
+                element.decompose()
+
+            # Remove HTML comments
+            for comment in work_soup.find_all(string=lambda text: isinstance(text, Comment)):
+                comment.extract()
+
+            # Remove navigation elements
+            for element in work_soup.find_all(['nav', 'header', 'footer']):
+                element.decompose()
+
+            # Remove common UI/navigation elements by ID/class
+            ui_selectors = [
+                '#wb-container', '#webreader_button', '.rs_skip', '.rsbtn',
+                '.pdf-container', '#pdf-container', '#akh-pdf-download-button',
+                '#akh-pdf-print-button', '.pdfloader', '#pdfAlert',
+                '.contactModal', '#webreader-section',
+                '#open-all-panels', '.open-all-btn-wrapper',
+                '#gallery-frame', '#image-gallery', '.slider-for', '.slider-nav',
+                '#brand-photo',
+            ]
+
+            for selector in ui_selectors:
+                for element in work_soup.select(selector):
+                    element.decompose()
+
+            # Remove panel headings (UI controls) but preserve heading text
+            for panel_heading in work_soup.find_all(class_='panel-heading'):
+                if panel_heading.get('class') and 'clickable' in panel_heading.get('class', []):
+                    heading_text = panel_heading.get_text(strip=True)
+                    if heading_text and heading_text not in ['Expand All', 'Collapse All']:
+                        panel_body = panel_heading.find_next_sibling(class_='panel-body')
+                        if panel_body:
+                            # Use original soup for creating new tags
+                            h_tag = soup.new_tag('h2')
+                            h_tag.string = heading_text
+                            panel_body.insert(0, h_tag)
+                    panel_heading.decompose()
+
+            # Remove collapsible icons
+            for icon in work_soup.find_all(class_='panel-heading-collapsable-icon'):
+                icon.decompose()
+
+            # Remove display:none styles from panel-bodies (they're hidden by default)
+            for panel_body in work_soup.find_all(class_='panel-body'):
+                if panel_body.get('style'):
+                    del panel_body['style']
+                if 'collapse' in panel_body.get('class', []):
+                    panel_body['class'] = [c for c in panel_body.get('class', []) if c != 'collapse']
+
+            # Extract cleaned content
+            if main_content:
+                # Combine article-overview and main content if both exist
+                if article_overview and article_overview not in main_content.descendants:
+                    cleaned_html = str(article_overview) + '\n' + str(main_content)
+                else:
+                    cleaned_html = str(main_content)
+            elif article_overview:
+                cleaned_html = str(article_overview)
+            else:
+                # Fallback: extract all panel-bodies
+                panel_bodies = soup.find_all(class_='panel-body')
+                if panel_bodies:
+                    logger.debug(f"Found {len(panel_bodies)} panel-body sections for {file_path.name}")
+                    cleaned_parts = [str(pb) for pb in panel_bodies]
+                    cleaned_html = '\n'.join(cleaned_parts)
+                else:
+                    # Last resort: use body
+                    cleaned_html = str(soup.body) if soup.body else str(soup)
+
+            # Verify we have content
+            cleaned_html_len = len(cleaned_html) if cleaned_html else 0
+            logger.debug(f"Cleaned HTML length for {file_path.name}: {cleaned_html_len} chars")
+
+            if not cleaned_html or len(cleaned_html.strip()) < 50:
+                logger.warning(f"Cleaned HTML is very short ({cleaned_html_len} chars) for {file_path.name}, using original HTML")
+                return html_content
+
+            return cleaned_html
+
+        except Exception as e:
+            logger.warning(f"Failed to clean HTML for {file_path.name}: {e}. Using original HTML.")
+            logger.exception(e)
+            return html_content
+
     def _clean_markdown(self, markdown_text: str) -> str:
         """
         Clean up converted markdown.
@@ -115,8 +238,66 @@ class MarkdownConverter:
 
             # Convert to markdown
             logger.debug(f"Converting {file_path.name}...")
-            result = self.markitdown.convert(str(file_path))
-            markdown_text = result.text_content
+
+            # For HTML files, clean before conversion
+            if file_path.suffix.lower() in ['.html', '.htm']:
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        html_content = f.read()
+
+                    # Clean HTML to remove navigation, headers, footers, etc.
+                    cleaned_html = self._clean_html(html_content, file_path)
+
+                    # Verify cleaned HTML has content
+                    if not cleaned_html or len(cleaned_html.strip()) < 50:
+                        logger.warning(f"Cleaned HTML too short for {file_path.name}, using original HTML")
+                        result = self.markitdown.convert(str(file_path))
+                        markdown_text = result.text_content
+                    else:
+                        # Create temporary file with cleaned HTML
+                        import tempfile
+                        import os
+                        with tempfile.NamedTemporaryFile(mode='w', suffix='.html', delete=False, encoding='utf-8') as tmp_file:
+                            # Wrap cleaned HTML in valid HTML structure if needed
+                            if not cleaned_html.strip().startswith('<!DOCTYPE') and not cleaned_html.strip().startswith('<html'):
+                                wrapped_html = f"""<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+{cleaned_html}
+</body>
+</html>"""
+                            else:
+                                wrapped_html = cleaned_html
+
+                            tmp_file.write(wrapped_html)
+                            tmp_file_path = tmp_file.name
+
+                        try:
+                            # Convert cleaned HTML
+                            logger.debug(f"Converting cleaned HTML from {file_path.name} (cleaned size: {len(wrapped_html)} chars)")
+                            result = self.markitdown.convert(tmp_file_path)
+                            markdown_text = result.text_content if hasattr(result, 'text_content') else str(result)
+
+                            # Verify we got content
+                            if not markdown_text or len(markdown_text.strip()) < 50:
+                                logger.warning(f"MarkItDown returned empty content for {file_path.name}, trying original HTML")
+                                result = self.markitdown.convert(str(file_path))
+                                markdown_text = result.text_content if hasattr(result, 'text_content') else str(result)
+                        finally:
+                            # Clean up temp file
+                            if os.path.exists(tmp_file_path):
+                                os.unlink(tmp_file_path)
+
+                except Exception as e:
+                    logger.warning(f"Failed to clean HTML for {file_path.name}: {e}. Using direct conversion.")
+                    logger.exception(e)
+                    result = self.markitdown.convert(str(file_path))
+                    markdown_text = result.text_content if hasattr(result, 'text_content') else str(result)
+            else:
+                # For non-HTML files, convert directly
+                result = self.markitdown.convert(str(file_path))
+                markdown_text = result.text_content
 
             # Clean up markdown
             markdown_text = self._clean_markdown(markdown_text)

@@ -16,14 +16,15 @@ A complete, production-ready RAG (Retrieval-Augmented Generation) testing backen
 
 **Files**: `src/document_processor.py`, `scripts/ingest_documents.py`
 
-### 2. Hybrid Retrieval System
+### 2. Advanced Retrieval System with LangChain
 
-- **Semantic search**: Vector similarity using ChromaDB
-- **Keyword search**: BM25 ranking for exact term matching
-- **Intelligent merging**: Configurable weighting (alpha) between semantic and keyword results
-- **Re-ranking**: Normalized score combination for optimal relevance
+- **Self-Query Retrieval**: LangChain's SelfQueryRetriever for structured metadata filtering
+- **Vector similarity search**: ChromaDB integration via LangChain
+- **Built-in reranker**: LangChain's reranker for post-retrieval ranking optimization
+- **Tool-based retrieval**: LangChain tools for flexible knowledge base querying
+- **Structured query parsing**: Automatic extraction of filters from natural language queries
 
-**Files**: `src/vector_store.py`, `src/retriever.py`
+**Files**: `src/vector_store.py`, `src/retriever.py`, `src/tools.py`
 
 ### 3. Flexible Embedding Support
 
@@ -44,15 +45,18 @@ A complete, production-ready RAG (Retrieval-Augmented Generation) testing backen
 
 **Files**: `src/llm.py`
 
-### 5. RAG Pipeline with Safety Features
+### 5. Agent-Based RAG Pipeline with Safety Features
 
+- **LangChain Agent**: Tool-calling agent architecture for intelligent query routing
+- **Sub-agents/prompts**: Query standardization and structuring before retrieval
+- **Tool integration**: LangChain tools for vector search, structured search, and metadata filtering
 - **Emergency keyword detection**: Automatic detection of urgent medical situations
-- **Grounding enforcement**: LLM strictly limited to retrieved context
+- **Grounding enforcement**: LLM strictly limited to retrieved context via agent constraints
 - **Medical disclaimers**: Mandatory educational-purpose-only warnings
 - **Bilingual responses**: Automatic language matching
 - **Source attribution**: Transparent citation of information sources
 
-**Files**: `src/rag_pipeline.py`
+**Files**: `src/rag_pipeline.py`, `src/agent.py`, `src/tools.py`
 
 ### 6. Comprehensive Evaluation Framework
 
@@ -101,15 +105,20 @@ User Query
     ↓
 [Emergency Detection] → (if triggered) → Canned Response
     ↓
-[Query Embedding]
+[LangChain Agent (PedIRBot)]
     ↓
-[Hybrid Retrieval]
-  ├─ Vector Search (ChromaDB)
-  └─ BM25 Keyword Search
+[Sub-agents/Prompts] → Standardize & Structure Query
     ↓
-[Score Merging & Re-ranking]
+[Tool Selection] → Agent decides which tools to use
     ↓
-[Context Formatting]
+[Retrieval Tools]
+  ├─ Self-Query Retriever (with metadata filters)
+  ├─ Vector Store Search (ChromaDB via LangChain)
+  └─ Structured Knowledge Base Query (if applicable)
+    ↓
+[LangChain Reranker] → Post-retrieval ranking optimization
+    ↓
+[Context Assembly] → Format retrieved documents
     ↓
 [Prompt Engineering]
   ├─ System Instructions
@@ -117,7 +126,7 @@ User Query
   ├─ Medical Disclaimers
   └─ User Query
     ↓
-[LLM Generation] → (OpenAI or Ollama)
+[LLM Generation] → (OpenAI or Ollama via LangChain)
     ↓
 [Safety Checks & Post-processing]
     ↓
@@ -147,14 +156,16 @@ pedIRbot/
 ├── src/                          # Core application code
 │   ├── document_processor.py    # Document loading & chunking
 │   ├── embeddings.py             # Embedding model abstraction
-│   ├── vector_store.py           # ChromaDB interface
-│   ├── retriever.py              # Hybrid search implementation
-│   ├── llm.py                    # LLM provider abstraction
-│   ├── rag_pipeline.py           # Main RAG orchestration
+│   ├── vector_store.py           # LangChain ChromaDB integration
+│   ├── retriever.py              # LangChain SelfQueryRetriever & reranker
+│   ├── tools.py                  # LangChain tools for knowledge base querying
+│   ├── agent.py                  # LangChain agent setup and configuration
+│   ├── llm.py                    # LangChain LLM integration
+│   ├── rag_pipeline.py           # Agent-based RAG orchestration
 │   ├── evaluation.py             # Testing & comparison framework
 │   └── api.py                    # FastAPI server
 ├── scripts/                      # Utility scripts
-│   ├── ingest_documents.py       # Document processing
+│   ├── ingest_documents.py       # LangChain document processing
 │   ├── run_evaluation.py         # Single model evaluation
 │   ├── compare_models.py         # Multi-model comparison
 │   └── start_api.py              # API server launcher
@@ -163,7 +174,7 @@ pedIRbot/
 ├── KB/                           # Knowledge base directory
 ├── config.py                     # Configuration management
 ├── test_chat.py                  # Interactive testing tool
-├── requirements.txt              # Python dependencies
+├── requirements.txt              # Python dependencies (includes LangChain)
 ├── env.example                   # Configuration template
 ├── README.md                     # Main documentation
 ├── QUICKSTART.md                 # 5-minute setup guide
@@ -179,9 +190,11 @@ pedIRbot/
 - Supports all major settings:
   - API keys and endpoints
   - Model selection (embedding + LLM)
-  - Retrieval parameters (k, alpha)
+  - Retrieval parameters (k, top_k for reranker)
   - Chunking settings
   - Database paths
+  - LangChain agent settings (temperature, max_iterations)
+  - Reranker model configuration
 
 ## Usage Workflows
 
@@ -233,13 +246,15 @@ python scripts/compare_models.py test_data/sample_questions.json
 
 ## Extensibility Points
 
-The system is designed for easy extension:
+The system is designed for easy extension using LangChain's modular architecture:
 
-1. **New LLM Providers**: Implement `LLMProvider` interface in `llm.py`
-2. **New Embedding Models**: Implement `EmbeddingModel` interface in `embeddings.py`
-3. **Custom Retrieval**: Extend `HybridRetriever` in `retriever.py`
-4. **Additional Evaluation Metrics**: Add to `RAGEvaluator` in `evaluation.py`
-5. **API Endpoints**: Add routes to `api.py`
+1. **New LLM Providers**: Use LangChain's LLM interfaces or create custom LangChain LLM wrapper
+2. **New Embedding Models**: Use LangChain's embedding interfaces or create custom wrapper
+3. **Custom Tools**: Add new LangChain tools in `tools.py` for specialized retrieval methods
+4. **Agent Customization**: Modify agent prompts and tool selection in `agent.py`
+5. **Custom Retrievers**: Extend LangChain retriever classes or create custom retrievers
+6. **Additional Evaluation Metrics**: Add to `RAGEvaluator` in `evaluation.py`
+7. **API Endpoints**: Add routes to `api.py`
 
 ## Performance Characteristics
 
@@ -260,8 +275,12 @@ The system is designed for easy extension:
 
 **Core**:
 
+- `langchain` - Core framework for agents, tools, and retrieval
+- `langchain-community` - Community integrations (ChromaDB, etc.)
+- `langchain-chroma` - ChromaDB vector store integration
+- `langchain-openai` - OpenAI LLM and embeddings integration
+- `langchain-ollama` - Ollama LLM integration
 - `chromadb` - Vector database
-- `langchain` alternative: Custom implementation for transparency
 - `sentence-transformers` - Local embeddings
 - `openai` - Cloud LLM/embeddings
 - `ollama` - Local LLM
@@ -271,7 +290,7 @@ The system is designed for easy extension:
 
 - `markitdown` - Unified document conversion to Markdown
 - `markdown`, `beautifulsoup4` - Markdown processing
-- `rank-bm25` - Keyword search
+- `langchain-core` - Core LangChain abstractions
 - `pandas`, `openpyxl` - Excel export
 - `loguru` - Logging
 - `tenacity` - Retry logic
@@ -337,7 +356,10 @@ Based on `research.md` recommendations:
 ✅ Bilingual (EN/ZH) support
 ✅ OpenAI API integration
 ✅ Ollama integration (MedGemma3)
-✅ Hybrid retrieval (semantic + keyword)
+✅ LangChain-based agent architecture
+✅ Self-query retrieval with metadata filtering
+✅ Built-in reranker for optimal ranking
+✅ Tool-based retrieval system
 ✅ RAG pipeline with safety features
 ✅ Evaluation framework
 ✅ Model comparison capability

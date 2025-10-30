@@ -12,6 +12,8 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 """Script to ingest documents from KB folder into vector database."""
+from pathlib import Path
+
 from src.vector_store import VectorStore
 from src.embeddings import get_embedding_model
 from src.document_processor import DocumentProcessor
@@ -23,7 +25,45 @@ from loguru import logger
 # isort: on
 
 
-def main(kb_folder: str, reset: bool = False, markdown_only: bool = True):
+def _is_picc_related(file_path: Path, content: str = "") -> bool:
+    """
+    Check if a document is PICC-related based on filename or content.
+
+    Args:
+        file_path: Path to the file
+        content: Optional content to check (if already loaded)
+
+    Returns:
+        True if document appears to be PICC-related
+    """
+    picc_keywords = [
+        'picc', 'PICC', 'peripherally inserted central catheter',
+        'peripherally inserted central', 'central venous catheter',
+        'picc line', 'picc insertion', 'picc removal'
+    ]
+
+    # Check filename
+    filename_lower = file_path.name.lower()
+    if any(keyword.lower() in filename_lower for keyword in picc_keywords):
+        return True
+
+    # Check file path
+    path_str = str(file_path).lower()
+    if any(keyword.lower() in path_str for keyword in picc_keywords):
+        return True
+
+    # Check content if provided
+    if content:
+        content_lower = content.lower()
+        # Check if multiple PICC keywords appear (more reliable)
+        matches = sum(1 for keyword in picc_keywords if keyword.lower() in content_lower)
+        if matches >= 2:  # At least 2 keyword matches
+            return True
+
+    return False
+
+
+def main(kb_folder: str, reset: bool = False, markdown_only: bool = True, picc_only: bool = False):
     """
     Ingest documents from KB folder into vector database.
 
@@ -31,6 +71,7 @@ def main(kb_folder: str, reset: bool = False, markdown_only: bool = True):
         kb_folder: Path to KB folder containing documents
         reset: Whether to reset the collection before ingestion
         markdown_only: Only process markdown files (default: True)
+        picc_only: Only ingest PICC-related documents (default: False)
     """
     from pathlib import Path
 
@@ -40,6 +81,9 @@ def main(kb_folder: str, reset: bool = False, markdown_only: bool = True):
     logger.info(f"Source: {kb_folder}")
     logger.info(f"Embedding provider: {settings.embedding_provider}")
     logger.info(f"Markdown only: {markdown_only}")
+    logger.info(f"PICC-only filter: {picc_only}")
+    if picc_only:
+        logger.info("⚠️  Only PICC-related documents will be ingested")
     logger.info("=" * 70)
 
     # Check if this is the markdown directory
@@ -88,7 +132,36 @@ def main(kb_folder: str, reset: bool = False, markdown_only: bool = True):
                 logger.warning(f"   ... and {len(non_md_files) - 5} more")
             logger.warning("\n💡 Convert them first: python scripts/convert_to_markdown.py KB KB/md")
 
-    chunks = processor.process_directory(kb_folder)
+    # Process documents
+    all_chunks = processor.process_directory(kb_folder)
+
+    # Filter for PICC-only if requested
+    if picc_only:
+        logger.info("\n🔍 Filtering for PICC-related documents...")
+        filtered_chunks = []
+        skipped_count = 0
+
+        for chunk in all_chunks:
+            # Get file path from metadata
+            source_path = chunk.metadata.get('source', '')
+            if source_path:
+                file_path = Path(source_path)
+                # Check if PICC-related (check filename and content)
+                if _is_picc_related(file_path, chunk.content):
+                    filtered_chunks.append(chunk)
+                else:
+                    skipped_count += 1
+
+        chunks = filtered_chunks
+        logger.info(f"✅ Kept {len(chunks)} PICC-related chunks")
+        logger.info(f"⏭️  Skipped {skipped_count} non-PICC chunks")
+
+        if not chunks:
+            logger.error("\n❌ No PICC-related documents found!")
+            logger.error("   Check that your KB folder contains PICC-related files")
+            return
+    else:
+        chunks = all_chunks
 
     if not chunks:
         logger.error("\n❌ No documents processed!")
@@ -142,7 +215,12 @@ if __name__ == "__main__":
         action="store_true",
         help="Allow processing non-markdown files (not recommended)"
     )
+    parser.add_argument(
+        "--picc-only",
+        action="store_true",
+        help="Only ingest PICC-related documents (useful for testing with smaller KB)"
+    )
 
     args = parser.parse_args()
 
-    main(args.kb_folder, args.reset, markdown_only=not args.allow_all_formats)
+    main(args.kb_folder, args.reset, markdown_only=not args.allow_all_formats, picc_only=args.picc_only)

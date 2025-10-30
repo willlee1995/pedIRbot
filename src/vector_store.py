@@ -1,9 +1,58 @@
-"""Vector database management using ChromaDB."""
+"""Vector database management using LangChain ChromaDB integration."""
 from typing import List, Dict, Any, Optional
-import uuid
+import os
+import warnings
+import sys
+from contextlib import contextmanager
 
-import chromadb
-from chromadb.config import Settings as ChromaSettings
+# Disable ChromaDB telemetry to suppress warnings - MUST be set before importing chromadb
+os.environ["ANONYMIZED_TELEMETRY"] = "False"
+os.environ["CHROMA_TELEMETRY"] = "False"
+
+# Suppress all ChromaDB telemetry warnings
+warnings.filterwarnings("ignore", message=".*telemetry.*")
+warnings.filterwarnings("ignore", message=".*CollectionQueryEvent.*")
+warnings.filterwarnings("ignore", message=".*capture.*")
+
+# Context manager to suppress ChromaDB telemetry errors from stderr
+@contextmanager
+def suppress_telemetry_errors():
+    """Suppress ChromaDB telemetry errors that are printed to stderr."""
+    from io import StringIO
+    import sys
+
+    # Save original stderr
+    original_stderr = sys.stderr
+
+    # Create a filter that suppresses telemetry messages
+    class TelemetryFilter:
+        def __init__(self, original):
+            self.original = original
+
+        def write(self, message):
+            if message and ('telemetry' in message.lower() or
+                          'CollectionQueryEvent' in message or
+                          'capture() takes' in message):
+                return  # Suppress telemetry errors
+            self.original.write(message)
+
+        def flush(self):
+            self.original.flush()
+
+        def __getattr__(self, name):
+            return getattr(self.original, name)
+
+    # Replace stderr with filtered version
+    sys.stderr = TelemetryFilter(original_stderr)
+    try:
+        yield
+    finally:
+        # Restore original stderr
+        sys.stderr = original_stderr
+
+from langchain_chroma import Chroma
+from langchain_core.embeddings import Embeddings
+from langchain_core.documents import Document
 from loguru import logger
 
 from src.document_processor import DocumentChunk
@@ -11,8 +60,24 @@ from src.embeddings import EmbeddingModel
 from config import settings
 
 
+class EmbeddingModelWrapper(Embeddings):
+    """Wrapper to convert custom EmbeddingModel to LangChain Embeddings interface."""
+
+    def __init__(self, embedding_model: EmbeddingModel):
+        """Initialize wrapper with custom embedding model."""
+        self.embedding_model = embedding_model
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        """Embed a list of documents."""
+        return self.embedding_model.embed_documents(texts)
+
+    def embed_query(self, text: str) -> List[float]:
+        """Embed a single query."""
+        return self.embedding_model.embed_query(text)
+
+
 class VectorStore:
-    """Manages vector storage and retrieval using ChromaDB."""
+    """Manages vector storage and retrieval using LangChain ChromaDB."""
 
     def __init__(self,
                  embedding_model: EmbeddingModel,
@@ -21,7 +86,7 @@ class VectorStore:
         """
         Initialize the vector store.
 
-        Args:ModuleNotFoundError: No module named 'src'
+        Args:
             embedding_model: Embedding model to use
             collection_name: Name of the collection (default from settings)
             persist_directory: Directory to persist the database (default from settings)
@@ -30,24 +95,25 @@ class VectorStore:
         self.collection_name = collection_name or settings.collection_name
         self.persist_directory = persist_directory or settings.chroma_persist_directory
 
-        # Initialize ChromaDB client
-        self.client = chromadb.PersistentClient(
-            path=self.persist_directory,
-            settings=ChromaSettings(
-                anonymized_telemetry=False,
-                allow_reset=True
-            )
-        )
+        # Wrap embedding model for LangChain compatibility
+        langchain_embeddings = EmbeddingModelWrapper(embedding_model)
 
-        # Get or create collection
-        self.collection = self.client.get_or_create_collection(
-            name=self.collection_name,
-            metadata={"hnsw:space": "cosine"}
-        )
+        # Initialize LangChain Chroma vector store
+        # Suppress telemetry errors during initialization
+        import warnings
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore", message=".*telemetry.*")
+            warnings.filterwarnings("ignore", message=".*capture.*")
+            with suppress_telemetry_errors():
+                self.vectorstore = Chroma(
+                    collection_name=self.collection_name,
+                    persist_directory=self.persist_directory,
+                    embedding_function=langchain_embeddings,
+                )
 
         logger.info(
             f"Initialized vector store with collection: {self.collection_name}")
-        logger.info(f"Current collection size: {self.collection.count()}")
+        logger.info(f"Current collection size: {self.vectorstore._collection.count()}")
 
     def add_documents(self, chunks: List[DocumentChunk], batch_size: int = 100):
         """
@@ -59,29 +125,63 @@ class VectorStore:
         """
         logger.info(f"Adding {len(chunks)} documents to vector store...")
 
-        for i in range(0, len(chunks), batch_size):
-            batch = chunks[i:i + batch_size]
+        # Convert DocumentChunk to LangChain Document
+        langchain_docs = []
+        for chunk in chunks:
+            doc = Document(
+                page_content=chunk.content,
+                metadata=chunk.metadata
+            )
+            langchain_docs.append(doc)
 
-            # Extract data from chunks
-            ids = [chunk.chunk_id for chunk in batch]
-            documents = [chunk.content for chunk in batch]
-            metadatas = [chunk.metadata for chunk in batch]
-
-            # Generate embeddings
+        # Add in batches
+        for i in range(0, len(langchain_docs), batch_size):
+            batch = langchain_docs[i:i + batch_size]
+            batch_chunks = chunks[i:i + batch_size]
             logger.info(
-                f"Processing batch {i//batch_size + 1}/{(len(chunks)-1)//batch_size + 1}")
-            embeddings = self.embedding_model.embed_documents(documents)
+                f"Processing batch {i//batch_size + 1}/{(len(langchain_docs)-1)//batch_size + 1}")
 
-            # Add to collection
-            self.collection.add(
+            # Use LangChain's add_documents method with IDs
+            ids = [chunk.chunk_id for chunk in batch_chunks]
+
+            # Check for duplicates in this batch
+            if len(ids) != len(set(ids)):
+                logger.warning(f"Found duplicate IDs in batch, making them unique...")
+                seen_ids = set()
+                unique_ids = []
+                for idx, chunk_id in enumerate(ids):
+                    if chunk_id in seen_ids:
+                        # Make it unique by appending batch index
+                        unique_id = f"{chunk_id}_batch{i}_{idx}"
+                        unique_ids.append(unique_id)
+                    else:
+                        unique_ids.append(chunk_id)
+                        seen_ids.add(chunk_id)
+                ids = unique_ids
+
+            # Use ChromaDB upsert directly to handle duplicates gracefully
+            # This will replace existing documents with same IDs
+            collection = self.vectorstore._collection
+
+            # Get embeddings for this batch
+            texts = [doc.page_content for doc in batch]
+            embeddings = self.embedding_model.embed_documents(texts)
+
+            # Extract metadata
+            metadatas = [doc.metadata for doc in batch]
+
+            # Use upsert which handles duplicates (replaces existing)
+            collection.upsert(
                 ids=ids,
                 embeddings=embeddings,
-                documents=documents,
+                documents=texts,
                 metadatas=metadatas
             )
+            logger.debug(f"Upserted batch {i//batch_size + 1} ({len(batch)} documents)")
 
+        final_count = self.vectorstore._collection.count()
         logger.info(
-            f"Successfully added {len(chunks)} documents. Total count: {self.collection.count()}")
+            f"Successfully added {len(chunks)} documents. Total count: {final_count}")
 
     def similarity_search(self,
                           query: str,
@@ -100,48 +200,129 @@ class VectorStore:
         """
         k = k or settings.top_k_retrieval
 
-        # Generate query embedding
-        query_embedding = self.embedding_model.embed_query(query)
+        # Suppress telemetry errors during search
+        import warnings
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore", message=".*telemetry.*")
+            warnings.filterwarnings("ignore", message=".*capture.*")
+            warnings.filterwarnings("ignore", category=RuntimeWarning)
 
-        # Search
-        results = self.collection.query(
-            query_embeddings=[query_embedding],
-            n_results=k,
-            where=filter_dict,
-            include=["documents", "metadatas", "distances"]
-        )
+            # Also suppress stderr telemetry errors
+            with suppress_telemetry_errors():
+                # Use LangChain retriever interface
+                try:
+                    if filter_dict:
+                        # Convert filter_dict to ChromaDB format
+                        where = {}
+                        for key, value in filter_dict.items():
+                            where[key] = value
 
-        # Format results
+                        results = self.vectorstore.similarity_search_with_score(
+                            query, k=k, filter=where
+                        )
+                    else:
+                        results = self.vectorstore.similarity_search_with_score(query, k=k)
+                except Exception as e:
+                    # Catch telemetry-related errors (they're harmless)
+                    if 'capture' in str(e).lower() or 'telemetry' in str(e).lower():
+                        logger.debug(f"Suppressed telemetry error during search")
+                        # Retry - the error is just in telemetry, not the actual search
+                        if filter_dict:
+                            where = {k: v for k, v in filter_dict.items()}
+                            results = self.vectorstore.similarity_search_with_score(
+                                query, k=k, filter=where
+                            )
+                        else:
+                            results = self.vectorstore.similarity_search_with_score(query, k=k)
+                    else:
+                        raise
+
+        # Format results to match expected format
         formatted_results = []
-        for i in range(len(results['ids'][0])):
+        for doc, score in results:
+            # Convert distance to similarity (LangChain returns distance)
+            similarity_score = 1 - score if score <= 1 else 1 / (1 + score)
+
             formatted_results.append({
-                'content': results['documents'][0][i],
-                'metadata': results['metadatas'][0][i],
-                # Convert distance to similarity
-                'score': 1 - results['distances'][0][i],
-                'id': results['ids'][0][i]
+                'content': doc.page_content,
+                'metadata': doc.metadata,
+                'score': similarity_score,
+                'id': doc.metadata.get('chunk_id', doc.metadata.get('id', ''))
             })
 
         return formatted_results
 
+    def as_retriever(self, **kwargs):
+        """Get LangChain retriever from vector store."""
+        return self.vectorstore.as_retriever(**kwargs)
+
     def delete_collection(self):
         """Delete the current collection."""
-        self.client.delete_collection(self.collection_name)
+        self.vectorstore.delete_collection()
         logger.warning(f"Deleted collection: {self.collection_name}")
 
     def reset_collection(self):
         """Reset the collection (delete and recreate)."""
-        self.delete_collection()
-        self.collection = self.client.create_collection(
-            name=self.collection_name,
-            metadata={"hnsw:space": "cosine"}
-        )
-        logger.info(f"Reset collection: {self.collection_name}")
+        try:
+            # Try to delete the collection
+            try:
+                self.vectorstore.delete_collection()
+                logger.info(f"Deleted collection: {self.collection_name}")
+            except Exception as e:
+                logger.warning(f"Could not delete collection (may not exist): {e}")
+
+            # Get the client and ensure collection is deleted
+            import chromadb
+            import warnings
+            with warnings.catch_warnings():
+                warnings.filterwarnings("ignore", message=".*telemetry.*")
+                warnings.filterwarnings("ignore", message=".*capture.*")
+                client = chromadb.PersistentClient(path=self.persist_directory)
+            try:
+                client.delete_collection(self.collection_name)
+                logger.info(f"Confirmed deletion of collection: {self.collection_name}")
+            except Exception as e:
+                logger.debug(f"Collection may not exist: {e}")
+
+            # Small delay to ensure deletion completes
+            import time
+            time.sleep(0.5)
+
+            # Recreate vectorstore
+            langchain_embeddings = EmbeddingModelWrapper(self.embedding_model)
+            self.vectorstore = Chroma(
+                collection_name=self.collection_name,
+                persist_directory=self.persist_directory,
+                embedding_function=langchain_embeddings,
+            )
+
+            # Verify it's empty
+            count = self.vectorstore._collection.count()
+            if count > 0:
+                logger.warning(f"Collection still has {count} documents after reset, clearing...")
+                # Force clear by deleting all
+                self.vectorstore.delete_collection()
+                time.sleep(0.5)
+                self.vectorstore = Chroma(
+                    collection_name=self.collection_name,
+                    persist_directory=self.persist_directory,
+                    embedding_function=langchain_embeddings,
+                )
+
+            logger.info(f"Reset collection: {self.collection_name} (count: {self.vectorstore._collection.count()})")
+        except Exception as e:
+            logger.error(f"Error resetting collection: {e}")
+            raise
 
     def get_stats(self) -> Dict[str, Any]:
         """Get statistics about the vector store."""
         return {
             "collection_name": self.collection_name,
-            "total_documents": self.collection.count(),
+            "total_documents": self.vectorstore._collection.count(),
             "persist_directory": self.persist_directory
         }
+
+    @property
+    def collection(self):
+        """Access underlying ChromaDB collection (for backward compatibility)."""
+        return self.vectorstore._collection

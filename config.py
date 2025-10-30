@@ -20,7 +20,8 @@ class Settings(BaseSettings):
 
     # Ollama Configuration
     ollama_api_base: str = "http://localhost:11434"
-    ollama_chat_model: str = "alibayram/medgemma"
+    ollama_chat_model: str = "alibayram/medgemma"  # Default LLM (used for final answer generation)
+    ollama_orchestrator_model: str = "qwen3:8b"  # Model for orchestration (tool calling)
 
     # Vector Database Configuration
     chroma_persist_directory: str = "./chroma_db"
@@ -28,7 +29,18 @@ class Settings(BaseSettings):
 
     # Retrieval Configuration
     top_k_retrieval: int = 5
-    hybrid_alpha: float = 0.7  # Weight for semantic search
+    top_k_reranker: int = 3  # Number of documents to return after reranking
+    hybrid_alpha: float = 0.7  # Weight for semantic search (legacy, may be deprecated)
+
+    # LangChain Agent Configuration
+    agent_max_iterations: int = 5
+    agent_verbose: bool = False
+    agent_temperature: float = 0.1
+
+    # LangChain Reranker Configuration
+    use_reranker: bool = True
+    reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"  # Default reranker model
+    reranker_top_k: int = 10  # Number of documents to rerank (before selecting top_k_reranker)
 
     # Application Settings
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR"] = "INFO"

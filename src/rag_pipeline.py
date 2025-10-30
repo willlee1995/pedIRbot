@@ -1,13 +1,17 @@
-"""RAG pipeline implementation with prompt engineering."""
+"""RAG pipeline implementation using LangGraph Agentic RAG."""
 from typing import List, Dict, Any, Optional
+
+from langgraph.graph import StateGraph
+from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 from loguru import logger
 
-from src.retriever import HybridRetriever
-from src.llm import LLMProvider
+from src.agentic_rag import create_agentic_rag_graph
+from src.vector_store import VectorStore
+from src.retriever import AdvancedRetriever
 
 
 class RAGPipeline:
-    """RAG pipeline for generating responses based on retrieved context."""
+    """RAG pipeline using LangGraph Agentic RAG for generating responses."""
 
     # Emergency keywords that trigger canned responses
     EMERGENCY_KEYWORDS = [
@@ -30,41 +34,30 @@ If you have urgent questions about your procedure, please contact the HKCH IR nu
 如果您對手術有緊急疑問，請致電[電話號碼]聯絡香港兒童醫院介入放射科護士協調員。
 """
 
-    # System prompt template
-    SYSTEM_PROMPT = """You are 'PediIR-Bot', a helpful and friendly AI assistant from the Hong Kong Children's Hospital Radiology department. Your purpose is to provide clear and simple information to patients and their families about pediatric interventional radiology procedures.
-
-CRITICAL INSTRUCTIONS:
-1. You MUST base your answer EXCLUSIVELY on the information provided in the 'CONTEXT' section below.
-2. Do not use any of your own internal knowledge or information from outside this context.
-3. If the provided context does not contain the information needed to answer the question, you MUST respond with:
-   "I'm sorry, I don't have the specific information to answer that question. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?"
-4. You are strictly forbidden from providing any form of medical advice, diagnosis, treatment recommendations, or interpretation of a patient's personal medical situation.
-5. Your role is purely educational.
-6. Your tone must always be empathetic, reassuring, and easy to understand.
-7. Use simple language and avoid complex medical jargon.
-8. The user may ask questions in English or Traditional Chinese. You must generate your response in the same language as the user's original query.
-
-CONTEXT:
-{context}
-
-IMPORTANT DISCLAIMER:
-Every response you provide must end with the following disclaimer:
-"Please remember, this information is for educational purposes only and is not a substitute for professional medical advice. Always discuss any specific medical questions or concerns with your doctor or nurse."
-
-(Chinese version: "請記住，此資訊僅供教育目的，不能代替專業醫療建議。請務必與您的醫生或護士討論任何具體的醫療問題或疑慮。")
-"""
-
-    def __init__(self, retriever: HybridRetriever, llm_provider: LLMProvider):
+    def __init__(
+        self,
+        vector_store: VectorStore,
+        retriever: Optional[AdvancedRetriever] = None,
+        graph: Optional[StateGraph] = None,
+    ):
         """
-        Initialize the RAG pipeline.
+        Initialize the RAG pipeline using LangGraph.
 
         Args:
-            retriever: HybridRetriever instance
-            llm_provider: LLMProvider instance
+            vector_store: VectorStore instance
+            retriever: AdvancedRetriever instance (optional, kept for compatibility)
+            graph: Compiled LangGraph StateGraph (optional, will be created if not provided)
         """
+        self.vector_store = vector_store
         self.retriever = retriever
-        self.llm = llm_provider
-        logger.info("Initialized RAG pipeline")
+
+        # Create LangGraph if not provided
+        if graph is None:
+            self.graph = create_agentic_rag_graph(vector_store)
+        else:
+            self.graph = graph
+
+        logger.info("Initialized RAG pipeline with LangGraph Agentic RAG")
 
     def _check_emergency(self, query: str) -> Optional[str]:
         """
@@ -89,42 +82,22 @@ Every response you provide must end with the following disclaimer:
 
         return None
 
-    def _format_context(self, retrieved_docs: List[Dict[str, Any]]) -> str:
+    def generate_response(
+        self,
+        query: str,
+        k: int = None,
+        filter_dict: Optional[Dict[str, Any]] = None,
+        temperature: float = 0.1,
+        include_sources: bool = True,
+    ) -> Dict[str, Any]:
         """
-        Format retrieved documents into context string.
-
-        Args:
-            retrieved_docs: List of retrieved documents with content and metadata
-
-        Returns:
-            Formatted context string
-        """
-        context_parts = []
-
-        for i, doc in enumerate(retrieved_docs, 1):
-            source_org = doc['metadata'].get('source_org', 'Unknown')
-            filename = doc['metadata'].get('filename', 'Unknown')
-
-            context_parts.append(
-                f"[Document {i}] (Source: {source_org} - {filename})\n{doc['content']}\n"
-            )
-
-        return "\n---\n".join(context_parts)
-
-    def generate_response(self,
-                          query: str,
-                          k: int = None,
-                          filter_dict: Optional[Dict[str, Any]] = None,
-                          temperature: float = 0.1,
-                          include_sources: bool = True) -> Dict[str, Any]:
-        """
-        Generate a response using the RAG pipeline.
+        Generate a response using LangGraph Agentic RAG.
 
         Args:
             query: User query
-            k: Number of documents to retrieve
-            filter_dict: Optional metadata filter for retrieval
-            temperature: LLM temperature
+            k: Number of documents to retrieve (not used, kept for compatibility)
+            filter_dict: Optional metadata filter (not directly used, kept for compatibility)
+            temperature: LLM temperature (not directly used, kept for compatibility)
             include_sources: Whether to include source documents in response
 
         Returns:
@@ -138,88 +111,125 @@ Every response you provide must end with the following disclaimer:
             return {
                 'response': emergency_response,
                 'sources': [],
-                'is_emergency': True
+                'is_emergency': True,
             }
 
-        # Retrieve relevant documents
-        retrieved_docs = self.retriever.retrieve(
-            query, k=k, filter_dict=filter_dict)
+        # Use LangGraph to generate response
+        try:
+            logger.info("Invoking LangGraph agentic RAG...")
 
-        if not retrieved_docs:
-            logger.warning("No relevant documents retrieved")
+            # Run the graph
+            result = self.graph.invoke({
+                "messages": [HumanMessage(content=query)]
+            })
+
+            # Extract final response from messages
+            messages = result.get("messages", [])
+            response_text = ""
+            sources = []
+
+            # Log all messages for debugging
+            logger.info(f"Total messages in result: {len(messages)}")
+            for i, msg in enumerate(messages):
+                msg_type = type(msg).__name__
+                if isinstance(msg, AIMessage):
+                    content_preview = msg.content[:100] + "..." if len(msg.content) > 100 else msg.content
+                    logger.info(f"Message {i}: {msg_type} - Content: {content_preview}")
+                    if hasattr(msg, 'tool_calls') and msg.tool_calls:
+                        logger.info(f"  Tool calls: {[tc.get('name', 'unknown') for tc in msg.tool_calls]}")
+                elif isinstance(msg, ToolMessage):
+                    content_preview = msg.content[:100] + "..." if len(msg.content) > 100 else msg.content
+                    tool_name = msg.name if hasattr(msg, 'name') else 'Unknown'
+                    logger.info(f"Message {i}: {msg_type} (Tool: {tool_name}) - Content: {content_preview}")
+                elif isinstance(msg, HumanMessage):
+                    content_preview = msg.content[:100] + "..." if len(msg.content) > 100 else msg.content
+                    logger.info(f"Message {i}: {msg_type} - Content: {content_preview}")
+                elif isinstance(msg, dict):
+                    msg_role = msg.get('role', 'unknown')
+                    msg_type_name = msg.get('type', 'unknown')
+                    content_preview = str(msg.get('content', ''))[:100]
+                    logger.info(f"Message {i}: dict (role={msg_role}, type={msg_type_name}) - Content: {content_preview}")
+                else:
+                    logger.debug(f"Message {i}: {msg_type} - {str(msg)[:100]}")
+
+            # Find the final assistant message (AIMessage from LangChain)
+            logger.debug(f"Total messages in result: {len(messages)}")
+            for msg in reversed(messages):
+                # Check for AIMessage instance (LangChain message object)
+                if isinstance(msg, AIMessage):
+                    response_text = msg.content if hasattr(msg, 'content') else str(msg)
+                    logger.debug(f"Found AIMessage with content length: {len(response_text) if response_text else 0}")
+                    break
+                # Fallback: check for dict format
+                elif isinstance(msg, dict):
+                    if msg.get('role') == 'assistant' or 'type' in msg and msg.get('type') == 'ai':
+                        response_text = msg.get('content', '')
+                        logger.debug(f"Found assistant message in dict format")
+                        break
+                # Fallback: check for content attribute
+                elif hasattr(msg, 'content'):
+                    # Make sure it's not a HumanMessage or ToolMessage
+                    if not isinstance(msg, (HumanMessage, ToolMessage)):
+                        response_text = msg.content if hasattr(msg, 'content') else str(msg)
+                        logger.debug(f"Found message with content attribute")
+                        break
+
+            # Extract sources from tool messages
+            if include_sources:
+                for msg in messages:
+                    if isinstance(msg, ToolMessage):
+                        tool_name = msg.name if hasattr(msg, 'name') else 'Unknown'
+                        content = msg.content if hasattr(msg, 'content') else str(msg)
+                        sources.append({
+                            'tool': tool_name,
+                            'content': content[:200] + '...' if len(content) > 200 else content
+                        })
+                    elif isinstance(msg, dict) and msg.get('role') == 'tool':
+                        sources.append({
+                            'tool': msg.get('name', 'Unknown'),
+                            'content': msg.get('content', '')[:200] + '...' if len(msg.get('content', '')) > 200 else msg.get('content', '')
+                        })
+                    elif hasattr(msg, 'name') and msg.name:  # Tool message
+                        sources.append({
+                            'tool': msg.name,
+                            'content': msg.content[:200] + '...' if len(msg.content) > 200 else msg.content
+                        })
+
+            if not response_text:
+                logger.warning(f"Could not extract response from {len(messages)} messages")
+                logger.debug(f"Message types: {[type(msg).__name__ for msg in messages]}")
+                response_text = "I'm sorry, I couldn't generate a response."
+
             return {
-                'response': "I'm sorry, I couldn't find any relevant information to answer your question. Please contact the IR nurse coordinator for assistance.",
-                'sources': [],
-                'is_emergency': False
+                'response': response_text,
+                'sources': sources,
+                'is_emergency': False,
             }
 
-        # Filter out low-quality matches (cosine similarity < 0.4)
-        MIN_RELEVANCE_SCORE = 0.4
-        high_quality_docs = [doc for doc in retrieved_docs if doc.get('score', 0) >= MIN_RELEVANCE_SCORE]
-
-        if not high_quality_docs:
-            logger.warning(f"All retrieved documents below quality threshold ({MIN_RELEVANCE_SCORE})")
-            logger.warning(f"Top score: {retrieved_docs[0].get('score', 0):.3f}")
+        except Exception as e:
+            logger.error(f"Error generating response: {e}")
+            logger.exception(e)
             return {
-                'response': "I'm sorry, I couldn't find sufficiently relevant information to answer that question confidently. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?",
+                'response': "I'm sorry, I encountered an error while processing your question. Please try again or contact the IR nurse coordinator for assistance.",
                 'sources': [],
-                'is_emergency': False
+                'is_emergency': False,
             }
 
-        # Use high-quality docs only
-        retrieved_docs = high_quality_docs
-        logger.info(f"Using {len(retrieved_docs)} high-quality documents (score >= {MIN_RELEVANCE_SCORE})")
-
-        # Format context
-        context = self._format_context(retrieved_docs)
-
-        # Build messages
-        system_prompt = self.SYSTEM_PROMPT.format(context=context)
-        messages = [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": query}
-        ]
-
-        # Generate response
-        logger.info("Generating LLM response...")
-        response = self.llm.generate(messages, temperature=temperature)
-
-        # Prepare result
-        result = {
-            'response': response,
-            'is_emergency': False
-        }
-
-        if include_sources:
-            result['sources'] = [
-                {
-                    # Truncate for brevity
-                    'content': doc['content'][:200] + '...',
-                    'source_org': doc['metadata'].get('source_org', 'Unknown'),
-                    'filename': doc['metadata'].get('filename', 'Unknown'),
-                    'score': doc['score']
-                }
-                for doc in retrieved_docs
-            ]
-        else:
-            result['sources'] = []
-
-        logger.info("Response generated successfully")
-        return result
-
-    def stream_response(self,
-                        query: str,
-                        k: int = None,
-                        filter_dict: Optional[Dict[str, Any]] = None,
-                        temperature: float = 0.1):
+    def stream_response(
+        self,
+        query: str,
+        k: int = None,
+        filter_dict: Optional[Dict[str, Any]] = None,
+        temperature: float = 0.1,
+    ):
         """
-        Generate a streaming response using the RAG pipeline.
+        Generate a streaming response using LangGraph Agentic RAG.
 
         Args:
             query: User query
-            k: Number of documents to retrieve
-            filter_dict: Optional metadata filter for retrieval
-            temperature: LLM temperature
+            k: Number of documents to retrieve (not used)
+            filter_dict: Optional metadata filter
+            temperature: LLM temperature (not directly used)
 
         Yields:
             Response chunks and metadata
@@ -232,39 +242,32 @@ Every response you provide must end with the following disclaimer:
             yield {'type': 'emergency', 'content': emergency_response}
             return
 
-        # Retrieve relevant documents
-        retrieved_docs = self.retriever.retrieve(
-            query, k=k, filter_dict=filter_dict)
+        # Use LangGraph streaming
+        try:
+            logger.info("Streaming LangGraph response...")
+            for chunk in self.graph.stream({
+                "messages": [HumanMessage(content=query)]
+            }):
+                # LangGraph returns chunks per node
+                for node_name, node_output in chunk.items():
+                    if node_name == "generate_answer":
+                        # Final answer node
+                        messages = node_output.get("messages", [])
+                        for msg in messages:
+                            if hasattr(msg, 'content'):
+                                yield {'type': 'response', 'content': msg.content}
+                    elif node_name == "retrieve":
+                        # Retrieval node
+                        yield {'type': 'tool_execution', 'content': f"Retrieving documents from {node_name}..."}
+                    elif node_name == "generate_query_or_respond":
+                        # Query generation node
+                        yield {'type': 'agent_thinking', 'content': f"Thinking about query: {query[:50]}..."}
+                    elif node_name == "rewrite_question":
+                        # Question rewriting node
+                        yield {'type': 'agent_thinking', 'content': "Rewriting question for better retrieval..."}
 
-        if not retrieved_docs:
-            logger.warning("No relevant documents retrieved")
-            yield {'type': 'error', 'content': "No relevant information found"}
-            return
-
-        # Send sources first
-        yield {
-            'type': 'sources',
-            'content': [
-                {
-                    'source_org': doc['metadata'].get('source_org', 'Unknown'),
-                    'filename': doc['metadata'].get('filename', 'Unknown'),
-                    'score': doc['score']
-                }
-                for doc in retrieved_docs
-            ]
-        }
-
-        # Format context and build messages
-        context = self._format_context(retrieved_docs)
-        system_prompt = self.SYSTEM_PROMPT.format(context=context)
-        messages = [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": query}
-        ]
-
-        # Stream response
-        logger.info("Streaming LLM response...")
-        for chunk in self.llm.stream_generate(messages, temperature=temperature):
-            yield {'type': 'response', 'content': chunk}
+        except Exception as e:
+            logger.error(f"Error streaming response: {e}")
+            yield {'type': 'error', 'content': f"Error: {str(e)}"}
 
         logger.info("Streaming completed")
