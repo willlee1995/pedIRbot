@@ -50,6 +50,17 @@ uv venv
 
 ### 2. Install Dependencies
 
+**Option A: Using pyproject.toml (Recommended - Fastest)**
+
+```bash
+# Install all dependencies from pyproject.toml
+uv pip install -e .
+
+# This is MUCH faster than pip, and pyproject.toml is optimized for uv
+```
+
+**Option B: Using requirements.txt**
+
 ```bash
 # Install all requirements
 uv pip install -r requirements.txt
@@ -91,7 +102,8 @@ uv pip install git+https://github.com/microsoft/markitdown
 # Start from scratch
 cd pedIRbot
 uv venv
-uv pip install -r requirements.txt
+uv pip install -e .  # Uses pyproject.toml (fastest)
+# OR: uv pip install -r requirements.txt
 .venv\Scripts\activate  # Windows
 source .venv/bin/activate  # Linux/Mac
 ```
@@ -394,8 +406,9 @@ uv venv
 source .venv/bin/activate  # Linux/Mac
 .venv\Scripts\activate  # Windows
 
-# Install dependencies
-uv pip install -r requirements.txt
+# Install dependencies (using pyproject.toml - recommended)
+uv pip install -e .
+# OR: uv pip install -r requirements.txt
 
 # Install single package
 uv pip install package-name

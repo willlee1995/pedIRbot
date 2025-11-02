@@ -27,6 +27,9 @@ class Settings(BaseSettings):
     chroma_persist_directory: str = "./chroma_db"
     collection_name: str = "pedir_knowledge_base"
 
+    # Document Database Configuration (SQLite for full document storage)
+    document_db_path: str = "./document_db.sqlite"
+
     # Retrieval Configuration
     top_k_retrieval: int = 5
     top_k_reranker: int = 3  # Number of documents to return after reranking
@@ -56,6 +59,12 @@ class Settings(BaseSettings):
 
     # LLM Provider
     llm_provider: Literal["openai", "ollama"] = "openai"
+
+    # LangSmith Configuration
+    langsmith_tracing: bool = False  # Set to True to enable tracing
+    langsmith_api_key: str = ""
+    langsmith_project: str = "pedir-bot"  # Project name in LangSmith
+    langsmith_endpoint: str = "https://api.smith.langchain.com"  # LangSmith API endpoint
 
 
 settings = Settings()

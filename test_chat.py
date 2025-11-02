@@ -9,11 +9,41 @@ from loguru import logger
 import sys
 from pathlib import Path
 
+# Import LangSmith traceable decorator
+try:
+    from langsmith import traceable
+    LANGSMITH_AVAILABLE = True
+except ImportError:
+    LANGSMITH_AVAILABLE = False
+    # Create a no-op decorator if LangSmith is not available
+    def traceable(*args, **kwargs):
+        def decorator(func):
+            return func
+        return decorator
+
 # Add current directory to path FIRST (before other imports)
 sys.path.insert(0, str(Path(__file__).parent))
 
 # isort: off  - Don't reorder imports below this line
 # isort: on
+
+
+@traceable(name="test_chat_query", metadata={"component": "test_chat", "interface": "interactive"})
+def _process_test_query(rag_pipeline: RAGPipeline, query: str) -> dict:
+    """
+    Process a query from the test chat interface with LangSmith tracing.
+
+    Args:
+        rag_pipeline: RAGPipeline instance
+        query: User query string
+
+    Returns:
+        Result dictionary with response and metadata
+    """
+    return rag_pipeline.generate_response(
+        query=query,
+        include_sources=True
+    )
 
 
 def main():
@@ -102,12 +132,17 @@ def main():
             # Generate response
             print("\nPedIR-Bot: ", end="", flush=True)
 
-            result = rag_pipeline.generate_response(
-                query=query,
-                include_sources=True
-            )
+            # Trace the test chat query with LangSmith
+            result = _process_test_query(rag_pipeline, query)
 
             print(result['response'])
+
+            # Display total round trip time
+            if 'total_time' in result:
+                total_time = result['total_time']
+                print(f"\n{'─'*60}")
+                print(f"⏱️  Total Round Trip Time: {total_time:.2f} seconds")
+                print(f"{'─'*60}")
 
             # Show sources (from agent intermediate steps)
             if result.get('sources'):

@@ -4,23 +4,26 @@ from typing import List, Optional
 from langchain_core.documents import Document
 from loguru import logger
 
-# Try different import paths for BaseDocumentCompressor
+# Try different import paths for BaseDocumentCompressor (LangChain 1.0+ compatible)
 try:
-    from langchain_core.retrievers import BaseDocumentCompressor
+    from langchain_core.retrievers.document_compressors import BaseDocumentCompressor
 except ImportError:
     try:
-        from langchain.retrievers.document_compressors import BaseDocumentCompressor
+        from langchain_core.retrievers import BaseDocumentCompressor
     except ImportError:
         try:
-            from langchain.retrievers.document_compressors.base import BaseDocumentCompressor
+            from langchain.retrievers.document_compressors import BaseDocumentCompressor
         except ImportError:
-            # Fallback: define a minimal base class if import fails
-            from abc import ABC, abstractmethod
-            class BaseDocumentCompressor(ABC):
-                @abstractmethod
-                def compress_documents(self, documents, query):
-                    """Compress documents based on query."""
-                    pass
+            try:
+                from langchain.retrievers.document_compressors.base import BaseDocumentCompressor
+            except ImportError:
+                # Fallback: define a minimal base class if import fails
+                from abc import ABC, abstractmethod
+                class BaseDocumentCompressor(ABC):
+                    @abstractmethod
+                    def compress_documents(self, documents, query):
+                        """Compress documents based on query."""
+                        pass
 
 # Check for required dependencies
 try:

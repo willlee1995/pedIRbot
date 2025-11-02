@@ -1,5 +1,6 @@
 """LLM integration for OpenAI-compatible and Ollama APIs with LangChain support."""
 from typing import List, Dict, Any, Optional
+import os
 
 from loguru import logger
 from tenacity import retry, stop_after_attempt, wait_exponential
@@ -10,6 +11,16 @@ from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 from config import settings
+
+# Initialize LangSmith if enabled
+if settings.langsmith_tracing and settings.langsmith_api_key:
+    os.environ["LANGSMITH_TRACING"] = "true"
+    os.environ["LANGSMITH_API_KEY"] = settings.langsmith_api_key
+    os.environ["LANGSMITH_PROJECT"] = settings.langsmith_project
+    os.environ["LANGSMITH_ENDPOINT"] = settings.langsmith_endpoint
+    logger.info(f"LangSmith tracing enabled for project: {settings.langsmith_project}")
+elif settings.langsmith_tracing and not settings.langsmith_api_key:
+    logger.warning("LangSmith tracing is enabled but API key is not set")
 
 
 def get_langchain_llm(provider: str = None, **kwargs) -> BaseChatModel:

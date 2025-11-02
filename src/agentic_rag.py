@@ -6,14 +6,57 @@ from langgraph.graph import StateGraph, MessagesState, START, END
 from langgraph.prebuilt import ToolNode, tools_condition
 from langchain_core.language_models import BaseChatModel
 from langchain_core.tools import BaseTool
-from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
+from langchain_core.messages import HumanMessage, AIMessage, ToolMessage, SystemMessage
 from loguru import logger
 from pydantic import BaseModel, Field
 
 from src.llm import get_langchain_llm
 from src.tools import get_knowledge_base_tools
 from src.vector_store import VectorStore
+from src.guardrails import EmergencyGuardrailMiddleware, SafetyCheckGuardrail, EMERGENCY_RESPONSE
 from config import settings
+
+
+def extract_text_from_content(content) -> str:
+    """
+    Extract text from content that can be a string or list of content blocks.
+
+    Args:
+        content: Message content (string or list of dicts)
+
+    Returns:
+        Extracted text string
+    """
+    if isinstance(content, str):
+        return content
+    elif isinstance(content, list):
+        # Handle structured content blocks (LangChain 1.0+)
+        text_parts = []
+        for block in content:
+            if isinstance(block, dict):
+                # Extract text from content blocks
+                if block.get('type') == 'text':
+                    text_parts.append(block.get('text', ''))
+                elif 'text' in block:
+                    text_parts.append(str(block['text']))
+            elif isinstance(block, str):
+                text_parts.append(block)
+        return ' '.join(text_parts)
+    else:
+        # Fallback: convert to string
+        return str(content)
+
+# Import LangSmith traceable decorator
+try:
+    from langsmith import traceable
+    LANGSMITH_AVAILABLE = True
+except ImportError:
+    LANGSMITH_AVAILABLE = False
+    # Create a no-op decorator if LangSmith is not available
+    def traceable(*args, **kwargs):
+        def decorator(func):
+            return func
+        return decorator
 
 
 class GradeDocuments(BaseModel):
@@ -137,33 +180,164 @@ def create_agentic_rag_graph(
         orchestrator_llm = llm
 
     # Get tools if not provided
+    # Follow LangChain 1.0 agentic RAG pattern: simple retriever tool + SQL tools
+    # https://docs.langchain.com/oss/python/langgraph/agentic-rag
+    # https://docs.langchain.com/oss/python/langgraph/sql-agent
     if tools is None:
-        # Import retriever to pass to tools
-        from src.retriever import AdvancedRetriever
+        # Add SQL tools FIRST (higher priority/preference)
+        from src.sql_tools import get_sql_tools
+        sql_tools = get_sql_tools()
 
-        # Create retriever with LLM to ensure SelfQueryRetriever always runs
-        retriever_llm = get_langchain_llm(provider="ollama", model=settings.ollama_orchestrator_model)
-        retriever = AdvancedRetriever(vector_store, llm=retriever_llm)
-        logger.info("Created AdvancedRetriever with SelfQueryRetriever for structured queries")
+        # Create vector search tools (lower priority, fallback)
+        kb_tools = get_knowledge_base_tools(vector_store, retriever=None)
 
-        # Pass retriever to tools so SelfQueryRetriever is always used
-        tools = get_knowledge_base_tools(vector_store, retriever=retriever)
-        logger.info(f"Initialized {len(tools)} tools for agent with SelfQueryRetriever")
+        # Combine: SQL tools first (preferred), then vector search (fallback)
+        tools = sql_tools + kb_tools
+        logger.info(f"Initialized {len(sql_tools)} SQL tools (PREFERRED) + {len(kb_tools)} vector search tools (fallback) = {len(tools)} total tools")
 
     # Convert tools to retriever tool format if needed
     retriever_tool = tools[0] if tools else None
 
+    # Initialize guardrails
+    emergency_guardrail = EmergencyGuardrailMiddleware()
+    safety_check = SafetyCheckGuardrail(llm=grader_llm)  # Use grader_llm for safety checks
+
+    # Node 0: Emergency check (before agent processing)
+    @traceable(name="emergency_check", run_type="chain", metadata={"node": "guardrail"})
+    def check_emergency_node(state: MessagesState):
+        """Check for emergency keywords before processing."""
+        try:
+            logger.info("=== Node: emergency_check ===")
+            messages = state["messages"]
+
+            # Extract user query
+            query = ""
+            for msg in messages:
+                if isinstance(msg, HumanMessage) or (isinstance(msg, dict) and msg.get('role') == 'user'):
+                    content = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                    query = extract_text_from_content(content)
+                    break
+
+            # Store emergency detection result in a message for routing
+            if query:
+                emergency_response = emergency_guardrail.check_emergency(query)
+                if emergency_response:
+                    logger.warning("🚨 Emergency detected, routing to emergency handler")
+                    # Add a marker message to indicate emergency
+                    # The routing function will check for this
+                    return {"messages": messages + [AIMessage(content="__EMERGENCY_DETECTED__")]}
+
+            logger.info("No emergency detected, continuing")
+            return {"messages": messages}
+        except Exception as e:
+            logger.error(f"Error in emergency_check: {e}")
+            logger.exception(e)
+            # On error, continue processing
+            return {"messages": state["messages"]}
+
+    # Conditional routing function for emergency check
+    def route_emergency(state: MessagesState) -> Literal["handle_emergency", "generate_query_or_respond"]:
+        """Route based on emergency detection."""
+        messages = state.get("messages", [])
+
+        # Check if emergency marker is present
+        for msg in messages:
+            if isinstance(msg, AIMessage) and hasattr(msg, 'content'):
+                # Handle both string and structured content
+                content = msg.content
+                if isinstance(content, str) and content == "__EMERGENCY_DETECTED__":
+                    return "handle_emergency"
+                elif isinstance(content, list):
+                    # Check if any block contains the marker
+                    for block in content:
+                        if isinstance(block, dict) and block.get('text') == "__EMERGENCY_DETECTED__":
+                            return "handle_emergency"
+
+        return "generate_query_or_respond"
+
+    # Node 0.5: Emergency response handler
+    @traceable(name="handle_emergency", run_type="chain", metadata={"node": "guardrail"})
+    def handle_emergency(state: MessagesState):
+        """Return emergency response when emergency keywords detected."""
+        messages = state["messages"]
+
+        # Remove the emergency marker message (handle both string and structured content)
+        def is_emergency_marker(msg):
+            if not (isinstance(msg, AIMessage) and hasattr(msg, 'content')):
+                return False
+            content = msg.content
+            if isinstance(content, str):
+                return content == "__EMERGENCY_DETECTED__"
+            elif isinstance(content, list):
+                for block in content:
+                    if isinstance(block, dict) and block.get('text') == "__EMERGENCY_DETECTED__":
+                        return True
+            return False
+
+        filtered_messages = [m for m in messages if not is_emergency_marker(m)]
+
+        # Extract user query to detect language
+        query = ""
+        for msg in filtered_messages:
+            if isinstance(msg, HumanMessage) or (isinstance(msg, dict) and msg.get('role') == 'user'):
+                content = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                query = extract_text_from_content(content)
+                break
+
+        # Use emergency guardrail to get appropriate response
+        emergency_response = emergency_guardrail.check_emergency(query)
+        if emergency_response:
+            logger.info("Returning emergency response")
+            return {"messages": [AIMessage(content=emergency_response)]}
+        else:
+            # Fallback emergency response
+            return {"messages": [AIMessage(content=EMERGENCY_RESPONSE)]}
+
     # Node 1: Generate query or respond (uses orchestrator_llm with tool calling)
+    @traceable(name="generate_query_or_respond", run_type="chain", metadata={"node": "orchestrator"})
     def generate_query_or_respond(state: MessagesState):
         """Call the model to generate a response. It will decide to retrieve using tools or respond directly."""
         try:
             logger.info("=== Node: generate_query_or_respond ===")
             logger.info(f"State messages count: {len(state.get('messages', []))}")
 
+            # Add system instruction to prefer SQL tools over semantic search
+            messages = state["messages"]
+            system_instruction = """IMPORTANT TOOL SELECTION GUIDANCE:
+
+1. **PREFERRED: Use SQL tools first** (search_documents_sql, get_document_by_id, get_documents_by_ids)
+   - These provide FULL document context without scattered information
+   - Use search_documents_sql when you can identify metadata filters (source_org, region, procedure_category, filename_pattern)
+   - Use get_document_by_id when you know a specific document ID
+   - SQL tools return complete documents, not fragmented chunks
+
+2. **FALLBACK ONLY: Use semantic search** (search_kb)
+   - Only use when you don't know metadata filters or need semantic similarity search
+   - If semantic search returns relevant chunks, extract the document_id from metadata and use get_document_by_id() to fetch the full document
+
+3. **Workflow recommendation:**
+   - First try: search_documents_sql with metadata filters (if you can identify them from the question)
+   - Then: get_document_by_id or get_documents_by_ids to fetch full document content
+   - Fallback: search_kb only if SQL tools don't work or you need semantic similarity
+
+Remember: SQL tools = full documents with complete context. Semantic search = fragmented chunks."""
+
+            # Add system instruction as first message if not already present
+            has_system_instruction = False
+            for msg in messages:
+                if isinstance(msg, SystemMessage) or (isinstance(msg, dict) and msg.get('role') == 'system'):
+                    has_system_instruction = True
+                    break
+
+            if not has_system_instruction:
+                messages_with_instruction = [SystemMessage(content=system_instruction)] + messages
+            else:
+                messages_with_instruction = messages
+
             # Bind tools to orchestrator LLM if supported
             if hasattr(orchestrator_llm, 'bind_tools'):
                 try:
-                    response = orchestrator_llm.bind_tools(tools).invoke(state["messages"])
+                    response = orchestrator_llm.bind_tools(tools).invoke(messages_with_instruction)
                     logger.info(f"Generated response (with tools): {type(response).__name__}")
                     if hasattr(response, 'content'):
                         logger.info(f"Response content preview: {response.content[:200]}...")
@@ -175,7 +349,7 @@ def create_agentic_rag_graph(
                 except Exception as e:
                     logger.warning(f"bind_tools failed: {e}, trying without tools")
                     # Fallback: try ReAct-style prompting
-                    response = orchestrator_llm.invoke(state["messages"])
+                    response = orchestrator_llm.invoke(messages_with_instruction)
                     logger.info(f"Generated response (without tools): {type(response).__name__}")
                     if hasattr(response, 'content'):
                         logger.info(f"Response content preview: {response.content[:200]}...")
@@ -183,7 +357,7 @@ def create_agentic_rag_graph(
             else:
                 # For models without bind_tools, use ReAct-style prompting
                 logger.warning("Orchestrator LLM doesn't support bind_tools, using ReAct-style")
-                response = orchestrator_llm.invoke(state["messages"])
+                response = orchestrator_llm.invoke(messages_with_instruction)
                 logger.info(f"Generated response (ReAct-style): {type(response).__name__}")
                 if hasattr(response, 'content'):
                     logger.info(f"Response content preview: {response.content[:200]}...")
@@ -192,10 +366,17 @@ def create_agentic_rag_graph(
             logger.error(f"Error in generate_query_or_respond: {e}")
             logger.exception(e)
             # Fallback: just respond without tools
-            response = orchestrator_llm.invoke(state["messages"])
+            messages = state["messages"]
+            # Add system instruction if not present
+            has_system = any(isinstance(msg, SystemMessage) or (isinstance(msg, dict) and msg.get('role') == 'system') for msg in messages)
+            if not has_system:
+                system_instruction = "PREFER using SQL tools (search_documents_sql, get_document_by_id) over semantic search (search_kb) for full document context."
+                messages = [SystemMessage(content=system_instruction)] + messages
+            response = orchestrator_llm.invoke(messages)
             return {"messages": [response]}
 
     # Node 2: Grade documents
+    @traceable(name="grade_documents", run_type="chain", metadata={"node": "grader"})
     def grade_documents(state: MessagesState) -> Literal["generate_answer", "rewrite_question"]:
         """Determine whether the retrieved documents are relevant to the question."""
         try:
@@ -207,7 +388,8 @@ def create_agentic_rag_graph(
             question = ""
             for msg in messages:
                 if isinstance(msg, HumanMessage) or (isinstance(msg, dict) and msg.get('role') == 'user'):
-                    question = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                    content = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                    question = extract_text_from_content(content)
                     logger.info(f"Extracted question: {question[:100]}...")
                     break
 
@@ -285,6 +467,7 @@ def create_agentic_rag_graph(
             return "generate_answer"
 
     # Node 3: Rewrite question
+    @traceable(name="rewrite_question", run_type="chain", metadata={"node": "rewriter"})
     def rewrite_question(state: MessagesState):
         """Rewrite the original user question for better retrieval."""
         try:
@@ -300,7 +483,8 @@ def create_agentic_rag_graph(
                 original_question = ""
                 for msg in messages:
                     if isinstance(msg, HumanMessage) or (isinstance(msg, dict) and msg.get('role') == 'user'):
-                        original_question = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                        content = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                        original_question = extract_text_from_content(content)
                         break
                 # Return original question to proceed to answer generation (will be routed to generate_answer)
                 return {"messages": [HumanMessage(content=original_question)]}
@@ -309,7 +493,8 @@ def create_agentic_rag_graph(
             question = ""
             for msg in messages:
                 if isinstance(msg, HumanMessage) or (isinstance(msg, dict) and msg.get('role') == 'user'):
-                    question = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                    content = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                    question = extract_text_from_content(content)
                     logger.info(f"Original question: {question}")
                     break
 
@@ -369,6 +554,7 @@ def create_agentic_rag_graph(
             return {"messages": [m for m in state["messages"] if isinstance(m, HumanMessage)][:1]}
 
     # Node 4: Generate answer
+    @traceable(name="generate_answer", run_type="chain", metadata={"node": "answer_generator"})
     def generate_answer(state: MessagesState):
         """Generate final answer based on retrieved context."""
         try:
@@ -378,7 +564,8 @@ def create_agentic_rag_graph(
             question = ""
             for msg in messages:
                 if isinstance(msg, HumanMessage) or (isinstance(msg, dict) and msg.get('role') == 'user'):
-                    question = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                    content = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                    question = extract_text_from_content(content)
                     break
 
             # Extract context from tool messages
@@ -406,20 +593,28 @@ def create_agentic_rag_graph(
             response = answer_llm.invoke([HumanMessage(content=prompt)])
             logger.info(f"Answer response type: {type(response).__name__}")
 
-            # Ensure response is an AIMessage
+            # Extract response content
+            response_content = ""
             if isinstance(response, AIMessage):
-                logger.info(f"Generated answer (length: {len(response.content)} chars)")
-                logger.info(f"Answer preview: {response.content[:200]}...")
-                return {"messages": [response]}
+                response_content = response.content
             elif hasattr(response, 'content'):
-                # Convert to AIMessage if needed
-                ai_msg = AIMessage(content=response.content)
-                logger.info(f"Generated answer (length: {len(ai_msg.content)} chars)")
-                logger.info(f"Answer preview: {ai_msg.content[:200]}...")
-                return {"messages": [ai_msg]}
+                response_content = response.content
             else:
-                logger.warning(f"Unexpected response type: {type(response)}, converting to string")
-                return {"messages": [AIMessage(content=str(response))]}
+                response_content = str(response)
+
+            logger.info(f"Generated answer (length: {len(response_content)} chars)")
+            logger.info(f"Answer preview: {response_content[:200]}...")
+
+            # Post-agent safety check
+            logger.info("=== Running post-agent safety check ===")
+            is_safe, error_message = safety_check.check_safety(response_content, llm=grader_llm)
+
+            if not is_safe:
+                logger.warning("⚠️ Safety check failed, returning safety error message")
+                return {"messages": [AIMessage(content=error_message or "I cannot provide that response. Please consult with your doctor or nurse.")]}
+
+            logger.info("✅ Safety check passed")
+            return {"messages": [AIMessage(content=response_content)]}
         except Exception as e:
             logger.error(f"Error in generate_answer: {e}")
             logger.exception(e)
@@ -429,14 +624,76 @@ def create_agentic_rag_graph(
     # Build the graph
     workflow = StateGraph(MessagesState)
 
+    # Create ToolNode instance once
+    tool_node = ToolNode(tools)
+
+    # Node wrapper for tool execution with timing
+    def retrieve_with_timing(state: MessagesState):
+        """Wrapper around ToolNode that logs tool execution details and timing."""
+        import time
+
+        # Get messages that need tool execution
+        messages = state.get("messages", [])
+
+        # Find the last AIMessage with tool_calls
+        tool_calls_info = []
+        for msg in reversed(messages):
+            if isinstance(msg, AIMessage) and hasattr(msg, 'tool_calls') and msg.tool_calls:
+                for tool_call in msg.tool_calls:
+                    tool_name = tool_call.get('name', 'unknown')
+                    tool_args = tool_call.get('args', {})
+                    tool_calls_info.append((tool_name, tool_args))
+                break  # Only process the most recent AIMessage with tool_calls
+
+        # Log tool execution details before execution
+        if tool_calls_info:
+            logger.info("=" * 80)
+            for tool_name, tool_args in tool_calls_info:
+                logger.info(f"🔧 TOOL CALLED: {tool_name}")
+                logger.info(f"📝 Query/Arguments:")
+                for key, value in tool_args.items():
+                    logger.info(f"   {key}: {value}")
+                logger.info("-" * 80)
+
+            # Time the tool execution
+            start_time = time.time()
+
+            # Execute the tool using ToolNode
+            tool_result_state = tool_node.invoke(state)
+
+            execution_time = time.time() - start_time
+
+            logger.info(f"⏱️  Execution Time: {execution_time:.2f} seconds")
+            logger.info("=" * 80)
+
+            return tool_result_state
+
+        # If no tool calls found, use standard ToolNode behavior
+        return tool_node.invoke(state)
+
     # Add nodes
+    workflow.add_node("check_emergency", check_emergency_node)
+    workflow.add_node("handle_emergency", handle_emergency)
     workflow.add_node("generate_query_or_respond", generate_query_or_respond)
-    workflow.add_node("retrieve", ToolNode(tools))
+    workflow.add_node("retrieve", retrieve_with_timing)
     workflow.add_node("rewrite_question", rewrite_question)
     workflow.add_node("generate_answer", generate_answer)
 
-    # Add edges
-    workflow.add_edge(START, "generate_query_or_respond")
+    # Add edges - start with emergency check
+    workflow.add_edge(START, "check_emergency")
+
+    # Conditional edge: route to emergency handler or continue
+    workflow.add_conditional_edges(
+        "check_emergency",
+        route_emergency,
+        {
+            "handle_emergency": "handle_emergency",
+            "generate_query_or_respond": "generate_query_or_respond",
+        },
+    )
+
+    # Emergency handler goes to END
+    workflow.add_edge("handle_emergency", END)
 
     # Conditional edge: decide whether to retrieve or respond directly
     workflow.add_conditional_edges(

@@ -212,14 +212,28 @@ class VectorStore:
                 # Use LangChain retriever interface
                 try:
                     if filter_dict:
-                        # Convert filter_dict to ChromaDB format
-                        where = {}
+                        # Convert filter_dict to ChromaDB format with operators
+                        # ChromaDB requires $eq operator for equality checks
+                        # For multiple conditions, use $and
+                        filter_items = []
                         for key, value in filter_dict.items():
-                            where[key] = value
+                            filter_items.append({key: {"$eq": value}})
 
-                        results = self.vectorstore.similarity_search_with_score(
-                            query, k=k, filter=where
-                        )
+                        if len(filter_items) == 1:
+                            # Single condition - use directly
+                            where = filter_items[0]
+                        elif len(filter_items) > 1:
+                            # Multiple conditions - use $and
+                            where = {"$and": filter_items}
+                        else:
+                            where = None
+
+                        if where:
+                            results = self.vectorstore.similarity_search_with_score(
+                                query, k=k, filter=where
+                            )
+                        else:
+                            results = self.vectorstore.similarity_search_with_score(query, k=k)
                     else:
                         results = self.vectorstore.similarity_search_with_score(query, k=k)
                 except Exception as e:
@@ -228,10 +242,23 @@ class VectorStore:
                         logger.debug(f"Suppressed telemetry error during search")
                         # Retry - the error is just in telemetry, not the actual search
                         if filter_dict:
-                            where = {k: v for k, v in filter_dict.items()}
-                            results = self.vectorstore.similarity_search_with_score(
-                                query, k=k, filter=where
-                            )
+                            filter_items = []
+                            for key, value in filter_dict.items():
+                                filter_items.append({key: {"$eq": value}})
+
+                            if len(filter_items) == 1:
+                                where = filter_items[0]
+                            elif len(filter_items) > 1:
+                                where = {"$and": filter_items}
+                            else:
+                                where = None
+
+                            if where:
+                                results = self.vectorstore.similarity_search_with_score(
+                                    query, k=k, filter=where
+                                )
+                            else:
+                                results = self.vectorstore.similarity_search_with_score(query, k=k)
                         else:
                             results = self.vectorstore.similarity_search_with_score(query, k=k)
                     else:
