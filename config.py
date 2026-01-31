@@ -27,6 +27,14 @@ class Settings(BaseSettings):
     chroma_persist_directory: str = "./chroma_db"
     collection_name: str = "pedir_knowledge_base"
 
+    # LEANN Vector Index Configuration
+    leann_persist_directory: str = ".leann/indexes"
+    leann_backend: Literal["hnsw", "diskann"] = "hnsw"  # Backend: hnsw (default) or diskann (for large-scale)
+    leann_graph_degree: int = 32  # Graph degree for HNSW
+    leann_complexity: int = 64  # Build/search complexity
+    leann_compact: bool = True  # Use compact storage (97% savings)
+    leann_recompute: bool = True  # Enable recomputation (required for compact mode)
+
     # Document Database Configuration (SQLite for full document storage)
     document_db_path: str = "./document_db.sqlite"
 

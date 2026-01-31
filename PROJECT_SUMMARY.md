@@ -350,6 +350,47 @@ Based on `research.md` recommendations:
    - Feedback collection
    - A/B testing framework
 
+## Knowledge Base Content Progress (Updated 2026-02-01)
+
+### Completed Content ✅
+
+**Disease Education (01_Disease_Education/):**
+- [x] Vascular Malformations
+  - [x] Hemangiomas overview (KidsHealth)
+  - [x] Lymphatic malformations overview (KidsHealth)
+  - [x] Venous malformations overview (Boston Children's)
+  - [x] AVMs overview (KidsHealth)
+
+**Procedure Information (02_Procedure_Information/):**
+- [x] IR Procedure Preparation guide (RadiologyInfo.org)
+- [x] Central lines overview (KidsHealth)
+- [x] Sclerotherapy overview (Boston Children's)
+- [x] Embolization overview (RadiologyInfo.org)
+
+**HKCH Localization (00_HKCH_Localization/):**
+- [x] Contact numbers
+- [x] Location/parking info
+- [x] Registration process
+
+### Next Priority Items 📋
+
+**Disease Education:**
+- [ ] Tumors (hepatoblastoma, Wilms tumor, etc.)
+- [ ] Vascular access complications
+- [ ] Biliary conditions
+
+**Procedure Information:**
+- [ ] PICC line placement details
+- [ ] Biopsy procedures
+- [ ] Drainage procedures
+
+**Pre/Post-operative:**
+- [ ] HKCH-specific preoperative checklist
+- [ ] Postoperative care by procedure type
+- [ ] Recovery timeline expectations
+
+---
+
 ## Success Criteria Met
 
 ✅ Multi-source document ingestion
