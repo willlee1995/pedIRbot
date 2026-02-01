@@ -6,20 +6,19 @@
 | Situation 情況 | Contact 聯絡方式 |
 |---------------|-----------------|
 | **Life-threatening emergency 危及生命的緊急情況** | Call 999 致電 999 |
-| **HKCH A&E Department 香港兒童醫院急症室** | 3513 5100 |
-| **HKCH Main Line 香港兒童醫院總機** | 3513 5000 |
+| **HKCH Department Line 香港兒童醫院放射科** | 3513 6100 |
 
-## IR Department Contacts 介入放射科聯絡
+## Radiology Department Contacts 放射科聯絡
 
 | Purpose 用途 | Contact 聯絡方式 | Hours 服務時間 |
 |-------------|-----------------|---------------|
-| **Appointment enquiries 預約查詢** | [To be confirmed] | Mon-Fri 9am-5pm |
-| **Procedure day queries 手術當日查詢** | [To be confirmed] | [To be confirmed] |
-| **Post-procedure concerns 術後問題** | [To be confirmed] | [To be confirmed] |
+| **Appointment enquiries 預約查詢** | 3513300| Mon-Fri 9am-5pm |
+| **Procedure day queries 手術當日查詢** | 3513 6100 | [To be confirmed] |
+| **Post-procedure concerns 術後問題** | 3513 6100 | [To be confirmed] |
 
 ## When to Call 何時致電
 
-### Call A&E (3513 5100) or 999 immediately if 如出現以下情況請立即致電急症室或999:
+### Call 999 immediately if 如出現以下情況請立即致電999:
 - Heavy bleeding that won't stop with pressure 按壓後仍大量出血
 - Difficulty breathing 呼吸困難
 - Severe chest pain 嚴重胸痛
@@ -31,6 +30,5 @@
 - Mild pain or discomfort at procedure site 手術部位輕微疼痛或不適
 - Questions about medications 關於藥物的問題
 - Wound care questions 傷口護理問題
-
 ---
-*[PLACEHOLDER: Confirm all contact numbers with HKCH IR department]*
+

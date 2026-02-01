@@ -367,6 +367,21 @@ Based on `research.md` recommendations:
 - [x] Sclerotherapy overview (Boston Children's)
 - [x] Embolization overview (RadiologyInfo.org)
 
+**Preoperative Instructions (02_Preoperative/):**
+- [x] Fasting guidelines - pediatric 2-4-6-8 rule (Nationwide Children's)
+- [x] Anesthesia/Sedation expectations (KidsHealth)
+- [x] Procedure day preparation (RadiologyInfo.org)
+
+**Postoperative Advice (04_Postoperative/):**
+- [x] Activity restrictions and recovery guide (Boston Children's/CHOP)
+- [x] Pain management guide (KidsHealth/CHOP)
+
+**Wound Care (05_Wound_Care/):**
+- [x] Wound and puncture site care (SickKids/AboutKidsHealth)
+
+**Complications (07_Complications/):**
+- [x] Emergency guide for parents - when to seek help (Multiple sources)
+
 **HKCH Localization (00_HKCH_Localization/):**
 - [x] Contact numbers
 - [x] Location/parking info
@@ -384,10 +399,11 @@ Based on `research.md` recommendations:
 - [ ] Biopsy procedures
 - [ ] Drainage procedures
 
-**Pre/Post-operative:**
-- [ ] HKCH-specific preoperative checklist
-- [ ] Postoperative care by procedure type
-- [ ] Recovery timeline expectations
+**Additional Content:**
+- [ ] HKCH-specific HA system navigation (appointment booking, referral pathway)
+- [ ] Cultural adaptations (traditional medicine FAQ, dietary beliefs)
+- [ ] Medication guidance (pre/post procedure)
+
 
 ---
 

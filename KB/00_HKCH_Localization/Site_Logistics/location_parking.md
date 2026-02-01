@@ -9,37 +9,32 @@
 
 ## IR Suite Location 介入放射科位置
 
-[PLACEHOLDER: Confirm with HKCH staff]
-- Building: [To be confirmed]
-- Floor: [To be confirmed - likely Ground Floor]
-- 大樓：[待確認]
-- 樓層：[待確認]
+- Tower: B
+- Floor: 2/F
+- 大樓：B座
+- 樓層：2樓
 
 ## Getting to HKCH 前往香港兒童醫院
 
 ### By MTR 乘搭港鐵
 - Nearest station: **Kowloon Bay Station** (觀塘線)
-- Exit: [To be confirmed]
-- Walking time: Approximately [X] minutes
+- Exit: A
+- Walking time: Approximately 15 minutes
 - 最近車站：**九龍灣站** (觀塘線)
-- 出口：[待確認]
-- 步行時間：約 [X] 分鐘
+- 出口：A
+- 步行時間：約 15 分鐘
 
 ### By Bus 乘搭巴士
 Routes serving HKCH 途經香港兒童醫院的巴士路線:
-- [To be populated with specific routes]
+- 22M, 22, X6C
 
 ### By Car 駕車
 - Underground carpark available 設有地下停車場
-- Parking rates 泊車收費:
-  - [To be confirmed with current rates]
 - Disabled parking spaces available 設有傷殘人士泊車位
 
 ## Hospital Contact 醫院聯絡
 
 - Main Line 總機: 3513 5000
-- A&E Department 急症室: 3513 5100
 
 ---
 *Last updated: [DATE]*
-*Please verify all information with HKCH directly*
