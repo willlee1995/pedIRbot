@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+<procedure name="Tace Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctors are recommending Trans‑arterial Chemo‑embolisation (TACE)**  
+
+I know that hearing about a new treatment can feel overwhelming, especially when it involves a child. I’ll try to explain in plain language what TACE is, why it’s being considered for your child, and what it means for their care.
+
+---
+
+### 1. What is TACE?
+
+- **Trans‑arterial Chemo‑embolisation (TACE)** is a minimally‑invasive procedure performed by interventional radiologists.  
+- Under imaging guidance (usually fluoroscopy or CT), a tiny catheter is threaded through the blood vessels to the liver and delivered directly to the tumour.  
+- Two things happen at once:  
+  1. **Chemotherapy** is injected straight into the tumour’s feeding artery, giving a high local dose of drug.  
+  2. **Embolic material** (tiny particles) is released to block that artery, cutting off the tumour’s blood supply.  
+- The combination starves the tumour and delivers a concentrated chemotherapy dose, while sparing most of the healthy liver.
+
+---
+
+### 2. Why is it being recommended for your child?
+
+| Reason | How it helps your child |
+|--------|------------------------|
+| **The tumour cannot be removed surgically** | If the tumour is too large, in a difficult location, or the child’s liver function is already compromised, surgery may not be safe or possible. TACE can control the tumour’s growth in these cases. |
+| **It can be curative in early‑stage disease** | For certain early‑stage hepatocellular carcinomas (HCC), TACE alone can eradicate the tumour, especially when the child’s liver is otherwise healthy. |
+| **It can shrink the tumour before other treatments** | If the child will later undergo radio‑frequency ablation, surgical resection, or even a liver transplant, TACE can reduce the tumour size, making those procedures easier and more successful. |
+| **It can</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What you can expect from a Transarterial Chemoembolization (TACE) procedure for your child**
+
+---
+
+### 1. Why do doctors choose TACE for children?
+
+| What it does | Why it’s useful for kids |
+|--------------|--------------------------|
+| **Targets the tumor directly** – a small tube (catheter) is threaded through the blood vessels to the liver (or other organ) and the chemotherapy drug is delivered straight to the cancer cells. | **Fewer side‑effects than giving the drug all over the body** – the drug stays where it’s needed, so the rest of the body is exposed to less chemotherapy. |
+| **Blocks the tumor’s blood supply** – tiny beads (embolization particles) are released to cut off the blood that the tumor needs to grow. | **Can shrink or stop the tumor from growing** while keeping the surrounding healthy tissue intact. |
+| **Often done under local or conscious‑sedation anesthesia** – the child stays awake but relaxed, and the procedure is usually short (30–60 minutes). | **Less recovery time** than open surgery, which is especially important for children who need to return to school and play quickly. |
+
+---
+
+### 2. What are the main benefits for your child?
+
+| Benefit | How it helps your child |
+|---------|------------------------|
+| **Highly targeted treatment** | The chemotherapy is delivered right to the tumor, sparing healthy cells and reducing overall toxicity. |
+| **Minimally invasive** | No large incision, so less pain, fewer complications</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several other ways doctors can treat liver tumors in children. The best choice depends on the size, location, and number of tumors, how the child’s liver is working, and how the child is doing overall. Your medical team will review all the options and decide together what’s safest and most likely to help your child.
+
+---
+
+## What TACE (Transarterial Chemoembolization) does
+
+- **Targeted delivery** of chemotherapy directly into the blood vessels that feed the tumor.  
+- **Embolization** (blocking) of those vessels so the drug stays in the tumor longer and the tumor’s blood supply is cut off.  
+- Usually takes 1–2 hours, done under local anesthesia, and the child is monitored closely afterward.
+
+Because TACE is a “local” treatment, it can spare most of the healthy liver tissue, which is especially important in children whose livers are still growing.
+
+---
+
+## Why you might ask about alternatives
+
+- **Not all tumors are suitable for TACE** (e.g., if the tumor’s blood vessels are too close to the portal vein, or if the tumor is too large or too many).  
+- **Side‑effect profile**: nausea, abdominal pain, low‑grade fever, and sometimes a temporary drop in liver function.  
+- **Long‑term outcomes**: In children, we want to preserve as much healthy liver as possible and avoid treatments that could interfere with growth or future liver function.
+
+---
+
+## Common alternative treatments for pediatric liver tumors
+
+| Alternative | How it works | Typical situations where it’s considered | Key points for children |
+|-------------|--------------|------------------------------------------|------------------------|
+| **Surgery (liver</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the TACE (Trans‑arterial Chemo‑Embolization) will be performed for your child**
+
+I know that any time a child is going to have a procedure, you want to know exactly what will happen and why. Below is a step‑by‑step overview of what the team will do, written in plain language and with the child’s safety and comfort in mind. If anything feels unclear, just let the team know – they’ll explain it again and answer any new questions.
+
+---
+
+### 1. Getting ready – before the child goes into the procedure room
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **IV fluids** – a small amount of fluid is started through an IV line. | Keeps the child hydrated and helps the medication mix work properly. |
+| **Antibiotics** – a single dose of medicine that prevents infection. | The procedure involves inserting a needle into an artery, so we want to keep infection risk very low. |
+| **Antiemetic (anti‑nausea) drug** – given through the IV. | The chemo‑embolic mixture can sometimes make a child feel queasy or vomit; this helps keep that under control. |
+| **Local anaesthesia** – a numbing spray or injection at the groin. | The child will feel no pain at the puncture site, but will still be awake and able to talk to the team. (In some cases, if the child is very anxious</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+**Will my child need sedation or anesthesia?**  
+The TACE (Trans‑arterial Chemo‑Embolization) procedure is usually done with **local anesthesia**. That means the doctor numbs the small area around the groin where the needle goes into the femoral artery, so the child does not feel pain at that spot. The rest of the body stays awake, and the child can usually sit up or lie on the table during the procedure.
+
+**Will a pediatric anesthesia specialist be involved?**  
+Because the child is still a child, the interventional radiology team will always involve a **pediatric anesthesiologist or a pediatric anesthesia nurse** in the planning and monitoring. They will:
+
+1. **Assess the child’s overall health** and any medications the child is already taking.  
+2. **Decide whether additional sedation or general anesthesia is needed**.  
+   * If the child is very anxious, has a history of breathing problems, or the procedure is expected to be longer or more complex, the team may choose to give a light sedation (e.g., a short‑acting medication that makes the child relaxed but still able to respond).  
+   * In most cases, the local anesthesia alone is enough, and the child stays awake and can communicate with the team.  
+3. **Monitor vital signs** (</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**Preparing Your Child for the TACE (Transarterial Chemo‑Embolization) Procedure**
+
+Below is a simple, step‑by‑step guide that covers what we’ll do before the procedure and what you can do at home to help your child feel ready and comfortable. If anything is unclear or you have more questions, just let the team know—we’ll walk you through it together.
+
+---
+
+### 1. **What the Medical Team Will Do Before the Procedure**
+
+| Step | What Happens | Why It Matters |
+|------|--------------|----------------|
+| **IV Fluids** | A small IV line will be placed and a fluid will be given. | Keeps your child hydrated and helps the medications work better. |
+| **Antibiotics** | A shot or IV antibiotic is given. | Prevents infection at the puncture site and inside the bloodstream. |
+| **Antiemetic (anti‑vomiting) drug** | A medication that stops nausea and vomiting. | Keeps your child comfortable and helps the procedure run smoothly. |
+| **Local Anesthesia** | The area around the groin (femoral artery) is numbed. | Stops pain during the arterial puncture and catheter insertion. |
+| **Angiography** | A small amount of contrast dye is injected to map the blood vessels. | Lets us see the exact location of the tumor and the portal vein before we deliver the chemo‑embolic material. |
+
+---
+
+### 2. **What You Can Do at Home**
+
+| Preparation | How to Do It | Tips for Kids |
+|-------------|--------------|---------------|
+| **Fasting** | Your child should not eat or drink anything after midnight (or as directed by</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> Before the procedure, you will be given fluid through the intravenous line,  antibiotics to prevent infection and drug to relieve vomiting. The procedure is performed under local anaesthesia. The femoral artery at groin region is punctured for arterial access.   Angiography is performed for demonstration of vascular structures before embolization, and is also used for confirming the patency of portal vein. Depending on the findings, some patients may be deemed unsuitable for TACE and the do...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who undergo a trans‑arterial chemo‑embolization (TACE) procedure are able to go home the same day or after an overnight stay. In a few cases—if the child is very young, has a complex medical history, or if any unexpected bleeding or other complication occurs—the team may keep them in the hospital for 1–2 extra days for close observation.  
+
+---
+
+### Why the stay might be short
+
+| What happens during the procedure | Why it usually doesn’t need a long stay |
+|-----------------------------------|----------------------------------------|
+| **IV fluids, antibiotics, and an anti‑emetic** are given before the procedure to keep the child hydrated, prevent infection, and stop nausea. | These medications are started early and are easy to manage on the ward. |
+| **Local anaesthesia** is used, so the child is awake and can usually move around after</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Tace Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Tace Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

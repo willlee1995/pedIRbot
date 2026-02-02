@@ -1,0 +1,184 @@
+<?xml version="1.0" ?>
+<procedure name="Percutaneous Relief Svco Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctors are recommending a percutaneous SVC stent**
+
+I know this can feel overwhelming, so I’ll try to explain in plain language what the procedure is, why it’s being suggested, and what you can expect.
+
+---
+
+### 1. What is the problem?
+
+- **Superior Vena Cava (SVC)** is a large vein that carries blood from the head, neck, chest, and arms back to the heart.
+- In many children with cancer, a tumor can press on or grow into the SVC.  
+  When the SVC is narrowed or blocked, blood can’t flow normally, leading to:
+  - Swelling of the face, neck, chest, and arms
+  - Shortness of breath or difficulty breathing
+  - A feeling of fullness or heaviness in the head
+  - In severe cases, the child may feel faint or have trouble sleeping.
+
+These symptoms are called **SVC syndrome**.
+
+---
+
+### 2. Why the doctors are suggesting a stent
+
+| What the doctors have tried | What the stent does | Why it’s the next step |
+|-----------------------------|---------------------|------------------------|
+| **Chemotherapy** (anticancer drugs) | The stent is a tiny, expandable tube that is placed inside the narrowed vein. | Chemotherapy and radiation can shrink the tumor, but sometimes the vein stays blocked or the tumor keeps pressing on it. |
+| **Radiation therapy** | The stent keeps the vein open even if the tumor is still present. | If the child’s symptoms are still severe after chemo/radiation, the stent can relieve the blockage quickly and safely. |
+| **Steroids** (to reduce swelling) | The stent expands the vein to its normal size and stays open. |</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Relief Svco Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several ways to treat a blockage in the superior vena cava (SVC) in children, and the best choice depends on why the vein is narrowed, how severe the blockage is, and the child’s overall health. Your medical team will review all of these options with you, but here’s a quick overview of the most common alternatives:
+
+| Alternative | What it is | How it works | Typical situations it’s used for | Pros &amp; Cons |
+|-------------|------------|--------------|----------------------------------|-------------|
+| **Medication alone** (anticoagulants, sometimes thrombolytics) | Blood thinners or clot‑dissolving drugs | Keeps new clots from forming or helps break up an existing clot | Mild, early‑stage blockages or when a clot is the main problem | Non‑invasive, but may not fully open a long‑standing or fibrotic narrowing |
+| **Balloon angioplasty only** | A tiny balloon is inflated inside the narrowed vein | Expands the vein without leaving a permanent device | Short, tight stenoses or when a stent isn’t needed | Quick, but the vein can narrow again (re‑stenosis) |
+| **Surgical bypass or graft** | A surgeon creates a new pathway for blood to flow around the blockage | Uses a vein or synthetic tube to reroute blood | Very long or complex blockages, or when the vein is too damaged for a stent | More invasive, longer recovery,</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the procedure will be carried out**
+
+I know that hearing about a new treatment can feel overwhelming, especially when it involves a child. I’ll walk you through each step in plain language and let you know what to expect, so you can feel as prepared as possible.
+
+---
+
+### 1. Preparation – “Getting ready for the procedure”
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Local anesthesia** – The doctor will numb the small area where the needle will be inserted. Your child will not feel pain, but they may feel a little pressure or a brief pinch. | Keeps the child comfortable and still during the work. |
+| **Aseptic technique** – The team will clean the skin with special antiseptic wipes and cover the area with sterile drapes. | Reduces the risk of infection. |
+| **Choosing the entry point** – We’ll decide where to reach the large vein that feeds the heart (the superior vena cava, or SVC). The options are: &lt;br&gt;• **Femoral vein** (in the groin) &lt;br&gt;• **Internal jugular vein** (in the neck) &lt;br&gt;• **Arm vein** (in the upper arm) | The choice depends on the child’s size, the exact location of the blockage, and which route gives the safest, most direct path. |
+
+---
+
+### 2. Getting a “road map” – Imaging the blockage
+
+1. **Insert a small tube (sheath)** into the chosen vein.  
+2. **Thread a thin catheter** through the sheath toward the SVC</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer for Parents**
+
+**Will my child need sedation or anesthesia?**  
+The procedure you described—percutaneous relief of a superior vena cava (SVC) obstruction—is usually done with **local anesthesia**. That means a numbing medication is injected at the site where the needle enters the vein (for example, in the groin, neck, or arm). The child will feel the needle and the catheter, but the area will be numb so they don’t feel pain.
+
+Because the child is still moving and may feel anxious, many centers add a light **sedation** (sometimes called “conscious sedation”) so the child can relax and stay still during the X‑ray imaging and the catheter work. The sedation is carefully monitored and is much lighter than general anesthesia. In some cases, if the child is very young, very anxious, or if the procedure is expected to take a while, the team may recommend **general anesthesia** (where the child is fully asleep). That decision is made after talking with the interventional radiology team and the anesthesiology team.
+
+**Will a pediatric anesthesia specialist be involved?**  
+Yes—most hospitals have a pediatric anesthesiologist or a pediatric anesthesia team that works with the interventional radiology team. They will:
+
+1. **Assess your child’s health** (check heart, lungs, allergies, medications, etc.).  
+2. **Decide the best type of sedation or anesthesia** for your child’s age, size, and medical history.  
+3. **Monitor the child’s vital signs** (heart rate, breathing, oxygen level) throughout the procedure.  
+4. **Manage any medications** needed to keep the child comfortable and safe.
+
+If your child is going to receive general anesthesia, the pediatric anesthesiologist will also be present in the procedure room to start the anesthesia, keep the child asleep, and wake them up safely afterward.
+
+**What to expect on the day of the procedure**
+
+- **Pre‑procedure check‑in**: The anesthesia team will meet with you</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Relief Svco Eng.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>It is performed under local anaesthesia using aseptic technique.   Venous access into SVC could be either via the femoral vein (a vein under the groin), internal jugular vein (a vein in the neck) or a vein from the arm.  A vascular sheath was first inserted in the vein; a catheter is then put close to the  SVC. The site and extent of obstruction is delineated with X-ray and intravenous contrast.  Intravenous heparin (anticoagulant) may be given to prevent blood clotting.  A guidewire is in...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who undergo a percutaneous SVC (Superior Vena Cava) relief procedure can go home the same day. In some cases, the hospital will keep the child for one overnight stay so the team can watch for any early complications, but this is usually a brief observation period.
+
+---
+
+### Why the hospital stay is usually short
+
+| What happens during the procedure | Why it can be done safely in a short time |
+|-----------------------------------|-------------------------------------------|
+| **Local anesthesia** – the child is awake but the area is numbed, so there is no need for a full‑body sedative that requires longer recovery. | The child can be monitored easily and will feel the procedure’s effects quickly. |
+| **Aseptic technique** – the team uses sterile gloves, drapes, and a clean environment to keep infection risk very low. | A clean, controlled setting means fewer complications that would require prolonged care. |
+| **Venous access** – the catheter is inserted through a vein in the groin, neck, or arm and then guided to the SVC. | Once the catheter is in place, the procedure is usually finished in 30–60 minutes. |
+| **Post‑procedure monitoring** – the child is watched for a short period to check for bleeding, swelling, or any immediate problems. | Most children are stable after a few hours of observation. |
+
+---
+
+### When a short overnight stay might be needed
+
+1. **Unusual anatomy or complications** – If</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Relief Svco Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Relief Svco Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,153 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Angioplasty Using Image Guidance 1444" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being recommended to have a pediatric angioplasty (SickKids Angioplasty Using Image Guidance 1444)**  
+
+---
+
+### 1. What the procedure does  
+- **Angioplasty** is a minimally‑invasive way to open a narrowed or blocked blood vessel.  
+- Using a tiny balloon that is guided by live imaging, the doctor gently expands the vessel so blood can flow more freely.  
+- The “image‑guided” part means the procedure is done under real‑time X‑ray (or ultrasound) so the team can see exactly where the balloon goes and how the vessel responds.
+
+### 2. Why it is being recommended for your child  
+| Reason | How it helps your child |
+|--------|------------------------|
+| **Improved blood flow** | A narrowed vessel can starve the tissues it supplies (e.g., a limb, the brain, or the heart). Opening the vessel restores normal circulation. |
+| **Relief of symptoms** | Children with a blocked vessel may feel pain, have cold or weak pulses, or develop swelling. Angioplasty can quickly reduce or eliminate these symptoms. |
+| **Prevention of complications** | If the vessel remains narrowed, it can lead to serious problems such as tissue loss, infections, or heart strain. Treating it now reduces the risk of those future issues. |
+| **Preservation of growth and development** | Children’s bodies are still growing. A healthy blood supply is essential for normal growth of limbs and organs. By restoring flow early, we help ensure your child’s tissues develop normally. |
+| **Less invasive than surgery** | Angioplasty is done through a small puncture in the skin, usually under sedation or general anesthesia. It avoids large incisions, reduces pain, and shortens recovery time compared to open surgery. |
+
+### 3. Pediatric‑specific considerations  
+- **Size matters**: Children’s vessels are much smaller, so the team uses specially designed, low‑profile balloons and cat</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What the angioplasty can do for your child**  
+*Benefits (what we hope to achieve)*  
+
+| What we’re trying to fix | How it helps your child |
+|--------------------------|------------------------|
+| **Blocked or narrowed blood vessels** | Restores normal blood flow, so the heart, brain, or other organs get the oxygen and nutrients they need. |
+| **Symptoms that bother your child** | Reduces pain, swelling, or shortness of breath that may have been caused by the blockage. |
+| **Avoiding open‑heart or open‑surgery** | The procedure is done through a small needle and a thin tube (catheter) guided by imaging, so there’s no large incision. Recovery is usually faster and the scar is minimal. |
+| **Long‑term outlook** | By keeping the vessel open, we help prevent future problems such as heart attacks, strokes, or organ damage. In many children, the procedure can keep them healthy for years. |
+
+**What can go wrong (risks and side‑effects)**  
+All medical procedures carry some risk. We discuss these with you before you give consent, and we’ll keep you updated if anything changes.
+
+| Risk | Why it can happen | How we try to prevent or manage it |
+|------|-------------------|------------------------------------|
+| **Bleeding or bruising at the catheter site** | The needle punctures a blood vessel. | We use careful technique, apply pressure, and monitor the site closely. |
+| **Infection** | Any time a needle enters the body. | Sterile technique, antibiotics if needed, and careful wound care. |
+| **Damage to the blood vessel** | The catheter or balloon can stretch or tear the vessel wall. | We use the smallest possible tools and real‑time imaging to guide us. |
+| **Allergic reaction to contrast dye** | The dye we use</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angioplasty Using Image Guidance 1444.</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angioplasty Using Image Guidance 1444.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angioplasty Using Image Guidance 1444.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angioplasty Using Image Guidance 1444.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angioplasty Using Image Guidance 1444.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+I understand that the idea of an overnight stay—or even a longer hospital stay—can be stressful. I’ll give you a general overview of what most families experience after a pediatric angioplasty at SickKids, but please remember that the exact plan will be tailored to your child’s specific situation and will be confirmed by the interventional radiology team and the paediatric cardiologist who ordered the procedure.
+
+---
+
+### 1. Typical hospital stay after a pediatric angioplasty
+
+| Step | What happens | Typical length of stay |
+|------|--------------|------------------------|
+| **Pre‑procedure** | Your child is seen in the interventional radiology suite, given a mild sedative or general anaesthesia, and a small incision is made (usually in the groin or wrist) to access the blood vessel. | Usually a few hours before the procedure. |
+| **During the procedure** | The interventional radiologist uses imaging (X‑ray, fluoroscopy, or ultrasound) to guide a small balloon or stent to the narrowed area of the artery. | 30 min to 2 hrs, depending on complexity. |
+| **Immediate post‑procedure** | Your child is moved to a recovery area where vital signs are monitored closely. Pain is managed with medication. The incision is dressed, and the child is encouraged to move the limb or foot as soon as it’s safe. | 2–4 hrs in recovery. |
+| **Hospital admission** | If the procedure is uncomplicated, many children are discharged the same day after a short observation period. In some cases—especially if the child is very young, has a complex heart condition, or there were any complications—an overnight stay is recommended so the team can monitor heart rhythm, blood flow, and ensure the incision is healing well. | **Same‑day discharge** is common, but **overnight stays** (1–2 days) are also routine when needed. |
+| **</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**What to Expect After Your Child’s Angioplasty**
+
+After a pediatric angioplasty that is guided by imaging (often called a “catheter angioplasty”), most kids can return to their normal routine fairly quickly. The exact timeline, however, depends on a few details that only your child’s medical team knows—such as where the catheter was inserted (femoral artery in the groin, radial artery in the wrist, etc.) and whether a stent was placed. Below is a general outline that many families find helpful.  
+
+| Time after the procedure | Typical activity guidance | Why it matters |
+|--------------------------|---------------------------|----------------|
+| **0–24 h** | • Keep the puncture site (groin, wrist, or arm) elevated and flat.&lt;br&gt;• No strenuous activity, heavy lifting, or vigorous play.&lt;br&gt;• Avoid driving or riding in a car seat. | The artery is still healing; movement can cause bleeding or swelling. |
+| **24–48 h** | • Light activity is usually fine (walking, gentle play).&lt;br&gt;• Still avoid any activity that puts strain on the puncture site or requires bending over a lot.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angioplasty Using Image Guidance 1444.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

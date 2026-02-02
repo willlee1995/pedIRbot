@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Bulimia Nervosa Signs And Symptoms 3186" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is a bulimia‑related assessment and treatment being recommended for your child?**
+
+I know this can feel overwhelming, but the goal of the evaluation is simply to make sure your child gets the right help at the right time. Below is a short, parent‑friendly explanation of why the medical team is suggesting this next step.
+
+---
+
+### 1. **What the assessment is looking for**
+
+The “SickKids Bulimia Nervosa Signs &amp; Symptoms” review is a quick, structured check‑list that helps doctors spot the warning signs of bulimia in children and teens. It covers:
+
+| What we look for | Why it matters |
+|------------------|----------------|
+| **Rapid eating or “food disappearing”** | Indicates binge episodes that can lead to stomach pain, acid reflux, or electrolyte imbalances. |
+| **Eating alone, especially at night** | Shows that the child may be hiding binges, which can increase shame and isolation. |
+| **Purging behaviors (vomiting, laxatives, diuretics)** | These can damage the esophagus, teeth, stomach lining, and cause dangerous low potassium or sodium levels. |
+| **Irritability, mood swings, or concentration problems** | Nutrient gaps from binge‑purge cycles can affect brain chemistry and mood. |
+
+---
+
+### 2. **Why the medical team wants to act now**
+
+1. **Preventing serious medical complications**  
+   - Bulimia can cause dehydration, heart rhythm changes, and even life‑threatening electrolyte disturbances.  
+   - Even if your child’s weight looks “normal,” the binge‑purge cycle can still harm organs and overall health.
+
+2. **Early, less invasive treatment**  
+   - The sooner we identify the pattern, the easier it is to use non‑invasive strategies (talk therapy, nutritional counseling, family support).  
+   - Early intervention often means fewer</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa Signs And Symptoms 3186.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa Signs And Symptoms 3186.</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa Signs And Symptoms 3186.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa Signs And Symptoms 3186.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa Signs And Symptoms 3186.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa Signs And Symptoms 3186.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa Signs And Symptoms 3186.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa Signs And Symptoms 3186.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa Signs And Symptoms 3186.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

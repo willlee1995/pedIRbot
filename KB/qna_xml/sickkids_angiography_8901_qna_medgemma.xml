@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Angiography 8901" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being recommended to have a kidney angiogram**
+
+I know that hearing about a new procedure can feel overwhelming, especially when it involves your child’s health. Below is a simple explanation of why the interventional radiology team at SickKids has suggested a kidney angiogram (procedure code 8901) for your child, and what it will help them determine.
+
+---
+
+### 1. What the angiogram will show
+
+A kidney angiogram is a special X‑ray test that uses a tiny amount of contrast dye to make the blood vessels inside the kidneys visible on the screen. By looking at these images, the radiologist can:
+
+| What the test can reveal | Why it matters for your child |
+|--------------------------|-------------------------------|
+| **Blockages or narrowing (stenosis)** in the renal arteries | These can reduce blood flow to the kidney, causing high blood pressure or kidney damage. |
+| **Aneurysms or abnormal bulges** in the arteries | If untreated, they can rupture or cause blood clots. |
+| **Bleeding or injury** to the kidney or surrounding tissue | Helps identify the source of pain, swelling, or anemia. |
+| **Structural abnormalities** (e.g., a kidney that is smaller or has an unusual shape) | Guides decisions about surgery, medication, or monitoring. |
+| **Response to previous treatments** (e.g., after a stent or surgery) | Confirms that the treatment worked or needs adjustment. |
+
+In short, the angiogram gives the medical team a clear, real‑time picture of the kidney’s blood supply, which is essential for deciding the safest and most effective next steps.
+
+---
+
+### 2. Why it is especially useful in children
+
+- **Smaller vessels**: Children’s arteries are tiny, so a detailed image helps the team see even subtle problems that might be missed</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What the angiography can help us do (the benefits)**  
+1. **See the “road map” of your child’s blood vessels** – With a tiny camera and a special dye that lights up the vessels on a screen, we can see exactly where a blood vessel is narrowed, blocked, or otherwise abnormal.  
+2. **Guide a precise treatment** – Once we know the exact location and size of the problem, we can perform a targeted procedure (e.g., placing a tiny balloon, stent, or embolic agent) right there in the same session. This often means fewer visits and a quicker recovery.  
+3. **Avoid more invasive surgery** – In many cases, the information and treatment we get from an angiogram can replace a larger, more invasive operation.  
+4. **Confirm a diagnosis** – If your child has symptoms like fainting, swelling, or unexplained pain, the angiogram can confirm whether a vascular issue is the cause, helping us choose the right next steps.  
+
+**What could go wrong (the potential risks)**  
+| Category | What can happen | How we keep it safe |
+|----------|-----------------|---------------------|
+| **Anesthesia** | Breathing problems, low blood pressure, allergic reaction to anesthetic drugs | A pediatric anesthesiologist monitors heart rate, breathing, and blood pressure continuously. |
+| **Bleeding or vessel injury** | Small puncture sites can bleed, or the catheter can nick a vessel | We use the smallest, most flexible catheters possible and only a few puncture sites. |
+| **Infection** | At the puncture site or inside the body | Sterile technique, antibiotics if needed, and careful wound care afterward. |
+| **Contrast‑related problems** | Allergic reaction to the dye, temporary kidney irritation | We check kidney function beforehand, use the lowest dye dose that gives a clear image, and</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography 8901.</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography 8901.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography 8901.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography 8901.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography 8901.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who have a SickKids angiography are able to go home the same day, but in some cases the medical team may want to keep them overnight for observation. The exact plan will be decided by the interventional radiology team and the ordering physician after they review your child’s specific situation.
+
+---
+
+### What usually happens
+
+| Step | Typical timing | What it means for your child |
+|------|----------------|------------------------------|
+| **Preparation &amp; sedation** | 30–60 minutes before the scan | Your child will be given a mild sedative (or, if needed, a short‑acting anesthetic) so they can stay still. |
+| **Angiography procedure** | 15–45 minutes | The radiologist injects a contrast dye into the blood vessels and takes X‑ray images. |
+| **Recovery** | 30–60 minutes after the procedure | Your child will be monitored while the sedative wears off. We watch for any immediate side‑effects (e.g., rash, swelling, or breathing changes). |
+| **Discharge decision** | Immediately after recovery or after a brief overnight stay | If your child is stable, alert, and has no complications, we usually let them go home that same day. If there are any concerns—such as a small bleed, a reaction to the dye, or if the procedure was more complex—we may keep them in the hospital for a short observation period (often 4–8 hours, or overnight). |
+
+---
+
+### Why the decision matters
+
+- **Safety first:** The team wants to make sure there are no early complications (e.g., bleeding, allergic reaction, or problems with the catheter).
+- **Individual factors:** Age, weight, the specific vessels being examined, and whether any additional treatment (like a stent or embolization) was done can influence the need for a longer stay.
+- **Comfort and support:** If your child is very young or anxious</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Answer**
+
+After an angiography, most children can usually return to their normal activities fairly quickly, but the exact timing depends on a few factors such as the type of angiography, whether a catheter was left in a blood vessel, and how the child tolerated the procedure.
+
+| What to Expect | Typical Time Frame | Why? |
+|----------------|--------------------|------|
+| **Rest after the procedure** | 24 hours | The body needs a little time to recover from the contrast dye and any mild discomfort. |
+| **Light activity (walking, playing in a safe area)** | 24 hours | Most kids feel fine after a day and can resume gentle play. |
+| **Strenuous activity (running, sports, heavy lifting)** | 48–72 hours | If a catheter was inserted or the child had a longer procedure, the access site may need a day or two to heal. |
+| **Driving (if the child is old enough)** | 24 hours | If the child was sedated or had a contrast reaction, they should stay home for at least a day. |
+| **Swimming or bathing** | 24 hours | The access site should be kept dry for a day to reduce infection risk. |
+
+### Why these guidelines?
+
+1. **Contrast dye** – The dye</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography 8901.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

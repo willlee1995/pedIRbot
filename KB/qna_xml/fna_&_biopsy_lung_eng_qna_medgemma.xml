@@ -1,0 +1,204 @@
+<?xml version="1.0" ?>
+<procedure name="Fna &amp; Biopsy Lung Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is a lung needle biopsy (FNA/biopsy) being recommended for your child?**
+
+I know that hearing about a procedure can feel overwhelming, especially when it involves your child’s lungs. I’ll try to explain in plain language what the doctors are hoping to learn and why this step is important for your child’s care.
+
+---
+
+### 1. What the procedure actually does
+
+- **A tiny needle is guided by imaging (usually CT or X‑ray)** to the spot in the lung that looks abnormal on the scans.
+- **A small sample of tissue is taken** – either by “sucking” a few cells with a fine needle (FNA) or by removing a tiny core of tissue (core biopsy).
+- **The sample is sent to a pathologist** who looks at the cells under a microscope and may do special tests (e.g., immunohistochemistry, genetic studies).
+
+---
+
+### 2. Why we need a tissue sample
+
+| What imaging can tell you | What a biopsy can confirm |
+|---------------------------|---------------------------|
+| Size, shape, and location of the mass | Whether the mass is cancerous, benign, or something else (e.g., infection, inflammation) |
+| How the mass looks on scans | Exact type of cells (e.g., adenocarcinoma, lymphoma, sarcoma) |
+| How it behaves over time | Specific molecular or genetic markers that guide targeted therapy |
+
+In short, imaging can show *that* something is there, but it can’t always tell *what* it is. Knowing the exact diagnosis is essential because:
+
+1. **Treatment choice depends on the diagnosis.**  
+   * A malignant tumor may need chemotherapy, radiation, or surgery.  
+   * A benign growth might only need observation or a simple removal.  
+   * An infection might respond to antibiotics.
+
+2. **Prognosis and follow‑up plans are based on the exact type of lesion.**  
+   Some childhood lung cancers are very aggressive, while others are slow‑growing and treatable with less intensive therapy.
+
+3. **Avoid unnecessary or harmful treatments</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Lung Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes, there are other ways to get a tissue sample or to learn more about a lung lesion in a child. The best choice depends on the child’s age, the size and location of the lesion, how urgent a diagnosis is, and how comfortable the family feels about the different options. Your pediatric interventional radiology team will discuss each possibility with you and help decide what’s safest and most likely to give a clear answer.
+
+---
+
+###</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the procedure will be performed – a step‑by‑step guide for parents**
+
+1. **Preparation before the child enters the radiology suite**  
+   • The child will be given a local anesthetic (a numbing spray or small injection) so that the skin and the tissue around the lung feel no pain.  
+   • The team will clean the area with antiseptic wipes and cover the child with a sterile drape – just as you would for a small surgery.  
+   • Your child’s vital signs (blood pressure, heart rate, and oxygen level) will be checked and recorded.  
+
+2. **The actual biopsy / fine‑needle aspiration (FNA)**  
+   • Under continuous X‑ray or CT guidance, the radiologist will carefully insert a thin needle through the chest wall into the lung area that needs to be examined.  
+   • The needle will either “suck” a small sample of cells (FNA) or take a tiny core of tissue (biopsy).  
+   • The procedure is usually quick – often only 20–30 minutes – but you may stay in the department for an hour or more while the team prepares the sample for analysis.  
+
+3. **After the needle is removed**  
+   • The child’s vital signs will continue to be monitored for a short period.  
+   • A chest X‑ray will be taken right after the procedure to check for any air that may have entered the space around the lung (pneumothorax).  
+
+4. **What happens to the sample**  
+   • The tissue or cells you collected will be sent to the pathology lab.  
+   • Results usually take a few days, so you will not receive a diagnosis immediately.  
+
+5. **Possible complications – what to watch for**  
+   • **Pneumothorax (air in the chest cavity)** – occurs in less than 25 % of cases. Most are small and resolve on their own. If the X‑ray shows a larger pneumothorax (about 1/3 of cases), a small chest drain will be inserted to remove the air</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+The lung FNA/biopsy is usually done with *local anesthesia* only.  
+That means a small amount of medication is injected near the needle site so that the child does not feel pain while the doctor takes the sample. The child can stay awake and will be able to talk to the staff throughout the procedure.
+
+**Will your child need sedation or general anesthesia?**  
+- In most cases, no sedation is needed.  
+- If your child is very anxious, uncomfortable, or if the procedure is expected to be longer or more complex, the team may offer **light sedation** (a mild sleep‑inducing medication) so that the child can relax.  
+- General anesthesia (where the child is completely asleep) is rarely required for this type of lung biopsy.
+
+**Will a pediatric anesthesia specialist be available?**  
+- The radiology department has a pediatric anesthesia team that can be called in if sedation or general anesthesia is chosen.  
+- If your child’s age, medical history, or the parents’ preference suggests that a specialist would be helpful, the team will arrange for a pediatric anesthesiologist to be present.
+
+**What to expect**  
+- The child will be monitored closely during the procedure—heart rate, blood pressure, and oxygen levels will be checked.  
+- After the needle is removed, the child will stay in the radiology area for a short observation period (usually less than an hour) before being discharged.  
+- If any complications such as a small pneumothorax or coughing up blood occur, they are usually mild and resolve on their own, but the team will be ready to treat them promptly.
+
+**Next steps**  
+- Your child’s doctor will discuss the exact plan—whether local anesthesia alone is sufficient or if sedation is recommended—before the day of the procedure.  
+- If you have any concerns or questions about anesthesia, please</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do to help your child feel ready for the lung FNA/biopsy**
+
+Below are the most common things that parents usually need to think about before the procedure.  The exact instructions can vary a little from one hospital to another, so we’ll also let you know what the team will confirm for you.
+
+| Step | What to do | Why it matters |
+|------|------------|----------------|
+| **1. Bring the right paperwork** | • A copy of the child’s medical record (or a recent visit note).  &lt;br&gt;• Current medication list (including over‑the‑counter drugs, vitamins, herbal supplements).  &lt;br&gt;• Insurance card and any referral paperwork. | The team needs to know what medicines the child is on and any allergies that could affect anesthesia or the biopsy. |
+| **2. Dress the child comfortably** | • Loose, short‑sleeve or sleeveless top and pants (or a short dress).  &lt;br&gt;• No jewelry, watches, or anything that could get caught on equipment. | A clear, uncluttered area makes it easier for the radiology team to work safely. |
+| **3. Fasting / eating** | • Because the procedure is done under **local anesthesia** (no general anesthesia or sedation),</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> The procedure will be performed under local anesthesia and aseptic technique.  Duration of the procedure varies, depending on the complexity of the condition. It may take only 30 minutes though you may need to stay in the Department of Radiology for over an hour altogether.  Do not expect to get the result of the biopsy / FNA before you leave, as it may take a few days to do all the necessary tests on the specimen.  During and after the procedure, your vital signs (like blood pressure and p...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+In most cases, a fine‑needle aspiration (FNA) and biopsy of a lung lesion in a child is an **outpatient procedure**.  
+- The actual needle work usually takes about **30 minutes**.  
+- After the needle is removed, the child will stay in the radiology or procedure room for a short observation period—often **1–2 hours**—so the team can check for any immediate complications (bleeding, shortness of breath, etc.).  
+
+Because your child’s situation is unique, the exact length of time in the hospital may vary:
+
+| Situation | Typical stay | Why it might change |
+|-----------|--------------|---------------------|
+| **Simple, uncomplicated FNA** | Same‑day discharge after observation | No need for overnight monitoring |
+| **More complex biopsy or if the child has other medical issues** | Overnight observation or a brief admission (1–2 days) | To monitor for delayed bleeding, infection, or to manage any other underlying conditions |
+| **If the child needs sedation or general anesthesia** | Same‑day discharge after recovery | Sedation is usually brief; the child is monitored until fully awake |
+
+**What the team will do next**
+
+Your pediatric interventional radiology team will review your child’s medical history, the specific findings that prompted the biopsy, and any other health concerns. They will then let you know:
+
+1. Whether an overnight stay is recommended.  
+2. What monitoring will be done while your child is in the hospital.  
+3. When you can expect to bring your child home.
+
+If you have any worries about pain, breathing, or the child’s comfort during the procedure, please let the team know</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Lung Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Lung Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

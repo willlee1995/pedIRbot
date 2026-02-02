@@ -1,0 +1,238 @@
+<?xml version="1.0" ?>
+<procedure name="Cryoablation Renal Mass En" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctors are recommending cryoablation for the kidney tumor**
+
+I know this can feel overwhelming, so I’ll try to explain in plain language what the team has found and why they think this is the best option right now.
+
+| What the doctors have seen | Why it matters for your child | What cryoablation does |
+|---------------------------|------------------------------|------------------------|
+| **A small kidney tumor (&lt; 4 cm)** | Small tumors are the ones that can be treated without taking out the whole kidney. | A tiny needle is guided into the tumor and “freezes” it. The freeze‑thaw cycle kills the cancer cells. |</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Cryoablation Renal Mass En.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several other ways to treat a kidney tumor in a child. The best choice depends on the size, location, and type of the tumor, as well as the child’s overall health and any family history of kidney cancer. Your medical team will review all the options with you and help decide what’s safest and most effective for your child.
+
+---
+
+### 1.  Surgical removal (partial or radical nephrectomy)
+
+| What it is | How it’s done | When it’s considered |
+|------------|---------------|----------------------|
+| **Partial nephrectomy** – only the tumor and a small margin of healthy kidney are removed. | Lapar</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the cryoablation of your child’s kidney mass will be performed**
+
+I know that hearing about a procedure can feel overwhelming, especially when it involves your child’s health. Below is a step‑by‑step explanation of what will happen, written in plain language and with a focus on what matters most to families: safety, comfort, and the child’s recovery.
+
+---
+
+### 1. Planning – “Getting the picture right”
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Medical review** – The team will look at your child’s overall health, any other medical conditions, and how the kidney mass fits into that picture. | Helps us decide if cryoablation is the safest and most effective option. |
+| **Imaging studies** – Ultrasound (US), CT scan, or MRI will be performed. | These images show the exact size, shape, and location of the mass, and whether it’s close to important structures like the colon or major blood vessels. |
+| **Optional biopsy** – A tiny sample of the mass may be taken before the procedure. | Confirms that the mass is the type we expect and rules out other possibilities. |
+
+*All of this is done while your child is still awake and comfortable, often in a routine outpatient setting.*
+
+---
+
+### 2. Preparing for the procedure
+
+| Step | What to expect |
+|------|----------------|
+| **Medication review** – We’ll ask your child to stop any medicines that could increase bleeding (e.g., aspirin, ibuprofen). | Reduces the risk of bleeding during the procedure. |
+| **Fasting** – Your child will need to fast for a few hours before the procedure. | Keeps the stomach empty, which is safer if general anesthesia is used. |
+| **Skin prep** – The area on the back (or side) where the needle will be inserted is cleaned with antiseptic. | Minimizes infection risk. |
+| **Local anesthesia** – A numbing cream or small injection will be</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+It’s completely normal to wonder about how your child will be cared for during the cryoablation of a renal mass. Here’s what you can expect, based on the information we have about the procedure and how we usually approach it for children.
+
+---
+
+### 1. **Will your child need sedation or anesthesia?**
+
+- **Yes, the child will need some form of sedation or anesthesia.**  
+  Cryoablation is a fairly involved procedure that takes about 2–4 hours, and it requires the child to stay very still while a needle is guided into the kidney under imaging (ultrasound or CT). Even if the child is very calm, the pain and discomfort from the needle insertion and the freezing cycles would be difficult to manage without sedation.
+
+- **The type of sedation/anesthesia depends on several factors:**
+  - **Age and size of the child** – younger children and those who have difficulty staying still are more likely to need general anesthesia (a deep, fully controlled state where the child is asleep and has no pain).
+  - **Medical history** – if the child has breathing problems, heart issues, or is on medications that affect the nervous system, the anesthesiologist may prefer general anesthesia for safety.
+  - **Procedure details** – if the tumor is large, deep, or close to other organs, the team may choose general anesthesia to keep the child completely still and to allow the anesthesiologist to monitor the child closely.
+  - **Child’s comfort and anxiety level** – some children tolerate moderate sedation (where they are drowsy but can respond to voice) very well, especially if they are older and can understand what’s happening.
+
+---
+
+### 2. **Will a pediatric anesthesia specialist be involved?**
+
+- **Absolutely.**  
+  All children undergoing a procedure that requires sedation or general anesthesia are cared for by a pediatric anesthesiologist or a pediatric anesthesiology team. These specialists are trained specifically to manage children’s unique physiology and to anticipate and</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What we’ll need to do before your child’s cryoablation**
+
+I know that preparing for a procedure can feel overwhelming, so I’ll walk you through the steps in plain language and let you know what to expect. The exact details may vary a little depending on your child’s age, the size and location of the tumor, and the policies of the hospital, but the general plan is the same for most pediatric cryoablation cases.
+
+| Step | What happens | Why it matters | What you can do |
+|------|--------------|----------------|-----------------|
+| **1. Pre‑procedure imaging &amp; assessment** | Your child will have a CT or MRI (sometimes an ultrasound) to confirm the tumor’s exact size, shape, and location. The radiology team will also look for any nearby structures that might be at risk (e.g., the ureter, bowel, or nerves). | This imaging tells us whether the tumor can be safely frozen and helps us plan how to protect nearby organs. | Nothing special—just make sure the imaging appointments are scheduled and that your child has a clear picture of why it’s needed. |
+| **2. Medical clearance &amp; labs** | The team will run routine blood tests (CBC, electrolytes, clotting profile) and review any medications your child is taking. They’ll also check for any allergies or conditions that could affect anesthesia. | These tests help us ensure your child can safely receive anesthesia and that we’re aware of any potential complications. | Bring a list of all medications, supplements, and any known allergies to the appointment. |
+| **3. Fasting instructions** | Your child will need to fast (no food or drink) for a specific period before the procedure—usually 6–8 hours for solids and 2–4 hours for clear liquids. | Fasting reduces the risk of vomiting and aspiration during anesthesia. | Prepare a simple meal the night before (e.g., plain pasta or rice) and a clear liquid (water, clear juice) the morning of the procedure.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>**Answer for parents**
+
+Before a cryoablation of a kidney tumor, the child will usually need to be under general anesthesia (the same type of “deep sleep” that keeps the child still and pain‑free during the procedure). Because anesthesia can affect the child’s breathing and swallowing, the anesthesiology team wants the stomach to be empty. That’s why we ask for a short period of fasting.
+
+| What the child can eat/drink | How long before the procedure |
+|------------------------------|-------------------------------|
+| **Clear liquids** (water, diluted juice, clear tea or coffee without milk or cream) | 2–4 hours before the start of anesthesia |
+| **Soft foods** (e.g., yogurt, pudding, applesauce, mashed potatoes) | 4–6 hours before the start of anesthesia |
+| **Regular foods** (any solid food, especially fatty or spicy items) | 6–8 hours before the start of anesthesia |
+
+&gt; **Why this matters**  
+&gt; A full stomach increases the risk of vomiting or aspiration (food entering the lungs) during anesthesia. Even a small amount of food can cause complications, so we keep the stomach as empty as possible.
+
+### What if your child is on medication or has a special diet?
+
+If your child is taking daily medications, has a chronic illness, or follows a special diet, let the anesthesia team know. They can usually give the medication right before the procedure or adjust the fasting time so your child’s</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+In most cases, a cryoablation of a kidney mass in a child can be done as a **same‑day (outpatient) procedure**.  
+That means your child would be in the hospital for the procedure itself, then you would leave with them the same evening, after a short observation period.
+
+**When a short hospital stay is needed**
+
+- **If the child is older or has a larger tumor** that requires a longer procedure or more extensive monitoring, the team may keep them overnight (usually 1–2 days).  
+- **If any complications arise** (e.g., a small bleed, a temporary drop in blood pressure, or a need for additional imaging), the child might stay a little longer until the issue is resolved.
+
+**What to expect on the day of the procedure**
+
+1. **Pre‑procedure assessment** – a quick check‑up to confirm everything is ready.  
+2. **Sedation or anesthesia** – most children receive general anesthesia or a deep sedation that keeps them asleep during the procedure.  
+3. **The cryoablation itself** – the doctor places a small probe into the kidney mass under imaging guidance and freezes the tumor.  
+4. **Recovery** – after the probe is removed, the child is moved to a recovery area where nurses watch for any immediate side effects (pain, breathing, blood pressure).  
+5. **Discharge** – if the child is awake, stable, and can tolerate a small amount of food, they are usually sent home that same day.  
+
+**When a longer stay is needed**
+
+- **Post‑procedure imaging** (e.g., a CT or MRI) might be done the next day to confirm the tumor was fully treated.  
+- **Monitoring for delayed complications** such as a small bleed, urine leak, or a temporary change in kidney function may require an overnight observation.
+
+**Key points for parents**
+
+| Question | Typical answer | Why it matters |
+|----------|</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Short answer:**  
+Most children can start moving around the day after the procedure, but they should avoid heavy lifting, strenuous play, or any activity that could jostle the kidney for about 1–2 weeks. Full‑blown sports or activities that involve a lot of twisting or impact (soccer, gymnastics, contact sports) are usually held off for 4–6 weeks. Your child’s surgeon or interventional radiologist will give you a personalized plan that takes into account the exact size and location of the tumor, how many needles were used, and how your child feels after the procedure.
+
+---
+
+### Why we recommend a gradual return to activity
+
+| What happens during cryoablation | Why it matters for activity |
+|---------------------------------|-----------------------------|
+| A very cold probe is inserted through a needle to freeze the tumor. | The probe and needle can irritate nearby nerves (psoas muscle, abdominal wall) and tissues. |
+| The kidney and surrounding organs are very close to the probe. | Even a small amount of heat or cold can cause temporary swelling or pain. |
+| The procedure can leave a small “track” in the tissue where the needle passed. | This track can be a site of mild inflammation or, rarely, a small scar that needs time to heal. |
+
+Because of these factors, we want to give the tissues a chance to settle before putting stress on the area.
+
+---
+
+### Typical activity timeline (what most children experience)
+
+| Time after procedure | What’s usually allowed | What’s usually avoided |
+|----------------------|------------------------|------------------------|
+| **Day 1** | Light walking, gentle stretching, normal daily routines (eating, bathing). | Lying flat on the back for long periods, heavy lifting, or any activity that could jostle the abdomen. |
+| **Day 2–7**</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>**Follow‑up after your child’s cryoablation**
+
+I know that the idea of “follow‑up” can feel a bit overwhelming, especially after a procedure that’s new to you. Below is a simple outline of what you can expect, when it usually happens, and why each step is important. If anything feels unclear or you’d like more detail, just let the team know – they’ll be happy to walk you through it again.
+
+---
+
+### 1. **Immediate Post‑Procedure Care (Day 0–1)**  
+| What happens | Why it matters | What you’ll see |
+|--------------|----------------|-----------------|
+| **Transfer to the ward** for a short recovery period | The team monitors vital signs (blood pressure, heart rate, oxygen) and watches for early complications. | Your child will be in a quiet room, usually with a parent present. |
+| **Medications for pain, nausea, and fever** | Cryoablation can cause mild discomfort and a low‑grade fever. Medication keeps these symptoms manageable</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

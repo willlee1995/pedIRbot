@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Behavioural Strategies For Pain Management 9103" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is this behavioral pain‑management program being recommended for your child?**
+
+I know that hearing about a new treatment can feel overwhelming, especially when it’s for your little one. I’ll try to explain in plain language what this program is, why it’s useful, and how it fits into your child’s overall care.
+
+---
+
+### 1. What the “SickKids Behavioural Strategies for Pain Management” (code 9103) actually is
+
+- **A non‑drug, non‑invasive approach** that teaches children and their families techniques to reduce pain and anxiety.  
+- It’s usually delivered by a trained psychologist, child life specialist, or nurse who works with the interventional radiology team.  
+- Common tools used in the program include:
+  - **Distraction** (games, videos, virtual reality, or storytelling)  
+  - **Relaxation &amp; breathing exercises**  
+  - **Guided imagery or “mental escape”**  
+  - **Cognitive‑behavioral strategies** (helping the child reframe thoughts about pain)  
+  - **Positive reinforcement** (treats, stickers, or praise for coping)  
+
+These techniques are</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Behavioural Strategies For Pain Management 9103.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several other ways to help your child cope with pain. The behavioural “imagery” technique is one option, but doctors and nurses can also use medication, local numbing, sedation, or other distraction methods (music, video, games, etc.). Your child’s care team will talk with you about which approach (or combination) is best for your child’s age, medical situation, and personal preferences.
+
+---
+
+### What the “Imagery” technique is
+
+- **What it does:** It asks your child to picture a happy, safe place (a beach, a favorite playground, a superhero adventure) and to describe it with all five senses.  
+- **Why it helps:** By focusing on something pleasant, the brain’s attention shifts away from the pain signals, so the child feels less discomfort.  
+- **How it’s taught:** A trained pain specialist or therapist shows the child how to create vivid mental pictures and practice them over time.
+
+---
+
+### Other pain‑management options you might consider
+
+| Category | Typical examples | When it’s used | What parents can expect |
+|----------|------------------|----------------|-------------------------|
+| **Pharmacologic** | • Oral pain relievers (acetaminophen, ibuprofen) &lt;br&gt;• Topical numbing creams &lt;br&gt;• Local anesthetic injections | Mild to moderate pain, before or after procedures | Quick relief; may need a dose schedule or a small injection. |
+| **Sedation / Anesthesia** | • Oral or IV sedatives &lt;br&gt;• General anesthesia for longer or more invasive procedures | Major surgeries or procedures that last &gt;30 min | Child is deeply relaxed or asleep; requires monitoring by anesthesiology. |
+| **Distraction / Sensory techniques** | • Music or audiobooks &lt;br&gt;• Video or tablet games &lt;br&gt;• Virtual</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How will the “SickKids Behavioural Strategies for Pain Management” be performed?**
+
+---
+
+### 1. What the program actually is  
+This is **not a medical procedure** that involves needles, drugs, or imaging.  
+It is a *behavioral‑pain‑management* program that teaches your child simple, non‑pharmacologic tools—mainly guided imagery and distraction—to help them feel less pain and anxiety during medical care.
+
+---
+
+### 2. How the program is delivered
+
+| Step</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+No, the “SickKids Behavioural Strategies for Pain Management” (code 9103) is a non‑invasive, distraction‑based technique. It is usually done while the child is awake and alert, so no sedation or anesthesia is needed. If, for any reason, the child feels too anxious or is unable to participate, the team can discuss a brief, low‑dose sedative or a short‑acting anesthetic, and a pediatric anesthesia specialist would be involved in that decision.
+
+---
+
+### What the procedure actually is
+
+* **Behavioural pain management** uses imagination, guided imagery, and other distraction techniques to help a child focus on something pleasant instead of the pain or discomfort they’re feeling.  
+* It is **non‑invasive**—no needles, no incisions, no imaging studies.  
+* The child sits or lies in a comfortable position while the clinician guides them through a calming story or visualisation (e.g., a sunny beach, a favorite toy, a superhero adventure).  
+
+Because the child is awake and actively participating, the procedure does **not** normally require sedation or anesthesia.
+
+---
+
+### When sedation or anesthesia might be considered
+
+1. **Severe anxiety or inability to cooperate** – Some very young children or those with significant anxiety may find it hard to stay still or to concentrate on the imagery.  
+2. **Very short‑duration procedures** – If the session is brief (a few minutes) and the child is calm, no sedation is needed.  
+3. **Special circumstances** – For example, if the child has a medical condition that makes it difficult to stay awake or if the procedure is</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do to help your child feel ready for the “SickKids Behavioural Strategies for Pain Management” session**
+
+| Step | What it means | Why it matters | How you can do it |
+|------|---------------|----------------|-------------------|
+| **1. Talk about the plan in plain language** | Explain that the doctor will help your child “think of a happy place” to keep the pain from feeling so big. | Children feel safer when they know what’s coming. | “We’re going to sit together and imagine a beach, a castle, or wherever you like. It’s a game that helps the pain feel less scary.” |
+| **2. Let your child practice “imagining</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Imagery and imagination Imagination is a special form of distraction. It is so natural that it usually comes very easily to young children. To lessen pain, your child should try to imagine some pleasant experience. The idea is that while concentrating on a favourite image or memory, your child will no longer be preoccupied by the pain. As your child focuses on something other than the pain, ask them to describe it using all their senses. Children rely more on visual images than on other senses, ...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+The “SickKids Behavioural Strategies for Pain Management 9103” is a **non‑invasive, non‑surgical technique** that teaches your child how to use imagination and distraction to reduce pain. It is not a medical procedure that requires the child to be admitted to the hospital.
+
+**What this means for your child:**
+
+| Question | Typical answer |
+|----------|----------------|
+| **Will my child need to stay in the hospital?** | No. The training is usually done in the clinic or at home. |
+| **If the child is undergoing a separate medical procedure (e.g., a scan, a minor surgery, or a blood draw) that uses this technique, how long might they stay?** | The hospital stay depends on that specific procedure, not on the behavioural strategy itself. For most routine imaging or minor interventions, the child may be in the hospital for a few hours or a day. |
+| **How long will the behavioural training take?** | The initial session is typically 20–30 minutes. Your child can practice the techniques at home afterward, and the team may schedule a follow‑up visit to review progress. |
+
+**Why this is reassuring for parents**
+
+- The strategy uses your child’s natural imagination—something they can do in the comfort of their own home.
+- It requires no needles, sedation, or overnight monitoring.
+- It can be practiced anytime the child feels discomfort, making it a flexible, low‑stress tool.
+
+**What to expect next**
+
+- Your child’s healthcare team will explain exactly when and how the behavioural strategy will be used (e.g., before a scan or during a blood draw).
+- They will discuss any other procedures that might require a brief hospital stay and give you a clear timeline for those.
+- If you have any concerns about hospital stays for other treatments</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Behavioural Strategies For Pain Management 9103.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Behavioural Strategies For Pain Management 9103.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

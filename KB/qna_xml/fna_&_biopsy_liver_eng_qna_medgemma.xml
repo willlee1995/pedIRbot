@@ -1,0 +1,219 @@
+<?xml version="1.0" ?>
+<procedure name="Fna &amp; Biopsy Liver Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is a liver fine‑needle aspiration (FNA) or biopsy being recommended for your child?**
+
+I understand that hearing about a biopsy can feel scary, especially when it involves your little one. Let me explain in plain terms what the doctors are hoping to learn and why this step is important for your child’s care.
+
+---
+
+### 1. What the procedure does
+
+* **Fine‑needle aspiration (FNA)** – A very thin needle is guided by ultrasound or CT to the spot in the liver that looks abnormal on imaging. The needle pulls out a tiny sample of cells or tissue.  
+* **Core biopsy** – A slightly larger needle takes a small “core” of tissue.  
+
+Both are **percutaneous** (through the skin) and are done under imaging guidance so the needle goes exactly where it needs to go.
+
+---
+
+### 2. Why we need a tissue sample
+
+* **Imaging alone can’t tell us everything.**  
+  Ultrasound, CT, MRI, or blood tests can show that there is a lump or an area that looks unusual, but they can’t always say whether it’s benign (non‑cancerous) or malignant (cancerous), or what type of cell it is.  
+
+* **The diagnosis guides the next steps.**  
+  Knowing the exact type of cells in the liver tells the medical team:  
+  * Is it a benign tumor that can be watched?  
+  * Is it a type of cancer that needs surgery, chemotherapy, or radiation?  
+  * Does it need a liver transplant?  
+  * Are there any infections or inflammatory conditions that can be treated with medication?  
+
+Without that tissue sample, we would be guessing, and the safest, most effective treatment plan would be much harder to decide.
+
+---
+
+### 3. Pediatric‑specific considerations
+
+| Concern | What we do</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Liver Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are a few other ways doctors can try to get the information they need, but each has its own pros and cons. We’ll talk through all of them with your child’s team so you can decide what’s best for your family.
+
+---
+
+## 1. Imaging‑only approach  
+**What it is** – Detailed scans (MRI, CT, or ultrasound) can sometimes give enough clues about a liver lesion to guide treatment.
+
+**When it’s used** –  
+- If the lesion looks typical on imaging and the child is stable.  
+- When the risk of a biopsy is higher than the benefit (e.g., very small or hard‑to‑reach lesions).
+
+**Pros**  
+- No needle, no incision, no risk of bleeding or infection.  
+- Quick and painless for the child.
+
+**Cons**  
+- Imaging can’t always tell you exactly what the cells are (e.g., cancer vs. inflammation).  
+- If the diagnosis is unclear, you may still need a biopsy later, which can delay treatment.
+
+---
+
+## 2. Repeat percutaneous biopsy  
+**What it is** – The same needle technique, but done again on another day if the first sample was inadequate.
+
+**When it’s used** –  
+- If the first sample didn’t contain enough tissue or the results were incon</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**What will happen during the liver biopsy (FNA) and what comes next?**
+
+---
+
+### 1. How the biopsy itself is done
+
+| Step | What happens | Why it matters for your child |
+|------|--------------|------------------------------|
+| **Preparation** | Your child will lie on a table in the Radiology Suite. We’ll clean the skin over the lower part of the rib cage and give a local anesthetic (a numbing cream or injection) so the area feels only a little pinch. If your child needs extra comfort, a short‑acting sedative or pain medicine can be given through a small IV line. | The local anesthetic keeps the child from feeling the needle. Sedation is optional and only used if the child is very anxious or if the procedure is expected to be longer. |
+| **Imaging guidance** | A CT scanner or ultrasound machine will be used to “see” the liver and the exact spot where the needle will go. | Imaging ensures the needle goes straight to the right spot and avoids blood vessels or other organs. |
+| **Needle insertion** | A small incision (about 1–2 mm) is made in the abdominal wall. A thin, hollow needle is then guided into the liver. Your child will be asked to hold their breath for a few seconds while the needle is inserted. Once the needle tip is in place, a quick “suction” pulls a tiny sample of liver tissue into the needle. | The quick, single‑pass technique reduces the chance of bleeding and keeps the child comfortable. |
+| **Multiple samples** | Often we take 2–3 samples (each from a slightly different spot) to give the pathologist enough tissue to look at. That means the needle may be inserted a few times. | More samples</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer for Parents**
+
+The liver fine‑needle aspiration (FNA) or biopsy is usually done with **local anesthesia**—a numbing medication that is injected around the small incision where the needle will be placed. This keeps the child comfortable while the doctor works.
+
+**When sedation or general anesthesia is used**
+
+* If the child is very young, anxious, or if the procedure is expected to take longer, the team may give a **short‑acting sedative** through an IV.  
+* In some cases, especially for very small children or for those who cannot stay still, the doctor may recommend **general anesthesia** (the child is asleep the whole time).
+
+**Who will provide the sedation or anesthesia**
+
+* The decision is made by the interventional radiology team in close conversation with the **pediatric anesthesia** or **pediatric critical care** team.  
+* If sedation or general anesthesia is needed, a pediatric anesthesiologist (or a pediatric anesthesiology nurse‑anesthetist) will be present to monitor the child’s breathing, heart rate, and overall safety.
+
+**What to expect**
+
+1. **Before the procedure** – The anesthesia team will meet with you and your child to explain the plan, answer questions, and review any medications or allergies.  
+2. **During the procedure** – Your child’s vital signs (blood pressure, pulse, oxygen level) will be continuously monitored.  
+3. **After the procedure** – If sedation was used, the child will be kept in a recovery area until they are fully awake and stable. If local anesthesia only was used, the child can usually go home the same day.
+
+**Uncertainties &amp; Next Steps**
+
+* The exact need for sedation or general anesthesia depends on your child’s age, size, medical history, and how the procedure is planned to be performed.  
+* Your child’s surgeon and the interventional radiology team will discuss the safest approach with you before the day of the procedure.  
+* If a repeat biopsy is needed (because the first</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do to get your child ready for the liver biopsy**
+
+Below is a simple “check‑list” that covers the most common things parents need to know before the procedure.  
+If anything is unclear or if your child has a special situation (e.g., a bleeding disorder, a recent medication change, or a history of anxiety), please let the medical team know right away—they’ll tailor the plan to your child’s needs.
+
+| Step | What to do | Why it matters |
+|------|------------|----------------|
+| **1. Fasting** | • No food or drink for **6–8 hours** before the procedure (usually overnight). &lt;br&gt;• If your child is on a medication that must be taken with food, ask the team how to handle it. | Keeps the stomach empty so the child is less likely to vomit during sedation or local anesthesia. |
+| **2. Medications** | • Bring a list of all medicines, supplements, and</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> The procedure will be performed under local anesthesia and aseptic technique. If needed, an intravenous tube is used to give sedatives and pain medication. The doctor makes a small incision in the abdominal wall, either toward the bottom of the rib cage or just below it, and inserts the biopsy needle under imaging guidance. Patients will be asked to hold their breath while the needle is inserted and a liver sample is quickly withdrawn. Several samples may be collected, requiring multiple needl...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+In most cases, a fine‑needle aspiration (FNA) and core biopsy of the liver can be done as an **outpatient procedure**.  
+After the small incision is closed, the child is usually kept in the recovery area for a short observation period (about 1–2 hours) so the team can confirm that the incision is healing, there is no bleeding, and the child is comfortable. Once those checks are done, the child can go home the same day.
+
+**When an overnight stay might be needed**
+
+- **Heavy sedation or general anesthesia**: If the child requires deeper sedation or general anesthesia (rather than local anesthesia alone), the team may want to keep the child overnight for a brief monitoring period.  
+- **Underlying medical conditions**: Children with significant heart, lung, or liver disease, or those on medications that affect bleeding or healing, may be observed longer.  
+- **Complications**: Rarely, if there is unexpected bleeding, infection, or a reaction to the needle or medication, the child may need to stay in the hospital until the issue is resolved.
+
+**Typical timeline**
+
+| Step | Typical time |
+|------|--------------|
+| Procedure (incision, needle, closure) | 30–60 minutes |
+| Recovery/observation | 1–2 hours |
+| Discharge (same‑day) | If all is well |
+| Overnight stay | 1 night (if needed) |
+
+**What to expect**
+
+- **Before the procedure**: Your child will be given a small local anesthetic at the incision site. If deeper sedation is</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Liver Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Liver Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

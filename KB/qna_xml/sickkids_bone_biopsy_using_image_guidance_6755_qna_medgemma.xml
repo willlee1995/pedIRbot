@@ -1,0 +1,249 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Bone Biopsy Using Image Guidance 6755" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctor is recommending a bone biopsy**
+
+A bone biopsy is a small, targeted test that lets the doctors look directly at a piece of your child’s bone under a microscope. It is usually done when the information you can get from blood tests, X‑rays, or other imaging studies isn’t enough to answer the questions that matter most for your child’s care. Here are the main reasons a bone biopsy might be suggested:
+
+| What the biopsy can tell us | Why it matters for your child |
+|-----------------------------|-------------------------------|
+| **Identify a bone infection** (e.g., osteomyelitis) | Knowing the exact bacteria helps doctors choose the right antibiotics and avoid unnecessary or ineffective treatments. |
+| **Diagnose a bone‑related disease** (such as a bone tumor, leukemia, or a rare metabolic bone disorder) | A definitive diagnosis is the first step toward the most effective treatment plan. |
+| **Assess how a known disease is changing** (e.g., how a tumor is responding to therapy or whether a bone‑involving cancer is spreading) | This helps the team decide whether to keep the current treatment, switch to a different drug, or add another therapy. |
+| **Rule out other possible causes** of bone pain or abnormal lab results | Sometimes the symptoms can be caused by something else entirely; a biopsy can confirm or exclude those possibilities. |
+
+### How the procedure works
+
+- **Image‑guided**: An interventional radiologist uses real‑time imaging (usually CT or ultrasound) to locate the exact spot in the bone that needs sampling. This precision means the needle goes straight to the area of interest while avoiding nearby nerves, blood vessels, or organs.
+- **Small needle**: The biopsy uses a thin, special needle that removes a tiny core of bone. The sample is usually only a few millimeters long, so the procedure is minimally invasive.
+- **Under sedation or local anesthesia**: Depending on the child’s age, size, and the location of the biopsy, the child may receive a mild sedative or just local numbing medication. The</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What a bone biopsy can help us do for your child**
+
+| What the biopsy does | Why it matters for your child |
+|----------------------|------------------------------|
+| **Gets a tiny sample of the bone** | Gives the doctors a clear “look” at the cells, so they can see if the lesion is cancerous, inflammatory, or something else. |
+| **Helps decide the best treatment** | If it’s cancer, the biopsy tells us the exact type and how aggressive it is, which guides chemotherapy, radiation, or surgery. If it’s an infection or a benign growth, we can avoid unnecessary treatment. |
+| **Avoids guessing** | Without a biopsy, we would have to rely on imaging alone, which can sometimes be misleading. |
+| **Reduces the chance of future procedures** | A correct diagnosis now can prevent repeat scans or biopsies later. |
+
+**Potential risks – what we keep an eye on**
+
+| Risk | What it means for your child | How we minimize it |
+|------|------------------------------|--------------------|
+| **Bleeding** | A small amount of blood can seep into the bone or surrounding tissue. | We use image‑guidance to target the safest spot and we monitor the child closely after the procedure. |
+| **Infection** | The needle can introduce bacteria. | The procedure is done in a sterile environment, and we give antibiotics if needed. |
+| **Fracture of the bone** | The biopsy hole could weaken the bone. |</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+In many cases a bone biopsy is the most reliable way to get a definitive diagnosis, but there are other options that your child’s team might consider depending on the situation.  
+
+---
+
+### 1. What a bone biopsy actually tells us  
+A bone biopsy gives the pathologist a direct sample of the bone tissue.  
+* It can confirm an infection, a tumor, a metabolic bone disease, or a genetic condition.  
+* It can show how a disease is progressing or responding to treatment.  
+
+Because the sample is taken under image guidance (X‑ray, CT, MRI, or ultrasound), the procedure is usually quick (1–2 hours) and safe for children.
+
+---
+
+### 2. When a biopsy is usually the best choice  
+* **Suspected infection** that hasn’t responded to antibiotics.  
+* **Uncertain bone lesions** on imaging that could be benign or malignant.  
+* **Monitoring disease activity** (e.g., in leukemia, lymphoma, or bone‑involving cancers).  
+
+In these scenarios, a biopsy often provides the most definitive information.
+
+---
+
+### 3. Alternative or complementary approaches  
+| Alternative | What it can show | When it might be used | Limitations |
+|-------------|------------------|-----------------------|-------------|
+| **Advanced imaging alone** (MRI, PET‑CT, high‑resolution X‑ray) | Detailed pictures of bone structure and metabolism | If the imaging findings are very characteristic (e.g., classic “punched‑out” lesions of multiple myeloma) and the child is stable | Imaging can’t give a tissue diagnosis; it may miss subtle infections or early cancers |
+| **Blood tests &amp; labs** (CBC, ESR/CRP, cultures, metabolic panels) | Signs of infection, inflammation, or metabolic bone disease | Initial screening or when the child is too ill for a procedure | Doesn’t replace a tissue sample for definitive diagnosis |
+| **Fine‑needle aspiration (FNA)** | Small sample of cells | When the lesion is superficial and accessible | Provides fewer cells than a core</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**What will happen during the bone biopsy?**  
+I’ll walk you through the steps so you know exactly what to expect for your child.
+
+| Step | What happens | Why it matters |
+|------|--------------|----------------|
+| **1. Preparation** | • Your child will be given a mild sedative or, if needed, a short‑acting anesthetic so they feel comfortable and still. &lt;br&gt;• We’ll check their vital signs (heart rate, breathing, blood pressure). &lt;br&gt;• A small area of skin over the bone is cleaned and covered with a sterile drape. | Keeps the child calm and protects the site from infection. |
+| **2. Imaging to find the spot** | • We’ll use one of the imaging tools (X‑ray, ultrasound, CT, or MRI) that best shows the bone area that needs to be examined. &lt;br&gt;• The image is displayed on a screen so we can see exactly where the needle will go. | Ensures we target the right spot and avoid nearby nerves or blood vessels. |
+| **3. Needle insertion** | • A special, thin, hollow needle (1–3 mm wide, 2–3 cm long) is guided into the bone under the live image. &lt;br&gt;• The needle is moved a few times to collect 2–3 small bone samples. | The samples are the “width of a thick needle” and about an inch long, which is enough for the lab to do detailed tests. |
+| **4. After the samples are taken** | • The needle is removed. &lt;br&gt;• A small bandage is applied. &lt;br&gt;• We’ll monitor your child for a short time to make sure there are no immediate complications (like bleeding or pain). | Keeps the site clean and lets us catch any early issues. |
+| **5. Sending the samples to the lab** | • The bone pieces are placed in a special container and sent to the pathology lab. &lt;br&gt;• The lab will examine the tissue under a microscope and run any additional tests (e.g., cultures, genetic studies). | The lab results guide the next steps in treatment. |
+
+**How long will it take?**</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+Most children who have a bone biopsy at SickKids will receive sedation or general anesthesia. A pediatric anesthesiologist (or a pediatric anesthesia team) will be part of the care team to make sure the procedure is safe, comfortable, and as stress‑free as possible for your child.
+
+---
+
+### Why sedation or anesthesia is usually used
+
+| Why we use it | What it means for your child |
+|----------------|------------------------------|
+| **Pain control** – The needle is inserted into bone, which can be uncomfortable or painful. | Your child will feel no pain during the procedure. |
+| **Movement control** – The procedure takes 1–2 hours and requires the child to stay still so the radiologist can target the exact spot. | Sedation or anesthesia keeps your child calm and still. |
+| **Safety** – A controlled environment lets the team monitor breathing, heart rate, and oxygen levels. | The anesthesiologist will watch your child the whole time. |
+
+### Types of sedation/anesthesia used
+
+| Option | Typical use in bone biopsy | How it’s delivered |
+|--------|---------------------------|--------------------|
+| **Moderate sedation** (sometimes called “conscious sedation”) | For younger children who can tolerate a small amount of movement but still need to be relaxed. | Oral or IV medication; the child may still be awake but very sleepy. |
+| **Deep sedation** | For children who need to be completely still but do not require full general anesthesia. | IV medication; the child is very sleepy and may not respond to voice. |
+| **General anesthesia** | For infants, very young children, or those who cannot tolerate any movement. | IV or inhaled anesthetic; the child</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What you’ll need to do to get your child ready for the bone‑biopsy**
+
+| Step | What to do | Why it matters |
+|------|------------|----------------|
+| **1. Keep your child healthy** | • If your child develops a fever, cough, sore throat, or any new illness **within the two days before the biopsy**, call the clinic right away. | The procedure is safest when the child is not fighting an infection. If they’re unwell, the team may need to postpone the biopsy. |
+| **2. Follow the fasting instructions** | • Your child’s stomach must be empty before sedation or general anaesthesia. &lt;br&gt;• No food or drink (except a small sip of water) for **at least 6 hours** before the procedure. &lt;br&gt;• If your child has special needs (e.g., a feeding tube, swallowing difficulties), discuss a tailored fasting plan with the team. | An empty stomach reduces the risk of vomiting and aspiration during anaesthesia. |
+| **3. Medication checklist** | • **Give the regular morning medication** (e.g., asthma inhaler, seizure medication) with a sip of water **two hours before** the procedure. &lt;br&gt;• **Do NOT give** aspirin, ibuprofen, naproxen, warfarin, or enoxaparin unless the doctor has specifically cleared them. &lt;br&gt;• If your child is on any blood‑thinning or pain medication, confirm with the radiology team that it’s safe to keep it on that day. | Some medicines can increase bleeding risk or interfere with anaesthesia. |
+| **4. Arrive early** | • Plan to arrive **two hours before** the scheduled time. &lt;br&gt;• You’ll check in, your child will be weighed, dressed in a gown, and assessed by a nurse. &lt;br&gt;• You’ll have a chance to speak with the interventional radiologist and the anaesthetist. | Early arrival gives the team time to prepare and lets you ask questions. |
+| **</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>**Answer for Parents**
+
+**Can your child eat or drink before the bone biopsy?**  
+No, your child should not have any food or drink (except a very small sip of water with their regular morning medication) before the procedure.  
+
+**Why?**  
+The child will receive **general anaesthesia** for the biopsy. An empty stomach is essential for safety because it lowers the risk of vomiting or aspiration (food or liquid entering the lungs) while the child is unconscious.
+
+**How long must they abstain?**  
+- **No food or drink** for **at least 2 hours** before the scheduled start time.  
+- If your child takes a morning medication, they can take it with a **small sip of water** up to 2 hours before the procedure.
+
+**Special situations**  
+- If your child has special needs that make fasting difficult (e.g., certain medical conditions, feeding tubes, or severe anxiety about not eating), please let the medical team know. They can create a tailored fasting plan for your child.  
+- If your child feels unwell, has a fever, or starts to feel sick within the two days before the biopsy, inform the healthcare provider right away. The procedure may need to be rescheduled to keep your child safe.
+
+**What to do on the day of the procedure**  
+- Arrive at the hospital **two hours before** the scheduled time.  
+- Your child will be weighed, dressed in a hospital gown, and assessed by a nurse.  
+- You’ll have a</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who have a bone biopsy at SickKids can go home the same day. In very rare cases—if the child is very young, has a medical condition that makes recovery slower, or if the radiologist feels a short overnight observation is safest—the team may ask you to keep the child in the hospital for a few hours or a night. Your care team will let you know exactly what to expect before the procedure.
+
+---
+
+### Why most kids go home the same day
+
+1. **Fast, minimally‑invasive technique** – The biopsy is done with a thin needle guided by X‑ray, ultrasound, CT, or MRI. The needle is removed once a small sample is taken, so there is no large incision or major surgery.
+2. **Quick recovery** – After the needle is removed, the child is moved to a recovery area where a nurse monitors vital signs and pain. Once the child is awake and comfortable, the interventional radiologist explains the results and any next steps.
+3. **Pain control** – The child usually receives a short course of pain medication that can be taken at home. The nurse will teach you how to give it and what to watch for.
+4. **Safety checks** – The radiologist will look for any immediate complications (bleeding, infection, or a small puncture in a nearby organ). If everything looks good, the child is cleared for discharge.
+
+---
+
+### When a brief hospital stay might be recommended
+
+- **Very young infants** (under 6 months) or children with fragile health who may need closer observation.
+- **Complex medical histories** (e.g., bleeding disorders, severe anemia, or recent chemotherapy) that could increase the risk of delayed bleeding or infection.
+- **Unexpected findings** during the procedure that require a short period of monitoring or additional imaging.
+-</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**What to Expect After a Bone Biopsy**
+
+After the biopsy, your child will be taken to the recovery area where the interventional radiologist will review the procedure with you. The team will give you a personalized “home‑care” sheet, but here’s a general outline of what most families experience:
+
+| **Activity** | **Typical Recommendation** | **Why?** |
+|--------------|---------------------------|----------|
+| **Rest &amp; Light Activity** | 24–48 hours of gentle rest. | The biopsy site needs time to heal and to stop any small bleeding. |
+| **Bending, Squatting, or Heavy Lifting** | Avoid for 3–5 days. | These movements can increase pressure on the bone and the biopsy tract, potentially causing pain or bleeding. |
+| **Sports / Contact Activities** | Avoid for 1–2 weeks. | Even mild impact can disturb the healing site. |
+| **Swimming / Hot Tubs** | Avoid for at least 48 hours. | Warm water can increase swelling and risk of infection. |
+| **School / Daycare** | Usually can return after 24–48 hours, but keep the biopsy site covered.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>**Follow‑up after a bone biopsy in a child**
+
+After the biopsy is finished, the care team will guide you through the next steps so your child can recover safely and the doctors can get the information they need. Below is a general outline of what to expect, but remember that the exact plan will be tailored to your child’s situation and will be explained to you in detail by the interventional radiology team and the paediatrician.
+
+| Step | What Happens | Why It Matters | What You’ll Need to Do |
+|------|--------------|----------------|------------------------|
+| **1. Immediate post‑procedure observation** | Your child will stay in the recovery area for a few hours while the anaesthetist monitors breathing, heart rate, and pain. | To ensure the child wakes up safely from general anaesthesia and to catch any early complications (e.g., bleeding, infection). | Stay with your child, keep them calm, and report any unusual symptoms (severe pain, fever, vomiting). |
+| **2. Wound care** | The biopsy site will be cleaned and dressed. | Prevent infection and promote healing. | Keep the dressing clean and dry. Follow the nurse’s instructions for changing it (usually once a day or as directed). |
+| **3. Pain management** | Your child may receive pain medication (oral or IV) for the first 24–48 hours. | Pain can be uncomfortable; proper control helps the child rest and heal. | Give the medication exactly as prescribed. Watch for side‑effects such as drowsiness or constipation. |
+| **4. Activity restrictions** | Your child may be advised to avoid strenuous activity or heavy lifting for a week or two. | The biopsy needle can cause a small puncture; avoiding strain reduces bleeding risk. | Encourage gentle play and limit sports or climbing until cleared by the team. |
+| **5. Follow‑up clinic visit** | Usually scheduled 1–2 weeks after the biopsy. | The radiologist will review the biopsy sample</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

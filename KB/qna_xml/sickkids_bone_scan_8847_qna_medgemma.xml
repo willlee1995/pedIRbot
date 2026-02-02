@@ -1,0 +1,232 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Bone Scan 8847" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is a bone scan being recommended for your child?**
+
+I understand that hearing “bone scan” can feel a bit intimidating, especially when you’re already worried about your child’s health. Let me explain what the test is, why we think it’s useful for your child, and what you can expect.
+
+---
+
+### 1. What a bone scan actually does
+
+A bone scan is a very sensitive imaging test that uses a small amount of a radioactive tracer (usually a tiny dose of a substance called technetium‑99m). When the tracer is injected into your child’s bloodstream, it travels to the bones and “lights up” on a special camera. Areas of the bone that are healing, inflamed, or otherwise abnormal will take up more of the tracer, making them appear brighter on the images.
+
+Because the tracer is taken up by bone cells, the scan can reveal:
+
+- **Early bone injuries or fractures** that might not yet be visible on a standard X‑ray.
+- **Infections** (osteomyelitis) or inflammation that may be subtle.
+- **Bone tumors or growth abnormalities** that need closer evaluation.
+- **Metabolic bone disorders** such as rickets or certain storage diseases.
+
+In short, a bone scan can spot problems **before** they become obvious on X‑ray, which can help us start treatment sooner and avoid more invasive procedures.
+
+---
+
+### 2. Why we think it’s right for your child
+
+Your child’s doctor has likely considered the following when recommending the scan:
+
+| Reason | How it helps |
+|--------|--------------|
+| **Uncertain symptoms** (e.g., persistent pain, swelling, or limping) | The scan can confirm whether the bone itself is the source of the problem. |
+| **Early detection** | If your child has a condition that affects bone health, catching it early can improve outcomes. |
+| **Guiding treatment** | The scan can show whether a fracture is healing, whether an infection is spreading, or whether a tumor</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What the bone scan can help us find**
+
+A bone scan is a special X‑ray test that uses a tiny amount of a radioactive tracer (a very small “dose” of radiation). When the tracer travels through your child’s blood, it gathers in areas of the bone that are working hard, healing, or inflamed. By taking pictures of the whole body, the scan can:
+
+* **Spot hidden fractures** that may not show up on a regular X‑ray  
+* **Detect bone infections** or inflammation  
+* **Identify bone tumors or cancer spread**  
+* **Show how a bone‑related condition is progressing** (for example, after surgery or treatment)  
+
+In short, the scan gives the doctors a clearer picture of what’s happening inside the bones, which helps them decide the best treatment plan.
+
+---
+
+**What you should know about the risks**
+
+| Risk | How common | What it means for your child |
+|------|------------|------------------------------|
+| **Small amount of radiation** | Very low | The dose is far less than a routine X‑ray, and</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes – in many cases there are other ways to look at a child’s bones that don’t involve a bone scan. Which one is best depends on what the doctors are trying to find out, how urgent the information is, and how comfortable your child is with the procedure. Your child’s team will discuss the pros and cons of each option with you.
+
+---
+
+## What a bone scan does
+
+A bone scan (sometimes called a nuclear medicine bone scan) is a quick, painless test that uses a tiny amount of a radioactive tracer. The tracer travels through the bloodstream and “homes in” on areas of the bone that are healing, inflamed, or otherwise active. A special camera then takes pictures of the whole body (or the area of interest) to show where the tracer has accumulated.
+
+* **Why it’s useful** – It’s very good at spotting subtle problems that aren’t obvious on X‑ray, such as stress fractures, early infection, or bone tumors.  
+* **How it’s done** – The tracer is injected into a vein, then the child waits 2–3 hours for it to circulate. The scan itself takes about an hour. The whole visit is usually 3–4 hours, plus a little extra</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**What to Expect During Your Child’s Bone Scan (Procedure Code 8847)**  
+
+A bone scan is a quick, painless imaging test that helps doctors see how the bones are working and spot any problems that might not show up on a regular X‑ray. Here’s a step‑by‑step guide to what will happen, written in plain language so you can feel confident and prepared.
+
+---
+
+### 1. Arrival &amp; Preparation  
+- **Check‑in:** When you arrive, a nurse will confirm your child’s name, age, and the reason for the scan.  
+- **Topical Anesthetic (if needed):** If your child will receive a small cream or gel to numb the injection site, the nurse will apply it. This usually takes about 10–15 minutes and may add roughly 30 minutes to the total visit time.
+
+### 2. Injection of the Radiotracer  
+- **What it is:** A very small amount of a harmless, radioactive substance (called a radiotracer) is injected into a vein.  
+- **Why it’s used:** The tracer travels through the bloodstream and accumulates in the bones. After a few hours, the bones “light up” on the scanner, allowing us to see areas that may be healing, inflamed, or otherwise abnormal.  
+- **What it feels like:** The injection is quick—just a brief pinch. Most children tolerate it well, especially if a topical anesthetic was used. If your child is nervous, a distraction (a favorite toy, music, or a parent’s hand) can help.
+
+### 3. Waiting Period (2–3 Hours)  
+- **What happens:** After the injection, your child will sit or lie down while the tracer distributes throughout the body.  
+- **Comfort measures:**  
+  - **Entertainment:** Bring a tablet, books, or a favorite game.  
+  - **Snacks &amp; Drinks:** Ask the staff if you can bring a small snack; many clinics allow a light, non‑caffeinated</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+A bone scan is a very simple, non‑invasive test that usually does **not** need sedation or general anesthesia.  
+Here’s what you can expect:
+
+| Step | What happens | How it’s done | Why it’s usually fine without sedation |
+|------|--------------|---------------|----------------------------------------|
+| **Injection** | A small amount of a radioactive tracer is given through a short IV line. | The nurse will use a topical numbing cream (if your child is nervous) and then insert a tiny needle. | The injection is quick and the pain is minimal. |
+| **Waiting period** | The tracer travels through the blood to the bones. | Your child will sit or lie in a quiet room while the tracer “settles.” | This part is passive; the child can read, watch a video, or sit with a parent. |
+| **Scanning** | A special camera takes pictures of the bones. | The child lies still on a table while the scanner moves over the body. | The scan itself takes about an hour and the child can usually stay still for that time. |
+
+### Will my child need sedation or anesthesia?
+
+- **Most children can complete the scan without any sedation.**  
+- If your child is very anxious, has difficulty staying still, or has a history of movement disorders, the radiology team may discuss a mild sedative (e.g., oral or nasal spray) to help them relax.  
+- **General anesthesia is rarely required** for a standard bone scan.
+
+### Will a pediatric anesthesia specialist be available?
+
+- The hospital has a pediatric anesthesia team on call.  
+- If the decision is made to use sedation or anesthesia, a pediatric anesthesiologist will be present to monitor your child’s safety and comfort.  
+- The</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do before your child’s bone scan (SickKids Bone Scan 8847)**  
+
+The bone scan is a quick, safe test that usually takes 3–</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>The bone scan takes about three to four hours in total. This includes the time to inject your child, two or three hours waiting time after the injection, and about an hour for the scan. Please add half an hour to the total time if your child has a topical anaesthetic before the injection.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+No, your child does **not** need to stay overnight in the hospital for a bone scan. They can leave the clinic after the injection, but they must return later that same day for the actual scan. The whole visit usually takes about 3–4 hours (plus a little extra if a topical anesthetic is used).
+
+---
+
+### What happens on the day of the scan
+
+| Step | What happens | How long? |
+|------|--------------|-----------|
+| **Injection** | A tiny amount of radioactive medicine is given through a small needle in the arm or back of the hand. The injection itself is quick and usually not painful. | 5–10 minutes |
+| **Waiting period** | The medicine travels through the bloodstream and collects in the bones. The technologist will ask you to stay in the waiting area (or you can leave and come back). | 2–3 hours |
+| **Scan** | Your child lies on a narrow table with a safety belt. They can watch a movie or listen to music while the scanner takes pictures of their bones. | ~1 hour |
+| **If a topical anesthetic was used** | The cream or spray needs about 30 minutes to take effect, so add that to the total time. | +30 minutes |
+
+### Do they need to stay in the hospital?
+
+- **After the injection** – Your child can leave the clinic or hospital. Just make sure you keep the appointment time for the scan and bring any necessary paperwork or a note from the technologist.
+- **Before the scan** – They must return to the imaging suite at the scheduled time. The technologist will be there to guide them through the scan.
+- **If sedation is</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Short answer:**  
+After the bone‑scan injection your child can go home right away and can return to normal play, school, and sports as soon as they feel comfortable. There are no special activity restrictions after the scan itself. If your child was sedated, just follow the usual post‑sedation care instructions (e.g., stay with them until they’re fully awake, keep them hydrated, and let them rest a bit).  
+
+---
+
+### What happens after the injection?
+
+1. **Injection** – A tiny amount of radioactive tracer is put into a vein.  
+2. **Waiting period** – The tracer travels through the bloodstream and collects in the bones over the next 2–3 hours.  
+3. **Scan** – Your child lies on a narrow table while the camera takes pictures.  
+
+Because the tracer is only a very small amount of radioactivity, it does not require any special precautions or activity limits.  
+
+---
+
+### Activity guidance
+
+| Time after injection | What to do | Why |
+|----------------------|------------|-----|
+| **Immediately after injection** | Your child can leave the clinic/hospital. | The tracer is already in the bloodstream; no radiation exposure concerns. |
+| **During the 2–3 hour waiting period** | Normal activities (watching a show, playing quietly, eating a snack). | The tracer is still circulating; no special restrictions. |
+| **After the scan** | Resume normal daily routine (school, sports, play). | The scan uses no additional radiation and</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Scan 8847.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

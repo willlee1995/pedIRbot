@@ -1,0 +1,209 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Cancer 8489" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is this treatment being recommended for your child?**
+
+I know that hearing about a new procedure can feel overwhelming, especially when it involves your child’s health. I’ll try to explain the main reasons why the medical team has chosen this particular interventional‑radiology approach, in plain language, and what it means for your child’s care.
+
+---
+
+### 1. **Targeting the cancer that has been identified**
+
+- **What we know**: Imaging studies (MRI, CT, ultrasound) and a biopsy have shown that your child has a specific type of cancer—whether that’s a brain tumour, leukemia, lymphoma, bone or soft‑tissue cancer, or another form.  
+- **Why it matters**: Each cancer type behaves differently. The interventional‑radiology team has determined that the tumour’s size, location, and biology are best addressed with a minimally‑invasive, image‑guided procedure rather than a large surgical operation or a different treatment modality.
+
+### 2. **Why an interventional‑radiology procedure?**
+
+- **Precision**: The procedure uses real‑time imaging to guide tiny instruments directly to the tumour, sparing healthy tissue.  
+- **Less trauma**: Because it’s usually done through a</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What the medical team hopes to achieve (the benefits)**  
+1. **Stopping the cancer** – The main goal of any cancer treatment is to destroy the cancer cells so that the child can live a healthy life afterward.  
+2. **Preventing spread** – Surgery, radiation, or chemotherapy can remove or kill cancer cells that might have already moved to other parts of the body.  
+3. **Preserving function** – Modern techniques (e.g., limb‑sparing surgery, targeted radiation, or “rotation‑plasty”) aim to keep as much normal movement and appearance as possible.  
+4. **Improving quality of life** – Even if the cancer can’t be cured, treatments can reduce pain, stop the tumor from growing, and allow the child to return to school and play.  
+5. **Long‑term health** – In many cases, children treated early and aggressively have a very good chance of long‑term remission or cure.
+
+**What the medical team wants you to know about the possible side‑effects (the risks)**  
+| Area | Typical side‑effects | Why it matters for children | How we can help |
+|------|----------------------|-----------------------------|-----------------|
+| **Radiation** | • Skin redness, dryness, or peeling &lt;br&gt;• Temporary hair loss in the treated area &lt;br&gt;• Cognitive changes (difficulty concentrating, memory problems) &lt;br&gt;• Potential impact on fertility (especially if the pelvis or testes are treated</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several other ways doctors can look for and confirm cancer in children. Which one (or combination) is best depends on your child’s age, the type of cancer being suspected, and how far the disease might have spread. Your medical team will review all the options with you and decide together what makes the most sense for your child’s situation.
+
+---
+
+### 1. What “alternative options” means in this context
+
+When we talk about alternatives for a diagnostic procedure, we’re usually referring to other tests or techniques that can give the same information—sometimes with less discomfort, fewer side‑effects, or a different type of imaging. For a child, the goal is always to get the most accurate diagnosis while keeping the experience as gentle as possible.
+
+| Alternative | What it looks at | Typical use in children | Pros | Cons |
+|-------------|-----------------|------------------------|------|------|
+| **Blood tests** (CBC, tumor markers) | General health, specific proteins that may be high in cancer | First step in many work‑ups | Quick, non‑invasive | Not definitive for many cancers |
+| **X‑ray** | Bone and chest imaging | Quick check for bone lesions or lung involvement | Fast, low cost | Limited detail, radiation exposure |
+| **Ultrasound** | Soft‑tissue organs (liver, kidneys, lymph nodes) | Safe for kids, no radiation | Real‑time, no radiation | Less detail for deep structures |
+| **MRI** | Soft‑tissue detail, brain, spinal cord | Preferred for brain, spinal, or complex organ imaging | No radiation, excellent detail | Longer scan, may need sedation |
+| **PET scan** | Metabolic activity of cells | Good for detecting spread (metastasis) | Sensitive for many cancers | Expensive, radiation, may need sedation |
+| **Bone scan** | Detects bone involvement | Useful for cancers that spread to bone | Whole‑body view |</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How will your child’s treatment be performed?**  
+I</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer**
+
+- Whether your child will need sedation or general anesthesia depends on the specific test or procedure that is planned.  
+- If sedation or general anesthesia is needed, a pediatric anesthesiologist (a doctor who specializes in anesthesia for children) will be part of the team.
+
+---
+
+### 1. What determines the need for sedation or anesthesia?
+
+| Type of test/procedure | Typical sedation/anesthesia approach | Why it matters for kids |
+|------------------------|-------------------------------------|------------------------|
+| **Blood draws, X‑ray, ultrasound** | Usually no sedation; local comfort measures (e.g., numbing cream, distraction) | Most kids can tolerate these with a calm environment. |
+| **MRI, PET, or CT scans** | Light sedation or general anesthesia in younger children or those who cannot stay still | MRI and PET scans require the child to lie very still for 30–60 minutes. |
+| **Bone marrow biopsy or lumbar puncture** | Light sedation or general anesthesia, especially in younger children or those with anxiety | These are invasive and can be painful; sedation helps keep the child calm and still. |
+| **Surgical procedures (e.g., tumor removal)** | General anesthesia | Surgery always requires general anesthesia to keep the child pain‑free and still. |
+
+Your child’s age, medical history, anxiety level, and the specific test will all be considered when deciding the best approach.
+
+---
+
+### 2. Who will provide the anesthesia?
+
+- **Pediatric anesthesiologist** – A doctor who has specialized training in caring for children during anesthesia.  
+- **Anesthesia nurse or nurse anesthetist** – Works under the direction of the pediatric anesthesiologist.  
+- **Anesthesia support team** – Includes a pediatric anesthesiology technician and sometimes a child life specialist to help the child feel safe.
+
+If your child needs sedation or general anesthesia, the team will arrange for a pediatric anesthes</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**Preparing Your Child for the Upcoming Treatment – A Quick Guide**
+
+I know that the idea of getting your child ready for a medical procedure can feel overwhelming. Below are the most common things that families usually need to think about before a pediatric interventional‑radiology or oncology treatment. The exact details for your child’s plan will be confirmed by the medical team, but this outline should give you a clear picture of what to expect.
+
+| What to Prepare | Why It Matters | How to Do It |
+|-----------------|----------------|--------------|</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Diagnosing cancer Cancer diagnosis can be a long process. Learn more about the process doctors use to diagnose cancer, the different tests you might have during diagnosis and treatment, and ways to help you cope whne you find out you have cancer. Diagnosing cancer Diagnostics tests Diagnostic tests Cancer tests and anaesthetic Blood tests Scans X-rays Ultrasound MRIs PET scans Bone scans Biopsies Bone marrow tests Lumbar punctures Coping with cancer diagnosis Tests during cancer treatment Tests ...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+I’m sorry you’re facing this uncertainty right now. I’ll try to give you a clear picture, but please remember that the exact answer will come from the team that’s planning your child’s care.
+
+---
+
+### 1.  Does your child need to stay in the hospital?
+
+* **It depends on the specific procedure and the overall treatment plan.**  
+  * Some interventional radiology (IR) procedures in children are done on an **outpatient basis** – the child goes home the same day.  
+  * Other procedures, especially those that involve longer imaging times, sedation, or the placement of devices (e.g., feeding tubes, central lines, or tumor embolization), may require an **overnight stay** or a few days in the hospital.
+
+* **What the team will consider:**  
+  * The type of cancer and how advanced it is.  
+  * The goal of the IR procedure (diagnostic imaging, biopsy, treatment delivery, or supportive care).  
+  * Your child’s overall health, age, and ability to tolerate sedation or anesthesia.  
+  * Whether any additional treatments (chemotherapy, radiation, or surgery) will follow the IR procedure.
+
+---
+
+### 2.  How long might a stay last?
+
+| Scenario | Typical Length of Stay | Why it might be needed |
+|----------|------------------------|------------------------|
+| **Diagnostic imaging (e.g., MRI, CT, ultrasound)** | **Same‑day** (often 1–3 hours total) | No sedation needed; quick recovery. |
+| **Biopsy or small‑volume tumor sampling** | **Same‑day or overnight** | Sedation or anesthesia may be required; monitoring for bleeding or infection. |
+| **Therapeutic embolization or tumor ablation** | **1–3 days</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Answer for Parents**
+
+I understand how important it is to know when your child can get back to their favorite activities—whether that’s playing with friends, riding a bike, or just running around the playground. The answer depends on a few things, so I’ll give you a general outline and let you know what to expect and when you’ll get the exact details from your child’s medical team.
+
+---
+
+### 1. What Usually Causes Activity Restrictions?
+
+| **Treatment** | **Why Restrictions?** | **Typical Time Off** |
+|---------------|------------------------|----------------------|
+| **Surgery** (e.g., tumor removal) | Healing of incisions, pain, risk of bleeding or infection | 1–4 weeks (shorter for minor procedures, longer for major surgery) |
+| **Chemotherapy** | Fatigue, low blood counts (risk of infection), nausea, mouth sores | 1–2 weeks after each cycle; full return after last cycle, but may take a few weeks for energy to come back |
+| **Radiation** | Skin irritation, fatigue, risk of infection | 1–3 weeks after each course; full return after completion, but may need a few weeks for skin to heal |
+| **Targeted or Immunotherapy** | Fatigue, flu‑like symptoms, skin changes | Usually 1–2 weeks after each dose; full return after last dose, but monitor for late side‑effects |
+| **Bone‑Marrow or Stem‑Cell Transplant** | Very low blood counts, risk of infection, need for isolation | 4–6 weeks (or longer) until counts recover; full return after discharge and recovery period |
+
+&gt; **Note:** These are *typical* ranges. Your child’s specific situation—age, overall health, the exact drugs or radiation dose, and</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cancer 8489.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

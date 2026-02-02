@@ -1,0 +1,206 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Brain Tumours And Self Image 9689" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is this treatment being recommended for your child?**
+
+I know that hearing about a brain‑tumor procedure can feel overwhelming, and it’s natural to want a clear, honest explanation. Below is a simple, parent‑friendly overview of why the medical team at SickKids has suggested this particular intervention (often called “SickKids Brain Tumours and Self‑Image 9689” in the study protocol).  
+
+---
+
+### 1. What the procedure is meant to do
+
+| **Goal** | **Why it matters for your child** |
+|----------|-----------------------------------|
+| **Remove or shrink the tumor** | A growing tumor can press on brain tissue, nerves, or blood vessels, causing headaches, seizures, weakness, or changes in mood and cognition. By removing or reducing the tumor, we aim to relieve these symptoms and stop further damage. |
+| **Confirm the tumor type** | The exact kind of tumor (e.g., pilocytic astrocytoma, medull</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Brain Tumours And Self Image 9689.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Answer**
+
+I’m glad you’re looking into all the ways to support your child’s well‑being. “SickKids Brain Tumours &amp; Self‑Image 9689” is a program that helps children and teens who are dealing with brain tumours (or other cancers) to feel more confident about how they look and how they feel about themselves. It’s not a medical treatment for the tumour itself—it’s a supportive service that runs workshops, offers counseling, and connects families with resources that focus on self‑image and emotional health.
+
+---
+
+### 1. What the program offers
+- **Workshops** for teenage girls (and sometimes boys) that cover topics such as hair care, makeup, fashion, and body positivity.  
+- **Individual or group counseling** with a psychologist or social worker who understands the unique challenges of childhood cancer.  
+- **Peer support**—meeting other kids who are going through similar experiences.  
+- **Resources** such as the Look‑Good‑Feel‑Better program and the AboutKidsHealth Cancer Learning Hub.
+
+---
+
+### 2. Alternative or complementary options
+
+| Option | What it is</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**Answer for Parents**
+
+I understand that hearing about a “treatment” can feel overwhelming, especially when it’s tied to a child’s brain tumor and their sense of self‑image. I’ll try to explain what the **SickKids Brain Tumours &amp; Self‑Image Program (code 9689)** is, how it will be delivered, and how it fits into your child’s overall care plan.
+
+---
+
+### 1. What the program actually is
+
+- **It’s a support program, not a medical procedure.**  
+  The program is designed to help children and teens who are dealing with a brain tumor (or its treatment) feel better about how they look and how they see themselves. It’s a psychosocial intervention, not a surgical or radiation treatment.
+
+- **Goals of the program**  
+  • Give children tools to manage changes in appearance (hair loss, skin changes, weight changes, etc.)  
+  • Build confidence and coping skills  
+  • Provide a safe space to talk with peers who are going through similar experiences  
+  • Offer practical tips (make‑up, hairstyles, fashion, body language) that can help children feel more in control.
+
+---
+
+### 2. How the program will be delivered
+
+| Component | Typical format | What your child will experience |
+|-----------|----------------|---------------------------------|
+| **Workshops** | In‑person or virtual group sessions (usually 1–2 hours each) | Your child will meet with a trained facilitator (often a psychologist</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+I understand that thinking about whether your child will need sedation or anesthesia can feel overwhelming. Here’s what we can share based on the information we have, and what you can expect when you talk with the care team at SickKids.
+
+---
+
+### 1. Will your child need sedation or anesthesia for the “Brain Tumour and Self‑Image” visit?
+
+- **It depends on the exact nature of the visit.**  
+  * If the child is simply coming in for a consultation, imaging review, or a short discussion about self‑image support, most children can participate without sedation.  
+  * If the child will undergo a longer procedure (e.g., a brain MRI, a biopsy, or a surgical intervention related to the tumour), sedation or general anesthesia is usually required to keep the child still and comfortable.
+
+- **Age and comfort level matter.**  
+  * Younger children (under 5–6 years) often need some form of sedation for imaging or procedures because they can’t stay still for the required time.  
+  * Older children and teenagers may be able to cooperate with minimal sedation or just a calm, supportive environment.
+
+---
+
+### 2. Will a pediatric anesthesia specialist be present?
+
+- **Yes, a pediatric anesthesiologist or anesthesiology nurse‑anesthetist will be part of the team whenever sedation or general anesthesia is needed.**  
+  * Pediatric specialists are trained to handle children’s unique physiological responses, airway concerns, and emotional needs.  
+  * They work closely with the interventional radiology and surgical teams to plan the safest approach for your child.
+
+---
+
+### 3. What to expect next
+
+1. **Pre‑procedure assessment** – The child’s medical team (radiologist, surgeon, and pediatric anesthesiologist) will review the child’s age, medical history, and the specific procedure.  
+2. **Discussion of options** – You’ll be invited to a</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**Answer for Parents**
+
+I understand how important it is to feel prepared and confident before your child’s treatment. Below is a simple, step‑by‑step guide that covers the most common preparations for a pediatric interventional radiology procedure (such as a brain‑tumour embolisation or stereotactic radiosurgery) at SickKids. If any of the details don’t match what your team has told you, please let me know—your care team will always tailor the plan to your child’s specific needs.
+
+---
+
+### 1. **What the Procedure Usually Involves**
+
+| Step | What Happens | Why It Matters |
+|------|--------------|----------------|
+| **Pre‑procedure imaging** | MRI or CT scan to map the tumour and plan the intervention. | Helps the interventional radiologist (IR) see exactly where to go. |
+| **Anesthesia** | Most children receive general anesthesia (GA) or a sedative‑analgesic combo. | Keeps the child still and comfortable during the procedure. |
+| **Vascular access** | A small needle is inserted into a vein (often the arm) to deliver contrast dye and, if needed, embolic material. | Allows the IR to see the blood vessels feeding the tumour. |
+| **Contrast dye** | Injected through the vein to highlight blood vessels on X‑ray/CT images. | Makes the tumour’s feeding vessels visible. |
+| **Treatment** | Depending on the tumour type, the IR may block (embolise) feeding vessels, deliver targeted radiation, or perform a biopsy. | Aims to shrink the tumour, relieve symptoms, or provide tissue for diagnosis. |
+
+---
+
+### 2. **Pre‑Procedure Checklist**
+
+| Preparation | What to Do | Tips for Parents |
+|-------------|------------|------------------|
+| **Fasting** | 6–8 hours before the procedure (usually no food or drink). |</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Resources Numerous organizations are available to help people with cancer feel better about their appearance. The Look Good Feel Better Program, for example, holds workshops for teenage girls with cancer to provide them with tips on improving their personal appearance. The AboutKidsHealth Cancer Learning Hub for teenagers contains resources to help teenagers learn about self-image and caring for their mental and physical health. Last updated: January 10th 2022</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+It depends on the exact procedure your child will have. Many interventional radiology (IR) procedures for brain tumors are done on an outpatient basis and the child can go home the same day. If the plan is a larger surgical resection or a more complex IR procedure (e.g., stereotactic biopsy, embolization, or a combined surgery‑IR session), the child may need to stay in the hospital for 1–3 days for monitoring, pain control, and to make sure everything is working well.
+
+---
+
+### Why the length of stay can vary
+
+| Type of procedure | Typical hospital stay | Why it matters |
+|-------------------|-----------------------|----------------|
+| **Outpatient IR (e.g., stereotactic biopsy, embolization)** | 0–1 day (often same‑day discharge) | The child is monitored for a few hours after the procedure, then sent home if stable. |
+| **Combined IR‑surgery (e.g., tumor resection with intra‑operative imaging)** |</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Brain Tumours And Self Image 9689.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Brain Tumours And Self Image 9689.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

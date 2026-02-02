@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Cecostomy Tube Common Problems 4715" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is this treatment being recommended for your child?**
+
+Your child has a **cecostomy tube (C‑tube)**, which is a small, flexible tube that goes from the outside of the abdomen into the first part of the large intestine (the cecum). The tube helps the bowel empty more regularly and reduces the chance of soiling, which can be very uncomfortable and embarrassing for a child.
+
+Because the tube is outside the body, it can sometimes cause problems. The treatment plan you’re seeing is aimed at preventing and managing those common issues so that:
+
+| What can happen | Why it matters | What the treatment does |
+|-----------------|----------------|------------------------|
+| **Skin irritation or redness** | Acidic intestinal juices, movement of the tube, or a tube that’s too tight can irritate the skin. | Regular cleaning, gentle dressing changes, and ensuring the tube is the right size help keep the skin healthy. |
+| **Infection** | A red, swollen, or warm area around the tube, pus, or a change in the color/thickness of the drainage can signal infection. | Prompt contact with the health‑care team allows early treatment with antibiotics and, if needed, tube replacement. |
+| **Blockage of the tube** | Food or stool can clog the tube, making it hard for the bowel to empty. | Removing the syringe, flushing, or, if that doesn’t work, having the tube replaced in the interventional radiology (IR</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cecostomy Tube Common Problems 4715.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+If the cecostomy tube (C‑tube) isn’t draining, the first things we try are simple, non‑invasive measures—flushing, cleaning, and sometimes adding a little glycerin. If those don’t work, we usually need to replace the tube. In rare cases, we might consider a different type of drainage system or a surgical approach, but that’s only if the C‑tube can’t be kept working safely.
+
+---
+
+## What you can do at home
+
+| Step | What to do | Why it helps | When to call the clinic |
+|------|------------|--------------|------------------------|
+| **1. Flush the tube** | Use the saline solution (10–20 mL/kg per flush). Gently push the syringe plunger to send the fluid through the tube. | The fluid can loosen any blockage and keep the tube open. | If the tube is still blocked after 2–3 flushes. |
+| **2. Add glycerin (if needed)** | If your child has hard stools, add 0.5–1.0 mL/kg of glycerin to the saline (max 60 mL/day). | Glycerin softens stool and can help the tube stay clear. | If the child is constipated or the flushes keep clogging. |
+| **3. Check the skin** | Look for redness, swelling, or warmth around the opening. | These signs can mean an infection or irritation that might be causing a blockage. | If you see any of these signs. |
+| **4. Keep the tube in place** | Do not remove or move the tube yourself. | Moving it can dislodge the tract or create a new blockage. | If the tube feels loose or</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the Cecostomy Tube (C‑tube) irrigation will be carried out**
+
+1. **What the team will do**  
+   * A nurse or a pediatric interventional radiology (PIR) technician will sit with you and your child in a quiet, comfortable room.  
+   * They’ll first check the tube to make sure it’s still in place and that the child is comfortable.  
+   * They’ll then prepare the irrigation solution:  
+     * **Saline** – 10–20 mL per kilogram of your child’s weight.  
+     * **Glycerin** (if needed for hard stools) – 0.5–1.0 mL per kilogram, but never more than 60 mL in a day.  
+   * The solution is poured into a clean, small container and then gently introduced into the C‑tube with a syringe or a small irrigation bottle.  
+
+2. **During the irrigation**  
+   * The child will lie on their side or in a comfortable position.  
+   * The nurse will slowly push the fluid through the tube, watching for any resistance or discomfort.  
+   * It usually takes **45–60 minutes** for the fluid to travel through the colon and for the stool to be expelled.  
+   * You may hear the fluid moving or see a small amount of stool in the toilet. That’s normal.  
+
+3. **What you’ll see and feel**  
+   * Your child might feel a gentle pressure or a mild cramp as the fluid moves.  
+   * If the child is uncomfortable or has a lot of cramping, the nurse will stop the irrigation and check for a possible blockage.  
+   * If nothing comes out after the full time, the team may massage the child’s abdomen clockwise and encourage gentle movement to help the fluid pass.  
+
+4. **After the irrigation**  
+   * The nurse will clean the tube and the surrounding area</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+For the routine cleaning (irrigation) of a cecostomy tube, your child will **not** need sedation or anesthesia.  
+If your child ever needs a more involved procedure—such as a tube replacement, removal, or a diagnostic imaging study that requires the child to stay still—then sedation or general anesthesia may be used. In that case a pediatric anesthesiologist will be part of the care team.
+
+---
+
+### Why routine irrigation doesn’t need sedation
+
+* **What it is:** The daily or every‑other‑day flushing you’re doing with saline (and sometimes glycerin) is a simple, non‑invasive procedure.  
+* **How it’s done:** The fluid is introduced through the tube and allowed to move through the bowel. The child is awake, usually comfortable, and can participate (e.g., by moving around or lying still).  
+* **Safety:** Because the procedure is short (often 45–60 minutes) and doesn’t involve any invasive steps, there’s no need for sedation.  
+
+---
+
+### When sedation or anesthesia might be considered
+
+| Situation | Why sedation/anesthesia might be used | Who will manage it |
+|-----------|--------------------------------------|--------------------|
+| **Tube replacement or removal** | The procedure can</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do to get your child ready for the cecostomy tube procedure**
+
+I know how stressful it can feel to prepare a child for any medical visit, especially when it involves a tube that helps with bowel care. Below are the most important things you can do right now to make sure your child is comfortable and ready for the procedure. If anything feels unclear or you’re unsure, please bring it up with your child’s healthcare team—they’ll tailor the plan to your child’s specific needs.
+
+| Step | What to do | Why it matters |
+|------|------------|----------------|
+| **1. Keep the bowel clean** | • Every day (or every other day) give your child the saline irrigation that the team has prescribed. &lt;br&gt;• If your child has hard stools, add the glycerin that the provider recommended. &lt;br&gt;• Use the amount of saline/g</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>All children with C-tubes should cleanse their bowel with a saline solution either every day or every other day. Each child is different and will need different amounts of fluids for irrigation. For children that have hard stools, glycerin can be added to the saline solution. Talk to your child’s health-care provider if you think your child needs this. The amount of saline and glycerin that your child will need depends on two things: how constipated they are and their weight. If you do not know ...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who receive a cecostomy (C‑tube) can be discharged the same day or the next day after the procedure. In some cases—if the child is very young, has other medical issues, or if there are complications—the team may keep them in the hospital for a few extra days (usually 1–3 days). Your doctor will let you know exactly what to expect for your child’s situation.
+
+---
+
+### Why a short stay is common
+
+1. **Procedure type**  
+   - A cecostomy tube is usually placed under sedation or general anesthesia in a procedure room or a small surgical bay.  
+   - The tube is positioned, secured, and a quick check is done to confirm it’s working.
+
+2. **Post‑procedure monitoring**  
+   - After the procedure, the child is observed for a few hours for any immediate complications (bleeding, infection, tube dislodgement).  
+   - If everything looks good, the child can go home with instructions for care and follow‑up.
+
+3. **Home care**  
+   - Once home, the child will need regular bowel cleansing with saline (</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cecostomy Tube Common Problems 4715.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cecostomy Tube Common Problems 4715.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Celiac Disease Five Tips For Gluten Free Online Grocery Shopping 6002" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is a gluten‑free diet being recommended for your child?**
+
+I know this can feel overwhelming, so I’ll try to explain it in plain language and focus on what matters most for your child’s health and everyday life.
+
+---
+
+### 1. What’s happening inside your child’s body?
+
+- **Celiac disease is an autoimmune reaction**. When a child with celiac disease eats foods that contain gluten (the proteins found in wheat, barley, rye, and many processed foods), their immune system mistakenly attacks the lining of the small intestine.
+- This attack damages the tiny “fingers” (villi) that absorb nutrients. When the villi are damaged, the child can’t absorb vitamins, minerals, and calories properly, even if they’re eating a balanced diet.
+
+### 2. Why a gluten‑free diet is the main treatment
+
+| Problem | How a gluten‑free diet helps |
+|---------|-----------------------------|
+| **Intestinal damage** | Removing gluten stops the immune trigger, allowing the villi to heal over time. |
+| **Malnutrition &amp; growth delays** | Once the intestine heals, nutrient absorption improves, supporting normal growth and development. |
+| **Symptoms (diarrhea, bloating, fatigue, skin rash, abdominal pain)** | Most children see these symptoms disappear or become much milder after they stop eating gluten. |
+| **Long‑term complications (bone loss, anemia, infertility, certain cancers)** | A strict gluten‑free diet dramatically lowers the risk of these serious problems later in life. |
+
+In short, the gluten‑free diet is the only proven way to stop the immune attack,</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease Five Tips For Gluten Free Online Grocery Shopping 6002.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease Five Tips For Gluten Free Online Grocery Shopping 6002.</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease Five Tips For Gluten Free Online Grocery Shopping 6002.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease Five Tips For Gluten Free Online Grocery Shopping 6002.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease Five Tips For Gluten Free Online Grocery Shopping 6002.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease Five Tips For Gluten Free Online Grocery Shopping 6002.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease Five Tips For Gluten Free Online Grocery Shopping 6002.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease Five Tips For Gluten Free Online Grocery Shopping 6002.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease Five Tips For Gluten Free Online Grocery Shopping 6002.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

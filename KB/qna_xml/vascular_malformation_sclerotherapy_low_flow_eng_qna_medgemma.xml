@@ -1,0 +1,207 @@
+<?xml version="1.0" ?>
+<procedure name="Vascular Malformation Sclerotherapy Low Flow Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is sclerotherapy being recommended for your child?**
+
+I know that hearing “treatment” can feel overwhelming, especially when it involves a procedure that isn’t a routine check‑up. Let me explain in plain terms what the doctors are hoping to achieve and why this particular approach is being suggested for your child.
+
+---
+
+### 1. What the problem is
+
+- **Low‑flow vascular malformations** are abnormal “tubes” in the skin or deeper tissues that are made up of either:
+  - **Venous malformations (VM)** – dilated, weak veins
+  - **Lymphatic malformations (LM)** – sponge‑like spaces that hold clear fluid
+
+These malformations are **not tumors**; they are congenital (present from birth) but can grow or change over time. They can cause:
+
+- **Pain or discomfort** (especially if the malformation is large or located near nerves)
+- **Functional problems** (e.g., difficulty moving a limb, swallowing, or breathing if the malformation is in the neck or chest)
+- **Cosmetic concerns** that may affect a child’s self‑esteem
+
+---
+
+### 2. Why sclerotherapy is a good option
+
+Sclerotherapy is a minimally invasive, image‑guided procedure that targets the abnormal vessels directly:
+
+1. **Inject a “sclerosant”** (a medicine that makes the vessel walls harden) into the malformation.
+2. The sclerosant causes the abnormal vessel to **clot and shrink**.
+3. Over time, the body reabsorbs the dead tissue, leaving a smaller, less symptomatic area.
+
+**Benefits for your child**
+
+- **Reduces size** of the malformation, which often means less pain and fewer functional problems.
+- **Can be done under local or general anesthesia** (depending on age and location), so the child can be comfortable during the procedure.
+- **Usually takes 3–4 hours** – a single session can make a noticeable difference.
+- **Can be repeated** if the malformation grows again; we’ll plan</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Vascular Malformation Sclerotherapy Low Flow Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes – there are several ways to treat a low‑flow vascular malformation in children, and the best choice depends on the size, location, symptoms, and how the malformation is behaving. Your child’s interventional radiologist, surgeon, and pediatrician will review all of these options together with you before deciding on a plan.
+
+---
+
+## 1. What “low‑flow vascular malformation” means  
+- **Low‑flow** malformations are made up of slow‑moving blood vessels (capillaries, venous channels, or lymphatics).  
+- They can cause pain, swelling, skin changes, or cosmetic concerns, but many are stable and may not need treatment right away.
+
+---
+
+## 2. Common treatment options – a quick overview
+
+| Option | How it works | Typical use | Pros &amp; Cons (for kids) |
+|--------|--------------|-------------|------------------------|
+| **Observation / “watchful waiting”** | No active treatment; regular check‑ups | Small, asymptomatic malformations | • No procedure‑related risk. &lt;br&gt;• May miss a chance to stop growth early. |
+| **Sclerotherapy (the procedure you’re considering)** | Injection of a sclerosing agent (e.g., ethanol, doxycycline, or a glue‑like substance) that closes the abnormal vessels | Most low‑flow malformations | • Minimally invasive. &lt;br&gt;• Can be repeated if needed. &lt;br&gt;• Risks: skin blistering, nerve injury, swelling, rare systemic effects. |
+| **Laser therapy** | Targeted laser light to shrink or seal superficial vessels | Superficial or skin‑only lesions | • No needles. &lt;br</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the treatment will be performed**
+
+I know that hearing about a procedure can feel overwhelming, especially when it involves your child. I’ll walk you through the steps in plain language, explain why each part is done, and let you know what to expect before, during, and after the procedure. If anything is unclear or you have more questions, we’ll discuss it in detail with the interventional</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+Most children who receive low‑flow vascular‑malformation sclerotherapy are given **conscious sedation** (sometimes with a local anesthetic at the injection site). If the child is very young, has difficulty staying still, or the procedure is expected to be longer, we usually offer **general anesthesia**. In either case a **pediatric anesthesiologist** (or a qualified pediatric anesthesia specialist) will be part of the team to care for your child’s safety and comfort.
+
+---
+
+### Why sedation or anesthesia is considered
+
+| What we do | Why it matters for your child |
+|------------|------------------------------|
+| **Local anesthetic** at the injection site | Reduces pain during the needle puncture and the injection of the sclerosing agent. |
+| **Conscious sedation** (mid‑level sedation) | Keeps the child calm and still, which helps the radiologist perform the procedure accurately and safely. |
+| **General anesthesia** | Used when the child is too young, anxious, or when the procedure is expected to take longer than a typical 30‑60 minute session. It ensures the child is completely still and pain‑free. |
+
+### Who will manage the sedation/anesthesia?
+
+- **Pediatric anesthesiologist / anesthetic nurse** – A specialist trained in caring for children. They will assess your child’s medical history, discuss the plan, and monitor vital signs (heart rate, blood pressure, oxygen levels) throughout the procedure.
+-</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to Do Before Your Child’s Low‑Flow Vascular Malformation Sclerotherapy**
+
+I know that preparing for a medical procedure can feel overwhelming, especially when it involves your little one. Below is a simple, step‑by‑step guide that covers the most important things we’ll ask you to do before the day of the treatment. If anything is unclear, just let us know—we’ll explain it again in person or over the phone.
+
+---
+
+### 1. **Pre‑Procedure Medical Checks**
+
+| What we’ll do | Why it matters |
+|---------------|----------------|
+| **Allergy &amp; Medication Review** | We’ll ask about any allergies (especially to iodine, contrast dyes, or medications) and all current medicines, including over‑the‑counter drugs and supplements. This helps us choose the safest contrast agent and avoid reactions. |
+| **Blood Tests (if needed)** | A quick blood draw may be done to check kidney function and blood clotting. This is routine for procedures that use contrast dye. |
+| **Baseline Vital Signs** | We’ll record your child’s heart rate, blood pressure, and oxygen level so we can spot any changes during the procedure. |
+
+---
+
+### 2. **Fasting &amp; Hydration**
+
+| What to do | Timing |
+|------------|--------|
+| **No solid food** | 6–8 hours before the procedure (usually the night before). |
+| **Clear liquids (water, juice, clear soup)** | Up to 2 hours before the procedure. |
+| **Hydration** | Encourage plenty of water the day before. We’ll give a small IV fluid during the procedure to keep the kidneys working</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>The overall adverse reactions related to iodine-base non-ionic contrast medium is below 0.7%. The mortality due to reaction to non-ionic contrast medium is below 1 in 250 000.  Local complications  Peripheral nerve injury occurs in 1% of procedures and 10% of patients. Most are transient, but permanent injury to the nerves has been reported. This may cause limping, hoarseness of voice etc. Skin blistering is common and usually heals uneventfully with appropriate supportive care. Skin necrosis ...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+Most children who receive sclerotherapy for a low‑flow vascular malformation can go home the same day, but the exact plan depends on a few factors that your interventional radiology team will discuss with you before the procedure.
+
+| What usually happens | Why it matters for your child |
+|----------------------|------------------------------|
+| **Procedure time** – 30 min to 1 hour | Short enough that the child can be monitored for a few hours afterward. |
+| **Sedation or anesthesia** – often a mild sedative or short‑acting anesthetic | Keeps the child comfortable and still during the injection. |
+| **Observation period** – 2–4 hours after the procedure | Allows the team to watch for any immediate reaction to the sclerosant or the contrast dye (the risk of a serious reaction is &lt; 0.7 %). |
+| **Discharge** – usually same‑day | If the child is stable, has no pain or swelling that is out of the ordinary, and the parents feel confident caring for him/her at home, the team will send the child home. |
+
+### When a short overnight stay might be needed
+
+- **Unexpected swelling or pain** that is difficult to control with oral medication.  
+- **Signs of a reaction** to the contrast dye (rash, itching, breathing difficulty).  
+- **Any neurological symptoms** (numbness, weakness) that need closer monitoring.  
+- **If the child is very young** (under 2 years) or has a medical condition that makes overnight observation safer.
+
+In those cases the stay is usually **one night**. The team will let you know if that is likely before the procedure.
+
+### What to expect if you stay overnight
+
+- **Monitoring**: Vital signs, pain level, and any swelling will be checked regularly</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Vascular Malformation Sclerotherapy Low Flow Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Vascular Malformation Sclerotherapy Low Flow Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

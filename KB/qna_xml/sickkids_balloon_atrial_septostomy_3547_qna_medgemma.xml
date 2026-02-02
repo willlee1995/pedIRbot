@@ -1,0 +1,284 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Balloon Atrial Septostomy 3547" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being recommended for a balloon atrial septostomy**
+
+I know this can feel overwhelming, so I’ll try to explain it in plain language and let you know exactly why the doctors think this procedure is the best next step for your baby.
+
+---
+
+### 1. What’s happening inside your baby’s heart?
+
+- **Transposition of the Great Arteries (TGA)** means that the aorta (the main artery that carries oxygen‑rich blood to the body) and the pulmonary artery (which carries blood to the lungs to pick up oxygen) are “swapped.”  
+- Because of this switch, the heart is pumping **two separate circulations**:  
+  * One circuit takes oxygen‑rich blood only to the lungs.  
+  * The other circuit carries oxygen‑poor blood around the rest of the body.  
+
+  The baby’s body is therefore receiving less oxygen than it needs.
+
+---
+
+### 2. How does a balloon atrial septostomy help right now?
+
+- In a normal baby, the **foramen ovale** is a small opening between the left and right atria that closes after birth. In babies with TGA, this opening can still be open or partially open.
+- The balloon procedure **enlarges that opening** so that blood from the left atrium (which is receiving oxygenated blood from the lungs) can mix with blood from the right atrium (which is carrying de‑oxygenated blood).  
+- By allowing the two blood streams to mix, **more oxygenated blood reaches the body** temporarily, improving the baby’s oxygen levels and giving the baby and the medical team more time to plan the definitive surgery (the arterial switch operation).
+
+---
+
+### 3. Why is this the recommended next step for your child?
+
+| Reason | What it means for your baby |
+|--------|-----------------------------|
+| **Immediate oxygen improvement** | The balloon creates a larger “doorway” for oxygen‑rich blood to enter the systemic circulation</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What a balloon atrial septostomy is meant to do**
+
+A balloon atrial septostomy is a small, quick procedure that creates a larger opening between the two upper chambers of your baby’s heart (the atria). In babies with certain congenital heart defects—most commonly a type called trans‑position of the great arteries (TGA) or other conditions where the blood flow between the atria is restricted—this opening allows oxygen‑rich blood to mix with oxygen‑poor blood. The goal is to:
+
+1. **Improve oxygen delivery** to the baby’s tissues and organs.  
+2. **Reduce the strain** on the heart by allowing blood to flow more freely.  
+3. **Buy time** for the baby while other treatments (like medication, surgery, or a more definitive repair) are planned or awaited.  
+4. **Stabilize the baby** so that they can grow and develop normally.
+
+In most cases, the procedure is performed under general anesthesia and takes only a few minutes. Afterward, the baby usually stays in the hospital for a short observation period.
+
+---
+
+**Potential benefits**
+
+| Benefit | Why it matters for your baby |
+|---------|------------------------------|
+| **Better oxygenation** | More oxygen reaches the brain, kidneys, and other vital organs, supporting healthy growth. |
+| **Reduced heart workload** | The heart doesn’t have to work as hard to pump blood, which can lower the risk of heart failure. |
+| **Improved feeding and weight gain** | With better oxygen and less fatigue, babies often feed more effectively and gain weight faster. |
+| **Time for definitive treatment** | The procedure can bridge the baby to a planned surgery or other interventions, giving the medical team more flexibility. |
+
+---
+
+**Possible risks and complications**
+
+While the procedure is considered low‑risk, it is still a medical intervention, and a few complications can occur. Most are rare, and the team takes many precautions to keep your baby safe.
+
+| Risk | What it means for your baby | How we monitor / manage it |
+|------|-----------------------------|----------------------------|
+| **Bruising at the groin** | The needle or catheter can cause a small bruise where</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+In most cases, a balloon atrial septostomy is the safest and quickest way to create a bigger opening between the two upper chambers of the heart.  
+If that approach isn’t possible or doesn’t work, the team can consider a few other options—usually a small surgical procedure or a different catheter‑based technique. Your child’s doctors will explain which choice is best for your baby’s specific situation.
+
+---
+
+### What the balloon procedure does
+
+* A thin tube (catheter) is threaded through a vein in the groin or belly button to the heart.  
+* At the tip of the tube is a small balloon.  
+* The balloon is inflated in the left atrium and then pulled back into the right atrium.  
+* This gentle “tearing” enlarges the natural opening (foramen ovale) so that blood can flow more freely between the two atria.  
+* The balloon is deflated, the tube is removed, and the small incision is covered with a bandage.
+
+Because the procedure is done inside a special lab with imaging, it’s usually quick, minimally invasive, and your baby will be under anesthesia so they won’t feel anything.
+
+---
+
+### Are there other ways to achieve the same goal?
+
+Yes, there are a few alternatives that the medical team may consider if the balloon technique isn’t suitable or doesn’t give the desired result:
+
+| Alternative | How it works | Typical reasons to use it | Pros &amp; Cons |
+|-------------|--------------|---------------------------|-------------|
+| **Surgical atrial septostomy** | A tiny incision is made in the heart (usually during a small open‑heart procedure) to enlarge the opening. | • No</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the Balloon Atrial Septostomy will be performed**
+
+I know that hearing about a procedure can feel overwhelming, so I’ll walk you through the steps in plain language and let you know what to expect for your baby.
+
+---
+
+### 1. Preparation
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Your baby is taken to the cardiac catheterization lab** | This is a special operating‑room‑like area where we can see the heart in real time with X‑ray imaging. |
+| **Anesthesia is given** | Your baby will be fully asleep and pain‑free. The anesthesiologist will keep a close eye on breathing, heart rate, and oxygen levels. |
+| **A small incision is made** | Usually a tiny cut (about 1–2 mm) is made in the groin or belly button. The incision is very small and is covered with a bandage afterward. |
+
+---
+
+### 2. Inserting the Catheter
+
+1. **The catheter is threaded through a blood vessel** – either the femoral vein in the groin or the umbilical vein (if that’s the chosen route).  
+2. **It is guided under X‑ray (fluoroscopy) to the heart** – We can see the catheter’s path in real time.  
+3. **The tip of the catheter has a small balloon** – Think of it like a tiny, inflatable “piston” that will do the work.
+
+---
+
+### 3. Opening the Foramen Ovale
+
+1. **The balloon is inflated** – Once the catheter tip reaches the left atrium (one side of the heart), the balloon is gently inflated.  
+2. **The balloon is pulled back into the right atrium** – As it moves, it “tears” a small piece of the muscular wall that normally separates the two atria.  
+3. **The foramen ovale (</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+Yes – your baby will be under anesthesia for the balloon atrial septostomy. A pediatric anesthesia specialist (or a pediatric anesthesiologist) will be part of the team to make sure the baby stays safe and comfortable throughout the procedure.
+
+---
+
+### Why anesthesia is needed
+
+* The procedure is done in a cardiac catheterization lab, where the baby’s heart and blood vessels are being worked on under a microscope‑like camera.  
+* Even though the baby is very small, the catheter is inserted through a blood vessel in the groin (or belly button) and then guided all the way to the heart.  
+* The baby must remain still, and the heart must be kept stable while the balloon is inflated and pulled back.  
+* Anesthesia allows the baby to breathe on its own (or with a breathing machine if needed) and keeps the baby pain‑free and calm.
+
+### Who will provide the anesthesia
+
+* **Pediatric anesthesia specialists** are trained specifically to care for newborns and infants.  
+* They are routinely part of the team for procedures like balloon atrial septostomy.  
+* They will monitor the baby’s heart rate, breathing, blood pressure, and oxygen levels, and will adjust medications as needed.
+
+### What to expect
+
+| Step | What happens | What the team will do |
+|------|--------------|-----------------------|
+| **Before the procedure** | Baby will fast (no feeding) for a short time. If you have saved breastmilk, you can feed the baby afterward. | The anesthesia team will review the baby’s medical history, check vital signs, and explain the plan. |
+| **During the procedure** | Baby will receive anesthesia (usually a combination of a short‑acting anesthetic and a sedative). | The pediatric anesthesiologist will keep the baby comfortable, monitor all vital signs, and adjust medications as needed. |
+| **After the procedure** | Baby will be taken to a recovery area where the anesthesiologist will watch for any changes. | The team will check the incision site (if the groin was used) and ensure the</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**Preparing your baby for the Balloon Atrial Septostomy (SickKids 3547)**  
+Below is a simple, step‑by‑step guide to help you feel ready and confident on the day of the procedure. If anything is unclear, please let the medical team know right away—they’ll walk you through it in detail.
+
+| What to Do | Why It Matters | How to Do It |
+|------------|----------------|--------------|
+| **1. Fast the baby** | The procedure is done under sedation and involves a breathing machine. Food or milk in the stomach can increase the risk of aspiration (breathing in stomach contents). | • Stop all feeds (breastmilk, formula, solids) **at least 6 hours** before the procedure. &lt;br&gt;• If your baby is on a feeding tube, the</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>**Answer for Parents**
+
+**Can your baby eat or drink before the balloon atrial septostomy?**  
+No.  For the safety of the procedure, your newborn must be **fasted** (no feeds at all) before the procedure starts.
+
+**How long should the baby stay fast?**  
+The usual practice for a procedure that requires sedation and a breathing machine is to have the baby **abstain from all feeds for at least 6 hours** before the procedure.  
+- If your baby is on breast‑milk, you can hold the milk and give it to the baby after the procedure is finished.  
+- If your baby is on formula or other feeds, those should also be withheld during that fasting period.
+
+**What if your baby is already on a breathing machine?**  
+If your baby isn’t yet on a breathing machine, the interventional radiology team will arrange for one to be set up before the procedure so that the baby can breathe safely while the procedure is performed.
+
+**Why is fasting necessary?**  
+Fasting reduces the risk of aspiration (food or liquid entering the lungs) during sedation and the use of a breathing machine. It also helps keep the airway clear and the procedure smoother.
+
+**What if you’re unsure about the exact timing?**  
+The exact fasting window can vary slightly depending on your baby’s overall</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Yes, most babies who have a balloon atrial septostomy stay in the hospital for a few days after the procedure—usually 1 to 3 days. The exact length depends on how well the baby is doing, whether they need to stay on prostaglandin medicine, and if any complications arise. Your medical team will let you know the expected stay and will discuss the discharge plan with you before the procedure.
+
+---
+
+### Why a hospital stay is common
+
+| What happens after the procedure | Why it matters | Typical time in the hospital |
+|----------------------------------|----------------|------------------------------|
+| **Recovery from the catheter and the heart puncture** | The heart and the vessel where the catheter entered need a little time to heal and to make sure there’s no bleeding or swelling. | 1–2 days |
+| **Monitoring of heart rhythm and oxygen levels** | The team watches the baby’s heart rate, rhythm, and how well the blood is oxygen‑rich. If something is off, they can act right away. | 1–3 days |
+| **Weaning off the breathing machine** | If the baby is breathing well on their own, the team will slowly reduce support. | 1–2 days |
+| **Stopping or continuing prostaglandin** | Prostaglandin keeps the ductus arterios</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Answer**
+
+After a balloon atrial septostomy, most babies can gradually return to their normal daily routine, but there are a few short‑term restrictions to help the heart heal and to keep the procedure site safe. Below is a general outline that many families find helpful, but remember that your child’s care team will give you the exact plan that fits your baby’s specific situation.
+
+| What to do | Why it matters | Typical timing |
+|------------|----------------|----------------|
+| **Limit strenuous activity** (e.g., running, jumping, heavy lifting, or any activity that makes the baby cough or strain) | The heart and the small incision made during the procedure need time to heal. Sudden increases in blood pressure or heart rate can stress the new opening. | 1–2 weeks after the procedure, or until your team says it’s safe. |
+| **Avoid contact sports or activities that could cause a bump to the chest** | A sudden impact could irritate the incision or the new septal opening. | 4–6 weeks, or until a follow‑up echo shows the septum is stable. |
+| **Keep the baby’s head elevated for the first 24–48 hours** (if they’re sleeping in a crib) | Helps reduce swelling and keeps the airway clear. | First 24–48 hours, then normal sleeping position. |
+| **Watch for signs of infection or bleeding** (redness, swelling, fever, or unusual fussiness) | Early detection of complications is key. | Anytime—contact your team right away if you notice anything concerning. |
+| **Follow medication instructions** (e.g., prostaglandin, pain meds) | These medications help keep the heart functioning properly and manage pain. | As prescribed; usually tapering over a few days to weeks. |
+| **Attend all follow‑up appointments** (echo,</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>**What to Expect After the Balloon Atrial Septostomy**
+
+I know how stressful it can be to think about what comes next after your baby’s procedure. Below is a simple overview of the typical follow‑up plan for a newborn who has just had a balloon atrial septostomy (BAS). Every baby is unique, so your care team will tailor the plan to your child’s specific needs, but this should give you a good idea of what to anticipate.
+
+| **Area** | **What Happens** | **Why It Matters** | **What You’ll Do** |
+|----------|------------------|--------------------|--------------------|
+| **Immediate Post‑procedure Care** | • Baby stays in the neonatal intensive care unit (NICU) for close monitoring.&lt;br&gt;• Breathing support (ventilator or CPAP) is continued until the baby can breathe comfortably on their own.&lt;br&gt;• Vital signs, oxygen levels, and heart rhythm are checked every few minutes. | Keeps the heart and lungs stable while the new opening in the heart (septum) settles. | You’ll be able to visit the NICU, hold your baby, and talk with the nurses and doctors. |
+| **Pain &amp; Medication** | • Pain medication and sedatives are tapered off gradually.&lt;br&gt;• If any medications are still needed (e.g., for heart rhythm or blood pressure), they are given via IV or mouth. | Ensures your baby is comfortable and any heart rhythm issues are controlled. | Your team will explain the medications and any side‑effects to watch for. |
+| **Feeding** | • Once the breathing machine can be weaned, feeding is resumed. Breast milk can be saved and given later, as you mentioned. | Nutritional support is essential for growth and healing. | You’ll be instructed on how to feed (breast, bottle, or tube) and how often. |
+| **Monitoring for Complications** | • **Bleeding** – especially around the</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

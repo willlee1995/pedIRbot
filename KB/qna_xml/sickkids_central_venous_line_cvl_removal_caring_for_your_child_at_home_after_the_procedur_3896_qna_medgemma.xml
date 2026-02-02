@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Central Venous Line Cvl Removal Caring For Your Child At Home After The Procedur 3896" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is your child’s central venous line (CVL) being removed?**  
+
+I know that hearing “removal” can feel abrupt, so let me walk you through the main reasons a pediatric interventional radiology team would recommend taking the line out:
+
+| **Why the line is removed** | **What it means for your child** |
+|-----------------------------|----------------------------------|
+| **The line is no longer needed** | Once your child’s medicine, nutrition, or blood products can be given through a smaller, less invasive route (like a peripheral IV or an oral medication), the big line is no longer necessary. Keeping it in longer than needed increases the risk of infection or clotting. |
+| **Risk of complications** | Central lines sit in a large vein and can sometimes cause problems such as: &lt;br&gt;• Infection (the most common reason for removal)&lt;br&gt;• Clotting or blockage&lt;br&gt;• Bleeding or bruising at the insertion site&lt;br&gt;• Discomfort or pain when the line is moved or when the child is active | Removing the line eliminates those risks. |
+| **Your child’s healing progress** | If the underlying condition that required the line (e.g., cancer, severe infection, or a need for long‑term antibiotics) is improving, the line may no longer be necessary. |
+| **Safety during activity** | A central line can be a source of accidental tug‑off or injury, especially as a child becomes more mobile. Removing it reduces that risk. |
+
+---
+
+### What happens during the removal
+
+1. **Preparation** – The line is cleaned, a local anesthetic may be used, and the procedure is performed under sterile conditions.</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Central Venous Line Cvl Removal Caring For Your Child At Home After The Procedur 3896.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>When to see a doctorCall your child's doctor or go to the nearest Emergency Department right away if your child has any of the following:A fever greater than 38°C (100.4°F)Pain or discomfort requiring acetaminophen after 48 hoursA noticeable increase in bright red blood around the site of the old CVLLeakage or drainage at the site of the old CVLDifficulty breathingNoticeable swelling or bruising at the site of the old CVL</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Central Venous Line Cvl Removal Caring For Your Child At Home After The Procedur 3896.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Central Venous Line Cvl Removal Caring For Your Child At Home After The Procedur 3896.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Central Venous Line Cvl Removal Caring For Your Child At Home After The Procedur 3896.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Central Venous Line Cvl Removal Caring For Your Child At Home After The Procedur 3896.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Central Venous Line Cvl Removal Caring For Your Child At Home After The Procedur 3896.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Discharge from the hospitalMost children who have a CVL removal go home two hours after the procedure. Some children remain in the hospital to receive additional treatment. The length of time your child remains at the hospital differs depending on the reason for the removal.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Central Venous Line Cvl Removal Caring For Your Child At Home After The Procedur 3896.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

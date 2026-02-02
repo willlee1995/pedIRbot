@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<procedure name="Embolotherapy For Postpartal Hemorrhage Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is this treatment being recommended for your child?**
+
+I understand how scary it can feel to hear about a new procedure, especially when it involves a child. Let me explain in plain language</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Embolotherapy For Postpartal Hemorrhage Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several ways doctors can try to stop postpartum bleeding before, during, or after an embolization procedure. The best choice depends on how much blood is being lost, how quickly the bleeding is happening, whether the mother wants to keep her uterus for future pregnancies, and how her body is responding to treatment. Your medical team will review all of these factors with you and decide together which option is safest and most effective for your child’s situation.
+
+---
+
+### 1. Medical (pharmacologic) treatments  
+These are usually the first line of defense</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the embolotherapy for postpartum hemorrhage will be performed**
+
+I know this can feel overwhelming, so I’ll walk you through the steps in plain language and let you know what to expect. The exact details will be tailored to your child’s situation, but here’s the general plan that the interventional radiology team will follow:
+
+| Step | What happens | Why it matters |
+|------|--------------|----------------|
+| **1. Preparation &amp; sedation** | • Your child will be brought into the procedure room. &lt;br&gt;• Because the procedure is done inside the body, we’ll give a medication that keeps them comfortable and relaxed (usually a short‑acting anesthetic or conscious sedation). &lt;br&gt;• A small IV line is placed for medications and fluids. | Keeps the child calm and still, which is essential for a safe procedure. |
+| **2. Vascular access** | • The doctor will locate a suitable artery (often the femoral artery in the groin) with a small needle. &lt;br&gt;• A tiny tube called a *sheath* is inserted into the artery. &lt;br&gt;• Through this sheath, a very thin, flexible catheter (a “wire‑guided” tube) is threaded up to the pelvic blood vessels that are feeding the bleeding area. | Gives the team a direct, controlled route to reach the bleeding vessels. |
+| **3. Angiography (X‑ray imaging)** | • A contrast dye (an iodine‑based, non‑ionic solution) is injected through the catheter. &lt;br&gt;• X‑ray images (fluoroscopy) are taken in real time to see exactly where the bleeding is coming from. | Allows the radiologist to map the blood supply and choose the best spot to block it. |
+| **4. Embolization** | • Once the bleeding vessel is identified, the doctor will deliver tiny “embolic” particles or coils through the catheter. &lt;br&gt;• These materials lodge in the vessel, stopping the blood flow to the</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer for Parents**
+
+I understand how important it is to know what to expect for your child’s care. Below is a simple, honest overview of the sedation and anesthesia part of the embolotherapy procedure you’re asking about.
+
+---
+
+### 1. Will my child need sedation or anesthesia?
+
+| **Child’s age / cooperation** | **Typical sedation approach** | **Why it’s chosen** |
+|-------------------------------|------------------------------|---------------------|
+| **Infants &amp; very young children** (under 3–4 years) | **General anesthesia** (the child is fully asleep) | Keeps the child still, reduces pain, and allows the team to work safely. |
+| **Older children** (4–12 years) | **Conscious sedation** (child is relaxed but awake) | Most children can tolerate the procedure while still being able</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do to help your child feel ready for the embolotherapy procedure**
+
+I know that thinking about a medical procedure can feel overwhelming, especially when it involves a child. Below is a simple, step‑by‑step guide to the most common preparations that the team will ask you to do before the embolotherapy. If anything is unclear or you have a question that isn’t covered here, please bring it up with the interventional radiology team—they’ll be happy to explain in detail.
+
+| Step | What it means | Why it matters for your child | What you can do at home |
+|------|---------------|------------------------------|------------------------|
+| **1. Fasting (usually 6–8 hours before the procedure)** | The child’s stomach needs to be empty so that the anesthesia team can safely give sedation or general anesthesia. | Reduces the risk of vomiting or aspiration during the procedure. | Ask the child to stop eating solid foods and drinking clear liquids (water, juice, clear soup) about 6–8 hours before the scheduled time. If your child is on a special diet or has a medical condition that changes fasting rules, let the team know. |
+| **2. Medication review** | Some medicines (e.g., blood thinners, steroids, or certain pain meds) can affect bleeding or clotting. | The team may need to pause or adjust these drugs to keep the procedure safe. | Make a list of all medicines your child is taking (prescription, OTC, herbal). Bring this list to the pre‑procedure appointment. |
+| **3. Blood tests** | The team will check blood counts, clotting factors, and kidney function. | These</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>The procedure takes approximately one to three hours, depending on the complexity of the procedure.  At the end of the procedure, the catheter is removed. If the condition of the patient is stable, the arterial sheath may also be removed and bleeding from the puncture site is controlled by pressure or other means. If the clinical condition is unstable, the sheath may be left behind in case re-embolization is necessary.  After the procedure, the vital signs (like blood pressure and pulse rate) ...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who receive embolotherapy can go home the same day or after an overnight stay, depending on how they feel and how well the procedure went.  
+
+---
+
+### Why the hospital stay matters
+
+1. **Immediate observation** – After the catheter is removed, the team watches for any bleeding, swelling, or changes in</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Embolotherapy For Postpartal Hemorrhage Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Embolotherapy For Postpartal Hemorrhage Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

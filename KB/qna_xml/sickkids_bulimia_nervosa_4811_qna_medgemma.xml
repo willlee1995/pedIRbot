@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Bulimia Nervosa 4811" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is treatment being recommended for your child?**
+
+I know that hearing “treatment” can feel overwhelming, especially when it’s about something as sensitive as an eating disorder. I’ll try to explain in plain language what the medical team is looking at and why they think a plan of care is the best next step for your child’s health and well‑being.
+
+---
+
+### 1. Bulimia Nervosa is More Than Just “Eating Problems”
+
+Bulimia nervosa is a serious medical condition that affects both the body and the mind. The signs you’ve seen—such as sudden weight changes, frequent vomiting, dental erosion, or “puffy” cheeks—are just the surface. Below the surface, the disorder can:
+
+| **Physical Impact** | **What It Means for Your Child** |
+|----------------------|----------------------------------|
+| **Electrolyte imbalances** (low potassium, sodium) | Can cause dizziness, confusion, or even dangerous heart rhythm changes. |
+| **Gastro‑intestinal issues** | Vomiting blood, stomach pain, or chronic digestive problems. |
+| **Dental problems** | Tooth decay, enamel erosion, and gum disease. |
+| **Hair and skin changes** | Thinning hair, dry skin, or other signs of malnutrition. |
+| **Growth and development** | In children and teens, chronic under‑nutrition or binge‑</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa 4811.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa 4811.</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa 4811.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa 4811.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa 4811.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa 4811.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa 4811.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa 4811.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa 4811.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,143 @@
+<?xml version="1.0" ?>
+<procedure name="Uterine Fibroid Embolization Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is Uterine Fibroid Embolization (UFE) being recommended for your child?**
+
+I understand that hearing about a procedure that is usually performed in adult women can feel confusing and even scary when it’s being considered for a child. I’ll try to explain what UFE is, why it might be offered in a pediatric setting, and what that means for your child’s health and future.
+
+---
+
+### 1. What UFE does
+
+- **Purpose:** UFE is a minimally‑invasive, image‑guided procedure that blocks the two main arteries that supply blood to the uterus.  
+- **Effect on fibroids:** By cutting off the blood supply, the fibroids (benign growths in the uterine wall) shrink—typically by 40 – 70 % in volume.  
+- **Symptom relief:** When fibroids shrink, the heavy menstrual bleeding, pelvic pain, and pressure symptoms that they cause usually improve dramatically. In adults, about 80 % of patients with heavy</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Uterine Fibroid Embolization Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes – there are several ways to treat uterine fibroids besides uterine‑artery embolization (UAE). Which one is best depends on your child’s age, the size and location of the fibroid, how bothersome the symptoms are, and whether future fertility is a concern. Your medical team will review all the options with you and help decide the safest, most effective plan for your child.
+
+---
+
+### 1.  What is UAE and why it’s used?
+
+UAE is a minimally‑invasive procedure that blocks the blood supply to the fibroid, causing it to</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the uterine‑fibroid embolization will be carried out**
+
+I know this can feel like a lot of information, so I’ll walk you through each step in plain language and point out what’s special when the patient is a child or a teenager.
+
+---
+
+### 1. Before the day of the procedure
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Pre‑procedure tests** – ultrasound, MRI, blood work, sometimes an endometrial biopsy | These help us see the size and location of the fibroids, rule out other conditions, and make sure the child’s blood is healthy enough for the procedure. |
+| **Hospital admission** – you’ll be in the hospital that day | We’ll set up an IV line for medications and a urinary catheter so the bladder can be emptied during</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+Yes, your child will almost certainly need some form of sedation or anesthesia for a uterine‑fibroid embolization. The procedure is normally performed under **local anesthesia** (the area around the groin is numbed) **plus conscious sedation** (a medication that makes the child relaxed and may keep them from feeling pain or anxiety). In many hospitals, a **pediatric anesthesiologist or a pediatric‑trained anesthesiologist** will be on hand to manage the sedation and monitor your child’s vital signs throughout the procedure.  
+
+**What to expect**
+
+| Step | What happens | Why it matters for a child |
+|------|--------------|---------------------------|
+| **Pre‑procedure** | Blood tests, imaging (ultrasound/MRI), and sometimes a small biopsy are done. | These tests help the team plan the safest approach. |
+| **Admission &amp; prep** | An IV line is placed and a urinary catheter is inserted. The child is given a local anesthetic at the groin. | The local anesthetic keeps the groin area numb while the catheter is inserted. |
+| **Sedation** | A sedative (often a drug like midazolam or propofol) is given through the IV. The child may be breathing on their own or may have a breathing tube if needed. | The goal is to keep the child comfortable and still, so the catheter can be guided into the uterine arteries. |
+| **Procedure** | A small catheter is threaded from the groin into each uterine artery, and tiny particles are injected to block the blood flow to the fibroids. | The procedure lasts about 1–2 hours. |
+| **Recovery** | After the embolization, the child is monitored in a recovery area. Pain medication is given as needed. | Most children feel better within a few days, but the team will keep an eye on them for any complications. |
+
+**Will a pediatric anesthesia specialist be involved?**</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Uterine Fibroid Embolization Eng.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> Before the procedure, some examinations will be performed which may include ultrasound, magnetic resonance imaging, blood test and endometrial biopsy.  You will be admitted to the hospital, an intravenous line will be set and a urinary catheter will be inserted. The procedure is usually done under local anaesthesia and conscious sedation. Drugs for pain control (analgesics) and antibiotics will be given. Your vital signs will be monitored throughout the procedure.  A small catheter is insert...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+Yes, your child will need to be in the hospital for the uterine‑fibroid embolization procedure, but the stay is usually very short.
+
+| What happens | Typical timing | What you can expect |
+|--------------|----------------|---------------------|
+| **Pre‑procedure work‑up** (ultrasound, MRI, blood tests, endometrial biopsy) | Usually done the day</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Uterine Fibroid Embolization Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Uterine Fibroid Embolization Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

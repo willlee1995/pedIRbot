@@ -186,7 +186,7 @@ class OllamaEmbeddings(EmbeddingModel):
             logger.error(f"Run: ollama pull {self.model}")
             raise
 
-    def _truncate_text(self, text: str, max_length: int = 512) -> str:
+    def _truncate_text(self, text: str, max_length: int = 2048) -> str:
         """
         Truncate text to fit within model's context window.
 
@@ -224,9 +224,9 @@ class OllamaEmbeddings(EmbeddingModel):
         for text in texts:
             try:
                 # Safety check: truncate if needed (should not happen with correct chunking)
-                # embeddinggemma has ~512 token limit (~400 chars safe limit)
-                if len(text) > 400:
-                    truncated_text = self._truncate_text(text, max_length=400)
+                # embeddinggemma has ~2048 token limit (~1024 chars safe limit)
+                if len(text) > 2048:
+                    truncated_text = self._truncate_text(text, max_length=2048)
                 else:
                     truncated_text = text
 
@@ -269,7 +269,7 @@ class OllamaEmbeddings(EmbeddingModel):
         """
         try:
             # Truncate query if needed
-            truncated_text = self._truncate_text(text, max_length=400)
+            truncated_text = self._truncate_text(text, max_length=1024)
 
             response = ollama.embeddings(
                 model=self.model,
@@ -286,12 +286,85 @@ class OllamaEmbeddings(EmbeddingModel):
         return self._dimension
 
 
+class LMStudioEmbeddings(EmbeddingModel):
+    """LM Studio embedding model using OpenAI-compatible API."""
+
+    def __init__(self, model: str = None, base_url: str = None):
+        """
+        Initialize LM Studio embeddings.
+
+        Args:
+            model: Model name (default from settings)
+            base_url: LM Studio API base URL (default from settings)
+        """
+        self.model = model or settings.lmstudio_embedding_model
+        self.base_url = base_url or settings.lmstudio_api_base
+        
+        # LM Studio uses OpenAI-compatible API
+        self.client = OpenAI(
+            api_key="lm-studio",  # LM Studio doesn't require real key
+            base_url=self.base_url
+        )
+        self._dimension = None
+        logger.info(f"Initialized LM Studio embeddings with model: {self.model}")
+        logger.info(f"LM Studio API base: {self.base_url}")
+
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10))
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        """
+        Embed a list of documents.
+
+        Args:
+            texts: List of text strings to embed
+
+        Returns:
+            List of embedding vectors
+        """
+        try:
+            response = self.client.embeddings.create(
+                model=self.model,
+                input=texts
+            )
+            embeddings = [item.embedding for item in response.data]
+
+            # Cache dimension
+            if self._dimension is None and embeddings:
+                self._dimension = len(embeddings[0])
+
+            return embeddings
+        except Exception as e:
+            logger.error(f"Error generating embeddings from LM Studio: {e}")
+            logger.error(f"Make sure LM Studio is running with an embedding model loaded")
+            raise
+
+    def embed_query(self, text: str) -> List[float]:
+        """
+        Embed a single query.
+
+        Args:
+            text: Query text to embed
+
+        Returns:
+            Embedding vector
+        """
+        return self.embed_documents([text])[0]
+
+    @property
+    def dimension(self) -> int:
+        """Return the dimension of embeddings."""
+        if self._dimension is None:
+            # Generate a test embedding to get dimension
+            test_embedding = self.embed_query("test")
+            self._dimension = len(test_embedding)
+        return self._dimension
+
+
 def get_embedding_model(provider: str = None) -> EmbeddingModel:
     """
     Factory function to get the appropriate embedding model.
 
     Args:
-        provider: 'openai', 'sentence-transformer', or 'ollama' (default from settings)
+        provider: 'openai', 'sentence-transformer', 'ollama', or 'lmstudio' (default from settings)
 
     Returns:
         EmbeddingModel instance
@@ -304,5 +377,7 @@ def get_embedding_model(provider: str = None) -> EmbeddingModel:
         return SentenceTransformerEmbeddings()
     elif provider == "ollama":
         return OllamaEmbeddings()
+    elif provider == "lmstudio":
+        return LMStudioEmbeddings()
     else:
         raise ValueError(f"Unknown embedding provider: {provider}")

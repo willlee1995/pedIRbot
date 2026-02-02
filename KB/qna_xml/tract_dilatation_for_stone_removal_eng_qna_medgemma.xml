@@ -1,0 +1,170 @@
+<?xml version="1.0" ?>
+<procedure name="Tract Dilatation For Stone Removal Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctors are recommending this procedure**
+
+I know that hearing about a new procedure can feel overwhelming, especially when it involves your child’s health. I’ll try to explain in plain language why the team thinks this is the best next step, what the procedure involves, and what you can expect.
+
+---
+
+### 1. What the problem is
+
+- **Bile stones** can form inside the liver or in the common bile duct (the tube that carries bile from the liver to the small intestine).  
+- In your child’s case, a stone has been found that is **blocking the flow of bile**.  
+- When bile can’t flow properly, it can lead to pain, jaundice (yellowing of the skin and eyes), infection (cholangitis), or even liver damage.
+
+### 2. Why the current plan is needed
+
+- Your child already had a **percutaneous trans‑hepatic biliary drainage (PTBD)** tube placed. That tube was used to drain bile out of the liver and keep the duct open while the stone was forming or while the child was healing from another issue.
+- The PTBD tube creates a **small tunnel (tract)** that goes from the skin, through the liver, and into the bile duct.  
+- To remove the stone, doctors need to pass a **choledochoscope** (a tiny, flexible camera with tools) through that same tunnel.  
+- The tract that was made by the PTBD is usually **too narrow** for the choledochoscope to pass safely.  
+- Therefore, the plan is to **dilate (widen) that tract** so</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Tract Dilatation For Stone Removal Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Answer to the Parent’s Question: “Are there alternative options?”**
+
+I understand that hearing about a procedure can feel overwhelming, especially when it involves your child’s health. The answer is that yes—there are other ways to treat biliary stones, and the best choice depends on your child’s specific situation. Below is a plain‑language overview of the main alternatives, what they involve, and why we might still recommend the tract‑dilatation approach.
+
+---
+
+### 1. **Endoscopic Stone Removal (ERCP)**  
+* **What it is** – A flexible tube (endoscope) is passed through the mouth, down the esophagus, into the stomach and into the small intestine. The tube is guided to the opening of the bile duct (the ampulla of Vater) and a small balloon or basket is used to grab and pull the stone out.  
+* **When it’s used** – ERCP is the first‑line treatment for many children with bile duct stones, especially when the stones are in the common bile duct and the anatomy is favorable.  
+* **Pros** – No external incision; the procedure is usually done under sedation or general anesthesia.  
+* **Cons** – In very small children or those with altered</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the treatment will be carried out**
+
+I know how nervous you must feel about your child’s upcoming procedure, so I’ll walk you through each step in plain language and let you know what to expect.
+
+---
+
+### 1. Preparation – “Getting ready for the procedure”
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Aseptic technique** – The area where the needle will go is cleaned and covered with sterile drapes. | Keeps infection risk very low. |
+| **Local anesthesia + IV pain‑relief &amp; sedation** – Your child will receive a local numbing shot at the skin and a small amount of medicine through the IV to keep them comfortable. In some cases, especially if the child is very young or anxious, we may use **general anesthesia** (the child will be asleep the whole time). | Pain control is the priority. |
+| **Monitoring** – Blood pressure, heart rate, oxygen level, and breathing are watched continuously. | We can spot any changes right away. |
+| **Discussion of the plan** – The interventional radiologist will explain the steps again, answer any questions, and confirm that the child is ready. | Gives you peace of mind that</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+Most children who have a tract‑dilatation for stone removal are given a combination of local anesthesia (to numb the skin and the area around the catheter) and intravenous sedation (so they feel relaxed and comfortable). In some cases—especially if the child is very young, anxious, or the procedure is expected to be longer—general anesthesia (where the child is asleep the whole time) may be used. A pediatric anesthesiologist or anesthesiology nurse‑anesthetist will be part of the team to make sure the child is safe and comfortable.
+
+---
+
+### What to expect
+
+| Step | What happens | Why it matters for your child |
+|------|--------------|------------------------------|
+| **Local anesthesia** | A numbing injection is given at the skin site where the catheter will be inserted. | Keeps the insertion area pain‑free. |
+| **Intravenous sedation** | A mild sedative is given through a vein. The child may feel drowsy or relaxed but usually can still respond to simple commands. | Helps the child stay still and reduces anxiety. |
+| **General anesthesia (rare)** | If the child is very young, has a history of severe anxiety, or the procedure is expected to take longer, the child may be put under general anesthesia (sleeping the whole time). | Provides a completely pain‑free experience but requires a longer recovery period. |
+| **Pediatric anesthesia specialist** | A pediatric anesthesiologist (or a pediatric anesthesiology nurse‑anesthetist) will be present to monitor the child’s heart rate, breathing, oxygen level, and overall comfort. | Children’s bodies respond differently to medications and monitoring is tailored to their size and physiology. |
+
+---
+
+### Why the choice matters
+
+- **Age and size**:</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What we’ll need to do before the procedure so your child is ready**
+
+| What we’ll do | Why it matters | What you can do at home |
+|---------------|----------------|-------------------------|
+| **Fast (no food or drink)** | The procedure is done under sedation or general anesthesia, and we want to keep the stomach empty to avoid choking or vomiting. | • 6</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>  It is performed under aseptic technique. Local anaesthesia and intravenous drugs for pain relief and sedation will be given before and during the procedure. Occasionally, general anaesthesia may be used. The vital signs including your blood pressure, pulse and oxygenation status will be monitored throughout the entire procedure.   A guidewire is then inserted through the PTBD catheter into the biliary system. A balloon catheter and then plastic dilators will be passed over the guidewire to...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+In most cases, a child who undergoes tract dilatation for stone removal can be discharged the same day. After the procedure we keep the child in the recovery area for a few hours (usually 2–4 hours) while we monitor vital signs, pain, and any signs of bleeding or infection. If the child is stable, comfortable, and able to keep fluids down, the medical team will typically give a discharge plan and let you go home.
+
+**When a short hospital stay might be needed**
+
+- **General anesthesia**: If the child is put under general anesthesia (instead of local or conscious sedation), the team often keeps them overnight for a quick observation period. This is mainly to ensure they wake up safely, have no breathing or pain issues, and can tolerate oral fluids.
+- **Complications or concerns**: If there is any bleeding, infection, or if the stone removal was more extensive than anticipated, the team may decide to keep the child for a day or two to monitor recovery.
+- **Pediatric factors**: Children sometimes need a bit more time to recover from anesthesia and to be sure they’re eating and drinking normally. The team will assess these factors before deciding on discharge.
+
+**What to expect if you stay overnight**
+
+- You’ll be able to stay</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Tract Dilatation For Stone Removal Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Tract Dilatation For Stone Removal Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

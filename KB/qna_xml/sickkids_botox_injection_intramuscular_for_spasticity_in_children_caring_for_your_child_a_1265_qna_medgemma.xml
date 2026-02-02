@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Botox Injection Intramuscular For Spasticity In Children Caring For Your Child A 1265" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctors are recommending a Botox injection for spasticity**
+
+I know that hearing about a new treatment can feel overwhelming, so I’ll try to explain in plain language what the goal is, how it works, and what you can expect.
+
+---
+
+### 1. What is spasticity and why does it matter for your child?
+
+- **Spasticity** is a condition where certain muscles become abnormally tight or stiff. It can make everyday movements—like walking, reaching, or even sitting—painful or difficult.
+- In children who have conditions such as cerebral palsy, a brain injury, or a spinal cord injury, spasticity can interfere with:
+  - **Mobility** (getting around, walking, or using a wheelchair)
+  - **Daily activities** (feeding, dressing, or playing)
+  - **Comfort** (pain, muscle cramps, or difficulty sleeping)
+  - **Development** (limiting the child’s ability to practice new skills)
+
+The doctors want to reduce the muscle tightness so your child can move more freely, feel less pain, and have a better chance to develop new skills.
+
+---
+
+### 2. How does Botox help?
+
+- **Botox (onabotulinumtoxinA)** is a purified protein that temporarily blocks the nerve signals that tell a muscle to contract.
+- When injected into a specific muscle, it causes that muscle to relax for about 3–6 months.  
+  - Think of it like giving the muscle a short “rest period.”
+- By relaxing the over‑tight muscles, the child can:
+  - Move more smoothly
+  - Use the affected limb more comfortably
+  - Practice new movements with less resistance
+  - Reduce pain or cramps that may have been limiting activity
+
+Because the effect is temporary, the injection is usually repeated every few months, allowing the child’s muscles to “reset” and the treatment to be adjusted as needed.
+
+---
+
+### 3. Why Botox is chosen over other options
+
+- **Targeted** – Botox is injected directly into the muscles that need relief, so other parts of the body are largely unaffected.
+- **Less invasive**</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Botox Injection Intramuscular For Spasticity In Children Caring For Your Child A 1265.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several other ways to help manage spasticity in children. The best choice depends on your child’s specific condition, how severe the spasticity is, and how they respond to treatment. Your medical team will review all the options with you and decide together what makes the most sense for your child.
+
+---
+
+### 1. What is Botox doing?
+
+Botox (onabotulinumtoxinA) is injected directly into the muscles that are too tight. It temporarily weakens those muscles so they can stretch more easily, which can improve movement, reduce pain, and make daily activities easier. The effect usually lasts 3–6 months, after which the injection can be repeated.
+
+---
+
+### 2. Other medical options
+
+| Category | Typical use | How it works | Things to consider |
+|----------|-------------|--------------|--------------------|
+| **Oral medications** | Baclofen, diazepam, tizanidine | Reduce overall muscle tone by acting on the nervous system | Can cause drowsiness, low blood pressure, or other side effects; usually used when spasticity is widespread |
+| **Other injectable agents** | Phenol or alcohol nerve blocks | Chemically “numb” a nerve that supplies the tight muscle | Longer‑lasting effect (months), but may need a specialist for precise placement |
+| **Physical &amp; occupational therapy** | Stretching, strengthening, positioning | Helps maintain range of motion and improves functional skills | Requires regular sessions and home practice |
+| **Orthotic devices** | Braces, splints | Keep joints in a more functional position | Must be fitted and adjusted over time |
+| **Surgical procedures** | Selective dorsal rhizotomy, tendon lengthening, myotomy | Permanently alters the nerves or muscles that cause spasticity | Involves anesthesia and recovery; usually considered when other treatments</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Botox Injection Intramuscular For Spasticity In Children Caring For Your Child A 1265.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Botox Injection Intramuscular For Spasticity In Children Caring For Your Child A 1265.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Botox Injection Intramuscular For Spasticity In Children Caring For Your Child A 1265.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Botox Injection Intramuscular For Spasticity In Children Caring For Your Child A 1265.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who receive Botox injections for spasticity can go home the same day—usually within about an hour after the procedure.  
+Only a small number of children may be asked to stay overnight for observation, and that is usually because of a specific medical condition (for example, sleep apnea or another condition that could affect breathing or alertness).
+
+---
+
+### Why most kids can leave the hospital so quickly
+
+* **Procedure time:** The injections themselves take only a few minutes per muscle group.  
+* **Recovery period:** After the injections, the child is monitored for a short period (about 30–60 minutes) to make sure there are no immediate side‑effects such as excessive weakness, breathing problems, or allergic reactions.  
+* **Safety:** The team checks vital signs, ensures the child is comfortable, and confirms that the child can walk (if appropriate) and is able to eat and drink normally.
+
+---
+
+### When an overnight stay might be recommended
+
+* **Underlying medical conditions:** If your child has a condition that could affect breathing or alertness—such as sleep apnea, significant heart or lung disease, or a history of seizures—the team may want to keep the child in the hospital for a short observation period (usually 12–24 hours).  
+* **Unusual reactions:** Rarely, if a child experiences an unexpected reaction (e.g., severe muscle weakness, difficulty breathing, or a new neurological symptom), the team may decide to keep the child overnight for closer monitoring.  
+* **Family comfort:** Some families prefer to stay overnight for peace of mind, especially if this is the child’s first Botox treatment. The team can discuss this option with you.
+
+---
+
+### What to expect if you stay overnight
+
+* **Monitoring:** Your child will be checked several times a day for vital signs, muscle strength, and any new symptoms.  
+* **Pain management:** Any soreness or bruising at the injection sites will be managed with appropriate medication.  
+* **Discharge planning:** If</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Short answer:**  
+Most kids can go back to their usual play and school activities within a day or two after the Botox injection.  The only things you’ll want to avoid for the first 24–48 hours are very hard or repetitive movements that put a lot of strain on the muscles that were treated, and you should keep the injection sites free from heavy pressure or direct impact.
+
+---
+
+### Why that matters
+
+- **Botox works gradually** – the muscle‑relaxing effect starts a few days after the injection and peaks about 1–2 weeks later.  
+- **Soreness &amp; bruising** – it’s normal for the child to feel a little sore or have a bruise at the injection sites.  This usually resolves on its own within a few days.  
+- **No severe pain** – you should not see intense pain after the procedure.
+
+---
+
+### What to do in the first 24–48 hours
+
+| Activity | Recommendation | Why |
+|----------|----------------|-----|
+| **Light play, walking, or school** | OK | The Botox hasn’t yet taken full effect, but gentle movement is fine. |
+| **Heavy lifting or strenuous exercise** | Avoid | The muscles are still adjusting; hard work could cause soreness or bruising. |
+| **Direct pressure on injection sites (e.g., tight clothing, sports gear)** | Avoid | Pressure can worsen bruising or discomfort. |
+| **Swimming or water sports** | Wait 24 hrs | Water can increase swelling; give it a day to settle. |
+|</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Botox Injection Intramuscular For Spasticity In Children Caring For Your Child A 1265.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

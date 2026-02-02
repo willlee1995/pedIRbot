@@ -1,0 +1,209 @@
+<?xml version="1.0" ?>
+<procedure name="Fna &amp; Biopsy Adrenal Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why are we recommending a fine‑needle aspiration (FNA) and biopsy of your child’s adrenal gland?**
+
+1. **We need a clear diagnosis**  
+   - The adrenal glands sit just above the kidneys. A “mass” or lump can appear on an ultrasound, MRI, or CT scan, but the imaging alone can’t tell us whether the mass is harmless (benign) or dangerous (malignant).  
+   - A biopsy gives us a tiny sample of the tissue that we can send to a pathologist. The pathologist will look at the cells under a microscope and tell us exactly what type of tissue it is, whether it’s cancerous, and what kind of cancer it might be.  
+   - Knowing the exact nature of the mass is essential for planning the next steps—whether we need surgery, medication, or simply watchful waiting.
+
+2. **It is the safest way to get that information**  
+   - The procedure is done through the skin (percutaneous) and guided by imaging (usually CT or ultrasound).  
+   - Because the needle is very fine, the risk of complications is low, and the child can often go home the same day.  
+   - We use the smallest possible needle that still gives us enough tissue for a reliable diagnosis.
+
+3. **Pediatric‑specific considerations**  
+   - Children’s bodies are smaller and more delicate, so we use the least amount of radiation and the smallest needle possible.  
+   - If your child needs sedation or anesthesia, we’ll use the safest protocol for their age and weight.  
+   - We’ll monitor your child closely during and after the procedure to catch any rare complications early.
+
+4. **What we still don’t know**  
+   - The biopsy will give us a definitive diagnosis, but it may take a few days for the pathologist to finish the analysis.  
+   - Depending on the results, we may need additional imaging, blood tests, or a second procedure.  
+   - If the</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What the procedure is and why it’s done**
+
+A *fine‑needle aspiration (FNA) and biopsy of the adrenal gland* is a small‑invasive test that lets the doctors look at a sample of cells from the adrenal gland (the tiny “hormone factories” that sit on top of each kidney).  
+The goal is to find out whether the adrenal mass is a benign growth, a hormone‑producing tumor, a cancer, or something else. Knowing the exact type of lesion helps the team decide the best treatment—whether it is watchful waiting, medication, or surgery.
+
+---
+
+## 1.  Benefits (what you can expect)
+
+| Benefit | What it means for your child |
+|---------|------------------------------|
+| **Fast, accurate diagnosis** | The sample is examined under a microscope right away, so the doctors can usually tell what the mass is within a few days. |
+| **Less invasive than surgery** | No large incision, no major organ removal, and the recovery time is usually short (often just a day or two). |
+| **Lower risk of complications** | Compared with an open biopsy or surgery, the chance of serious bleeding, infection, or damage to nearby organs is much smaller. |
+| **Guides treatment** | Once the type of lesion is known, the team can choose the most appropriate therapy—sometimes a medication, sometimes a targeted surgery, or sometimes simply monitoring. |
+| **Minimal scarring** | The needle makes a tiny puncture that usually leaves no visible scar. |
+| **Quick recovery** | Most children can go home the same day or the next morning and return to normal activities quickly. |
+
+---
+
+## 2.  Potential</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes – there are several ways to learn more about an adrenal mass or to treat it without a percutaneous biopsy. The right choice depends on the size, appearance, and suspected nature of the mass, as well as your child’s overall health. Your medical team will review all of these options with you, but here’s a quick overview of the</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**What to Expect During the Adrenal Biopsy (FNA) for Your Child**
+
+I know this can feel overwhelming, so I’ll walk you through the steps in plain language and let you know what the doctors will do to keep your child safe and comfortable.
+
+---
+
+### 1. **Preparation Before the Procedure**
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Aseptic (sterile) technique** | Keeps the area clean so infection is avoided. |
+| **Local anesthesia** | A numbing injection is given at the skin spot where the needle will enter. Your child will feel a little pinch, but the area will be numb, so they won’t feel the needle itself. |
+| **Vital‑sign monitoring** | Blood pressure, heart rate, and oxygen level are checked continuously. This lets the team spot any changes right away. |
+
+---
+
+### 2. **During the Procedure**
+
+1. **Positioning** – Your child will lie on a special table. The doctor will choose the safest angle to reach the adrenal gland (the small gland above the kidney).  
+2. **Imaging guidance** – A CT scanner or ultrasound will be used so the doctor can see the gland in real time.  
+3. **Needle insertion** – A thin, hollow needle is carefully guided into the adrenal gland.  
+4. **Sample collection** – The needle is used to take a small piece of tissue (biopsy) or a few cells (fine‑needle aspiration, FNA).  
+5. **Repeat if needed** – If one pass doesn’t give enough tissue, the doctor may take another sample.  
+
+The whole thing usually takes **30 minutes**. You may stay in the radiology department for a little longer (up to an hour) for the extra monitoring and paperwork.
+
+---
+
+###</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+The adrenal biopsy is usually done with **local anesthesia only**—the doctor numbs the area around the gland so your child doesn’t feel pain. General sedation or anesthesia is not normally needed. However, if your child is very anxious, uncomfortable, or if the procedure is expected to be longer or more complex, the team can offer **light sedation** or even **general anesthesia**. In that case a **pediatric anesthesia specialist** will be on hand to care for your child.
+
+---
+
+### What to expect
+
+| Step | What happens | Why it matters |
+|------|--------------|----------------|
+| **Local anesthesia** | A small amount of numbing medication is injected near the adrenal gland. | Keeps the child comfortable while the needle is inserted. |
+| **Monitoring** | Blood pressure, pulse, and oxygen levels are checked during and after the procedure. | Ensures the child’s vital signs stay stable. |
+| **Procedure time** | Usually 30 minutes, but you may stay in the radiology department for an hour or more. | Gives the team time to perform the biopsy safely. |
+| **Result timing** | The tissue sample is sent to the lab; results may take a few days. | The doctor will discuss the findings with you once they’re ready. |
+
+---
+
+### When sedation or anesthesia might be added
+
+1. **Anxiety or pain tolerance** – Some children find the idea of a needle scary</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to Do Before Your Child’s Adrenal FNA/Biopsy**
+
+Below is a simple, step‑by‑step guide that covers the most common things parents need to know and do before the procedure. If anything feels unclear or you have a question that isn’t answered here, just let the radiology team know – they’ll give you the exact details that apply to your child.
+
+| # | What to Prepare | Why It Matters | How to Do It |
+|---|-----------------|----------------|--------------|
+| **1. Confirm the date, time, and location** | The procedure is scheduled in the Radiology Department. | Knowing the exact time helps you plan travel, meals, and any needed childcare. | Call the department a day before to double‑check the appointment and ask if you need to arrive early for paperwork. |
+| **2. Bring the child’s medical records &amp; consent forms** | The radiology team will need the child’s history, imaging, and any prior biopsy results. | Having everything ready speeds up the check‑in process and reduces the chance of missing information. |</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>The procedure will be performed under local anesthesia and aseptic technique.   Duration of the procedure varies, depending on the complexity of the condition. It may take only 30 minutes though you may need to stay in the Department of Radiology for over an hour altogether.  Do not expect to get the result of the biopsy / FNA before you leave, as it may take a few days to do all the necessary tests on the specimen.  During and after the procedure, your vital signs (like blood pressure and p...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+Most children who have a fine‑needle aspiration (FNA) or biopsy of the adrenal gland can be treated as an outpatient.  
+Because the procedure is done under local anesthesia and takes only about 30 minutes, you usually stay in the Radiology Department for a short time—often an hour or so—to allow the doctor to monitor you and your child after the needle is removed.
+
+**When a hospital stay might be needed**
+
+- **If the child has a very complex or large adrenal mass** that requires more extensive imaging or a longer procedure, the team may decide to keep the child in the hospital for a few hours of observation.  
+- **If any unexpected bleeding or complications occur** (rare with FNA/biopsy), the child may be admitted for a short period until the situation is stable.  
+- **If the child is very young or has other medical conditions** that make overnight monitoring safer, the team might recommend a brief overnight stay.
+
+**What you can expect**
+
+1. **Pre‑procedure** – You and your child will be seen in the Radiology waiting area, where a nurse will explain the steps and answer any questions.  
+2. **During the procedure** – Local anesthesia is given to numb the area. Your child will be awake but comfortable.  
+3. **After the procedure** – The child will be monitored for a short period (usually 30–60 minutes). Vital signs, pain, and any signs of bleeding are checked.  
+4. **Discharge** – If everything looks good, you can go home the same day. You’ll receive instructions on how to care for the needle site, when to look for signs of complications, and when to call the clinic.
+
+**What will be decided**
+
+The exact plan—whether an overnight stay is necessary—will be discussed with you and your child’s treating team before the procedure. They’ll consider the size and type of the adrenal</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Adrenal Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Adrenal Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

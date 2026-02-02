@@ -1,0 +1,213 @@
+<?xml version="1.0" ?>
+<procedure name="Percutaneous Thrombin Injection Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why we’re recommending a percutaneous thrombin injection for your child**
+
+I understand that hearing about a new procedure can feel overwhelming, especially when it involves your child’s health. I’ll try to explain the reasoning in plain language and address the most common concerns parents have about this kind of treatment.
+
+---
+
+### 1. What’s happening inside the body?
+
+- **Pseudoaneurysm**: Think of it as a “false” aneurysm. Instead of a true balloon‑like bulge in a blood vessel wall, a pseudoaneurysm is a pocket of blood that has escaped from the artery but is still held in place by the surrounding tissue and a clot.  
+- **Why it matters**: Because the pocket is still connected to the artery, blood keeps flowing into it. If the clot that’s holding the pocket together breaks, the blood can spill out into the surrounding tissue, causing sudden, severe bleeding. That’s why we want to stop the blood flow into the pocket as soon as possible.
+
+---
+
+### 2. How the procedure works
+
+- **Ultrasound‑guided injection**: We use a real‑time ultrasound machine to see the pseudoaneurysm and the artery feeding it.  
+- **Thrombin**: This is a naturally occurring protein that speeds up clotting. When we carefully inject a small amount of thrombin directly into the pocket, it turns the flowing blood into a solid clot.  
+- **Result**: The clot seals the pocket shut, stopping the blood from entering it and eliminating the risk of rupture.
+
+---
+
+### 3. Why this is the best option for your child
+
+| Factor | Why it matters for a child |
+|--------|---------------------------|
+| **Minimally invasive** | No large incision or general anesthesia is needed. The child can often go home the same day or after a</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Thrombin Injection Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes – there are a few other ways we can treat a pseudo‑aneurysm in a child. The best choice depends on the size and location of the pseudo‑aneurysm, the child’s overall health, and how quickly we need to stop the bleeding. We’ll discuss each option with you and decide together what’s safest and most effective for your child.
+
+---
+
+## 1. What is a pseudo‑aneurysm?
+
+A pseudo‑aneurysm is a pocket of blood that leaks out of an artery but is contained by the surrounding tissue. It can grow, cause pain, or, in rare cases, rupture. In children, the most common cause is a small puncture from a needle or catheter used during a procedure.
+
+---
+
+## 2. The procedure you’re already scheduled for
+
+**Percutaneous thrombin injection** is a minimally‑invasive, ultrasound‑guided technique. A tiny needle is placed into the pseudo‑aneurysm sac, and a small amount of thrombin (a clot‑forming protein) is injected. The thrombin causes the blood inside the sac to clot, sealing it off. It’s quick, done under local anesthesia, and usually has a very low complication rate in kids.
+
+---
+
+## 3. Alternative options
+
+| Alternative | How it works | Typical use in children | Pros | Cons |
+|-------------|--------------|------------------------|------|------|
+| **Ultrasound‑guided compression** | The sonographer presses a probe against the artery to stop the leak and allow the body to clot the pseudo‑aneurysm naturally. | Small, superficial pseudo‑aneurysms that are not too deep. | No needles, no medication, no anesthesia. | Can be uncomfortable, may take longer, less effective for larger or deep lesions. |
+| **Surgical repair (open or laparoscopic)** | The surgeon opens the area, clamps the artery, and stitches the tear closed. | Larger pseudo</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the treatment will be carried out**
+
+I know that hearing about a procedure can feel overwhelming, so I’ll walk you through each step in plain language and explain what we’ll do to keep your child safe and comfortable.
+
+| Step | What happens | Why it matters for your child |
+|------|--------------|------------------------------|
+| **1. Preparation** | • The room is cleaned and all instruments are sterilized (aseptic technique). &lt;br&gt;• Your child will receive a small local anesthetic (a numbing cream or a tiny injection) at the spot where we’ll work. &lt;br&gt;• We’ll use a very thin, flexible needle – the same kind that’s used for blood draws – so it’s less painful and easier to see. | • The local anesthetic keeps the area numb, so your child won’t feel the needle or the injection. &lt;br&gt;• A sterile environment reduces the risk of infection. |
+| **2. Ultrasound guidance** | • We’ll place a small probe on the skin over the pseudo‑aneurysm (the “bubble” that can form after a blood vessel injury). &lt;br&gt;• The ultrasound shows us exactly where the pseudo‑aneurysm is and where the needle tip should go. | • Ultrasound lets us see the blood flow in real time, so we can avoid the main artery and make sure the needle lands in the right spot. |
+| **3. Needle insertion** | • A thin needle is carefully guided into the pseudo‑aneurysm sac, with the tip inside the sac’s lumen. &lt;br&gt;• We keep the needle steady while we inject. | • Precise placement ensures the clotting agent (thrombin) goes right where it’s needed, minimizing the chance of complications. |
+|</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer for Parents**
+
+**Will my child need sedation or anesthesia for the percutaneous thrombin injection?**
+
+- **Local anesthesia only** – The procedure is performed with a small local anesthetic (a numbing cream or a very small injection) applied to the skin where the needle will be placed.  
+- **No general anesthesia** – Because the needle is inserted only into the pseudo‑aneurysm sac and the child is awake, we normally do **not** use sedation or general anesthesia.  
+- **Why this is safe** – The needle is very thin, the injection is quick (just a few seconds), and the child can usually stay still and follow simple instructions. The procedure is usually very short (often less than 10 minutes).
+
+**What if my child is very anxious or has difficulty staying still?**
+
+- **Optional sedation** – If your child is very nervous, has a history of severe anxiety, or is very young and cannot cooperate, we can discuss giving a mild sedative (e.g., a short‑acting oral or IV medication).  
+- **Pediatric anesthesia specialist** – If sedation is chosen, a pediatric anesthesiologist or a trained pediatric nurse‑anesthetist will be present to administer the medication and monitor your child’s breathing and heart rate.  
+- **Decision made together** – We’ll talk with you and your child before the day of the procedure to decide whether sedation is needed and to explain exactly what will happen.
+
+**What happens after the injection?**
+
+- Your child will be asked to rest with the treated limb straight for about 6 hours.  
+- After that, normal activity is usually fine, but strenuous activity should be avoided for at least one day.  
+- Your child’s vital signs (blood pressure and pulse) will be checked during and after the procedure to make sure everything is stable.
+
+**Bottom line**
+
+- **Most children receive only local anesthesia** for this procedure.  
+- **Sedation and a</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do to get your child ready for the percutaneous thrombin injection**
+
+I know that any procedure can feel a bit overwhelming, so I’ll walk you through the practical steps that will help make the day as smooth as possible for your child and for you.
+
+| Step | What to do | Why it matters |
+|------|------------|----------------|
+| **1. Talk with the team** | Call the interventional radiology (IR) office or your child’s surgeon a few days before the appointment and ask: &lt;br&gt;• Will your child need any blood‑thinning medication stopped? &lt;br&gt;• Will they need a pre‑procedure blood test? &lt;br&gt;• Will they be given a mild sedative or just a local anesthetic? | The IR team will tailor the plan to your child’s age, weight, and any medications they’re on. |
+| **2. Fasting (if required)** | If the child is scheduled for a procedure that may involve sedation or a small local anesthetic that could be swallowed, the team may ask for a short fast (usually 2–4 hours before). &lt;br&gt;• For a purely local‑anesthetic procedure, most children can eat normally. | A clear stomach reduces the risk of nausea or aspiration if a sedative is used. |
+| **3. Keep the skin clean** | On the day of the procedure, wash the area where the needle will be inserted (usually the groin or upper arm) with soap and water. The IR team will use a sterile prep solution right before the needle goes in. | Reduces the risk of infection. |
+| **4. Bring a favorite toy or blanket** | A small comfort item can help your child feel calm and familiar in the hospital setting. | Comfort items can lower anxiety and make the child more cooperative. |
+| **5. Arrange for a parent or caregiver to stay** | The procedure is quick (often &lt; 10 minutes). You’ll be asked to stay in the room during the injection and for a short</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> The procedure is performed under local anaesthetic and aseptic technique. A skinny needle is inserted into the pseudoaneurysm sac with the needle tip inside the lumen of the pseudoaneurysm.  About 0.1 – 0.3ml of thrombin is injected over a few seconds and the clotting of the   pseudoaneurysm is monitored with ultrasound. Injection of thrombin may be repeated if part of pseudoaneurysm is not totally thrombosed (clotted). Patients were placed on bed rest with the affected limb straight for 6 ...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who receive a percutaneous thrombin injection for a femoral pseudo‑aneurysm can go home the same day. In a few cases the doctor may ask you to keep the child in the hospital for a short observation period (usually 4–6 hours) or, rarely, for an overnight stay if there is a concern about a complication or if a protective balloon catheter was used.
+
+---
+
+### Why most kids can leave the same day
+
+| What happens during the procedure | What we watch for afterward |
+|----------------------------------|-----------------------------|
+| • The child is given a local anaesthetic (no general anaesthesia). &lt;br&gt;• A thin needle is guided into the pseudo‑aneurysm and a small amount of thrombin (0.1–0.3 ml) is injected to seal the abnormal blood flow. &lt;br&gt;• The puncture site is cleaned and a small bandage is applied. | • Pain or discomfort at the puncture site (usually mild). &lt;br&gt;• Swelling or bruising around the groin. &lt;br&gt;• Ability to move the leg normally. &lt;br&gt;• No fever, redness, or drainage from the puncture site. |
+
+Because the procedure is quick, minimally invasive, and performed under local anaesthetic, most children recover quickly and can be discharged the same day.
+
+---
+
+### When a short observation period or overnight stay might be needed
+
+1. **Use of a protective balloon catheter** – If a balloon was inserted in the opposite femoral artery to temporarily block blood flow during the thrombin injection, the team may want to watch for any irritation or injury to that artery.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Answer for Parents**
+
+After your child has a percutaneous thrombin injection to close a pseudo‑aneurysm, the goal is to let the clot form safely and keep the puncture site protected while the blood vessel heals. Here’s what you can generally expect regarding activity restrictions and when your child can return to normal play and school:
+
+| What to Do | Why It Helps | Typical Time Frame |
+|------------|--------------|--------------------|
+| **Keep the puncture site elevated** (e.g., on a pillow or folded blanket) and avoid putting weight on that leg for the first 24–48 hours. | Elevation reduces swelling and helps the clot stay in place. | 24–48 hours |
+| **Limit vigorous activity** (running, jumping, sports, heavy lifting) for the first 24–48 hours. | Strenuous movement can increase blood flow to the area and risk a small bleed or clot dislodgement. | 24–48 hours |
+| **Avoid tight clothing or compression bandages** that might press on the puncture site. | Pressure can disturb the clot or cause discomfort. | Until the doctor says it’s okay (usually 24–48 hours) |
+| **Monitor for signs of complications** – redness, swelling, warmth, fever, or pain that worsens. | Early detection of problems (e.g., infection, clot migration) is crucial. | Anytime; call your doctor if anything worries you |
+| **Follow any specific instructions from the interventional radiology team** (e.g., a short period of bed rest, a specific dressing, or a follow‑up imaging test). | Each child’s situation can differ slightly, so the team’s advice is the most accurate. | As directed by the team |
+
+### When Can</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Thrombin Injection Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

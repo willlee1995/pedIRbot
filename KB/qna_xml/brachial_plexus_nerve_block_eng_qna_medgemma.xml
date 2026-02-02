@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<procedure name="Brachial Plexus Nerve Block Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is a brachial plexus nerve block being recommended for your child?**
+
+I know that hearing about a new procedure can feel overwhelming, especially when it involves your little one. I’ll try to explain in plain language what this means, why it’s being suggested, and what you can expect.
+
+---
+
+### 1. What the procedure does  
+- **Targeted pain relief** – The brachial plexus is a bundle of nerves that supplies the arm, hand, and shoulder. By temporarily “blocking” these nerves, we can numb the entire upper limb.  
+- **Used during and after surgery** – The block is often performed right before an operation on the arm or shoulder. It can also be kept in place for a few hours or days after surgery to keep pain under control.  
+
+### 2. Why it’s recommended for your child  
+| Reason | How it helps your child |
+|--------|------------------------|
+| **Precise, localized relief** | The block only numbs the arm,</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Brachial Plexus Nerve Block Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes, there are several other ways to keep your child comfortable and safe during an upper‑arm procedure. The best choice depends on the type of surgery, the child’s age and health, and how long pain relief is needed. Your medical team will discuss all the options with you and decide together which one is safest and most effective for your child.
+
+---
+
+## 1. What the brachial plexus block does
+
+The block we described is a **continuous (catheter‑based) brachial plexus block**.  
+- It numbs the nerves that supply the arm, so the child can have surgery on the shoulder, elbow, or hand without feeling pain.  
+- Because the catheter stays in place, the anesthesiologist can keep giving medication for several hours or even days, which is useful for post‑operative pain control.  
+- The procedure is quick (≈30 minutes) and usually done while the child is awake or lightly sedated.
+
+---
+
+## 2. Other common options
+
+| Option | How it works | Typical use | Pros | Cons |
+|--------|--------------|-------------|------|------|
+| **General anesthesia (GA)** | The child is put into a deep sleep with breathing support. | Most major surgeries, especially if the child is very young or the block is unlikely to cover the whole procedure. | Complete unconsciousness; no movement. | Requires a ventilator, longer recovery, higher risk of nausea, sore throat, etc. |
+| **Single‑shot brachial plexus block** | A one‑time injection of anesthetic around</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the brachial plexus nerve‑block will be carried out**
+
+I know that hearing about a new procedure can feel a bit scary, especially when it involves your child. I’ll walk you through each step in plain language, so you can feel confident about what will happen and what to expect.
+
+---
+
+### 1. Preparation – Getting ready for the procedure
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **A short conversation with the team** – The anesthetist and interventional radiologist will review your child’s medical history, allergies, and any medications. | To make sure everything is safe and tailored to your child. |
+| **A small dose of local anaesthetic** – A tiny amount of numbing medicine is applied to the skin near the lower neck (just above the collarbone). | This keeps the child comfortable while the needle is inserted. |
+| **A light sedation (if needed)** – Depending on your child’s age and anxiety level, a mild sedative may be given. | It helps the child stay still and calm during the procedure. |
+
+---
+
+### 2. Finding the nerves – Ultrasound guidance
+
+| Step | How it’s done | What you’ll see |
+|------|---------------|-----------------|
+| **Ultrasound scan** – The doctor uses a handheld probe that sends sound waves to create a live image on a screen. | The nerves that supply the arm (the brachial plexus) appear as bright, round structures. |
+| **Identifying the right spot** – The doctor marks the exact spot on the skin where the needle will go. | This ensures the needle goes straight to the nerves and avoids blood vessels or other structures. |
+
+---
+
+### 3. Inserting the catheter
+
+| Step | How it’s done | Why it’s important |
+|------|---------------|--------------------|
+| **Needle insertion** – A very thin needle is carefully guided into the targeted area under the ultrasound image.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer for Parents**
+
+**Will my child need sedation or general anesthesia for the brachial‑plexus nerve block?**
+
+- **Most of the time, no general anesthesia is needed.**  
+  The procedure is performed with **local anesthesia** at the skin puncture site. The anesthesiologist or pain‑medicine specialist will give a small amount of local anesthetic to numb the area before the ultrasound‑guided needle is inserted.  
+- **The child usually stays awake and can be comforted with a calm, reassuring environment.**  
+  If the child feels anxious or uncomfortable, the team can give a light sedative (often a short‑acting medication that keeps the child relaxed but still responsive). This is not the same as full general anesthesia.
+
+**What if the nerve block is not fully effective?**
+
+- In some cases (about 5–40 % of procedures) the block may not provide complete pain relief for the surgery.  
+- If that happens, the surgical team may decide to give **general anesthesia** to complete the operation. This is a separate decision that will be discussed with you and the child’s surgeon.
+
+**Will a pediatric anesthesia specialist be available?**
+
+- Yes. The hospital’s **pediatric anesthesia team** is routinely involved in procedures like this.  
+- They will assess your child’s medical history, discuss the plan, and be on hand to provide sedation or general anesthesia if needed.  
+- If your child has special needs (e.g., a history of difficult airway, allergies, or a chronic medical condition), the pediatric anesthesiologist will tailor the plan to keep your child safe and comfortable.
+
+**What to expect on the day of the procedure**
+
+1. **Pre‑procedure assessment** – The anesthesiologist will review your child’s health, medications, and any concerns you have.  
+2.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What we’ll need to do before the brachial‑plexus nerve‑block procedure**
+
+| Step | What it means for your child | Why it matters |
+|------|------------------------------|----------------|
+| **Fasting** | Your child should not eat or drink anything (except water) for 6–8 hours before the procedure. If the child is on a liquid diet, the last drink should be before bedtime. | Reduces the risk of vomiting or aspiration if the child is sedated or given general anesthesia. |
+| **Medications** | • Tell the team about every medicine your child</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> Site of needle puncture is around the lower neck (above the clavicle—the collar bone).  Under aseptic technique, the nerves supplying the upper limb (brachial plexus) are identified by ultrasound. A small catheter for brachial plexus anesthesia will be placed under ultrasound guidance after local anesthesia is given.  The position of catheter will be confirmed by X-Ray or Computerized Tomography (CT) after injection of contrast medium.  Anaesthetic drugs will be injected through the cathete...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+A brachial plexus nerve block is a very common way to give your child pain relief for a hand, arm, or shoulder procedure. In most cases the block is done in the same setting where the surgery or procedure is performed, and the child can go home the same day.  
+
+**When a hospital stay is needed**
+
+- **If the child is having a major operation** (for example, a complex fracture repair, a tumor removal, or a procedure that requires general anesthesia), the hospital team may want to keep the child overnight. This gives them a chance to watch the block, make sure the child is comfortable, and be ready if any unexpected problems arise.  
+- **If the child is very young, has a chronic illness, or has a history of difficult anesthesia**, the team may decide to keep the child in the hospital for a short period (usually 1–2 nights) to monitor the block and the child’s overall recovery.  
+- **If the procedure is minor** (like a simple fracture or a small soft‑tissue repair) and the child is otherwise healthy, the block is often performed in an outpatient setting and the child is discharged the same day.
+
+**Typical length of stay**
+
+- **Same‑day discharge**: 0–2 hours after the procedure, once the child is awake, moving, and pain‑free.  
+- **One‑night stay**: 12–24 hours after the procedure, mainly for observation.  
+- **Two‑night stay**: Rare, usually only if the child has additional medical needs or the block is part of a larger, more complex surgical plan.
+
+**What to expect**
+
+- **Monitoring**: Your child will be checked for pain, swelling, and</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Brachial Plexus Nerve Block Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Brachial Plexus Nerve Block Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

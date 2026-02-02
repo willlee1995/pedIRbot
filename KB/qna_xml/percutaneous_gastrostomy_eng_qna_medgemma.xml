@@ -1,0 +1,175 @@
+<?xml version="1.0" ?>
+<procedure name="Percutaneous Gastrostomy Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being recommended a percutaneous gastrostomy tube**
+
+I know this can feel like a lot of information all at once, so I’ll try to break it down into the key points that matter most for your child’s health and well‑being.
+
+---
+
+### 1. What the procedure actually does
+- **Percutaneous gastrostomy** means a thin, flexible plastic tube is inserted through the skin, into the stomach (or sometimes the proximal small bowel).  
+- The tube is placed under imaging guidance (usually X‑ray or ultrasound) by a radiologist who has special training in interventional procedures.  
+- The whole thing takes about **one hour** and is done in the radiology department, not the operating room.
+
+### 2. Why we think it’s the right step for your child
+- **Swallowing difficulty**: If your child is having trouble swallowing food or liquids, they may not be getting enough calories, protein, vitamins, or minerals.  
+- **Nutritional support**: The tube allows us to give nutrition directly into the stomach, ensuring your child receives the right amount of calories and nutrients to grow, heal, and stay healthy.  
+- **Long‑term plan**: The tube can stay in place for months or even years if needed, giving a stable, reliable way to feed your child while we work on the underlying swallowing issue (or while they’re still too young or too ill to eat normally).
+
+### 3. How safe and successful it is
+- **Success rate**: Over **90 %** of children who get this procedure have it placed successfully on the first try.  
+- **Safety**: Because the tube is inserted through the skin and guided by imaging, we avoid many of the risks that come with open surgery.  
+- **Recovery**: Most kids go home the same day or the next</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Gastrostomy Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are a few different ways to give a child long‑term nutrition. The choice depends on the child’s medical condition, the team’s experience, and how quickly you need the feeding tube in place. Below is a quick overview of the main alternatives, what they involve, and why your team might choose one over another.
+
+---
+
+## 1. Percutaneous Radiologic Gastrostomy (PRG) – the procedure you described  
+* **What it is** – A feeding tube is placed through the skin into the stomach using X‑ray guidance.  
+* **Why it’s often chosen** – It can be done under conscious sedation, uses the child’s own stomach, and is usually quick (about 30–45 min).  
+* **Typical follow‑up** – Tube can be started in 1–2 days; the anchoring devices are removed in 7–10 days; the tube is changed every</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the Percutaneous Gastrostomy (PEG) will be done for your child**
+
+I know this can feel overwhelming, so I’ll walk you through each step in plain language. The goal is to give your child a safe, reliable way to get the nutrition they need while keeping the procedure as comfortable as possible.
+
+---
+
+### 1. **Preparation (1–2 days before the day of the procedure)**  
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Barium sulfate suspension** | A small amount of this contrast is swallowed 24 hours before the procedure. It “outlines” the large bowel on X‑ray so we can see where the stomach is and avoid touching the intestines. |
+| **Nasogastric (NG) tube placement** | A thin tube is gently threaded through the nose into the stomach. It will be used to suck out stomach contents and to blow air into the stomach so it expands (distends). A bigger, more open stomach makes the puncture easier and safer. |
+| **Medication to calm the stomach** | A small IV drug (usually a mild sedative or antispasmodic) is given to reduce stomach movement and make the child more comfortable. |
+
+---
+
+### 2. **The day of the procedure**
+
+| Step | What</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+Most children who get a percutaneous gastrostomy tube (PEG‑Eng) are given a mild sedative or “conscious‑sleep” medication so they feel comfortable and still, but they are not put under full general anesthesia. A pediatric anesthesiologist or a trained pediatric nurse‑anesthetist usually oversees the medication and monitors the child’s breathing and heart rate during the procedure.
+
+---
+
+### What to expect
+
+| Step | What happens | Why it matters for your child |
+|------|--------------|------------------------------|
+| **Pre‑procedure** | A small amount of medication is given through a vein (or sometimes a short‑acting drug through a small IV) to calm the stomach and keep the child still. | This keeps the stomach from moving, which makes the needle insertion safer. It also helps your child feel relaxed. |
+| **Local anesthesia** | The doctor injects a local anesthetic around the spot on the belly where the tube will go. | This numbs the skin and the outer layers of the stomach so the child does not feel pain during the puncture. |
+| **Procedure** | The doctor uses the nasogastric tube to inflate the stomach with air, then inserts a needle, dilates the tract, and places the feeding tube. | Because the stomach is inflated and the child is calm, the procedure is quick (usually &lt;30 minutes). |
+| **Recovery** | After the tube is in place, the child is monitored for a short time while the sedative wears off. | Vital signs (heart rate, blood pressure, breathing) are checked to make sure everything is normal. |
+
+---
+
+### Sedation vs. General Anesthesia
+
+* **Sedation (conscious‑sleep)** – The child is relaxed and may even fall asleep, but they can still breathe on their own and respond if needed.  
+* **General anesthesia** – The child is fully unconscious and breathing is</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Gastrostomy Eng.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> Barium sulphate suspension may be given to you 24 hours before the procedure to outline the large bowel.  A plastic tube will be set up via the nose to stomach for suction of gastric contents and insufflate air to distend the stomach. Intravenous drug will be given to reduce stomach motion.   After sterile preparation of the left upper abdomen, the puncture site is infiltrated   with local anesthetics. Stomach is distended with air via the nasogastric tube. Gastric anchoring devices are u...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+A percutaneous gastrostomy (PEG) is a minimally‑invasive way to give your child nutrition directly into the stomach. In most cases, the procedure is done on an *outpatient* basis, meaning your child can go home the same day. However, the exact plan depends on a few factors that your medical team will discuss with you:
+
+| What usually happens | Why it matters |
+|----------------------|----------------|
+| **Pre‑procedure imaging** – a barium sulfate drink 24 hours before the PEG helps the radiologist see the large bowel and plan the safest entry point. | It reduces the risk of puncturing a bowel loop. |
+| **Nasal tube placement** – a small plastic tube is inserted through the nose into the stomach. It is used to suction out gastric contents and to inflate the stomach with air so the radiologist can see it clearly. | A clear, empty stomach makes the PEG easier and safer. |
+| **Sedation/IV medication** – a short‑acting drug is given to keep your child comfortable and still during the procedure. | Keeps the child safe and reduces pain. |
+| **The PEG itself** – the tube is placed through the abdominal wall into the stomach under X‑ray guidance. | Once the tube is in place, your child can start feeding or medication through it. |
+
+### Hospital stay
+
+| Scenario | Typical length of stay | Why it might differ |
+|----------|------------------------|---------------------|
+| **Standard PEG** – no complications, mild sedation | A few hours in the recovery area, then home | The child is monitored until the sedation wears off and the tube is secure. |
+| **PEG with moderate sedation or local anesthesia** | 1–2 hours in recovery, then home | The team wants to ensure the child wakes up fully and can tolerate the tube.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Gastrostomy Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Gastrostomy Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

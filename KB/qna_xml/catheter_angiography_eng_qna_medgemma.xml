@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+<procedure name="Catheter Angiography Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being recommended to have a catheter angiography (angiogram)**  
+
+---
+
+### 1. What the test does  
+A catheter angiography is a quick, minimally‑invasive X‑ray exam that lets the doctors “see” the blood vessels inside your child’s body in real time.  
+- **How it works:** A thin, flexible tube (catheter) is gently threaded through a small blood vessel (usually in the arm or groin) to the area that needs to be examined.  
+- **What it shows:** The catheter is filled with a special dye that lights up on X‑ray, allowing the radiologist to see the shape, size, and flow of the vessels. This can reveal blockages, abnormal connections, aneurysms, or other problems that might not be visible on a regular X‑ray or ultrasound.
+
+### 2. Why it’s being recommended for your child  
+- **Diagnosing the problem:** If your child has symptoms such as unexplained swelling, pain, or a heart murmur, the angiogram can pinpoint exactly where the blood flow is abnormal.  
+- **Planning treatment:** Once the problem is located, the same procedure can often be used to deliver therapy—such as placing a tiny stent, injecting a clot‑breaking agent, or closing an abnormal vessel—without needing a larger surgery.  
+- **Monitoring progress:** In some cases, the angiogram is used to check how well a previous treatment worked or to guide follow‑up care.
+
+In short, the angiogram gives the medical team a clear, live picture of your child’s blood vessels so they can make the most accurate diagnosis and choose the safest, most effective treatment.
+
+### 3. Pediatric‑specific considerations  
+- **Size matters:** Children’s blood vessels are smaller, so the catheter and dye doses are carefully adjusted to fit their anatomy.  
+- **Radiation dose:** The amount of X‑ray exposure</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What is a catheter angiography (eng)?**  
+It’s a special X‑ray test that lets the doctor see the blood vessels in your child’s body in real time. A thin, flexible tube (catheter) is guided through a small blood vessel—usually in the groin or arm—up to the area that needs to be examined. Once the catheter is in place, a tiny amount of a clear, iodine‑based, non‑ionic contrast dye is injected. The dye lights up the vessels on the screen, allowing the radiologist to see the shape, size, and flow of the blood vessels and to spot any problems such as blockages, aneurysms, or abnormal connections.
+
+---
+
+## 1. Benefits for your child
+
+| What the test can do | Why it matters for your child |
+|----------------------|--------------------------------|
+| **Precise diagnosis** | Gives the most detailed view of the blood vessels, often better than a regular ultrasound or CT scan. |
+| **Guides treatment** | If a procedure (e.g., embolization, stent placement, or surgery) is needed, the angiography can be performed at the same time, reducing the number of separate visits. |
+| **Shorter hospital stay** | Because diagnosis and treatment can be combined, your child may spend less time in the hospital. |
+| **Less radiation than a full CT** | The procedure focuses on a specific area, so the overall radiation dose is usually lower than a full body CT scan. |
+| **Quick recovery** | The catheter is removed immediately after the study, so the child can usually go home the same day (or the next day if a treatment was done). |
+
+---
+
+## 2. Potential risks and side‑effects
+
+| Risk | How common? | What to watch for | What the team will do |
+|------|-------------|-------------------|-----------------------|
+| **Contrast‑related reaction</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Answer for Parents**
+
+I understand that the idea of a catheter angiography can feel a bit intimidating, especially when it involves a child. It’s completely normal to wonder if there are other ways to look at the blood vessels without going through the same procedure. Here’s a simple overview of the options that are usually considered:
+
+| **Alternative Imaging** | **How It Works** | **What It Can Show** | **Typical Use in Children** | **Pros &amp; Cons** |
+|--------------------------|------------------|----------------------|-----------------------------|-----------------|
+| **Ultrasound (Doppler)** | Uses sound waves to create a moving picture of blood flow. | Blood flow patterns, vessel size, and blockages in superficial vessels. | Often the first step for heart or abdominal vessels. | **Pros:** No radiation, no contrast dye, can be done at the bedside. &lt;br&gt;**Cons:** Limited view of deeper or more complex vessels; may need a skilled sonographer. |
+| **MRI Angiography (MRA)** | Uses magnetic fields and radio waves to produce detailed images. | Blood vessels throughout the body, especially in the brain, neck, and limbs. | Good for children who can lie still for the scan; no radiation. | **Pros:** No radiation, excellent soft‑tissue detail. &lt;br&gt;**Cons:** Requires a longer scan time; may need sedation or anesthesia in younger kids; contrast agents are usually safe but rarely can cause allergic reactions. |
+| **CT Angiography (CTA)** | Uses X‑ray and a contrast dye to produce 3‑D images. | Detailed view of blood vessels, useful for emergency or complex anatomy. | Often used when speed is critical (e.g., trauma). | **Pros:** Fast, highly detailed. &lt;br&gt;**Cons:** Radiation exposure (though doses are low and carefully calculated), contrast dye needed. |
+| **Non‑in</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**Answer**
+
+**What is a catheter angiography?**  
+A catheter angiography is a special X‑ray test that lets us see the inside of your child’s blood vessels in real time. We do this by injecting a tiny amount of a safe dye (contrast) into the bloodstream and then taking a series of X‑ray images (called “angiograms”). The images show the shape, size, and flow of the vessels, which helps us diagnose problems such as blockages, aneurysms, or abnormal connections.
+
+---
+
+### How the procedure will be performed
+
+| Step | What happens | Why it matters for your child |
+|------|--------------|------------------------------|
+| **1. Preparation** | • Your child will be asked to fast for a few hours (usually 4–6 hrs) before the test. &lt;br&gt;• We’ll review medications, allergies, and any previous imaging. &lt;br&gt;• A small IV line will be placed for medication and contrast. | • Fasting reduces the risk of vomiting and aspiration. &lt;br&gt;• Knowing allergies (especially to iodine or shellfish) helps us choose the safest contrast. |
+| **2. Sedation / Anesthesia** | • Most children are given a mild sedative (oral or IV) or, if needed, general anesthesia so they stay still and comfortable. &lt;br&gt;• The anesthesiologist will monitor heart rate, breathing, and oxygen levels. | • Staying still is essential for clear images. &lt;br&gt;• Sedation keeps your child calm and reduces the chance of movement‑related complications. |
+| **3. Vascular access** | • A tiny, flexible tube (catheter) is inserted through a small puncture in a peripheral artery (often the groin or wrist). &lt;br&gt;• In some cases, a central vein may be used if the problem is in the heart or lungs. | • The catheter is very small—often the size of a paperclip—so it’s usually well tolerated. &lt;br&gt;• We use ultrasound guidance to make the puncture as accurate and safe as possible. |
+| **4. Contrast injection** | • Once</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+A catheter angiography is a detailed imaging test that uses a small tube (catheter) and a special dye to make blood vessels visible on X‑ray. Because the procedure can last from 30 minutes to a few hours and involves a small puncture in the arm or groin, most children are given some form of sedation or anesthesia so they can stay still and feel comfortable.
+
+| **What you can expect** | **Why it’s used** | **Who will care for it** |
+|--------------------------|-------------------|--------------------------|
+| **Conscious or moderate sedation** (often a short‑acting drug given through a vein) | Keeps the child relaxed and still while the procedure is performed. | A pediatric anesthesiologist or a certified pediatric nurse‑anesthetist will administer the medication and monitor the child’s breathing, heart rate, and oxygen level. |
+| **General anesthesia** (the child is asleep for the entire procedure) | Used for younger children, those who have a lot of anxiety, or when the procedure is expected to be longer or more complex. | A pediatric anesthesiologist will be present, and the child will be monitored continuously in the same way as in a hospital operating room. |
+| **No sedation** | Rarely used in children; usually only for very short, simple studies in older kids who can stay still. | The same anesthesia team will be available if you change your mind. |
+
+### Will a pediatric anesthesia specialist be provided?
+
+Yes. All children who undergo catheter angiography in our center are cared for by a pediatric anesthesiology team. They are specially trained to manage children’s unique physiological needs and to keep them safe and comfortable throughout the procedure.
+
+### What happens next?
+
+- **Pre‑procedure discussion**: Your child’s interventional radiologist and the anesthesia team will talk with</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do to get your child ready for the catheter angiography**
+
+Below is a simple, step‑by‑step guide that most families find helpful.  Your interventional radiology team will review each point with you, but this overview should give you a clear idea of what to expect.
+
+| Step | What to do | Why it matters for a child |
+|------|------------|---------------------------|
+| **1. Fasting** | •  No solid foods for 6–8 hours before the procedure.&lt;br&gt;•  Clear liquids (water, apple juice, clear soup) may be allowed up to 2 hours before. | Children’s stomachs empty faster than adults, so the fasting period is shorter.  It keeps the airway clear if the child needs sedation or anesthesia. |
+| **2. Medications** | •  Bring a list of all medicines your child is taking (prescription, OTC, vitamins).&lt;br&gt;•  Tell the team if your child has any allergies, especially to contrast dye, iodine, or medications. | Contrast dye is used to make the vessels visible on X‑ray.  If your child is allergic, the team can give a pre‑medication or choose a different dye. |
+| **3. Blood work** | •  A small blood sample may be taken a day or two before the procedure to check kidney function and blood counts. | The kidneys clear the contrast dye; we want to make sure they’re working well.  Blood counts help us plan for any bleeding risk. |
+| **4. Skin preparation** | •  The area where the catheter will be inserted (usually the groin or arm) will be cleaned and sometimes shaved. | Clean skin reduces infection risk.  Children’s skin is more delicate, so the team will be gentle. |
+| **5. Comfort and anxiety** | •  Bring a favorite blanket, stuffed animal, or a picture of a loved one.&lt;br&gt;•  Talk to your child in a calm, age‑</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> Normally blood vessels do not show up on plain X-ray. To perform an angiogram, the</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+A catheter angiography is a special imaging test that lets the doctors see the blood vessels inside your child’s body. Because the test involves inserting a thin tube (a catheter) into a blood vessel and injecting a contrast dye, the medical team will want to make sure everything goes smoothly and that your child feels comfortable afterward.
+
+| What to Expect | Typical Scenario | When a Short Hospital Stay Might Be Needed |
+|----------------|------------------|-------------------------------------------|
+| **Procedure time** | 30 – 90 minutes (depending on the area being examined) | – |
+| **Sedation/Anesthesia** | • Local anesthesia + mild sedation for most kids &lt; 5 yrs&lt;br&gt;• General anesthesia for older children or more complex studies | If general anesthesia is used, the child may be monitored in the recovery area for a few hours. |
+| **Recovery** | • After the catheter is removed, the puncture site is bandaged and the child is observed for a short period (usually 1–2 hours).&lt;br&gt;• Vital signs, bleeding, and comfort are checked. | If there is any concern about bleeding, swelling, or a reaction to the dye, the child may stay overnight for observation. |
+| **Discharge** | • Most children are discharged the same day, often within 4–6 hours after the procedure. | • If the child had general anesthesia, a brief overnight stay (1 night) is common to ensure they wake up safely and have no complications. |
+| **Follow‑up** | • A quick phone call or clinic visit the next day to check the puncture site and answer any questions. | – |
+
+### Bottom line
+- **Most children can go home the same day** after a catheter angiography, especially if only local anesthesia and mild sedation were used.
+- **An overnight stay is usually only needed** if general anesthesia was required or</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Catheter Angiography Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Catheter Angiography Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

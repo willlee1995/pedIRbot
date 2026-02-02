@@ -23,6 +23,29 @@ This system implements a production-ready RAG pipeline based on the research doc
 - **Safety Features**: Emergency keyword detection, medical disclaimer enforcement
 - **Source Organization**: Automatic detection and tagging of documents from HKCH, SickKids, SIR, HKSIR, CIRSE
 
+### 🏥 High-Quality Q&A Curation with MedGemma
+
+NEW: Generate clinically accurate, parent-friendly Q&A pairs automatically using MedGemma!
+
+```bash
+# One command to generate 10 SIR standard questions for all procedures
+python scripts/curate_with_medgemma.py
+
+# Outputs XML files ready for RAG integration
+```
+
+**Features:**
+- 🧠 Uses MedGemma medical LLM (or OpenAI GPT-4) for accurate answers
+- 📋 Generates 10 SIR standard pediatric IR questions per procedure
+- 📚 Processes all markdown documents (HKSIR, SickKids, etc.)
+- 🔄 Intelligent context extraction and matching
+- 💾 Structured XML output for RAG integration
+- 🔧 Supports both local (free) and cloud-based LLMs
+
+**Quick start:** See [MEDGEMMA_QUICKSTART.md](MEDGEMMA_QUICKSTART.md) for 5-minute setup
+
+**Details:** Full guide at [MEDGEMMA_CURATION_GUIDE.md](MEDGEMMA_CURATION_GUIDE.md)
+
 ### 🔬 Evaluation & Testing
 
 - Question-based evaluation with metrics tracking

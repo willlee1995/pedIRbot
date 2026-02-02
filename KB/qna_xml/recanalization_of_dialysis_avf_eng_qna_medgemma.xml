@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<procedure name="Recanalization Of Dialysis Avf Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is this procedure being recommended for your child?**
+
+I know that hearing about a new treatment can feel overwhelming, especially when it involves your child’s health. I’ll try to explain in plain language what the doctors are thinking and why they think this is the best next step.
+
+---
+
+### 1. What the procedure does
+
+- **Recanalization of a dialysis access (AV fistula or graft)** means that the doctors will open up a narrowed or clot‑blocked blood vessel that your child uses for dialysis.  
+- The goal is to **restore normal blood flow** so that dialysis can be done safely and effectively.
+
+### 2. Why it matters for your child
+
+- **Dialysis depends on a reliable access point.** If the fistula or graft is blocked or narrowed, the blood can’t flow through it, and dialysis can’t be performed.  
+- **Waiting for a new access to grow** (which can take weeks to months) would mean your child might miss essential dialysis sessions or have to use a temporary catheter, which carries higher infection risk.  
+- By reopening the existing access, the child can usually **start dialysis again within a day or two**—a big advantage for both the child’s health and the family’s routine.
+
+### 3. Why this is a good option for a child
+
+- **Less invasive than surgery.** The procedure is done through a small needle puncture under imaging guidance, so there’s no large incision.  
+- **Shorter recovery time.** Children often recover quickly, and the procedure can often be done under local anesthesia or light sedation, minimizing discomfort.  
+- **Preserves future</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Recanalization Of Dialysis Avf Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several alternatives to the endovascular “recanalization” procedure described. Which option is best depends on the child’s age, the size and location of the fistula or graft, how long the clot or narrowing has been present, and how the child’s</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the procedure will be carried out**
+
+I know that hearing about a medical procedure can feel overwhelming, especially when it involves your child’s dialysis access. Below is a step‑by‑step explanation of what the interventional radiology team will do, written in plain language. If anything is unclear or you have more questions, please let the team know right away—they’ll be happy to walk you through it again.
+
+---
+
+### 1. Getting the child ready
+
+| What happens | Why it matters for a child |
+|--------------|---------------------------|
+| **Sedation or general anesthesia** | Children often need a calm, pain‑free environment. The anesthesiologist will choose the safest option for your child’s age, weight, and overall health. |
+| **Monitoring** | Blood pressure, heart rate, oxygen levels, and sometimes a small blood sample will be checked continuously. |
+
+---
+
+### 2. Accessing the blood vessel
+
+| Step | How it’s done | Pediatric note |
+|------|---------------|----------------|
+| **Choosing the entry point** | The radiologist will look at the child’s fistula or graft. If the narrowing (stenosis) is closer to the vein, they’ll puncture the vein. If the narrowing is deeper or the vein is hard to reach, they may puncture the artery instead (usually the wrist’s radial artery or the elbow’s brachial artery). | Children’s veins and arteries are smaller, so the team uses very fine needles and catheters. |
+| **Placing a sheath** | A thin tube (sheath) is inserted through the needle. One sheath is used if we just want to dilate a tight spot. Two sheaths are used if we also need to remove clots. | The smaller the sheath, the less chance</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+Most children who have a dialysis AVF (arteriovenous fistula) rec</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Recanalization Of Dialysis Avf Eng.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> The radiologist will puncture your native vein or the graft with a needle. The direction of puncture will depend on the site of narrowing or occlusion. One sheath will be inserted if the aim is to dilate some narrowing. If the aim is to remove clots inside, two sheaths may be used. If the problem is narrowing, it will be dilated with a balloon catheter over a guidewire.   A cutting balloon (balloon catheter with small blades on it) may be used in selected     stenosis resistant to simple...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+Most children who undergo a recanalization of a dialysis arteriovenous fistula (AVF) can be treated as an outpatient or stay only a short time in the hospital. Here’s what you can usually expect:
+
+| What happens | Typical timing | Why it matters for your child |
+|--------------|----------------|------------------------------|
+| **Procedure** (needle puncture, sheath insertion, dilation or clot removal) | 30–90 minutes | It’s a minimally‑invasive, image‑guided procedure. |
+| **Recovery &amp; observation** | 2–4 hours after the procedure | The team will watch for bleeding, swelling, or any immediate complications. |
+| **Discharge** | Same day (often within 6–8 hours of the start time) | Most kids are comfortable enough to go home with a parent or caregiver. |
+| **Possible overnight stay** | Rare, only if: &lt;br&gt;• Two sheaths were used and clot removal was extensive &lt;br&gt;• There were unexpected complications (e.g., significant bleeding, infection, or the child needs additional imaging) &lt;br&gt;• The child is very young or has other medical issues that require closer monitoring | The team will let you know right away if an</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Recanalization Of Dialysis Avf Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Recanalization Of Dialysis Avf Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,237 @@
+<?xml version="1.0" ?>
+<procedure name="Radiofrequency Renal Mass En" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is this treatment being recommended for your child?**
+
+I know that hearing about a cancer diagnosis and a new treatment can feel overwhelming. I’ll try to explain the reasoning in plain language and highlight what it means for your child’s health and future.
+
+---
+
+### 1. What the doctors have found
+
+- **A small kidney tumor (less than 4 cm)** – In children, the most common kidney cancer is renal cell carcinoma (RCC).  
+- **The tumor is localized** – It has not spread to other parts of the body, and imaging shows it is confined to the kidney.
+
+---
+
+### 2. Why Radiofrequency Ablation (RFA) is a good choice
+
+| Feature | Why it matters for a child |
+|---------|---------------------------|
+| **Minimally invasive** | No large incision, no need to remove the kidney. The procedure is done through a thin needle guided by ultrasound or CT. |
+| **Preserves kidney function** | Children need both kidneys to grow and develop normally. Keeping the kidney intact reduces the risk of future kidney problems. |
+| **Shorter recovery** | Children usually go home the same day or after a very short stay, and they can return to school and play sooner. |
+| **Low complication rate** | In experienced centers, serious complications are rare, and the procedure is well tolerated by children. |
+| **Potentially curative** | For tumors smaller than 4 cm, RFA can destroy the cancer cells completely, giving a high chance of cure without surgery. |
+
+---
+
+### 3. How the procedure works (in simple terms)
+
+1. **Planning** – The imaging team reviews your child’s scans to map the exact spot of the tumor.  
+2. **Guidance</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Radiofrequency Renal Mass En.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several other ways to treat a kidney mass in children. The best choice depends on the size, location, and type of the tumor, as well as your child’s overall health. Your medical team will review all the options with you, but here’s a quick overview of the most common alternatives:
+
+| Alternative | How it works | Typical situations where it’s considered | Key points for kids |
+|-------------|--------------|------------------------------------------|---------------------|
+| **Partial nephrectomy (kidney‑sparing surgery)** | The surgeon removes just the tumor and a small margin of healthy tissue, leaving the rest of the kidney intact. | Most small, localized renal tumors; especially when the tumor is near the center of the kidney or close to important structures. | Usually done with a small incision (laparoscopic) or a larger one (open). Requires general anesthesia. Recovery is a few days to a week. |
+| **Radical nephrectomy (removal of the whole kidney)** | The entire kidney</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the treatment will be performed**
+
+I know that hearing about a new procedure can feel overwhelming, so I’ll walk you through the steps in plain language and explain what we’ll do to keep your child safe and comfortable.
+
+---
+
+### 1. **Before the day of the procedure**
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Medical check‑up** | We’ll review your child’s overall health, any other illnesses, and how the kidney tumour looks on imaging (ultrasound, CT or MRI). This tells us whether the tumour is a good candidate for radio‑frequency ablation (RFA). |
+| **Biopsy (if needed)** | Sometimes we take a tiny sample of the tumour to confirm it’s the type we expect. This is usually done under local anaesthesia or sedation. |
+| **Medication review** | We’ll ask your child to stop any medicines that could increase bleeding (e.g., aspirin, ibuprofen). |
+| **Fasting** | Your child will need to fast for a few hours before the procedure so the stomach is empty. |
+
+---
+
+### 2. **On the day of the procedure**
+
+| Step | How it’s done | What your child will feel |
+|------|---------------|---------------------------|
+| **Preparation** | • A small electrode pad is placed on the thighs. This helps deliver the radio‑frequency energy safely. &lt;br&gt;• The skin over the kidney area is cleaned with antiseptic. &lt;br&gt;• A local anaesthetic (numbing cream or injection) is applied. | Your child may feel a brief pinch from the injection, but the area will be numb. |
+| **Anesthesia** | • **Moderate sedation** (light sleep) or **general anaesthesia** (full sleep) is chosen based on your child’s age, medical history, and the team’s preference. &lt;br&gt;• The anaesthesiologist will monitor your child’s breathing, heart rate, and oxygen levels throughout. | Your child will either be gently drowsy or fully asleep, so they won’t feel anything during the procedure. |
+| **Guided needle insertion** | • Using real</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer**
+
+Yes – your child will need either moderate sedation or general anesthesia for the radiofrequency ablation. A pediatric anesthesiologist (or a pediatric anesthesia team) will be part of the care team and will tailor the plan to your child’s age, size, medical history, and how they usually handle procedures.
+
+---
+
+### Why sedation or anesthesia is needed
+
+* **Comfort and safety** – The procedure takes 2–4 hours and involves inserting a needle into the kidney under imaging guidance. Even a small amount of movement can make the needle placement less accurate or increase the risk of complications.
+* **Pain control** – The needle insertion and the radiofrequency energy can be uncomfortable. Sedation or anesthesia keeps your child pain‑free and calm.
+* **Monitoring** – An anesthesiologist will watch the child’s breathing, heart rate, and oxygen levels throughout the procedure and can adjust the depth of sedation or switch to general anesthesia if needed.
+
+---
+
+### What type of anesthesia will be used?
+
+| Situation | Typical choice | Why it’s used |
+|-----------|----------------|---------------|
+| **Younger children (under 5–6 yrs)**, or those who are very anxious | **General anesthesia** (full unconsciousness) | Keeps the child still and eliminates any fear or pain. |
+| **Older children or adolescents** who can tolerate a calm environment | **Moderate sedation** (sometimes called “conscious sedation”) | The child remains awake but relaxed, with minimal pain. |
+| **If the procedure is expected to be longer or more complex** | **General anesthesia** | Provides the safest, most controlled environment. |
+
+The exact plan will be decided after the pre‑procedure assessment, which includes a review of your child’s medical history, current medications, and any previous experiences with anesthesia.
+
+---
+
+### Pediatric anesthesia specialist
+
+* **Yes, a</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>In selected patients, a ureteric catheter may be placed before the RF ablation to reduce risk of thermal injury to the ureter, and allow healing of ureter in case of injury.  Glucose solution may be infused into the peritoneal cavity for displacement of adjacent bowel loops from the tumor. This can avoid thermal injury to the bowel, in particular the colon.  After the procedure, the patient will be transferred back to the ward for recovery   and monitoring of vital signs (e.g. blood pressure...</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>**Answer for Parents**
+
+I know how important it is to know exactly what to do before your child’s radiofrequency ablation (RFA) of the kidney. The most common question is whether the child can eat or drink beforehand and, if not, how long they should wait.
+
+---
+
+### 1. **Why fasting is usually recommended**
+
+- **Anesthesia safety:** RFA is usually performed under general anesthesia or deep sedation. If the stomach still contains food or liquid, there is a small risk that the child could vomit and aspirate (breathing food into the lungs) during the procedure.
+- **Procedure clarity:** A clear stomach also helps the imaging team see the kidney and the tumor more clearly, which makes the ablation safer and more accurate.
+
+Because of these reasons, most hospitals ask children to fast for a short period before the procedure.
+
+---
+
+### 2. **Typical fasting instructions for children**
+
+| What the child can have | How long before the procedure |
+|------------------------|--------------------------------|
+| **Clear liquids** (water, diluted juice, clear tea or coffee, clear broth) | 2–4 hours before the start of anesthesia |
+| **Solid foods** (any food, even a small snack) | 6–8 hours before the start of anesthesia |
+
+&gt; **Clear liquids** are those that are transparent and do not contain milk, fruit pulp, or thickened substances. If your child drinks a small glass of water or a clear juice, that is usually fine.
+
+---
+
+### 3. **What to do if your child is very</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who undergo a radiofrequency ablation (RFA) of a kidney mass can go home the same day or after a short overnight stay (usually 1–2 days). The exact length of the hospital stay depends on a few factors that your team will review with you before the procedure.
+
+---
+
+### Why a stay</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Short answer:**  
+Yes—after a radiofrequency ablation (RFA) of a kidney mass, most kids need a brief period of rest and gentle activity. In most cases, they can start light play within a day or two, but contact sports, heavy lifting, or any activity that strains the back or abdomen should be avoided for about 2–4 weeks. Your child’s specific recovery plan will be tailored to how the procedure went and how they feel, so the team will give you a personalized “return‑to‑activity” chart.
+
+---
+
+## Why a brief activity pause is recommended
+
+1. **Healing the needle tract** – The RFA probe creates a small track through the skin, muscle, and kidney. Light movement helps the track close, while heavy bending or twisting can cause discomfort or, rarely, a small bleed or infection.
+
+2. **Preventing pain or swelling** – The kidney and surrounding tissues can feel sore for a day or two. Gentle activity keeps blood flowing and reduces stiffness, but strenuous exercise can worsen pain or cause a flare‑up.
+
+3. **Avoiding complications** – While complications are rare, the most common ones after RFA are mild (e.g., bruising, a small fluid collection near</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>**Follow‑up after your child’s radiofrequency ablation (RFA) of a kidney mass**
+
+After the procedure you’ll be sent back to the ward for a short recovery period. Once you’re feeling stable, your child will usually be discharged in 1–2 days. From there, the “real work” of follow‑up begins. Here’s what you can expect:
+
+| What happens | Why it matters | What you’ll do |
+|--------------|----------------|----------------|
+| **Clinic visits** | To check how your child is doing, review symptoms, and plan next steps. | Your child will come to the outpatient clinic every 4–6 weeks for the first 3–6 months, then every 3–6 months for the next 1–2 years, and yearly thereafter. |
+| **Imaging (CT or MRI)** | The tumor is monitored to see if it’s shrinking, staying the same, or growing again. | A scan is usually done 1–3 months after the first RFA, then at 6 months, 12 months, and yearly. The exact schedule is tailored to your child’s tumor size and response. |
+| **Blood tests** | To look for signs of kidney function changes or bleeding. | Routine blood work (CBC, kidney panel) may be done at each clinic visit or as needed. |
+| **Urine tests** | To check for any lingering blood in the urine or signs of infection. | A simple urine dipstick or sample may be taken at each visit. |
+| **Pain &amp; symptom review** | To catch any late‑onset pain, fever, or other issues early. | Your child will be asked about pain, fever, or any new symptoms. |
+| **Discussion of repeat ablation** | Some tumors need more than one RFA session. | If imaging shows the tumor hasn’t fully disappeared, the team will discuss a second session. |
+
+### What to watch for at home
+
+- **Mild fever or fatigue** (post‑ablation syndrome) –</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,226 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Cerebral Endovascular Embolization 1480" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being recommended for cerebral endovascular embolization**
+
+I know this can feel overwhelming, so I’ll try to explain in plain language what the procedure is for and why your child’s doctors think it’s the right next step.
+
+---
+
+### 1. What the procedure does
+
+- **Cerebral endovascular embolization** is a minimally‑invasive way to “close off” or block a problem area inside a brain blood vessel.
+- A tiny catheter (a very thin, flexible tube) is threaded through a blood vessel in the arm or groin, guided by X‑ray imaging, until it reaches the specific spot in the brain that needs treatment.
+- Once in place, the doctor injects a special material—such as tiny coils, a medical‑grade glue, or very small particles—into that vessel. These materials sit inside the vessel and block the abnormal blood flow, preventing problems like bleeding, aneurysm rupture, or abnormal growth of vessels.
+
+---
+
+### 2. Why it’s being recommended for your child
+
+| Reason | How the procedure helps |
+|--------|------------------------|
+| **Preventing a dangerous bleed** | If the child has an aneurysm (a bulging, weak spot in a vessel) or a fragile vessel that could rupture, blocking it reduces the risk of sudden bleeding. |
+| **Stopping abnormal blood flow** | Some children develop “vascular malformations” where blood vessels grow in a tangled, inefficient way. Embolization can redirect blood flow to healthier vessels. |
+| **Reducing symptoms** | If the abnormal vessel is causing headaches, seizures, or neurological deficits, closing it can relieve those symptoms. |
+| **Avoiding a larger surgery** | Embolization is less invasive than open brain surgery, meaning shorter recovery time, fewer complications, and less impact on the child’s growth and development. |
+
+The decision is usually based on imaging studies (MRI, CT angiography, or conventional angiography) that show the exact size, shape, and location of the abnormal vessel, as well as how it’s affecting the child’s brain.
+
+---
+
+### 3. Pediatric‑specific considerations
+
+- **Growth and development**</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cerebral Endovascular Embolization 1480.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are often several ways to treat a brain‑blood‑vessel abnormality, and the best choice depends on the exact type of problem, its size, location, and how it’s affecting your child. Your medical team will review all the options with you, but here’s a quick overview of the most common alternatives to endovascular embolization.
+
+---
+
+## 1. Observation / “Watchful Waiting”
+
+* **When it’s used:**  
+  * Small, asymptomatic aneurysms or arteriovenous malformations (AVMs) that are not growing.  
+  * When the risk of intervention outweighs the risk of the lesion itself.
+
+* **What it looks like:**  
+  * Regular MRIs or MR angiograms to monitor the lesion.  
+  * No immediate surgery or embolization.
+
+* **Pros &amp; Cons**  
+  * **Pros:** No procedure‑related risks, no anesthesia.  
+  * **Cons:** The lesion could enlarge or rupture over time, requiring a more urgent intervention later.
+
+---
+
+## 2. Microsurgical Resection (Open Brain Surgery)
+
+* **When it’s used:**  
+  * Lesions that are accessible through a surgical corridor and are relatively small.  
+  * Cases where the lesion’s anatomy makes embolization difficult or risky.
+
+* **What it looks like:**  
+  * The surgeon makes a small opening in the skull, removes the abnormal vessel or clot, and then closes the wound.  
+  * Often performed under general anesthesia.
+
+* **Pros &amp; Cons**  
+  * **Pros:** Direct removal of the abnormal vessel; immediate cure if the lesion is fully excised.  
+  * **Cons:** Higher risk of bleeding, infection, or neurological deficits; longer recovery.
+
+---
+
+## 3. Stereotactic Radiosurgery (SRS)
+
+* **When</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**Answer**
+
+I’m glad you’re asking about how the cerebral endovascular embolization will be done. I’ll walk you through the steps in plain language, keep the focus on what matters most for a child, and let you know where the exact details will be tailored by the team that will be caring for your child.
+
+---
+
+### 1. What the procedure is and why we do it
+
+A **cerebral endovascular embolization** is a minimally‑invasive way to block an abnormal blood vessel or a tiny “hole” (arteriovenous malformation, aneurysm, or other vascular abnormality) in the brain. Instead of opening the skull, we reach the target vessel from a small puncture in the groin (or sometimes the wrist) and guide a thin tube (catheter) all the way to the brain under live X‑ray imaging. Once the catheter is in place, we deliver a tiny, safe material that plugs the abnormal vessel, stopping the abnormal blood flow and preventing future bleeding or other complications.
+
+---
+
+### 2. How the treatment will be performed
+
+| Step | What happens | Why it matters for a child |
+|------|--------------|---------------------------|
+| **Preparation** | • The child is taken to the procedure room. &lt;br&gt;• A small incision is made in the groin (or wrist) and a tiny needle is inserted into a large artery. &lt;br&gt;• A thin, flexible tube (catheter) is threaded through the artery to the brain. | The incision is very small and usually heals quickly. The catheter is so thin that it can travel through the blood vessels without causing damage. |
+| **Imaging** | • The interventional radiologist uses real‑time X‑ray (fluoroscopy) to see the catheter’s path. &lt;br&gt;• A contrast dye is injected to outline the blood vessels and the abnormal area. | The dye is safe and helps the team see exactly where the abnormal vessel is. |
+| **Targeting the abnormal vessel** | • The catheter is carefully positioned right at the spot that needs to be blocked. &lt;br&gt;• The</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer for Parents**
+
+I understand how important it is to know what to expect for your child’s cerebral endovascular embolization. Here’s what you can generally expect regarding sedation or anesthesia, and how the team will support your child’s safety and comfort.
+
+---
+
+### 1. Will my child need sedation or anesthesia?
+
+**Yes – most children who undergo a cerebral endovascular embolization receive some form of sedation or anesthesia.**  
+The goal is to keep the child still, comfortable, and pain‑free while the interventional radiologist works inside the blood vessels of the brain. The exact type of sedation depends on several factors:
+
+| Factor | Typical Sedation/Anesthesia Option |
+|--------|------------------------------------|
+| **Age &amp; size** | Very young infants or small children often receive **general anesthesia** (they are asleep and fully controlled). Older children who can cooperate may receive **conscious sedation** (they’re relaxed but awake). |
+| **Procedure length** | Longer procedures (often 1–3 hours) usually use general anesthesia. Shorter, simpler embolizations may be done with conscious sedation. |
+| **Medical history** | Children with certain heart or lung conditions, or who have had previous anesthesia complications, may need a more carefully tailored plan. |
+| **Safety &amp; comfort** | The priority is to keep the child safe, minimize movement, and reduce stress for both the child and the family. |
+
+Because each child’s situation is unique, the anesthesia plan will be decided in collaboration with the interventional radiology team and the pediatric anesthesia specialists.
+
+---
+
+### 2. Will a pediatric anesthesia specialist be present?
+
+**Absolutely.**  
+SickKids has a dedicated **Pediatric Anesthesia Service** that works closely with interventional radiology. A pediatric anesthesiologist (</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cerebral Endovascular Embolization 1480.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>On the day of the cerebral endovascular embolization</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+I understand that the idea of your child staying in the hospital can feel overwhelming. Here’s what you can generally expect for a pediatric cerebral endovascular embolization (the procedure your child is scheduled for at SickKids):
+
+| What happens | Typical hospital stay |
+|--------------|-----------------------|
+| **Pre‑procedure preparation** (fasting, medication review, anesthesia discussion) | Usually a few hours before the procedure |
+| **Procedure itself** (catheter is threaded into the brain’s blood vessels and the abnormal area is “sealed” with tiny embolic particles) | 1–2 hours |
+| **Immediate post‑procedure monitoring** (in the recovery area) | 2–4 hours – your child will be watched closely for any signs of bleeding, swelling, or neurological changes |
+| **In‑hospital observation** (if needed) | 1–2 days. Most children are stable enough to go home the next day, but some may need an extra day for a full neurological assessment or to ensure the embolization site is healing properly. |
+
+### Why a short stay is common
+
+- **Safety first**: The team wants to be sure that the embolization was successful and that there are no immediate complications (e.g., tiny blood clots, swelling, or changes in brain function).
+- **Monitoring**: Children’s brains can react differently than adults’. A short observation period lets the team watch for subtle changes that might need quick intervention.
+- **Comfort**: After the procedure, your child will need a quiet, safe environment to recover from anesthesia and any mild side effects (nausea, headache, or a bit of swelling).
+
+### What might lengthen the stay?
+
+- **Complications**: Rarely, if there is bleeding, swelling, or a new neurological issue, the child may need a longer stay for imaging, medication, or even a brief ICU observation.
+- **Underlying condition**</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cerebral Endovascular Embolization 1480.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cerebral Endovascular Embolization 1480.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

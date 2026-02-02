@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Bone Scan And Cancer Diagnosis 8927" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is treatment being recommended for your child?**
+
+I’m sorry you’re going through this. I’ll try to explain in plain language what the bone scan has shown and why your child’s doctors are suggesting treatment.
+
+---
+
+### 1. What the bone scan tells us
+
+- **Bone scans use a tiny amount of radioactive tracer** that travels through the blood and “lights up” in areas where bone cells are very active.  
+- In your child’s scan, a spot in the leg showed a **higher level of activity** than the surrounding bone.  
+- **Active bone cells can be a sign of several things** – from a benign growth to a malignant (cancerous) tumor. The scan alone can’t tell us which one it is, but it does tell us that something is happening that needs closer look.
+
+### 2. Why treatment is being considered
+
+- **Early treatment is often best**. If the area is a tumor, the sooner we start therapy (whether it’s surgery, radiation, chemotherapy, or a combination), the more likely we can control it and reduce the risk of it spreading to other bones or organs.  
+- Even if the lesion turns out to be benign, many of the same procedures (like a biopsy or a small surgical removal) are used to confirm the diagnosis and relieve any pain or risk of fracture.  
+- The doctors want to **avoid waiting** for the lesion to grow or for symptoms to worsen. In children, bones grow and heal differently than in adults, so catching something early can make the treatment easier and more effective.
+
+### 3. What we still don’t know
+
+- The bone scan **does not give a definitive diagnosis**. We still need a tissue sample (biopsy) or further imaging (MRI, CT, or a repeat scan) to see exactly what the cells are doing.  
+- The exact type of treatment—whether it will involve surgery, radiation, chemotherapy, or a watch</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Scan And Cancer Diagnosis 8927.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Scan And Cancer Diagnosis 8927.</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Scan And Cancer Diagnosis 8927.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Scan And Cancer Diagnosis 8927.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Scan And Cancer Diagnosis 8927.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Scan And Cancer Diagnosis 8927.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Scan And Cancer Diagnosis 8927.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Scan And Cancer Diagnosis 8927.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Scan And Cancer Diagnosis 8927.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

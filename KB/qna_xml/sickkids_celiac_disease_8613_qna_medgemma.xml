@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Celiac Disease 8613" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being advised to follow a gluten‑free diet**
+
+---
+
+### 1. What’s happening in your child’s body?
+
+Celiac disease is an autoimmune condition. When gluten (a protein found in wheat, barley, rye and foods that contain them) enters the small intestine, the immune system mistakenly attacks the lining of the gut. This can lead to:
+
+| What the immune system does | What it means for your child |
+|-----------------------------|------------------------------|
+| Damages the tiny “fingers” (villi) that absorb nutrients | Poor absorption of vitamins, minerals, iron, calcium, etc. |
+| Causes inflammation and sometimes bleeding | Fatigue, abdominal pain, diarrhea, constipation, growth delays |
+| Triggers a cascade of immune reactions | May increase risk of other autoimmune conditions (e.g., type 1 diabetes, thyroid disease) |
+
+Because the damage is ongoing, it can affect growth, bone health, and overall well‑being if gluten continues to be eaten.
+
+---
+
+### 2. Why a gluten‑free diet is the *only* proven treatment
+
+- **Evidence‑based**: Clinical studies show that removing gluten from the diet heals the intestinal lining, stops symptoms, and normalizes growth and blood tests.
+- **Safety**: Unlike medications that suppress the immune system (which can have serious side effects), a diet change is non‑pharmacologic and has no systemic toxicity.
+- **Longevity**: Celiac disease is lifelong. A strict gluten‑free diet is the only way to keep the disease under control and prevent long‑term complications (e.g., osteoporosis, infertility, certain cancers).
+
+---
+
+### 3. How this will help your child
+
+| Short‑term benefit | Long‑term benefit |
+|--------------------|-------------------|
+| Relief of abdominal pain, bloating, and diarrhea | Normal growth and weight gain |
+| Improved energy levels |</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease 8613.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several ways to help your child manage celiac disease, and many of them can be used together. The best plan is the one that fits your child’s health needs, family routine, and lifestyle. We’ll walk through the main options and let you know what’s still uncertain so you can discuss them with your pediatrician or gastroenterologist.
+
+---
+
+## 1. The cornerstone: a strict gluten‑free diet  
+- **What it is** – Completely avoiding foods that contain wheat, barley, rye, and any hidden sources of gluten.  
+- **Why it matters** – Gluten triggers the immune reaction that damages the small intestine in celiac disease. Removing it stops the inflammation and allows the gut to heal.  
+- **Practical tips** –  
+  * Read labels (“gluten‑free” or “free from wheat, barley, rye”).  
+  * Use fresh fruits, vegetables, meats, fish, eggs, and most dairy products.  
+  * Keep a “gluten‑free” pantry with staples like rice, quinoa, corn‑based products, and gluten‑free flours.  
+  * Many grocery stores now have a dedicated gluten‑free aisle.  
+
+**Alternative or complementary approaches**  
+- **Specialized gluten‑free products** – Some children prefer pre‑made gluten‑free breads, pastas, and snacks that are easier to incorporate into meals.  
+- **Cooking classes or meal‑prep help** – Many hospitals and community centers offer hands‑on sessions for families.  
+
+---
+
+## 2. Medical monitoring &amp; supportive care</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**What to Expect for Your Child’s Celiac Disease Care**
+
+I understand that hearing “treatment” can feel a bit vague, especially when it comes to a chronic condition like celiac disease. Below is a simple, step‑by‑step overview of what the care team at SickKids will typically do for a child who has been diagnosed or is being evaluated for celiac disease. If your child’s situation is a bit different, the team will tailor the plan and will walk you through every detail.
+
+---
+
+### 1. **Confirming the Diagnosis (If Needed)**
+
+| Step | What Happens | Why It Matters |
+|------|--------------|----------------|
+| **Blood Test** | A small sample of blood is drawn (usually from a vein in the arm). The lab looks for specific antibodies that are usually elevated when the small intestine is reacting to gluten. | A positive antibody test is a strong clue that celiac disease is present. |
+| **Upper Endoscopy with Biopsy** | If the blood test is positive or if symptoms are severe, a tiny camera (endoscope) is gently passed down the throat into the small</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+It sounds like you’re asking about whether your child will need sedation or anesthesia for the “Sickkids Celiac Disease 8613” program. I’m happy to clarify.
+
+---
+
+### What the program actually is
+
+- **Sickkids Celiac Disease 8613** is an **educational and support program**—not a medical procedure.  
+- The modules, guided meditations, and online resources are designed to help families learn about celiac disease, nutrition, mental‑health strategies, and how to manage the condition day‑to‑day.
+
+Because it is a learning and support activity, **no sedation or anesthesia is required**. Your child can participate in the videos, modules, and activities at home or in the clinic without any medical intervention.
+
+---
+
+### If a medical procedure is ever needed
+
+- **Any future medical procedure** (e.g., a diagnostic test, a biopsy, or a treatment that requires a procedure) will be discussed with the treating team.  
+- In those situations, the team will decide whether sedation or general anesthesia is appropriate based on the child’s age, health status, and the type of procedure.  
+- If sedation or anesthesia is needed, a **pediatric anesthesia specialist** (often called a pediatric anesthesiologist) will be involved. They are specially trained to care for children and to keep them safe and comfortable during procedures.
+
+---
+
+### Bottom line
+
+- **No sedation or anesthesia is needed for the celiac disease educational program.**  
+- If your child ever needs a medical procedure related to celiac disease, the medical team will discuss the sedation plan with you and will involve a pediatric anesthesia specialist if required.
+
+If you have any more questions—about the program itself or about potential future procedures—please let me know. I’m here to help</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do to help your child feel ready for the SickKids Celiac Disease procedure (Procedure #8613)**  
+
+Below is a general “road‑map” of what most families find helpful. Your care team will confirm or adjust these steps, so please keep the conversation open with them.
+
+| Step | What to do | Why it matters for a child |
+|------|------------|---------------------------|
+| **1. Talk to the team about medications** | • Ask whether any regular medicines (e.g., asthma inhalers, diabetes meds, vitamins) should be taken or held on the day of the procedure. &lt;br&gt;• If the child is on a gluten‑free diet, keep that routine the same. | Children’s bodies react differently to fasting or medication changes. The team will tell you exactly what to keep or skip. |
+| **2. Fasting instructions** | • **No solid foods** for 6–8 hours before the procedure (usually the night before). &lt;br&gt;• **Clear liquids** (water, clear juice, plain tea/coffee without milk) are usually allowed up to 2 hours before. &lt;br&gt;• If the procedure involves sedation or anesthesia, the team may ask for a longer fast (often 8 hours). | Fasting keeps the stomach empty, reducing</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Nutrition and mental health: Developing positive eating habits Physical activity and mental health Supporting your mental health and well-being Adjusting to life with a chronic condition Avoidant/restrictive food intake disorder (ARFID) Mental health and well-being: Guided meditations Watch or listen to these guided meditations when you feel overwhelmed or stressed, or to help you manage physical and emotional pain. Find a quiet, comfortable space and press play. Mental health, well-being and ce...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who are being evaluated for celiac disease at SickKids can have the necessary tests done as an outpatient visit—meaning they go home the same day. In very rare cases, a brief overnight stay (usually 1–2 nights) might be needed if the child requires deeper sedation, has a medical condition that makes the team cautious, or if there are unexpected complications. Your child’s care team will let you know exactly what to expect before the day of the procedure.
+
+---
+
+### What the “SickKids Celiac Disease 8613” evaluation usually involves
+
+| Step | What happens | Typical setting | Typical time |
+|------|--------------|-----------------|--------------|
+| **Blood tests** | A quick draw of blood to look for celiac‑specific antibodies | Outpatient clinic | 10–15 min |
+| **Upper endoscopy with biopsy** | A small camera is passed through the mouth to the small intestine. Tiny tissue samples (biopsies) are taken to look for damage caused by celiac disease. | Outpatient endoscopy suite | 30–45</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease 8613.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease 8613.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

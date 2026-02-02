@@ -1,0 +1,166 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Celiac Disease 4826" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is a gluten‑free diet being recommended for your child?**  
+
+I’m glad you’re asking—understanding the “why” can help you feel more confident about the plan and make it easier to support your child at home.
+
+---
+
+### 1. What’s happening in the gut?
+
+- **Celiac disease is an autoimmune reaction**: when gluten (a protein found in wheat, barley, rye, and foods that contain them) is swallowed, the immune system mistakenly attacks the lining of the small intestine.  
+- **The lining gets damaged** (villous atrophy), which means the intestine can’t absorb nutrients properly. This can lead to:
+  - **Growth problems** (slower height/weight gain, delayed puberty)
+  - **Digestive symptoms** (diarrhea, bloating, abdominal pain)
+  - **Other health issues** (anemia, bone weakness, skin rash, fatigue)
+
+---
+
+### 2. Why a gluten‑free diet is the only proven treatment
+
+- **Removing gluten stops the immune attack**. Once gluten is eliminated, the intestinal lining can heal, symptoms improve, and nutrient absorption returns to normal.  
+- **There are no medications that cure celiac disease**—the diet is the only way to reverse the intestinal damage and prevent long‑term complications (e.g., osteoporosis, infertility, certain cancers).  
+- **Early, strict adherence is especially important in children** because it supports normal growth and development.
+
+---
+
+### 3. What the treatment plan looks like</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease 4826.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are a few different ways to approach celiac disease in children, but the most reliable and widely accepted treatment is a strict, lifelong gluten‑free diet. Other options (dietary supplements, medications, or experimental therapies) can be considered in specific situations, but they are not replacements for the diet and are usually discussed only after you’ve tried the diet for a while or if your child has particular complications.  
+
+---
+
+### 1. What the “SickKids Celiac Disease 4826” procedure usually means  
+The number you see (4826) is just the internal code for the program or clinic at SickKids that manages celiac disease. It isn’t a single test or surgery. In most cases, the clinic will:
+
+| Typical step | What it involves | Why it matters |
+|--------------|------------------|----------------|
+| **Blood tests** (tTG‑IgA, EMA, total IgA) | Detect antibodies that signal an immune reaction to gluten | First screening tool |
+| **Genetic</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How will the treatment be performed?**  
+
+I understand that hearing about a medical procedure can feel overwhelming, especially when it involves your child. Below is a plain‑language overview of what typically happens when a child is diagnosed with celiac disease at SickKids (procedure code 4826). I’ll also point out the parts that will be tailored to your child’s needs and the things that the medical team will discuss with you in more detail.
+
+---
+
+### 1. **Initial Evaluation – “Getting the facts”**
+
+| Step | What happens | Why it matters for your child |
+|------|--------------|------------------------------|
+| **Blood tests** | A quick draw of a few milliliters of blood (usually from a vein in the arm). | Detects antibodies that indicate the immune system is reacting to gluten. |
+| **Growth &amp; nutrition</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer**
+
+- **Sedation / anesthesia** – Whether your child will need sedation or general anesthesia depends on the exact test or treatment that will be done. For many celiac‑disease procedures (e.g., an upper endoscopy with biopsy or a small‑bowel capsule study), a short‑acting sedative or light anesthesia is often used so the child can stay still and comfortable.  
+- **Pediatric anesthesia specialist** – Yes, SickKids has a dedicated pediatric anesthesia team. If sedation or general anesthesia is planned, a pediatric anesthesiologist will be part of the care team and will monitor your child throughout the procedure.
+
+---
+
+### What to expect
+
+| **Type of procedure** | **Typical sedation/anesthesia** | **Why it’s used** | **Who monitors it?** |
+|------------------------|--------------------------------|-------------------|-----------------------|
+| **Upper endoscopy with biopsy** | Light sedation (intravenous midazolam + fentanyl) or general anesthesia (propofol) | Keeps the child still, reduces discomfort, and allows the doctor to take tissue samples safely | Pediatric anesthesiologist + anesthesia nurse |
+| **Capsule endoscopy (small‑bowel capsule)** | Often no sedation – the child swallows a pill‑sized camera | The procedure is non‑invasive and usually well tolerated | No anesthesia needed, but the team will be on hand if the child feels uncomfortable |
+| **Imaging studies (MRI, CT, ultrasound)** | Mild sedation (midazolam) or none | Helps the child stay still for clear images | Pediatric anesthesiologist or sedation nurse |
+| **Biopsy of the small intestine (via endoscopy)** | Light sedation or general anesthesia |</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease 4826.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Navigating holidays with celiac disease Navigating the school environment with celiac disease Navigating summer camps with celiac disease Travelling with celiac disease Celiac disease and Halloween: Tips and tricks Mental health and wellbeing: General resources Managing celiac disease can have an impact on both your and your child's mental health and wellbeing. In this section, find information on managing anxiety, functional disorders, the connection between the mind and body, as well as inform...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+In most cases, a child with celiac disease does **not** need to stay in the hospital.  If a diagnostic test (such as an upper‑GI endoscopy with biopsy) or a brief treatment (e.g., IV fluids for dehydration) is required, it is usually done on an outpatient basis or as a short overnight stay—often just a few hours to one night.  Only if there are serious complications (severe malnutrition, intestinal bleeding, or an associated condition like lymphoma) would a longer admission be considered.
+
+---
+
+### Why most children can be managed outside the hospital
+
+| What the child needs | Typical setting | Why it’s usually outpatient |
+|----------------------|-----------------|-----------------------------|
+| **Blood tests** (to confirm the diagnosis) | Clinic or lab visit | No need for monitoring after the draw |
+| **Upper‑GI endoscopy with biopsy** | Same‑day procedure | The child is monitored for a short period after the procedure and then discharged |
+| **Dietary counseling &amp; follow‑up** | Outpatient visits | The</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease 4826.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease 4826.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

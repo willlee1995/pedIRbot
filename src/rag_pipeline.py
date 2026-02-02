@@ -4,6 +4,8 @@ from loguru import logger
 
 from src.retriever import HybridRetriever
 from src.llm import LLMProvider
+from src.query_grader import QueryGrader, QueryType, SuggestedAction
+from src.safety_guard import SafetyGuard, RiskLevel
 
 
 class RAGPipeline:
@@ -54,17 +56,37 @@ Every response you provide must end with the following disclaimer:
 (Chinese version: "請記住，此資訊僅供教育目的，不能代替專業醫療建議。請務必與您的醫生或護士討論任何具體的醫療問題或疑慮。")
 """
 
-    def __init__(self, retriever: HybridRetriever, llm_provider: LLMProvider):
+    def __init__(self, retriever: HybridRetriever, llm_provider: LLMProvider, 
+                 use_grader: bool = True, use_safety_guard: bool = True):
         """
         Initialize the RAG pipeline.
 
         Args:
             retriever: HybridRetriever instance
             llm_provider: LLMProvider instance
+            use_grader: Whether to use the query grader agent
+            use_safety_guard: Whether to use the safety guardrail agent
         """
         self.retriever = retriever
         self.llm = llm_provider
-        logger.info("Initialized RAG pipeline")
+        self.use_grader = use_grader
+        self.use_safety_guard = use_safety_guard
+        
+        # Initialize query grader if enabled
+        if use_grader:
+            self.query_grader = QueryGrader(llm_provider)
+            logger.info("Initialized RAG pipeline with QueryGrader")
+        else:
+            self.query_grader = None
+            logger.info("Initialized RAG pipeline without QueryGrader")
+        
+        # Initialize safety guard if enabled
+        if use_safety_guard:
+            self.safety_guard = SafetyGuard(llm_provider, use_llm_check=True)
+            logger.info("Initialized RAG pipeline with SafetyGuard")
+        else:
+            self.safety_guard = None
+            logger.info("Initialized RAG pipeline without SafetyGuard")
 
     def _check_emergency(self, query: str) -> Optional[str]:
         """
@@ -132,7 +154,26 @@ Every response you provide must end with the following disclaimer:
         """
         logger.info(f"Processing query: {query[:100]}...")
 
-        # Check for emergency keywords
+        # Safety Guard: Pre-query assessment
+        safety_assessment = None
+        if self.use_safety_guard and self.safety_guard:
+            safety_assessment = self.safety_guard.assess_query(query)
+            logger.info(f"Safety assessment: {safety_assessment.risk_level.value} (emergency: {safety_assessment.is_emergency})")
+            
+            # Handle critical emergencies from SafetyGuard
+            if safety_assessment.is_emergency or safety_assessment.risk_level == RiskLevel.CRITICAL:
+                logger.warning(f"SafetyGuard detected emergency: {safety_assessment.clinical_concerns}")
+                return {
+                    'response': self.safety_guard.get_emergency_response(query),
+                    'sources': [],
+                    'is_emergency': True,
+                    'safety_assessment': {
+                        'risk_level': safety_assessment.risk_level.value,
+                        'concerns': safety_assessment.clinical_concerns
+                    }
+                }
+
+        # Check for emergency keywords (fallback if SafetyGuard disabled)
         emergency_response = self._check_emergency(query)
         if emergency_response:
             return {
@@ -153,22 +194,54 @@ Every response you provide must end with the following disclaimer:
                 'is_emergency': False
             }
 
-        # Filter out low-quality matches (cosine similarity < 0.4)
-        MIN_RELEVANCE_SCORE = 0.4
-        high_quality_docs = [doc for doc in retrieved_docs if doc.get('score', 0) >= MIN_RELEVANCE_SCORE]
+        # Use query grader if enabled
+        if self.use_grader and self.query_grader:
+            # Grade the query
+            query_classification = self.query_grader.grade_query(query, use_llm=False)  # Fast path for now
+            logger.info(f"Query classified as: {query_classification.query_type.value} (confidence: {query_classification.confidence:.2f})")
+            
+            # Grade retrieved documents
+            grading_result = self.query_grader.grade_documents(query, retrieved_docs, use_llm=False)
+            logger.info(f"Document grading: can_answer={grading_result.can_answer}, action={grading_result.suggested_action.value}")
+            
+            # Handle grading results
+            if grading_result.suggested_action == SuggestedAction.EXPAND_SEARCH and not grading_result.can_answer:
+                # Try expanding the search
+                logger.info("Expanding search due to insufficient relevant documents")
+                expanded_docs = self.retriever.retrieve(query, k=k*2, filter_dict=filter_dict)
+                grading_result = self.query_grader.grade_documents(query, expanded_docs, use_llm=False)
+                
+                if grading_result.filtered_docs:
+                    retrieved_docs = grading_result.filtered_docs
+                    logger.info(f"Expanded search found {len(retrieved_docs)} useful documents")
+            elif grading_result.filtered_docs:
+                # Use filtered docs if we have them
+                retrieved_docs = grading_result.filtered_docs
+                logger.info(f"Using {len(retrieved_docs)} graded documents")
+            
+            if not grading_result.can_answer and not grading_result.filtered_docs:
+                logger.warning("Query grader determined we cannot answer this query")
+                return {
+                    'response': "I'm sorry, I couldn't find sufficiently relevant information to answer that question confidently. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?",
+                    'sources': [],
+                    'is_emergency': False
+                }
+        else:
+            # Original filtering logic (fallback)
+            MIN_RELEVANCE_SCORE = 0.4
+            high_quality_docs = [doc for doc in retrieved_docs if doc.get('score', 0) >= MIN_RELEVANCE_SCORE]
 
-        if not high_quality_docs:
-            logger.warning(f"All retrieved documents below quality threshold ({MIN_RELEVANCE_SCORE})")
-            logger.warning(f"Top score: {retrieved_docs[0].get('score', 0):.3f}")
-            return {
-                'response': "I'm sorry, I couldn't find sufficiently relevant information to answer that question confidently. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?",
-                'sources': [],
-                'is_emergency': False
-            }
+            if not high_quality_docs:
+                logger.warning(f"All retrieved documents below quality threshold ({MIN_RELEVANCE_SCORE})")
+                logger.warning(f"Top score: {retrieved_docs[0].get('score', 0):.3f}")
+                return {
+                    'response': "I'm sorry, I couldn't find sufficiently relevant information to answer that question confidently. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?",
+                    'sources': [],
+                    'is_emergency': False
+                }
 
-        # Use high-quality docs only
-        retrieved_docs = high_quality_docs
-        logger.info(f"Using {len(retrieved_docs)} high-quality documents (score >= {MIN_RELEVANCE_SCORE})")
+            retrieved_docs = high_quality_docs
+            logger.info(f"Using {len(retrieved_docs)} high-quality documents (score >= {MIN_RELEVANCE_SCORE})")
 
         # Format context
         context = self._format_context(retrieved_docs)
@@ -184,19 +257,41 @@ Every response you provide must end with the following disclaimer:
         logger.info("Generating LLM response...")
         response = self.llm.generate(messages, temperature=temperature)
 
+        # Safety Guard: Post-response validation and warning injection
+        if self.use_safety_guard and self.safety_guard and safety_assessment:
+            # Validate the response (only check if it should be blocked)
+            is_safe, _ = self.safety_guard.validate_response(query, response)
+            
+            if not is_safe:
+                logger.warning("SafetyGuard blocked unsafe response")
+                response = "I apologize, but I'm not able to provide specific advice for your situation. Please contact your medical team directly for guidance on this matter."
+            
+            # Add safety warnings based on risk level (from pre-query assessment)
+            response = self.safety_guard.add_safety_wrapper(response, safety_assessment)
+
         # Prepare result
         result = {
             'response': response,
             'is_emergency': False
         }
+        
+        # Add safety info if available
+        if safety_assessment:
+            result['safety_assessment'] = {
+                'risk_level': safety_assessment.risk_level.value,
+                'concerns': safety_assessment.clinical_concerns
+            }
 
         if include_sources:
             result['sources'] = [
                 {
-                    # Truncate for brevity
-                    'content': doc['content'][:200] + '...',
+                    'content': doc['content'],  # Full content, not truncated
                     'source_org': doc['metadata'].get('source_org', 'Unknown'),
                     'filename': doc['metadata'].get('filename', 'Unknown'),
+                    'procedure': doc['metadata'].get('procedure', 'Unknown'),
+                    'question_category': doc['metadata'].get('question_category', 'Unknown'),
+                    'answer_part': doc['metadata'].get('answer_part', 'Unknown'),
+                    'is_qna': doc['metadata'].get('is_qna', False),
                     'score': doc['score']
                 }
                 for doc in retrieved_docs
@@ -246,8 +341,13 @@ Every response you provide must end with the following disclaimer:
             'type': 'sources',
             'content': [
                 {
+                    'content': doc['content'],  # Full content
                     'source_org': doc['metadata'].get('source_org', 'Unknown'),
                     'filename': doc['metadata'].get('filename', 'Unknown'),
+                    'procedure': doc['metadata'].get('procedure', 'Unknown'),
+                    'question_category': doc['metadata'].get('question_category', 'Unknown'),
+                    'answer_part': doc['metadata'].get('answer_part', 'Unknown'),
+                    'is_qna': doc['metadata'].get('is_qna', False),
                     'score': doc['score']
                 }
                 for doc in retrieved_docs

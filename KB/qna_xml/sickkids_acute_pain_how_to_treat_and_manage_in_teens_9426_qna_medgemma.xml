@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Acute Pain How To Treat And Manage In Teens 9426" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why are we recommending the 3‑P pain‑management plan for your teen?**
+
+---
+
+### 1. What the 3‑P approach actually is  
+The “3‑P” strategy is a **comprehensive, evidence‑based way to help teens feel less pain** when they’re sick, injured, or going through a medical procedure. It combines three types of tools that work together, just like the three legs of a stool:
+
+| **P** | **What it means** | **How it helps** |
+|-------|-------------------|------------------|
+| **Psychological** | Mind‑body tricks (distraction, guided imagery, breathing) | Keeps the teen’s mind focused on something other than pain, which can lower the sensation of pain and reduce anxiety. |
+| **Physical** | Cold/heat packs, gentle movement, positioning | Reduces swelling, relaxes muscles, and can directly numb the painful area. |
+| **Pharmacological** | Medications (e.g., acetaminophen, ibuprofen, or stronger pain relievers if needed) | Provides the chemical “pain‑killer” effect that the body needs when pain is too intense for the other tools alone. |
+
+---
+
+### 2. Why this mix is especially good for teens
+
+| **Reason** | **Why it matters for a teen** |
+|------------|------------------------------|
+| **Teens are still developing** | Their nervous system is more sensitive to pain and stress. Using a balanced approach helps protect their growing brains and bodies. |
+| **They’re more likely to be active and engaged** | Distraction tools (video games, VR, music) tap into what teens enjoy, making pain relief feel less like a medical “treatment” and more like a normal part of the day. |
+| **Reduces medication side‑effects** | By using non‑drug</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Acute Pain How To Treat And Manage In Teens 9426.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Acute Pain How To Treat And Manage In Teens 9426.</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Acute Pain How To Treat And Manage In Teens 9426.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Acute Pain How To Treat And Manage In Teens 9426.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Acute Pain How To Treat And Manage In Teens 9426.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Acute Pain How To Treat And Manage In Teens 9426.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Acute Pain How To Treat And Manage In Teens 9426.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Acute Pain How To Treat And Manage In Teens 9426.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Acute Pain How To Treat And Manage In Teens 9426.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

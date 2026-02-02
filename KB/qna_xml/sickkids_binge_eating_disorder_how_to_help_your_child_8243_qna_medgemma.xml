@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Binge Eating Disorder How To Help Your Child 8243" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is treatment being recommended for your child?**
+
+I’m glad you’re asking this question—understanding the “why” can help you feel more confident and involved in your child’s care.
+
+| Why we recommend treatment | What it means for your child |
+|-----------------------------|------------------------------|
+| **Binge‑Eating Disorder (BED) is a real medical condition** | BED isn’t just “eating too much.” It’s a pattern of eating that can cause physical health problems (e.g., high blood pressure, type‑2 diabetes) and emotional distress (e.g., shame, anxiety, depression). |
+| **Early treatment improves outcomes** | The sooner we start, the less the disorder can affect your child’s growth, school performance, and relationships. |
+| **Multidisciplinary care gives the best chance of recovery** | A team that includes a pediatrician, dietitian, therapist, and sometimes a psychiatrist can address all the ways BED shows up—body, mind, and behavior. |
+| **Cognitive‑Behavioral Therapy (CBT) is the proven first‑line treatment** | CBT helps your child recognize and change the thoughts and habits that lead to binges, learn healthier coping skills, and build a more balanced relationship with food. |
+| **Family involvement is key** | Your support and understanding help your child feel safe, reduce shame, and create a home environment that encourages regular, balanced meals. |
+| **Medication may help when mood disorders are present** | If your child also has depression or anxiety, a doctor might add an antidepressant. These can reduce the urge to binge and improve overall mood. |
+| **We want to protect your child’s future health** | Untreated BED can lead to long‑term health problems, including obesity, heart disease, and ongoing mental health issues. Treatment helps prevent those complications. |
+
+### What to expect
+
+1. **Assessment** – The team will review your child’s eating patterns, mood, and physical health to confirm the diagnosis and rule out other conditions.
+2. **Individualized plan** – Based on that assessment,</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Binge Eating Disorder How To Help Your Child 8243.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Binge Eating Disorder How To Help Your Child 8243.</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Binge Eating Disorder How To Help Your Child 8243.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Binge Eating Disorder How To Help Your Child 8243.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Binge Eating Disorder How To Help Your Child 8243.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Binge Eating Disorder How To Help Your Child 8243.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Binge Eating Disorder How To Help Your Child 8243.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Binge Eating Disorder How To Help Your Child 8243.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Binge Eating Disorder How To Help Your Child 8243.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

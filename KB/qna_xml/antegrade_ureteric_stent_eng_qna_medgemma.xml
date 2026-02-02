@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<procedure name="Antegrade Ureteric Stent Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is an antegrade ureteric stent being recommended for your child?**
+
+I understand that hearing about a new procedure can feel overwhelming, especially when it involves your little one. I’ll try to explain in plain language what the doctors are hoping to achieve and why this particular approach is being chosen.
+
+---
+
+### 1. What the stent does
+
+* **Relieves a blockage** – If something is blocking the tube that carries urine from the kidney to the bladder (the ureter), the stent acts like a tiny “pipe” that keeps the urine flowing freely.  
+* **Reduces pressure** – When the ureter is blocked, urine backs up into the kidney, raising pressure that can damage the kidney over time. The stent lowers that pressure.  
+* **Helps heal** – In cases where there is a tear or leak (a fistula) in the kidney’s collecting system or the ureter, the stent keeps the area open and allows it to heal without urine leaking into the surrounding tissues.
+
+---
+
+### 2. Why an *antegrade* (kidney‑first) approach is chosen
+
+* **Direct access to the kidney** – The stent is inserted from the kidney down the ureter. This route is often easier and safer when the blockage is high up in the ureter or when the child’s anatomy makes a bladder‑first (retrograde) approach difficult.  
+* **Less disturbance to the bladder** – Because the stent is placed from the kidney side, we avoid manipulating the bladder, which can be especially gentle for a small child.  
+* **Better positioning** – The “pigtail” loops at both ends of the stent help keep it securely in place once it’s in the kidney and bladder, reducing the chance of it moving or becoming dislodged.
+
+---
+
+### 3. Pediatric‑specific considerations
+
+| Issue | Why it matters for children | How we address it |
+|-------|-----------------------------|-------------------|
+| **Size** | Children’s kidneys, ureters, and bladders are much smaller. | We use st</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Antegrade Ureteric Stent Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are a few other ways doctors can relieve a blocked ureter or keep the kidney from swelling. Which one is best depends on your child’s exact situation, how long the blockage is expected to last, and how comfortable the child is with the different procedures. Your team will discuss all of these options with you so you can choose the one that feels right for your family.
+
+---
+
+### 1.  Percutaneous Nephrostomy (PCN) alone  
+* **What it is** – A small tube is inserted directly through the skin into the kidney to drain urine.  
+* **When it’s used** – If the blockage is very severe, if the child is too young or too small for a stent, or if the doctors want to keep the kidney “clean” while they plan a longer‑term fix.  
+* **Pros** – Quick, can be done under local anesthesia, and keeps the kidney from swelling.  
+* **Cons** – The tube sits outside the body, so it can be uncomfortable, may need to be changed or removed later, and can be a bit more visible.
+
+---
+
+### 2.  Retrograde (cystoscopic) ureteric stenting  
+* **What it is** – A stent is put in from the bladder up through the urethra and into the ureter, using a small camera (cystoscope).  
+* **When it’s used** – Often in older children or when the blockage is near the bladder.  
+* **Pros** – No external tube, so it’s less visible and usually more comfortable once the child is awake.  
+* **Cons** – Requires anesthesia, and in very small kids the urethra may be too narrow for the scope.
+
+---
+
+### 3.  Surgical repair or reconstruction  
+* **What it is** – If the blockage is</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the antegrade ureteric stent will be placed**
+
+I know that a new procedure can feel overwhelming, especially when it involves your child’s kidneys and bladder. Below is a step‑by‑step overview of what will happen, written in plain language and tailored to a pediatric patient. If anything is unclear or you have more questions, please let the team know right away – we’ll explain everything in detail and answer any concerns you have.
+
+---
+
+### 1. Preparation (the “pre‑procedure” phase)
+
+| What happens | Why it matters for your child |
+|--------------|------------------------------|
+| **Same prep as a percutaneous nephrostomy (PCN)** – your child will be positioned on the operating table in a *prone* (face‑down) position. | This position gives the doctors the best view of the kidney and ureter. |
+| **Local anesthesia + sedation** – the child will receive a local anesthetic at the puncture site and a mild sedative (or general anesthesia if needed). | Keeps the child comfortable and still during the procedure. |
+| **Fluoroscopic or ultrasound guidance** – the team will use real‑time X‑ray (fluoroscopy) or ultrasound to see the kidney, the puncture path, and the stent as it is advanced. | Ensures the instruments go exactly where they should. |
+
+---
+
+### 2. The actual procedure (≈ 1 hour)
+
+1.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer for Parents**
+
+**Will my child need sedation or anesthesia for the antegrade ureteric stent placement?**  
+Yes. Because the procedure involves inserting a small tube (the stent) through the kidney and down the ureter while the child is lying prone, we usually use some form of sedation or anesthesia to keep the child comfortable and still.  
+
+- **For younger or less cooperative children** (often under 5–7 years old, or if the child is anxious or has difficulty staying still), we typically use **general anesthesia**.  
+- **For older children** who can sit or lie still for a short time, we may use **conscious sedation** (a mild sedative given through a vein) so the child stays relaxed but can still</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What we’ll do to get your child ready for the antegrade ureteric stent placement**
+
+The preparation for this procedure is almost the same as the one we use for a percutaneous nephrostomy (PCN). Below is a simple checklist and a few things you can do at home to help your child feel comfortable and safe.
+
+| Step | What it means | Why it matters | What you can do at home |
+|------|---------------|----------------|------------------------|
+| **1. Fast before the procedure** | Your child should not eat or drink for a certain period (usually 6–8 hours) before the procedure. | This keeps the stomach empty so the risk of vomiting or aspiration during anesthesia is minimized. | Ask the team for the exact fasting time. If it’s 8 hours, you can start the last meal the night before and give a small snack (fruit juice, crackers) after the fasting period ends. |
+| **2. Medication instructions** | Some children may need to stop certain medications (e.g., blood thinners, certain antibiotics) a few days before. | Stopping or adjusting meds reduces bleeding risk and ensures the procedure can be done safely. | Bring a list of all medications your child is taking. The team will tell you which ones to stop or adjust. |
+| **3. Blood tests &amp; imaging** | We’ll do a quick blood test (CBC, electrolytes, clotting profile) and review any recent imaging (ultrasound, CT, MRI). | These tests confirm that the child’s blood is clotting normally and help us plan</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> The preprocedure preparation of antegrade ureteric stenting is similar to that of percutaneous nephrostomy (PCN). (Please refer to “Percutaneous Nephrostomy (PCN)” leaflet)  Percutaneous nephrostomy is performed with patient lying prone and under fluoroscopic or ultrasound guidance (Please refer to “Percutaneous Nephrostomy (PCN)” leaflet)  The placement of ureteric stent requires fluoroscopic guidance. After insertion of the ureteric stent, a nephrostomy catheter is placed in renal pelvis. ...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who get an antegrade ureteric stent can go home the same day or after an overnight stay. In a few cases, the team may decide to keep the child in the hospital for a day or two to watch for any early complications. Your child’s care team will let you know exactly what to expect before the procedure.
+
+---
+
+### What the procedure is like
+
+* **Antegrade ureteric stenting** is a small‑in‑size, minimally invasive way to keep the kidney’s drainage tube (the ureter) open.  
+* The technique is almost the same as a percutaneous nephrostomy (PCN), which many families are already familiar with.  
+* The child is usually positioned on their belly (prone) and the procedure is guided by fluoroscopy (real‑time X‑ray) or ultrasound.  
+* The doctor makes a tiny puncture in the kidney, threads a guidewire up the ureter, and places a small stent that keeps the tube open.
+
+---
+
+### Hospital stay – what you can expect
+
+| Phase | Typical timing | What happens |
+|-------|----------------|--------------|
+| **Pre‑procedure** | Same day | The child is checked, given a mild sedative or anesthesia, and the team does a quick ultrasound or X‑ray to plan the puncture. |
+| **Procedure** | 30–60</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Antegrade Ureteric Stent Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Antegrade Ureteric Stent Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<procedure name="Tips Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why a TIPS is being recommended for your child**
+
+I know this can feel overwhelming, so I’ll try to explain in plain terms what a TIPS (Trans‑jugular Intra‑hepatic Portosystemic Shunt) is, why it might be the best option for your child right now, and what you can expect from the care team.
+
+---
+
+### 1. What is a TIPS?
+
+- **A tiny “shortcut” inside the liver** – The procedure creates a small, intentional connection between a vein that carries blood from the liver (the hepatic vein) and a vein that brings blood into the liver from the rest of the body (the portal vein).  
+- **How it works** – By connecting these two veins, blood can bypass the high‑pressure area in the portal system and flow more easily toward the heart.  
+- **Why it matters** – The portal vein normally carries nutrient‑rich blood from the gut to the liver. When that blood can’t flow normally, pressure builds up (portal hypertension) and causes serious problems.
+
+---
+
+### 2. What problems does portal hypertension cause in children?
+
+- **Variceal bleeding** – Tiny, fragile veins in the esophagus or stomach can enlarge (varices) and rupture, leading to life‑threatening bleeding.  
+- **Portal gastropathy** – The stomach lining can become swollen and bleed.  
+- **Severe ascites** – Fluid can accumulate in the abdomen, making breathing difficult and causing discomfort.  
+- **Hydrothorax** – Fluid can leak into the chest cavity, further impairing breathing.  
+- **Budd‑Chiari syndrome** – Rarely, blood flow back from the liver to the heart can be blocked, causing liver congestion and damage.
+
+These complications can be acute (sudden, urgent) or chronic (long‑term). In children, the liver and blood vessels are still growing, so the impact can be more pronounced and the options for surgery are limited.
+
+---
+
+### 3. Why a TIPS is recommended for your child
+
+| Reason | How a TIPS helps |
+|--------|------------------|</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Tips Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several ways to help a child with portal‑systemic hypertension or bleeding varices that do not involve a TIPS. Which option is best depends on the child’s age, the size of the liver, the underlying liver disease, and how the child is doing overall. The medical team will review all of these possibilities with you and decide together what makes the most sense for your child.
+
+---
+
+## 1. Medical (non‑procedure) management  
+* **Medications** – Diuretics (e.g., spironolactone, furosemide) to reduce fluid buildup, beta‑blockers to lower portal pressure, and sometimes antibiotics to prevent bacterial infections that can worsen liver function.  
+* **Dietary changes** – Low‑salt diet, adequate protein, and sometimes a specialized diet if the child has liver disease.  
+* **Monitoring** – Regular blood tests and ultrasounds to watch liver function and portal pressure.
+
+These measures can control symptoms for many children, especially if the portal hypertension is mild or the underlying liver disease is slowly progressing.
+
+---
+
+## 2. Endoscopic and radiologic therapies for bleeding varices  
+* **Endoscopic band ligation** – A small “band”</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the TIPS (Trans‑Splenic Intra‑Portal Shunt) procedure will be done for your child**
+
+I know this can feel overwhelming, so I’ll walk you through each step in plain language and let you know what to expect. If anything isn’t clear, just let me know—I’m here to help.
+
+---
+
+### 1. **Before the Procedure**
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Imaging &amp; Blood Tests** – We’ll do an ultrasound, maybe a CT scan, and draw a few blood samples. | These help us see the exact shape of the veins in your child’s liver and check how well the liver is working. |
+| **IV line &amp; Urine catheter** – A small needle is placed in a vein (usually in the arm) for medication and fluids, and a tiny tube is inserted into the bladder to keep track of urine output. | The IV lets us give medications quickly. The catheter helps us monitor kidney function and fluid balance during the procedure. |
+| **Vital‑sign monitoring** – Heart rate, blood pressure, oxygen level, and breathing are watched continuously. | Keeps us sure everything stays stable while we work. |
+
+---
+
+### 2. **During the Procedure**
+
+| Step | How it’s done | What your child feels |
+|------|---------------|-----------------------|
+| **Sedation** | Most kids receive *conscious sedation* (they’re relaxed but still awake). In some cases, *local anesthesia* (numbing the area) plus sedation is enough. If your child is very young or anxious, we may use *general anesthesia* (they’re asleep). | Your child will feel very calm or asleep. We’ll keep them comfortable and safe. |
+| **Accessing the Vein** | We insert a thin needle into the right internal jugular vein in the neck. A small catheter and a guidewire thread through the vein, up the superior vena cava, into</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer**
+
+- **Sedation / anesthesia** – Most children receive a combination of local anesthesia (so the needle and catheter are numbed) plus **conscious sedation** (a medication that makes them relaxed and sleepy but still able to respond to simple commands).  
+- **General anesthesia** – This is used only when the child is very young, has a history of severe anxiety or difficulty staying still, or if the procedure</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What you can do to help your child feel ready for the procedure**
+
+Below is a simple “check‑list” of the most common things that the team will ask you to do before the interventional radiology (IR) procedure.  The goal is to make the day run smoothly and to keep your child safe and comfortable.
+
+| Step | Why it matters | What you’ll do | Tips for parents |
+|------|----------------|----------------|------------------|
+| **1. Pre‑procedure tests** | Ultrasound, CT, and blood work let the doctors see exactly where the needle will go and check that the liver is working well. | Bring the child to the clinic or hospital for these tests the day before or a few days before the procedure. | Ask the nurse if the child needs to fast before the blood draw or CT.  Usually a short fast (no solids, only clear liquids) is enough. |
+| **2. Fasting** | Fasting reduces the risk of vomiting and aspiration if the child needs sedation or general anesthesia. | 6–8 hours before the procedure: no solid food; 2–4 hours before: clear liquids (water, diluted juice, clear soup). | Keep a small bottle of water handy for the child to sip up to 1 hour before the start time. |
+| **3. Medications** | Some children may need a pre‑medication to calm nerves or to reduce the need for a higher dose of sedatives. | Follow the doctor’s instructions exactly.  If a medication is prescribed, give it at the time and dose the team recommends. | Keep a medication log (time, dose, name) to avoid double‑dosing. |
+| **4. IV line and urinary catheter** | The IV line delivers medications and fluids; the catheter keeps the bladder empty so the abdominal area stays</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> Before the procedure, some examinations will be performed, which may include ultrasound, CT scan and blood examination to assess the anatomy and liver function. An intravenous line will be set and a urinary catheter will be inserted. Your vital signs will be monitored throughout the procedure.  The procedure is usually done under local anaesthesia and conscious sedation, general anaesthesia may be used in special occasion   The usual access site is the right internal jugular vein at your ne...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+I understand that you’re wondering whether your child will need to stay in the hospital after the TIPS (Transjugular Intra‑hepatic Portosystemic Shunt) procedure and, if so, how long. Here’s what we can share based on what is typical for pediatric patients, while keeping in mind that the exact plan will be confirmed by your child’s medical team.
+
+| **What Happens During the Procedure** | **What Happens After** |
+|---------------------------------------|------------------------|
+| • **Pre‑procedure work‑up** – ultrasound, CT, blood tests to map the liver and check liver function. &lt;br&gt;• **IV line** and **urinary catheter** are placed for medication delivery and urine output monitoring. &lt;br&gt;• **Vital signs** are continuously monitored. &lt;br&gt;• The procedure itself is done under general anesthesia or deep sedation. | • After the shunt is created, the child will be moved to a recovery area where the anesthesiologist will watch for any immediate complications (bleeding, low blood pressure, etc.). |
+| • **Procedure duration** – usually 1–2 hours. | • **First 24 hours** – the child is kept in a monitored room (often a step‑down or pediatric observation unit). Nurses check vital signs, pain, and the catheter site. |
+| • **No major incisions** – the shunt is created inside the liver through a small needle puncture, so there is no large</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Tips Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Tips Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

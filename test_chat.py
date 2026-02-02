@@ -4,6 +4,7 @@ from src.llm import get_llm_provider
 from src.retriever import HybridRetriever
 from src.vector_store import VectorStore
 from src.embeddings import get_embedding_model
+from src.conversation_memory import ConversationMemory
 from config import settings
 from loguru import logger
 import sys
@@ -45,6 +46,10 @@ def main():
 
         stats = vector_store.get_stats()
         print(f"✓ Vector store loaded: {stats['total_documents']} documents")
+        
+        # Initialize conversation memory
+        memory = ConversationMemory(max_turns=10)
+        print(f"✓ Conversation memory initialized (session: {memory.session_id})")
         print()
     except Exception as e:
         print(f"✗ Error initializing RAG system: {e}")
@@ -56,7 +61,8 @@ def main():
     print("  'quit' - Exit")
     print("  'stats' - Show vector store statistics")
     print("  'details' - Toggle detailed document display")
-    print("  'verbose' - Same as 'details'")
+    print("  'history' - Show conversation history")
+    print("  'clear' - Clear conversation memory")
     print("-" * 60)
     print()
 
@@ -88,6 +94,36 @@ def main():
                 print()
                 continue
 
+            if query.lower() == 'history':
+                mem_stats = memory.get_stats()
+                print(f"\n📝 Conversation History (Session: {mem_stats['session_id']})")
+                print(f"   Total turns: {mem_stats['total_turns']}")
+                if mem_stats['total_turns'] > 0:
+                    print("   Recent exchanges:")
+                    for turn in list(memory.history)[-6:]:
+                        role_icon = "👤" if turn.role == "user" else "🤖"
+                        content_preview = turn.content[:80] + "..." if len(turn.content) > 80 else turn.content
+                        print(f"   {role_icon} {content_preview}")
+                print()
+                continue
+
+            if query.lower() == 'clear':
+                memory.clear()
+                print("\n🗑️  Conversation memory cleared.")
+                print()
+                continue
+
+            # Check if this is a follow-up question
+            is_follow_up = memory.is_follow_up_question(query)
+            if is_follow_up:
+                enhanced_query = memory.enhance_query_with_context(query)
+                if enhanced_query != query:
+                    print(f"   (Detected follow-up question, adding context...)")
+                    query = enhanced_query
+
+            # Add user message to memory
+            memory.add_user_message(query)
+
             # Generate response
             print("\nPedIR-Bot: ", end="", flush=True)
 
@@ -97,6 +133,13 @@ def main():
             )
 
             print(result['response'])
+
+            # Add assistant response to memory
+            memory.add_assistant_message(
+                result['response'],
+                sources=result.get('sources'),
+                safety_info=result.get('safety_assessment')
+            )
 
             # Show sources
             if result.get('sources'):
@@ -127,7 +170,7 @@ def main():
                         # Show chunk content preview
                         content = source.get('content', '')
                         if content:
-                            preview_len = 200
+                            preview_len = 10000
                             print(f"\nContent preview:")
                             if len(content) > preview_len:
                                 print(f"{content[:preview_len]}...")

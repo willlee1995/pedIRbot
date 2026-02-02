@@ -1,0 +1,194 @@
+{
+  "search_results_pages": [
+    {
+      "url": "https://www.aboutkidshealth.ca/search/?text=IGT&language=en&facets=healthcategorylist%3Aprocedures",
+      "articles_found": 24,
+      "extracted_at": "2025-10-22T11:41:08.423352"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/search/?text=IGT&language=en&facets=healthcategorylist%3Aprocedures&pagenumber=2",
+      "articles_found": 1,
+      "extracted_at": "2025-10-22T11:41:10.039602"
+    }
+  ],
+  "extracted_articles": [
+    "https://www.aboutkidshealth.ca/healthaz/other/botox-therapy-for-spasticity/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/botox-injections-into-the-salivary-glands/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/port/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/chest-tube-insertion-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/oncology/intra-arterial-chemotherapy-for-retinoblastoma-caring-for-your-child-at-home-after-the-procedure/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/skin-and-muscle-biopsies-caring-for-your-child-at-home-after-the-procedure/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/nephrostomy-tube-insertion-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/peripherally-inserted-central-catheter-picc-insertion-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/central-venous-line-cvl-insertion-into-the-internal-jugular-vein-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/central-venous-line-cvl-insertion-into-the-femoral-vein-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/endovenous-laser-therapy-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/neonatology/vascular-access-in-the-nicu/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/skin-and-muscle-biopsy-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/bone-ablation-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/neurology/cerebral-angiography/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/varicocele-embolization-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/gastrointestinal/ggj-tubes-permanent-feeding-tube-removal/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/neurology/cerebral-endovascular-embolization/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/gastrointestinal/deciding-to-permanently-remove-a-feeding-tube/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/kidney-biopsy-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/oncology/intra-arterial-chemotherapy-for-retinoblastoma/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/gastrointestinal/ggj-tubes-primary-tube-insertion-by-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/gastrointestinal/g-tubes-corflo-peg-tube/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/other/cecostomy-tube-insertion-using-image-guidance/?language=en",
+    "https://www.aboutkidshealth.ca/healthaz/gastrointestinal/g-tubes-mic-peg-tube/?language=en"
+  ],
+  "scraped_articles": [
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/botox-therapy-for-spasticity/?language=en",
+      "title": "Botox therapy for spasticity",
+      "file": "sickkids_igt_Botox_therapy_for_spasticity_196.html",
+      "scraped_at": "2025-10-22T11:41:11.491791"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/botox-injections-into-the-salivary-glands/?language=en",
+      "title": "Botox injections into the salivary glands",
+      "file": "sickkids_igt_Botox_injections_into_the_salivary_glands_3029.html",
+      "scraped_at": "2025-10-22T11:41:13.811055"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/port/?language=en",
+      "title": "Port",
+      "file": "sickkids_igt_Port_689.html",
+      "scraped_at": "2025-10-22T11:41:16.112871"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/chest-tube-insertion-using-image-guidance/?language=en",
+      "title": "Chest tube insertion using image guidance",
+      "file": "sickkids_igt_Chest_tube_insertion_using_image_guidance_4473.html",
+      "scraped_at": "2025-10-22T11:41:18.639200"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/oncology/intra-arterial-chemotherapy-for-retinoblastoma-caring-for-your-child-at-home-after-the-procedure/?language=en",
+      "title": "Intra-arterial chemotherapy for retinoblastoma: Caring for your child at home after the procedure",
+      "file": "sickkids_igt_Intra_arterial_chemotherapy_for_retinoblastoma_Caring_for_your_child_at_home_aft_6583.html",
+      "scraped_at": "2025-10-22T11:41:20.977576"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/skin-and-muscle-biopsies-caring-for-your-child-at-home-after-the-procedure/?language=en",
+      "title": "Skin and muscle biopsies: Caring for your child at home after the procedure",
+      "file": "sickkids_igt_Skin_and_muscle_biopsies_Caring_for_your_child_at_home_after_the_procedure_9146.html",
+      "scraped_at": "2025-10-22T11:41:23.287891"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/nephrostomy-tube-insertion-using-image-guidance/?language=en",
+      "title": "Nephrostomy tube insertion using image guidance",
+      "file": "sickkids_igt_Nephrostomy_tube_insertion_using_image_guidance_3313.html",
+      "scraped_at": "2025-10-22T11:41:25.626118"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/peripherally-inserted-central-catheter-picc-insertion-using-image-guidance/?language=en",
+      "title": "Peripherally inserted central catheter (PICC) insertion using image guidance",
+      "file": "sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html",
+      "scraped_at": "2025-10-22T11:41:27.929656"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/central-venous-line-cvl-insertion-into-the-internal-jugular-vein-using-image-guidance/?language=en",
+      "title": "Central venous line (CVL) insertion into the internal jugular vein using image guidance",
+      "file": "sickkids_igt_Central_venous_line_CVL_insertion_into_the_internal_jugular_vein_using_image_gui_3386.html",
+      "scraped_at": "2025-10-22T11:41:30.241310"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/central-venous-line-cvl-insertion-into-the-femoral-vein-using-image-guidance/?language=en",
+      "title": "Central venous line (CVL) insertion into the femoral vein using image guidance",
+      "file": "sickkids_igt_Central_venous_line_CVL_insertion_into_the_femoral_vein_using_image_guidance_1145.html",
+      "scraped_at": "2025-10-22T11:41:32.568139"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/endovenous-laser-therapy-using-image-guidance/?language=en",
+      "title": "Endovenous laser therapy (EVLT) using image guidance",
+      "file": "sickkids_igt_Endovenous_laser_therapy_EVLT_using_image_guidance_8018.html",
+      "scraped_at": "2025-10-22T11:41:34.899322"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/neonatology/vascular-access-in-the-nicu/?language=en",
+      "title": "Vascular access in the NICU",
+      "file": "sickkids_igt_Vascular_access_in_the_NICU_9317.html",
+      "scraped_at": "2025-10-22T11:41:37.206114"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/skin-and-muscle-biopsy-using-image-guidance/?language=en",
+      "title": "Skin and muscle biopsy using image guidance",
+      "file": "sickkids_igt_Skin_and_muscle_biopsy_using_image_guidance_6366.html",
+      "scraped_at": "2025-10-22T11:41:39.529418"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/bone-ablation-using-image-guidance/?language=en",
+      "title": "Bone ablation using image guidance",
+      "file": "sickkids_igt_Bone_ablation_using_image_guidance_6136.html",
+      "scraped_at": "2025-10-22T11:41:41.845203"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/neurology/cerebral-angiography/?language=en",
+      "title": "Cerebral angiography",
+      "file": "sickkids_igt_Cerebral_angiography_4133.html",
+      "scraped_at": "2025-10-22T11:41:44.200322"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/varicocele-embolization-using-image-guidance/?language=en",
+      "title": "Varicocele embolization using image guidance",
+      "file": "sickkids_igt_Varicocele_embolization_using_image_guidance_2812.html",
+      "scraped_at": "2025-10-22T11:41:46.507812"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/gastrointestinal/ggj-tubes-permanent-feeding-tube-removal/?language=en",
+      "title": "G/GJ tubes: Permanent feeding tube removal",
+      "file": "sickkids_igt_GGJ_tubes_Permanent_feeding_tube_removal_8621.html",
+      "scraped_at": "2025-10-22T11:41:48.824778"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/neurology/cerebral-endovascular-embolization/?language=en",
+      "title": "Cerebral endovascular embolization",
+      "file": "sickkids_igt_Cerebral_endovascular_embolization_8353.html",
+      "scraped_at": "2025-10-22T11:41:51.124692"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/gastrointestinal/deciding-to-permanently-remove-a-feeding-tube/?language=en",
+      "title": "Deciding to permanently remove a feeding tube",
+      "file": "sickkids_igt_Deciding_to_permanently_remove_a_feeding_tube_5237.html",
+      "scraped_at": "2025-10-22T11:41:54.831272"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/kidney-biopsy-using-image-guidance/?language=en",
+      "title": "Kidney biopsy using image guidance",
+      "file": "sickkids_igt_Kidney_biopsy_using_image_guidance_4937.html",
+      "scraped_at": "2025-10-22T11:41:57.126608"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/oncology/intra-arterial-chemotherapy-for-retinoblastoma/?language=en",
+      "title": "Intra-arterial chemotherapy for retinoblastoma",
+      "file": "sickkids_igt_Intra_arterial_chemotherapy_for_retinoblastoma_6453.html",
+      "scraped_at": "2025-10-22T11:41:59.431640"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/gastrointestinal/ggj-tubes-primary-tube-insertion-by-image-guidance/?language=en",
+      "title": "G/GJ tubes: Primary tube insertion by image guidance",
+      "file": "sickkids_igt_GGJ_tubes_Primary_tube_insertion_by_image_guidance_7836.html",
+      "scraped_at": "2025-10-22T11:42:01.723184"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/gastrointestinal/g-tubes-corflo-peg-tube/?language=en",
+      "title": "G tubes: Corflo PEG tube",
+      "file": "sickkids_igt_G_tubes_Corflo_PEG_tube_459.html",
+      "scraped_at": "2025-10-22T11:42:04.063148"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/other/cecostomy-tube-insertion-using-image-guidance/?language=en",
+      "title": "Cecostomy tube insertion using image guidance",
+      "file": "sickkids_igt_Cecostomy_tube_insertion_using_image_guidance_7602.html",
+      "scraped_at": "2025-10-22T11:42:06.390292"
+    },
+    {
+      "url": "https://www.aboutkidshealth.ca/healthaz/gastrointestinal/g-tubes-mic-peg-tube/?language=en",
+      "title": "G tubes: MIC PEG tube",
+      "file": "sickkids_igt_G_tubes_MIC_PEG_tube_9099.html",
+      "scraped_at": "2025-10-22T11:42:08.731350"
+    }
+  ],
+  "last_scrape": "2025-10-22T11:42:10.732652"
+}

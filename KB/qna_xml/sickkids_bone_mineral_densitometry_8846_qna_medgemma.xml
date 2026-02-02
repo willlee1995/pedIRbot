@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Bone Mineral Densitometry 8846" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is a bone mineral densitometry (BMD) scan being recommended for your child?**  
+
+A BMD scan is a quick, painless X‑ray test that tells us how “strong” your child’s bones are. The results help us decide whether your child is at risk for fractures, whether they might need a change in medication, or whether we should start a treatment to help their bones grow stronger. Here’s why it’s often suggested for kids:
+
+| Why the test matters for children | What the scan tells us |
+|-----------------------------------|------------------------|
+| **Early detection of low bone density** | The scan gives a precise measurement of bone mineral content, which can be lower in kids with certain medical conditions (e.g., cystic fibrosis, inflammatory bowel disease, long‑term steroid use, or endocrine disorders). |
+| **Guiding treatment plans** | If the scan shows reduced bone density, we can start or adjust therapies (vitamin D, calcium, bisphosphonates, or lifestyle changes) before fractures occur. |
+| **Monitoring progress** | Repeating the scan after treatment lets us see if the bones are responding and adjust care if needed. |
+| **Assessing growth and development** | Children’s bones are still growing, so we need to know if growth is proceeding normally and if there are any delays or abnormalities. |
+| **Safety and low radiation** | The scan uses very low‑energy X‑rays—much less than a routine chest X‑ray—and the amount of radiation is considered safe for children. |
+
+### How the scan is performed
+- Your child will lie on a small table while a machine passes over the hip and spine (the most</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What the bone‑density scan (BMD) can do for your child**
+
+| **Benefit** | **Why it matters for a child</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+For measuring bone density in children, the most reliable and widely used test is the DXA scan (the “bone mineral densitometry” you described).  In most cases there isn’t a better alternative that gives the same level of precision.  However, if your child has a specific concern—such as a very short appointment window, extreme anxiety, or a medical condition that makes lying still difficult—there are a few other options that the team can discuss with you.  
+
+---
+
+## 1. Why DXA is the standard
+
+| Feature | DXA (the scan you’ll have) | Other options |
+|---------|---------------------------|---------------|
+| **Accuracy** | Gold‑standard for bone density in children and adults. | Quantitative ultrasound (QUS) is less precise; plain X‑ray or CT give density indirectly. |
+| **Radiation dose** | Very low (≈0.01 mSv for a child). | CT gives higher dose; QUS has no radiation but is less reliable. |
+| **Speed** | 5–10 minutes while lying still. | QUS is quick but requires a different machine; CT takes longer and needs more preparation. |
+| **Availability** | Available at most pediatric hospitals, including SickKids. | QUS machines are less common in hospitals; CT is usually reserved for other reasons. |
+
+Because DXA is both safe and accurate, it is the preferred choice for diagnosing low</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**What to expect during your child’s bone‑density scan**
+
+1.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+Most children can complete a bone‑density scan (BMD) without sedation or anesthesia. The technologist will let you know if your child needs help staying still, and if sedation is considered, a pediatric anesthesia specialist can be arranged.
+
+---
+
+### What to expect for your child
+
+| Step | What happens | Why it matters for your child |
+|------|--------------|------------------------------|
+| **Preparation** | The technologist will explain the scan and ask a few questions about your child’s bone health. If your child has metal or plastic under their clothes, they’ll change into a hospital gown. | This keeps the X‑ray image clear and safe. |
+| **Positioning** | Your child lies on their back on a scanner bed. | The scanner’s X‑ray tube moves above them; it doesn’t touch the body. |
+| **Scanning** | The X‑ray tube moves around the child to take images. | The child must stay still so the images are sharp. |
+| **No injection** | No needles or contrast dye are used. | Reduces discomfort and risk. |
+
+---
+
+### Sedation or anesthesia?
+
+- **Typical practice:**  
+  - **No sedation** is usually required for children who can lie still for a few minutes.  
+  - The technologist will observe your child’s comfort and ability to stay still. If your child is very young, anxious, or has difficulty staying still, the team may discuss a brief sedative.
+
+- **If sedation is needed:**  
+  - A **pediatric anesthesia specialist** can be brought in if the care team decides it’s safest.  
+  - The decision is made in consultation with the child’s pediatrician and the radiology team, and you will be informed ahead of time.
+
+---
+
+### How to help your</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do before your child’s bone‑density scan (BMD) at SickKids**
+
+| Step | What to do | Why it matters |
+|------|------------|----------------|
+| **1. Check for metal or plastic** | If your child is wearing any metal jewelry, piercings, or has plastic items (e.g., a plastic bracelet, a silicone earbud, a plastic toy) on or under their clothes, bring a hospital gown so they can change. If there’s no metal or plastic, they can keep their regular clothes on. | The X‑ray machine can’t see through metal or plastic, and it can create “artifacts” that blur the picture. |
+| **2. Remove any removable items** | Take off jewelry, piercings, watches, and any other metal items. If your child has a dental appliance or braces, let the technologist know – they’ll decide if it needs to be removed or can stay. | Metal can interfere with the image and may need to be removed for a clearer scan. |
+| **3. Bring medical information** | Have a list of your child’s current medications, recent fractures, any bone‑related conditions, and any recent illnesses. The technologist will ask you about bone health, so having this ready helps them tailor the scan. | It ensures</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>A nuclear medicine technologist will do the BMD. They will first explain the X-ray to you and ask some questions about your child's bone health. If your child has any metal or plastic on or under their clothes, they will change into a hospital gown. Otherwise, they can continue wearing their regular clothes. They will then lie on their back on a bed. An X-ray tube will move above them to do the scan, but it will not touch them. Your child must stay still to make sure the X-ray is clear. Note: Yo...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+In most cases, a bone mineral density (BMD) scan at SickKids is an **outpatient procedure**—your child can come in, have the scan, and go home the same day. The technologist will:
+
+1. **Explain the scan** and ask a few quick questions about your child’s bone health.  
+2. **Check for metal or plastic** in or under the child’s clothes. If there is any, they’ll change your child into a hospital gown so the scan can be done safely. If not, the child can keep wearing their regular clothes.
+
+The scan itself is quick—usually about 15–30 minutes—and does not require any sedation or special monitoring afterward. Because it’s a non‑invasive nuclear‑medicine test, there’s no need for an overnight stay.
+
+**When a hospital stay might be considered**
+
+- **Very young infants** or children who need a lot of monitoring after the scan (for example, if they have a severe medical condition that requires close observation).  
+- **Special circumstances** such as a need for sedation or if the child’s overall health status requires a brief observation</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Mineral Densitometry 8846.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bone Mineral Densitometry 8846.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,193 @@
+<?xml version="1.0" ?>
+<procedure name="Portal Vein Embolization Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctors are recommending portal‑vein embolization (PVE)**  
+
+I know this is a lot to take in, so I’ll try to explain in plain language what PVE is, why it’s being suggested, and what it means for your child’s upcoming surgery.
+
+---
+
+### 1. What is portal‑vein embolization?
+
+- **Portal vein**: The main blood vessel that brings nutrient‑rich blood from the intestines to the liver.  
+- **Embolization**: A tiny, safe “plug” (made of tiny beads, coils, or a special liquid) is threaded through a catheter into the portal vein that supplies the part of the liver that will be removed.  
+- **Result**: That part of the liver stops receiving the usual blood flow, so it shrinks a little while the remaining part of the liver (the *future liver remnant*, or FLR) gets more blood and grows larger.
+
+---
+
+### 2. Why do we need the liver to grow before surgery?
+
+- **Safety of a big liver cut**: When a large portion of the liver is removed, the remaining liver must be big enough to keep your child alive and healthy afterward.  
+- **Normal vs. compromised liver**:  
+  - If the child’s liver is healthy, the doctors want the FLR to be at least **25 %** of the total liver volume.  
+  - If the liver is already a bit weaker (for example, due to a previous illness or medication), they aim for **40 %**.  
+- **Risk of complications**: If the FLR is too small, the child can develop liver failure after surgery, which can be life‑threatening.
+
+---
+
+### 3. How does PVE help?
+
+- **Stimulates growth**: By redirecting blood flow to the FLR, the liver cells in that area multiply and the tissue enlarges over a few weeks.  
+- **Improves surgical outcome**</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Portal Vein Embolization Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are a few other ways doctors can try to make the remaining part of your child’s liver big enough to survive after a major liver surgery. Which one (if any) is best depends on the child’s exact diagnosis, liver health, and the planned surgery. Your child’s medical team will review all of these options together and decide what makes the most sense for your family.
+
+---
+
+## 1. What is portal‑vein embolization (PVE) and why do we use it?
+
+When a child needs a large portion of the liver removed (for example, to take out a tumor), the surgeon wants to make sure the part that stays behind is large enough to keep the liver working.  
+PVE is a small, image‑guided procedure that blocks blood flow to the part of the liver that will be removed. The liver’s blood supply then shifts to the future remnant, encouraging it to grow a little before the surgery.  
+
+Because PVE is done with a tiny needle and a small amount of contrast dye, it is usually safe, but it can cause temporary pain, fever, or very rarely more serious problems (as listed in the leaflet).
+
+---
+
+## 2. Alternative strategies that can be considered
+
+| Alternative | How it works | Typical situations where it’s used | Pros &amp; Cons for children |
+|-------------|--------------|------------------------------------|</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How will the portal‑vein embolization be carried out?**
+
+I know that hearing about a procedure can feel overwhelming, especially when it involves your child. I’ll walk you through the steps in plain language, explain why each part is done, and let you know what the team will keep an eye on. If anything feels unclear or you have more questions, your paediatric interventional radiology team will be happy to discuss it in detail.
+
+---
+
+### 1. What the procedure aims to do
+
+Portal‑vein embolization is a minimally‑invasive way to “shut off” blood flow to the part of the liver that will be removed (or is already diseased). By temporarily blocking that segment, the remaining healthy liver tissue gets a chance to grow and become big enough to keep your child’s liver functioning after surgery.
+
+---
+
+### 2. Before the procedure
+
+| Step | What happens | Why it matters |
+|------|--------------|----------------|
+| **Pre‑procedure check‑up** | Your child will have a quick blood test and a small ultrasound or CT scan to map the liver and portal veins. | It helps the team see exactly where</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer for Parents**
+
+**Will my child need sedation or anesthesia for the portal‑vein embolization?**  
+Yes, most children who undergo portal‑vein embolization are given some form of sedation or anesthesia. The goal is to keep the child comfortable, still, and safe while the procedure is performed.  
+
+- **Very young children (under about 5 years)** or those who may find it difficult to stay still usually receive **general anesthesia** (a short‑acting drug that puts them into a sleep‑like state).  
+- **Older children who can cooperate** (for example, those who can sit still and follow simple instructions) may receive **moderate sedation** (sometimes called “conscious sedation”). This keeps them relaxed but awake enough to respond to the doctor’s questions if needed.  
+
+The exact choice depends on several factors: the child’s age, weight, overall health, how long the procedure is expected to take, and the child’s ability to stay still. Your interventional radiology team will review these details with you before the day of the procedure.
+
+**Will a pediatric anesthesia specialist be involved?**  
+Yes. For children, the anesthesia care is typically handled by a **pediatric anesthesiologist or an anesthesiologist experienced in pediatric care**. They are specially trained to manage the unique physiological needs of children—such as smaller airway size, different drug dosages, and the need for careful monitoring of oxygen and blood pressure.  
+
+The anesthesia team will work closely with the interventional radiology team to:
+
+1. **Assess your child’s medical history** (including any allergies, previous reactions to anesthesia, or underlying conditions such as asthma or heart disease).  
+2. **Plan the safest sedation or anesthesia approach** for your child’s specific situation.  
+3. **Monitor your child’s vital signs** (heart rate, blood pressure, oxygen level, and breathing) throughout the procedure.  
+4. **Provide post‑</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do before your child’s portal‑vein embolization**
+
+Below is a simple “check‑list” of things that usually help the procedure go smoothly and keep your child comfortable.  
+If anything feels unclear or you have extra questions, please bring them up with the interventional radiology team—they’ll tailor the plan to your child’s exact needs.
+
+| Step | What to do | Why it</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>1 Potential Complications   Post embolic syndrome – relatively common after portal vein embolization. This includes abdominal pain, abdomen distension, nausea, vomiting, tiredness and fever. The symptoms usually subside after a few days. Transient bleeding into the biliary tree, on bleeding elsewhere, e.g. under the liver capsule or into the abdominal cavity (rare).  Migration of embolic material to the portal vein of the future remnant liver (rare).  Main portal vein thrombosis (rare).   ...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+After a portal‑vein embolization, most children are able to go home the same day or the next day, but the exact length of stay depends on how the child reacts to the procedure and the overall plan for surgery or further treatment.
+
+| What usually happens | Typical hospital stay | Why it might be longer |
+|----------------------|----------------------|------------------------|
+| **Observation after the procedure** – to watch for pain, fever, or any early bleeding | **1–2 days** | If the child has a lot of pain, a fever, or shows any signs of bleeding, the team may keep them overnight or for a few extra days. |
+| **Monitoring for “post‑embolic syndrome”** (abdominal pain, distension, nausea, vomiting, tiredness, fever) | Usually resolves within **2–3 days** | If symptoms are severe or persist, a longer stay may be needed to manage them safely. |
+| **Checking for transient biliary bleeding** | Usually no extra stay needed | If imaging shows a small bleed that is expected to resolve on its own, the child can still be discharged. |
+| **Preparing for the next step of treatment** (e.g., liver resection) | Varies | If the child is scheduled for major surgery soon after, the team may keep them in the hospital to coordinate care. |
+
+### What the team will look for before sending your child home
+
+1. **Stable vital signs** (heart rate, blood pressure, temperature).  
+2. **No significant pain** that requires more than a moderate dose of pain medication.  
+3. **No vomiting or bleeding**</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Portal Vein Embolization Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Portal Vein Embolization Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

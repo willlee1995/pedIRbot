@@ -1,0 +1,236 @@
+<?xml version="1.0" ?>
+<procedure name="Mta Patient Information Leaflet (eng)" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is your child being offered Microwave Thermal Ablation (MTA) for their liver tumour?**
+
+I know this can feel overwhelming, so I’ll try to explain it in plain language and focus on what matters most for your child’s health and future.
+
+---
+
+### 1. What MTA does
+
+- **Targeted heat therapy** – A tiny probe is guided into the tumour under imaging (usually ultrasound or CT).  
+- **Controlled destruction** – The probe emits microwaves that heat the cancer cells to a temperature that kills them, while the surrounding healthy liver tissue stays largely unharmed.  
+- **Minimal invasion** – No large incision, no major surgery, and no need for a hospital stay.
+
+---
+
+### 2. Why it’s recommended for your child
+
+| Reason | Why it matters for a child |
+|--------|----------------------------|
+| **Preserve liver function** | Children’s livers are still growing. MTA keeps most of the healthy liver alive, which is crucial for normal growth, metabolism, and future treatments if needed. |
+| **Low‑risk, quick recovery** | Children recover faster from a small, percutaneous procedure than from open surgery. They can usually go home the same day or after an overnight stay. |
+|</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Mta Patient Information Leaflet (eng).</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Answer**
+
+I understand that you’re looking for all the possible ways to treat your child’s tumor, and it’s completely normal to want to know every option before making a decision. Here’s a straightforward overview of what we usually consider when we’re thinking about microwave ablation (MWA) and what other treatments might be available if MWA isn’t the best fit.
+
+---
+
+### 1. What is Microwave Ablation (MWA)?
+
+- **MWA** is a minimally‑invasive procedure that uses high‑frequency microwaves to heat and destroy tumor cells.  
+- It’s performed under imaging guidance (ultrasound or CT) and usually requires general anesthesia in children.  
+- The goal is to stop the tumor from growing while preserving as much healthy tissue as possible.
+
+---
+
+### 2. Why We First Assess Feasibility
+
+Before we can do MWA, the team checks:
+
+| Factor | Why it matters in children |
+|--------|----------------------------|
+| **Tumor size &amp; location** | Very large tumors or those close to vital structures (blood vessels, nerves, organs) may be hard to treat safely. |
+| **Number of tumors** | Multiple lesions can make a single‑session ablation difficult. |
+| **Surrounding tissue** | Children’s organs are still growing; we want to avoid damage that could affect future development. |
+| **Overall health &amp; anesthesia risk** | Kids may have different anesthesia considerations compared to adults. |
+
+If the assessment shows that MWA is **not feasible** or **not the safest option**, we’ll discuss alternatives.
+
+---
+
+### 3. Alternative Treatment Options
+
+| Alternative | How it works | Typical use in children | Key points for parents |
+|-------------|--------------|------------------------|------------------------|
+| **Surgical resection** | Cutting out the</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the microwave tumor ablation will be performed**
+
+1. **Planning and Feasibility Check**  
+   * Before any needle is inserted, we’ll review the child’s imaging (CT, MRI, or ultrasound) to see if the tumor is in a spot that can safely be reached with a microwave probe.  
+   * We’ll also look at the size of the tumor, its distance from important blood vessels or organs, and the child’s overall health.  
+   * If the imaging shows that the tumor can be treated safely, we’ll move on to the next step. If not, we’ll discuss alternative options.
+
+2. **Preparing the Child**  
+   * Because the procedure is done inside the body, the child will need sedation or general anesthesia so they stay still and comfortable.  
+   * A small team of anesthesiologists will monitor the child’s heart rate, breathing, and oxygen levels throughout.  
+   * We’ll place a small IV line for medications and fluids and set up a monitoring system to keep an eye on vital signs.
+
+3. **Locating the Tumor**  
+   * We’ll use real‑time imaging (usually ultrasound or CT) to guide a thin needle or catheter to the exact spot of the tumor.  
+   * The imaging helps us avoid damaging nearby organs or blood vessels.
+
+4. **Inserting the Microwave Probe**  
+   * Once the needle is in the right place, we’ll thread a very thin microwave probe through it.  
+   * The probe is a small, flexible tube that delivers energy to heat the tumor cells.
+
+5. **Ablation (Heating the Tumor)**  
+   * The probe emits microwave energy that heats the tumor tissue to about 60–100 °C.  
+   * This heat destroys the cancer cells while leaving the surrounding healthy tissue unharmed.  
+   * The procedure usually takes 10–30 minutes, but the exact time depends on the tumor’s size and shape.
+
+6. **Checking</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+I understand that deciding how your child will be cared for during a procedure can feel overwhelming. Let me explain what typically happens with microwave tumor ablation in a way that’s easy to understand and that addresses the specific concerns you’ve raised.
+
+---
+
+### 1. **Will my child need sedation or general anesthesia?**
+
+- **Local anesthesia is always used.**  
+  The area of the abdomen that will be treated is cleaned with an antiseptic and a local anesthetic (a numbing medicine) is injected. This keeps the child from feeling pain in that specific spot.
+
+- **Sedation or general anesthesia is added when needed.**  
+  The decision depends on several factors:
+  * **Age and size** – Very young children (under 3–4 years) or those who have difficulty staying still are more likely to receive sedation or general anesthesia.
+  * **Anxiety level** – If a child is very nervous or has a history of anxiety, we may choose to give a mild sedative to help them relax.
+  * **Procedure length** – Microwave ablation usually takes a short time (often less than an hour). For many children, local anesthesia plus a brief sedative is sufficient.
+  * **Medical history** – Any underlying health conditions or previous reactions to medications can influence the choice.
+
+  In short, **your child may receive only local anesthesia, or local anesthesia plus a sedative, or local anesthesia plus general anesthesia**. The exact plan will be tailored to your child’s needs.
+
+---
+
+### 2. **Will a pediatric anesthesia specialist be involved?**
+
+- **Yes, a pediatric anesthesiologist or anesthesiologist experienced with children will be part of the team.**  
+  Pediatric anesthesiologists are specially trained to manage children’s unique physiological responses and to keep them safe and comfortable during procedures.
+
+- **The team will discuss the plan with you.**  
+  Before the procedure, the interventional radi</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What we’ll need to do before the microwave ablation (MTA) so your child is ready**
+
+| Step | What it means | Why it matters for your child |
+|------|---------------|------------------------------|
+| **1. Medical history &amp; physical exam** | The team will review your child’s past illnesses, surgeries, allergies, and current medications. They’ll also do a quick check‑up of the abdomen and overall health. | This helps us make sure the ablation is safe and that there are no hidden risks (e.g., bleeding disorders, infections). |
+| **2. Imaging studies** | Usually a CT or MRI scan (sometimes with contrast) is done a few days before the procedure. | It shows the exact size, shape, and location of the tumor and how close it is to important blood vessels or organs. |
+| **3. Blood tests** | Routine labs (CBC, liver &amp; kidney function, clotting profile) are ordered. | These labs confirm that your child’s blood can clot normally and that organs are functioning well enough to tolerate the procedure. |
+| **4. Fasting** | Your child will need to avoid food and drink for a set period (often 6–8 hours) before the procedure. | Fasting reduces the risk of choking or stomach contents leaking into the chest if sedation or anesthesia is used. |
+| **5. Medications** | Any current medications will be reviewed. Some may need to be paused (e.g., blood thinners). | We want to avoid bleeding or drug interactions during the procedure. |
+| **6. Consent &amp; discussion** | The doctor will explain the procedure, benefits, risks, and alternatives, and you’ll sign a consent form.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>**Answer for Parents**
+
+For the procedure you described—where only the upper abdomen is exposed, cleaned with antiseptic, and local anaesthetic is injected—**most children can eat and drink normally up to the time of the appointment**. Because the child will not be given general anaesthesia or deep sedation, there is no need for a formal “fast” period.
+
+**When a fast might be required**
+
+- If the plan changes and the team decides to use moderate or deep sedation, or general anaesthesia, then we will ask you to follow the usual fasting guidelines.  
+- Typical fasting instructions for children are:  
+  - **Clear</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+It’s completely normal to wonder how long your child will need to stay in the hospital after a microwave tumor ablation. Here’s what we know and what you can expect:
+
+| What happens | Typical hospital stay | Why it matters |
+|--------------|-----------------------|----------------|
+| **Procedure** – Your child receives a small, targeted “heat” treatment (microwave) to destroy the tumor. | • Most children can go home the same day or after a short overnight stay (1–2 nights). | • The treatment is usually done under sedation or general anesthesia, so the child is monitored while they wake up. |
+| **After‑care** – You may notice mild nausea, pain, or a low‑grade fever. These side‑effects are usually short‑lived and respond well to pain medication and anti‑nausea drugs. | • If symptoms are mild, the child can be discharged the same day. &lt;br&gt;• If the child has a higher fever, significant pain, or needs more intensive monitoring, an overnight stay is common. | • The team wants to make sure the child is stable, comfortable, and able to eat and drink before leaving. |
+| **Individual factors** – Age, overall health, the size and location of the tumor, and how the child reacts to anesthesia can all influence the length of stay. | • Some children may need a longer observation period (up to 3–4 days) if there are complications or if the team wants to be extra cautious. | • Each case is unique, and the team will tailor the plan to your child’s needs. |
+
+### What to Expect
+
+1. **Pre‑procedure** – Your child will be evaluated to confirm that microwave ablation is the right option. This includes imaging, blood tests, and a</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Answer for Parents**
+
+After a pediatric interventional radiology procedure (often called an “MTA” procedure), most children feel a little tired, may have mild nausea, pain, or a low‑grade fever, and these symptoms usually go away within a day or two with simple medications. Because every child and every procedure is a little different, the best guidance comes from the team that performed the work, but here are the general points that most families can expect:
+
+| What to Expect | Typical Recommendation | Why |
+|----------------|------------------------|-----|
+| **Rest after the procedure** | Keep your child home and let them rest for **24–48 hours**. | The body</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>During the procedure, the upper portion of the patient’s abdomen will be exposed and cleaned with antiseptic. Local anaesthetics will be injected.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

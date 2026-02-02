@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<procedure name="Fna &amp; Biopsy Thyroid, Neck Mass, Ln Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is a fine‑needle aspiration (FNA) or biopsy being recommended for your child?**
+
+I know that hearing about a “biopsy” can feel scary, especially when it involves a child. The goal of this procedure is to give the doctors the information they need to decide the safest, most effective way to care for your child—without making unnecessary or overly aggressive treatments.
+
+---
+
+### 1. What the procedure actually does
+
+* **Fine‑needle aspiration (FNA)** uses a very thin needle to gently “suck” a tiny sample of cells from the thyroid nodule, neck mass, or lymph node.  
+* A **core or tissue biopsy** uses a slightly larger needle to remove a small chunk of tissue.  
+* The sample is examined by a pathologist, who tells us whether the cells look benign (non‑cancerous) or malignant (cancerous), and sometimes gives clues about how fast the cells might grow or how they might respond to treatment.
+
+Because the needle goes through the skin, the procedure is called a *percutaneous* biopsy. It is guided by ultrasound (or sometimes CT) so the radiologist can see exactly where the needle is going in real time.
+
+---
+
+### 2. Why imaging alone isn’t enough
+
+- **Imaging (ultrasound, CT, MRI)** can show us the size, shape, and location of a nodule or mass, but it can’t always tell us what the cells actually are.  
+- Many thyroid nodules or neck masses look similar on scans whether they are benign or malignant.  
+- Knowing the exact nature of the lesion is essential for deciding:
+  * Whether surgery is needed or if we can monitor the nodule safely.
+  * What type of surgery (if any) would be safest for your child.
+  * Whether additional treatments (like radioactive iodine or chemotherapy</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Thyroid, Neck Mass, Ln Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are a few different ways doctors can look at a neck mass in a child, and the best choice depends on what the mass looks like on imaging, how big it is, and whether it’s pressing on the airway or other structures. Your team will discuss all of these options with you, but here’s a quick rundown of the main alternatives to a fine‑needle aspiration (FNA) or core biopsy:
+
+| Alternative | What it involves | When it’s usually considered | Pros &amp; Cons (in a nutshell) |
+|-------------|------------------|------------------------------|-----------------------------|
+| **Observation / “watchful waiting”** | No immediate procedure—just regular check‑ups and repeat ultrasounds. | Small, non‑symptomatic nodules that look benign on ultrasound (e.g., simple cysts, small thyroid nodules). | • No risk of a procedure. &lt;br&gt;• If the mass grows or changes, you’ll get a biopsy later. &lt;br&gt;• Some parents worry about “doing nothing” even if the mass is harmless. |
+| **Repeat FNA** | Same needle technique, but a second attempt if the first sample was inadequate. | When the first FNA didn’t give enough cells or the results were inconclusive. | • Same</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the procedure will be carried out**
+
+1. **What the doctor will do**  
+   • The radiologist will use a thin needle (fine‑needle aspiration, or FNA) or a slightly larger needle (core biopsy) to take a small sample of the thyroid or neck mass.  
+   • The needle is guided by real‑time ultrasound so the doctor can see exactly where it is going and avoid important structures such as blood vessels, nerves, and the airway.  
+   • If the mass is close to a lymph node, the same needle can be used to sample that node (“LN Eng” – lymph node engagement).  
+
+2. **How the child will be prepared**  
+   • **Local anesthesia**: Most children only need a local numbing spray or a small injection around the skin. The decision depends on the child’s age, the size and location of the mass, and how comfortable the child is.  
+   • **Sedation or general anesthesia**: In some cases—especially if the child is very young, anxious, or the mass is deep—light sedation or even general anesthesia may be used. The anesthesiologist will discuss the safest option for your child.  
+
+3. **What happens during the procedure**  
+   • You and your child will be positioned on a table in the radiology suite.  
+   • The doctor will place a small, sterile cover over the skin and then insert the needle under ultrasound guidance.  
+   • The needle will be moved a few times to collect enough cells or tissue.  
+   • The whole process usually takes **about 30 minutes**, but you may stay in the department for an hour or more while the staff prepare the sample and monitor your child.  
+
+4. **Monitoring and safety**  
+   • Your child’s vital signs (blood pressure, pulse, oxygen level) will be checked before, during, and after the procedure.  
+   • The room is equipped to handle any</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+I understand how important it is to know what to expect for your child’s procedure. Below is a simple, honest overview based on the information we have for a fine‑needle aspiration (FNA) or biopsy of a thyroid/neck mass.
+
+---
+
+### 1. Will my child need sedation or general anesthesia?
+
+| **Factor** | **What usually happens** | **Why it matters** |
+|------------|--------------------------|--------------------|
+| **Age &amp; size** | • Very young children (under 3–4 years) or those who cannot stay still are often given **mild sedation** (e.g., a short‑acting medication that makes them drowsy but still breathing on their own). &lt;br&gt;• Older children who can cooperate may receive only **local anesthesia** (a numbing spray or small injection at the site). | The goal is to keep the child comfortable and still so the needle can be placed accurately. |
+| **Anxiety / pain tolerance** | If your child is very nervous or has a low pain threshold, the team may add a small amount of **sedation** to help them relax. | This keeps the procedure quick and reduces the chance of movement that could affect the result. |
+| **Procedure complexity** | For a simple, single‑pass FNA, local anesthesia alone is usually enough. If the biopsy requires a larger needle or more passes, the team may choose **mild sedation** or, rarely, **general anesthesia** (where the child is fully asleep). | More complex or longer procedures increase the need for deeper sedation to keep the child still. |
+
+**Bottom line:** Most children who undergo an FNA or small biopsy receive only local anesthesia, sometimes with a brief sedative. General anesthesia is uncommon unless the situation specifically calls for it.
+
+---
+
+### 2. Will a pediatric anesthesia specialist be available</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**Preparing Your Child for a Thyroid/Neck Mass FNA &amp; Biopsy**
+
+Below is a simple checklist that covers the most common things parents need to think about before the procedure.  It’s always a good idea to confirm the details with the radiology team on the day of the appointment, but this will give you a solid starting point.
+
+| What to Do | Why It Matters | Tips for Kids |
+|------------|----------------|---------------|
+| **1. Talk to the Radiology Team** | Every child is different. The team will decide if local anesthesia, sedation, or a combination is needed. | Ask whether your child will need a small needle injection (local anesthesia) or a mild sedative to help them stay still. |
+| **2. Check Fasting Requirements** | If sedation is planned, the stomach should be empty to reduce the risk of nausea or aspiration. | •  Most centers ask for nothing to drink after midnight and no food after 6 pm the night before. &lt;br&gt;•  If your child is on a special diet, bring a small snack that the team approves. |
+| **3. Bring Comfort Items** | A familiar blanket, stuffed animal, or a favorite song can help your child feel calm. | Keep the item small enough to fit in the exam room and safe for the procedure. |
+| **4. Plan for a Short Stay (30 min–1 hour)** | The needle procedure itself is quick, but you’ll need time for prep, monitoring, and recovery. | •  Arrive 30 minutes early to allow time for paperwork and a quick check‑in. &lt;br&gt;•  After the procedure, your child may need a few minutes to sit up and be observed while vital signs are checked. |
+| **5. Prepare for Post‑Procedure Care** | The needle may leave a small puncture site that can bruise or bleed a little. | •</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>• • Whether local anesthesia is given will depend on the individual situation. • Duration of the procedure varies, depending on the complexity of the condition. It may take only 30 minutes though you may need to stay in the Department of Radiology for over an hour altogether. • Do not expect to get the result of the biopsy / FNA before you leave, as it may take a few days to do all the necessary tests on the specimen. • During and after the procedure, your vital signs (like blood pressure and pu...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+In most cases your child will not need to stay overnight in the hospital. The procedure is usually done as an outpatient visit, and the child can go home the same day.  
+
+**What to expect on the day of the procedure**
+
+| What happens | How long it takes | Where it happens |
+|--------------|-------------------|------------------|
+| **Preparation &amp; consent** | 10–15 min | Radiology waiting room |
+| **Local anesthesia (or mild sedation)** | 5–10 min | Same room |
+| **Fine‑needle aspiration (FNA) &amp; core biopsy** | 20–30 min | Radiology suite |
+| **Post‑procedure observation** | 30–60 min | Radiology recovery area |
+
+So you’ll likely spend **about 1–2 hours** in the radiology department. If your child is very young or has a history of anxiety or sedation reactions, the team might keep them under observation a bit longer—usually still within the same day.
+
+**When an overnight stay might be considered**
+
+- **Unexpected complications** (e.g., bleeding, airway swelling) – the team would keep the child in the hospital until it’s safe to go home.  
+- **Severe pain or distress** that cannot be managed in the outpatient setting.  
+- **Special circumstances** such as a very large neck mass that requires more extensive monitoring.
+
+If any of these situations arise, the radiology and pediatric teams will discuss the plan with you before the procedure. They’ll let you know</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Thyroid, Neck Mass, Ln Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Thyroid, Neck Mass, Ln Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

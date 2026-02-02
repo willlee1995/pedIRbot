@@ -1,0 +1,241 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Botox Therapy For Spasticity 7769" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s team is recommending Botox therapy**
+
+I understand that hearing about a new treatment can feel overwhelming, especially when it involves your child’s health. I’ll try to explain in plain language why the interventional radiology team at SickKids has suggested Botox injections for your child’s spasticity.
+
+---
+
+### 1. What is spasticity and why does it matter for your child?
+
+- **Spasticity** is a condition where certain muscles become abnormally tight or stiff.  
+- It can be caused by brain or spinal cord injuries, cerebral palsy, or other neurological conditions.  
+- The tight muscles can lead to:
+  - **Pain or discomfort** during movement or even at rest.  
+  - **Difficulty with everyday tasks** (e.g., walking, reaching, sitting).  
+  - **Slowed or delayed motor development** (e.g., slower progress in crawling, standing, or fine‑motor skills).  
+  - **Increased caregiver effort** (e.g., more time needed to help with positioning or transfers).
+
+---
+
+### 2. How does Botox help?
+
+- **Botulinum toxin (Botox)** is a very small, purified protein that temporarily blocks the nerve signals that tell a muscle to contract.  
+- When injected directly into the affected muscle, it **relaxes that muscle** for several months.  
+- The benefits for children with spasticity include:
+  - **Reduced muscle stiffness** → easier movement and less pain.  
+  - **Improved range of motion** → better ability to reach, sit, walk, or play.  
+  - **Enhanced comfort** for both the child and caregivers.  
+  - **Facilitated growth of healthy muscle tissue** because the muscle is no longer constantly over‑tightened.  
+  - **Potentially better response to physical therapy** or other interventions, as the child can participate more fully.
+
+---
+
+### 3. Why choose an interventional radiology‑guided injection?
+
+- **Image guidance (ultrasound or X‑ray)** lets the radiologist see exactly where the needle is going.  
+- This precision:
+  - **Increases safety**</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What you can expect from Botox therapy for your child’s spasticity**
+
+| **Benefits** | **What it can help with** |
+|--------------|---------------------------|
+| **Reduced muscle stiffness** | Muscles that are too tight or “spastic” can become looser, making movement easier. |
+| **Improved mobility** | Children often walk, reach, or play more comfortably when spasticity is lessened. |
+| **Less pain** | Tight muscles can cause discomfort; Botox can relieve that pain. |
+| **Better function at school or home** | With smoother movements, children can participate more fully in daily activities. |
+| **Potentially fewer surgeries** | In some cases, Botox can delay or reduce the need for more invasive procedures. |
+| **Short‑term, repeatable** | The effect usually lasts a few months, so the treatment can be repeated if needed. |
+
+| **Potential risks and side‑effects** | **How we keep them</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several other ways to treat spasticity in children. The best choice depends on your child’s specific situation, how severe the spasticity is, what other treatments have already been tried, and how your child responds to each option</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the Botox therapy will be carried out**
+
+1. **Arrival and Preparation (Day of the Procedure)**  
+   * **Arrive early** – We ask that you and your child arrive about two hours before the scheduled time. This gives us enough time to complete all the pre‑procedure steps without rushing.  
+   * **Check‑in and assessment** – Once you’re checked in, a nurse will help your child change into a hospital gown, weigh them, and perform a quick health check. This helps us confirm that your child is ready for anesthesia and the injections.  
+   * **Meet the team** – You’ll have the chance to speak with the interventional radiologist who will perform the injections and the anesthetist who will manage your child’s comfort and safety during the procedure. Feel free to ask any questions you have at this point.
+
+2. **During the Procedure**  
+   * **Anesthesia** – Because Botox injections can be uncomfortable and the child needs to stay still, most children receive **general anesthesia**. The anesthetist will give your child medication that makes them sleep safely for the duration of the procedure.  
+   * **Positioning and imaging** – Once under anesthesia, the child is positioned on the procedure table. The radiologist uses real‑time imaging (usually ultrasound or fluoroscopy) to locate the specific muscles that need treatment.  
+   * **Injections** – The radiologist will inject small, precise amounts of Botox into the targeted muscles. The injections are very small and are done with a fine needle.  
+   * **Monitoring** – Throughout the procedure, the anesthetist monitors your child’s vital signs (heart rate, breathing, oxygen levels) to ensure they remain safe and comfortable.
+
+3. **After the Procedure**  
+   * **Recovery** – After the injections, your child will be moved to a recovery area where the anesthetist will wake them up gradually. Pain medication is typically given to keep them comfortable as they wake.  
+   * **</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+Yes – most children who receive Botox injections for spasticity are given **general anesthesia** so they are completely comfortable and still during the procedure. A **pediatric anesthesiologist** (a doctor who specializes in anesthesia for children) will be part of the team and will be the one giving and monitoring the anesthesia.
+
+---
+
+### Why general anesthesia is usually chosen
+
+* **Comfort &amp; safety** – The injections are done in several small muscles, and the child needs to stay still for a short time. General anesthesia keeps the child relaxed, pain‑free, and safe while the doctor performs the injections.
+* **Predictable experience** – With the child asleep, there’s no risk of movement or anxiety that could affect the accuracy of the injections.
+
+### What the pediatric anesthesiologist does
+
+1. **Pre‑procedure check** – They will review your child’s medical history,</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What you’ll need to do to get your child ready for the Botox therapy**
+
+| Step | What to do | Why it matters | What you can ask the team |
+|------|------------|----------------|---------------------------|
+| **1. Keep your child healthy** | • If your child feels sick, has a fever, or has a cold/flu‑like symptoms in the two days before the appointment, let the doctor know right away. &lt;br&gt;• The procedure may be postponed if they’re not feeling well. | Botox is given under general anesthesia, and a healthy stomach and body help keep the anesthesia safe. | “Will we need to reschedule if my child has a fever?” |
+| **2. Follow the fasting instructions** | • Your child’s stomach must be empty before the anesthetic. &lt;br&gt;• No food or drink (except a small sip of water) after midnight (or the time the hospital says). &lt;br&gt;• If your child has special needs that make fasting hard, talk to the team to create a plan. | An empty stomach reduces the risk of vomiting or breathing in stomach contents during anesthesia. | “What if my child can’t fast because of a medical condition?” |
+| **3. Manage medications** | • Give your child their usual morning medicine with a sip of water **two hours before** the procedure. &lt;br&gt;• Do **not** give aspirin, ibuprofen, naproxen, warfarin, enoxaparin, or any other blood‑thinning drugs on the day of the procedure unless the doctor says it’s okay. | These medications can increase bleeding risk during the injections. | “Which of my child’s regular meds can I give on the day?” |
+| **4. Arrive early** | • Get to the hospital **at least two hours before** the scheduled time. &lt;br&gt;• You’ll check in, your child will be weighed, dressed in a gown, and assessed by a nurse. | Early arrival gives the team time to do all the safety checks and answer any last‑minute questions. | “</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>**Answer for Parents**
+
+**Can your child eat or drink before the Botox therapy?**  
+No – for the safety of the general anesthesia that will be used, your child’s stomach must be empty when the procedure begins.  
+
+**How long must they abstain?**  
+- **No solid food or drinks** for the period leading up to the anesthesia.  
+- Your child can **take their usual morning medication** (e.g., a tablet or syrup) with a **small sip of water** **at least 2 hours before** the procedure.  
+- If your child has a special medical need that makes fasting difficult (e.g., certain metabolic disorders, severe reflux, or a history of vomiting), let the care team know right away. They can create a personalized plan that keeps the child safe while still allowing the anesthesia to work properly.
+
+**Why this matters**  
+An empty stomach reduces the risk of vomiting or aspiration (food or liquid entering the lungs) during anesthesia. Even a tiny amount of food or drink can increase that risk.
+
+**What to do next**  
+- **Confirm the exact fasting window** with the anesthesia or interventional radiology team on the day of the procedure.  
+- **Ask about any medications** that should be avoided (e.g</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children can go home within about an hour after the Botox injections. Only a small number of kids—usually those with other medical issues such as sleep apnea, severe breathing problems, or who need extra monitoring—might be asked to stay overnight for observation. The exact plan will be confirmed by the interventional radiology team on the day of the procedure.
+
+---
+
+### Why most kids can leave so quickly
+
+1. **Rapid recovery period** – After the injections, your child is moved to a recovery area where nurses watch for any immediate side‑effects (like dizziness, weakness, or breathing changes).  
+2. **Minimal pain** – The injections usually cause only mild soreness or bruising, and any discomfort can be managed with acetaminophen.  
+3. **Clear discharge criteria** – The team looks for:  
+   * Stable breathing and heart rate  
+   * Ability to sit up or stand (if applicable)  
+   * No significant weakness or loss of function  
+   * No severe pain or allergic reaction  
+
+If all of these are met, the child is cleared to go home.
+
+---
+
+### When an overnight stay might be recommended
+
+- **Sleep apnea or other breathing disorders** – If your child has a known sleep‑disordered breathing condition, the team may want to observe overnight to ensure breathing remains normal after the injections.  
+- **Other significant medical conditions** – Chronic lung disease, heart problems, or recent major surgeries can also prompt a brief observation stay.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Short answer:**  
+Most kids can go back to their normal activities right after the injections. You’ll usually see only mild soreness or bruising at the injection sites, and that’s it. If your child is wearing leg braces, they can start using them again immediately.  
+
+**What to keep in mind**
+
+| What you’ll notice | Why it happens | What you can do |
+|--------------------|----------------|-----------------|
+| **Soreness or a little bruising** | The Botox needle and the muscle response can leave a mild “after‑effect.” | Give acetaminophen (Tylenol) if your child says they’re uncomfortable. |
+| **No severe pain** | Botox is designed to relax muscle tone, not to cause sharp pain. | If pain is more than mild, let the nurse or doctor know. |
+| **Return to regular play** | The injections don’t require a long rest period. | Your child can usually resume normal play, school, and sports the same day or the next day. |
+| **Leg braces** | If your child uses braces, the goal is to keep the muscles relaxed so the braces work better. | They can put the braces back on right after the procedure. |
+
+**When to be extra careful**
+
+- **Heavy lifting or very vigorous activity**: If your child is very active, it’s fine to let them play, but you might want to avoid extremely strenuous or contact sports for the first 24–48 hours just to be cautious.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>**Follow‑up after your child’s Botox therapy for spasticity**
+
+After the procedure, the medical team will keep a close eye on how your child is doing, both right away and in the weeks that follow. Here’s what you can generally expect:
+
+| Time after the procedure | What happens | What you should watch for | When to call the clinic |
+|--------------------------|--------------|---------------------------|------------------------|
+| **Immediately (within 24 hrs)** | • Your child will be monitored in the recovery area while the anesthesia wears off.&lt;br&gt;• The team will check vital signs, pain level, and any immediate reactions. | • Mild soreness or swelling at the injection sites.&lt;br&gt;• Temporary weakness or fatigue (common after Botox). | If your child has a high fever, severe pain, or any new symptoms that worry you. |
+| **Day 2‑3** | • A brief phone check‑in (or in‑person visit if needed) to confirm recovery is normal. | • Persistent pain, redness, or swelling that doesn’t improve.&lt;br&gt;• Any new weakness that feels unusual. | Call if you notice any of the above or if you’re unsure. |
+| **Week 1‑2** | • A routine clinic visit (often 1–2 weeks after the injection).&lt;br&gt;• The radiologist or neurologist will assess muscle tone, range of motion, and any functional changes. | • Noticeable improvement in spasticity or new difficulties. | Discuss any changes with your child’s team. |
+| **Month 3‑6** | • Follow‑up imaging or clinical assessment may be scheduled to evaluate the long‑term effect of the Botox and plan any repeat injections. | • If the spasticity returns or new areas become affected. | Your team will let you know if a repeat dose is needed. |
+
+### What to look for at home
+
+- **Pain or swelling** at the injection sites that lasts more than a day or seems unusually severe.  
+- **Unusual</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

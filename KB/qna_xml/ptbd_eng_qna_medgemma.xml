@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<procedure name="Ptbd Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being recommended to have a percutaneous trans‑hepatic biliary drainage (PTBD)**  
+
+I know this can feel overwhelming, so I’ll try to explain in plain terms what PTBD is, why it’s being suggested for your child, and what the next steps look like.
+
+---
+
+### 1. What PTBD actually does
+
+- **Relieves a blockage in the bile ducts** – Bile, a fluid produced by the liver, normally flows from the liver → bile ducts → gallbladder → small intestine. If something (a stone, scar tissue, a tumor, or inflammation) blocks that flow, bile backs up.  
+- **Drains the bile outside the body** – A tiny, flexible plastic tube (catheter) is guided through a small skin incision, into the liver, and then into the blocked bile duct. The tube lets bile drain out of the body into a collection bag.  
+- **Helps the body heal** – By removing the excess bile, the pressure on the liver and the risk of infection (sepsis) are reduced. In many cases, this can be life‑saving.
+
+---
+
+### 2. Why it’s being recommended for your child
+
+| Reason | Why it matters for a child |
+|--------|----------------------------|
+| **Bile duct blockage** | Children’s bile ducts are much smaller than adults’. A blockage can quickly lead to jaundice, vomiting, and liver damage. |
+| **Sepsis risk** | If the bile is trapped, bacteria can grow and spread, causing a dangerous infection. PTBD removes the trapped bile and lowers that risk. |
+| **High success rate** | In children whose bile ducts are already dilated, the procedure succeeds in 90–95 % of cases. Even when the ducts are not dilated, the success rate is still around</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Ptbd Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are other ways to relieve a blocked bile duct in children. The best choice depends on the child’s age, the exact location of the blockage, the overall health of the liver, and how the child’s anatomy looks on imaging. Your medical team will review all of these factors and discuss the safest, most effective option for your child.
+
+---
+
+## 1. What the PTBD (Percutaneous Trans‑Hepatic Biliary Drainage) does  
+- A needle is guided into a bile duct through the skin and liver.  
+- A wire is threaded through the needle, the tract is gently widened, and a small plastic catheter is left in place to drain bile out of the body.  
+- Later, the catheter can be “internalized” (turned into a stent that stays inside the bile duct and drains bile into the intestine) so the external tube can be removed.
+
+This technique is often chosen when the blockage is high in the liver or when the child’s anatomy makes other approaches difficult.
+
+---
+
+## 2. Alternative ways to relieve a bile duct blockage
+
+| Alternative | How it works | Typical situations where it’s used | Key pros | Key cons |
+|-------------|--------------|------------------------------------|----------|----------|
+| **Endoscopic Retrograde Cholangiopancreatography (ERCP)** | A flexible tube (endoscope) is passed through the mouth, down</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the treatment will be performed – a step‑by‑step overview**
+
+I know how nervous you must feel about your child’s next procedure. I’ll walk you through what will happen, what the team will do to keep your child safe and comfortable, and what you can expect after the procedure. If anything is unclear, we’ll discuss it in detail with the entire care team.
+
+---
+
+### 1. Preparation (before the procedure)
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Local anesthesia** – A small amount of numbing medicine is given at the skin site where the needle will be inserted. | Keeps your child from feeling pain during the procedure. |
+| **Aseptic technique** – The skin is cleaned and the area is covered with sterile drapes. | Reduces the risk of infection. |
+| **Monitoring** – Blood pressure, heart rate, and oxygen levels are checked continuously. | Allows the team to spot any changes quickly and keep your child safe. |
+| **Positioning** – Your child will lie on the procedure table, usually on their back, with the right side of the trunk (or left upper abdomen if we’re targeting the left ducts) slightly elevated. | Gives the radiologist the best view and access to the bile ducts. |
+
+---
+
+### 2. The “PTBD” (Percutaneous Trans‑Biliary Drainage) part
+
+1. **Needle insertion**  
+   * A very fine needle is guided into the liver’s bile ducts using real‑time imaging (ultrasound or X‑ray).  
+   * The needle is aimed at the right intra‑hepatic ducts (or</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer**
+
+- The procedure is normally done with **local anesthesia only** (a small amount of numbing medication is given at the skin site).  
+- In children, the team will decide whether a little **sedation** (to help the child stay still) or **general anesthesia** (sleeping under a breathing tube) is needed.  
+- If sedation or general anesthesia is chosen, a **pediatric anesthesia specialist** will be part of the team to make sure your child is safe and comfortable.
+
+---
+
+### Why local anesthesia is usually enough
+
+- The needle and catheter are inserted through the skin and into the liver, so the only area that needs numbing is the skin and the very shallow tissue around the needle.  
+- Local anesthesia keeps the child awake and aware, which is helpful for the doctor to monitor the child’s response and for the family to stay involved.  
+- Because the procedure is relatively short (45–90 minutes) and the instruments are small, local anesthesia is often sufficient.
+
+### When sedation or general anesthesia might be used
+
+- **Age and cooperation**: Very young children (under 2–3 years) or children who find it hard to stay still may benefit from mild sedation or general anesthesia.  
+- **Anxiety or pain**: If the child is anxious or if the procedure is expected to be uncomfortable, the team may choose sedation.  
+- **Complex cases**: In some complicated biliary problems, the procedure may take longer or require more manipulation, and sedation can help keep the child still and reduce the risk of complications.
+
+### Role of a pediatric anesthesia specialist
+
+- If sedation or general anesthesia is needed, a **pediatric anesthesiologist** (or a pediatric anesthesiology nurse‑anesthetist) will be present.  
+- They are specially trained to manage children’s airway, breathing, and pain, and to monitor vital signs closely throughout the procedure.  
+- They will discuss the type of</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Ptbd Eng.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Performed under local anaesthesia and aseptic technique.   The vital signs including your blood pressure, pulse and oxygenation status will be monitored throughout the entire procedure.  A fine needle is inserted (usually on right side of trunk aiming for right intrahepatic ducts and at the left upper abdomen aiming for left intrahepatic ducts) under either image guidance into an intrahepatic duct. A guidewire is then inserted through the needle into the biliary system. Plastic dilators of va...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+In most cases, a percutaneous trans‑hepatic biliary drainage (PTBD) with internal‑external drainage is done as an outpatient procedure, so your child can go home the same day. However, sometimes the team will keep the child in the hospital for a short observation period—usually one night—especially if there are any complications, if the child is very young, or if the underlying liver problem is complex. The exact plan will be decided by the interventional radiology and pediatric teams after they review your child’s specific situation.
+
+---
+
+### Why most children can go home the same day
+
+| What happens during the procedure | Why it usually allows same‑day discharge |
+|-----------------------------------|------------------------------------------|
+| **Local anesthesia** (no general anesthesia) | Less recovery time; the child can wake up quickly. |
+| **Fine‑needle access** to the right intra‑hepatic ducts | Small puncture, minimal bleeding risk. |
+| **Continuous vital‑sign monitoring** | Any changes are caught immediately. |
+| **Internal‑external drainage catheter** placed | The catheter stays in place for drainage; it can be managed at home. |
+
+Because the procedure is minimally invasive and the child is awake, the risk of major complications is low, and most children tolerate it well enough to leave the hospital the same day.
+
+---
+
+### When an overnight stay might be needed
+
+| Situation | Reason for observation |
+|-----------|------------------------|
+| **Very young or premature infants** | They may need extra monitoring of breathing and feeding. |
+| **Underlying liver disease or infection** | The team wants to ensure the drainage is working and there’s no infection. |
+| **Complications during the procedure** (e</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Ptbd Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Ptbd Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Cerebral Angiography 4063" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being asked to have a cerebral angiography**
+
+I know that hearing about a brain imaging test can feel overwhelming, especially when it involves a child. I’ll try to explain in plain language what the procedure is for, why it’s being recommended, and what it can help us learn about your child’s health.
+
+---
+
+### 1. What the test does
+
+A **cerebral angiography** is a special X‑ray exam that lets us see the blood vessels inside the brain in real‑time. We do this by:
+
+1. **Accessing a small artery** (usually in the wrist, back of the hand, or groin).
+2. **Injecting a tiny amount of contrast dye** that lights up on X‑ray.
+3. **Taking a rapid series of X‑ray images** (called an angiogram) while the dye flows through the brain’s vessels.
+
+Because the dye travels with the blood, we can see exactly how blood moves, where it might be blocked, narrowed, or leaking.
+
+---
+
+### 2. Why we need it for your child
+
+The main reasons a pediatric interventional radiologist would recommend this test are:
+
+| What we’re looking for | Why it matters for your child |
+|------------------------|------------------------------|
+| **Arteriovenous malformations (AVMs)** – tangled bundles of abnormal vessels | AVMs can bleed or cause seizures. Knowing their size and location helps us decide if surgery, embolization, or observation is safest. |
+| **Arteriovenous fistulas** – abnormal connections between arteries and veins | These can steal blood from normal brain tissue or cause high‑pressure flow that may damage vessels. |
+| **Aneurysms** – bulging spots in a vessel wall | Aneurysms can rupture and cause life‑threatening bleeding. Detecting them early lets us plan treatment before a rupture occurs. |
+| **Blood supply to a brain tumor**</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What the procedure can help us do (the benefits)**  
+- **See the blood vessels in your child’s brain**: The angiogram gives the doctors a very detailed picture of the arteries and veins in the brain and the surrounding skull.  
+- **Diagnose problems that can’t be seen on a regular X‑ray or MRI**: Things such as a small aneurysm, a developmental abnormality, a blockage, or an abnormal connection between arteries and veins are best seen with an angiogram.  
+- **Guide treatment**: If the child needs a procedure such as a tiny clip, a coil, a stent, or a shunt, the angiogram shows exactly where the problem is and how best to reach it.  
+- **Plan surgery or other interventions**: Even if the child will not have a procedure right away, the images help the surgical or interventional team plan the safest approach.  
+- **Provide reassurance**: In many cases, the angiogram simply confirms that there is no serious problem, which can be very reassuring for you and your child.
+
+**What could go wrong (the potential risks)**  
+| Risk | How it can happen | What it might mean for your child |
+|------|-------------------|-----------------------------------|
+| **Pain, bruising, or bleeding at the access site** (groin, wrist, or hand) | The catheter is inserted into a blood vessel. | Mild discomfort; usually resolves with a bandage or a small cast. |
+| **Infection at the access site** | The skin is punctured. | Rare; treated with antibiotics. |
+| **Pseudoaneurysm** (a small bulge in the artery wall) | The artery wall is stretched by the catheter. | Usually harmless, but can be monitored or treated if it grows. |
+| **Poor circulation to the limb** (leg, wrist, or hand) | The artery</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>To help health-care providers identify narrowed, enlarged and blocked blood vessels and plan treatment To determine if there are any abnormalities of the blood vessels such as: arteriovenous malformations (AVMs) – abnormal tangles arteriovenous fistulas – irregular connections between arteries and veins aneurysms – bulging or ballooning areas in parts of blood vessels To assess: blood supply to certain brain tumors abnormal vessel response to inflammation or infection – arteritis or arteriopathy...</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How your child’s cerebral angiography will be performed**
+
+I know that a day of imaging and anesthesia can feel overwhelming, so I’ll walk you through what usually happens, step by step. If anything is unclear or you have more questions, please let the team know right away—they’re there to help.
+
+---
+
+### 1. Arrival and Preparation (≈2 hours before the procedure)
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Check‑in &amp; paperwork** | The staff will verify your child’s identity, medical history, and any allergies. |
+| **Physical assessment** | Your child will be weighed and a quick exam will confirm that they’re ready for the procedure. |
+| **Meeting the team** | You’ll have a chance to speak with the interventional neuroradiologist (the doctor who will guide the catheter) and the anesthesiologist (who will manage your child’s comfort). This is a good time to ask any questions you have. |
+| **Dressing** | Your child will be given a hospital gown. They’ll also wear a small, comfortable mask or breathing tube if general anesthesia is used. |
+
+---
+
+### 2. The Procedure Room
+
+| Step | What happens | What your child will feel |
+|------|--------------|---------------------------|
+| **Anesthesia** | Most children receive **general anesthesia** (they’re asleep and pain‑free). The anesthesiologist will give a short‑acting drug that quickly puts your child into a deep sleep. In older children who can stay still, local anesthesia (a numbing injection) may be used instead. | Your child will be unconscious or very relaxed. They won’t feel any pain or discomfort. |
+| **Local numbing at the access site** | A small injection is given at the groin (or sometimes the wrist/hand) where the catheter will be inserted. | The area will feel numb, but no pain. |
+| **Catheter insertion** | A thin, flexible tube (the catheter) is threaded through a small incision into a major artery. It is guided, under real‑time X‑ray (fluoroscopy),</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>On the day of the cerebral angiography Arrive at the hospital two hours before the planned time for your child’s procedure. Once you are checked in, your child will be dressed in a hospital gown, weighed and assessed. You will also be able to speak to the interventional neuroradiologist who will be doing the cerebral angiography, and the anesthesiologist who will be giving your child medication to make them comfortable during the procedure. During the cerebral angiography, you will be asked to w...</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Children feel less anxious and scared when they know what to expect. Children also feel less worried when they see their parents are calm and supportive. If your child becomes ill within two days before the procedure It is important that your child is healthy on the day of their procedure. If your child starts to feel unwell or has a fever within two days before the cerebral angiogram, let their health-care provider know. Your child’s procedure may need to be rebooked. Food, drink and medicines ...</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>**Answer for Parents**
+
+**Can my child eat or drink before the cerebral angiogram?**  
+- **No, they should not have any food or drink** (except a very small sip of water if they need to take their morning medicines) in the hours leading up to the procedure.  
+- The goal is to keep the stomach “empty” so that the general anesthetic can be given safely and the risk of vomiting or aspiration is minimized.
+
+**How long must they abstain?**  
+- **Solid foods**: **At least 6 hours** before the procedure.  
+- **Clear liquids** (water, clear juice, clear tea or coffee without milk or sugar): **At most 2 hours** before the procedure.  
+- **Regular morning medications**: If your child needs to take them, they can do so with a small sip of water **up to 2 hours** before the start time.  
+
+These are the standard fasting times used for most children who will receive general anesthesia. However, the exact timing can vary slightly depending on your child’s age, weight, and any special medical needs. Your care team will confirm the precise schedule on the day of the procedure.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+Most children can go home the same day the cerebral angiography is done. How long your child stays in the hospital depends mainly on where the doctor accessed the blood vessels:
+
+| Access site | Typical time in hospital | What happens while you’re there |
+|-------------|--------------------------|--------------------------------|
+| **Groin (femoral artery)** | About **6 hours** after the procedure | • Your child is monitored in a recovery area until they wake up and are stable.&lt;br&gt;• The doctor will check the groin site for bleeding and give you instructions on how to keep it still.&lt;br&gt;• If everything looks good, you’ll be taken to your child’s room and then to the discharge area. |
+| **Wrist or back of the hand (radial artery)** | About **3–4 hours** after the procedure | • Your child stays in the hospital for a short period while the wrist splint and compression band are checked.&lt;br&gt;• The doctor will make sure the arm is still straight and the band is working properly.&lt;br&gt;• Once the band is removed and the arm is stable, you’ll be ready to go home. |
+
+**What to expect after the procedure**
+
+* Your child will be moved to a recovery area right after the angiography.  
+* The interventional neuroradiologist will talk to you about the details of the procedure and any specific care you need to give at home.  
+* If the groin was used, your child will lie on their back with the leg straight. A small amount of pressure may be applied at the groin if there’s any bleeding.  
+* If the wrist was used, the arm will stay straight in a splint overnight, and a special compression band will be</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Short answer:**  
+Yes, there will be a few activity restrictions right after the angiography, but most children can return to their normal routine the same day (or the next day) once the doctor says it’s safe.  
+
+---
+
+## What to expect after the procedure
+
+| Access site | Immediate post‑procedure care | When you can start moving around | When you can go home | Typical activity restrictions |
+|-------------|------------------------------|---------------------------------|----------------------|--------------------------------|
+| **Groin (femoral artery)** | • Child stays on their back with the leg straight.&lt;br&gt;• A small amount of pressure may be applied at the groin if needed.&lt;br&gt;• The doctor will check the puncture site for bleeding. | • If the site looks fine, the child can begin walking slowly after **4 hours**. | • Most children leave the hospital **≈6 hours** after the procedure. | • No heavy lifting or strenuous activity for **24 hours**.&lt;br&gt;• Avoid bending over or twisting the waist for a day.&lt;br&gt;• No running, jumping, or contact sports for **at least 1 week** (or until the doctor says it’s okay). |
+| **Wrist / back of the hand (radial artery)** | • The arm is kept straight in a splint.&lt;br&gt;• A compression band is applied to stop bleeding.&lt;br&gt;• The splint stays on overnight. | • The child can stay in the hospital for **3–4 hours** while the doctor checks the wrist. | • Most children go home the same day, usually **≈3–4 hours** after the procedure. | • Keep the arm straight and avoid heavy</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>**Follow‑up after a pediatric cerebral angiogram**
+
+I know how important it is to have a clear picture of what comes next. Below is a general outline of the steps most children will go through after their angiogram. Your child’s team will tailor this plan to your child’s specific situation, so feel free to ask any questions you have.
+
+| Step | What to Expect | Why It Matters | What You Can Do |
+|------|----------------|----------------|-----------------|
+| **1. Immediate post‑procedure observation** | Your child will stay in a recovery area for a few hours while we monitor vital signs, breathing, and the puncture site (where the catheter was inserted). | We want to catch any early complications such as bleeding, swelling, or a drop in blood pressure. | Stay with your child, keep them calm, and let the staff know if they seem unusually drowsy, painful, or if the puncture site looks red or swollen. |
+| **2. Discharge instructions** | Once the child is awake, alert, and the puncture site is stable, we’ll give you written instructions for home care. | Proper care at home reduces the risk of infection or delayed bleeding. | Follow the written instructions exactly: keep the puncture site clean, avoid heavy lifting or strenuous activity for the recommended time, and watch for signs of infection (redness, warmth, fever). |
+| **3. Medication review** | If your child was on blood thinners (e.g., ASA, clopidogrel, warfarin) or other medications that affect bleeding, we’ll discuss whether to pause, adjust, or resume them. | Balancing the need to prevent clotting with the risk of bleeding is critical. | Keep a list of all medications your child is taking and bring it to every appointment. |
+| **4. Follow‑up imaging (if needed)** | Some procedures require a repeat scan (e.g., a follow‑up MR or CT angi</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,210 @@
+<?xml version="1.0" ?>
+<procedure name="Embolotherapy For Pulmonary Avm Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctor is recommending embolotherapy**
+
+I know this can feel overwhelming, so I’ll try to explain in plain language what’s happening and why this treatment is being suggested.
+
+---
+
+### 1. What is a pulmonary arteriovenous malformation (PAVM)?
+
+- **PAVM is a tiny “shortcut” in the lungs.**  
+  Normally, blood goes from the lungs’ arteries → the tiny capillaries where it picks up oxygen → the veins. In a PAVM, a small artery connects directly to a vein, bypassing the capillaries.
+
+- **Why that matters:**  
+  - **Less oxygen:** Blood that skips the capillaries isn’t fully oxygenated, which can make your child feel short‑of‑breath or tired.  
+  - **Risk of complications:** The abnormal connection can let tiny clots or bacteria pass straight into the bloodstream, potentially causing strokes, brain abscesses, or heart problems.  
+  - **Visible symptoms:** Some kids cough up blood or feel chest pain because of the abnormal flow.
+
+---
+
+### 2. Why treat it now?
+
+- **Prevent serious complications:** The biggest reason is to stop the risk of stroke, brain abscess, or heart failure that can happen when the abnormal blood flow isn’t closed off.  
+- **Improve quality of life:** Even if your child isn’t having dramatic symptoms yet, closing the PAVM can reduce shortness of breath, fatigue, and the worry of sudden problems.  
+- **High success rate:** Embolotherapy can “cure” 98‑99 % of PAVMs. That means the abnormal connection is closed off in almost all cases, and the child can live a normal life afterward.
+
+---
+
+### 3. What does the procedure involve?
+
+- **Mini‑invasive, image‑guided:** A small catheter is threaded through a blood vessel (usually in the groin or arm) and guided under X‑ray or CT imaging to the lung where the PAVM is located.  
+- **Occlusion with tiny plugs or coils:** Once the catheter reaches the abnormal artery,</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Embolotherapy For Pulmonary Avm Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are a few other ways doctors can treat a pulmonary arteriovenous malformation (PAVM) in a child, but the most common and safest option for most kids is the embolization procedure you’ve already discussed. The best choice depends on your child’s specific situation, and the team will walk you through all the options and help decide what’s best.
+
+---
+
+## 1. What the embolization procedure does
+
+- **Goal:** Block the abnormal “shortcut” between a lung artery and vein (the PAVM) so that blood flows normally through the lung tissue.
+- **How it works:** A tiny catheter is threaded from the groin, through the heart, into the lung artery that feeds the PAVM. Tiny metal coils are then released to close off the abnormal connection.
+- **Why it’s preferred:**  
+  * It’s minimally invasive (no open surgery).  
+  * It usually takes only a few hours.  
+  * Most children recover quickly and can go home the same day or the next.  
+  * The long‑term success rate is high, and the risk of serious complications is low (&lt;5%).
+
+---
+
+## 2. Alternative options that might be considered
+
+| Option | How it works | When it might be used | Pros &amp; Cons for a child |
+|--------|--------------|-----------------------|------------------------|
+| **Observation / “watchful waiting”** | No immediate treatment; regular imaging to see if the PAVM grows or causes symptoms. | Small,</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the embolotherapy will be done for your child**
+
+I know this can feel overwhelming, so I’ll walk you through the steps in plain language. The goal of the procedure is to close the abnormal “tunnel” (the arteriovenous malformation, or PAVM) in the lung so that blood can flow normally and the risk of complications—like strokes or brain abscesses—drops dramatically.
+
+---
+
+### 1. **Preparation (before the day of the procedure)**  
+- **Blood tests, X‑ray, CT scan, and a small “pre‑procedure” angiogram** are usually done a few days to a week before. These images let the team see exactly how many PAVMs there are, where they are located, and how big they are.  
+- The doctor will review the images with you and explain what will happen, what to expect, and any questions you have.  
+- If your child is on any medications, the team will coordinate to pause or adjust them as needed.
+
+---
+
+### 2. **Day of the procedure**
+
+| Step | What happens | Why it matters |
+|------|--------------|----------------|
+| **Anesthesia** | Depending on your child’s age, size, and overall health, the procedure is usually done under **local anesthesia** (just numbing the groin area) or **general anesthesia** (full sleep). The anesthesiologist will discuss the safest option for your child. | Keeps your child comfortable and still, which is essential for a precise procedure. |
+| **Access** | A tiny catheter (a flexible, thin tube) is inserted through a small puncture in the **femoral vein** in the groin. A guidewire is threaded through the vein, into the right side of the heart, and then into the pulmonary arteries that supply the lungs. | This is the “roadway” that lets us reach the PAVM inside the lung. |
+| **Navigation** | Using real</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer**
+
+- **Will your child need sedation or anesthesia?**  
+  It depends on a few factors—age, size, how long the procedure will take, and how well the child can stay still. For many children, especially younger ones or those who would be anxious or uncomfortable, we use **general anesthesia**. For older children who can cooperate, we sometimes use **light sedation** or even just local anesthesia with a small local block at the groin.
+
+- **Will a pediatric anesthesia specialist be on hand?**  
+  Yes. The procedure is performed in a setting that has a pediatric anesthesiologist or a pediatric anesthesia team who will care for your child’s breathing, heart rate, and comfort throughout the entire session.
+
+---
+
+### Why the choice matters
+
+| Factor | Why it matters | Typical approach |
+|--------|----------------|------------------|
+| **Age &amp; size** | Younger children (under 5–7 years) usually cannot stay still for 2–4 hours. | General anesthesia. |
+| **Anxiety &amp; cooperation** | A child who is very nervous or who cannot keep still increases the risk of movement‑related complications. | General anesthesia or deep sedation. |
+| **Procedure length** | The embolotherapy can take 2–4 hours, depending on how many AVMs are treated. | General anesthesia keeps the child comfortable and still for the whole time. |
+| **Medical history** | If the child has breathing problems, heart issues, or other conditions, the anesthesiologist will tailor the plan. | Customized anesthesia plan, often general. |
+
+---
+
+### What the pediatric anesthesia team does
+
+1. **Pre‑procedure assessment** – They review your child’s medical history, medications, and</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**Preparing your child for the embolotherapy procedure**
+
+I know that every step can feel overwhelming, so I’ll walk you through the most important things we’ll do together to make sure your child is as comfortable and safe as possible.
+
+| What we’ll do | Why it matters | What you can help with |
+|---------------|----------------|------------------------|
+| **Pre‑procedure blood tests** | These give the team a baseline of your child’s blood counts, clotting ability, and kidney function. They help us choose the right contrast dye and plan anesthesia. | Make sure the blood draw is scheduled a day or two before the procedure. If your child is nervous, bring a favorite stuffed toy or a calming song. |
+| **Chest X‑ray &amp; CT scan** | These images map the exact location and size of the pulmonary arteriovenous malformations (PAVMs). Knowing the anatomy lets the interventional radiologist plan the safest route for the catheter and coils. | Keep the appointments on the same day if possible. If your child is anxious, practice a short “breath‑hold” exercise together so they feel more in control during the scan. |
+| **Preliminary pulmonary angiogram (if needed)** | This is a quick test that shows the blood flow in the lungs and confirms the number of PAVMs. It also helps us decide whether the procedure can be done with local or general anesthesia. | Discuss with the team whether a separate angiogram is required. If it’s done on the same day, the child will need to stay still for a short time—having a small, familiar toy can help. |
+| **Anesthesia evaluation** | The anesthesiologist will review your child</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> Before the procedure, blood tests, chest X-ray, computer tomography (CT) and preliminary pulmonary angiogram may be performed to delineate the vascular structure and the number of PAVM. The procedure may be performed under local or general anaesthesia, depending on the clinical conditions.   A small catheter is inserted into the femoral vein at your groin and is directed through your heart into the branches of the pulmonary arteries.  Metal coils will be deployed at the PAVM, and thus occlu...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+Most children who undergo embolotherapy for a pulmonary arteriovenous malformation (PAVM) can be discharged the same day or after an overnight stay. The exact length of the hospital stay depends on a few factors:
+
+| Factor | Typical impact on stay |
+|--------|------------------------|
+| **Type of anesthesia** | • **Local anesthesia** – the child usually stays only a few hours for observation, then can go home. &lt;br&gt;• **General anesthesia** – many centers keep the child in the hospital for 1–2 nights to monitor breathing, heart rate, and to make sure there are no early complications. |
+| **Age and overall health** | Very young infants or children with other medical issues may need a longer observation period (often 24–48 hours). |
+| **Procedure complexity** | If the angiogram shows many or large AVMs that require multiple embolization sessions, the team may schedule a longer stay to monitor for swelling or bleeding. |
+| **Post‑procedure pain or discomfort** | Children who need pain medication or have a higher risk of swelling may be kept overnight for comfort and safety. |
+
+**What to expect**
+
+1. **Pre‑procedure** – Your child will have blood tests, a chest X‑ray, a CT scan, and a preliminary pulmonary angiogram. These are usually done the day before or the morning of the procedure.
+2. **During the procedure</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Embolotherapy For Pulmonary Avm Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Embolotherapy For Pulmonary Avm Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

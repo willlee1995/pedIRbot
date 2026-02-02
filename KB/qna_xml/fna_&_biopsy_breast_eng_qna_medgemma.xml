@@ -1,0 +1,217 @@
+<?xml version="1.0" ?>
+<procedure name="Fna &amp; Biopsy Breast Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is this procedure being recommended for your child?**
+
+I understand that hearing about a breast biopsy can feel surprising, especially for a child. Let me explain in plain language why your child’s medical team has suggested this step and what it will help them determine.
+
+---
+
+### 1. What the procedure does
+
+- **Fine‑needle aspiration (FNA)**: A very thin needle is guided by ultrasound or X‑ray (mammography) to the spot in the breast that looks abnormal. The needle pulls out a tiny sample of cells.  
+- **Core biopsy**: A slightly larger needle is used to take a small “core” of tissue. This is done through a tiny skin incision and also guided by imaging.
+
+Both samples are sent to a lab where a pathologist examines the cells or tissue under a microscope to see if they are normal, benign (non‑cancerous), or malignant (cancerous).
+
+---
+
+### 2. Why we need a tissue sample
+
+| What we’re trying to figure out | Why it matters for your child |
+|--------------------------------|--------------------------------|
+| **Is the lump benign or malignant?** | If it’s benign, we can often avoid surgery or more aggressive treatment. If it’s malignant, early detection allows us to plan the safest, least invasive treatment. |
+| **What type of cells are present?** | Some benign lesions can still grow or cause symptoms; knowing the exact type helps us decide whether to monitor or remove it. |
+| **How aggressive the lesion is?** | Certain cancers grow quickly. Knowing the aggressiveness informs how soon we need to act. |
+| **What treatment will work best?** | The exact diagnosis guides whether surgery, radiation, or other therapies are needed—and helps us choose the smallest, safest approach for a child. |
+
+---
+
+### 3. Pediatric‑specific considerations
+
+- **Fewer breast cancers in children**: Breast cancer is rare in kids, but</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Breast Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are a few other ways we can evaluate a breast lesion in a child, but each has its own pros and cons. We’ll discuss the best option for your child’s specific situation with the whole team (radiology, pediatric surgery, and oncology) so you can make an informed decision together.
+
+---
+
+### 1. Observation / “Watchful Waiting”
+
+**What it is**  
+If the imaging shows a small, well‑defined, and “probably benign” lesion, we can sometimes choose to monitor it with regular ultrasounds or MRIs instead of doing a biopsy right away.
+
+**When it’s considered**  
+- Very small lesions (&lt;1 cm)</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**What to Expect During the Breast Fine‑Needle Aspiration (FNA) / Core Biopsy**
+
+I know that any procedure on your child can feel overwhelming, so I’ll walk you through each step in plain language and let you know what to expect. The goal of this test is to take a tiny sample of the breast tissue that looks abnormal on imaging so that a pathologist can look at it under a microscope and tell us whether it’s benign (not cancer) or malignant (cancer). Once we have that information, we can decide the next best step—whether it’s simply watching, giving medication, or doing a more definitive surgery.
+
+---
+
+### 1. **Preparation Before the Appointment**
+
+| What you should do | Why it matters |
+|--------------------|----------------|
+| **Bring old X‑ray, ultrasound, or MRI images** | The radiologist will compare the new sample to the old pictures to be sure we’re looking at the same spot. |
+| **Stop aspirin or other blood‑thinners** (if your child is on them) | Blood‑thinners can increase bleeding. Your pediatrician or the interventional radiologist will advise when to stop them safely. |
+| **Ask about any medications** | Some drugs can affect healing or interact with anesthesia. |
+| **Discuss any allergies or past reactions to anesthesia** | Even if the procedure is usually done with just a local numbing shot, we’ll know if we need to use a different approach. |
+
+---
+
+### 2. **Day of the Procedure**
+
+1. **Arrival &amp; Check‑In**  
+   - We’ll confirm your child’s identity, review the medication list, and answer any last‑minute questions.
+
+2. **Anesthesia / Pain Management**  
+   - **</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer**  
+Most children who have a fine‑needle aspiration (FNA) or core biopsy of a breast lesion can be treated with just a local anesthetic (a small amount of numbing cream or a short injection). Sedation or general anesthesia is usually *not* required, but it can be offered if the child is very anxious, if the procedure is expected to be longer, or if the child has a medical condition that makes a calm, cooperative state difficult. If sedation or anesthesia is needed, a pediatric anesthesiologist (a doctor who specializes in children) will be present to keep your child safe and comfortable.
+
+---
+
+### Why local anesthesia is often enough
+
+- **Procedure length** – Most biopsies take 15–30 minutes.  
+- **Minimal discomfort** – The needle is small, and the area is numbed before the needle is inserted.  
+- **Outpatient setting** – The child can go home the same day, which is easier when only local anesthesia is used.
+
+---
+
+### When sedation or anesthesia might be considered
+
+| Situation | Why it might help | What it involves |
+|-----------|------------------|------------------|
+| **Very young child (under 5 years)** | Younger kids may not stay still or may be frightened. | Light sedation (e.g., a short‑acting medication) that keeps the child calm but awake. |
+| **High anxiety or previous negative medical experiences** | Anxiety can make the procedure harder and risk of movement increases. | Mild sedation or, rarely, general anesthesia. |
+| **Longer or more complex biopsy** | If the lesion is large, deep, or requires multiple passes. | Sedation to keep the child comfortable for the full duration. |
+| **Medical conditions (e.g., heart or lung disease)** | Certain conditions make it safer to keep the child relaxed. | Pediatric anesthesiologist will assess and decide. |
+
+---</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What you’ll need to do before your child’s breast FNA/biopsy**
+
+| Step | What to do | Why it matters |
+|------|------------|----------------|
+| **Bring old imaging** | Bring any previous X‑ray, ultrasound, mammogram, or MRI films and reports. | The radiologist uses these to locate the exact spot and to compare with the new images. |
+| **Check medications** | • If your child is taking aspirin, ibuprofen, or any blood‑thinning medication</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> Old films &amp; reports are important for your doctor to make reference. It is   important to bring them back. If you are taking aspirin or any other anti-coagulants, please ask your doctor’s advice to stop these drugs before proceeding. The procedure will be performed under aseptic technique with or without local anaesthetic on outpatient basis.  Under which modality the lesion will be biopsied or the choice of the needle used depends on the nature, size and shape of the lesion.  Duration of ...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+In most cases your child can have the fine‑needle aspiration (FNA) or core‑needle biopsy done as an **out‑patient** procedure – they can go home the same day. Only in a few situations would a short overnight stay be recommended, and the decision will be made by the team that is caring for your child.
+
+---
+
+### Why most kids can go home the same day
+
+| Procedure | What happens | Typical recovery at home |
+|-----------|--------------|--------------------------|
+| **Fine‑needle aspiration (FNA)** | A very thin needle is used to collect cells. A small dressing may be applied. | The child can usually resume normal activities, including school and play, the same day. |
+| **Core‑needle biopsy** | A slightly larger needle takes a small core of tissue. The puncture site is covered with a steri‑strip bandage. | Keep the wound dry and clean for 2–3 days. Avoid strenuous exercise for the first 24 hours. After that, normal activity can resume. |
+
+Because the procedures are minimally invasive and the risk of bleeding or infection is low, doctors usually do not need to keep the child in the hospital for observation.
+
+---
+
+### When an overnight stay might be considered
+
+1. **Age or cooperation** – Very young children or those who are very anxious may benefit from a short observation period to make sure they are comfortable and not experiencing pain or swelling.
+2. **Medical history** – If your child has a bleeding disorder, is on blood‑thinning medication, or has a history of significant complications, the team might want to watch for a few hours after the procedure.
+3. **Unexpected reaction** – Rarely, if the child develops a large hematoma, signs of infection, or severe pain, the team may decide to keep them overnight for monitoring.
+
+If an overnight stay</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Answer for Parents**
+
+After your child has had a fine‑needle aspiration (FNA) or a core‑needle biopsy of the breast, most kids can go back to their normal routine very quickly. Here’s what you can expect and what you should watch for:
+
+| Procedure | What happens during the procedure | Immediate post‑procedure care | When normal activity can resume | Things to watch for |
+|-----------|-----------------------------------|--------------------------------|--------------------------------|---------------------|
+| **Fine‑Needle Aspiration (FNA)** | A very thin needle is used to collect cells from the lump. | A tiny dressing is applied. It can be removed the next day. | Most children can return to school, play, and other normal activities **on the same day**. | If the child feels a little sore or has a small bruise, that’s normal. If there is heavy bleeding or a large swelling, call the breast centre or your doctor. |
+| **Core‑Needle Biopsy** | A slightly larger needle takes a small core of tissue. | The small incision is covered with a steri‑strip bandage. Keep the area dry and clean for 2–3 days. The bandage can be removed after that. | **Avoid strenuous exercise for the first 24 hours** (e.g., running, heavy lifting, sports that involve a lot of movement). After that, your child can resume normal play, school, and other activities. | Watch for a large bruise, swelling, or signs of infection (redness, warmth, pus, fever). If any of these occur, contact the breast centre or your doctor right away. |
+
+### Why the 24‑hour rule for core‑needle biopsy?
+
+The</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Breast Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

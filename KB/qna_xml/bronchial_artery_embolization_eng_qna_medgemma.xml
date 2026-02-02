@@ -1,0 +1,227 @@
+<?xml version="1.0" ?>
+<procedure name="Bronchial Artery Embolization Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is Bronchial Artery Embolization (BAE) being recommended for your child?**  
+
+I know that hearing about a new procedure can feel overwhelming, especially when it involves your little one. I’ll try to explain in plain language what BAE is, why it’s being suggested, and what you can expect from the team that will care for your child.
+
+---
+
+### 1. What is Bronchial Artery Embolization?
+
+- **Purpose:** BAE</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Bronchial Artery Embolization Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Answer**
+
+I understand that you’re looking for other ways to manage your child’s condition before deciding on bronchial artery embolization (BAE). Let me explain the main alternatives that are usually considered, how they differ from BAE, and what factors the medical team will weigh when making a recommendation.
+
+---
+
+## 1. Medical (Non‑surgical) Management
+
+| Option | What it involves | Typical situations | Pros &amp; Cons |
+|--------|------------------|--------------------|-------------|
+| **Medications** (e.g., steroids, antibiotics, antifibrotic agents, bronchodilators) | Oral or IV drugs that reduce inflammation, infection, or scarring in the lungs | Mild to moderate symptoms, early disease, or when the bleeding is not life‑threatening | • Easy to administer&lt;br&gt;• Can improve symptoms&lt;br&gt;• Side‑effects vary (e.g., steroid‑related growth suppression) |
+| **Pulmonary rehabilitation &amp; supportive care** | Breathing exercises, nutritional support, oxygen therapy | Chronic lung disease, poor lung function | • Improves quality of life&lt;br&gt;• Doesn’t stop bleeding directly |
+| **Endoscopic interventions** (e.g., bronchial blockers, cryotherapy) | Devices placed through a bronchoscope to control bleeding | Small, localized bleeding sites | • Minimally invasive&lt;br&gt;• May need repeat procedures |
+
+**When BAE is considered over these options**  
+- The child has repeated or massive bleeding that threatens life or causes severe anemia.  
+- Medical therapy has not adequately controlled the bleeding.  
+- The bleeding source is clearly identified on imaging or bronchoscopy.
+
+---
+
+## 2. Surgical Options
+
+| Option | What it involves | Typical situations | Pros &amp; Cons |
+|--------|------------------|--------------------|-------------|
+| **</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**What to Expect: How the Bronchial Artery Embolization Will Be Done**
+
+I know that any procedure can feel a little scary when it involves your child, so I’ll walk you through the steps in plain language and highlight the parts that are especially important for a child’s care.
+
+---
+
+### 1. What the Procedure Aims to Do  
+Bronchial artery embolization (BAE) is a minimally‑invasive way to stop or reduce bleeding that comes from the blood vessels that supply the lungs (the bronchial arteries). By “blocking” the problematic vessels with tiny particles, we can stop the bleeding and give the lungs time to heal.
+
+---
+
+### 2. The Day‑to‑Day Flow of the Procedure
+
+| Step | What Happens | Why It Matters for Your Child |
+|------|--------------|------------------------------|
+| **Pre‑procedure imaging** | Your child will have a chest X‑ray, a CT scan, and a bronchoscopy (a tiny camera inserted into the airways). These images help the team see exactly where the bleeding is coming from and plan the safest route. | Knowing the exact location means we can target only the bad vessels, sparing healthy tissue. |
+| **Anesthesia** | The procedure is done under general anesthesia (the child will be asleep). A pediatric anesthesiologist will monitor the child’s heart, breathing, and blood pressure throughout. | Children often feel less anxious and the procedure can be done more precisely when they’re fully relaxed. |
+| **Accessing the blood vessels** | A small incision (or sometimes a puncture) is made in the groin or arm. A thin, flexible tube called a catheter is threaded through the blood vessels up to the area near the lungs. | The catheter is so small that it usually causes only a tiny bruise or a brief sore spot. |
+| **Guided imaging** | While the catheter is in place, the interventional radiologist uses live X‑ray (fluoroscopy) to see the catheter’s path and the bronchial arteries. | This real‑time imaging ensures the catheter is exactly where it needs to be before any particles are released. |
+| **</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+**Will my child need sedation or anesthesia for the bronchial artery embolization?**  
+Yes, most children who undergo a bronchial artery embolization (BAE) are given some form of sedation or anesthesia. The goal is to keep your child comfortable, still, and safe while the interventional radiologist works inside the blood vessels.  
+
+- **For younger children or those who have difficulty staying still** (e.g., toddlers, infants, or children who are very anxious), general anesthesia is usually used.  
+- **For older children who can cooperate** (e.g., school‑aged kids or adolescents), the team often chooses **conscious (moderate) sedation**. This keeps the child relaxed but still awake enough to follow simple instructions.
+
+**Will a pediatric anesthesia specialist be present?**  
+Absolutely. Because children have unique physiological needs and a higher risk of airway or breathing complications, the anesthesia care is typically handled by a pediatric anesthesiologist or a pediatric anesthesia nurse‑anesthetist. They are trained to monitor heart rate, breathing, oxygen levels, and blood pressure, and to adjust medications as needed during the procedure.
+
+**What happens before the procedure?**  
+Your child will have a chest X‑ray, a CT scan, and a bronchoscopy to help the team plan the embolization. These studies also give the anesthesia team useful information about the child’s airway and overall health.
+
+**What to expect on the day of the procedure**  
+- **Pre‑procedure check‑in**: The anesthesia team will review your child’s medical history, medications, and any allergies.  
+- **Monitoring**: Electrodes, pulse oximeter, and blood pressure cuff will be</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do to get your child ready for the bronchial artery embolization (BAE)**  
+*(This is a general guide – your care team will give you the exact details for your child.)*
+
+---
+
+### 1. What the procedure is and why we do it  
+- **Bronchial artery embolization** is a minimally‑invasive way to stop bleeding or reduce blood flow to a lung area that is causing problems (e.g., severe coughing, recurrent infections, or a lung cyst).  
+- A tiny catheter is threaded through a blood vessel in the groin or arm, guided to the bronchial artery, and tiny “embolic” particles are released to block the excess blood flow.  
+- Because the procedure is done through the blood vessels, we need to know exactly where the artery is and how it looks, which is why the imaging and bronchoscopy you mentioned are so important.
+
+---
+
+### 2. Pre‑procedure “check‑list” – what we’ll need from you
+
+| Step | What you’ll do | Why it matters for a child |
+|------|----------------|----------------------------|
+| **Fasting** | 6–8 hours before the procedure (no food or drink). | Keeps the stomach empty so the child is safe if they need sedation or anesthesia. |
+| **Medication review** | Bring a list of all medicines, vitamins, and supplements your child is taking. | Some drugs (e.g., blood thinners, certain antibiotics) can affect the procedure or bleeding risk. |
+| **Blood tests** | Usually a CBC (blood count), coagulation profile, and basic metabolic panel. | Helps the team know if the child’s blood is clotting normally and if the kidneys are working well (important for contrast dye). |
+| **Allergy check** | Tell us if your child has had reactions to contrast dye, iodine, or any medications. | Contrast dye is used in the CT and</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> Before the procedure, chest X-ray, computed tomography (CT) and bronchoscopy</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+I’m really sorry you’re facing this uncertainty. I’ll try to give you a clear picture of what usually happens after a bronchial artery embolization (BAE) in a child, but please remember that the exact plan will be tailored to your child’s specific situation and the preferences of the treating team.
+
+---
+
+### 1. Will your child need to stay in the hospital?
+
+**Yes, most children are kept in the hospital for a short period after a BAE.**  
+The procedure is done under general anesthesia or conscious sedation, and the interventional radiology team wants to watch for:
+
+* **Bleeding or swelling** at the puncture site in the groin or arm (where the catheter is inserted).  
+* **Pain or discomfort** that may need medication.  
+* **Any early signs of complications** such as low blood pressure, fever, or neurological changes (especially because of the rare risk of particles reaching the spinal artery).
+
+Because the procedure is minimally invasive, many centers can discharge a child the same day or after an overnight stay. However, the decision depends on:
+
+* How well the child tolerated the procedure.  
+* Whether the child was able to eat, drink, and move comfortably.  
+* The presence of any risk factors (e.g., a history of bleeding disorders, severe lung disease, or a complicated anatomy that required a longer procedure).
+
+---
+
+### 2. How long will the stay usually last?
+
+| Scenario | Typical Length of Stay | Why |
+|----------|------------------------|-----|
+| **Standard BAE, uncomplicated** | **1–2 nights** | Allows for overnight monitoring of the puncture site, pain control, and a quick check‑</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Answer for Parents**
+
+I understand how important it is to know what to expect after your child’s bronchial artery embolization (BAE). Below is a simple, honest overview of activity restrictions and when your child can usually return to normal play and school.  
+
+---
+
+### 1. What the Procedure Means for Your Child
+
+- **Bronchial artery embolization** is a minimally‑invasive way to stop bleeding in the lungs. Tiny particles are delivered through the blood vessels to block the bleeding artery.
+- In rare cases, those particles can travel to the spinal artery and temporarily block blood flow to the spinal cord. That’s why we monitor for any signs of spinal cord problems (e.g., weakness, numbness, or pain) right after the procedure.
+
+---
+
+### 2. Typical Activity Restrictions
+
+| Time After Procedure | What’s Safe | What to Avoid |
+|----------------------|-------------|---------------|
+| **First 24–48 hours** | • Rest in bed or on a couch&lt;br&gt;• Light, short walks around the house | • Heavy lifting or carrying objects &gt; 5 lb (2 kg)&lt;br&gt;• Bending or twisting that strains the back&lt;br&gt;• Sudden, vigorous movements |
+| **Days 3–7** |</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Bronchial Artery Embolization Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

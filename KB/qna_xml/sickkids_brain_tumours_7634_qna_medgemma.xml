@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Brain Tumours 7634" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is the treatment being recommended for your child?**
+
+I know that hearing “treatment” can feel overwhelming, especially when it’s about something as serious as a brain tumour. Below is a simple, honest explanation of why the medical team has suggested the next step, and what it means for your child’s health and future.
+
+---
+
+### 1. The goal of the treatment
+
+| What the team is trying to achieve | Why it matters for your child |
+|-----------------------------------|------------------------------|
+| **Remove or shrink the tumour** | A growing tumour can press on brain tissue, nerves, and blood vessels, causing headaches, seizures, balance problems, or changes in mood and thinking. Removing or shrinking it relieves that pressure and helps keep the brain working as normally as possible. |
+| **Stop the tumour from spreading** | Some tumours can grow into nearby brain areas or spread through the fluid that surrounds the brain (cerebrospinal fluid). Treating early reduces the chance of it moving to other parts of the brain or spinal cord. |
+| **Preserve or improve function** | The brain is still developing in children. By treating the tumour early, we aim to protect learning, memory, language, and motor skills that are essential for school, play, and everyday life. |
+| **Give the best chance for long‑term health** | Early, targeted treatment (surgery, radiation, chemotherapy, or a combination) is often associated with better outcomes and a lower risk of recurrence. |
+
+---
+
+### 2. Why your child’s specific situation calls for</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What to Expect – Benefits and Possible Risks of Your Child’s Brain‑Tumour Treatment**
+
+I know that hearing “brain tumour” can feel overwhelming, and the word “treatment” can bring up a lot of questions. Below I’ve tried to explain the main benefits you can hope for, the risks that are most common in children, and how we’ll keep a close eye on everything so your child can get the best possible care.
+
+---
+
+## 1. The Big Picture – Why We Treat
+
+| **Goal of Treatment** | **What It Means for Your Child** |
+|------------------------|----------------------------------|
+| **Remove or shrink the tumour** | Surgery (or a combination of surgery, radiation, and/or chemotherapy) aims to take out as much of the tumour as possible or to make it smaller so it’s easier to control. |
+| **Stop the tumour from growing again** | Radiation or chemotherapy can kill any remaining cancer cells that surgery can’t reach. |
+| **Relieve symptoms** | Removing a tumour can reduce pressure on the brain, stop seizures, improve swallowing, and</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Answer for Parents**
+
+I understand that hearing about a new procedure can feel overwhelming, especially when you’re already navigating a diagnosis of a brain tumour in your child. It’s completely normal to wonder whether there are other ways to treat the tumour, or whether a different approach might be better for your child’s health and quality of life.
+
+Below is a general overview of the kinds of options that are often considered for pediatric brain tumours. Please keep in mind that the best choice depends on many factors that only the full medical team (neurosurgeons, oncologists, radiologists, and supportive‑care specialists) can evaluate together with you.
+
+---
+
+### 1. **Surgical Removal (Open or Minimally‑Invasive)**
+- **What it is**: The surgeon physically removes the tumour, either through a traditional craniotomy or with newer, less‑invasive techniques (e.g., endoscopic or robotic approaches).
+- **When it’s used**: Tumours that are accessible, large enough to cause symptoms, or that can be safely removed without damaging critical brain tissue.
+- **Benefits**: Immediate reduction of tumour mass, relief of pressure on the brain, and a tissue sample for pathology.
+- **Risks**: As with any brain surgery—bleeding, infection, neurological deficits, or anesthesia complications.
+
+---
+
+### 2. **Radiation Therapy**
+- **Conventional external beam radiation**: Delivers high‑energy X‑rays from outside the body.
+- **Stere</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Brain Tumours 7634.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Brain Tumours 7634.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Brain Tumours 7634.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Brain Tumours 7634.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+I’m really sorry you’re facing this difficult situation. I’ll try to explain what you might expect regarding hospital stays, but please remember that the exact plan will be decided by your child’s treating team after they’ve looked at all the details of the secondary cancer and the overall care goals.
+
+---
+
+### 1.  When a hospital stay is usually needed
+
+| Situation | Typical length of stay | Why it happens |
+|-----------|------------------------|----------------|
+| **Diagnostic work‑up** (MRI, CT, PET, biopsy, blood tests) | 1–3 days | To get a clear picture of the new cancer and plan treatment |
+| **Surgery** (removing a new tumor or a part of the brain) | 3–7 days (sometimes longer) | To allow for recovery from anesthesia and to monitor for complications |
+| **Radiation therapy** | Usually **outpatient** (daily visits for 4–6 weeks) | The machine is in the hospital, but you can stay at home between sessions |
+| **Chemotherapy** | Often **outpatient** (weekly or bi‑weekly visits) | You can receive the drugs in a clinic and then go home |
+| **Palliative care interventions** (e.g., pain management, symptom control) | Variable – can be</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Answer for Parents**
+
+I understand that you’re wondering about what your child can do after the recent treatment for the secondary brain tumour. The answer depends on a few factors—what kind of procedure was done, how your child is feeling, and the overall goals of care (in this case, palliative care). Below is a general overview, but please remember that the exact plan will be tailored by your child’s medical team.
+
+| **What happened?** | **Typical activity restrictions** | **When can normal activity resume?** |
+|--------------------|-----------------------------------|-------------------------------------|
+| **Surgery (e.g., tumour removal)** | • Rest for the first 1–2 weeks.&lt;br&gt;• Avoid heavy lifting, strenuous exercise, or contact sports for at least 6–</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Brain Tumours 7634.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

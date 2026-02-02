@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Angiography Through The Femoral Artery Groin Caring For Your Child At Home After 9881" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is having an angiography through the femoral artery**
+
+I know that hearing “angiography” and “femoral artery” can feel a bit intimidating, so I’ll try to explain what this means for your child in plain language and why the doctors think it’s the best next step.
+
+---
+
+### 1. What an angiography is
+
+- **Angiography** is a special imaging test that lets doctors see the inside of the blood vessels (arteries and veins) in real time.  
+- A tiny camera‑like device (a catheter) is threaded through a small opening in the groin (the femoral artery).  
+- Once the catheter is in place, a contrast dye is injected. X‑ray or CT images are taken while the dye flows, so the doctor can see the shape, size, and flow of the vessels.
+
+Think of it as a “road‑map” that shows how blood travels through the body and whether there are any blockages, abnormal growths, or other problems.
+
+---
+
+### 2. Why it’s recommended for your child
+
+The decision to perform an angiography is usually made after the medical team has considered:
+
+| **Common reasons for a pediatric angiography** | **What the test helps with** |
+|-----------------------------------------------|------------------------------|
+| **Diagnosing a vascular problem** (e.g., a narrowing, aneurysm, or abnormal connection) | Gives a clear picture so the team can decide the best treatment. |
+| **Planning a treatment** (e.g., placing a tiny stent, embolizing a bleeding vessel, or correcting a structural defect) | Allows the</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography Through The Femoral Artery Groin Caring For Your Child At Home After 9881.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Answer**
+
+I understand that you’re looking for other ways to help your child instead of a femoral‑artery angiography. That’s a very reasonable question, and it’s important to know that there are a few different options that doctors sometimes consider. Below is a short, parent‑friendly overview of what those alternatives might be, and why your child’s care team will decide together which one is best.
+
+---
+
+### 1. **Other Ways to Look Inside the Blood Vessels**
+
+| Alternative | How it Works | Why It Might Be Chosen | What It Means for Your Child |
+|-------------|--------------|------------------------|------------------------------|
+| **Radial artery access** (hand side) | The same angiography is done, but the catheter is inserted into the wrist instead of the groin. | Less chance of groin bleeding or a large bruise; easier to keep the child still. | The child will need a small incision in the wrist; the procedure is usually just as quick. |
+| **Non‑invasive imaging** (MRI or CT angiography) | Uses magnets or X‑ray‑based scans to create detailed pictures of blood vessels without a catheter. | No needle puncture, no bleeding risk. Often used when the problem is not urgent or when the child is very young. | The child may need to lie still for a while; sometimes a mild sedative is used. |
+| **Ultrasound‑guided Doppler** | A handheld probe sends sound waves to see blood flow. | Good for checking for blockages or leaks, especially in smaller vessels. | No needles, no radiation, and the child can usually go home the same day. |
+
+---
+
+### 2. **Other Ways to Treat the Problem**
+
+If the angiography is being done to treat a problem (for example</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography Through The Femoral Artery Groin Caring For Your Child At Home After 9881.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography Through The Femoral Artery Groin Caring For Your Child At Home After 9881.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography Through The Femoral Artery Groin Caring For Your Child At Home After 9881.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography Through The Femoral Artery Groin Caring For Your Child At Home After 9881.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+After a femoral‑artery angiography, most children can go home the same day, but the exact plan depends on how the procedure went and how the child feels afterward.  
+
+| What usually happens | Why it matters | What you can expect |
+|----------------------|----------------|---------------------|
+| **Observation in the hospital for a few hours** | The team watches for bleeding, swelling, or any signs of a complication at the groin site. | You’ll be asked to stay in the recovery area for 2–4 hours (sometimes a bit longer if the child was sedated or had a longer procedure). |
+| **Possible overnight stay** | If the child had a longer or more complex angiography, needed more sedation, or if the doctor wants to be extra sure the groin site is healing well, an overnight stay may be recommended. | You’ll be in a pediatric room the night after the procedure, with a nurse checking the incision and the child’s vital signs. |
+| **Discharge home** | Once the child is awake, moving comfortably, and the groin site is stable, the team will let you go home. | You’ll leave with instructions on wound care, activity limits, and when to call the hospital. |
+
+### Why the length of stay can vary
+
+- **Procedure length and complexity** – Longer studies or those that required more contrast or intervention can increase the need for observation.  
+- **Sedation** – Children who were sedated or anesthetized may need a longer recovery period.  
+- **Bleeding risk** – If the groin site had any bleeding or if the child had a clotting disorder, the team may keep them overnight.  
+- **Your child’s overall health** – Children with certain medical conditions (e.g., heart or kidney issues) may be observed longer to ensure everything is stable.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**What to Expect After a Femoral‑Artery Angiography**
+
+After your child’s angiography (the imaging test that looks at the blood vessels in the groin), the main goal is to keep the puncture site from bleeding or swelling. Most kids recover quickly, but a few simple activity limits help make sure the artery heals safely.
+
+| **Activity** | **Typical Recommendation** | **Why?** |
+|--------------|---------------------------|----------|
+| **Rest &amp; lying flat** | 12–24 hours after the procedure (or as long as the doctor says). | Keeps pressure off the puncture site and reduces the chance of bleeding. |
+| **Bending over / heavy lifting** | Avoid for 24–48 hours. | The groin area is still healing; bending or lifting can stretch the puncture site. |
+| **Running, jumping, or strenuous play** | Hold off for 3–5 days (sometimes up to a week). | These activities increase blood pressure and heart rate, which can stress the puncture site. |
+| **Swimming or soaking in a tub** | Wait until the doctor says it’s safe, usually after the first 24–48 hours. | Water can loosen the dressing or introduce bacteria. |
+| **Normal school or daycare** | Usually fine after the first day, but keep the child from sitting on a hard surface for a few hours if you’re still worried. | Most kids can go back to routine activities quickly. |
+| **Sexual activity** | Not</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Angiography Through The Femoral Artery Groin Caring For Your Child At Home After 9881.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

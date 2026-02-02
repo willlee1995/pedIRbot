@@ -1,0 +1,190 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Celiac Disease What To Do When Youve Been Glutened 486" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is the treatment being recommended for your child?**
+
+I’m glad you’re asking this question—understanding the “why” behind a recommendation can help you feel more confident and involved in your child’s care. Below is a plain‑language explanation of why the team at SickKids is suggesting the treatment plan that was discussed with you.
+
+---
+
+### 1. What the treatment is meant to do
+
+| **Goal** | **What it means for your child** |
+|----------|-----------------------------------|
+| **Stop the immune reaction to gluten** | The body’s immune system mistakenly attacks the small intestine when gluten (a protein found in wheat, barley, and rye) is eaten. The treatment (usually a strict gluten‑free diet, sometimes with additional medications or supplements) removes the trigger so the immune system can calm down. |
+| **Heal the small‑intestinal lining** | When the lining is damaged, nutrients can’t be absorbed properly. The treatment helps the villi (tiny finger‑like projections) grow back, improving absorption of vitamins, minerals, and calories. |
+| **Prevent long‑term complications** | Untreated celiac disease can lead to growth delays, anemia, bone problems, and, in rare cases, an increased risk of certain cancers. The treatment reduces or eliminates these risks. |
+| **Improve symptoms and quality of life** | Many children feel better—less abdominal pain, bloating, diarrhea, fatigue, and skin rashes—once gluten is removed from their diet. |
+
+---
+
+### 2. Why it’s especially important for children
+
+1. **Growth &amp; Development**  
+   Children are</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease What To Do When Youve Been Glutened 486.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+For a child who has accidentally eaten gluten, the safest and most effective “alternative” is simply to keep them comfortable and give them the right fluids and foods while we wait for the gut to recover. There aren’t any other medical procedures that can “undo” a gluten exposure—what we can do is support the child’s body as it heals, and if symptoms become severe we can add medications or seek a specialist’s help.
+
+---
+
+## 1. What we usually do right after a gluten exposure
+
+| What we do | Why it matters for kids | How you can help at home |
+|------------|------------------------|--------------------------|
+| **Hydrate** (water, clear broths, electrolyte drinks) | Kids lose fluids quickly with diarrhea or vomiting. | Keep a small, reusable water bottle nearby and offer sips every 5‑10 minutes. |
+| **Give easy‑to‑digest, gluten‑free foods** (plain crackers, rice, bananas, applesauce) | A calm stomach tolerates bland foods better. | Have a small snack ready and avoid spicy or greasy foods until the tummy feels better. |
+| **Rest** | Sleep and downtime help</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**What “treatment” looks like after a gluten exposure**
+
+When a child with celiac disease accidentally eats gluten, the goal is to help the gut heal as quickly and comfortably as possible.  There isn’t a single “procedure” that the radiology team performs; instead, the care plan is a set of supportive measures that the medical team, your child’s dietitian, and you as parents can follow right away.
+
+| Step | What it means for your child | How you can help |
+|------|------------------------------|------------------|
+| **1. Keep the child hydrated** | Diarrhea or vomiting can quickly lead to dehydration.  Fluids with electrolytes (sports drinks, Pedialyte, or homemade electrolyte solutions) help replace lost salts and water. | Keep a small, reusable water bottle or cup nearby.  Offer small sips frequently, even if the child isn’t very thirsty. |
+| **2. Offer gentle, plain foods** | The gut is inflamed, so bland, low‑fiber foods are easier to digest.  Think plain gluten‑free crackers, toast, rice, boiled potatoes, bananas, or applesauce. | Work with your child’s</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+- **No sedation or anesthesia is needed to watch the “What to do when you’ve been glutened” video.**  
+- If your child ever needs a medical procedure related to celiac disease (for example, an upper‑endoscopy, a biopsy, or a small‑bowel test), the decision about sedation will be made by the treating team. In those cases, a pediatric anesthesiologist will be part of the care team if the procedure requires it.
+
+---
+
+### Why no sedation is needed for the video
+
+The material you’re looking at is an educational video produced by SickKids. It’s meant to help families understand what to do when a gluten exposure occurs and how to support a child’s recovery. Watching a video is a passive activity—no needles, no imaging, no invasive steps—so there’s no need for sedation or anesthesia.
+
+---
+
+### What if a medical procedure is required?
+
+1. **When a procedure might be needed**  
+   - **Diagnostic tests** (e.g., upper‑endoscopy with biopsy, small‑bowel capsule endoscopy, or imaging studies)  
+   - **Therapeutic interventions** (e.g., removal of a small bowel stricture, placement of a feeding tube, or other interventional radiology procedures)
+
+2. **Sedation or anesthesia decision**  
+   - The treating physician (pediatric gastroenterologist, surgeon, or interventional radiologist) will evaluate the child’s age, size, medical history, and the nature of the procedure.  
+   - For most endoscopic or imaging procedures</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**Preparing Your Child for Celiac‑Disease Care (and Any Upcoming Procedure)**  
+Below is a simple, step‑by‑step guide that covers what you can do right now to help your child feel ready and supported.  The exact details may vary depending on the specific treatment your child is scheduled to receive, so we’ll review them together with your pediatrician</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>**Short answer**
+
+- **Yes, your child can usually have a small sip of clear liquid (water, diluted juice, or clear tea) up to about 2 hours before the procedure.**  
+- **No solid foods (or any food that isn’t a clear liquid) should be eaten for at least 6–8 hours before the procedure.**  
+- **These are the standard fasting rules for most pediatric imaging or interventional radiology procedures, but the exact timing will be confirmed by the team that will be caring for your child.**
+
+---
+
+### Why fasting matters
+
+When a child undergoes a procedure that requires sedation, anesthesia, or a contrast‑filled imaging study, the stomach needs to be empty. A full stomach can increase the risk of vomiting, aspiration (food or liquid entering the lungs), and complications during the procedure. That’s why we ask families to follow a short fasting period before the appointment.
+
+### What “clear liquid” means
+
+Clear liquids are drinks that are transparent and do</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+In most cases, a child who has been “gluten‑exposed” (i.e., has eaten gluten after being diagnosed with celiac disease) will not need to stay in the hospital. If the child is simply experiencing mild symptoms—such as a stomach ache, nausea, or a brief bout of diarrhea—most parents can manage these at home with supportive care (fluids, rest, a bland diet, and the gluten‑free plan).  
+
+If the child’s symptoms are more severe—persistent vomiting, high fever, dehydration, or signs of a serious complication (e.g., severe abdominal pain that doesn’t improve, blood in stool, or a sudden drop in weight)—the medical team may recommend a short observation stay in the hospital (usually 24–48 hours) to monitor hydration, give IV fluids, and ensure the child is stable before returning home.  
+
+**What to expect if a hospital stay is needed**
+
+| What happens | Typical length | Why it matters |
+|--------------|----------------|----------------|
+| **Initial evaluation** (vitals, labs, maybe imaging) | 1–2 hours | To confirm the child’s condition is stable and to rule out complications |
+| **Observation &amp; supportive care** (IV fluids, anti‑nausea meds, monitoring) | 24–48 hours | Allows the team to see how the child responds to treatment and to catch any early signs of worsening |
+| **Discharge planning** (instructions, follow‑up appointments, dietary counseling) | 1–2 hours | Ensures the child and family feel confident about managing the situation at home |
+
+**What the medical team will discuss with you**
+
+- Whether your child’s symptoms warrant a hospital stay</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Celiac Disease What To Do When Youve Been Glutened 486.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>**Follow‑up after an accidental gluten exposure**
+
+When your child accidentally eats gluten, most of the time the “treatment” is simply supportive care at home and a plan to keep the child comfortable while the gluten is cleared from the body. Here’s what you can expect in terms of follow‑up:
+
+| What happens next | Why it matters | What you can do |
+|-------------------|----------------|-----------------|
+| **Watch for symptoms** | Celiac symptoms can appear hours to days after exposure. | Keep a simple symptom log (diarrhea, abdominal pain, fatigue, skin rash, mood changes). Note when they start, how long they last, and how severe they are. |
+| **Call the pediatrician or gastroenterologist if** | • Severe abdominal pain or vomiting &lt;br&gt;• Persistent diarrhea or blood</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

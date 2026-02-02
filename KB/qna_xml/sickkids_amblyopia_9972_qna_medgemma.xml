@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Amblyopia 9972" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is your child being recommended treatment for amblyopia?**
+
+I understand that hearing “treatment” can feel overwhelming, especially when it comes to your child’s vision. Below is a simple, honest explanation of why we’re recommending a plan for your child, and what it means for their future.
+
+---
+
+### 1. Amblyopia is a “lazy eye” that can become permanent if left untreated
+
+- **Vision is still developing** – In children under 9, the brain and eyes are still learning to work together.  
+- **If one eye is weaker, the brain starts to ignore it** – Over time, the weaker eye can become permanently “lazy,” meaning the child may never reach full visual potential in that eye.  
+- **Early treatment is the best chance** – The earlier we intervene, the more likely the brain can “rewire” itself to use both eyes properly.
+
+---
+
+### 2. The treatment plan is tailored to what’s causing the problem
+
+Your child’s amblyopia could be due to:
+
+| Cause | Why it matters | Typical treatment |
+|-------|----------------|-------------------|
+| **Strabismus** (eyes mis‑aligned) | The brain rejects the image from the mis‑aligned eye | Patching, eye‑drops, or sometimes surgery |
+| **Anisometropia** (different focusing power in each</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What the SickKids amblyopia treatment can do for your child**
+
+| **Benefit** | What it means for your child |
+|-------------|------------------------------|
+| **Improved vision in the “lazy” eye** | Most children who receive treatment see a measurable gain in visual acuity (sharpness of vision) in the affected eye. The better the vision, the easier it is to read, play sports, and learn. |
+| **Better depth perception** | When both eyes work together, your child can judge distances more accurately—important for catching a ball, climbing stairs, or riding a bike. |
+| **Reduced risk of developing or worsening eye misalignment (strabismus)** | Untreated amblyopia can lead to the eyes turning in or out. Treating early helps keep the eyes aligned, which is easier to manage later if needed</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Amblyopia 9972.</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Amblyopia 9972.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Amblyopia 9972.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Amblyopia 9972.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Amblyopia 9972.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Amblyopia 9972.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Amblyopia 9972.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Amblyopia 9972.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

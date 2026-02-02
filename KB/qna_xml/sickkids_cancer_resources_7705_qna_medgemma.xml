@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Cancer Resources 7705" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is your child being recommended this treatment?**
+
+I know that hearing “we’re going to do this” can feel overwhelming, especially when it involves cancer care. Below is a plain‑language explanation of why the medical team has chosen this particular treatment for your child, and what you can expect as you move forward.
+
+---
+
+### 1. The treatment fits your child’s specific cancer
+
+- **Type of cancer** – Every cancer is different. The doctors look at the exact type of tumor (e.g., leukemia, lymphoma, brain tumor, bone cancer) and how it behaves in the body.  
+- **Stage and spread** – They assess how far the cancer has progressed (stage) and whether it has spread to other parts of the body.  
+- **Genetic and molecular profile** – Modern tests can identify specific genes or proteins that the cancer cells rely on. If the treatment targets those features, it can be more effective and less toxic.
+
+### 2. Evidence that the treatment works
+
+- **Clinical trials and studies** – The treatment has been tested in children with the same or similar cancers. The results show that it improves survival, reduces the chance of the cancer returning, or helps the child feel better.  
+- **Guidelines from professional societies** – Organizations such as the American Society of Pediatric Hematology/Oncology (ASPHO) or the National Comprehensive Cancer Network (NCCN) recommend this therapy for children who meet certain criteria.  
+- **Expert consensus** – The team at SickKids (or your local pediatric oncology center) has reviewed the latest research and decided that this is the best option for your child’s situation.
+
+### 3. How it helps your child
+
+- **Targeted action** – The treatment is designed to attack cancer cells while sparing healthy cells as much as possible, which can mean fewer side effects than older, more “one‑size‑fits‑all” therapies.  
+- **Improved outcomes**</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cancer Resources 7705.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Answer**
+
+I’m glad you’re asking about alternatives—having all the options in front of you can help you feel more in control and make the best decision for your child. Below is a general overview of the kinds of alternatives that are often considered in pediatric oncology. Please keep in mind that the right choice depends on your child’s specific diagnosis, stage of disease, overall health, and the preferences of you and your medical team. We’ll discuss each of these points in detail during your next appointment.
+
+---
+
+### 1. Standard‑Care Regimens (What the “Gold Standard” Usually Looks Like)
+
+Most pediatric cancers have well‑established protocols that have been tested in large, multi‑center studies. These protocols combine:
+
+| Modality | Typical Role | Why It’s Used |
+|----------|--------------|---------------|
+| **Chemotherapy** | Systemic treatment to kill cancer cells | Proven to shrink tumors and eradicate microscopic disease |
+| **Radiation Therapy** | Targeted to the tumor site (or whole body in some leukemias) | Helps control local disease when surgery isn’t possible |
+| **Surgery** | Physical removal of the tumor | Often the first line when the tumor is localized |
+| **Targeted Therapy / Immunotherapy** | Drugs that attack specific cancer cell features | Can be added to standard chemo for better outcomes |
+| **Stem‑Cell Transplant** | Replaces diseased bone marrow with healthy cells | Used for high‑risk leukemias or relapsed disease |
+
+These regimens are chosen because they have the best evidence for survival and long‑term outcomes in children.
+
+---
+
+### 2. Clinical Trials
+
+**What Are They?**  
+Clinical trials test new drugs, combinations, or approaches that aren’t yet standard practice. They’re rigorously reviewed by ethics boards and monitored for safety.
+
+**Why Consider Them?**  
+- **Access to cutting‑edge treatments** that may be more effective or have fewer side effects.  
+- **Contribution to science** that can help future patients</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cancer Resources 7705.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cancer Resources 7705.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cancer Resources 7705.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cancer Resources 7705.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cancer Resources 7705.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cancer Resources 7705.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cancer Resources 7705.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

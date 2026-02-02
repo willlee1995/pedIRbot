@@ -1,0 +1,240 @@
+<?xml version="1.0" ?>
+<procedure name="Catheter Directed Thrombolysis Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is catheter‑directed thrombolysis being recommended for your child?**
+
+I understand that hearing about a new procedure can feel overwhelming, especially when it involves your child’s health. I’ll try to explain in plain language what the doctors are hoping to achieve and why this particular treatment is being considered.
+
+---
+
+### 1. What the procedure does
+
+- **Catheter‑directed thrombolysis** is a minimally invasive way to dissolve a blood clot that is blocking a blood vessel.  
+- A thin, flexible tube (the catheter) is guided under imaging (X‑ray, ultrasound, or MRI) to the exact spot where the clot is located.  
+- Once the catheter is in place, a clot‑dissolving medication (a thrombolytic drug) is slowly delivered directly into the clot.  
+- The drug works locally, so the rest of the body is exposed to much less medication than with a systemic (whole‑body) approach.  
+- By breaking up the clot, normal blood flow can be restored, which helps prevent damage to the tissue that the vessel supplies (for example, a limb, the brain, or the lungs).
+
+---
+
+### 2. Why it is being recommended for your child
+
+| Reason | Why it matters for a child |
+|--------|----------------------------|
+| **Clot is causing a serious problem** | If a clot is blocking blood flow, the tissue it supplies can become damaged or die. In children, the tissues are still growing, so preserving them is especially important. |
+| **Less invasive than open surgery** | Children are more sensitive to large incisions, general anesthesia, and longer recovery times. A catheter‑based approach usually requires only a small puncture and local anesthesia or short‑acting sedation. |
+| **Targeted treatment** | The drug is delivered right where it’s needed, which reduces the risk of side effects elsewhere in the body. |
+| **Time‑sensitive** | The longer a clot remains, the higher the risk of permanent damage. Catheter‑directed thrombolysis</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What is Catheter‑Directed Thrombolysis (CDT) and Why It Might Be Offered?**  
+CDT is a minimally‑invasive procedure that delivers a clot‑dissolving drug directly to the blocked artery in your child’s limb. The goal is to:
+
+1. **Restore blood flow quickly** – this can prevent the limb from becoming permanently damaged.  
+2. **Reduce the need for surgery** – in many children, the clot can be dissolved without cutting the artery.  
+3. **Preserve the child’s future growth** – keeping the artery open helps the limb grow normally and keeps the risk of long‑term problems lower.  
+4. **Improve function and quality of life** – faster recovery means your child can return to play, school, and everyday activities sooner.
+
+---
+
+### Potential Benefits (what we hope to achieve)
+
+| Benefit | Why it matters for a child |
+|---------|---------------------------|
+| **Rapid clot dissolution** | Restores oxygen and nutrients to the tissues, preventing muscle and nerve damage. |
+| **Avoids amputation** | In severe cases, a blocked artery can lead to loss of a limb. CDT can keep the limb intact. |
+| **Less scarring and quicker healing** | Because the drug is delivered directly, the overall amount of medication and the risk of widespread side effects are lower than with systemic (whole‑body) therapy. |
+| **Preserves future vessel health** | Keeping the artery open reduces the chance of future blockages and the need for repeat procedures. |
+
+---
+
+### Potential Risks (what we must watch for)
+
+| Risk | Frequency (in children who have had the procedure) | What it means for your child |
+|------|----------------------------------------------------|------------------------------|
+| **Major bleeding** (anywhere in the body) | &lt; 8.4 % | Bleeding can happen at the puncture site, inside the abdomen, or elsewhere. It may need additional treatment or surgery</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several ways to treat a blood clot in a child that do not involve catheter‑directed thrombolysis. Which one is best depends on the size and location of the clot, how quickly it is growing, the child’s overall health, and how much risk the doctors are willing to accept. Your medical team will review all of these options with you and help decide the safest, most effective plan for your child.
+
+---
+
+### 1.  Anticoagulation (blood‑thinning medication)
+
+* **What it is** – A drug such as heparin or low‑molecular‑weight heparin (e.g., enoxaparin) is given by injection or IV to keep the clot from getting bigger and to allow the body’s own enzymes to slowly dissolve it.  
+* **When it’s used** – For smaller clots, clots that are not immediately threatening vital organs, or when the risk of bleeding from a more aggressive procedure is high.  
+* **What to expect** – The child will be monitored closely (often in a ward or ICU) for signs of bleeding. Blood tests are done regularly to make sure the medication is working and not causing too much thinning of the blood.  
+* **Pros &amp; Cons**  
+  *Pros:* Less invasive, no need for a catheter or surgery, can be started quickly.  
+  *Cons:* Takes longer to see full clot resolution, may not be enough for large or life‑threatening clots.
+
+---
+
+### 2.  Surgical thrombectomy (open removal of the clot)
+
+* **What it is** – The surgeon makes a small incision and physically removes the clot or opens the vessel to clear it.  
+* **When it’s used** – For very large clots, clots that are causing severe symptoms (e.g., limb ischemia, organ compromise), or when the clot is in a location that is difficult to reach with a catheter.  
+*</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the Catheter‑Directed Thrombolysis Will Be Done**
+
+I know this can feel overwhelming, so I’ll walk you through each step in plain language and point out what matters most for a child’s safety and comfort.
+
+---
+
+### 1. Preparation – Setting the Stage
+
+| What Happens | Why It Matters for Your Child |
+|--------------|------------------------------|
+| **Local anesthesia &amp; aseptic technique** – The area where we’ll insert the needle is numbed and kept sterile. | Keeps the child comfortable and reduces infection risk. |
+| **Choosing the best puncture site** – We look for the shortest, safest route to the clot. | Shorter travel time for the catheter means less manipulation and lower risk of complications. |
+| **Inserting a plastic sheath** – A small tube is placed at the puncture site. | The sheath lets us move the catheter in and out without re‑opening the skin, keeping the site clean. |
+
+---
+
+### 2. Seeing the Clot – The Baseline Angiogram
+
+*We’ll give a tiny amount of contrast dye and take a quick X‑ray (angiogram).*
+
+- **Purpose:** Shows exactly where the clot is, how big it is, and how it’s blocking blood flow.
+- **Benefit for a child:** Gives us a roadmap so we can target the clot precisely, minimizing the amount of drug needed.
+
+---
+
+### 3. Getting the Catheter Past the Clot
+
+| Step | How It’s Done | Pediatric Considerations |
+|------|---------------|--------------------------|
+| **Guidewire &amp; small catheter** | A very thin wire is threaded through the sheath and guided past the clot. | The wire and catheter are tiny, designed for small vessels. |
+| **Crossing the clot** | Once the wire is</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer for Parents**
+
+**Will my child need sedation or anesthesia for the catheter‑directed thrombolysis?**
+
+- **Local anesthesia is the standard approach.**  
+  The procedure is performed with a local anesthetic (a numbing cream or injection) at the puncture site where the catheter is inserted. This keeps the child comfortable while the doctor works on the clot.
+
+- **General anesthesia is usually not required.**  
+  Because the procedure is relatively short and the child can stay still with local numbing, we normally do not use general anesthesia. In some cases—if the child is very anxious, if the procedure is expected to take longer, or if the child has a medical condition that makes staying still difficult—our team may decide to use mild sedation or a short‑acting anesthetic. That decision is made on a case‑by‑case basis.
+
+**Will a pediatric anesthesia specialist be available?**
+
+- **Yes, a pediatric anesthesiologist or anesthesiologist experienced with children is part of our team.**  
+  Even when we use only local anesthesia, the pediatric anesthesia specialist is present to monitor the child’s comfort, vital signs, and safety. If we decide that sedation or general anesthesia is needed, the pediatric anesthesiologist will manage that part of the care.
+
+**What to expect**
+
+1. **Pre‑procedure** – The child will be examined, and the local anesthetic will be applied. The team will explain the steps in simple terms and answer any questions you have.
+2. **During the procedure** – The child will be awake but numb at the puncture site. The doctor will keep the child as comfortable as possible. If you feel the child is uncomfortable, let the team know right away.
+3. **After the procedure** – The child will be monitored in a high‑dependency or ICU setting for a few hours to</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**Preparing Your Child for Catheter‑Directed Thrombolysis**
+
+I know that getting your child ready for a medical procedure can feel overwhelming, so I’ll walk you through the most important steps in plain language. These points are based on how the procedure is usually done, but your team will tailor them to your child’s specific needs.
+
+| What to Do | Why It Matters | What You’ll Hear from the Team |
+|------------|----------------|--------------------------------|
+| **Fast (usually 6–8 hours before the procedure)** | The child’s stomach should be empty so the local anesthetic and any medications can be given safely and the risk of vomiting or aspiration is minimized. | The nurse will give you a clear “fasting” list (e.g., no solids, no clear liquids after midnight). |
+| **Skip or adjust certain medications** | Some blood‑thinning or pain medications can increase bleeding risk during the clot‑breaking therapy. | The doctor will tell you which meds to hold and for how long (often 24–48 hours). |
+| **Bring a recent blood work report** | The team checks blood counts, clotting factors, and kidney function to ensure it’s safe to give the clot‑breaking drug. | If a lab isn’t recent, the team may order one the day before. |
+| **Discuss anesthesia options** | The procedure is done under local anesthesia, but your child may need a mild sedative or a short‑acting anesthetic to stay still and comfortable. | The anesthesiologist will explain the plan and answer any questions about side effects. |
+| **Ask about the “sheath” and catheter** | A small plastic tube (sheath) is inserted at the puncture site to allow the tiny catheter to pass through easily. Knowing this helps you understand the steps and why the site is chosen. | The interventional radiologist will show you the</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> The procedure is performed under local anesthesia and aseptic technique. The puncture site is selected to provide the most direct route possible to the blood clot.  A plastic sheath will be placed at the puncture site to facilitate catheters exchange.  A baseline angiogram will be performed to document the extent and location of thrombus.  A small catheter with guidewire will be used to cross the blood clot and administration of thrombolytic agents will be started after successful catheter ...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+Catheter‑directed thrombolysis (CDT) is a minimally invasive procedure that is usually done under local anesthesia, so your child does not need general anesthesia or a long hospital stay.  
+
+**Hospital stay**
+
+- **Most children can go home the same day.** After the procedure the medical team will monitor your child for a few hours to make sure the clot has been cleared, there is no bleeding, and the puncture site is healing well.  
+- **In some cases an overnight stay is recommended.** This may happen if the clot was large, located in a critical area, or if the child has other medical issues that require closer observation.  
+- **If additional treatments are needed.** For example, if the child needs a second catheter session, a different medication, or further imaging, the team might keep them in the hospital for a day or two.
+
+**What the team will discuss with you**
+
+- The exact length of stay will depend on your child’s specific clot, overall health, and how well they respond to the procedure.  
+- Your child’s age, weight, and any other medical conditions will also be taken into account.  
+- The interventional radiology team will explain the plan in detail before the procedure and will keep you updated if the stay needs to be extended.
+
+**Bottom line**
+
+Most children who undergo catheter‑directed thrombolysis can be discharged the same day, but a short overnight stay is sometimes needed for safety and monitoring. Your child’s care team will let you know the expected timeline and any changes as soon as they are available.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Catheter Directed Thrombolysis Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Catheter Directed Thrombolysis Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

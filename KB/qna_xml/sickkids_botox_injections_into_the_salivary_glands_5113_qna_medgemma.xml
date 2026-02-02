@@ -1,0 +1,263 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Botox Injections Into The Salivary Glands 5113" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctors are recommending Botox injections into the salivary glands**
+
+I know how stressful it can be to hear about a new treatment, especially when it involves a child. I’ll try to explain in plain language what the doctors have seen and why they think this could help your child.
+
+---
+
+### 1. What’s happening with your child’s drooling?
+
+- **Drooling (sialorrhea)** is common in children with neurological conditions such as cerebral palsy.  
+- It usually happens because the child’s swallowing muscles don’t work as efficiently or the child swallows less often, not because the glands are making *too much* saliva.  
+- When saliva isn’t swallowed, it can drip over the cheeks, neck, and chest, causing skin irritation, feeding problems, and in severe cases, the risk of breathing in saliva (aspiration pneumonia).
+
+### 2. How Botox can help
+
+- **Botulinum toxin (Botox)** is a very small, purified protein that temporarily blocks the nerve signals that tell the salivary glands to produce saliva.  
+- By injecting Botox directly into the salivary glands (under ultrasound guidance), the glands produce less saliva for a few months.  
+- Less saliva means less drooling, which can reduce skin irritation, improve feeding, and lower the risk of aspiration.
+
+### 3. Why this treatment is being suggested for your child
+
+- **Your child’s specific pattern of drooling**: If the doctors have seen that the drooling is persistent, bothersome, and affecting your child’s comfort or health, reducing saliva production can make a noticeable difference.  
+- **Safety and precision**: The procedure is done by interventional radiologists who use real‑time ultrasound to guide the needle exactly to the glands, minimizing the risk of injury or complications.  
+- **Temporary effect**: The reduction in saliva is not permanent—after a few months the glands usually return to normal function. That means if the treatment doesn’t work as hoped, or if side‑effects appear, the effect will wear off and you can discuss next steps</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What the Botox injections into your child’s salivary glands can do**
+
+| What it’s for | What you can expect |
+|---------------|---------------------|
+| **Reduce or stop the over‑production of saliva** | • Less drooling and fewer “wet” mouth problems that can affect speech, comfort, and skin health. &lt;br&gt;• Fewer infections or irritation of the mouth and throat. &lt;br&gt;• A more normal, dry mouth that helps your child eat, drink, and sleep better. |
+| **Improve quality of life** | • Many families notice that their child feels less embarrassed, can play more freely, and has fewer school‑related issues (e.g., trouble with speech or wearing clothes). |
+
+**How it works**
+
+Botox (onabotulinumtoxinA) is injected directly into the salivary glands. It temporarily blocks the nerve signals that tell the glands to make saliva, so the glands produce less fluid for a few months. The effect is not permanent; repeat injections are usually needed every 3–6 months.
+
+---
+
+### Potential risks and side‑effects
+
+| Category | What can happen | How common? | What we do about it |
+|----------|-----------------|-------------|---------------------|
+| **Local reactions** | Pain, bruising, redness, or swelling at the injection site | Usually mild and short‑lived | We can give pain relief and monitor the area. |
+| **Systemic reactions** | Fever, muscle soreness lasting more than 2 days, feeling generally unwell (malaise) | Rare | We’ll check for infection or other causes and treat as needed. |
+| **Unexpected spread of the toxin** | Symptoms that appear in parts of the body that were not injected (e.g., weakness, trouble speaking, breathing problems, drooping eyelids, vision changes) | Very uncommon | If any of these occur, we’ll call the doctor immediately or go to the nearest emergency department. The medical team can give supportive care and reverse the effect if necessary. |
+| **Loss of bladder control** | Rare | Very rare | We’ll monitor and treat if it occurs. |
+| **All</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several other ways to help a child who drools too much. The best choice depends on your child’s age, overall health, the underlying cause of the drooling, and how much improvement you’re hoping to see. Your care team will review all of these options with you, so you can decide together what feels right.
+
+---
+
+## 1. Medications that reduce saliva
+
+| Medication | How it works | Typical use in kids | Things to watch for |
+|------------|--------------|---------------------|---------------------|
+| **Anticholinergics** (e.g., **glycopyrrolate**, **scopolamine**) | Block nerve signals that stimulate saliva glands | Often the first line for drooling that’s not caused by a structural problem | Dry mouth, constipation, blurred vision, urinary retention |
+| **Botulinum toxin (Botox)** | Temporarily blocks nerve signals to the glands | The procedure you’re planning; effect lasts 3–6 months | Requires repeat injections; rare allergic reaction |
+
+**Why consider medication first?**  
+- It’s non‑invasive.  
+- It can be started and stopped quickly if side‑effects appear.  
+- If it works, it may reduce the need for a surgical or interventional procedure.
+
+---
+
+## 2. Speech‑language and occupational therapy
+
+| What it involves | Why it helps | Typical schedule |
+|------------------|--------------|------------------|
+| **Oral‑motor exercises** (e</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How your child’s salivary‑gland Botox treatment will be carried out**
+
+1. **Arrival &amp; Preparation (about 2 hours before the scheduled time)**
+   * Bring your child to the hospital and check in at the reception desk.  
+   * A nurse will help your child change into a hospital gown, weigh them, and do a quick health check.  
+   * You’ll have a chance to meet the interventional radiologist (the doctor who will do the injections) and the anaesthetist (the doctor who will give your child medication to keep them comfortable). Feel free to ask any questions you have right then.
+
+2. **Waiting for the Procedure**
+   * After the initial checks, your child will be taken to the procedure room.  
+   * You’ll stay in the surgical waiting area. The staff will keep you informed of any updates, and you can rest or use the waiting room facilities while we prepare.
+
+3. **Anesthesia &amp; Pain Management**
+   * Most children receive **general anesthesia** for this procedure. That means your child will be given medication that puts them into a safe sleep so they won’t feel any pain or discomfort.  
+   * The anaesthetist will monitor your child’s vital signs (heart rate, breathing, oxygen level) throughout the procedure.  
+   * After the injections, a pain‑relief medication will be given to help with any soreness as the child wakes up.
+
+4. **The Botox Injections**
+   * The interventional radiologist will use a small needle to inject Botox (botulinum toxin) directly into the salivary glands.  
+   * The injections are guided by imaging (usually ultrasound or a small X‑ray) so the doctor can see exactly where the needle is going.  
+   * The procedure is quick—often only a few minutes per gland—so your child will be under anesthesia for a short time.
+
+5. **After the</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+Yes – for a salivary‑gland Botox injection the child will usually be given **general anesthesia**.  
+That means the child will be asleep and completely comfortable for the whole procedure. A **pediatric anesthesiologist** (a doctor who specializes in anesthesia for children) will be on hand to manage the anesthesia, monitor the child’s vital signs, and keep them safe throughout the procedure.
+
+**What that looks like for you and your child**
+
+| What happens | What you can expect |
+|--------------|---------------------|
+| **Pre‑procedure check‑in** | Arrive about 2 hours before the scheduled time. The child will be weighed, dressed in a gown, and assessed by a nurse. |
+| **Meeting the team** | You’ll have a chance to talk to the interventional radiologist who will perform the injections and the pediatric anesthesiologist who will give the anesthesia. |
+| **Fasting** | The child’s stomach must be empty for general anesthesia. They can take their regular morning medication with a sip of water up to 2 hours before the procedure, but no other medicines that increase bleeding risk (e.g., aspirin, ibuprofen, warfarin, enoxaparin). |
+| **During the procedure** | The child will be in the operating room under general anesthesia. You will wait in the surgical waiting area. The anesthesiologist will monitor the child’s breathing, heart rate, and other vital signs. |
+| **After the procedure** | The child will receive pain medication as needed and will be monitored until they are awake and stable. |
+
+**</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What you’ll need to do to get your child ready for the Botox injections into the salivary glands**
+
+| Step | What to do | Why it matters | What to ask the team |
+|------|------------|----------------|----------------------|
+| **1. Keep your child healthy** | • If your child feels sick, has a fever, or is in the middle of an infection, let the doctor know right away. &lt;br&gt;• If they get ill within the two days before the appointment, the procedure may need to be rescheduled. | The anesthesia team wants a healthy, stable patient to keep the risk of complications low. | “Will we need to postpone if my child has a cold or fever?” |
+| **2. Follow the fasting instructions** | • Your child’s stomach must be empty before general anesthesia. &lt;br&gt;• No food or drink after midnight (or as directed by the team). &lt;br&gt;• If your child has special needs that make fasting difficult, talk to the provider to create a plan. | An empty stomach reduces the risk of vomiting or aspiration during anesthesia. | “What if my child has a medical condition that makes fasting hard?” |
+| **3. Medication checklist** | • **Give only the regular morning medicine** (if any) with a sip of water **two hours before** the procedure. &lt;br&gt;• **Avoid** aspirin, naproxen, ibuprofen, warfarin, enoxaparin, or any other blood‑thinning medicines on the day of the procedure unless the doctor says otherwise. | These drugs can increase bleeding risk during the injection. | “Can my child take their usual pain reliever today?” |
+| **4. Arrive early** | • Plan to arrive **at least two hours before** the scheduled time. &lt;br&gt;• This gives the staff time to check‑in, weigh your child, dress them in a gown, and run a quick assessment. | Early arrival ensures everything is ready and you can chat with the interventional radiologist and anesthetist. | “What</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>**Short answer:**  
+- **No food or drinks** (except a tiny sip of water if they need to take their morning medication) is allowed **at least 2 hours before the procedure**.  
+- If your child has special fasting needs (e.g., a medical condition that makes them more sensitive to fasting), talk with the team so they can make a personalized plan.
+
+---
+
+### Why the fasting rule matters
+
+The Botox injections are performed while your child is under **general anesthesia**. An empty stomach reduces the risk of vomiting and aspiration (inhaling stomach contents into the lungs) during the procedure. That’s why we ask for a clear‑liquid‑only window of about 2 hours before the child is taken to the operating room.
+
+### What you can give
+
+- **Morning medication**: Your child can take their usual morning medicine with a **small sip of water** up to 2 hours before the procedure.  
+- **Avoid certain medicines**: Do **not** give aspirin, naproxen, ibuprofen, warfarin, or enoxaparin before the day of the procedure, as they can increase</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children can go home the same day—usually within about an hour after the injections.  
+Only a few kids, such as those with sleep‑apnea or other medical conditions that could affect breathing or alertness, may be asked to stay overnight for a short observation period.  
+
+---
+
+### Why that might happen
+
+1. **Observation after anesthesia or sedation** – Even a brief sedative can sometimes keep a child drowsy or make breathing a little slower. The hospital wants to make sure the child wakes up fully alert and can breathe normally before leaving.
+
+2. **Underlying medical conditions** – If your child has sleep apnea, asthma, or another condition that could change how they breathe or feel after the procedure, the team may want to keep them overnight just to be safe.
+
+3. **Individual response** – Every child is different. The interventional radiologist and the nursing team will watch how your child recovers in the recovery area and decide if a longer stay is needed.
+
+---
+
+### What to expect on the day
+
+- **Recovery area:** After the injections, your child will be moved to a recovery room where a nurse will monitor them as they wake up.  
+- **Parent’s role:** A nurse will bring you to the recovery area as soon as your child is awake and alert enough to talk.  
+- **Discharge:** If everything looks good, you’ll be given instructions and can leave the hospital within about an hour.  
+- **If overnight stay is needed:** You’ll be informed before you leave the recovery area. The team will explain why and what to expect during the night.
+
+---
+
+### How the decision is made
+
+The interventional radiologist will review your child’s medical history and any conditions that might</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Answer for Parents**
+
+After your child receives the Botox injections into the salivary glands, most of the recovery is very quick and simple. Here’s what you can expect regarding activity:
+
+| **What to Expect** | **When to Resume Normal Activity** |
+|--------------------|------------------------------------|
+| **Immediate Post‑Procedure** | Your child will be in the recovery area for about an hour. They may feel a little sore or have a small bruise at the injection sites, but they should not have any severe pain. |
+| **First 24–48 Hours** | • **Light Activity** – Your child can usually go back to their normal routine (playing, school, etc.) as soon as they feel comfortable. &lt;br&gt;• **Avoid Heavy Lifting or Strenuous Exercise** – It’s best to keep activities that involve a lot of physical exertion (e.g., running, jumping, heavy lifting) to a minimum for the first 24–48 hours. This helps prevent any extra pressure on the injection sites. &lt;br&gt;• **Gentle Care of Injection Sites** – Encourage your child to avoid rubbing or scratching the areas where the Botox was injected. |
+| **After 48 Hours** | Most children return to their full range of activities—sports, play, and school—without any special restrictions. If your child feels any lingering soreness, a light stretch or gentle massage (as advised by the nurse) can help. |
+| **When to Call the Team** | If your child experiences intense pain, swelling that doesn’t improve, or any unusual symptoms, let the nursing staff or your interventional radiologist know right away. |
+
+**Key Points to Remember**
+
+- **No Major Restrictions** – The procedure is minimally invasive, and the Botox works gradually over the</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>**Follow‑up after your child’s Botox injections into the salivary glands**
+
+We want to make sure the procedure goes smoothly and that your child feels comfortable and safe as they recover. Here’s what you can expect in the days and weeks after the injections:
+
+| Time after the procedure | What we’ll look for | What you should watch for | What you should do |
+|--------------------------|---------------------|---------------------------|--------------------|
+| **Immediately (first 24 h)** | Pain or swelling at the injection site, fever, or trouble swallowing | Mild soreness, a small bump, or a low‑grade fever (≤38 °C) | Keep the child comfortable (e.g., give a cool compress if needed), give any prescribed pain medication, and call the clinic if swelling becomes large, the child has</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,170 @@
+<?xml version="1.0" ?>
+<procedure name="Percutaneous Vertebroplasty Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being considered for percutaneous vertebroplasty**
+
+I know that hearing about a new procedure can feel overwhelming, especially when it involves your child. Below is a simple, honest explanation of why we are recommending vertebroplasty for your child and what it means for their care.
+
+---
+
+### 1. What is vertebroplasty?
+
+- **A quick, minimally‑invasive “cement‑injection”** that is done through a small needle (percutaneous) under imaging guidance.
+- The cement (polymethylmethacrylate, or PMMA) is injected into a fractured vertebra to **stabilize the bone**.
+- The procedure is performed by radiologists who specialize in musculoskeletal interventional procedures.
+
+---
+
+### 2. Why is it being recommended for your child?
+
+| Reason | How it helps your child |
+|--------|------------------------|
+| **Severe pain** from a fractured vertebra | The cement hardens quickly, often providing pain relief within hours to a day. |
+| **Risk of further collapse or deformity** |</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Vertebroplasty Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Answer for Parents**
+
+I understand that you’re looking for other ways to help your child manage the pain and instability of a fractured or weakened vertebra. Below are the most common alternatives that doctors consider, especially for children. Each option has its own benefits and risks, and the best choice depends on your child’s specific diagnosis, age, overall health, and how severe the fracture is.
+
+| Alternative | What it involves | Typical benefits | Typical concerns for children |
+|-------------|------------------|------------------|------------------------------|
+| **Conservative (non‑surgical) care** | • Pain‑relieving medications (acetaminophen, NSAIDs, or short‑term opioids) &lt;br&gt;• Physical therapy and gentle stretching &lt;br&gt;• Bracing (soft or rigid) to limit movement &lt;br&gt;• Activity modification (avoid heavy lifting or high‑impact play) | • No needles or surgery &lt;br&gt;• Can be effective for mild to moderate pain | • Pain may persist or worsen if the fracture is unstable &lt;br&gt;• Braces can be uncomfortable and may limit normal activity &lt;br&gt;• Requires strict adherence to therapy and rest |
+| **Kyphoplasty** | Similar to vertebroplasty but uses a balloon to create space before cement is injected, sometimes restoring a bit of height | • May reduce the risk of cement leaking &lt;br&gt;• Can improve spinal alignment | • Still involves a needle and cement; risks are similar to vertebroplasty &lt;br&gt;• Not routinely used in very young children because the spine is still growing |
+| **External fixation or spinal bracing with longer duration** | A metal frame or a rigid brace that holds the spine in a neutral position for weeks to months</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the procedure will be carried out**
+
+1. **Preparation and imaging**  
+   * Before the day of the treatment, your child will have an X‑ray film and a CT scan. These images let the radiologist see exactly where the fractured or weakened vertebra is and how the spine is shaped.  
+   * A quick neurological exam (checking sensation, muscle strength, reflexes) is done to have a baseline for comparison after the procedure.
+
+2. **Setting the stage**  
+   * The child will lie on the procedure table facing down (supine).  
+   * A local anaesthetic (a numbing injection) is given at the skin spot where the needle will enter. This keeps the child comfortable and prevents pain during the needle insertion.
+
+3. **Finding the spot**  
+   * While the child is lying still, a live X‑ray machine called a fluoroscope is used. It shows the spine in real time, allowing the doctor to see exactly where the needle should go.  
+   * A very thin needle (about 2–3 mm across) is carefully guided through the skin, soft tissue, and into the targeted vertebral body.
+
+4. **Injecting the cement**  
+   * Once the needle is in place, a special mixture is prepared: bone‑cement (polymethylmethacrylate) mixed with a tiny amount of a radio‑opaque substance (often sterile barium). The radio‑opaque part makes the cement visible on the fluoroscope so the doctor can watch it flow.  
+   * The cement is injected slowly, one small amount at a time, while the fluoroscope is watching. This careful, step‑by‑step injection keeps the cement from leaking into the spinal canal or nearby nerves.  
+   * If the child feels any pain during the injection, a short‑acting pain‑relief medication can be given right away.
+
+5. **Finishing up**  
+   * The whole process usually takes 1–2 hours, depending on how many vertebrae need treatment.  
+   * After the cement has set, the needle is removed, and a small bandage</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer for Parents**
+
+**Will my child need sedation or anesthesia?**  
+- The procedure is</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**Preparing Your Child for Percutaneous Vertebroplasty**
+
+Below is a simple, step‑by‑step guide that covers what we’ll need to do before the procedure. I’ve kept the language straightforward and added a few extra points that are especially important for children.
+
+| What to Do | Why It Matters | What Your Child Might Experience |
+|------------|----------------|---------------------------------|
+| **1. Schedule a pre‑procedure visit** | The doctor will review your child’s medical history, run any last‑minute tests, and answer any questions you have. | A quick check‑in with the radiology team. |
+| **2. Fasting (usually 6–8 hours before the procedure)** | If your child needs sedation or general anesthesia, we want an empty stomach to reduce the risk of vomiting or breathing problems. | Your child may feel a little hungry; bring a small snack (fruit, crackers) after the fasting period. |
+| **3. Bring all medications** | Some medicines (e.g., asthma inhalers, diabetes meds) must be taken as usual. We’ll review which ones can be paused. | Your child will keep their routine as much as possible. |
+| **4. Antibiotics** | A single dose of antibiotics is given before the needle is inserted to prevent infection. | The antibiotic will be given in the clinic; it’s usually a quick shot or oral dose. |
+| **5. Local anesthesia** | A local anesthetic numbs the skin and the area around the spine, so your child won’t feel pain during needle insertion. | Your child may feel a brief sting when the anesthetic is injected. |
+| **6. Discuss sedation or anesthesia options** | For many children, a mild sedative or short‑acting general anesthesia is used so they stay still and comfortable. | Your child will be monitored closely by the anesthesia team. |
+| **7. Bring a “</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> X-ray film and computed tomography (CT) are taken to delineate the spinal structure before the procedure. Baseline neurological examination is also performed.  Before the procedure, antibiotics will be given.  You will lie facing downwards. The puncture site is located by fluoroscopy and a needle (2-3mm diameter) is inserted into the target bone after local anesthesia is given. A mixture of bone cement and radio-opaque substance (such as sterile barium particles) will then be injected slowly...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+In most cases, a percutaneous vertebroplasty for a child is an *outpatient* procedure, meaning your child can go home the same day. However, many centers keep the child in the hospital for a short observation period—usually **one to two nights**—to make sure everything is working well and to monitor for any early complications (such as pain, swelling, or a small amount of cement leakage).
+
+Here’s what typically happens:
+
+| Step | What happens | Why it matters |
+|------|--------------|----------------|
+| **Pre‑procedure** | X‑ray/CT scans and a baseline neurological exam are done. Antibiotics are given. | These help the team plan the safest needle path and reduce infection risk. |
+| **During the procedure** | Your child lies on their stomach (supine) while the doctor inserts a thin needle into the fractured vertebra under imaging guidance and injects bone‑cement. | The imaging ensures the cement goes exactly where it should. |
+| **Immediately after** | Your child is moved to a recovery area where vital signs, pain level, and neurological status are checked every 15–30 minutes. | Early detection of any problems (e.g., new weakness, severe pain) is easier when the child is still in the hospital. |
+| **Observation period** | If the child is stable, they may be discharged the same day. If the team feels a short overnight stay would give extra reassurance, they’ll keep the child for 1–2 nights. | The decision is based on the child’s age, overall health, how well they tolerated the procedure, and any unexpected findings on the scans. |
+| **Discharge** | You’ll receive instructions on pain management, activity limits, wound care</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Vertebroplasty Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Percutaneous Vertebroplasty Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

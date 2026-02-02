@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<procedure name="Embolotherapy For Bleeding Problems Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is embolotherapy being recommended for your child?**
+
+I know this is a lot to take in, and I’m here to explain what embolotherapy is, why it’s being suggested for your child, and what you can expect.
+
+---
+
+### 1. What the procedure does
+
+* **Embolotherapy** is a minimally‑invasive technique that stops bleeding by “plugging” the blood vessel that is leaking.  
+* A radiologist (a doctor who specializes in imaging‑guided procedures) threads a thin catheter through a small incision in a blood vessel (often in the groin or arm).  
+* Under continuous X‑ray or CT imaging, the doctor delivers tiny clotting or occluding materials—such as tiny beads, coils, or glue—directly to the bleeding vessel.  
+* The material blocks the vessel, so the blood can no longer escape into the surrounding tissue or organ.
+
+---
+
+### 2. Why it’s being recommended for your child
+
+In children, severe internal bleeding can arise from a few common situations:
+
+| Possible cause in a child | Why embolotherapy is useful |
+|---------------------------|-----------------------------|
+| **Trauma** (e.g., a fall, car‑accident, or sports injury) | The injury may have torn a blood vessel inside an organ (liver, spleen, kidney, pelvis). Traditional surgery can be risky or may require a large incision. Embolotherapy can stop the bleed from the inside, often with less pain and a quicker recovery. |
+| **Ruptured tumor** (e.g., a liver or kidney tumor) | Tumors can sometimes burst, causing</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Embolotherapy For Bleeding Problems Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are other ways to treat bleeding in children, but the best choice depends on where the bleeding is coming from, how badly the child is affected, and how healthy the organs are. Your child’s care team will review all the options together and decide what’s safest and most effective for your child.
+
+---
+
+## 1. What embolotherapy does
+
+- **Goal:** Block the tiny blood vessels that are leaking, so the blood stops flowing into the injured area.  
+- **Why it’s often chosen:** It’s less invasive than open surgery, can be done under imaging guidance, and usually preserves the organ (liver, spleen, kidney, etc.) that’s bleeding.
+
+---
+
+## 2. Other possible approaches
+
+| Situation | Alternative(s) | Why it might be considered | Typical pediatric concerns |
+|-----------|----------------|---------------------------|----------------------------|
+| **Minor bleeding, stable child** | Observation &amp; supportive care (e.g., fluids, blood transfusion if needed) | If the bleeding is self‑limiting, the body can sometimes stop it on its own. | Avoids any procedure‑related risks, but you’ll need close monitoring. |
+| **Bleeding that can’t be reached by a catheter** | Open or laparoscopic surgery | Directly stops the bleed by suturing or removing damaged tissue. | Surgery is more invasive, longer recovery, but gives a definitive fix when embolotherapy isn’t possible. |
+| **Bleeding from a vessel that is too small or too tortuous for a catheter** | Surgical ligation or embolization with different devices (e.g., coils, plugs) | Some tiny vessels are hard to navigate with a catheter; a surgeon can tie them off directly. | More invasive, but may be the only way to control the bleed. |
+| **Bleeding that involves a large organ (e.g., liver) and the child has poor liver function** | Partial organ removal (e.g., liver</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the embolotherapy will be performed – a step‑by‑step guide for you**
+
+I know that having a child undergo a medical procedure can feel overwhelming. I’ll walk you through what we’ll do, why we do it, and what you can expect, so you feel as prepared and reassured as possible.
+
+---
+
+### 1. Before the procedure
+
+| What happens | Why it matters for your child |
+|--------------|------------------------------|
+| **Pre‑procedure check‑ups** – blood tests, imaging (ultrasound, CT, or MRI), and a review of your child’s medical history. | We need to know exactly where the bleeding is, how big the vessels are, and how healthy the organs (liver, spleen, kidneys, gut) are. |
+| **Discussion with the team** – the interventional radiologist, anesthesiologist, and nursing staff will explain the plan, answer your questions, and discuss any risks that are specific to your child’s age and size. | Children’s vessels are smaller and more delicate, so the team tailors the technique to fit your child’s anatomy. |
+| **Consent** – you’ll sign a consent form that covers the procedure, anesthesia, and possible complications. | This is standard practice and ensures everyone is on the same page. |
+
+---
+
+### 2. During the procedure
+
+1. **Anesthesia / Sedation**  
+   * For most children, we use general anesthesia (they’re asleep and pain‑free).  
+   * In some very small or older children, conscious sedation may be enough.  
+   * The anesthesiologist monitors heart rate, blood pressure, oxygen, and breathing throughout.
+
+2. **Accessing the blood vessels**  
+   * A small puncture is made in the groin (or sometimes the wrist/arm) to insert a thin, flexible tube called a **catheter**.  
+   * The catheter is guided, under live X‑ray (fluoroscopy), to the artery that is feeding the bleeding</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+Yes, most children who undergo embolotherapy for bleeding will need some form of sedation or anesthesia so</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What we’ll need to do to get your child ready for the embolotherapy**
+
+Below is a simple “check‑list” of the most common steps parents usually take before a pediatric embolotherapy. Your interventional radiology team will review each point with you and may add or adjust items based on your child’s specific situation.
+
+| Step | What it means | Why it matters | What you can do |
+|------|---------------|----------------|-----------------|
+| **1. Fast before the procedure** | Most children are asked to have nothing to eat or drink for 4–6 hours before the procedure (sometimes 8 hours if they’re going to be under general anesthesia). | Fasting reduces the risk of vomiting and aspiration if the child is sedated or anesthetized. | Ask your child to stop eating and drinking at the time your team tells you. If your child is very young or has a medical condition that changes the fasting time, the team will let you know. |
+| **2. Review medications** | Bring a list of all medicines, supplements, and vitamins your child takes. | Some drugs (e.g., blood thinners, anti‑inflammatories, herbal supplements) can affect bleeding or clotting. | Tell the team if your child is on any of these. They may</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>  At the end of the procedure, the catheter is removed. The arterial sheath may be removed immediately and bleeding from the puncture site is controlled by pressure or other means. It is utmost important that you should co-operate and keep still so that the wound can be compressed effectively. Once the wound is sealed by natural clotting, you should rest the limb with the puncture site as recommended. Occasionally, if your clinical condition is unstable, the sheath may be left behind and it wi...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who have an embolotherapy for a bleeding problem can go home the same day, or after a brief overnight stay (usually 1–2 nights). The exact length of stay depends on how the child is doing after the procedure, how well the puncture site is healing, and whether any complications arise. Your child’s interventional radiology team will decide the best plan and will let you know what to expect before the procedure ends.
+
+---
+
+### What happens right after the embolotherapy?
+
+1. **Catheter removal** – The catheter is taken out and the arterial sheath is removed immediately.  
+2. **Bleeding control** – The puncture site is compressed with pressure</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Embolotherapy For Bleeding Problems Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Embolotherapy For Bleeding Problems Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

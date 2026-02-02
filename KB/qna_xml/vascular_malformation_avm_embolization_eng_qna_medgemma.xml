@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<procedure name="Vascular Malformation Avm Embolization Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctor is recommending an AVM embolization**
+
+I know that hearing about a procedure can feel overwhelming, especially when it involves your child. I’ll try to explain in plain terms why the team thinks embolization is the right next step for your little one.
+
+---
+
+### 1. What is an AVM and why does it matter?
+
+- **Arteriovenous malformation (AVM)** is a tangle of abnormal blood vessels that connects an artery directly to a vein, skipping the normal “capillary” network that normally slows and filters blood.  
+- Because the blood flows too quickly and directly, the vessels can become fragile, enlarge, or bleed.  
+- In the brain, an AVM can cause seizures, headaches, or even a stroke. In other parts of the body (arms, legs, trunk, or internal organs), an AVM can lead to pain, swelling, skin changes, or organ dysfunction.
+
+---
+
+### 2. What the embolization does
+
+- **Embolization** is a minimally‑invasive, image‑guided procedure performed by a pediatric interventional radiologist.  
+- A tiny catheter is threaded through the blood vessels to the site of the AVM.  
+- A special material (often a liquid or tiny coils) is then injected to block the abnormal vessel connections.  
+- By “closing off” the AVM, we reduce the abnormal blood flow, which lowers the risk of bleeding, improves symptoms, and often makes any future surgery easier or unnecessary.
+
+---
+
+### 3. Why it’s recommended for your child
+
+| Reason | Why it matters for a child |
+|--------|---------------------------|
+| **Prevent serious complications** | Children’s vessels are still growing. An untreated AVM can enlarge or rupture, leading to life‑threatening bleeding or organ damage. |
+| **Improve symptoms** | If your child is experiencing pain, swelling, or functional problems (e.g., difficulty moving a limb), embolization can relieve those symptoms. |
+| **Facilitate future care** | Closing the AVM often makes any needed surgery safer or even eliminates the need for surgery altogether. |
+| **Minimally invasive**</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Vascular Malformation Avm Embolization Eng.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several ways to treat a vascular malformation (AVM) in a child, and the best choice depends on the size, location, symptoms, and overall health of your child. Your medical team will review all the options with you, but here’s a quick overview of the main alternatives to embolization:
+
+| Option | How it works | Typical situations where it’s considered | Key points for parents |
+|--------|--------------|----------------------------------------|------------------------|
+| **Observation (watchful waiting)** | No immediate treatment; regular imaging and check‑ups to monitor the AVM. | Small, asymptomatic AVMs that are unlikely to bleed or cause problems. | You’ll need frequent scans and visits. If the AVM grows or starts causing symptoms, treatment will be started. |
+| **Surgical removal (resection)** | The surgeon cuts out the AVM or removes the abnormal blood vessels. | AVMs that are in a location that can be safely reached by surgery, especially if they’re causing pain, bleeding, or other symptoms. | Surgery can be curative but carries risks of bleeding, infection, and damage to nearby nerves or organs. Recovery time varies. |
+| **Stereotactic radiosurgery (SRS)** | A focused beam of radiation is delivered to the AVM over one session. | AVMs that are deep in the brain, difficult to reach surgically, or too small for safe surgery. | Radiation takes weeks‑months to fully close the AVM. It’s non‑invasive but can cause swelling or other side‑effects. |
+| **Other interventional techniques** | • **Co</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the AVM Embolization Will Be Done – A Simple, Step‑by‑Step Overview**
+
+1. **Getting a Clear Picture First**  
+   *Before the procedure* we will do a series of imaging tests—usually a CT angiogram (CTA) or an MRI with contrast, sometimes a Doppler ultrasound—to see exactly where the abnormal blood vessels (the AVM) are, how big they are, and how many feeding arteries or draining veins they have. These images help us plan the safest and most effective route for the treatment.
+
+2. **Choosing the Right Anesthesia**  
+   *Pediatric patients* can be treated under either local anesthesia (numbing the area) or general anesthesia (the child is asleep and fully relaxed). The choice depends on the child’s age, the size and location of the AVM, and how much movement the procedure will require. The anesthesiology team will discuss the best option with you.
+
+3. **Getting to the AVM**  
+   The interventional radiologist will use a tiny, flexible tube called a catheter. There are three ways the catheter can reach the AVM:
+
+   - **Through an artery** that supplies the AVM (most common).  
+   - **Through a vein** that drains the AVM (used when the arterial route is difficult).  
+   - **Directly puncturing the AVM** with a needle (rare, only if other routes are not feasible).
+
+   The route is chosen case‑by‑case to minimize risk and maximize success.
+
+4. **Blocking the Abnormal Vessels**  
+   Once the catheter is in place, we will deliver one of several “occlusion agents” to shut down the abnormal connections:
+
+   - **Metal coils** – tiny spirals that cause the blood to clot around them.  
+   - **Alcohol or other sclerosants** – chemicals that scar the vessel walls.  
+   - **NBCA glue** – a fast‑acting liquid that solidifies quickly.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer to your question**
+
+*Will my child need sedation or anesthesia?  
+Will a pediatric anesthesia specialist be part of the team?*
+
+---
+
+### 1.  What the procedure usually requires
+
+The embolization of an arteriovenous malformation (AVM) is a fairly involved procedure that can last **3–4 hours or longer**. Because the child will be inside the imaging room for that amount of time, the team usually chooses one of two approaches:
+
+| Approach | Typical</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What we’ll need to do to get your child ready for the AVM embolization**
+
+| Step | What it means for your child | Why it matters | What you can do at home |
+|------|------------------------------|----------------|------------------------|
+| **Pre‑procedure blood tests** | A quick blood draw (usually in a vein in the arm) | Helps us check the child’s blood count, clotting ability, kidney function, and overall health. | Make sure your child is not on any blood‑thinning medication unless the doctor says it’s okay. |
+| **Imaging studies (CTA/MRI/Ultrasound)** | These are usually done a few days before the procedure. | They give the radiology team a detailed map of the AVM, so they know exactly where to go and how to place the coils. | Keep the appointments. If your child has a pacemaker or metal implants, let the imaging team know. |
+| **Fasting (if general anesthesia is planned)** | No food or drink for 6–8 hours before the procedure (water is usually allowed up to 2 hours before). | Prevents choking or vomiting during anesthesia. | Prepare a simple snack the night before (e.g., toast or crackers). On the morning of the procedure, give only water if allowed. |
+| **Medications** | Your child may need a pre‑medication (e.g., a mild sedative or anti‑nausea drug) before the procedure. | Reduces anxiety, helps the child stay still, and prevents nausea after the procedure. | Keep all prescribed meds in the original bottle and bring them to the hospital. |
+| **Consent and paperwork** | A parent or guardian signs a consent form. | Confirms that you understand the risks, benefits, and alternatives. | Read the form carefully. If anything is unclear, ask the nurse or doctor to explain. |
+| **Comfort items** | You might bring a favorite blanket, stuffed animal, or a small toy. | Helps your child feel safe and reduces anxiety. | Bring it in</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> Before the procedure, blood tests, doppler ultrasound, computer tomography angiography (CTA), magnetic resonance imaging (MRI) may be performed to delineate the vascular structure and extent of involvement. The procedure may be performed under local or general anaesthesia, depending on the clinical conditions. The interventional radiologists may approach the AVM from the arteries, veins or puncture it directly. It is tailor-made for each case.    Metal coils, intra-arterial alcohol, NBCA gl...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who have an AVM embolization can go home the same day or after an overnight stay. In some cases—especially if the procedure is large, involves general anesthesia, or if the child needs extra monitoring for a few hours—your child might stay in the hospital for 1–2 days. The exact length of stay will be decided by the interventional radiology team after they review your child’s imaging, overall health, and the planned procedure.
+
+---
+
+### Why the hospital stay can vary
+
+| Factor | How it affects the stay |
+|--------|------------------------|
+| **Type of anesthesia** | • **Local or conscious sedation** – usually allows the child to wake up quickly and go home the same day.&lt;br&gt;• **General anesthesia** – requires a few hours of recovery in the post‑anesthesia care unit (PACU) and sometimes an overnight observation to ensure the child is fully awake, breathing well, and pain‑free. |
+| **Size and location of the AVM** | Larger or more complex malformations may need a longer procedure time and more careful monitoring afterward. |
+| **Risk of complications** | If the team anticipates a higher chance of bleeding, swelling, or other issues, they may keep the child in the hospital for 24–48 hours for close observation. |
+| **Your child’s overall health** | Children with other medical conditions (e.g., heart or lung issues) may need a slightly longer stay to ensure everything is stable. |
+| **Post‑procedure pain and swelling** | Some kids experience swelling or discomfort that is easier to manage in a hospital setting for a day or two. |
+
+---
+
+### What to expect on the day of the procedure
+
+1. **</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Vascular Malformation Avm Embolization Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Vascular Malformation Avm Embolization Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

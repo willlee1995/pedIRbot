@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<procedure name="Fna &amp; Biopsy Kidney Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctor is recommending a kidney biopsy (fine‑needle aspiration or core biopsy)**  
+
+1. **We need a definitive diagnosis**  
+   - A kidney mass or an area that looks abnormal on an ultrasound or CT scan can be many different things: a benign cyst, a harmless growth, or a cancerous tumor.  
+   - Imaging studies can show the size, shape, and location of the lesion, but they can’t always tell us what the cells actually are.  
+   - A biopsy gives us a small sample of the tissue that can be examined under a microscope by a pathologist. That microscopic “look‑up” is the only way to know exactly what the mass is and whether it is benign, malignant, or something that needs a specific treatment.
+
+2. **The information guides the next steps**  
+   - If the biopsy shows a harmless cyst or a benign tumor, we may simply monitor it with follow‑up imaging and avoid unnecessary surgery or medication.  
+   - If the biopsy shows a cancerous or potentially aggressive lesion, we can plan the most appropriate treatment—whether that’s surgery, targeted therapy, or another intervention—right away.  
+   - Even if the biopsy shows an inflammatory or infectious process, we can start the correct antibiotics or other therapies instead of guessing.
+
+3. **Safety and comfort for children**  
+   - The procedure is done under **local anesthesia** (numbing medication) and with **strict aseptic technique** (clean, sterile environment).  
+   - It is a **percutaneous** (through the skin) procedure guided by ultrasound or CT, so the needle is placed precisely and the risk of injury to surrounding organs is very low.  
+   - Children usually tolerate the procedure well; many feel only a brief pinch or pressure, and the recovery time is short—often the same day or the next.
+
+4. **Why we don’t wait for more imaging or tests**  
+   - Repeated imaging can delay treatment and may not</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What is a kidney fine‑needle aspiration (FNA) and biopsy?**  
+In this procedure a very thin needle is guided by ultrasound (or sometimes CT) into the kidney to take a small sample of tissue. The sample is examined under a microscope to see if there is a tumour, infection, inflammation or another abnormality. Because the needle is so small, the procedure is usually done under local anaesthetic with a short period of sedation or general anaesthesia in children, and the child can usually go home the same day.
+
+---
+
+## 1. Why do we do it?  (Benefits)
+
+| Benefit | What it means for your child |
+|---------|------------------------------|
+| **Accurate diagnosis** | The tissue sample tells the doctors exactly what is wrong (e.g., a benign cyst, a malignant tumour, infection, or a kidney‑specific disease). |
+| **Guides treatment** | Once we know the exact type of lesion, we can choose the best treatment—whether it is medication, a less‑invasive procedure, or surgery. |
+| **Avoids unnecessary surgery** | If the biopsy shows a benign cyst or a condition that can be treated medically, your child can avoid a major operation. |
+| **Quick recovery** | The procedure takes only a few minutes, and most children feel fine the next day. |
+| **Low‑risk, outpatient** | It is done in a hospital or imaging centre, not a full‑time surgical suite, so the overall risk is lower than open surgery. |
+
+---
+
+## 2. What could go wrong?  (Potential Risks)
+
+| Risk | How common? | What it means for your child |
+|------|-------------|------------------------------|
+| **Bleeding** | Rare (≈1–2 % in children). | A small amount of blood may leak into the kidney or surrounding tissue. It is usually self‑</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+In most cases a percutaneous (through‑the‑skin) biopsy or fine‑needle aspiration (FNA) is the safest and quickest way to get a tissue sample from a kidney lesion in a child.  
+If that approach is not</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the kidney biopsy (FNA &amp; core biopsy) will be performed**
+
+I know that the idea of a needle going into your child’s kidney can feel scary, so I’ll walk you through each step in plain language. The goal is to get a small sample of kidney tissue so the doctors can see exactly what’s going on and decide the best treatment plan.
+
+| Step | What happens | What you’ll see / feel |
+|------|--------------|------------------------|
+| **1. Preparation** | • Your child will be brought to the Radiology Department. &lt;br&gt;• A short discussion will confirm the exact spot on the kidney that needs to be sampled. &lt;br&gt;• A small area on the back (or side) will be cleaned and a local anesthetic (numbing spray or injection) will be applied. | Your child may feel a brief pinch from the local anesthetic, but it’s quick. |
+| **2. Sedation / Anesthesia** | • Because the procedure is short (often 30 minutes) and the child may be nervous, most children receive **conscious sedation** (a mild sleep‑like state) or, if needed, **general anesthesia** (full sleep). &lt;br&gt;• A nurse or anesthesiologist will monitor breathing, heart rate, and oxygen. | Your child will be relaxed or asleep; you’ll see a pulse oximeter on their finger and a monitor showing heart rate and oxygen level. |
+| **3. Imaging guidance** | • A CT scanner or ultrasound machine is used to “see” the kidney in real time. &lt;br&gt;• The radiologist will line up the needle with the target area. | You’ll see the screen with the kidney image and the needle “pointing” at the spot. |
+| **4. Needle insertion</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Answer**
+
+I understand that the idea of your child undergoing a kidney biopsy can feel overwhelming, especially when you’re thinking about how they will be cared for during the procedure. Here’s what you can expect regarding sedation or anesthesia, and how the team will support your child’s comfort and safety.
+
+---
+
+### 1. **Will your child need sedation or anesthesia?**
+
+- **Most children who have a kidney biopsy receive some form of sedation or local anesthesia.**  
+  - **Local anesthesia** (a numbing injection around the kidney) is often enough for older children who can stay still and understand the instructions.  
+  - **Conscious sedation** (a mild sedative that keeps the child relaxed but still awake) is commonly used for younger children, those who may feel anxious, or when the procedure is expected to take longer than 30 minutes.  
+  - **General anesthesia** (where the child is completely asleep) is rarely needed for a routine kidney biopsy, but it can be used if the child is very young, has significant anxiety, or if the procedure is expected to be more complex.
+
+- **The exact plan will be decided by the interventional radiology team in collaboration with the anesthesia team** after they review your child’s age, medical history, and any previous experiences with sedation or anesthesia.
+
+---
+
+### 2. **Will a pediatric anesthesia specialist be involved?**
+
+- **Yes, a pediatric anesthesiologist or a pediatric anesthesia nurse‑anesthetist will be part of the team.**  
+  - They are specially trained to manage sedation and anesthesia in children, taking into account differences in physiology, medication dosing, and the need for extra monitoring.  
+  - If your child is older and the procedure is straightforward, a general anesthesiologist may still be present, but the focus will be on pediatric care.
+
+- **If your child is very young or</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What to do before your child’s kidney FNA/biopsy**
+
+Below are the most common steps that most children need before a percutaneous kidney fine‑needle aspiration (FNA) or core biopsy. Your team will confirm or adjust any of these points for your child’s specific situation.
+
+| Step | Why it matters | What you’ll do |
+|------|----------------|----------------|
+| **1. Fasting** | The procedure is usually done under conscious sedation or general anesthesia. Food or drink in the stomach can increase the risk of vomiting or aspiration. | •  **No food** 4–6 hours before the procedure (e.g., no solids, no milk, no juice). &lt;br&gt;•  **Clear liquids** (water, clear juice, or a small amount of clear soup) may be allowed 2 hours before, but check with the team. |
+| **2. Medications** | Some drugs can interfere with blood clotting or the anesthesia. | •  Tell the team about every medicine your child is taking (prescription, OTC, herbal). &lt;br&gt;•  Stop any blood‑thinning meds (e.g., aspirin, ibuprofen) 1–2 days before, unless your doctor says otherwise. &lt;br&gt;•  If your child is on a regular medication that must be continued, bring a note from the prescribing doctor. |
+| **3. Blood tests** | A baseline blood count and clotting profile help the team plan anesthesia and anticipate bleeding risk. | •  The lab may draw blood a day or two before the procedure. &lt;br&gt;•  Bring the lab results or let the radiology team know they’re coming. |
+| **4. Clothing &amp; comfort** | Children are more relaxed in familiar clothes; the team will change them if needed. | •  Dress your child in loose, easy‑to‑change clothing. &lt;br&gt;•  Bring a favorite</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>  Duration of the procedure varies, depending on the complexity of the condition. It may take only 30 minutes though you may need to stay in the Department of Radiology for over an hour altogether.  Do not expect to get the result of the biopsy / FNA before you leave, as it may take a few days to do all the necessary tests on the specimen.  During and after the procedure, your vital signs (like blood pressure and pulse rate) will be monitored. Potential Complications  You may pass bloody ur...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+Most children who have a percutaneous kidney fine‑needle aspiration (FNA) or core biopsy can go home the same day. The actual needle procedure usually takes about 30 minutes, and you’ll spend a little extra time in the radiology suite (often 1–1½ hours total) for preparation, the procedure itself, and a short observation period afterward.
+
+**What to expect**
+
+| Step | What happens | Typical time | Why it matters |
+|------|--------------|--------------|----------------|
+| **Pre‑procedure** | You’ll be checked in, given a small dose of medication if needed, and the area will be cleaned and numbed. | 15–20 min | Keeps your child comfortable and reduces anxiety. |
+| **The FNA/biopsy** | A thin needle (FNA) or a slightly larger core needle is guided by ultrasound or CT to the kidney to collect cells or tissue. | 10–20 min | The needle is very small, so the risk of bleeding or pain is low. |
+| **Post‑procedure observation** | Your child will be monitored for a short period (usually 30–60 min) to make sure there’s no immediate bleeding or pain. | 30–60 min | A quick safety check before leaving. |
+| **Going home** | Once you’re comfortable and the child is stable, you can go home. | Same day | Most families return home the same day. |
+
+**When a hospital stay might be needed**
+
+- **If there’s any concern about bleeding or pain** that doesn’t resolve quickly, the team may ask you to stay overnight for observation.
+- **If the child has a complex medical condition** (e.g., clotting disorders, severe kidney disease) that could affect healing, the team might recommend a short hospital stay.
+- **If the biopsy shows unexpected findings** that require immediate additional treatment, you’ll be advised</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Kidney Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Fna &amp; Biopsy Kidney Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

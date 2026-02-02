@@ -1,0 +1,254 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Bone Ablation Using Image Guidance 7136" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child’s doctor is recommending bone ablation**
+
+I’m glad you’re asking—understanding the “why” behind a treatment can help you feel more comfortable and confident about the next steps. Here’s a simple, honest explanation of why bone ablation is being suggested for your child.
+
+---
+
+### 1. What is an osteoid osteoma and why does it matter?
+
+- **Osteoid osteoma** is a **small, benign (non‑cancerous) bone tumor** that usually appears in children and teenagers.  
+- Even though it’s not cancer, it can cause **intense, constant pain**—often worse at night and relieved by over‑the‑counter pain meds.  
+- The pain can interfere with sleep, school, sports, and everyday play, which is why doctors want to treat it.
+
+### 2. What does bone ablation do?
+
+- **Bone ablation** is a minimally‑invasive procedure that uses **image guidance (usually CT or MRI)** to locate the tumor precisely.  
+- A tiny needle or probe is inserted into the tumor, and **controlled heat (radiofrequency or laser) is applied**.  
+- The heat destroys the tumor cells, which stops the pain signals from being sent to the brain.  
+- Because the procedure is guided by imaging, the doctor can target the tumor while sparing healthy bone and surrounding tissues.
+
+### 3. Why is this approach chosen for children?
+
+| Feature | Why it matters for kids |
+|---------|------------------------|
+| **Less invasive than open surgery** | No large incision, no cutting of bone, so the child can recover faster and with less discomfort. |
+| **Shorter procedure time** | The child spends less time under sedation or anesthesia. |
+| **Lower risk of infection and complications** | Smaller wounds mean fewer chances for infection or long‑term damage. |
+| **Quick return to normal activities** | Many kids are back to</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What you can expect from a bone ablation for your child**
+
+| **What the procedure does** | **Why it’s done** |
+|------------------------------|-------------------|
+| A small needle is guided into the painful spot in the bone (often an osteoid osteoma). Heat or cold is then applied to destroy the abnormal tissue. | The goal is to stop the pain and prevent the tumor from growing or spreading. It’s usually less invasive than surgery and can be done in one day. |
+
+---
+
+### 1. Benefits for your child
+
+| **Benefit** | **How it helps your child** |
+|-------------|-----------------------------|
+| **Rapid pain relief** | Most kids report a noticeable drop in pain within a few days, allowing them to sleep better, play, and attend school. |
+| **No large incision** | The needle is tiny, so there’s no big scar and the recovery time is short. |
+| **Short hospital stay** | Many children go home the same day or after a brief overnight stay. |
+| **Lower risk of infection** | Because the procedure is minimally invasive, the chance of a wound infection is much lower than with open surgery. |
+| **Preserves bone strength** | The targeted ablation destroys only the abnormal tissue, leaving the rest of the bone intact. |
+
+---
+
+### 2. Potential risks and complications
+
+| **Risk** | **What it means for your child** | **How we monitor / manage it** |
+|----------|----------------------------------|---------------------------------|
+| **Skin burn** | The heat or cold can sometimes touch the skin. | We use imaging to keep the needle exactly where it should be and apply protective coverings. |
+| **Infection** | Rare, but can involve the bone, joint, or skin around the needle site. | We give antibiotics before the procedure and keep the site clean. |
+| **Fracture (break)** | The bone could become slightly weaker where the ablation was performed. | The procedure is carefully planned to avoid weakening the bone; we may use a cast or brace if needed. |
+| **Blood vessel or nerve damage** | The needle could inadvertently touch a nearby vessel or nerve. | Imaging guidance (CT,</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are other ways to treat bone lesions in children, but whether they’re a good fit depends on the type of lesion, its size and location, your child’s overall health, and what the doctors think will give the best chance of a good outcome. Your medical team will review all the options with you and help decide what’s best for your child.
+
+---
+
+### 1. What is a bone ablation?
+
+A bone ablation is a minimally‑invasive procedure that uses imaging (usually CT or MRI) to guide a needle or probe into a bone lesion. The probe delivers heat, cold, or radiofrequency energy to destroy the abnormal tissue (for example, a tumor or a painful bone cyst) while sparing the surrounding healthy bone and nerves. Because the procedure is done under general anesthesia, your child will be asleep and pain‑free.
+
+---
+
+### 2. Common alternative treatments
+
+| Alternative | How it works | Typical situations where it’s considered | Pros &amp; Cons |
+|-------------|--------------|------------------------------------------|-------------|
+| **Open surgery** (e.g., curettage, bone grafting, or resection) | The surgeon makes an incision to remove or curette the lesion. | Large or complex lesions, lesions that are not easily reached by a needle, or when a biopsy is needed. | **Pros:** Direct removal; can take a large sample for pathology. &lt;br&gt;**Cons:** Longer recovery, more pain, larger scar, higher risk of infection. |
+| **Radiation therapy** | Targeted X‑ray beams destroy abnormal cells. | Certain cancers (e.g., osteosarcoma, Ewing sarcoma) or when surgery isn’t possible. | **Pros:** Non‑invasive; can treat deep or irregularly shaped lesions. &lt;br&gt;**Cons:** Potential side effects on growing bones, risk of secondary cancers, longer treatment course. |
+| **Chemotherapy** | Systemic drugs that kill rapidly dividing cells</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the bone ablation will be performed**
+
+I know that the idea of a “bone ablation” can feel a bit scary, especially when it involves your child. Below is a step‑by‑step overview of what will happen on the day of the procedure, written in plain language so you can feel confident and prepared.
+
+---
+
+### 1. Arrival &amp; Preparation (≈2 hours before the scheduled time)
+
+| What happens | Why it matters |
+|--------------|----------------|
+| **Check‑in** – You and your child will arrive at the hospital and check in at the reception. | This lets the staff know you’re here and starts the paperwork. |
+| **Hospital gown** – Your child will be changed into a clean gown. | Keeps the procedure area sterile and makes it easier for the doctors to see and access the bone. |
+| **Weighing &amp; quick assessment** – A nurse will weigh your child and do a brief physical check. | Helps the team know how much medication to give and ensures everything is normal before the procedure. |
+| **Meet the team** – You’ll have a chance to talk to the interventional radiologist (the doctor who will perform the ablation) and the anesthetist (the doctor who will give your child medicine to stay comfortable). | This is your opportunity to ask questions, share any concerns, and hear the plan in your own words. |
+
+---
+
+### 2. The Procedure Room
+
+| Step | Details |
+|------|---------|
+| **Waiting** – While the team prepares, you’ll wait in the surgical waiting area. | The room is quiet and comfortable; you can bring a book, music, or a small toy to keep your child calm. |
+| **Anesthesia** – Your child will receive general anesthesia (a “sleeping” medication) and local anesthesia (a numbing cream or injection at the exact spot). | General anesthesia ensures your child is asleep and pain‑free during the entire procedure.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+For a bone ablation most children are given **general anesthesia** (plus a local block at the site) so they are completely comfortable and still. A **pediatric anesthesiologist**—the specialist who cares for children—will be on the team to manage the anesthesia and keep your child safe throughout the procedure.
+
+---
+
+### Why general anesthesia is usually used
+
+* **Comfort &amp; safety:** The procedure can be a bit long and involves moving the child’s arm or leg to get the best image guidance. General anesthesia keeps the child still, pain‑free, and prevents any movement that could affect the accuracy of the ablation.
+* **Local block:** In addition to the general anesthesia, a local anesthetic is injected right at the bone site. This gives extra pain relief once the child wakes up.
+* **Child‑friendly environment:** The anesthesiologist will monitor your child’s heart rate, breathing, and oxygen levels, and will adjust medications as needed. They’re trained to handle any situation that might arise during the procedure.
+
+### Will a pediatric anesthesiologist be present?
+
+Yes.  
+The **pediatric anesthesia team** is a standard part of the care for children undergoing bone ablation at SickKids. They are experienced with children’s unique physiology and are prepared for any special needs your child might have (e.g., breathing support, medication adjustments, or special equipment).
+
+### What you can expect on the day
+
+| Step | What happens | What you can do |
+|------|--------------|-----------------|
+| **Arrival** | Arrive 2 hrs before the scheduled time. | Bring any questions you have; the nurse will explain the fasting rules and give you a chance to meet the anesthesiologist. |
+| **Fasting** | Your child’s stomach must be empty for general anesthesia. | If your child takes a morning medication, give it with a sip of water 2 hrs before the procedure, unless told otherwise. |
+| **Pre‑op assessment** | The nurse will weigh your child and</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**What you’ll need to do to get your child ready for the bone ablation**
+
+| Step | What to do | Why it matters |
+|------|------------|----------------|
+| **1. Keep your child healthy** | • If your child feels ill</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>**Short answer**
+
+- **No solid food or drinks** are allowed before the bone‑ablation procedure.  
+- Your child can have a **small sip of water with their usual morning medication** (if they take one) **at least 2 hours before the procedure**.  
+- If your child has special fasting needs (e.g., a medical condition that makes fasting difficult), let the team know right away so they can plan an alternative.
+
+---
+
+### Why this matters
+
+The procedure is done under sedation or general anaesthesia. An empty stomach reduces the risk of vomiting and aspiration (breathing food into the lungs) while the child is unconscious. That’s why we ask for a clear‑stomach protocol.
+
+### What you can do
+
+1. **Stop all food and drinks** at least 2 hours before the scheduled time.  
+2. If your child takes a morning medication, give it with a **tiny sip of water**—no more than a few drops—at the 2‑hour mark.  
+3. If your child is feeling unwell (fever, cough, etc.) within the two days leading up to the procedure, contact the team. They may want to postpone the appointment to keep your child safe.
+
+### Special circumstances
+
+- **Special needs or medical conditions** that make fasting hard (e.g., certain metabolic disorders, severe reflux) should be discussed with the interventional radiology team. They can adjust the fasting</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Short answer:**  
+Most children who have a bone ablation can go home the same day—usually about 4 hours after the procedure. In some cases, the team may decide</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Answer**
+
+After a bone ablation, most children can go home the same day and usually feel less pain right away. However, the body still needs time to heal, so there are a few activity guidelines that can help your child recover safely and feel comfortable.
+
+| What to Expect | Typical Recommendation | Why It Matters |
+|----------------|------------------------|----------------|
+| **Rest &amp; Light Activity** | Keep your child’s activity level light for the first 24–48 hours. This means no running, jumping, or playing rough games. | The bone and surrounding tissues are still healing from the procedure. Light rest helps reduce swelling and keeps the area stable. |
+| **Gradual Return to Normal Play** | After the first 48 hours, your child can usually start gentle play (e.g., walking, light biking, or playing in a safe area). | Gradual movement promotes circulation and helps the bone heal without putting too much stress on the treated area. |
+| **Avoid High‑Impact or Heavy‑Lifting Activities** | For about 1–2 weeks, avoid activities that involve heavy lifting, high‑impact sports (soccer, basketball, gymnastics), or any activity that could jostle the treated bone. | These activities can increase pain or interfere with the healing process. |
+| **Return to School &amp; Routine** | Most children can return to school and normal daily routines within 3–5 days, but keep an eye on pain or swelling. | Children often feel better quickly, but it’s important to monitor how they’re doing. |
+| **Pain &amp; Swelling Monitoring** | If pain worsens, swelling increases, or your child feels unusually uncomfortable, contact the</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>**Follow‑up after a pediatric bone ablation (image‑guided procedure)**  
+
+I know that after the procedure you’ll want to feel confident that your child is on the right track to recovery. Below is a general outline of what most families can expect, but please remember that your interventional radiology team will tailor the plan to your child’s specific situation.
+
+| What to Expect | Why It Matters | What You Can Do at Home |
+|----------------|----------------|------------------------|
+| **Immediate post‑procedure observation** | The child will stay in the recovery area for a few hours while the team watches for any early complications (e.g., bleeding, infection, or reaction to sedation). | Keep your child calm and comfortable. Your presence is reassuring. |
+| **Pain &amp; medication management** | Pain is common after bone ablation. The team will prescribe or recommend pain‑relief medication (often acetaminophen or a low‑dose opioid). | Give the medication exactly as directed. Note the time and dose. If you see signs of severe pain, swelling, or redness, call the team. |
+| **Wound care** | The site where the needle or probe entered the bone may have a small puncture or a small incision. | Keep the area clean and dry. Follow any dressing‑change instructions. Watch for redness, warmth, or drainage – these could signal infection. |
+| **Activity restrictions** | The bone needs time to heal and to respond to the ablation. Sudden or heavy activity can disrupt the area or cause pain. | Limit strenuous play or sports for the period the team recommends (often a few days to a week). Light, gentle activity is usually fine. |
+| **Follow‑up imaging** | A repeat X‑ray, CT, or MRI may be scheduled to confirm that the ablation was successful and to monitor healing. | Bring your child to the imaging appointment</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

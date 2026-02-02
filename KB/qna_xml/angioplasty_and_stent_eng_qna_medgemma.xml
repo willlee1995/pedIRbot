@@ -1,0 +1,200 @@
+<?xml version="1.0" ?>
+<procedure name="Angioplasty And Stent Eng" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being recommended to have angioplasty with a stent**
+
+I know that hearing about a procedure can feel overwhelming, especially when it involves your child. I’ll try to explain in plain language what the doctors are hoping to achieve and why they think this is the best next step for your child.
+
+---
+
+### 1. What the procedure does
+
+- **Angioplasty** is a tiny balloon that is threaded through the narrowed or blocked blood vessel to gently widen it.  
+- A **stent** (a small metal “mesh” tube) is then placed inside the vessel to keep it open after the balloon pulls it back.  
+- The whole thing is guided by live X‑ray (fluoroscopy) so the radiologist can see exactly where the balloon and stent go.
+
+### 2. Why it matters for your child
+
+| Problem your child is having | How the procedure helps |
+|------------------------------|------------------------|
+| **Leg pain** (even when resting or after walking) | Restores normal blood flow to the calf and foot, so the muscles get the oxygen and nutrients they need. |
+| **Ulcers or sores on the foot/ankle** | By improving circulation, the skin can heal and the risk of infection goes down. |
+| **Risk of further damage or loss of limb** | Keeping the vessel open reduces the chance that the blockage will get worse and that the child might need more drastic surgery later. |
+
+In children, these kinds of</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>**What the procedure can do for your child**
+
+*Angioplasty with stent placement* is a minimally‑invasive way to open a narrowed or blocked artery.  
+- **Restores blood flow** to the leg (or other area) so that the child can walk, run, and grow normally.  
+- **Reduces pain or swelling** that comes from poor circulation.  
+- **Avoids a large open‑heart or leg surgery** – the catheter is threaded through a small puncture in the skin, so the recovery time is usually shorter and the hospital stay is shorter.  
+- In many children, the procedure can be a “bridge” to a later, more definitive surgery if needed, or it can be a definitive treatment in its own right.
+
+**Why a stent is used**
+
+A stent is a tiny mesh tube that is left inside the artery to keep it open. It is especially useful when the artery has a long or stubborn blockage that a balloon alone can’t hold open.
+
+---
+
+### Potential risks and complications
+
+| Risk | What it means for your child | How we try to prevent or manage it |
+|------|-----------------------------|------------------------------------|
+|</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are several alternative ways to treat a narrowed artery in a child, and the best choice depends on the exact location of the blockage, the child’s age and overall health, and how the doctors feel the procedure will work best for your child. We’ll walk through the most common alternatives and what they mean for your family.
+
+---
+
+## 1. Different ways to reach the artery
+
+| Option | How it’s done | Why it might be chosen | What to expect |
+|--------|---------------|------------------------|----------------|
+| **Femoral artery (groin)** | The usual route described in your notes. | Most common, good access for large vessels. | Small needle puncture, mild discomfort. |
+| **Radial or brachial artery (arm)** | Access through the wrist or elbow. | Easier for very small children, less risk of large‑bleed complications. | Slightly longer procedure, but often less pain afterward. |
+| **Popliteal artery (behind the knee)** | Access through the back of the knee. | Good for arteries below the knee. | Similar to groin access but may feel a little different. |
+| **Tibial artery (ankle)** | Tiny artery at the ankle. | For very small or very young children where other sites are too big. | Very small puncture, usually very well tolerated. |
+
+If the doctors think a different access site will make the procedure safer or easier, they’ll let you know before you go in.
+
+---
+
+## 2. Non‑interventional alternatives
+
+| Option | What it involves | When it’s considered | Pros / Cons |
+|--------|------------------|----------------------|-------------|
+| **Medication alone** | Blood thinners (heparin, aspirin) and drugs that widen arteries (e.g., calcium‑channel blockers). | Mild narrowing, or if the child is too young for a procedure. | No surgery, but may not fully open the artery. |
+| **Lifestyle changes** | Diet, exercise, and sometimes oxygen therapy. | Often used alongside other treatments. | Helpful but usually not enough by themselves</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**How the procedure will be carried out**
+
+I know that hearing about a procedure can feel overwhelming, especially when it involves your child. I’ll walk you through each step in plain language, highlight what your child can expect, and point out where we’ll keep you informed.
+
+---
+
+### 1. Getting ready – the “door‑way” to the blood vessels  
+- **Anesthesia** – Your child will receive a local anesthetic (a numbing medicine) at the groin so they feel no pain at the puncture site. In some cases we may use a mild sedative so they’re relaxed, but they’ll still be awake and able to respond.  
+- **Choosing the access point** – The most common entry is the femoral artery in the groin, but if the doctors think another spot (like the wrist, elbow, behind the knee, or ankle) is safer or easier, we’ll use that instead.  
+
+### 2. Making a “road map” – the angiogram  
+- A thin catheter (a very small tube) is threaded through the chosen artery to the area that needs treatment.  
+- A special dye (contrast medium) is injected through the catheter. X‑ray cameras capture images that show the exact location and shape of the narrowed or blocked artery. This map guides the rest of the procedure.  
+
+### 3. Preventing clots – blood‑thinning medicine  
+- While the images are being taken, we give heparin (a blood thinner) and sometimes a drug that relaxes the artery walls. This keeps the artery open and reduces the risk of a clot forming during the procedure.  
+
+### 4. Stretching the artery – the balloon angioplasty  
+- A second, slightly larger catheter with a tiny balloon on its tip is guided over a wire to the narrowed spot.  
+- The balloon is inflated, gently “stretching” the artery back to a normal width.  
+- Your child may feel a little pressure or discomfort during this part, but it’s usually</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer**
+
+- **Will your child need sedation or anesthesia?**  
+  It depends on your child’s age, size, and how well they can stay still during the procedure.  
+  • Very young children (infants, toddlers, or kids who cannot sit still for a long time) usually receive **general anesthesia** or **deep sedation** so they are completely comfortable and still.  
+  • Older children who can cooperate and stay calm for the short time the procedure takes may be treated with **local anesthesia** in the groin plus a mild sedative (sometimes just a calm‑talking approach is enough).  
+
+- **Will a pediatric anesthesia specialist be on the team?**  
+  Yes.  A pediatric anesthesiologist or a pediatric anesthesiology nurse‑anesthetist will be part of the care team</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>**Preparing your child for the angioplasty and stent procedure**
+
+I know that getting your child ready for a medical procedure can feel overwhelming. Below is a simple, step‑by‑step guide that covers what we usually ask families to do before the day of the angioplasty. If anything is unclear or you have additional questions, please let the interventional radiology team know—they’ll walk you through it</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer> After the groin is anesthetized, the femoral artery at the groin is punctured and an arterial sheath inserted to provide an access to the arterial system. The direction of puncture depends on the sites of diseased arteries. You should not feel any major discomfort. Alternative accesses include the radial or brachial artery in the arm, the popliteal artery behind the knee or even a small tibial artery at the ankle.  An angiographic study with contrast medium injected through a small catheter i...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+In most cases, a child who has an angioplasty with stent placement can go home the same day or after a short overnight stay. Here’s why and what you can expect:
+
+| What happens | Typical hospital course | Why it matters for kids |
+|--------------|------------------------|------------------------|
+| **Anesthesia &amp; procedure** | The child is given a local block at the groin and a small amount of sedative or general anesthesia (if needed). The procedure itself usually takes 30–60 minutes. | Children often tolerate the local block very well, and the short procedure time means less time under sedation. |
+| **Immediate post‑procedure monitoring** | After the sheath is removed, the groin site is pressed to stop bleeding. The child is monitored for a few hours for pain, swelling, or any signs of bleeding or low blood pressure. | Kids are usually very resilient, but we keep a close eye on vital signs and the puncture site to catch any early problems. |
+| **Recovery &amp; discharge** | If the child is awake, moving around, and the groin site is stable, many hospitals allow discharge that same day. Some centers keep the child overnight for a quick check‑in, especially if the child is younger, has a complex medical history, or if the team wants to be extra cautious. | An overnight stay gives the team one extra set of eyes on the child’s recovery and a chance to answer any questions you might have. |
+| **Follow‑up** | A follow‑up appointment (often 1–2 weeks later) is scheduled to check the stent and the groin site. | This visit helps ensure the artery is open and that the child is healing well. |
+
+### So, what does that mean for your child?
+
+- **Same‑day discharge** is common for healthy children who tolerate the procedure well.  
+- **One‑night stay** may be recommended if the child is younger, has other medical issues, or if the medical team prefers</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Angioplasty And Stent Eng.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Angioplasty And Stent Eng.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

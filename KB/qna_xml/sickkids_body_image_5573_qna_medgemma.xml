@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Body Image 5573" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why your child is being offered the “SickKids Body Image 5573” program**
+
+I understand that hearing about a new program can feel overwhelming, especially when it involves your child’s mental and physical well‑being. Below is a simple, honest explanation of why the team thinks this treatment could help your child, and what you can expect as you move forward.
+
+---
+
+### 1. What the program is about  
+**SickKids Body Image 5573** is a structured, evidence‑based program designed to support children and teens who are struggling with how they see themselves. It focuses on:
+
+- **Building a positive body image** – helping your child appreciate their body for what it can do, not just how it looks.
+- **Reducing harmful thoughts and behaviors** – such as restrictive dieting, binge eating, or excessive worry about weight.
+- **Improving overall health and confidence** – encouraging healthy habits and boosting self‑esteem.
+
+The program is delivered by a multidisciplinary team (psychologists, dietitians, nurses, and sometimes peer mentors) who use age‑appropriate tools, group sessions, and individual support.
+
+---
+
+### 2. Why it’s recommended for your child  
+Your child may have shown signs that the program could help, such as:
+
+| Possible signs | Why the program helps |
+|----------------|----------------------|
+| **Negative body‑related thoughts** (e.g., “I’m too big” or “I’m not pretty enough”) | The program teaches coping skills and reframes those thoughts. |
+| **Unhealthy eating patterns** (restricting food, bingeing, or extreme dieting) | Structured guidance helps restore a balanced relationship with food. |
+| **Low self‑esteem or social withdrawal** | Group sessions provide a safe space to share experiences and build confidence. |
+| **Media or peer pressure** | The curriculum addresses how media messages can distort reality and offers tools to critically evaluate them. |
+| **Physical symptoms** (e.g., stomach pain, fatigue) that may be linked</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Body Image 5573.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Answer**
+
+I’m sorry you’re facing this decision. I’ll try to explain what “SickKids Body Image 5573” is and what other options you might consider, but please remember that the best choice depends on your child’s specific situation. Your medical team will be the best guide for that.
+
+---
+
+### 1. What is “SickKids Body Image 5573”?
+
+The name suggests it’s a program or intervention offered at SickKids (the Hospital for Sick Children in Toronto) that focuses on **body image**—how a child sees and feels about their own body. Body‑image concerns can arise after medical treatments (e.g., surgery, chemotherapy, burns, or chronic conditions that change appearance) or from conditions that affect growth or body shape.
+
+The program likely includes:
+
+| Component | What it usually involves |
+|-----------|--------------------------|
+| **Individual counseling** | One‑to‑one sessions with a psychologist or social worker trained in pediatric body‑image issues. |
+| **Group support** | Peer‑led or therapist‑led groups where children share experiences and coping strategies. |
+| **Family education** | Sessions for parents and siblings to help them support the child’s emotional well‑being. |
+| **Skill‑building activities** | Art, play, or mindfulness exercises that help children express themselves and build self‑esteem. |
+| **Follow‑up** | Regular check‑ins to track progress and adjust the plan as needed. |
+
+Because the program is tailored to each child, the exact mix of these elements can vary.
+
+---
+
+### 2. Are there alternative options?
+
+Yes—there are several ways to support a child’s body‑image concerns, and the right choice depends on your child’s age, diagnosis, and personal needs. Below are common alternatives that your team might discuss:
+
+| Alternative</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Body Image 5573.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Body Image 5573.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Body Image 5573.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Body Image 5573.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Body Image 5573.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Body Image 5573.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Body Image 5573.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

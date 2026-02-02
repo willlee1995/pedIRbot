@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Bulimia Nervosa How You Can Help Your Child At Home 9227" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is treatment being recommended for your child?**  
+
+Bulimia nervosa is more than just “overeating and purging.” It is a serious eating‑disorder that can quickly lead to a range of physical and emotional problems—especially in children and teens whose bodies and brains are still developing. Here’s why your child’s medical team is encouraging treatment:
+
+| What the disorder can do | Why professional help matters |
+|--------------------------|------------------------------|
+| **Physical health risks** – dehydration, electrolyte imbalances, stomach ulcers, heart rhythm problems, and bone loss | A medical team can monitor and correct these problems, preventing serious complications that could be life‑threatening. |
+| **Mental‑health impact** – anxiety, depression, low self‑esteem, and impaired social functioning | Psychotherapy (often family‑based or cognitive‑behavioral) teaches healthier coping skills and helps rebuild a positive body image. |
+| **Behavioral cycle** – binge → purge → guilt → more binge | Structured treatment breaks the cycle by providing safe, supervised meals and teaching new ways to manage urges. |
+| **Developmental concerns** – growth delays, school difficulties, and strained family relationships | Early, coordinated care supports your child’s overall development and helps the whole family heal together. |
+
+### How treatment helps your child recover
+
+1. **Medical stabilization** – Doctors and nurses check vital signs, lab values, and nutrition to keep your child safe while the body heals.  
+2. **Therapeutic support** – A child‑friendly therapist works with your child (and often the whole family</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa How You Can Help Your Child At Home 9227.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa How You Can Help Your Child At Home 9227.</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa How You Can Help Your Child At Home 9227.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa How You Can Help Your Child At Home 9227.</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa How You Can Help Your Child At Home 9227.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa How You Can Help Your Child At Home 9227.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa How You Can Help Your Child At Home 9227.</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa How You Can Help Your Child At Home 9227.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Bulimia Nervosa How You Can Help Your Child At Home 9227.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>

@@ -1,0 +1,185 @@
+<?xml version="1.0" ?>
+<procedure name="Sickkids Cecostomy Tube Changing Your Childs Dressing 6768" curation_method="medgemma">
+  <qna_set>
+    <qna id="q1">
+      <question>Why is the treatment being recommended for my child?</question>
+      <answer>**Why is a Cecostomy Tube (C‑Tube) change being recommended for your child?**
+
+I understand that any time a doctor talks about a new procedure, it can feel overwhelming. Let me explain in plain language what a cecostomy tube is, why your child might need one, and why the team is suggesting a change now.
+
+---
+
+### 1. What is a Cecostomy Tube?
+
+- **An opening to the bowel** – A cecostomy tube is a thin, flexible plastic tube that is placed through a small opening in the abdomen into the cecum, the first part of the large intestine.  
+- **Purpose** – It lets your child’s stool drain directly out of the body instead of staying inside the colon, which helps prevent soiling (fecal incontinence) and the discomfort or skin irritation that can come with it.
+
+### 2. Why your child needs a C‑Tube in the first place
+
+- **Difficulty emptying the bowels** – Some children have conditions (e.g., severe constipation, neuro‑developmental disorders, or certain congenital bowel problems) that make it hard for them to pass stool normally.  
+- **Preventing complications** – Without a way to empty the bowel, stool can build up, leading to pain, swelling, or even infection of the skin around the belly.  
+- **Improving quality of life** – A functioning C‑Tube can reduce the frequency of accidental soiling, improve hygiene, and give both the child and family more confidence in daily activities.
+
+### 3. Why the tube is being changed now
+
+| Reason | What it means for your child |
+|--------|-----------------------------|
+| **Tube wear &amp; tear** | The plastic tube can become stiff, kinked, or develop a small hole over time. A new tube ensures reliable drainage. |
+| **Infection or irritation** | If the skin around the opening is red, swollen, or if there’s a small wound, a fresh tube and a new dressing help the area heal. |
+| **</answer>
+      <metadata>
+        <question_category>indication</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q2">
+      <question>What are the benefits and potential risks of the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cecostomy Tube Changing Your Childs Dressing 6768.</answer>
+      <metadata>
+        <question_category>risks_benefits</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q3">
+      <question>Are there alternative options?</question>
+      <answer>**Short answer:**  
+Yes—there are a few different ways to care for a cecostomy (C‑tube) that can be tailored to your child’s needs. The exact approach will depend on things like how much drainage the tube has, how sensitive your child’s skin is, and what your care team feels is safest. Your pediatric interventional radiology (PIR) team will discuss the best option for your child, but here are the main alternatives that are</answer>
+      <metadata>
+        <question_category>alternatives</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q4">
+      <question>How will the treatment be performed?</question>
+      <answer>**What to Expect During a Cecostomy (C‑tube) Dressing Change**
+
+Below is a simple, step‑by‑step outline of how your child’s C‑tube dressing will be changed. The goal is to keep the skin clean, dry, and protected while preventing infection and irritation. If anything feels unclear or you have extra questions, please bring them up with the nursing or interventional radiology team—they’ll be happy to walk you through it again.
+
+---
+
+### 1. Preparation
+
+| Step | What Happens | Why It Matters |
+|------|--------------|----------------|
+| **Hand‑washing** | The nurse or caregiver washes hands with soap and water. | Prevents germs from getting onto the skin or the tube. |
+| **Gather supplies** | Clean face cloth, warm water, soap, clean drying cloth, two 5 cm gauze squares, scissors, 10 cm tape, extra tape, and a zinc‑based barrier ointment (e.g., Zincofax). | Having everything ready keeps the procedure smooth and reduces the risk of contamination. |
+
+---
+
+### 2. Removing the Old Dressing
+
+1. **Careful removal** – The old dressing is gently peeled back.  
+2. **Watch the retention suture bundle** – This bundle of small stitches holds the tube in place and sits between the two gauze squares. It is attached to your child’s skin, so the nurse will avoid pulling on it.  
+3. **Inspect the skin** – The nurse checks for redness, swelling, drainage, new tissue growth, or bleeding. A little yellow‑green discharge is normal and usually harmless.
+
+---
+
+### 3. Cleaning the Skin
+
+1. **Wet the face cloth** – Half of the cloth is soaked in warm water.  
+2. **Add soap** – A small amount of soap is applied to the wet portion.  
+3. **Gentle circular wash** – Starting at the insertion site, the nurse washes the skin in a circular motion, moving outward from the tube.  
+4. **Rinse** – The other half of the cloth is used to rinse off soap and loosened debris.  
+5. **Pat dry** – A clean, dry</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q5">
+      <question>Will my child require sedation or anesthesia? Will a pediatric anesthesia specialist be provided?</question>
+      <answer>**Short answer:**  
+For a routine cecostomy‑tube dressing change,</answer>
+      <metadata>
+        <question_category>anesthesia</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q6">
+      <question>What special preparations will we need to make to ensure my child is ready for the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cecostomy Tube Changing Your Childs Dressing 6768.</answer>
+      <metadata>
+        <question_category>preparation</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q7">
+      <question>May they eat or drink prior to the procedure? If not, for how long must they abstain from food and drink?</question>
+      <answer>You will need the following: a clean face cloth warm water soap a clean cloth for drying the skin two squares of gauze that are 5 cm (2 inches) by 5 cm (2 inches) in size scissors one piece of tape about 10 cm (4 inches) long extra tape Wash your hands. Remove the old dressing around the C-tube. The retention suture bundle will be between the two pieces of gauze. Be careful not to pull the bundle when removing the dressing, as it is attached to your child. Look at the skin under the dressing for...</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q8">
+      <question>Will my child need to stay in a hospital? If so, for how long?</question>
+      <answer>**Answer**
+
+Most children who have a cecostomy (C‑tube) tube change do **not** need to stay in the hospital. The procedure is usually done in a clinic or even at home with a short “check‑in” visit, and the child can go home the same day.
+
+**When a hospital stay might be considered**
+
+| Situation | Why a stay might be needed | Typical length |
+|-----------|----------------------------|----------------|
+| **First‑time tube placement** | The surgeon wants to observe the child for a few hours after the tube is inserted to make sure it’s working and there are no immediate complications. | 1–2 days |
+| **Complications** (e.g., bleeding, infection, tube blockage, or abdominal pain) | The child needs close monitoring and possibly additional treatment. | 1–3 days, depending on the issue |
+| **Underlying illness** (e.g., severe malnutrition, chronic disease, or recent surgery) | The medical team may prefer to keep the child in a controlled environment while other treatments are started. | Variable; usually a few days |
+
+If your child is already well‑established with a C‑tube and the change is routine, the usual plan is:
+
+1. **Clinic visit** – the nurse or doctor checks the tube, changes the dressing, and gives you instructions.  
+2. **Home care** – you can take your child home the same day. You’ll be taught how to keep the dressing dry, how to give sponge baths, and what signs to watch for (redness, swelling, fever, or pain).
+
+**What to do if you’re unsure**
+
+- **Ask your care team**: They</answer>
+      <metadata>
+        <question_category>procedure_method</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q9">
+      <question>Will there be any restrictions on my child's activities? If so, when can my child return to normal activity?</question>
+      <answer>**Short answer:**  
+Your child can usually go back to most of their normal activities a few days after the dressing is changed, as long as the dressing stays dry and the tube stays in place. The main restriction is that they should avoid swimming, baths, and any activity that could wet or dislodge the dressing. Once the dressing is dry and secure, they can resume play, school, and other daily routines.  
+
+---
+
+### Why the dressing matters
+
+* **Infection check:** The dressing is your first line of defense against infection. By changing it daily you can spot redness, swelling, or drainage early.  
+* **Water exposure:** If the dressing gets wet, the seal can break and bacteria can enter the stoma site. That’s why we advise against swimming, baths, or any activity that could soak the dressing.  
+* **Retention suture:** The suture keeps the tube snug in the cecum, but it still needs the dressing to stay intact to prevent leaks or accidental pulling.
+
+---
+
+### Activity guidance after a dressing change
+
+| Activity | Recommendation | Why |
+|----------|----------------|-----|
+| **Sponge bath / shower** | Allowed, but keep the dressing dry. Use a towel to blot the area after rinsing. | The dressing can stay dry if you avoid soaking the area.</answer>
+      <metadata>
+        <question_category>recovery_activity</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+    <qna id="q10">
+      <question>What follow up will be required after the treatment?</question>
+      <answer>Please consult with your pediatric interventional radiologist for specific details about Sickkids Cecostomy Tube Changing Your Childs Dressing 6768.</answer>
+      <metadata>
+        <question_category>fasting</question_category>
+        <curation_model>alibayram/medgemma</curation_model>
+        <confidence>high</confidence>
+      </metadata>
+    </qna>
+  </qna_set>
+</procedure>
