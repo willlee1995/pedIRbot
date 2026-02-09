@@ -1,59 +1,39 @@
-"""LangChain-based retrieval system with SelfQueryRetriever and Reranker."""
+"""LangChain-based retrieval system with BM25, SelfQueryRetriever and Reranker."""
 from typing import List, Dict, Any, Optional
 import functools
 from loguru import logger
 
-# LangChain imports - ContextualCompressionRetriever location in LangChain 1.0+
+# LangChain imports
+from langchain_core.documents import Document
+from langchain_core.language_models import BaseChatModel
+
+from src.vector_store import VectorStore
+from config import settings
+
+# BM25 for hybrid search
 try:
-    # LangChain 1.0+ - try the main retrievers module first
-    from langchain_community.retrievers.contextual_compression import ContextualCompressionRetriever
+    from rank_bm25 import BM25Okapi
+    import re
+    BM25_AVAILABLE = True
+    logger.debug("BM25 (rank_bm25) loaded successfully for hybrid search")
 except ImportError:
-    try:
-        # Alternative path for LangChain 1.0
-        from langchain.retrievers.contextual_compression import ContextualCompressionRetriever
-    except ImportError:
-        try:
-            # LangChain 0.2.x path
-            from langchain.retrievers import ContextualCompressionRetriever
-        except ImportError:
-            # If all imports fail, make it optional (expected in LangChain 1.0)
-            logger.debug("ContextualCompressionRetriever not available. Reranking will be disabled.")
-            ContextualCompressionRetriever = None
+    BM25_AVAILABLE = False
+    logger.warning("rank_bm25 not available, BM25 hybrid search disabled")
 
 # SelfQueryRetriever imports - try multiple paths
 try:
-    # LangChain 1.0+ - try langchain_community first
     from langchain_community.retrievers.self_query.base import SelfQueryRetriever
 except ImportError:
     try:
         from langchain_community.retrievers.self_query import SelfQueryRetriever
     except ImportError:
         try:
-            # Try langchain.retrievers path
             from langchain.retrievers.self_query.base import SelfQueryRetriever
         except ImportError:
-            # If all fail, make it optional (expected in LangChain 1.0 - not needed for agentic RAG pattern)
-            logger.debug("SelfQueryRetriever not available. Using direct vector store search (LangChain 1.0 pattern).")
+            logger.debug("SelfQueryRetriever not available. Using direct vector store search.")
             SelfQueryRetriever = None
-from langchain_core.documents import Document
-from langchain_core.language_models import BaseChatModel
-from loguru import logger
 
-from src.vector_store import VectorStore
-from config import settings
-
-# Try different import paths for CrossEncoderReranker
-try:
-    from langchain_community.cross_encoders import CrossEncoderReranker
-except ImportError:
-    try:
-        from langchain_core.retrievers.document_compressors import CrossEncoderReranker
-    except ImportError:
-        try:
-            from langchain.retrievers.document_compressors import CrossEncoderReranker
-        except ImportError:
-            logger.debug("CrossEncoderReranker not available, reranking will be disabled")
-            CrossEncoderReranker = None
+# CrossEncoderReranker is deprecated in LangChain 1.0, we use Qwen3Reranker directly
 
 # Import custom Qwen3 reranker
 try:
@@ -67,8 +47,83 @@ except Exception as e:
     logger.warning(f"Qwen3Reranker import error: {e}")
 
 
+class BM25Retriever:
+    """BM25-based keyword retriever for hybrid search."""
+    
+    def __init__(self, documents: List[Document] = None):
+        """
+        Initialize BM25 retriever.
+        
+        Args:
+            documents: List of LangChain Documents to index
+        """
+        self.documents = documents or []
+        self.bm25 = None
+        self.tokenized_corpus = []
+        
+        if documents:
+            self.build_index(documents)
+    
+    def _tokenize(self, text: str) -> List[str]:
+        """Simple tokenization for BM25."""
+        # Lowercase and split on non-alphanumeric
+        text = text.lower()
+        tokens = re.findall(r'\b\w+\b', text)
+        return tokens
+    
+    def build_index(self, documents: List[Document]):
+        """Build BM25 index from documents."""
+        if not BM25_AVAILABLE:
+            logger.warning("BM25 not available, cannot build index")
+            return
+            
+        self.documents = documents
+        self.tokenized_corpus = [self._tokenize(doc.page_content) for doc in documents]
+        
+        if self.tokenized_corpus:
+            self.bm25 = BM25Okapi(self.tokenized_corpus)
+            logger.info(f"Built BM25 index with {len(documents)} documents")
+        else:
+            logger.warning("No documents to index for BM25")
+    
+    def search(self, query: str, k: int = 5) -> List[Dict[str, Any]]:
+        """
+        Search using BM25.
+        
+        Args:
+            query: Query text
+            k: Number of results to return
+            
+        Returns:
+            List of results with content, metadata, and BM25 scores
+        """
+        if not self.bm25 or not self.documents:
+            return []
+        
+        tokenized_query = self._tokenize(query)
+        scores = self.bm25.get_scores(tokenized_query)
+        
+        # Get top k indices
+        top_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:k]
+        
+        results = []
+        for idx in top_indices:
+            if scores[idx] > 0:  # Only include if there's a match
+                doc = self.documents[idx]
+                results.append({
+                    'content': doc.page_content,
+                    'metadata': doc.metadata,
+                    'score': float(scores[idx]),
+                    'id': doc.metadata.get('chunk_id', doc.metadata.get('id', '')),
+                    'retrieval_type': 'bm25'
+                })
+        
+        logger.debug(f"BM25 returned {len(results)} results for query: {query[:50]}...")
+        return results
+
+
 class AdvancedRetriever:
-    """Advanced retriever using LangChain SelfQueryRetriever and Reranker."""
+    """Advanced retriever using BM25, SelfQueryRetriever and Reranker."""
 
     def __init__(
         self,
@@ -76,6 +131,7 @@ class AdvancedRetriever:
         llm: Optional[BaseChatModel] = None,
         use_reranker: bool = None,
         reranker_model: str = None,
+        use_hybrid_search: bool = True,
     ):
         """
         Initialize advanced retriever.
@@ -85,10 +141,36 @@ class AdvancedRetriever:
             llm: LLM for SelfQueryRetriever (for query parsing)
             use_reranker: Whether to use reranker (default from settings)
             reranker_model: Reranker model name (default from settings)
+            use_hybrid_search: Whether to use BM25 + semantic hybrid search (default: True)
         """
         self.vector_store = vector_store
         self.use_reranker = use_reranker if use_reranker is not None else settings.use_reranker
         self.reranker_model = reranker_model or settings.reranker_model
+        self.use_hybrid_search = use_hybrid_search and BM25_AVAILABLE
+        
+        # Initialize BM25 retriever for hybrid search
+        self.bm25_retriever = None
+        if self.use_hybrid_search:
+            try:
+                # Get all documents from vector store for BM25 indexing
+                collection = vector_store.vectorstore._collection
+                all_docs_data = collection.get()
+                
+                if all_docs_data and all_docs_data.get('documents'):
+                    # Convert to LangChain Documents
+                    docs = []
+                    for i, content in enumerate(all_docs_data['documents']):
+                        metadata = all_docs_data['metadatas'][i] if all_docs_data.get('metadatas') else {}
+                        docs.append(Document(page_content=content, metadata=metadata))
+                    
+                    self.bm25_retriever = BM25Retriever(docs)
+                    logger.info(f"BM25 hybrid search enabled with {len(docs)} documents")
+                else:
+                    logger.warning("No documents found for BM25 indexing")
+                    self.use_hybrid_search = False
+            except Exception as e:
+                logger.warning(f"Failed to initialize BM25: {e}")
+                self.use_hybrid_search = False
 
         # Get base retriever from vector store
         # In LangChain 1.0+, retrievers are created via as_retriever()
@@ -238,45 +320,24 @@ class AdvancedRetriever:
             logger.info("No LLM provided, using base retriever without SelfQuery")
             self.retriever = base_retriever if base_retriever is not None else vector_store.vectorstore.as_retriever()
 
-        # Setup reranker if enabled
+        # Setup reranker if enabled (apply directly, not via ContextualCompressionRetriever)
+        self.reranker = None
         if self.use_reranker:
-            reranker = None
-
-            # Try Qwen3 reranker first (preferred)
             if QWEN3_RERANKER_AVAILABLE:
                 try:
-                    reranker = Qwen3Reranker(
+                    self.reranker = Qwen3Reranker(
                         model_name="Qwen/Qwen3-Reranker-0.6B",
                         top_n=settings.top_k_reranker,
                     )
-                    logger.info("Initialized Qwen3 Reranker")
+                    logger.info(f"Qwen3 Reranker initialized (top_n: {settings.top_k_reranker})")
                 except Exception as e:
                     logger.warning(f"Failed to initialize Qwen3 Reranker: {e}")
-                    logger.exception(e)
-                    # Note: CrossEncoderReranker requires BaseCrossEncoder instance, not a string
-                    # So we skip it and just disable reranking if Qwen3 fails
-                    reranker = None
-
-            # Use reranker if successfully initialized
-            if reranker is not None and ContextualCompressionRetriever is not None:
-                try:
-                    self.retriever = ContextualCompressionRetriever(
-                        base_compressor=reranker,
-                        base_retriever=self.retriever,
-                    )
-                    logger.info(f"Reranker enabled (top_n: {settings.top_k_reranker})")
-                except Exception as e:
-                    logger.warning(f"Failed to setup reranker: {e}. Using retriever without reranking.")
-                    logger.exception(e)
                     self.use_reranker = False
             else:
-                if ContextualCompressionRetriever is None:
-                    logger.debug("ContextualCompressionRetriever not available, disabling reranking")
-                else:
-                    logger.debug("No reranker available, disabling reranking")
+                logger.warning("Qwen3Reranker not available, disabling reranking")
                 self.use_reranker = False
 
-        logger.info(f"Initialized AdvancedRetriever (reranker: {self.use_reranker})")
+        logger.info(f"Initialized AdvancedRetriever (reranker: {self.use_reranker}, hybrid_bm25: {self.use_hybrid_search})")
 
     def retrieve(
         self,
@@ -299,26 +360,93 @@ class AdvancedRetriever:
 
         logger.debug(f"Retrieving documents for query: {query[:50]}...")
 
-        # Use LangChain retriever
+        # Hybrid search: combine BM25 and semantic results
+        if self.use_hybrid_search and self.bm25_retriever:
+            logger.info("🔍 Using hybrid search (BM25 + semantic)")
+            
+            # Get BM25 results
+            bm25_results = self.bm25_retriever.search(query, k=k * 2)
+            logger.debug(f"BM25 returned {len(bm25_results)} results")
+            
+            # Get semantic results
+            semantic_results = self.vector_store.similarity_search(
+                query=query,
+                k=k * 2,
+                filter_dict=filter_dict
+            )
+            logger.debug(f"Semantic search returned {len(semantic_results)} results")
+            
+            # Reciprocal Rank Fusion (RRF) to combine results
+            rrf_k = 60  # RRF constant
+            doc_scores = {}  # id -> (score, result)
+            
+            # Score BM25 results
+            for rank, result in enumerate(bm25_results):
+                doc_id = result.get('id') or result['content'][:100]
+                rrf_score = 1.0 / (rrf_k + rank + 1)
+                if doc_id in doc_scores:
+                    doc_scores[doc_id] = (doc_scores[doc_id][0] + rrf_score, result)
+                else:
+                    result['retrieval_type'] = 'bm25'
+                    doc_scores[doc_id] = (rrf_score, result)
+            
+            # Score semantic results
+            for rank, result in enumerate(semantic_results):
+                doc_id = result.get('id') or result['content'][:100]
+                rrf_score = 1.0 / (rrf_k + rank + 1)
+                if doc_id in doc_scores:
+                    doc_scores[doc_id] = (doc_scores[doc_id][0] + rrf_score, result)
+                    doc_scores[doc_id][1]['retrieval_type'] = 'hybrid'  # Mark as found in both
+                else:
+                    result['retrieval_type'] = 'semantic'
+                    doc_scores[doc_id] = (rrf_score, result)
+            
+            # Sort by combined RRF score
+            sorted_docs = sorted(doc_scores.items(), key=lambda x: x[1][0], reverse=True)
+            
+            # Take top k and normalize scores
+            results = []
+            for doc_id, (rrf_score, result) in sorted_docs[:k]:
+                result['score'] = min(1.0, rrf_score * 30)  # Normalize to 0-1 range
+                results.append(result)
+            
+            logger.info(f"Hybrid search combined into {len(results)} results")
+            
+            # Apply reranker if enabled
+            if self.use_reranker and self.reranker is not None:
+                docs = [Document(page_content=r['content'], metadata=r['metadata']) for r in results]
+                logger.info(f"Reranking {len(docs)} documents...")
+                reranked_docs = self.reranker.compress_documents(docs, query)
+                logger.info(f"After reranking: {len(reranked_docs)} documents")
+                
+                # Convert back to result format
+                results = []
+                for doc in reranked_docs[:k]:
+                    results.append({
+                        'content': doc.page_content,
+                        'metadata': doc.metadata,
+                        'score': 0.9,  # Reranked docs are high quality
+                        'id': doc.metadata.get('chunk_id', doc.metadata.get('id', '')),
+                        'retrieval_type': 'reranked'
+                    })
+            
+            logger.info(f"Retrieved {len(results)} documents (hybrid search)")
+            return results
+
+        # Fallback: Use LangChain retriever (semantic only)
         if filter_dict and (SelfQueryRetriever is None or not isinstance(self.retriever, SelfQueryRetriever)):
-            # If filter_dict provided but not using SelfQueryRetriever, use direct search
             results = self.vector_store.similarity_search(
                 query=query,
                 k=k,
                 filter_dict=filter_dict
             )
         else:
-            # Use LangChain retriever
-            # The structured query logging is now handled by the wrapper in __init__
-            # Try get_relevant_documents first (LangChain < 1.0), then invoke (LangChain 1.0+)
             try:
                 if hasattr(self.retriever, 'get_relevant_documents'):
                     docs = self.retriever.get_relevant_documents(query)
                 elif hasattr(self.retriever, 'invoke'):
-                    # LangChain 1.0+ uses invoke method
                     docs = self.retriever.invoke(query)
                 else:
-                    # Fallback: use vector store directly
                     logger.warning("Retriever doesn't have get_relevant_documents or invoke, using vector store directly")
                     results = self.vector_store.similarity_search(query=query, k=k, filter_dict=filter_dict)
                     return results
@@ -328,13 +456,18 @@ class AdvancedRetriever:
                 results = self.vector_store.similarity_search(query=query, k=k, filter_dict=filter_dict)
                 return results
 
+            # Apply reranker if enabled
+            if self.use_reranker and self.reranker is not None:
+                logger.info(f"Reranking {len(docs)} documents...")
+                docs = self.reranker.compress_documents(docs, query)
+                logger.info(f"After reranking: {len(docs)} documents")
+
             # Convert LangChain Documents to our format
             results = []
             for doc in docs[:k]:
-                # Extract score if available
                 score = getattr(doc, 'score', None)
                 if score is None:
-                    score = 0.8  # Default score if not available
+                    score = 0.8
 
                 results.append({
                     'content': doc.page_content,

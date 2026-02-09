@@ -76,29 +76,30 @@ def search_documents_sql(
     procedure_category: Optional[str] = None,
     procedure_type: Optional[str] = None,
     filename_pattern: Optional[str] = None,
-    limit: int = 10
+    content: Optional[str] = None,
+    limit: int = 5
 ) -> str:
     """
     [PREFERRED] Search for documents in the SQLite database using metadata filters.
+    
+    **RETURNS FULL DOCUMENT CONTENT directly.**
+    You do NOT need to call get_document_by_id after this.
 
-    **USE THIS TOOL FIRST** when searching for documents. It provides full document context
-    without information being scattered across chunks. This is preferred over semantic search.
-
-    Use this tool to find documents by source organization, region, procedure category, etc.
-    This returns document IDs and metadata - use get_document_by_id to fetch full content.
-
+    Use this tool to find and read documents by source organization, region, procedure category, etc.
+    
     Args:
         source_org: Filter by source organization (HKCH, SickKids, SIR, HKSIR, CIRSE)
         region: Filter by region ('Hong Kong' or 'Non-Hong Kong')
         procedure_category: Filter by procedure category ('Venous Access', 'Angiogram Related', 'Embolization Related', 'Biopsy Related', 'Pain Injection Relief Related', 'Other')
         procedure_type: Filter by procedure type
         filename_pattern: SQL LIKE pattern for filename (e.g., '%PICC%' to find PICC-related documents)
-        limit: Maximum number of results (default: 10)
+        content: SQL LIKE pattern for content (e.g., '%flush efficiency%' to find documents mentioning flush efficiency)
+        limit: Maximum number of results (default: 5)
 
     Returns:
-        List of matching documents with IDs and metadata
+        FULL content of matching documents with metadata
     """
-    logger.info(f"🔍 SQL search: org={source_org}, region={region}, category={procedure_category}")
+    logger.info(f"🔍 SQL search: org={source_org}, region={region}, category={procedure_category}, content={content}")
 
     try:
         db = get_document_db()
@@ -108,28 +109,32 @@ def search_documents_sql(
             procedure_category=procedure_category,
             procedure_type=procedure_type,
             filename_pattern=filename_pattern,
+            content=content,
             limit=limit
         )
 
         if not docs:
             return "No documents found matching the criteria."
 
-        # Format results
+        # Format results with FULL CONTENT
         results = []
         for i, doc in enumerate(docs, 1):
             results.append(
+                f"\n{'='*80}\n"
                 f"[{i}] Document ID: {doc['document_id']}\n"
                 f"    Filename: {doc['filename']}\n"
                 f"    Source: {doc['source_org']}\n"
                 f"    Region: {doc['region']}\n"
                 f"    Category: {doc['procedure_category']}\n"
                 f"    Procedure Type: {doc['procedure_type']}\n"
-                f"    Content Preview: {doc['content'][:200]}...\n"
+                f"{'='*80}\n"
+                f"FULL CONTENT:\n"
+                f"{doc['content']}\n"
             )
 
         result_text = "\n".join(results)
-        logger.info(f"✅ Found {len(docs)} documents")
-        return f"Found {len(docs)} documents:\n\n{result_text}"
+        logger.info(f"✅ Found {len(docs)} documents (returning FULL content)")
+        return f"Found {len(docs)} documents with FULL content:\n\n{result_text}"
     except Exception as e:
         logger.error(f"Error in SQL search: {e}")
         logger.exception(e)
@@ -192,8 +197,8 @@ def get_sql_tools() -> List:
         List of LangChain tools for SQLite document queries
     """
     return [
-        get_document_by_id,
+        # get_document_by_id,  # Disabled: search_documents_sql now returns full content
         search_documents_sql,
-        get_documents_by_ids,
+        # get_documents_by_ids, # Disabled: search_documents_sql now returns full content
     ]
 

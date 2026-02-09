@@ -17,12 +17,11 @@ import time
 sys.path.insert(0, str(Path(__file__).parent))
 
 from src.rag_pipeline import RAGPipeline
-from src.llm import get_llm_provider
-from src.retriever import HybridRetriever
+from src.llm import get_llm_provider, get_langchain_llm
+from src.retriever import AdvancedRetriever
 from src.vector_store import VectorStore
 from src.embeddings import get_embedding_model
 from src.conversation_memory import ConversationMemory
-from src.query_decomposer import QueryDecomposer
 from config import settings
 
 
@@ -124,12 +123,11 @@ def init_rag_system():
     """Initialize RAG system (cached)."""
     embedding_model = get_embedding_model()
     vector_store = VectorStore(embedding_model)
-    retriever = HybridRetriever(vector_store)
-    llm_provider = get_llm_provider()
-    rag_pipeline = RAGPipeline(retriever, llm_provider)
-    decomposer = QueryDecomposer(llm_provider, use_llm=False)  # Fast mode
+    llm = get_langchain_llm()
+    retriever = AdvancedRetriever(vector_store, llm=llm)
+    rag_pipeline = RAGPipeline(vector_store, retriever=retriever)
     stats = vector_store.get_stats()
-    return rag_pipeline, decomposer, llm_provider, stats
+    return rag_pipeline, stats
 
 
 def init_session_state():
@@ -301,52 +299,30 @@ class ProgressTracker:
                 placeholder.empty()
 
 
-def process_query(rag_pipeline, decomposer, prompt, progress_tracker):
+def process_query(rag_pipeline, prompt, progress_tracker):
     """Process a query with progress tracking."""
     
     # Step 0: Analyze query
     progress_tracker.update(0)
-    time.sleep(2.0)  # 2 second delay to ease anxiety
+    time.sleep(0.5)
     
-    # Check for multi-part question
-    decomposition = decomposer.decompose(prompt)
+    # Single query path with staggered progress updates
+    progress_tracker.update(1)  # Searching
+    time.sleep(0.5)
     
-    if decomposition.is_complex and len(decomposition.sub_queries) > 1:
-        # Handle multi-part question
-        progress_tracker.update(1)
-        time.sleep(2.5)
-        
-        responses = []
-        for sq in decomposition.sub_queries:
-            result = rag_pipeline.generate_response(
-                query=sq.query,
-                include_sources=True
-            )
-            responses.append(result)
-        
-        progress_tracker.update(4)
-        
-        # Merge responses
-        final_result = decomposer.merge_responses(responses, decomposition)
-        return final_result
-    else:
-        # Single query path with staggered progress updates
-        progress_tracker.update(1)  # Searching
-        time.sleep(2.5)  # 2.5 seconds
-        
-        progress_tracker.update(2)  # Evaluating
-        time.sleep(2.0)  # 2 seconds
-        
-        progress_tracker.update(3)  # Safety check
-        time.sleep(1.5)  # 1.5 seconds
-        
-        progress_tracker.update(4)  # Generating
-        
-        result = rag_pipeline.generate_response(
-            query=prompt,
-            include_sources=True
-        )
-        return result
+    progress_tracker.update(2)  # Evaluating
+    time.sleep(0.3)
+    
+    progress_tracker.update(3)  # Safety check
+    time.sleep(0.3)
+    
+    progress_tracker.update(4)  # Generating
+    
+    result = rag_pipeline.generate_response(
+        query=prompt,
+        include_sources=True
+    )
+    return result
 
 
 def main():
@@ -356,7 +332,7 @@ def main():
     # Initialize RAG system
     try:
         with st.spinner("Initializing RAG system..."):
-            rag_pipeline, decomposer, llm_provider, stats = init_rag_system()
+            rag_pipeline, stats = init_rag_system()
     except Exception as e:
         st.error(f"Failed to initialize RAG system: {e}")
         st.stop()
@@ -400,7 +376,6 @@ def main():
                 # Process query with progress
                 result = process_query(
                     rag_pipeline, 
-                    decomposer, 
                     enhanced_prompt, 
                     progress_tracker
                 )

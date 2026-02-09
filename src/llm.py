@@ -5,22 +5,15 @@ import os
 from loguru import logger
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-from langchain_openai import ChatOpenAI
+try:
+    from langchain_openai import ChatOpenAI
+except ImportError:
+    from langchain_community.chat_models import ChatOpenAI
 from langchain_ollama import ChatOllama
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 from config import settings
-
-# Initialize LangSmith if enabled
-if settings.langsmith_tracing and settings.langsmith_api_key:
-    os.environ["LANGSMITH_TRACING"] = "true"
-    os.environ["LANGSMITH_API_KEY"] = settings.langsmith_api_key
-    os.environ["LANGSMITH_PROJECT"] = settings.langsmith_project
-    os.environ["LANGSMITH_ENDPOINT"] = settings.langsmith_endpoint
-    logger.info(f"LangSmith tracing enabled for project: {settings.langsmith_project}")
-elif settings.langsmith_tracing and not settings.langsmith_api_key:
-    logger.warning("LangSmith tracing is enabled but API key is not set")
 
 
 def get_langchain_llm(provider: str = None, **kwargs) -> BaseChatModel:
@@ -57,6 +50,27 @@ def get_langchain_llm(provider: str = None, **kwargs) -> BaseChatModel:
             base_url=base_url,
             temperature=kwargs.get('temperature', settings.agent_temperature),
             num_ctx=kwargs.get('num_ctx', 4096),
+        )
+    elif provider == "lmstudio":
+        # LM Studio uses OpenAI-compatible API
+        return ChatOpenAI(
+            model=kwargs.get('model', settings.lmstudio_chat_model),
+            api_key="lm-studio",  # LM Studio doesn't require real key
+            base_url=kwargs.get('base_url', settings.lmstudio_api_base),
+            temperature=kwargs.get('temperature', settings.agent_temperature),
+            max_tokens=kwargs.get('max_tokens', 1024),
+            streaming=kwargs.get('streaming', False),
+        )
+    elif provider == "openrouter":
+        # OpenRouter uses OpenAI-compatible API
+        return ChatOpenAI(
+            model=kwargs.get('model', settings.openrouter_chat_model),
+            api_key=kwargs.get('api_key', settings.openrouter_api_key),
+            base_url=kwargs.get('base_url', settings.openrouter_api_base),
+            temperature=kwargs.get('temperature', settings.agent_temperature),
+            max_tokens=kwargs.get('max_tokens', 1024),
+            streaming=kwargs.get('streaming', False),
+            default_headers={"HTTP-Referer": "https://pedir-bot.local", "X-Title": "PedIR Bot"},
         )
     else:
         raise ValueError(f"Unknown LLM provider: {provider}")
@@ -137,8 +151,23 @@ class OllamaProvider(LLMProvider):
             logger.error(f"Error streaming from Ollama: {e}")
             raise
 
+def _convert_messages_to_langchain(messages: List[Dict[str, str]]) -> List:
+    """Convert message dicts to LangChain message objects."""
+    langchain_messages = []
+    for msg in messages:
+        role = msg.get('role', 'user')
+        content = msg.get('content', '')
 
-<<<<<<< HEAD
+        if role == 'system':
+            langchain_messages.append(SystemMessage(content=content))
+        elif role == 'assistant':
+            langchain_messages.append(AIMessage(content=content))
+        else:  # user or default
+            langchain_messages.append(HumanMessage(content=content))
+
+    return langchain_messages
+
+
 class LMStudioProvider(LLMProvider):
     """LM Studio local API provider using OpenAI-compatible API."""
 
@@ -156,6 +185,8 @@ class LMStudioProvider(LLMProvider):
             temperature: Sampling temperature
             max_tokens: Maximum tokens to generate
         """
+        from openai import OpenAI
+        
         self.model = model or settings.lmstudio_chat_model
         self.temperature = temperature
         self.max_tokens = max_tokens
@@ -222,23 +253,72 @@ class LMStudioProvider(LLMProvider):
         except Exception as e:
             logger.error(f"Error streaming from LM Studio: {e}")
             raise
-=======
-def _convert_messages_to_langchain(messages: List[Dict[str, str]]) -> List:
-    """Convert message dicts to LangChain message objects."""
-    langchain_messages = []
-    for msg in messages:
-        role = msg.get('role', 'user')
-        content = msg.get('content', '')
 
-        if role == 'system':
-            langchain_messages.append(SystemMessage(content=content))
-        elif role == 'assistant':
-            langchain_messages.append(AIMessage(content=content))
-        else:  # user or default
-            langchain_messages.append(HumanMessage(content=content))
+class OpenRouterProvider(LLMProvider):
+    """OpenRouter API provider using OpenAI-compatible API."""
 
-    return langchain_messages
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
+    def __init__(self,
+                 model: str = None,
+                 base_url: str = None,
+                 temperature: float = 0.3,
+                 max_tokens: int = 1024):
+        """
+        Initialize OpenRouter provider.
+
+        Args:
+            model: Model name (default from settings)
+            base_url: OpenRouter API base URL (default from settings)
+            temperature: Sampling temperature
+            max_tokens: Maximum tokens to generate
+        """
+        from openai import OpenAI
+        
+        self.model = model or settings.openrouter_chat_model
+        self.temperature = temperature
+        self.max_tokens = max_tokens
+        self.base_url = base_url or settings.openrouter_api_base
+        self.api_key = settings.openrouter_api_key
+
+        self.client = OpenAI(
+            api_key=self.api_key,
+            base_url=self.base_url,
+            default_headers={"HTTP-Referer": "https://pedir-bot.local", "X-Title": "PedIR Bot"}
+        )
+
+        logger.info(f"Initialized OpenRouter provider with model: {self.model}")
+
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10))
+    def generate(self, messages: List[Dict[str, str]], **kwargs) -> str:
+        """Generate a response from OpenRouter."""
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                temperature=kwargs.get('temperature', self.temperature),
+                max_tokens=kwargs.get('max_tokens', self.max_tokens),
+                stream=False
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            logger.error(f"Error generating response from OpenRouter: {e}")
+            raise
+
+    def stream_generate(self, messages: List[Dict[str, str]], **kwargs):
+        """Generate a streaming response from OpenRouter."""
+        try:
+            stream = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                temperature=kwargs.get('temperature', self.temperature),
+                max_tokens=kwargs.get('max_tokens', self.max_tokens),
+                stream=True
+            )
+            for chunk in stream:
+                if chunk.choices[0].delta.content:
+                    yield chunk.choices[0].delta.content
+        except Exception as e:
+            logger.error(f"Error streaming from OpenRouter: {e}")
+            raise
 
 
 def get_llm_provider(provider: str = None, **kwargs) -> LLMProvider:
@@ -260,5 +340,7 @@ def get_llm_provider(provider: str = None, **kwargs) -> LLMProvider:
         return OllamaProvider(**kwargs)
     elif provider == "lmstudio":
         return LMStudioProvider(**kwargs)
+    elif provider == "openrouter":
+        return OpenRouterProvider(**kwargs)
     else:
         raise ValueError(f"Unknown LLM provider: {provider}")

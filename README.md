@@ -22,6 +22,7 @@ This system implements a production-ready RAG pipeline based on the research doc
 - **Hybrid Retrieval**: Semantic + BM25 keyword search with configurable weighting
 - **Safety Features**: Emergency keyword detection, medical disclaimer enforcement
 - **Source Organization**: Automatic detection and tagging of documents from HKCH, SickKids, SIR, HKSIR, CIRSE
+- **One-Step SQL Retrieval**: Search tools now return full content immediately, enforcing a "Search First" workflow to prevent hallucinations.
 
 ### 🏥 High-Quality Q&A Curation with MedGemma
 

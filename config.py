@@ -20,16 +20,21 @@ class Settings(BaseSettings):
 
     # Ollama Configuration
     ollama_api_base: str = "http://localhost:11434"
-    ollama_chat_model: str = "alibayram/medgemma"  # Default LLM (used for final answer generation)
-    ollama_orchestrator_model: str = "qwen3:8b"  # Model for orchestration (tool calling)
+    ollama_chat_model: str = "unsloth/medgemma-4b-it-GGUF"  # Default LLM (used for final answer generation)
+    ollama_orchestrator_model: str = "unsloth/medgemma-4b-it-GGUF"  # Model for orchestration (tool calling)
 
     # LM Studio Configuration (OpenAI-compatible local API)
     lmstudio_api_base: str = "http://localhost:1234/v1"
-    lmstudio_embedding_model: str = "text-embedding-nomic-embed-text-v1.5"  # Common embedding model
-    lmstudio_chat_model: str = "lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF"  # Adjust to your loaded model
+    lmstudio_embedding_model: str = "text-embedding-embeddinggemma-300m-qat"  # Common embedding model
+    lmstudio_chat_model: str = "unsloth/medgemma-4b-it-GGUF"  # Adjust to your loaded model
 
     # Vector Database Configuration
     chroma_persist_directory: str = "./chroma_db"
+
+    # OpenRouter Configuration (Free/Paid API)
+    openrouter_api_key: str = "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"
+    openrouter_api_base: str = "https://openrouter.ai/api/v1"
+    openrouter_chat_model: str = "openrouter/free"  # Free model auto-selector
     collection_name: str = "pedir_knowledge_base"
 
     # LEANN Vector Index Configuration
@@ -44,10 +49,6 @@ class Settings(BaseSettings):
     document_db_path: str = "./document_db.sqlite"
 
     # Retrieval Configuration
-<<<<<<< HEAD
-    top_k_retrieval: int = 10
-    hybrid_alpha: float = 0.7  # Weight for semantic search
-=======
     top_k_retrieval: int = 5
     top_k_reranker: int = 3  # Number of documents to return after reranking
     hybrid_alpha: float = 0.7  # Weight for semantic search (legacy, may be deprecated)
@@ -61,7 +62,6 @@ class Settings(BaseSettings):
     use_reranker: bool = True
     reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"  # Default reranker model
     reranker_top_k: int = 10  # Number of documents to rerank (before selecting top_k_reranker)
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
 
     # Application Settings
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR"] = "INFO"
@@ -76,13 +76,9 @@ class Settings(BaseSettings):
     ollama_embedding_model: str = "qwen3-embedding:0.6b"
 
     # LLM Provider
-    llm_provider: Literal["openai", "ollama", "lmstudio"] = "openai"
+    llm_provider: Literal["openai", "ollama", "lmstudio", "openrouter"] = "lmstudio"
 
-    # LangSmith Configuration
-    langsmith_tracing: bool = False  # Set to True to enable tracing
-    langsmith_api_key: str = ""
-    langsmith_project: str = "pedir-bot"  # Project name in LangSmith
-    langsmith_endpoint: str = "https://api.smith.langchain.com"  # LangSmith API endpoint
+
 
 
 settings = Settings()

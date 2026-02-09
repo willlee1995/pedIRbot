@@ -5,15 +5,11 @@ from langgraph.graph import StateGraph
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 from loguru import logger
 
-<<<<<<< HEAD
-from src.retriever import HybridRetriever
-from src.llm import LLMProvider
-from src.query_grader import QueryGrader, QueryType, SuggestedAction
-from src.safety_guard import SafetyGuard, RiskLevel
-=======
 from src.agentic_rag import create_agentic_rag_graph
 from src.vector_store import VectorStore
 from src.retriever import AdvancedRetriever
+from src.safety_guard import SafetyGuard, SafetyAssessment, RiskLevel
+from src.llm import get_llm_provider
 from config import settings
 
 # Import LangSmith traceable decorator
@@ -27,7 +23,6 @@ except ImportError:
         def decorator(func):
             return func
         return decorator
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
 
 
 class RAGPipeline:
@@ -54,79 +49,38 @@ If you have urgent questions about your procedure, please contact the HKCH IR nu
 如果您對手術有緊急疑問，請致電[電話號碼]聯絡香港兒童醫院介入放射科護士協調員。
 """
 
-<<<<<<< HEAD
-    # System prompt template
-    SYSTEM_PROMPT = """You are 'PediIR-Bot', a helpful and friendly AI assistant from the Hong Kong Children's Hospital Radiology department. Your purpose is to provide clear and simple information to patients and their families about pediatric interventional radiology procedures.
-
-CRITICAL INSTRUCTIONS:
-1. You MUST base your answer EXCLUSIVELY on the information provided in the 'CONTEXT' section below.
-2. Do not use any of your own internal knowledge or information from outside this context.
-3. If the provided context does not contain the information needed to answer the question, you MUST respond with:
-   "I'm sorry, I don't have the specific information to answer that question. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?"
-4. You are strictly forbidden from providing any form of medical advice, diagnosis, treatment recommendations, or interpretation of a patient's personal medical situation.
-5. Your role is purely educational.
-6. Your tone must always be empathetic, reassuring, and easy to understand.
-7. Use simple language and avoid complex medical jargon.
-8. The user may ask questions in English or Traditional Chinese. You must generate your response in the same language as the user's original query.
-
-CONTEXT:
-{context}
-
-IMPORTANT DISCLAIMER:
-Every response you provide must end with the following disclaimer:
-"Please remember, this information is for educational purposes only and is not a substitute for professional medical advice. Always discuss any specific medical questions or concerns with your doctor or nurse."
-
-(Chinese version: "請記住，此資訊僅供教育目的，不能代替專業醫療建議。請務必與您的醫生或護士討論任何具體的醫療問題或疑慮。")
-"""
-
-    def __init__(self, retriever: HybridRetriever, llm_provider: LLMProvider, 
-                 use_grader: bool = True, use_safety_guard: bool = True):
-=======
     def __init__(
         self,
         vector_store: VectorStore,
         retriever: Optional[AdvancedRetriever] = None,
         graph: Optional[StateGraph] = None,
+        use_safety_guard: bool = True,
     ):
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
         """
         Initialize the RAG pipeline using LangGraph.
 
         Args:
-<<<<<<< HEAD
-            retriever: HybridRetriever instance
-            llm_provider: LLMProvider instance
-            use_grader: Whether to use the query grader agent
-            use_safety_guard: Whether to use the safety guardrail agent
-=======
             vector_store: VectorStore instance
             retriever: AdvancedRetriever instance (optional, kept for compatibility)
             graph: Compiled LangGraph StateGraph (optional, will be created if not provided)
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
+            use_safety_guard: Whether to use the safety guardrail agent
         """
         self.vector_store = vector_store
         self.retriever = retriever
-<<<<<<< HEAD
-        self.llm = llm_provider
-        self.use_grader = use_grader
         self.use_safety_guard = use_safety_guard
-        
-        # Initialize query grader if enabled
-        if use_grader:
-            self.query_grader = QueryGrader(llm_provider)
-            logger.info("Initialized RAG pipeline with QueryGrader")
-        else:
-            self.query_grader = None
-            logger.info("Initialized RAG pipeline without QueryGrader")
-        
-        # Initialize safety guard if enabled
+
+        # Initialize SafetyGuard if enabled
         if use_safety_guard:
-            self.safety_guard = SafetyGuard(llm_provider, use_llm_check=True)
-            logger.info("Initialized RAG pipeline with SafetyGuard")
+            try:
+                llm_provider = get_llm_provider()
+                self.safety_guard = SafetyGuard(llm_provider, use_llm_check=False)  # Pattern-based for speed
+                logger.info("Initialized RAG pipeline with SafetyGuard")
+            except Exception as e:
+                logger.warning(f"Failed to initialize SafetyGuard: {e}")
+                self.safety_guard = None
+                self.use_safety_guard = False
         else:
             self.safety_guard = None
-            logger.info("Initialized RAG pipeline without SafetyGuard")
-=======
 
         # Create LangGraph if not provided
         if graph is None:
@@ -135,7 +89,6 @@ Every response you provide must end with the following disclaimer:
             self.graph = graph
 
         logger.info("Initialized RAG pipeline with LangGraph Agentic RAG")
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
 
     def _check_emergency(self, query: str) -> Optional[str]:
         """
@@ -198,11 +151,14 @@ Every response you provide must end with the following disclaimer:
             
             # Handle critical emergencies from SafetyGuard
             if safety_assessment.is_emergency or safety_assessment.risk_level == RiskLevel.CRITICAL:
+                end_time = time.time()
+                total_time = end_time - start_time
                 logger.warning(f"SafetyGuard detected emergency: {safety_assessment.clinical_concerns}")
                 return {
                     'response': self.safety_guard.get_emergency_response(query),
                     'sources': [],
                     'is_emergency': True,
+                    'total_time': total_time,
                     'safety_assessment': {
                         'risk_level': safety_assessment.risk_level.value,
                         'concerns': safety_assessment.clinical_concerns
@@ -334,24 +290,38 @@ Every response you provide must end with the following disclaimer:
 
             # Extract sources from tool messages
             if include_sources:
+                import re
                 for msg in messages:
-                    if isinstance(msg, ToolMessage):
+                    if isinstance(msg, ToolMessage) or (hasattr(msg, 'name') and msg.name):
                         tool_name = msg.name if hasattr(msg, 'name') else 'Unknown'
                         content = msg.content if hasattr(msg, 'content') else str(msg)
-                        sources.append({
-                            'tool': tool_name,
-                            'content': content[:200] + '...' if len(content) > 200 else content
-                        })
-                    elif isinstance(msg, dict) and msg.get('role') == 'tool':
-                        sources.append({
-                            'tool': msg.get('name', 'Unknown'),
-                            'content': msg.get('content', '')[:200] + '...' if len(msg.get('content', '')) > 200 else msg.get('content', '')
-                        })
-                    elif hasattr(msg, 'name') and msg.name:  # Tool message
-                        sources.append({
-                            'tool': msg.name,
-                            'content': msg.content[:200] + '...' if len(msg.content) > 200 else msg.content
-                        })
+                        
+                        # Parse document info from formatted tool output
+                        # Format: [Document N] Source: ORG | Region: X | Category: Y | filename (Relevance: 0.XXX)
+                        doc_pattern = r'\[Document \d+\] Source: ([^|]+) \| Region: ([^|]+) \| Category: ([^|]+) \| ([^(]+) \(Relevance: ([\d.]+)\)'
+                        matches = re.findall(doc_pattern, content)
+                        
+                        if matches:
+                            for match in matches:
+                                source_org, region, category, filename, score = match
+                                sources.append({
+                                    'filename': filename.strip(),
+                                    'source_org': source_org.strip(),
+                                    'region': region.strip(),
+                                    'category': category.strip(),
+                                    'score': float(score),
+                                    'tool': tool_name,
+                                    'content': content[:200] + '...' if len(content) > 200 else content
+                                })
+                        else:
+                            # Fallback: just include tool and content
+                            sources.append({
+                                'tool': tool_name,
+                                'filename': 'Unknown',
+                                'source_org': 'Unknown',
+                                'score': 0.0,
+                                'content': content[:200] + '...' if len(content) > 200 else content
+                            })
 
             if not response_text:
                 logger.warning(f"Could not extract response from {len(messages)} messages")
@@ -378,121 +348,6 @@ Every response you provide must end with the following disclaimer:
                 'total_time': total_time,
             }
 
-<<<<<<< HEAD
-        # Use query grader if enabled
-        if self.use_grader and self.query_grader:
-            # Grade the query
-            query_classification = self.query_grader.grade_query(query, use_llm=False)  # Fast path for now
-            logger.info(f"Query classified as: {query_classification.query_type.value} (confidence: {query_classification.confidence:.2f})")
-            
-            # Grade retrieved documents
-            grading_result = self.query_grader.grade_documents(query, retrieved_docs, use_llm=False)
-            logger.info(f"Document grading: can_answer={grading_result.can_answer}, action={grading_result.suggested_action.value}")
-            
-            # Handle grading results
-            if grading_result.suggested_action == SuggestedAction.EXPAND_SEARCH and not grading_result.can_answer:
-                # Try expanding the search
-                logger.info("Expanding search due to insufficient relevant documents")
-                expanded_docs = self.retriever.retrieve(query, k=k*2, filter_dict=filter_dict)
-                grading_result = self.query_grader.grade_documents(query, expanded_docs, use_llm=False)
-                
-                if grading_result.filtered_docs:
-                    retrieved_docs = grading_result.filtered_docs
-                    logger.info(f"Expanded search found {len(retrieved_docs)} useful documents")
-            elif grading_result.filtered_docs:
-                # Use filtered docs if we have them
-                retrieved_docs = grading_result.filtered_docs
-                logger.info(f"Using {len(retrieved_docs)} graded documents")
-            
-            if not grading_result.can_answer and not grading_result.filtered_docs:
-                logger.warning("Query grader determined we cannot answer this query")
-                return {
-                    'response': "I'm sorry, I couldn't find sufficiently relevant information to answer that question confidently. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?",
-                    'sources': [],
-                    'is_emergency': False
-                }
-        else:
-            # Original filtering logic (fallback)
-            MIN_RELEVANCE_SCORE = 0.4
-            high_quality_docs = [doc for doc in retrieved_docs if doc.get('score', 0) >= MIN_RELEVANCE_SCORE]
-
-            if not high_quality_docs:
-                logger.warning(f"All retrieved documents below quality threshold ({MIN_RELEVANCE_SCORE})")
-                logger.warning(f"Top score: {retrieved_docs[0].get('score', 0):.3f}")
-                return {
-                    'response': "I'm sorry, I couldn't find sufficiently relevant information to answer that question confidently. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?",
-                    'sources': [],
-                    'is_emergency': False
-                }
-
-            retrieved_docs = high_quality_docs
-            logger.info(f"Using {len(retrieved_docs)} high-quality documents (score >= {MIN_RELEVANCE_SCORE})")
-
-        # Format context
-        context = self._format_context(retrieved_docs)
-
-        # Build messages
-        system_prompt = self.SYSTEM_PROMPT.format(context=context)
-        messages = [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": query}
-        ]
-
-        # Generate response
-        logger.info("Generating LLM response...")
-        response = self.llm.generate(messages, temperature=temperature)
-
-        # Safety Guard: Post-response validation and warning injection
-        if self.use_safety_guard and self.safety_guard and safety_assessment:
-            # Validate the response (only check if it should be blocked)
-            is_safe, _ = self.safety_guard.validate_response(query, response)
-            
-            if not is_safe:
-                logger.warning("SafetyGuard blocked unsafe response")
-                response = "I apologize, but I'm not able to provide specific advice for your situation. Please contact your medical team directly for guidance on this matter."
-            
-            # Add safety warnings based on risk level (from pre-query assessment)
-            response = self.safety_guard.add_safety_wrapper(response, safety_assessment)
-
-        # Prepare result
-        result = {
-            'response': response,
-            'is_emergency': False
-        }
-        
-        # Add safety info if available
-        if safety_assessment:
-            result['safety_assessment'] = {
-                'risk_level': safety_assessment.risk_level.value,
-                'concerns': safety_assessment.clinical_concerns
-            }
-
-        if include_sources:
-            result['sources'] = [
-                {
-                    'content': doc['content'],  # Full content, not truncated
-                    'source_org': doc['metadata'].get('source_org', 'Unknown'),
-                    'filename': doc['metadata'].get('filename', 'Unknown'),
-                    'procedure': doc['metadata'].get('procedure', 'Unknown'),
-                    'question_category': doc['metadata'].get('question_category', 'Unknown'),
-                    'answer_part': doc['metadata'].get('answer_part', 'Unknown'),
-                    'is_qna': doc['metadata'].get('is_qna', False),
-                    'score': doc['score']
-                }
-                for doc in retrieved_docs
-            ]
-        else:
-            result['sources'] = []
-
-        logger.info("Response generated successfully")
-        return result
-
-    def stream_response(self,
-                        query: str,
-                        k: int = None,
-                        filter_dict: Optional[Dict[str, Any]] = None,
-                        temperature: float = 0.1):
-=======
         except Exception as e:
             end_time = time.time()
             total_time = end_time - start_time if 'start_time' in locals() else 0
@@ -516,7 +371,6 @@ Every response you provide must end with the following disclaimer:
         filter_dict: Optional[Dict[str, Any]] = None,
         temperature: float = 0.1,
     ):
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
         """
         Generate a streaming response using LangGraph Agentic RAG.
 
@@ -561,46 +415,8 @@ Every response you provide must end with the following disclaimer:
                         # Question rewriting node
                         yield {'type': 'agent_thinking', 'content': "Rewriting question for better retrieval..."}
 
-<<<<<<< HEAD
-        if not retrieved_docs:
-            logger.warning("No relevant documents retrieved")
-            yield {'type': 'error', 'content': "No relevant information found"}
-            return
-
-        # Send sources first
-        yield {
-            'type': 'sources',
-            'content': [
-                {
-                    'content': doc['content'],  # Full content
-                    'source_org': doc['metadata'].get('source_org', 'Unknown'),
-                    'filename': doc['metadata'].get('filename', 'Unknown'),
-                    'procedure': doc['metadata'].get('procedure', 'Unknown'),
-                    'question_category': doc['metadata'].get('question_category', 'Unknown'),
-                    'answer_part': doc['metadata'].get('answer_part', 'Unknown'),
-                    'is_qna': doc['metadata'].get('is_qna', False),
-                    'score': doc['score']
-                }
-                for doc in retrieved_docs
-            ]
-        }
-
-        # Format context and build messages
-        context = self._format_context(retrieved_docs)
-        system_prompt = self.SYSTEM_PROMPT.format(context=context)
-        messages = [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": query}
-        ]
-
-        # Stream response
-        logger.info("Streaming LLM response...")
-        for chunk in self.llm.stream_generate(messages, temperature=temperature):
-            yield {'type': 'response', 'content': chunk}
-=======
         except Exception as e:
             logger.error(f"Error streaming response: {e}")
             yield {'type': 'error', 'content': f"Error: {str(e)}"}
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
 
         logger.info("Streaming completed")

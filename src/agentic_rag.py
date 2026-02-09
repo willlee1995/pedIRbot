@@ -16,6 +16,25 @@ from src.vector_store import VectorStore
 from src.guardrails import EmergencyGuardrailMiddleware, SafetyCheckGuardrail, EMERGENCY_RESPONSE
 from config import settings
 
+import json
+from langchain_core.tools import render_text_description
+
+def _extract_json(text: str) -> Optional[Dict]:
+    """Extract JSON object from text."""
+    try:
+        # Try to find JSON block
+        match = re.search(r'```json\s*({.*?})\s*```', text, re.DOTALL)
+        if match:
+            return json.loads(match.group(1))
+        
+        # Try without code block
+        match = re.search(r'({.*})', text, re.DOTALL)
+        if match:
+            return json.loads(match.group(1))
+            
+        return None
+    except Exception:
+        return None
 
 def extract_text_from_content(content) -> str:
     """
@@ -67,68 +86,34 @@ class GradeDocuments(BaseModel):
 
 
 # Prompts
-GRADE_PROMPT = """You are a grader assessing relevance of a retrieved document to a user question.
+GRADE_PROMPT = """Is the Document relevant to the Question?
+Answer 'yes' or 'no'.
 
-CRITICAL: You must consider the QUESTION INTENT and TOPIC TYPE:
-- Questions asking "what is", "explain", "tell me about", "describe" → Prefer OVERVIEW, INTRODUCTION, or GENERAL GUIDANCE documents
-- Questions asking "how to", "procedure", "steps", "process" → Prefer PROCEDURE-SPECIFIC or INSTRUCTION documents
-- Questions about insertion, placement, installation → Prefer INSERTION/PLACEMENT documents
-- Questions about removal, withdrawal, extraction → Prefer REMOVAL/WITHDRAWAL documents
-- Questions about complications, problems, issues → Prefer COMPLICATION or PROBLEM-SOLVING documents
-
-Here is the retrieved document:
-
+Document:
 {context}
 
-Here is the user question: {question}
+Question: {question}
 
-ANALYSIS STEPS:
-1. Identify the question type and intent (what is/explain vs how to/procedure vs specific action)
-2. Identify the main topic/entity mentioned in the question (e.g., "PICC", "stent", "angioplasty")
-3. Check if the document title/content matches the question intent:
-   - If question asks "what is X" → Prefer documents about X insertion, X overview, X introduction, X basics
-   - If question asks "how to remove X" → Prefer documents about X removal, X withdrawal
-   - If question asks about X complications → Prefer documents about X complications, X problems
-4. Check if the document contains information that directly answers the question type
+Relevant (yes/no):"""
 
-Give a binary score 'yes' or 'no' to indicate whether the document is relevant to the question.
-- Score 'yes' if the document matches the question intent AND topic
-- Score 'no' if the document is about a different procedure type (e.g., removal when question asks about insertion/overview) or irrelevant topic
+REWRITE_PROMPT = """Rewrite the Question to be specific keywords for search.
+Original: {question}
+Keywords:"""
 
-Examples:
-- Question: "what is PICC" → Document about "PICC insertion" → YES (matches overview/introduction intent)
-- Question: "what is PICC" → Document about "PICC removal" → NO (wrong procedure type for overview question)
-- Question: "how to remove PICC" → Document about "PICC removal" → YES (matches procedure intent)
-- Question: "what is angioplasty" → Document about "angioplasty procedure" → YES (matches overview intent)"""
-
-REWRITE_PROMPT = """You are a question rewriter. Given the following user question, rewrite it to be more specific and clear for better retrieval.
-
-Original question: {question}
-
-IMPORTANT: Return ONLY the rewritten question text. Do not include any explanations, rationale, or formatting. Just return the improved question."""
-
-GENERATE_PROMPT = """You are 'PediIR-Bot', a helpful and friendly AI assistant from the Hong Kong Children's Hospital Radiology department. Your purpose is to provide clear and simple information to patients and their families about pediatric interventional radiology procedures.
-
-CRITICAL INSTRUCTIONS:
-1. You MUST base your answer EXCLUSIVELY on the information provided in the retrieved context below.
-2. Do not use any of your own internal knowledge or information from outside this context.
-3. If the context does not contain the information needed to answer the question, you MUST respond with:
-   "I'm sorry, I don't have the specific information to answer that question. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?"
-4. You are strictly forbidden from providing any form of medical advice, diagnosis, treatment recommendations, or interpretation of a patient's personal medical situation.
-5. Your role is purely educational.
-6. Your tone must always be empathetic, reassuring, and easy to understand.
-7. Use simple language and avoid complex medical jargon.
-8. The user may ask questions in English or Traditional Chinese. You must generate your response in the same language as the user's original query.
+GENERATE_PROMPT = """You are PediIR-Bot from Hong Kong Children's Hospital Radiology.
+Answer the question based ONLY on the Context below.
+If you don't know, say "I don't have that information. Please ask a nurse or doctor."
+Do NOT give medical advice.
+Answer in the SAME LANGUAGE as the Question (English or Traditional Chinese).
 
 Question: {question}
 
 Context: {context}
 
-IMPORTANT DISCLAIMER:
-Every response you provide must end with the following disclaimer:
-"Please remember, this information is for educational purposes only and is not a substitute for professional medical advice. Always discuss any specific medical questions or concerns with your doctor or nurse."
+Ends with: "Please remember, this information is for educational purposes only and is not a substitute for professional medical advice. Always discuss any specific medical questions or concerns with your doctor or nurse."
+(Chinese: "請記住，此資訊僅供教育目的，不能代替專業醫療建議。請務必與您的醫生或護士討論任何具體的醫療問題或疑慮。")"""
 
-(Chinese version: "請記住，此資訊僅供教育目的，不能代替專業醫療建議。請務必與您的醫生或護士討論任何具體的醫療問題或疑慮。")"""
+
 
 
 def create_agentic_rag_graph(
@@ -154,22 +139,17 @@ def create_agentic_rag_graph(
         Compiled StateGraph instance
     """
     # Get orchestrator LLM (for tool calling, query generation, rewriting)
+    logger.info(f"DEBUG: create_agentic_rag_graph called. Settings provider: {settings.llm_provider}")
     if orchestrator_llm is None:
-        # Use qwen2.5:8b for orchestration (supports tool calling)
-        orchestrator_llm = get_langchain_llm(
-            provider="ollama",
-            model=settings.ollama_orchestrator_model
-        )
-        logger.info(f"Using orchestrator LLM: {settings.ollama_orchestrator_model}")
+        # Use configured LLM provider
+        orchestrator_llm = get_langchain_llm()
+        logger.info(f"Using orchestrator LLM from provider: {settings.llm_provider}")
 
     # Get answer LLM (for final medical answer generation)
     if answer_llm is None:
-        # Use medgemma for final answers (medical domain fine-tuned)
-        answer_llm = get_langchain_llm(
-            provider="ollama",
-            model=settings.ollama_chat_model  # medgemma
-        )
-        logger.info(f"Using answer LLM: {settings.ollama_chat_model}")
+        # Use configured LLM provider
+        answer_llm = get_langchain_llm()
+        logger.info(f"Using answer LLM from provider: {settings.llm_provider}")
 
     # Use orchestrator_llm for grading if not specified
     if grader_llm is None:
@@ -303,24 +283,11 @@ def create_agentic_rag_graph(
 
             # Add system instruction to prefer SQL tools over semantic search
             messages = state["messages"]
-            system_instruction = """IMPORTANT TOOL SELECTION GUIDANCE:
+            system_instruction = """TOOLS:
+1. search_documents_sql(content='keywords') - SEARCH BY KEYWORD (Preferred)
+2. search_kb(query='text') - Semantic Search (Fallback)
 
-1. **PREFERRED: Use SQL tools first** (search_documents_sql, get_document_by_id, get_documents_by_ids)
-   - These provide FULL document context without scattered information
-   - Use search_documents_sql when you can identify metadata filters (source_org, region, procedure_category, filename_pattern)
-   - Use get_document_by_id when you know a specific document ID
-   - SQL tools return complete documents, not fragmented chunks
-
-2. **FALLBACK ONLY: Use semantic search** (search_kb)
-   - Only use when you don't know metadata filters or need semantic similarity search
-   - If semantic search returns relevant chunks, extract the document_id from metadata and use get_document_by_id() to fetch the full document
-
-3. **Workflow recommendation:**
-   - First try: search_documents_sql with metadata filters (if you can identify them from the question)
-   - Then: get_document_by_id or get_documents_by_ids to fetch full document content
-   - Fallback: search_kb only if SQL tools don't work or you need semantic similarity
-
-Remember: SQL tools = full documents with complete context. Semantic search = fragmented chunks."""
+Use search_documents_sql first."""
 
             # Add system instruction as first message if not already present
             has_system_instruction = False
@@ -347,20 +314,95 @@ Remember: SQL tools = full documents with complete context. Semantic search = fr
                             logger.info(f"  - Tool: {tc.get('name', 'unknown')}, Args: {tc.get('args', {})}")
                     return {"messages": [response]}
                 except Exception as e:
-                    logger.warning(f"bind_tools failed: {e}, trying without tools")
-                    # Fallback: try ReAct-style prompting
-                    response = orchestrator_llm.invoke(messages_with_instruction)
-                    logger.info(f"Generated response (without tools): {type(response).__name__}")
-                    if hasattr(response, 'content'):
-                        logger.info(f"Response content preview: {response.content[:200]}...")
+                    logger.warning(f"bind_tools failed: {e}, falling back to manual tool use")
+                    
+                    # Render tools description
+                    tools_description = render_text_description(tools)
+                    
+                    tool_system_prompt = f"""Tools available:
+{tools_description}
+
+To use a tool, respond with ONLY this JSON format:
+```json
+{{
+    "tool": "search_documents_sql",
+    "arguments": {{
+        "content": "keywords"
+    }}
+}}
+```"""
+
+                    # Invoke with manual prompt
+                    # Add system instruction as last message to ensure it's seen
+                    context_messages = messages_with_instruction + [SystemMessage(content=tool_system_prompt)]
+                    response = orchestrator_llm.invoke(context_messages)
+                    content = extract_text_from_content(response.content)
+                    
+                    # Parse for JSON
+                    tool_call_json = _extract_json(content)
+                    if tool_call_json and "tool" in tool_call_json:
+                        # Create tool call ID
+                        import uuid
+                        call_id = f"call_{uuid.uuid4().hex[:8]}"
+                        
+                        logger.info(f"Manual tool call detected: {tool_call_json['tool']}")
+                        
+                        # Create AIMessage with tool_calls for LangGraph compatibility
+                        ai_msg = AIMessage(
+                            content="",
+                            tool_calls=[{
+                                "name": tool_call_json["tool"],
+                                "args": tool_call_json.get("arguments", {}),
+                                "id": call_id
+                            }]
+                        )
+                        return {"messages": [ai_msg]}
+                    
+                    # No tool call found, return as normal response
                     return {"messages": [response]}
             else:
-                # For models without bind_tools, use ReAct-style prompting
-                logger.warning("Orchestrator LLM doesn't support bind_tools, using ReAct-style")
-                response = orchestrator_llm.invoke(messages_with_instruction)
-                logger.info(f"Generated response (ReAct-style): {type(response).__name__}")
-                if hasattr(response, 'content'):
-                    logger.info(f"Response content preview: {response.content[:200]}...")
+                # For models without bind_tools, use the same manual fallback logic
+                logger.warning("Orchestrator LLM doesn't support bind_tools, using manual JSON format")
+                
+                # Render tools description
+                tools_description = render_text_description(tools)
+                
+                tool_system_prompt = f"""You have access to the following tools:
+
+{tools_description}
+
+If you need to use a tool to fetch information, respond with a JSON object in the following format:
+```json
+{{
+    "tool": "tool_name",
+    "arguments": {{
+        "arg_name": "value"
+    }}
+}}
+```
+
+If you do not need to use a tool, just respond with your answer text."""
+
+                context_messages = messages_with_instruction + [SystemMessage(content=tool_system_prompt)]
+                response = orchestrator_llm.invoke(context_messages)
+                content = extract_text_from_content(response.content)
+                
+                # Parse for JSON
+                tool_call_json = _extract_json(content)
+                if tool_call_json and "tool" in tool_call_json:
+                    import uuid
+                    call_id = f"call_{uuid.uuid4().hex[:8]}"
+                    logger.info(f"Manual tool call detected: {tool_call_json['tool']}")
+                    ai_msg = AIMessage(
+                        content="",
+                        tool_calls=[{
+                            "name": tool_call_json["tool"],
+                            "args": tool_call_json.get("arguments", {}),
+                            "id": call_id
+                        }]
+                    )
+                    return {"messages": [ai_msg]}
+                
                 return {"messages": [response]}
         except Exception as e:
             logger.error(f"Error in generate_query_or_respond: {e}")
@@ -370,7 +412,7 @@ Remember: SQL tools = full documents with complete context. Semantic search = fr
             # Add system instruction if not present
             has_system = any(isinstance(msg, SystemMessage) or (isinstance(msg, dict) and msg.get('role') == 'system') for msg in messages)
             if not has_system:
-                system_instruction = "PREFER using SQL tools (search_documents_sql, get_document_by_id) over semantic search (search_kb) for full document context."
+                system_instruction = "PREFER using SQL tools (search_documents_sql) over semantic search (search_kb) for full document context."
                 messages = [SystemMessage(content=system_instruction)] + messages
             response = orchestrator_llm.invoke(messages)
             return {"messages": [response]}

@@ -3,27 +3,14 @@ from src.rag_pipeline import RAGPipeline
 from src.retriever import AdvancedRetriever
 from src.vector_store import VectorStore
 from src.embeddings import get_embedding_model
-<<<<<<< HEAD
-from src.conversation_memory import ConversationMemory
-=======
 from src.llm import get_langchain_llm
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
+from src.conversation_memory import ConversationMemory
 from config import settings
 from loguru import logger
 import sys
 from pathlib import Path
 
-# Import LangSmith traceable decorator
-try:
-    from langsmith import traceable
-    LANGSMITH_AVAILABLE = True
-except ImportError:
-    LANGSMITH_AVAILABLE = False
-    # Create a no-op decorator if LangSmith is not available
-    def traceable(*args, **kwargs):
-        def decorator(func):
-            return func
-        return decorator
+
 
 # Add current directory to path FIRST (before other imports)
 sys.path.insert(0, str(Path(__file__).parent))
@@ -32,10 +19,9 @@ sys.path.insert(0, str(Path(__file__).parent))
 # isort: on
 
 
-@traceable(name="test_chat_query", metadata={"component": "test_chat", "interface": "interactive"})
 def _process_test_query(rag_pipeline: RAGPipeline, query: str) -> dict:
     """
-    Process a query from the test chat interface with LangSmith tracing.
+    Process a query from the test chat interface.
 
     Args:
         rag_pipeline: RAGPipeline instance
@@ -86,16 +72,12 @@ def main():
         # Initialize RAG pipeline with agent
         rag_pipeline = RAGPipeline(vector_store, retriever=retriever)
 
+        # Initialize conversation memory for follow-up detection
+        memory = ConversationMemory(max_turns=10)
+
         stats = vector_store.get_stats()
         print(f"✓ Vector store loaded: {stats['total_documents']} documents")
-<<<<<<< HEAD
-        
-        # Initialize conversation memory
-        memory = ConversationMemory(max_turns=10)
-        print(f"✓ Conversation memory initialized (session: {memory.session_id})")
-=======
         print(f"✓ LangChain Agent initialized")
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
         print()
     except Exception as e:
         print(f"✗ Error initializing RAG system: {e}")
@@ -113,10 +95,18 @@ def main():
     print("-" * 60)
     print()
 
+    first_run = True
+
     while True:
         try:
-            # Get user input
-            query = input("You: ").strip()
+            # Automatic initial query or get user input
+            if first_run:
+                print("\n🤖 Automatically running initial query: 'What is PICC'")
+                query = "What is PICC"
+                first_run = False
+            else:
+                # Get user input
+                query = input("You: ").strip()
 
             if not query:
                 continue
@@ -179,16 +169,9 @@ def main():
 
             print(result['response'])
 
-<<<<<<< HEAD
             # Add assistant response to memory
-            memory.add_assistant_message(
-                result['response'],
-                sources=result.get('sources'),
-                safety_info=result.get('safety_assessment')
-            )
+            memory.add_assistant_message(result['response'])
 
-            # Show sources
-=======
             # Display total round trip time
             if 'total_time' in result:
                 total_time = result['total_time']
@@ -197,7 +180,6 @@ def main():
                 print(f"{'─'*60}")
 
             # Show sources (from agent intermediate steps)
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
             if result.get('sources'):
                 if show_details:
                     # Detailed view
@@ -208,22 +190,6 @@ def main():
                     for i, source in enumerate(result['sources'], 1):
                         print(f"\n📄 Source {i}")
                         print(f"{'─'*60}")
-<<<<<<< HEAD
-                        print(f"File:     {source['filename']}")
-                        print(f"Source:   {source['source_org']}")
-                        print(f"Score:    {score:.4f} {score_indicator}")
-                        print(f"Length:   {len(source.get('content', ''))} characters")
-
-                        # Show chunk content preview
-                        content = source.get('content', '')
-                        if content:
-                            preview_len = 10000
-                            print(f"\nContent preview:")
-                            if len(content) > preview_len:
-                                print(f"{content[:preview_len]}...")
-                            else:
-                                print(content)
-=======
                         if isinstance(source, dict):
                             tool_name = source.get('tool', 'Unknown')
                             output_preview = source.get('output', '')[:200]
@@ -231,7 +197,6 @@ def main():
                             print(f"Output preview: {output_preview}...")
                         else:
                             print(f"Source: {source}")
->>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
 
                     print(f"\n{'='*60}")
                 else:

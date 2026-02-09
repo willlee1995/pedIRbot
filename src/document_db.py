@@ -217,6 +217,7 @@ class DocumentDatabase:
         procedure_category: Optional[str] = None,
         procedure_type: Optional[str] = None,
         filename_pattern: Optional[str] = None,
+        content: Optional[str] = None,
         limit: int = 10
     ) -> List[Dict[str, Any]]:
         """
@@ -228,6 +229,7 @@ class DocumentDatabase:
             procedure_category: Filter by procedure category
             procedure_type: Filter by procedure type
             filename_pattern: SQL LIKE pattern for filename
+            content: SQL LIKE pattern for content
             limit: Maximum number of results
 
         Returns:
@@ -251,8 +253,17 @@ class DocumentDatabase:
                 conditions.append("procedure_type = ?")
                 params.append(procedure_type)
             if filename_pattern:
+                # Auto-add wildcards if not present
+                if '%' not in filename_pattern:
+                    filename_pattern = f"%{filename_pattern}%"
                 conditions.append("filename LIKE ?")
                 params.append(filename_pattern)
+            if content:
+                # Auto-add wildcards if not present
+                if '%' not in content:
+                    content = f"%{content}%"
+                conditions.append("content LIKE ?")
+                params.append(content)
 
             where_clause = " AND ".join(conditions) if conditions else "1=1"
             params.append(limit)
@@ -260,7 +271,9 @@ class DocumentDatabase:
             query = f"""
                 SELECT * FROM documents
                 WHERE {where_clause}
-                ORDER BY updated_at DESC
+                ORDER BY 
+                    CASE WHEN region = 'Hong Kong' THEN 1 ELSE 2 END ASC,
+                    updated_at DESC
                 LIMIT ?
             """
 
