@@ -80,13 +80,14 @@ def search_documents_sql(
     limit: int = 5
 ) -> str:
     """
-    [PREFERRED] Search for documents in the SQLite database using metadata filters.
-    
+    [ADVANCED] Search for documents in the SQLite database using metadata filters.
+
     **RETURNS FULL DOCUMENT CONTENT directly.**
     You do NOT need to call get_document_by_id after this.
 
-    Use this tool to find and read documents by source organization, region, procedure category, etc.
-    
+    Use this tool when you know specific metadata (source_org, region, etc.) or need to search by exact filename.
+    For general questions, use `search_kb` (semantic search) first.
+
     Args:
         source_org: Filter by source organization (HKCH, SickKids, SIR, HKSIR, CIRSE)
         region: Filter by region ('Hong Kong' or 'Non-Hong Kong')

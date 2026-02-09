@@ -1,0 +1,20 @@
+{
+  "total_questions": 15,
+  "successful": 15,
+  "errors": 0,
+  "success_rate": 100.0,
+  "average_latency": 5.81,
+  "min_latency": 0.0,
+  "max_latency": 22.49,
+  "languages": {
+    "en": 10,
+    "zh": 5
+  },
+  "categories": {
+    "preparation": 4,
+    "risks": 2,
+    "post-procedure": 4,
+    "logistics": 5
+  },
+  "timestamp": "2026-02-09T22:39:06.795171"
+}

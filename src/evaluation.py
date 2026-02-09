@@ -1,3 +1,4 @@
+
 """Evaluation framework for testing RAG system performance."""
 from typing import List, Dict, Any, Optional
 import json
@@ -7,6 +8,11 @@ import time
 
 import pandas as pd
 from loguru import logger
+
+from langchain_core.messages import HumanMessage, ToolMessage
+from src.agentic_rag import create_agentic_rag_graph
+from src.evaluation_judge import RAGJudge
+from config import settings
 
 from src.rag_pipeline import RAGPipeline
 
@@ -53,71 +59,100 @@ class RAGEvaluator:
         return questions
 
     def evaluate_questions(self,
-                           questions: List[Dict[str, Any]],
-                           temperature: float = 0.1,
-                           k: int = None) -> List[Dict[str, Any]]:
+                           test_cases: List[Dict[str, Any]],
+                           app) -> List[Dict[str, Any]]:
         """
         Evaluate the RAG system on a list of questions.
 
         Args:
-            questions: List of question dictionaries
-            temperature: LLM temperature
-            k: Number of documents to retrieve
+            test_cases: List of question dictionaries
+            app: The runnable LangChain graph for the RAG pipeline
 
         Returns:
             List of evaluation results
         """
+        logger.info(f"Starting evaluation of {len(test_cases)} questions...")
+
+        # Initialize Judge
+        judge = RAGJudge()
+
         results = []
 
-        for i, q in enumerate(questions, 1):
-            logger.info(
-                f"Evaluating question {i}/{len(questions)}: {q.get('id', 'unknown')}")
+        for i, test_case in enumerate(test_cases):
+            question = test_case["question"]
+            expected_topics = test_case.get("expected_topics", [])
 
-            start_time = time.time()
+            logger.info(f"Evaluating Q{i+1}: {question}")
 
             try:
-                # Generate response
-                result = self.rag_pipeline.generate_response(
-                    query=q['question'],
-                    k=k,
-                    temperature=temperature,
-                    include_sources=True
-                )
+                start_time = time.time()
+
+                # Run RAG pipeline
+                inputs = {"messages": [HumanMessage(content=question)]}
+                final_state = app.invoke(inputs)
 
                 latency = time.time() - start_time
 
-                # Compile evaluation result
-                eval_result = {
-                    'question_id': q.get('id', f'q_{i}'),
-                    'question': q['question'],
-                    'language': q.get('language', 'unknown'),
-                    'category': q.get('category', 'unknown'),
-                    'response': result['response'],
-                    'num_sources': len(result.get('sources', [])),
-                    'sources': result.get('sources', []),
-                    'is_emergency': result.get('is_emergency', False),
-                    'latency_seconds': round(latency, 2),
+                # Extract answer
+                messages = final_state["messages"]
+                answer = ""
+                if messages and hasattr(messages[-1], 'content'):
+                    # Handle structured output (json string)
+                    content = messages[-1].content
+                    try:
+                        import json
+                        # Try to parse as RAGResponse JSON
+                        data = json.loads(content)
+                        answer = data.get("answer", content)
+                    except:
+                        answer = content
+
+                # Extract context
+                context = ""
+                for msg in messages:
+                     if isinstance(msg, ToolMessage):
+                        context += msg.content + "\n"
+
+                # 1. Topic Match Score (Legacy)
+                topic_score = 0.0
+                if expected_topics:
+                    matches = sum(1 for topic in expected_topics if topic.lower() in answer.lower())
+                    topic_score = matches / len(expected_topics)
+
+                # 2. LLM Judge Scores
+                faithfulness = judge.evaluate_faithfulness(question, context, answer)
+                relevance = judge.evaluate_relevance(question, answer)
+
+                logger.info(f"  -> Latency: {latency:.2f}s")
+                logger.info(f"  -> Topics: {topic_score:.2f}")
+                logger.info(f"  -> Faithfulness: {faithfulness}")
+                logger.info(f"  -> Relevance: {relevance}")
+
+                results.append({
+                    "question_id": test_case.get('id', f'q_{i+1}'),
+                    "question": question,
+                    "language": test_case.get('language', 'unknown'),
+                    "category": test_case.get('category', 'unknown'),
+                    "answer": answer,
+                    "latency_seconds": latency,
+                    "topic_score": topic_score,
+                    "faithfulness_score": faithfulness,
+                    "relevance_score": relevance,
+                    "error": None,
                     'timestamp': datetime.now().isoformat()
-                }
-
-                # Add expected topics if provided
-                if 'expected_topics' in q:
-                    eval_result['expected_topics'] = q['expected_topics']
-                    # Check if response contains expected topics
-                    response_lower = result['response'].lower()
-                    eval_result['topics_covered'] = [
-                        topic for topic in q['expected_topics']
-                        if topic.lower() in response_lower
-                    ]
-
-                results.append(eval_result)
+                })
 
             except Exception as e:
-                logger.error(f"Error evaluating question {q.get('id')}: {e}")
+                logger.error(f"Error evaluating Q{i+1}: {e}")
                 results.append({
-                    'question_id': q.get('id', f'q_{i}'),
-                    'question': q['question'],
-                    'error': str(e),
+                    "question_id": test_case.get('id', f'q_{i+1}'),
+                    "question": question,
+                    "answer": None,
+                    "latency_seconds": 0,
+                    "topic_score": 0,
+                    "faithfulness_score": 0,
+                    "relevance_score": 0,
+                    "error": str(e),
                     'timestamp': datetime.now().isoformat()
                 })
 
@@ -157,8 +192,8 @@ class RAGEvaluator:
 
         # Calculate statistics
         total_questions = len(self.results)
-        successful = [r for r in self.results if 'error' not in r]
-        errors = [r for r in self.results if 'error' in r]
+        successful = [r for r in self.results if not r.get('error')]
+        errors = [r for r in self.results if r.get('error')]
 
         latencies = [r['latency_seconds']
                      for r in successful if 'latency_seconds' in r]

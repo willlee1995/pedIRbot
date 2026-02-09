@@ -29,10 +29,22 @@ class RAGPipeline:
     """RAG pipeline using LangGraph Agentic RAG for generating responses."""
 
     # Emergency keywords that trigger canned responses
+    # Note: For PedIR context, we need specific qualifiers to avoid false positives
+    # when discussing procedures like embolization that involve bleeding management
     EMERGENCY_KEYWORDS = [
-        'severe bleeding', 'can\'t breathe', 'chest pain', 'allergic reaction',
-        'emergency', 'urgent', 'ambulance', '999', 'unconscious',
-        '不能呼吸', '嚴重出血', '胸痛', '過敏反應', '緊急'
+        # Breathing emergencies (always urgent)
+        "can't breathe", "cannot breathe", "not breathing", "stopped breathing",
+        # Cardiac (always urgent)
+        'chest pain', 'heart attack',
+        # Severe allergic reaction
+        'anaphylaxis', 'severe allergic reaction', 'throat swelling',
+        # True emergencies
+        'emergency room', 'call 999', 'call ambulance', '999', 'unconscious', 'passed out',
+        # Chinese emergency terms
+        '不能呼吸', '胸痛', '過敏反應', '緊急', '昏迷', '急症室',
+        # Post-procedure true emergencies (require "heavy/uncontrolled" qualifier)
+        'uncontrolled bleeding', 'heavy bleeding', "bleeding won't stop", "bleeding will not stop",
+        '大量出血', '無法止血'
     ]
 
     EMERGENCY_RESPONSE = """This sounds like it could be an emergency. Please do not rely on this chatbot.
@@ -148,7 +160,7 @@ If you have urgent questions about your procedure, please contact the HKCH IR nu
         if self.use_safety_guard and self.safety_guard:
             safety_assessment = self.safety_guard.assess_query(query)
             logger.info(f"Safety assessment: {safety_assessment.risk_level.value} (emergency: {safety_assessment.is_emergency})")
-            
+
             # Handle critical emergencies from SafetyGuard
             if safety_assessment.is_emergency or safety_assessment.risk_level == RiskLevel.CRITICAL:
                 end_time = time.time()
@@ -295,12 +307,12 @@ If you have urgent questions about your procedure, please contact the HKCH IR nu
                     if isinstance(msg, ToolMessage) or (hasattr(msg, 'name') and msg.name):
                         tool_name = msg.name if hasattr(msg, 'name') else 'Unknown'
                         content = msg.content if hasattr(msg, 'content') else str(msg)
-                        
+
                         # Parse document info from formatted tool output
                         # Format: [Document N] Source: ORG | Region: X | Category: Y | filename (Relevance: 0.XXX)
                         doc_pattern = r'\[Document \d+\] Source: ([^|]+) \| Region: ([^|]+) \| Category: ([^|]+) \| ([^(]+) \(Relevance: ([\d.]+)\)'
                         matches = re.findall(doc_pattern, content)
-                        
+
                         if matches:
                             for match in matches:
                                 source_org, region, category, filename, score = match
@@ -314,14 +326,57 @@ If you have urgent questions about your procedure, please contact the HKCH IR nu
                                     'content': content[:200] + '...' if len(content) > 200 else content
                                 })
                         else:
-                            # Fallback: just include tool and content
-                            sources.append({
-                                'tool': tool_name,
-                                'filename': 'Unknown',
-                                'source_org': 'Unknown',
-                                'score': 0.0,
-                                'content': content[:200] + '...' if len(content) > 200 else content
-                            })
+                            # Format 2: SQL Tool
+                            # [N] Document ID: ...
+                            #     Filename: ...
+                            sql_pattern = r'Document ID: (.*?)\n\s+Filename: (.*?)\n\s+Source: (.*?)\n\s+Region: (.*?)\n\s+Category: (.*?)\n'
+                            matches_sql = re.findall(sql_pattern, content, re.DOTALL)
+
+                            if matches_sql:
+                                for match in matches_sql:
+                                    doc_id, filename, source_org, region, category = match
+                                    sources.append({
+                                        'filename': filename.strip(),
+                                        'source_org': source_org.strip(),
+                                        'region': region.strip(),
+                                        'category': category.strip(),
+                                        'score': 1.0,  # SQL search implies exact match relevance
+                                        'tool': tool_name,
+                                        'content': content[:200] + '...' if len(content) > 200 else content
+                                    })
+                            else:
+                                # Fallback: just include tool and content
+                                sources.append({
+                                    'tool': tool_name,
+                                    'filename': 'Unknown',
+                                    'source_org': 'Unknown',
+                                    'score': 0.0,
+                                    'content': content[:200] + '...' if len(content) > 200 else content
+                                })
+
+            # Parse structured output if available
+            try:
+                import json
+                # Try to parse response_text as JSON
+                structured_data = json.loads(response_text)
+
+                # If successful, use the 'answer' field as the main response
+                if isinstance(structured_data, dict) and 'answer' in structured_data:
+                    response_text = structured_data['answer']
+                    logger.info("Successfully parsed structured output from LLM")
+
+                    # If sources are provided in the structured output, we can use them
+                    # But often the LLM just cites filenames. We should verify against our retrieved sources.
+                    if 'sources' in structured_data and structured_data['sources']:
+                        llm_sources = structured_data['sources']
+                        logger.info(f"LLM cited sources: {llm_sources}")
+                        # We could optionally filter 'sources' list to only include those cited by LLM
+                        # For now, we prefer the tool outputs as they contain metadata
+            except json.JSONDecodeError:
+                # Not JSON, treat as raw text
+                pass
+            except Exception as e:
+                logger.warning(f"Error parsing structured output: {e}")
 
             if not response_text:
                 logger.warning(f"Could not extract response from {len(messages)} messages")

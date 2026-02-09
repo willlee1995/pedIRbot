@@ -58,6 +58,12 @@ class Settings(BaseSettings):
     agent_verbose: bool = False
     agent_temperature: float = 0.1
 
+    # LangSmith Configuration
+    langsmith_tracing: bool = False
+    langsmith_endpoint: str = "https://api.smith.langchain.com"
+    langsmith_api_key: str = ""
+    langsmith_project: str = "default"
+
     # LangChain Reranker Configuration
     use_reranker: bool = True
     reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"  # Default reranker model

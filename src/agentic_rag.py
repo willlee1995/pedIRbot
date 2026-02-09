@@ -1,7 +1,9 @@
 """LangGraph-based Agentic RAG implementation for Ollama."""
-from typing import List, Dict, Any, Optional, Literal
+from typing import List, Dict, Any, Optional, Literal, Union
 import re
 
+from src.safety_guard import SafetyGuard, RiskLevel, SafetyAssessment
+from src.data_models import RAGResponse
 from langgraph.graph import StateGraph, MessagesState, START, END
 from langgraph.prebuilt import ToolNode, tools_condition
 from langchain_core.language_models import BaseChatModel
@@ -26,12 +28,12 @@ def _extract_json(text: str) -> Optional[Dict]:
         match = re.search(r'```json\s*({.*?})\s*```', text, re.DOTALL)
         if match:
             return json.loads(match.group(1))
-        
+
         # Try without code block
         match = re.search(r'({.*})', text, re.DOTALL)
         if match:
             return json.loads(match.group(1))
-            
+
         return None
     except Exception:
         return None
@@ -96,9 +98,29 @@ Question: {question}
 
 Relevant (yes/no):"""
 
+# Query preprocessing prompt to correct typos and normalize medical terms
+QUERY_CLEAN_PROMPT = """You are a medical query preprocessor. Clean and correct the user's query:
+1. Fix obvious spelling errors (e.g., "emoblization" → "embolization", "cather" → "catheter")
+2. Expand common medical abbreviations if helpful
+3. Keep the query natural and readable
+
+User Query: {query}
+
+Output ONLY the cleaned query, nothing else:"""
+
 REWRITE_PROMPT = """Rewrite the Question to be specific keywords for search.
 Original: {question}
 Keywords:"""
+
+MULTI_QUERY_PROMPT = """You are an AI assistant helping with information retrieval.
+Generate 3 different versions of the given user question to retrieve relevant documents from a vector database.
+By generating multiple perspectives on the user question, your goal is to help the user overcome some of the limitations of distance-based similarity search.
+
+Original Question: {question}
+
+Output a JSON array of strings, e.g.:
+["query 1", "query 2", "query 3"]
+"""
 
 GENERATE_PROMPT = """You are PediIR-Bot from Hong Kong Children's Hospital Radiology.
 Answer the question based ONLY on the Context below.
@@ -281,13 +303,12 @@ def create_agentic_rag_graph(
             logger.info("=== Node: generate_query_or_respond ===")
             logger.info(f"State messages count: {len(state.get('messages', []))}")
 
-            # Add system instruction to prefer SQL tools over semantic search
+            # Add system instruction to prefer semantic search
             messages = state["messages"]
-            system_instruction = """TOOLS:
-1. search_documents_sql(content='keywords') - SEARCH BY KEYWORD (Preferred)
-2. search_kb(query='text') - Semantic Search (Fallback)
-
-Use search_documents_sql first."""
+            system_instruction = """RETRIEVAL STRATEGY:
+1. **ALWAYS START with `search_kb`** (Semantic Search) to find relevant information by meaning.
+2. If `search_kb` results are good but cut off, use `get_document_by_id` with the ID from metadata to get full context.
+3. Use `search_documents_sql` ONLY if you have specific metadata filters (e.g., source limit) or if semantic search fails."""
 
             # Add system instruction as first message if not already present
             has_system_instruction = False
@@ -302,7 +323,12 @@ Use search_documents_sql first."""
                 messages_with_instruction = messages
 
             # Bind tools to orchestrator LLM if supported
-            if hasattr(orchestrator_llm, 'bind_tools'):
+            # NOTE: For local models like MedGemma via LM Studio, verify if bind_tools works reliably.
+            # If not, fall back to manual tool use.
+            # Forcing manual tool use for now as LM Studio/MedGemma seems to hallucinate tool schemas.
+            use_bind_tools = False # settings.llm_provider != "lmstudio"
+
+            if use_bind_tools and hasattr(orchestrator_llm, 'bind_tools'):
                 try:
                     response = orchestrator_llm.bind_tools(tools).invoke(messages_with_instruction)
                     logger.info(f"Generated response (with tools): {type(response).__name__}")
@@ -315,95 +341,157 @@ Use search_documents_sql first."""
                     return {"messages": [response]}
                 except Exception as e:
                     logger.warning(f"bind_tools failed: {e}, falling back to manual tool use")
-                    
+
                     # Render tools description
                     tools_description = render_text_description(tools)
-                    
-                    tool_system_prompt = f"""Tools available:
+
+                    tool_system_prompt = f"""You MUST use a tool to answer. Do NOT answer directly.
+
+AVAILABLE TOOLS:
 {tools_description}
 
-To use a tool, respond with ONLY this JSON format:
+INSTRUCTION: For ANY user question, you MUST call `search_kb` to search the knowledge base FIRST.
+You are NOT allowed to say "I don't have information" or answer directly.
+
+OUTPUT FORMAT (MANDATORY):
 ```json
 {{
-    "tool": "search_documents_sql",
+    "tool": "search_kb",
     "arguments": {{
-        "content": "keywords"
+        "query": "<user's question or keywords>"
     }}
 }}
-```"""
+```
+
+NOW, call the search_kb tool for this question:"""
 
                     # Invoke with manual prompt
                     # Add system instruction as last message to ensure it's seen
                     context_messages = messages_with_instruction + [SystemMessage(content=tool_system_prompt)]
                     response = orchestrator_llm.invoke(context_messages)
                     content = extract_text_from_content(response.content)
-                    
+
                     # Parse for JSON
                     tool_call_json = _extract_json(content)
-                    if tool_call_json and "tool" in tool_call_json:
+                    # Handle both formats: {"tool": "..."} and {"name": "...", "arguments": {...}}
+                    tool_name = tool_call_json.get("tool") or tool_call_json.get("name") if tool_call_json else None
+                    if tool_name:
                         # Create tool call ID
                         import uuid
                         call_id = f"call_{uuid.uuid4().hex[:8]}"
-                        
-                        logger.info(f"Manual tool call detected: {tool_call_json['tool']}")
-                        
+
+                        logger.info(f"Manual tool call detected: {tool_name}")
+
+                        # Preprocess query to correct typos before search
+                        original_args = tool_call_json.get("arguments", tool_call_json.get("args", {}))
+                        if tool_name == "search_kb" and "query" in original_args:
+                            original_query = original_args["query"]
+                            try:
+                                clean_prompt = QUERY_CLEAN_PROMPT.format(query=original_query)
+                                clean_response = orchestrator_llm.invoke([HumanMessage(content=clean_prompt)])
+                                cleaned_query = clean_response.content.strip() if hasattr(clean_response, 'content') else original_query
+                                # Only use cleaned query if it's reasonable length and not empty
+                                if cleaned_query and len(cleaned_query) < 200:
+                                    if cleaned_query != original_query:
+                                        logger.info(f"🔄 Query cleaned: '{original_query}' → '{cleaned_query}'")
+                                    original_args["query"] = cleaned_query
+                            except Exception as e:
+                                logger.warning(f"Query cleaning failed: {e}, using original query")
+
                         # Create AIMessage with tool_calls for LangGraph compatibility
                         ai_msg = AIMessage(
                             content="",
                             tool_calls=[{
-                                "name": tool_call_json["tool"],
-                                "args": tool_call_json.get("arguments", {}),
+                                "name": tool_name,
+                                "args": original_args,
                                 "id": call_id
                             }]
                         )
                         return {"messages": [ai_msg]}
-                    
+
                     # No tool call found, return as normal response
                     return {"messages": [response]}
             else:
-                # For models without bind_tools, use the same manual fallback logic
-                logger.warning("Orchestrator LLM doesn't support bind_tools, using manual JSON format")
-                
+                # For models without bind_tools (or when disabled), use the same manual fallback logic
                 # Render tools description
                 tools_description = render_text_description(tools)
-                
-                tool_system_prompt = f"""You have access to the following tools:
 
+                tool_system_prompt = f"""You MUST use a tool to answer. Do NOT answer directly.
+
+AVAILABLE TOOLS:
 {tools_description}
 
-If you need to use a tool to fetch information, respond with a JSON object in the following format:
+INSTRUCTION: For ANY user question, you MUST call `search_kb` to search the knowledge base FIRST.
+You are NOT allowed to say "I don't have information" or answer directly.
+
+OUTPUT FORMAT (MANDATORY):
 ```json
 {{
-    "tool": "tool_name",
+    "tool": "search_kb",
     "arguments": {{
-        "arg_name": "value"
+        "query": "<user's question or keywords>"
     }}
 }}
 ```
 
-If you do not need to use a tool, just respond with your answer text."""
+Example: If user asks "what is picc", you output:
+```json
+{{
+    "tool": "search_kb",
+    "arguments": {{
+        "query": "what is picc"
+    }}
+}}
+```
+
+NOW, call the search_kb tool for this question:"""
 
                 context_messages = messages_with_instruction + [SystemMessage(content=tool_system_prompt)]
                 response = orchestrator_llm.invoke(context_messages)
                 content = extract_text_from_content(response.content)
-                
+
                 # Parse for JSON
                 tool_call_json = _extract_json(content)
-                if tool_call_json and "tool" in tool_call_json:
+                # Handle both formats: {"tool": "..."} and {"name": "...", "arguments": {...}}
+                tool_name = tool_call_json.get("tool") or tool_call_json.get("name") if tool_call_json else None
+                if tool_name:
+                    # Create tool call ID
                     import uuid
                     call_id = f"call_{uuid.uuid4().hex[:8]}"
-                    logger.info(f"Manual tool call detected: {tool_call_json['tool']}")
+
+                    logger.info(f"Manual tool call detected: {tool_name}")
+
+                    # Preprocess query to correct typos before search
+                    original_args = tool_call_json.get("arguments", tool_call_json.get("args", {}))
+                    if tool_name == "search_kb" and "query" in original_args:
+                        original_query = original_args["query"]
+                        try:
+                            clean_prompt = QUERY_CLEAN_PROMPT.format(query=original_query)
+                            clean_response = orchestrator_llm.invoke([HumanMessage(content=clean_prompt)])
+                            cleaned_query = clean_response.content.strip() if hasattr(clean_response, 'content') else original_query
+                            # Only use cleaned query if it's reasonable length and not empty
+                            if cleaned_query and len(cleaned_query) < 200:
+                                if cleaned_query != original_query:
+                                    logger.info(f"🔄 Query cleaned: '{original_query}' → '{cleaned_query}'")
+                                original_args["query"] = cleaned_query
+                        except Exception as e:
+                            logger.warning(f"Query cleaning failed: {e}, using original query")
+
+                    # Create AIMessage with tool_calls for LangGraph compatibility
                     ai_msg = AIMessage(
                         content="",
                         tool_calls=[{
-                            "name": tool_call_json["tool"],
-                            "args": tool_call_json.get("arguments", {}),
+                            "name": tool_name,
+                            "args": original_args,
                             "id": call_id
                         }]
                     )
                     return {"messages": [ai_msg]}
-                
+
+                # No tool call found, return as normal response
                 return {"messages": [response]}
+
+
         except Exception as e:
             logger.error(f"Error in generate_query_or_respond: {e}")
             logger.exception(e)
@@ -598,70 +686,77 @@ If you do not need to use a tool, just respond with your answer text."""
     # Node 4: Generate answer
     @traceable(name="generate_answer", run_type="chain", metadata={"node": "answer_generator"})
     def generate_answer(state: MessagesState):
-        """Generate final answer based on retrieved context."""
+        """Generate answer using RAG context and Pydantic structured output."""
+        logger.info("=== Node: generate_answer ===")
+        messages = state["messages"]
+
+        # Extract question
+        question = ""
+        for msg in messages:
+            if isinstance(msg, HumanMessage) or (isinstance(msg, dict) and msg.get('role') == 'user'):
+                content = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                question = extract_text_from_content(content)
+                break
+
+        # Extract context from tool messages
+        context_parts = []
+        for msg in messages:
+            if isinstance(msg, ToolMessage):
+                content = msg.content if hasattr(msg, 'content') else str(msg)
+                context_parts.append(content)
+            elif isinstance(msg, dict) and msg.get('role') == 'tool':
+                context_parts.append(msg.get('content', ''))
+
+        context = "\n\n".join(context_parts) if context_parts else ""
+        logger.info(f"Total context length: {len(context)} chars")
+        logger.info(f"Context preview: {context[:300]}...")
+        logger.info(f"Generating answer for question: {question[:50]}...")
+        logger.debug(f"Context length: {len(context)} chars")
+
+        if not context:
+            logger.warning("No context found, generating answer without context")
+            context = "No specific context was retrieved."
+
+        prompt = GENERATE_PROMPT.format(question=question, context=context[:4000])  # Limit context
+        logger.debug(f"Generate prompt length: {len(prompt)} chars")
+
+        # Use structured output
         try:
-            messages = state["messages"]
+            structured_llm = answer_llm.with_structured_output(RAGResponse)
+            response = structured_llm.invoke([HumanMessage(content=prompt)])
 
-            # Extract question
-            question = ""
-            for msg in messages:
-                if isinstance(msg, HumanMessage) or (isinstance(msg, dict) and msg.get('role') == 'user'):
-                    content = msg.content if hasattr(msg, 'content') else msg.get('content', '')
-                    question = extract_text_from_content(content)
-                    break
-
-            # Extract context from tool messages
-            context_parts = []
-            for msg in messages:
-                if isinstance(msg, ToolMessage):
-                    content = msg.content if hasattr(msg, 'content') else str(msg)
-                    context_parts.append(content)
-                elif isinstance(msg, dict) and msg.get('role') == 'tool':
-                    context_parts.append(msg.get('content', ''))
-
-            context = "\n\n".join(context_parts) if context_parts else ""
-            logger.info(f"Total context length: {len(context)} chars")
-            logger.info(f"Context preview: {context[:300]}...")
-            logger.info(f"Generating answer for question: {question[:50]}...")
-            logger.debug(f"Context length: {len(context)} chars")
-
-            if not context:
-                logger.warning("No context found, generating answer without context")
-                context = "No specific context was retrieved."
-
-            prompt = GENERATE_PROMPT.format(question=question, context=context[:4000])  # Limit context
-            logger.debug(f"Generate prompt length: {len(prompt)} chars")
-
-            response = answer_llm.invoke([HumanMessage(content=prompt)])
-            logger.info(f"Answer response type: {type(response).__name__}")
-
-            # Extract response content
-            response_content = ""
-            if isinstance(response, AIMessage):
-                response_content = response.content
-            elif hasattr(response, 'content'):
-                response_content = response.content
-            else:
-                response_content = str(response)
-
-            logger.info(f"Generated answer (length: {len(response_content)} chars)")
-            logger.info(f"Answer preview: {response_content[:200]}...")
+            # Convert Pydantic model to string for compatibility with existing LangGraph format
+            # But we can also return the raw object if downstream nodes support it.
+            # For now, let's wrap it in AIMessage content as JSON string to be safe.
+            content = response.model_dump_json()
 
             # Post-agent safety check
             logger.info("=== Running post-agent safety check ===")
-            is_safe, error_message = safety_check.check_safety(response_content, llm=grader_llm)
+            is_safe, error_message = safety_check.check_safety(response.answer, llm=grader_llm)
 
             if not is_safe:
                 logger.warning("⚠️ Safety check failed, returning safety error message")
                 return {"messages": [AIMessage(content=error_message or "I cannot provide that response. Please consult with your doctor or nurse.")]}
 
             logger.info("✅ Safety check passed")
-            return {"messages": [AIMessage(content=response_content)]}
+            return {"messages": [AIMessage(content=content)]}
+
         except Exception as e:
-            logger.error(f"Error in generate_answer: {e}")
-            logger.exception(e)
-            error_msg = "I'm sorry, I encountered an error while generating a response. Please try again."
-            return {"messages": [AIMessage(content=error_msg)]}
+            logger.error(f"Structured output failed, falling back to raw generation: {e}")
+            # Fallback to standard generation
+            response = answer_llm.invoke([HumanMessage(content=prompt)])
+            response_content = response.content if hasattr(response, 'content') else str(response)
+
+            # Post-agent safety check for fallback
+            logger.info("=== Running post-agent safety check (fallback) ===")
+            is_safe, error_message = safety_check.check_safety(response_content, llm=grader_llm)
+
+            if not is_safe:
+                logger.warning("⚠️ Safety check failed (fallback), returning safety error message")
+                return {"messages": [AIMessage(content=error_message or "I cannot provide that response. Please consult with your doctor or nurse.")]}
+
+            logger.info("✅ Safety check passed (fallback)")
+            return {"messages": [AIMessage(content=response_content)]}
 
     # Build the graph
     workflow = StateGraph(MessagesState)
@@ -669,7 +764,54 @@ If you do not need to use a tool, just respond with your answer text."""
     # Create ToolNode instance once
     tool_node = ToolNode(tools)
 
-    # Node wrapper for tool execution with timing
+    # Node 1.5: Generate multiple queries
+    @traceable(name="generate_queries", run_type="chain", metadata={"node": "query_generator"})
+    def generate_queries(state: MessagesState):
+        """Generate multiple search queries for better recall."""
+        try:
+            logger.info("=== Node: generate_queries ===")
+            messages = state["messages"]
+
+            # Extract original question
+            question = ""
+            for msg in messages:
+                if isinstance(msg, HumanMessage) or (isinstance(msg, dict) and msg.get('role') == 'user'):
+                    content = msg.content if hasattr(msg, 'content') else msg.get('content', '')
+                    question = extract_text_from_content(content)
+                    break
+
+            prompt = MULTI_QUERY_PROMPT.format(question=question)
+            response = orchestrator_llm.invoke([HumanMessage(content=prompt)])
+            content = response.content if hasattr(response, 'content') else str(response)
+
+            # Extract JSON array
+            try:
+                # Clean markdown code blocks if present
+                content = content.replace("```json", "").replace("```", "").strip()
+                queries = json.loads(content)
+                if not isinstance(queries, list):
+                    queries = [question]
+            except Exception:
+                # Fallback: simple line splitting or just use original
+                logger.warning(f"Failed to parse multi-query JSON: {content[:100]}...")
+                queries = [question]
+
+            logger.info(f"Generated {len(queries)} queries: {queries}")
+
+            # Store queries in a special ToolMessage for the retriever to find
+            query_msg = ToolMessage(
+                content=json.dumps(queries),
+                tool_call_id="multi_query",
+                name="multi_query_generator"
+            )
+
+            return {"messages": [query_msg]}
+        except Exception as e:
+            logger.error(f"Error in generate_queries: {e}")
+            # Continue with original question implies no extra queries
+            return {"messages": []}
+
+    # Node wrapper for tool execution with validation/timing/multi-query support
     def retrieve_with_timing(state: MessagesState):
         """Wrapper around ToolNode that logs tool execution details and timing."""
         import time
@@ -677,7 +819,45 @@ If you do not need to use a tool, just respond with your answer text."""
         # Get messages that need tool execution
         messages = state.get("messages", [])
 
-        # Find the last AIMessage with tool_calls
+        # Check for multi-query input
+        queries = []
+        for msg in reversed(messages):
+            if isinstance(msg, ToolMessage) and msg.name == "multi_query_generator":
+                try:
+                    queries = json.loads(msg.content)
+                    logger.info(f"Using {len(queries)} generated queries for retrieval")
+                except:
+                    pass
+                break
+
+        # If we have multiple queries, we need to run retrieval for EACH
+        if queries and len(queries) > 1:
+            all_tool_calls = []
+
+            # We assume we are using the 'search_kb' tool (vector search) for these
+            # Find the search_kb tool definition to get correct name
+            search_tool_name = "search_kb"
+
+            for q in queries:
+                 all_tool_calls.append({
+                    "name": search_tool_name,
+                    "args": {"query": q},
+                    "id": f"call_{hash(q)}"
+                 })
+
+            # Create a temporary state with AIMessage requesting these tool calls
+            # This is a bit of a hack to use ToolNode with multiple calls
+            temp_ai_msg = AIMessage(content="", tool_calls=all_tool_calls)
+
+            # Invoke ToolNode
+            start_time = time.time()
+            tool_result = tool_node.invoke({"messages": [temp_ai_msg]})
+            execution_time = time.time() - start_time
+            logger.info(f"⏱️  Multi-query Retrieval Time: {execution_time:.2f} seconds")
+
+            return tool_result
+
+        # Find the last AIMessage with tool_calls (Original Logic)
         tool_calls_info = []
         for msg in reversed(messages):
             if isinstance(msg, AIMessage) and hasattr(msg, 'tool_calls') and msg.tool_calls:
@@ -737,7 +917,7 @@ If you do not need to use a tool, just respond with your answer text."""
     # Emergency handler goes to END
     workflow.add_edge("handle_emergency", END)
 
-    # Conditional edge: decide whether to retrieve or respond directly
+    # Conditional edge: decide whether to run multi-query or direct retrieval
     workflow.add_conditional_edges(
         "generate_query_or_respond",
         tools_condition,
@@ -746,6 +926,21 @@ If you do not need to use a tool, just respond with your answer text."""
             END: END,
         },
     )
+
+    # For now, we'll insert multi-query in the semantic search path
+    # But complicating the graph too much might break existing flows.
+    # Let's simple insert "generate_queries" before any retrieval if it's semantic.
+
+    # Actually, the original design has "generate_query_or_respond" -> "retrieve".
+    # We should intercept this.
+    # But since tools_condition is a prebuilt router, validation is complex.
+    # For this implementation, we will keep it simple:
+    # IF tools_condition says "tools", we go to "retrieve" (which now supports multi-query inside)
+    # The generation of multi-queries should ideally happen inside "generate_query_or_respond" or between.
+
+    # Let's add the node but for safety in this iteration, we make it optional/parallel.
+    # Or better: "retrieve" node now checks if it should expand the query.
+
 
     # Conditional edge: grade documents and route accordingly
     workflow.add_conditional_edges(

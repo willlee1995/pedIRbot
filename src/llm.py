@@ -54,9 +54,9 @@ def get_langchain_llm(provider: str = None, **kwargs) -> BaseChatModel:
     elif provider == "lmstudio":
         # LM Studio uses OpenAI-compatible API
         return ChatOpenAI(
-            model=kwargs.get('model', settings.lmstudio_chat_model),
+            model=kwargs.get('model') or settings.lmstudio_chat_model,
             api_key="lm-studio",  # LM Studio doesn't require real key
-            base_url=kwargs.get('base_url', settings.lmstudio_api_base),
+            base_url=kwargs.get('base_url') or settings.lmstudio_api_base,
             temperature=kwargs.get('temperature', settings.agent_temperature),
             max_tokens=kwargs.get('max_tokens', 1024),
             streaming=kwargs.get('streaming', False),
@@ -186,7 +186,7 @@ class LMStudioProvider(LLMProvider):
             max_tokens: Maximum tokens to generate
         """
         from openai import OpenAI
-        
+
         self.model = model or settings.lmstudio_chat_model
         self.temperature = temperature
         self.max_tokens = max_tokens
@@ -272,7 +272,7 @@ class OpenRouterProvider(LLMProvider):
             max_tokens: Maximum tokens to generate
         """
         from openai import OpenAI
-        
+
         self.model = model or settings.openrouter_chat_model
         self.temperature = temperature
         self.max_tokens = max_tokens

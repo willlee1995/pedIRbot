@@ -4,10 +4,22 @@ from langchain_core.messages import HumanMessage, AIMessage
 from loguru import logger
 
 # Emergency keywords that trigger canned responses
+# Note: For PedIR context, we need specific qualifiers to avoid false positives
+# when discussing procedures like embolization that involve bleeding management
 EMERGENCY_KEYWORDS = [
-    'severe bleeding', 'can\'t breathe', 'chest pain', 'allergic reaction',
-    'emergency', 'urgent', 'ambulance', '999', 'unconscious',
-    '不能呼吸', '嚴重出血', '胸痛', '過敏反應', '緊急'
+    # Breathing emergencies (always urgent)
+    "can't breathe", "cannot breathe", "not breathing", "stopped breathing",
+    # Cardiac (always urgent)
+    'chest pain', 'heart attack',
+    # Severe allergic reaction
+    'anaphylaxis', 'severe allergic reaction', 'throat swelling',
+    # True emergencies
+    'emergency room', 'call 999', 'call ambulance', '999', 'unconscious', 'passed out',
+    # Chinese emergency terms
+    '不能呼吸', '胸痛', '過敏反應', '緊急', '昏迷', '急症室',
+    # Post-procedure true emergencies (require "heavy/uncontrolled" qualifier)
+    'uncontrolled bleeding', 'heavy bleeding', "bleeding won't stop", "bleeding will not stop",
+    '大量出血', '無法止血'
 ]
 
 EMERGENCY_RESPONSE = """This sounds like it could be an emergency. Please do not rely on this chatbot.
@@ -99,17 +111,29 @@ class SafetyCheckGuardrail:
             llm: Optional LLM for safety checking (uses orchestrator_llm if not provided)
         """
         self.llm = llm
-        self.safety_prompt_template = """You are a safety checker for a medical educational chatbot. Evaluate if this response is safe and appropriate for patients.
+        # Updated prompt to be context-aware for pediatric IR educational content
+        self.safety_prompt_template = """You are a safety checker for a pediatric interventional radiology (IR) educational chatbot.
+This chatbot provides educational information about IR procedures like embolization, catheter insertion, biopsies, etc.
 
-CRITICAL CHECKS:
-1. Does it provide medical diagnosis or treatment advice? (Should be UNSAFE)
-2. Does it interpret a patient's personal medical situation? (Should be UNSAFE)
-3. Does it claim to be a substitute for professional medical advice? (Should be UNSAFE)
-4. Does it contain inappropriate or harmful content? (Should be UNSAFE)
-5. Does it only provide educational information based on context? (Should be SAFE)
-6. Does it include the required disclaimer? (Preferred)
+CONTEXT: This is a PATIENT EDUCATION chatbot, NOT a diagnostic tool. It's NORMAL and SAFE for responses to discuss:
+- Procedure descriptions (including those involving bleeding control, like embolization)
+- Expected side effects and complications (bleeding, bruising, pain, etc.)
+- Post-procedure care instructions
+- When to seek medical attention
 
-Respond with ONLY one word: 'SAFE' or 'UNSAFE'
+ONLY mark as UNSAFE if the response:
+1. Provides a specific diagnosis for a patient's personal symptoms ("You have X condition")
+2. Prescribes specific medications with dosages ("Take X mg of Y")
+3. Advises against seeking medical care when symptoms warrant it
+4. Contains clearly inappropriate or harmful content unrelated to medical education
+
+Mark as SAFE if the response:
+- Provides general educational information about procedures
+- Discusses normal/expected complications in an educational context
+- Recommends consulting healthcare providers for specific concerns
+- Includes appropriate disclaimers
+
+Respond with ONLY: 'SAFE' or 'UNSAFE'
 
 Response to evaluate:
 {response}

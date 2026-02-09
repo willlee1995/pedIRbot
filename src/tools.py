@@ -154,44 +154,41 @@ def get_knowledge_base_tools(vector_store: VectorStore, retriever: Optional[Adva
     Returns:
         List of LangChain tools
     """
-    # Try to use create_retriever_tool from langchain_classic (LangChain 1.0 pattern)
-    if CREATE_RETRIEVER_TOOL_AVAILABLE:
-        try:
-            # Create a simple retriever from vector store (LangChain 1.0 pattern)
-            base_retriever = vector_store.as_retriever(
-                search_kwargs={"k": settings.top_k_retrieval}
-            )
+    # DISABLED: create_retriever_tool outputs raw content without metadata headers.
+    # We need the custom search_kb tool which includes Source/Region/Category/Relevance in output
+    # for the rag_pipeline.py regex to parse and display sources correctly.
+    #
+    # if CREATE_RETRIEVER_TOOL_AVAILABLE:
+    #     try:
+    #         base_retriever = vector_store.as_retriever(
+    #             search_kwargs={"k": settings.top_k_retrieval}
+    #         )
+    #         retriever_tool = create_retriever_tool(
+    #             base_retriever,
+    #             "search_kb",
+    #             "[PREFERRED] Semantic search for information...",
+    #         )
+    #         logger.info("Created retriever tool using langchain_classic.create_retriever_tool")
+    #         return [retriever_tool]
+    #     except Exception as e:
+    #         logger.warning(f"Failed to use create_retriever_tool: {e}")
 
-            # Use create_retriever_tool if available (simpler, follows tutorial)
-            # Mark as fallback - prefer SQL tools
-            retriever_tool = create_retriever_tool(
-                base_retriever,
-                "search_kb",
-                "[FALLBACK] Semantic search for information. PREFER using SQL tools (search_documents_sql, get_document_by_id) for full document context. Only use this when you need semantic similarity search or don't know metadata filters.",
-            )
-            logger.info("Created retriever tool using langchain_classic.create_retriever_tool (marked as fallback)")
-            return [retriever_tool]
-        except Exception as e:
-            logger.warning(f"Failed to use create_retriever_tool: {e}, falling back to custom tool")
-            logger.exception(e)
-
-    # Fallback: Create custom tool with metadata filtering support
+    # Use custom search_kb tool with formatted output (includes metadata for source display)
     def make_search_tool(vs: VectorStore):
         @tool
         def search_kb(query: str, top_k: int = 5, source_org: Optional[str] = None, region: Optional[str] = None, procedure_category: Optional[str] = None) -> str:
-            """[FALLBACK] Semantic search in the knowledge base for relevant information.
+            """[PREFERRED] Semantic search in the knowledge base for relevant information.
 
-            **PREFER using SQL tools (search_documents_sql, get_document_by_id) instead** - they provide
-            full document context without scattered information. Only use this tool when:
-            1. You don't know specific metadata filters (source_org, region, category)
-            2. You need to find documents by semantic similarity to natural language query
-            3. SQL search didn't return relevant results
+            **USE THIS TOOL FIRST**. It finds documents based on meaning suitable for natural language queries.
 
-            This tool returns chunks (partial content). If you find relevant chunks, extract the document_id
-            from metadata and use get_document_by_id() to fetch the full document for complete context.
+            This tool returns partial content (chunks) with metadata.
+            Strategy:
+            1. Search with this tool first.
+            2. If you find a relevant chunk, check its 'filename' or 'document_id' in the metadata.
+            3. If you need the full context of that valid document, use `get_document_by_id(document_id)`.
 
             Args:
-                query: The search query text (semantic similarity search)
+                query: The search query text
                 top_k: Number of results to return (default: 5)
                 source_org: Optional filter by source organization
                 region: Optional filter by region
