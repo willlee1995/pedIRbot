@@ -1,6 +1,7 @@
 """FastAPI server for RAG chatbot testing."""
 from typing import Optional, Dict, Any
 from contextlib import asynccontextmanager
+import uuid
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -11,9 +12,24 @@ from loguru import logger
 from config import settings
 from src.embeddings import get_embedding_model
 from src.vector_store import VectorStore
-from src.retriever import HybridRetriever
-from src.llm import get_llm_provider
+from src.retriever import AdvancedRetriever
+from src.llm import get_langchain_llm
 from src.rag_pipeline import RAGPipeline
+
+# Import LangSmith traceable decorator
+try:
+    from langsmith import traceable
+    from langsmith import Client as LangSmithClient
+    LANGSMITH_AVAILABLE = True
+    langsmith_client = LangSmithClient(api_key=settings.langsmith_api_key) if settings.langsmith_api_key else None
+except ImportError:
+    LANGSMITH_AVAILABLE = False
+    langsmith_client = None
+    # Create a no-op decorator if LangSmith is not available
+    def traceable(*args, **kwargs):
+        def decorator(func):
+            return func
+        return decorator
 
 
 # Global instances
@@ -36,14 +52,11 @@ async def lifespan(app: FastAPI):
         # Initialize vector store
         vector_store = VectorStore(embedding_model)
 
-        # Initialize retriever
-        retriever = HybridRetriever(vector_store)
+        # Initialize retriever (optional, for direct retrieval)
+        retriever = AdvancedRetriever(vector_store, llm=get_langchain_llm())
 
-        # Initialize LLM provider
-        llm_provider = get_llm_provider()
-
-        # Initialize RAG pipeline
-        rag_pipeline = RAGPipeline(retriever, llm_provider)
+        # Initialize RAG pipeline with agent
+        rag_pipeline = RAGPipeline(vector_store, retriever=retriever)
 
         logger.info("RAG system initialized successfully")
 
@@ -92,6 +105,14 @@ class QueryResponse(BaseModel):
     response: str
     sources: list
     is_emergency: bool
+    run_id: Optional[str] = None  # For feedback tracking
+
+
+class FeedbackRequest(BaseModel):
+    """Request model for feedback."""
+    run_id: str = Field(..., description="Run ID from query response")
+    score: float = Field(..., ge=0.0, le=1.0, description="Feedback score (0.0-1.0)")
+    comment: Optional[str] = Field(None, description="Optional comment")
 
 
 class HealthResponse(BaseModel):
@@ -130,6 +151,23 @@ async def health_check():
     }
 
 
+@traceable(name="api_query", metadata={"endpoint": "/query", "component": "api"})
+def _process_query(query: str, k: Optional[int], filter_dict: Optional[Dict[str, Any]],
+                   temperature: float, include_sources: bool) -> Dict[str, Any]:
+    """Internal function to process query with LangSmith tracing."""
+    if rag_pipeline is None:
+        raise ValueError("RAG system not initialized")
+
+    result = rag_pipeline.generate_response(
+        query=query,
+        k=k,
+        filter_dict=filter_dict,
+        temperature=temperature,
+        include_sources=include_sources
+    )
+    return result
+
+
 @app.post("/query", response_model=QueryResponse)
 async def query(request: QueryRequest):
     """
@@ -141,18 +179,24 @@ async def query(request: QueryRequest):
     Returns:
         QueryResponse with generated response and sources
     """
+    # Generate run_id for feedback tracking
+    run_id = str(uuid.uuid4())
+
     if rag_pipeline is None:
         raise HTTPException(
             status_code=503, detail="RAG system not initialized")
 
     try:
-        result = rag_pipeline.generate_response(
+        result = _process_query(
             query=request.query,
             k=request.k,
             filter_dict=request.filter,
             temperature=request.temperature,
             include_sources=request.include_sources
         )
+
+        # Add run_id to result for feedback tracking
+        result['run_id'] = run_id
 
         return QueryResponse(**result)
 
@@ -214,6 +258,35 @@ async def rebuild_index():
         return {"message": "BM25 index rebuilt successfully"}
     except Exception as e:
         logger.error(f"Error rebuilding index: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/feedback")
+async def submit_feedback(request: FeedbackRequest):
+    """
+    Submit feedback for a query run.
+
+    Args:
+        request: FeedbackRequest with run_id and score
+
+    Returns:
+        Success message
+    """
+    if not LANGSMITH_AVAILABLE or langsmith_client is None:
+        raise HTTPException(
+            status_code=503, detail="LangSmith is not available")
+
+    try:
+        langsmith_client.create_feedback(
+            request.run_id,
+            key="user-score",
+            score=request.score,
+            comment=request.comment,
+        )
+        logger.info(f"Feedback submitted for run_id: {request.run_id}, score: {request.score}")
+        return {"message": "Feedback submitted successfully", "run_id": request.run_id}
+    except Exception as e:
+        logger.error(f"Error submitting feedback: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 

@@ -1,20 +1,53 @@
 """Interactive chat interface for testing the RAG system."""
 from src.rag_pipeline import RAGPipeline
-from src.llm import get_llm_provider
-from src.retriever import HybridRetriever
+from src.retriever import AdvancedRetriever
 from src.vector_store import VectorStore
 from src.embeddings import get_embedding_model
+<<<<<<< HEAD
 from src.conversation_memory import ConversationMemory
+=======
+from src.llm import get_langchain_llm
+>>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
 from config import settings
 from loguru import logger
 import sys
 from pathlib import Path
+
+# Import LangSmith traceable decorator
+try:
+    from langsmith import traceable
+    LANGSMITH_AVAILABLE = True
+except ImportError:
+    LANGSMITH_AVAILABLE = False
+    # Create a no-op decorator if LangSmith is not available
+    def traceable(*args, **kwargs):
+        def decorator(func):
+            return func
+        return decorator
 
 # Add current directory to path FIRST (before other imports)
 sys.path.insert(0, str(Path(__file__).parent))
 
 # isort: off  - Don't reorder imports below this line
 # isort: on
+
+
+@traceable(name="test_chat_query", metadata={"component": "test_chat", "interface": "interactive"})
+def _process_test_query(rag_pipeline: RAGPipeline, query: str) -> dict:
+    """
+    Process a query from the test chat interface with LangSmith tracing.
+
+    Args:
+        rag_pipeline: RAGPipeline instance
+        query: User query string
+
+    Returns:
+        Result dictionary with response and metadata
+    """
+    return rag_pipeline.generate_response(
+        query=query,
+        include_sources=True
+    )
 
 
 def main():
@@ -24,6 +57,7 @@ def main():
     print("=" * 60)
     print(f"Embedding Provider: {settings.embedding_provider}")
     print(f"LLM Provider: {settings.llm_provider}")
+    print(f"Using LangChain Agent Architecture")
     print("=" * 60)
     print()
 
@@ -31,28 +65,41 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description="Interactive RAG chat interface")
     parser.add_argument("--verbose", "-v", action="store_true", help="Show detailed document information")
+    parser.add_argument("--agent-verbose", action="store_true", help="Show agent intermediate steps")
     args = parser.parse_args()
 
     show_details = args.verbose
+
+    # Enable agent verbose mode if requested
+    if args.agent_verbose:
+        settings.agent_verbose = True
 
     # Initialize RAG system
     print("Initializing RAG system...")
     try:
         embedding_model = get_embedding_model()
         vector_store = VectorStore(embedding_model)
-        retriever = HybridRetriever(vector_store)
-        llm_provider = get_llm_provider()
-        rag_pipeline = RAGPipeline(retriever, llm_provider)
+
+        # Initialize retriever (optional, for direct retrieval)
+        retriever = AdvancedRetriever(vector_store, llm=get_langchain_llm())
+
+        # Initialize RAG pipeline with agent
+        rag_pipeline = RAGPipeline(vector_store, retriever=retriever)
 
         stats = vector_store.get_stats()
         print(f"✓ Vector store loaded: {stats['total_documents']} documents")
+<<<<<<< HEAD
         
         # Initialize conversation memory
         memory = ConversationMemory(max_turns=10)
         print(f"✓ Conversation memory initialized (session: {memory.session_id})")
+=======
+        print(f"✓ LangChain Agent initialized")
+>>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
         print()
     except Exception as e:
         print(f"✗ Error initializing RAG system: {e}")
+        logger.exception(e)
         return
 
     # Interactive loop
@@ -127,13 +174,12 @@ def main():
             # Generate response
             print("\nPedIR-Bot: ", end="", flush=True)
 
-            result = rag_pipeline.generate_response(
-                query=query,
-                include_sources=True
-            )
+            # Trace the test chat query with LangSmith
+            result = _process_test_query(rag_pipeline, query)
 
             print(result['response'])
 
+<<<<<<< HEAD
             # Add assistant response to memory
             memory.add_assistant_message(
                 result['response'],
@@ -142,26 +188,27 @@ def main():
             )
 
             # Show sources
+=======
+            # Display total round trip time
+            if 'total_time' in result:
+                total_time = result['total_time']
+                print(f"\n{'─'*60}")
+                print(f"⏱️  Total Round Trip Time: {total_time:.2f} seconds")
+                print(f"{'─'*60}")
+
+            # Show sources (from agent intermediate steps)
+>>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
             if result.get('sources'):
                 if show_details:
                     # Detailed view
                     print(f"\n{'='*60}")
-                    print(f"📚 MATCHED DOCUMENTS ({len(result['sources'])} total)")
+                    print(f"📚 SOURCES USED BY AGENT ({len(result['sources'])} total)")
                     print(f"{'='*60}")
 
                     for i, source in enumerate(result['sources'], 1):
-                        score = source.get('score', 0)
-
-                        # Score indicator
-                        if score >= 0.7:
-                            score_indicator = "✅"
-                        elif score >= 0.5:
-                            score_indicator = "⚠️"
-                        else:
-                            score_indicator = "❌"
-
-                        print(f"\n📄 Document {i} {score_indicator}")
+                        print(f"\n📄 Source {i}")
                         print(f"{'─'*60}")
+<<<<<<< HEAD
                         print(f"File:     {source['filename']}")
                         print(f"Source:   {source['source_org']}")
                         print(f"Score:    {score:.4f} {score_indicator}")
@@ -176,15 +223,24 @@ def main():
                                 print(f"{content[:preview_len]}...")
                             else:
                                 print(content)
+=======
+                        if isinstance(source, dict):
+                            tool_name = source.get('tool', 'Unknown')
+                            output_preview = source.get('output', '')[:200]
+                            print(f"Tool: {tool_name}")
+                            print(f"Output preview: {output_preview}...")
+                        else:
+                            print(f"Source: {source}")
+>>>>>>> 1aad27fcdfa1290f77fcf297c7601ea5fed7f3f2
 
                     print(f"\n{'='*60}")
                 else:
                     # Compact view
-                    print(f"\n[Sources: {len(result['sources'])} documents]")
+                    print(f"\n[Sources: {len(result['sources'])} used by agent]")
                     for i, source in enumerate(result['sources'][:5], 1):
-                        score = source.get('score', 0)
-                        score_icon = "✅" if score >= 0.7 else "⚠️" if score >= 0.5 else "❌"
-                        print(f"  {i}. {source['source_org']} - {source['filename']} (score: {score:.3f}) {score_icon}")
+                        if isinstance(source, dict):
+                            tool = source.get('tool', 'Unknown')
+                            print(f"  {i}. Tool: {tool}")
 
             print()
 
@@ -193,6 +249,7 @@ def main():
             break
         except Exception as e:
             print(f"\n✗ Error: {e}\n")
+            logger.exception(e)
             continue
 
 

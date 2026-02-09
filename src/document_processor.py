@@ -22,18 +22,20 @@ class DocumentChunk:
 class DocumentProcessor:
     """Process various document formats and chunk them for vectorization."""
 
-    def __init__(self, chunk_size: int = 512, chunk_overlap: int = 50, markdown_only: bool = False):
+    def __init__(self, chunk_size: int = 512, chunk_overlap: int = 50, markdown_only: bool = False, whole_document: bool = False):
         """
         Initialize the document processor.
 
         Args:
-            chunk_size: Maximum size of each chunk in characters
-            chunk_overlap: Number of overlapping characters between chunks
+            chunk_size: Maximum size of each chunk in characters (ignored if whole_document=True)
+            chunk_overlap: Number of overlapping characters between chunks (ignored if whole_document=True)
             markdown_only: If True, only process markdown files (no MarkItDown conversion)
+            whole_document: If True, embed entire documents without chunking
         """
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
         self.markdown_only = markdown_only
+        self.whole_document = whole_document
 
         # Only initialize MarkItDown if we need conversion
         if not markdown_only:
@@ -68,6 +70,9 @@ class DocumentProcessor:
 
         # Detect source organization from path or filename
         metadata["source_org"] = self._detect_source_org(str(file_path))
+
+        # Detect region (Hong Kong or non-Hong Kong)
+        metadata["region"] = self._detect_region(metadata["source_org"])
 
         # Markdown-only mode: read markdown directly without conversion
         if self.markdown_only:
@@ -180,9 +185,118 @@ class DocumentProcessor:
         else:
             return 'Unknown'
 
+    def _detect_region(self, source_org: str) -> str:
+        """
+        Detect region based on source organization.
+
+        Args:
+            source_org: Source organization identifier
+
+        Returns:
+            'Hong Kong' if source is HKCH or HKSIR, 'Non-Hong Kong' otherwise
+        """
+        hong_kong_orgs = ['HKCH', 'HKSIR']
+        if source_org in hong_kong_orgs:
+            return 'Hong Kong'
+        else:
+            return 'Non-Hong Kong'
+
+    def _classify_procedure_category(self, text: str, file_path: str) -> str:
+        """
+        Classify document into procedure categories based on content.
+
+        Categories:
+        - Venous access (PICC, CVC, central line, etc.)
+        - Angiogram related (angiography, angioplasty, etc.)
+        - Embolization related (embolization, embolotherapy, etc.)
+        - Biopsy related (biopsy, tissue sampling, etc.)
+        - Pain injection relief related (pain injection, nerve block, etc.)
+
+        Args:
+            text: Document content text
+            file_path: Path to the file (for filename-based detection)
+
+        Returns:
+            Procedure category string, or 'Other' if no match found
+        """
+        text_lower = text.lower()
+        path_lower = file_path.lower()
+        combined_text = f"{text_lower} {path_lower}"
+
+        # Define keywords for each category
+        category_keywords = {
+            'venous_access': [
+                'picc', 'peripherally inserted central catheter', 'central venous catheter',
+                'cvc', 'central line', 'venous access', 'vascular access',
+                'catheter insertion', 'catheter placement', 'catheter removal',
+                'tunneled catheter', 'port-a-cath', 'portacath', 'implanted port',
+                'hickman', 'broviac', 'vascular catheter'
+            ],
+            'angiogram_related': [
+                'angiogram', 'angiography', 'angioplasty', 'angiographic',
+                'vascular imaging', 'arteriography', 'venography',
+                'selective angiography', 'digital subtraction angiography', 'dsa',
+                'ct angiography', 'cta', 'mr angiography', 'mra',
+                'balloon angioplasty', 'stent placement', 'stent insertion',
+                'vascular stent', 'vascular intervention'
+            ],
+            'embolization_related': [
+                'embolization', 'embolotherapy', 'embolize', 'embolic',
+                'transarterial embolization', 'tae', 'selective embolization',
+                'coil embolization', 'particle embolization', 'glue embolization',
+                'vascular embolization', 'arterial embolization'
+            ],
+            'biopsy_related': [
+                'biopsy', 'tissue sampling', 'needle biopsy', 'core biopsy',
+                'fine needle aspiration', 'fna', 'trucut biopsy',
+                'image guided biopsy', 'percutaneous biopsy', 'tissue diagnosis'
+            ],
+            'pain_injection_relief_related': [
+                'pain injection', 'pain relief injection', 'nerve block',
+                'local anesthetic', 'pain management injection', 'steroid injection',
+                'therapeutic injection', 'pain control injection', 'analgesic injection',
+                'transforaminal injection', 'facet injection', 'joint injection',
+                'epidural injection', 'corticosteroid injection'
+            ]
+        }
+
+        # Count matches for each category
+        category_scores = {}
+        for category, keywords in category_keywords.items():
+            score = 0
+            for keyword in keywords:
+                if keyword in combined_text:
+                    # Give more weight to filename matches
+                    if keyword in path_lower:
+                        score += 3
+                    else:
+                        score += 1
+            category_scores[category] = score
+
+        # Find category with highest score
+        max_score = max(category_scores.values()) if category_scores.values() else 0
+
+        if max_score == 0:
+            return 'Other'
+
+        # Return category with highest score
+        best_category = max(category_scores, key=category_scores.get)
+
+        # Map internal names to user-friendly names
+        category_mapping = {
+            'venous_access': 'Venous Access',
+            'angiogram_related': 'Angiogram Related',
+            'embolization_related': 'Embolization Related',
+            'biopsy_related': 'Biopsy Related',
+            'pain_injection_relief_related': 'Pain Injection Relief Related'
+        }
+
+        return category_mapping.get(best_category, 'Other')
+
     def chunk_text(self, text: str, metadata: Dict[str, Any]) -> List[DocumentChunk]:
         """
         Split text into overlapping chunks with HARD size limit enforcement.
+        If whole_document=True, returns the entire document as a single chunk.
 
         Args:
             text: Text content to chunk
@@ -193,6 +307,16 @@ class DocumentProcessor:
         """
         # Clean the text
         text = self._clean_text(text)
+
+        # If whole_document mode, return entire document as single chunk
+        if self.whole_document:
+            chunk_id = f"{metadata['filename']}_whole"
+            logger.info(f"Using whole document mode for {metadata['filename']} ({len(text)} chars)")
+            return [DocumentChunk(
+                content=text,
+                metadata={**metadata, "chunk_index": 0, "chunk_size": len(text), "whole_document": True},
+                chunk_id=chunk_id
+            )]
 
         chunks = []
         chunk_index = 0
@@ -310,6 +434,12 @@ class DocumentProcessor:
             try:
                 logger.info(f"Processing: {file_path}")
                 text, metadata = self.load_document(str(file_path))
+
+                # Classify procedure category based on content
+                # We need the text content for classification
+                procedure_category = self._classify_procedure_category(text, str(file_path))
+                metadata["procedure_category"] = procedure_category
+
                 chunks = self.chunk_text(text, metadata)
                 all_chunks.extend(chunks)
             except Exception as e:
