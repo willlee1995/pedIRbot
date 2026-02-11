@@ -1,429 +1,171 @@
 # Project Summary: PedIR RAG Backend
 
-## What Was Built
+## Overview
 
-A complete, production-ready RAG (Retrieval-Augmented Generation) testing backend for a Pediatric Interventional Radiology patient education chatbot, designed specifically for Hong Kong Children's Hospital (HKCH).
+PedIR RAG Backend is a production-ready, agentic Retrieval-Augmented Generation (RAG) system designed for a Pediatric Interventional Radiology chatbot at Hong Kong Children's Hospital (HKCH). It leverages **LangGraph** to orchestrate a sophisticated workflow involving emergency detection, hybrid retrieval, self-correction, and rigorous safety guardrails.
 
-## Key Features Implemented
+The system is designed to provide accurate, clinically safe, and parent-friendly information by retrieving data from a curated knowledge base of medical documents from trusted sources (HKCH, SickKids, CIRSE, SIR, HKSIR).
 
-### 1. Document Processing & Vectorization
+## Agent Architecture
 
-- **Multi-format support**: PDF, DOCX, PPTX, XLSX, HTML, Markdown, TXT, images, audio
-- **MarkItDown integration**: Unified conversion to Markdown for optimal LLM compatibility
-- **Intelligent chunking**: Configurable size with overlap for context preservation
-- **Automatic metadata tagging**: Source organization detection (HKCH, SickKids, SIR, HKSIR, CIRSE)
-- **Batch processing**: Efficient handling of large document collections
+The core of the system is a **LangGraph-based State Machine** that controls the flow of interaction. This allows for dynamic decision-making, error handling, and iterative quality improvement.
 
-**Files**: `src/document_processor.py`, `scripts/ingest_documents.py`
+### Architecture Diagram
 
-### 2. Advanced Retrieval System with LangChain
+```mermaid
+graph TD
+    %% Nodes
+    START((Start))
+    END((End))
+    
+    %% Guardrails
+    CheckEmergency[("🚨 Check Emergency<br>(Pattern Match)")]
+    HandleEmergency["🚑 Handle Emergency<br>(Canned Response)"]
+    
+    %% Core Agent
+    Orchestrator["🤖 Orchestrator<br>(LLM: Generate Query or Respond)"]
+    
+    %% Retrieval & Tools
+    Retrieve{{"🛠️ Retrieve Tools<br>(Vector + SQL)"}}
+    
+    %% Evaluation & Correction
+    GradeDocs["⚖️ Grade Documents<br>(LLM Evaluator)"]
+    Rewrite["rewrite_question<br>(LLM Rewriter)"]
+    
+    %% Generation
+    GenerateAnswer["📝 Generate Final Answer<br>(LLM Synthesizer)"]
+    SafetyCheck[("🛡️ Safety Check<br>(LLM Guardrail)")]
 
-- **Self-Query Retrieval**: LangChain's SelfQueryRetriever for structured metadata filtering
-- **Vector similarity search**: ChromaDB integration via LangChain
-- **Built-in reranker**: LangChain's reranker for post-retrieval ranking optimization
-- **Tool-based retrieval**: LangChain tools for flexible knowledge base querying
-- **Structured query parsing**: Automatic extraction of filters from natural language queries
+    %% Data Stores
+    VectorDB[("ChromaDB<br>(Vectors)")]
+    DocDB[("SQLite<br>(Full Docs)")]
 
-**Files**: `src/vector_store.py`, `src/retriever.py`, `src/tools.py`
+    %% Flow
+    START --> CheckEmergency
+    
+    CheckEmergency -- "Emergency Detected" --> HandleEmergency
+    CheckEmergency -- "Safe" --> Orchestrator
+    
+    HandleEmergency --> END
+    
+    Orchestrator -- "Direct Answer" --> GenerateAnswer
+    Orchestrator -- "Call Tools" --> Retrieve
+    
+    Retrieve <--> VectorDB
+    Retrieve <--> DocDB
+    
+    Retrieve --> GradeDocs
+    
+    GradeDocs -- "Relevant" --> GenerateAnswer
+    GradeDocs -- "Not Relevant" --> Rewrite
+    
+    Rewrite -- "New Query" --> Orchestrator
+    
+    GenerateAnswer --> SafetyCheck
+    SafetyCheck --> END
 
-### 3. Flexible Embedding Support
-
-- **OpenAI embeddings**: `text-embedding-3-large` for highest quality
-- **Ollama embeddings**: `mxbai-embed-large`, `nomic-embed-text` for privacy
-- **Local embeddings**: Sentence Transformers (BGE-M3) for offline use
-- **Easy switching**: Configuration-based provider selection
-- **Bilingual optimization**: Specifically tested for English/Traditional Chinese
-
-**Files**: `src/embeddings.py`
-
-### 4. Multi-Provider LLM Integration
-
-- **OpenAI API**: GPT-4o, GPT-4o-mini, and compatible endpoints
-- **Ollama support**: Local models (MedGemma3, Llama3, Mixtral, etc.)
-- **Streaming responses**: Real-time token generation
-- **Retry logic**: Automatic error handling and recovery
-
-**Files**: `src/llm.py`
-
-### 5. Agent-Based RAG Pipeline with Safety Features
-
-- **LangChain Agent**: Tool-calling agent architecture for intelligent query routing
-- **Sub-agents/prompts**: Query standardization and structuring before retrieval
-- **Tool integration**: LangChain tools for vector search, structured search, and metadata filtering
-- **Emergency keyword detection**: Automatic detection of urgent medical situations
-- **Grounding enforcement**: LLM strictly limited to retrieved context via agent constraints
-- **Medical disclaimers**: Mandatory educational-purpose-only warnings
-- **Bilingual responses**: Automatic language matching
-- **Source attribution**: Transparent citation of information sources
-
-**Files**: `src/rag_pipeline.py`, `src/agent.py`, `src/tools.py`
-
-### 6. Comprehensive Evaluation Framework
-
-- **Question-based testing**: JSON-formatted test sets
-- **Automatic metrics**: Latency, topic coverage, success rate
-- **Manual review support**: Excel export for expert scoring
-- **Multi-model comparison**: Side-by-side LLM performance analysis
-- **Statistical reporting**: Detailed performance summaries
-
-**Files**: `src/evaluation.py`, `scripts/run_evaluation.py`, `scripts/compare_models.py`
-
-### 7. Production-Ready API
-
-- **FastAPI server**: RESTful endpoints with automatic documentation
-- **Health checks**: System status and statistics
-- **Streaming support**: Server-sent events for real-time responses
-- **CORS enabled**: Ready for web frontend integration
-- **Error handling**: Graceful failure with informative messages
-
-**Files**: `src/api.py`, `scripts/start_api.py`
-
-### 8. Testing & Development Tools
-
-- **Interactive CLI**: Terminal-based chat for quick testing
-- **Sample questions**: 15 bilingual test questions (EN/ZH)
-- **Automated ingestion**: One-command document processing
-- **Model comparison**: Framework for A/B testing LLMs
-- **Chunk verification**: Pre-ingestion chunk size analysis
-
-**Files**: `test_chat.py`, `test_data/sample_questions.json`, `scripts/verify_chunks.py`
-
-### 9. Web Scraping for Content Collection
-
-- **SickKids scraper**: Collect AboutKidsHealth content
-- **Keyword filtering**: Focus on image guidance and IR topics
-- **Respectful scraping**: Rate limiting and ethical practices
-- **Metadata tracking**: JSON log of scraped content
-- **HTML preservation**: Saved in MarkItDown-compatible format
-
-**Files**: `scripts/scrape_sickkids.py`, `scripts/scrape_sickkids_advanced.py`
-
-## Technical Architecture
-
-```
-User Query
-    ↓
-[Emergency Detection] → (if triggered) → Canned Response
-    ↓
-[LangChain Agent (PedIRBot)]
-    ↓
-[Sub-agents/Prompts] → Standardize & Structure Query
-    ↓
-[Tool Selection] → Agent decides which tools to use
-    ↓
-[Retrieval Tools]
-  ├─ Self-Query Retriever (with metadata filters)
-  ├─ Vector Store Search (ChromaDB via LangChain)
-  └─ Structured Knowledge Base Query (if applicable)
-    ↓
-[LangChain Reranker] → Post-retrieval ranking optimization
-    ↓
-[Context Assembly] → Format retrieved documents
-    ↓
-[Prompt Engineering]
-  ├─ System Instructions
-  ├─ Retrieved Context
-  ├─ Medical Disclaimers
-  └─ User Query
-    ↓
-[LLM Generation] → (OpenAI or Ollama via LangChain)
-    ↓
-[Safety Checks & Post-processing]
-    ↓
-Response + Sources
+    %% Styling
+    classDef urgent fill:#ffcccc,stroke:#ff0000,stroke-width:2px;
+    classDef agent fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef tool fill:#fff9c4,stroke:#fbc02d,stroke-width:2px;
+    classDef store fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
+    
+    class CheckEmergency,HandleEmergency urgent;
+    class Orchestrator,GradeDocs,Rewrite,GenerateAnswer,SafetyCheck agent;
+    class Retrieve tool;
+    class VectorDB,DocDB store;
 ```
 
-## Alignment with Research Plan
+### Agent Workflow Steps
 
-This implementation directly addresses the requirements from `research.md`:
+1.  **Emergency Detection (`check_emergency`)**:
+    *   **Logic**: deterministically checks user input against a list of critical keywords (e.g., "difficulty breathing", "bleeding", "faint").
+    *   **Action**: If triggered, immediately routes to `handle_emergency` to provide a standard safety message and stop processing.
 
-| Research Requirement                                | Implementation                                           |
-| --------------------------------------------------- | -------------------------------------------------------- |
-| Multi-source KB (CIRSE, SIR, HKSIR, SickKids, HKCH) | Automatic source detection and metadata tagging          |
-| Bilingual support (EN/ZH)                           | BGE-M3 embeddings, language detection, matched responses |
-| RAG architecture for accuracy                       | ChromaDB + retrieval + grounding prompts                 |
-| Emergency safeguards                                | Keyword detection + canned responses                     |
-| Medical disclaimers                                 | Mandatory in every response                              |
-| LLM comparison framework                            | Multi-model evaluation scripts                           |
-| OpenAI + Ollama support                             | Dual provider implementation                             |
-| Evaluation metrics                                  | Accuracy, relevance, completeness tracking               |
-| Expert review workflow                              | Excel export for manual scoring                          |
+2.  **Orchestration (`generate_query_or_respond`)**:
+    *   **Logic**: The "Brain" of the operation. It analyzes the user's non-emergency query and conversation history.
+    *   **Decision**:
+        *   **Retrieval Needed**: Calls appropriate tools (`search_kb`, `search_documents_sql`) to get information.
+        *   **Direct Answer**: If the query is conversational (e.g., "Hello") or out of scope, it generates a direct response.
 
-## File Organization
+3.  **Retrieval (`retrieve`)**:
+    *   **Execution**: Executes the tools selected by the orchestrator.
+    *   **Hybrid Search**:
+        *   **`search_kb`**: Semantic vector search using embeddings (ChromaDB) to find concepts.
+        *   **`search_documents_sql`**: Metadata-based search (SQLite) for filtering by source, procedure type, etc.
+        *   **`get_document_by_id`**: Fetches the complete text of a document for full context.
+
+4.  **Document Grading (`grade_documents`)**:
+    *   **Logic**: An LLM-based evaluator checks if the retrieved documents are actually relevant to the user's specific question.
+    *   **Outcome**:
+        *   **Pass**: Proceed to answer generation.
+        *   **Fail**: If documents are irrelevant, route to `rewrite_question`.
+
+5.  **Self-Correction (`rewrite_question`)**:
+    *   **Logic**: Uses an LLM to rephrase the original question into a better search query, removing ambiguity or refining terms.
+    *   **Loop**: Sends the new query back to the **Orchestrator** to try retrieval again (limited to 2 retries).
+
+6.  **Answer Generation (`generate_answer`)**:
+    *   **Logic**: Synthesizes the retrieved information into a clear, parent-friendly response.
+    *   **Constraint**: Strictly grounded in the provided context (Grounding).
+    *   **Format**: Uses structured output (Pydantic) to ensure consistent formatting.
+
+7.  **Safety Guardrail (`SafetyCheck`)**:
+    *   **Logic**: A final LLM pass to ensure the generated answer is safe, clinically appropriate, and contains necessary disclaimers.
+
+## Key Components
+
+### 1. Multi-Provider LLM Support
+*   **OpenAI**: Standard choice for high quality (`gpt-4o`).
+*   **Ollama**: Local privacy-focused inference (`medgemma`, `llama3`).
+*   **LM Studio**: OpenAI-compatible local API for flexible model hosting.
+
+### 2. Dual-Store Knowledge Base
+*   **Vector Store (ChromaDB)**: Stores document chunks and embeddings for semantic similarity search. Useful for "fuzzy" questions.
+*   **Document Store (SQLite)**: Stores **full** document text and structured metadata. Useful for retrieving the complete context of a procedure guide once found, prohibiting "lost in the middle" issues with chunking.
+
+### 3. Source-Aware Processing
+*   **Ingestion Pipeline**: Automatically classifies documents by:
+    *   **Source Organization**: HKCH, SickKids, SIR, HKSIR, CIRSE.
+    *   **Procedure Category**: Venous Access, Embolization, etc.
+    *   **Region**: Distinguishes between local (Hong Kong) and international protocols.
+
+### 4. Evaluation Framework
+*   **RAGAS Metrics**: Automated testing for:
+    *   **Faithfulness**: Is the answer derived *only* from context?
+    *   **Answer Relevance**: Does it actually answer the question?
+    *   **Context Precision**: Was the retrieval accurate?
+*   **Comparison Script**: `compare_models.py` allows side-by-side benchmarking of different LLMs and embedding models.
+
+## Current Status (Feb 2026)
+
+### ✅ Completed
+*   [x] Full Agentic RAG pipeline with LangGraph.
+*   [x] Hybrid retrieval (Vector + SQL).
+*   [x] Emergency detection middleware.
+*   [x] Document ingestion with MarkItDown (supporting PDF, DOCX, HTML, etc.).
+*   [x] Streamlit UI with streaming responses and progress tracking.
+*   [x] Evaluation suite.
+
+### 🚧 In Progress / Next Steps
+*   [ ] **Clinical Validation**: Review of answers by the IR radiologists.
+*   [ ] **Knowledge Base Expansion**: Adding more localized HKCH-specific protocols.
+*   [ ] **Deployment**: Containerization (Docker) for hospital server deployment.
+*   [ ] **User Feedback Loop**: Mechanism for users to rate answer helpfulness.
+
+## Directory Structure Highlights
 
 ```
-pedIRbot/
-├── src/                          # Core application code
-│   ├── document_processor.py    # Document loading & chunking
-│   ├── embeddings.py             # Embedding model abstraction
-│   ├── vector_store.py           # LangChain ChromaDB integration
-│   ├── retriever.py              # LangChain SelfQueryRetriever & reranker
-│   ├── tools.py                  # LangChain tools for knowledge base querying
-│   ├── agent.py                  # LangChain agent setup and configuration
-│   ├── llm.py                    # LangChain LLM integration
-│   ├── rag_pipeline.py           # Agent-based RAG orchestration
-│   ├── evaluation.py             # Testing & comparison framework
-│   └── api.py                    # FastAPI server
-├── scripts/                      # Utility scripts
-│   ├── ingest_documents.py       # LangChain document processing
-│   ├── run_evaluation.py         # Single model evaluation
-│   ├── compare_models.py         # Multi-model comparison
-│   └── start_api.py              # API server launcher
-├── test_data/                    # Test datasets
-│   └── sample_questions.json     # Example test questions
-├── KB/                           # Knowledge base directory
-├── config.py                     # Configuration management
-├── test_chat.py                  # Interactive testing tool
-├── requirements.txt              # Python dependencies (includes LangChain)
-├── env.example                   # Configuration template
-├── README.md                     # Main documentation
-├── QUICKSTART.md                 # 5-minute setup guide
-├── SETUP_GUIDE.md                # Detailed installation
-└── PROJECT_SUMMARY.md            # This file
+src/
+├── agentic_rag.py       # Main LangGraph definitions (Nodes & Edges)
+├── rag_pipeline.py      # Pipeline orchestration class
+├── tools.py             # Vector search tools
+├── sql_tools.py         # SQLite document tools
+├── guardrails.py        # Safety & Emergency middleware
+├── document_processor.py# Ingestion & Chunking logic
+├── retriever.py         # Hybrid retrieval logic
+└── llm.py               # LLM Provider abstractions
+scripts/
+├── ingest_documents.py  # ETL script
+└── run_evaluation.py    # Testing script
 ```
-
-## Configuration System
-
-**File**: `config.py` + `.env`
-
-- Environment-based configuration using Pydantic
-- Supports all major settings:
-  - API keys and endpoints
-  - Model selection (embedding + LLM)
-  - Retrieval parameters (k, top_k for reranker)
-  - Chunking settings
-  - Database paths
-  - LangChain agent settings (temperature, max_iterations)
-  - Reranker model configuration
-
-## Usage Workflows
-
-### 1. Initial Setup
-
-```bash
-# Install uv (recommended)
-# Windows: powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
-# Linux/Mac: curl -LsSf https://astral.sh/uv/install.sh | sh
-
-uv venv
-uv pip install -r requirements.txt
-.venv\Scripts\activate  # Windows
-source .venv/bin/activate  # Linux/Mac
-cp env.example .env
-# Edit .env with API keys
-```
-
-### 2. Document Ingestion
-
-```bash
-python scripts/ingest_documents.py KB/ --reset
-```
-
-### 3. Interactive Testing
-
-```bash
-python test_chat.py
-```
-
-### 4. API Server
-
-```bash
-python scripts/start_api.py --reload
-# Visit http://localhost:8000/docs
-```
-
-### 5. Evaluation
-
-```bash
-python scripts/run_evaluation.py test_data/sample_questions.json
-```
-
-### 6. Model Comparison
-
-```bash
-python scripts/compare_models.py test_data/sample_questions.json
-```
-
-## Extensibility Points
-
-The system is designed for easy extension using LangChain's modular architecture:
-
-1. **New LLM Providers**: Use LangChain's LLM interfaces or create custom LangChain LLM wrapper
-2. **New Embedding Models**: Use LangChain's embedding interfaces or create custom wrapper
-3. **Custom Tools**: Add new LangChain tools in `tools.py` for specialized retrieval methods
-4. **Agent Customization**: Modify agent prompts and tool selection in `agent.py`
-5. **Custom Retrievers**: Extend LangChain retriever classes or create custom retrievers
-6. **Additional Evaluation Metrics**: Add to `RAGEvaluator` in `evaluation.py`
-7. **API Endpoints**: Add routes to `api.py`
-
-## Performance Characteristics
-
-### OpenAI Configuration
-
-- **Ingestion**: ~50-100 documents/minute
-- **Query Latency**: 2-4 seconds
-- **Accuracy**: Excellent (GPT-4o)
-
-### Ollama Configuration (MedGemma3, GPU)
-
-- **Ingestion**: ~20-40 documents/minute (with local embeddings)
-- **Query Latency**: 5-15 seconds
-- **Accuracy**: Good (model-dependent)
-- **Privacy**: Complete (no data leaves machine)
-
-## Dependencies
-
-**Core**:
-
-- `langchain` - Core framework for agents, tools, and retrieval
-- `langchain-community` - Community integrations (ChromaDB, etc.)
-- `langchain-chroma` - ChromaDB vector store integration
-- `langchain-openai` - OpenAI LLM and embeddings integration
-- `langchain-ollama` - Ollama LLM integration
-- `chromadb` - Vector database
-- `sentence-transformers` - Local embeddings
-- `openai` - Cloud LLM/embeddings
-- `ollama` - Local LLM
-- `fastapi` - API server
-
-**Supporting**:
-
-- `markitdown` - Unified document conversion to Markdown
-- `markdown`, `beautifulsoup4` - Markdown processing
-- `langchain-core` - Core LangChain abstractions
-- `pandas`, `openpyxl` - Excel export
-- `loguru` - Logging
-- `tenacity` - Retry logic
-
-## Security & Privacy Features
-
-1. **API Key Management**: Environment variables, never committed
-2. **Local Model Support**: Complete data privacy via Ollama
-3. **Anonymized Logging**: Session tracking without PII
-4. **Medical Disclaimers**: Liability protection
-5. **Emergency Detection**: Risk mitigation for critical situations
-
-## Testing Coverage
-
-- **Unit**: Individual component testing (document processor, embeddings, retriever)
-- **Integration**: End-to-end RAG pipeline testing
-- **Evaluation**: Question-answer validation
-- **Comparison**: Multi-model benchmarking
-
-## Documentation
-
-- `README.md` - Comprehensive technical documentation
-- `QUICKSTART.md` - 5-minute getting started guide
-- `SETUP_GUIDE.md` - Detailed installation and troubleshooting
-- `PROJECT_SUMMARY.md` - This architecture overview
-- Code docstrings - Inline documentation for all functions/classes
-- API docs - Automatic FastAPI/Swagger UI at `/docs`
-
-## Next Steps for Production
-
-Based on `research.md` recommendations:
-
-1. **Knowledge Base Enhancement**:
-
-   - Pediatric adaptation of content
-   - HKCH-specific localization
-   - Expert clinical review
-   - Q&A pair generation
-
-2. **Validation Protocol**:
-
-   - Internal validation (Rounds 1 & 2)
-   - External expert evaluation
-   - Qualitative focus groups
-   - Statistical analysis (ICC)
-
-3. **Deployment Preparation**:
-
-   - IRB approval
-   - Clinical governance structure
-   - Maintenance protocols
-   - User training materials
-
-4. **Production Features**:
-   - User authentication
-   - Usage analytics
-   - Feedback collection
-   - A/B testing framework
-
-## Knowledge Base Content Progress (Updated 2026-02-01)
-
-### Completed Content ✅
-
-**Disease Education (01_Disease_Education/):**
-- [x] Vascular Malformations
-  - [x] Hemangiomas overview (KidsHealth)
-  - [x] Lymphatic malformations overview (KidsHealth)
-  - [x] Venous malformations overview (Boston Children's)
-  - [x] AVMs overview (KidsHealth)
-
-**Procedure Information (02_Procedure_Information/):**
-- [x] IR Procedure Preparation guide (RadiologyInfo.org)
-- [x] Central lines overview (KidsHealth)
-- [x] Sclerotherapy overview (Boston Children's)
-- [x] Embolization overview (RadiologyInfo.org)
-
-**Preoperative Instructions (02_Preoperative/):**
-- [x] Fasting guidelines - pediatric 2-4-6-8 rule (Nationwide Children's)
-- [x] Anesthesia/Sedation expectations (KidsHealth)
-- [x] Procedure day preparation (RadiologyInfo.org)
-
-**Postoperative Advice (04_Postoperative/):**
-- [x] Activity restrictions and recovery guide (Boston Children's/CHOP)
-- [x] Pain management guide (KidsHealth/CHOP)
-
-**Wound Care (05_Wound_Care/):**
-- [x] Wound and puncture site care (SickKids/AboutKidsHealth)
-
-**Complications (07_Complications/):**
-- [x] Emergency guide for parents - when to seek help (Multiple sources)
-
-**HKCH Localization (00_HKCH_Localization/):**
-- [x] Contact numbers
-- [x] Location/parking info
-- [x] Registration process
-
-### Next Priority Items 📋
-
-**Disease Education:**
-- [ ] Tumors (hepatoblastoma, Wilms tumor, etc.)
-- [ ] Vascular access complications
-- [ ] Biliary conditions
-
-**Procedure Information:**
-- [ ] PICC line placement details
-- [ ] Biopsy procedures
-- [ ] Drainage procedures
-
-**Additional Content:**
-- [ ] HKCH-specific HA system navigation (appointment booking, referral pathway)
-- [ ] Cultural adaptations (traditional medicine FAQ, dietary beliefs)
-- [ ] Medication guidance (pre/post procedure)
-
-
----
-
-## Success Criteria Met
-
-✅ Multi-source document ingestion
-✅ Bilingual (EN/ZH) support
-✅ OpenAI API integration
-✅ Ollama integration (MedGemma3)
-✅ LangChain-based agent architecture
-✅ Self-query retrieval with metadata filtering
-✅ Built-in reranker for optimal ranking
-✅ Tool-based retrieval system
-✅ RAG pipeline with safety features
-✅ Evaluation framework
-✅ Model comparison capability
-✅ REST API with documentation
-✅ Interactive testing interface
-✅ Comprehensive documentation
-
-## Conclusion
-
-This RAG backend provides a complete, production-ready foundation for the PedIR chatbot. It implements all requirements from the research plan, supports flexible deployment options (cloud or local), and includes comprehensive tools for testing, evaluation, and model comparison. The system is designed for clinical safety, data privacy, and rigorous validation—essential for medical applications.
