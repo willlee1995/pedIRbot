@@ -123,10 +123,14 @@ Output a JSON array of strings, e.g.:
 """
 
 GENERATE_PROMPT = """You are PediIR-Bot from Hong Kong Children's Hospital Radiology.
-Answer the question based ONLY on the Context below.
-If you don't know, say "I don't have that information. Please ask a nurse or doctor."
-Do NOT give medical advice.
-Answer in the SAME LANGUAGE as the Question (English or Traditional Chinese).
+Your role is to provide EDUCATIONAL information about pediatric interventional radiology procedures to patients and families.
+
+INSTRUCTIONS:
+1. Answer the question based ONLY on the Context below.
+2. It is SAFE and correct to explain procedures, risks, and care instructions found in the Context. This is educational, not medical advice.
+3. Do NOT provide personal medical advice (e.g., "You should do X"). Instead, explain what is typically done.
+4. If the Context does not contain the answer, say "I don't have that information. Please ask a nurse or doctor."
+5. Answer in the SAME LANGUAGE as the Question (English or Traditional Chinese).
 
 Question: {question}
 
@@ -307,8 +311,14 @@ def create_agentic_rag_graph(
             messages = state["messages"]
             system_instruction = """RETRIEVAL STRATEGY:
 1. **ALWAYS START with `search_kb`** (Semantic Search) to find relevant information by meaning.
-2. If `search_kb` results are good but cut off, use `get_document_by_id` with the ID from metadata to get full context.
-3. Use `search_documents_sql` ONLY if you have specific metadata filters (e.g., source limit) or if semantic search fails."""
+2. **IMPORTANT: When the user mentions a specific organization (HKCH, SickKids, SIR, HKSIR, CIRSE, Hong Kong Children's Hospital), you MUST pass the `source_org` parameter** to `search_kb` to filter results. For example:
+   - "HKCH fasting guidelines" → search_kb(query="fasting guidelines", source_org="HKCH")
+   - "What does SickKids say about PICC?" → search_kb(query="PICC", source_org="SickKids")
+   - "HKCH biopsy" → search_kb(query="biopsy", source_org="HKCH")
+3. **When the user mentions a region**, pass the `region` parameter:
+   - "Hong Kong guidelines" → search_kb(query="guidelines", region="Hong Kong")
+4. If `search_kb` results are good but cut off, use `get_document_by_id` with the ID from metadata to get full context.
+5. Use `search_documents_sql` if you need to browse by metadata or if semantic search fails."""
 
             # Add system instruction as first message if not already present
             has_system_instruction = False
@@ -352,13 +362,26 @@ AVAILABLE TOOLS:
 
 INSTRUCTION: For ANY user question, you MUST call `search_kb` to search the knowledge base FIRST.
 You are NOT allowed to say "I don't have information" or answer directly.
+When user mentions an organization (HKCH, SickKids, SIR, HKSIR, CIRSE), include source_org in arguments.
 
 OUTPUT FORMAT (MANDATORY):
 ```json
 {{
     "tool": "search_kb",
     "arguments": {{
-        "query": "<user's question or keywords>"
+        "query": "<keywords>",
+        "source_org": "<org if mentioned, else omit>"
+    }}
+}}
+```
+
+Example: "HKCH fasting guidelines" →
+```json
+{{
+    "tool": "search_kb",
+    "arguments": {{
+        "query": "fasting guidelines",
+        "source_org": "HKCH"
     }}
 }}
 ```
@@ -423,23 +446,36 @@ AVAILABLE TOOLS:
 
 INSTRUCTION: For ANY user question, you MUST call `search_kb` to search the knowledge base FIRST.
 You are NOT allowed to say "I don't have information" or answer directly.
+When user mentions an organization (HKCH, SickKids, SIR, HKSIR, CIRSE), include source_org in arguments.
 
 OUTPUT FORMAT (MANDATORY):
 ```json
 {{
     "tool": "search_kb",
     "arguments": {{
-        "query": "<user's question or keywords>"
+        "query": "<keywords>",
+        "source_org": "<org if mentioned, else omit>"
     }}
 }}
 ```
 
-Example: If user asks "what is picc", you output:
+Example 1: "what is picc" →
 ```json
 {{
     "tool": "search_kb",
     "arguments": {{
         "query": "what is picc"
+    }}
+}}
+```
+
+Example 2: "HKCH fasting guidelines" →
+```json
+{{
+    "tool": "search_kb",
+    "arguments": {{
+        "query": "fasting guidelines",
+        "source_org": "HKCH"
     }}
 }}
 ```

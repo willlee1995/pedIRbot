@@ -3,12 +3,19 @@ import os
 import re
 from pathlib import Path
 from typing import List, Dict, Any, Optional
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from markitdown import MarkItDown
 import markdown
 from bs4 import BeautifulSoup
 from loguru import logger
+
+try:
+    import markdownify
+    MARKDOWNIFY_AVAILABLE = True
+except ImportError:
+    MARKDOWNIFY_AVAILABLE = False
+    logger.debug("markdownify not available, HTML loading will use basic extraction")
 
 
 @dataclass
@@ -22,7 +29,7 @@ class DocumentChunk:
 class DocumentProcessor:
     """Process various document formats and chunk them for vectorization."""
 
-    def __init__(self, chunk_size: int = 512, chunk_overlap: int = 50, markdown_only: bool = False, whole_document: bool = False):
+    def __init__(self, chunk_size: int = 512, chunk_overlap: int = 50, markdown_only: bool = False, whole_document: bool = False, semantic_chunking: bool = False):
         """
         Initialize the document processor.
 
@@ -31,11 +38,13 @@ class DocumentProcessor:
             chunk_overlap: Number of overlapping characters between chunks (ignored if whole_document=True)
             markdown_only: If True, only process markdown files (no MarkItDown conversion)
             whole_document: If True, embed entire documents without chunking
+            semantic_chunking: If True, chunk by markdown headings instead of fixed character count
         """
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
         self.markdown_only = markdown_only
         self.whole_document = whole_document
+        self.semantic_chunking = semantic_chunking
 
         # Only initialize MarkItDown if we need conversion
         if not markdown_only:
@@ -74,41 +83,45 @@ class DocumentProcessor:
         # Detect region (Hong Kong or non-Hong Kong)
         metadata["region"] = self._detect_region(metadata["source_org"])
 
-        # Markdown-only mode: read markdown directly without conversion
-        if self.markdown_only:
-            if file_path.suffix.lower() not in ['.md', '.markdown']:
-                logger.warning(f"Skipping non-markdown file in markdown-only mode: {file_path.name}")
-                return "", metadata
+        # Route by file type
+        # Check for HTML first (custom loader)
+        if file_path.suffix.lower() in ['.html', '.htm']:
+            return self._load_html(file_path), metadata
 
+        # Check for PDF (custom loader attempt or MarkItDown)
+        # MarkItDown handles PDF well, so we'll leave it to MarkItDown unless we need custom handling
+
+        # Check for Markdown/Text (native loader)
+        # Handle .md files explicitly since MarkItDown might not support them as input
+        if file_path.suffix.lower() in ['.md', '.markdown', '.txt']:
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
-                    markdown_text = f.read()
-
-                # Convert markdown to plain text for chunking
-                text = self._markdown_to_text(markdown_text)
-                logger.debug(f"Loaded markdown file: {file_path.name} ({len(text)} chars)")
+                    text = f.read()
                 return text, metadata
-
+            except UnicodeDecodeError:
+                # Try latin-1 fallback
+                with open(file_path, 'r', encoding='latin-1') as f:
+                    text = f.read()
+                return text, metadata
             except Exception as e:
-                logger.error(f"Failed to read markdown file {file_path.name}: {e}")
+                logger.error(f"Error reading text file {file_path}: {e}")
                 return "", metadata
 
-        # Standard mode: use MarkItDown for conversion
+        # For other formats (PDF, PPTX, DOCX, etc.), use MarkItDown
+        if self.markdown_only:
+             # In markdown_only mode, we shouldn't reach here for non-markdown files
+             # unless the caller made a mistake. But if we do, skip it.
+             logger.warning(f"Skipping non-markdown file in markdown-only mode: {file_path.name}")
+             return "", metadata
+
         try:
             # Use MarkItDown for unified conversion to Markdown
             logger.debug(
                 f"Converting {file_path.name} to Markdown using MarkItDown...")
             result = self.markitdown.convert(str(file_path))
 
-            # Extract the markdown text
-            markdown_text = result.text_content if hasattr(
-                result, 'text_content') else str(result)
-
-            # Convert markdown to plain text for better chunking
-            text = self._markdown_to_text(markdown_text)
-
-            logger.debug(
-                f"Successfully converted {file_path.name} ({len(text)} chars)")
+            # Extract text content
+            text = result.text_content
 
             return text, metadata
 
@@ -117,7 +130,85 @@ class DocumentProcessor:
             # Fallback to simple text extraction
             logger.warning(
                 f"Falling back to simple text extraction for {file_path.name}")
-            return self._fallback_load(file_path), metadata
+            try:
+                # Basic text fallback for anything else
+                with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                    return f.read(), metadata
+            except Exception as e2:
+                logger.error(f"Fallback extraction failed for {file_path}: {e2}")
+                return "", metadata
+
+    def _load_html(self, file_path: Path) -> str:
+        """
+        Load and extract content from an HTML file (e.g., Sickkids pages).
+
+        Targets the main article content and converts it to Markdown.
+
+        Args:
+            file_path: Path to the HTML file
+
+        Returns:
+            Extracted text content as Markdown or plain text
+        """
+        with open(file_path, 'r', encoding='utf-8') as f:
+            html_content = f.read()
+
+        soup = BeautifulSoup(html_content, 'html.parser')
+
+        # Try to find the main content container (Sickkids uses #panel-container)
+        main_content = (
+            soup.find(id='panel-container')
+            or soup.find(id='article-container')
+            or soup.find('article')
+            or soup.find('main')
+            or soup.find('body')
+        )
+
+        if main_content is None:
+            main_content = soup
+
+        # Also grab key-points if present
+        key_points = soup.find(id='key-points')
+        overview = soup.find(id='article-overview')
+
+        parts = []
+
+        # Extract title
+        title_el = soup.find(id='article_title') or soup.find('h1')
+        if title_el:
+            parts.append(f"# {title_el.get_text(strip=True)}")
+
+        # Extract overview
+        if overview:
+            overview_text = overview.get_text(separator='\n', strip=True)
+            if overview_text:
+                parts.append(f"\n{overview_text}")
+
+        # Extract key points
+        if key_points:
+            kp_text = key_points.get_text(separator='\n', strip=True)
+            if kp_text:
+                parts.append(f"\n## Key Points\n{kp_text}")
+
+        # Convert main content
+        if MARKDOWNIFY_AVAILABLE:
+            content_md = markdownify.markdownify(
+                str(main_content),
+                heading_style="ATX",
+                strip=['script', 'style', 'nav', 'select', 'button', 'dialog']
+            )
+            parts.append(content_md)
+        else:
+            # Fallback: extract text with separator
+            content_text = main_content.get_text(separator='\n', strip=True)
+            parts.append(content_text)
+
+        # Extract review date if present
+        review_date = soup.find(id='review-date')
+        if review_date:
+            parts.append(f"\n---\nLast updated: {review_date.get_text(strip=True)}")
+
+        return '\n\n'.join(parts)
 
     def _markdown_to_text(self, markdown_text: str) -> str:
         """
@@ -295,8 +386,10 @@ class DocumentProcessor:
 
     def chunk_text(self, text: str, metadata: Dict[str, Any]) -> List[DocumentChunk]:
         """
-        Split text into overlapping chunks with HARD size limit enforcement.
-        If whole_document=True, returns the entire document as a single chunk.
+        Split text into chunks. Supports three modes:
+        1. whole_document=True: entire doc as one chunk
+        2. semantic_chunking=True: split by markdown headings
+        3. Default: fixed character-count sliding window
 
         Args:
             text: Text content to chunk
@@ -310,7 +403,9 @@ class DocumentProcessor:
 
         # If whole_document mode, return entire document as single chunk
         if self.whole_document:
-            chunk_id = f"{metadata['filename']}_whole"
+            # Use document_id (if available) or filename for chunk ID base
+            base_id = metadata.get('document_id', metadata.get('filename', 'doc'))
+            chunk_id = f"{base_id}_whole"
             logger.info(f"Using whole document mode for {metadata['filename']} ({len(text)} chars)")
             return [DocumentChunk(
                 content=text,
@@ -318,6 +413,134 @@ class DocumentProcessor:
                 chunk_id=chunk_id
             )]
 
+        # Semantic chunking: split by markdown headings
+        if self.semantic_chunking:
+            return self._semantic_chunk(text, metadata)
+
+        # Legacy: fixed character-count sliding window
+        return self._sliding_window_chunk(text, metadata)
+
+    def _semantic_chunk(self, text: str, metadata: Dict[str, Any]) -> List[DocumentChunk]:
+        """
+        Chunk text semantically by markdown headings (##, ###).
+        Sections that exceed max_chunk_size are sub-split by paragraphs.
+        Lists are kept as atomic units.
+
+        Args:
+            text: Cleaned text content
+            metadata: Document metadata
+
+        Returns:
+            List of DocumentChunk objects
+        """
+        # Split by heading patterns (## or ###)
+        # We keep the heading with its content
+        heading_pattern = re.compile(r'(?=^#{1,3}\s)', re.MULTILINE)
+        raw_sections = heading_pattern.split(text)
+
+        # Filter empty sections
+        raw_sections = [s.strip() for s in raw_sections if s.strip()]
+
+        chunks = []
+        chunk_index = 0
+
+        for section in raw_sections:
+            # Extract section title from the first line if it's a heading
+            lines = section.split('\n', 1)
+            section_title = ''
+            if lines[0].startswith('#'):
+                section_title = lines[0].lstrip('#').strip()
+
+            # Use document_id (if available) or filename for chunk ID base
+            base_id = metadata.get('document_id', metadata.get('filename', 'doc'))
+
+            # If section is within size limit, keep it as one chunk
+            if len(section) <= self.chunk_size:
+                chunk_id = f"{base_id}_chunk_{chunk_index}"
+                chunks.append(DocumentChunk(
+                    content=section,
+                    metadata={
+                        **metadata,
+                        "chunk_index": chunk_index,
+                        "chunk_size": len(section),
+                        "section_title": section_title,
+                        "chunking_method": "semantic",
+                    },
+                    chunk_id=chunk_id
+                ))
+                chunk_index += 1
+            else:
+                # Section too large: sub-split by paragraphs
+                paragraphs = re.split(r'\n\n+', section)
+                current_chunk = ""
+
+                for para in paragraphs:
+                    para = para.strip()
+                    if not para:
+                        continue
+
+                    # If adding this paragraph would exceed size, flush current chunk
+                    if current_chunk and len(current_chunk) + len(para) + 2 > self.chunk_size:
+                        chunk_id = f"{base_id}_chunk_{chunk_index}"
+                        chunks.append(DocumentChunk(
+                            content=current_chunk.strip(),
+                            metadata={
+                                **metadata,
+                                "chunk_index": chunk_index,
+                                "chunk_size": len(current_chunk.strip()),
+                                "section_title": section_title,
+                                "chunking_method": "semantic_paragraph",
+                            },
+                            chunk_id=chunk_id
+                        ))
+                        chunk_index += 1
+                        current_chunk = ""
+
+                    current_chunk += para + "\n\n"
+
+                # Flush remaining content
+                if current_chunk.strip():
+                    chunk_id = f"{base_id}_chunk_{chunk_index}"
+                    chunks.append(DocumentChunk(
+                        content=current_chunk.strip(),
+                        metadata={
+                            **metadata,
+                            "chunk_index": chunk_index,
+                            "chunk_size": len(current_chunk.strip()),
+                            "section_title": section_title,
+                            "chunking_method": "semantic_paragraph",
+                        },
+                        chunk_id=chunk_id
+                    ))
+                    chunk_index += 1
+
+        if not chunks:
+            # Fallback: if no headings found, treat whole text as one chunk
+            base_id = metadata.get('document_id', metadata.get('filename', 'doc'))
+            chunk_id = f"{base_id}_chunk_0"
+            chunks.append(DocumentChunk(
+                content=text,
+                metadata={**metadata, "chunk_index": 0, "chunk_size": len(text), "chunking_method": "semantic_fallback"},
+                chunk_id=chunk_id
+            ))
+
+        avg_size = sum(len(c.content) for c in chunks) // len(chunks) if chunks else 0
+        max_size = max(len(c.content) for c in chunks) if chunks else 0
+        logger.info(f"Semantic chunking: {len(chunks)} chunks from {metadata['filename']} "
+                   f"(avg: {avg_size} chars, max: {max_size} chars)")
+        return chunks
+
+    def _sliding_window_chunk(self, text: str, metadata: Dict[str, Any]) -> List[DocumentChunk]:
+        """
+        Legacy: split text into overlapping chunks with fixed character count.
+
+        Args:
+            text: Cleaned text content
+            metadata: Document metadata
+
+        Returns:
+            List of DocumentChunk objects
+        """
         chunks = []
         chunk_index = 0
         start = 0
@@ -350,14 +573,15 @@ class DocumentProcessor:
                         end = word_end
 
             # Extract chunk
-            chunk_text = text[start:end].strip()
+            chunk_content = text[start:end].strip()
 
             # Only add non-empty chunks
-            if chunk_text:
-                chunk_id = f"{metadata['filename']}_chunk_{chunk_index}"
+            if chunk_content:
+                base_id = metadata.get('document_id', metadata.get('filename', 'doc'))
+                chunk_id = f"{base_id}_chunk_{chunk_index}"
                 chunks.append(DocumentChunk(
-                    content=chunk_text,
-                    metadata={**metadata, "chunk_index": chunk_index, "chunk_size": len(chunk_text)},
+                    content=chunk_content,
+                    metadata={**metadata, "chunk_index": chunk_index, "chunk_size": len(chunk_content)},
                     chunk_id=chunk_id
                 ))
                 chunk_index += 1
@@ -377,11 +601,20 @@ class DocumentProcessor:
         return chunks
 
     def _clean_text(self, text: str) -> str:
-        """Clean and normalize text."""
+        """Clean and normalize text, including OCR artifacts."""
+        # Remove form-style underlines (e.g., ______, ------)
+        text = re.sub(r'[_]{3,}', '', text)
+        text = re.sub(r'[-]{5,}', '', text)
+        # Remove broken Unicode replacement chars (common OCR artifacts)
+        text = re.sub(r'[\ufffd]+', '', text)  # Unicode replacement char
+        text = re.sub(r'\?{3,}', '', text)  # Sequences of ??? from bad encoding
         # Remove excessive whitespace
-        text = re.sub(r'\s+', ' ', text)
-        # Remove excessive newlines
-        text = re.sub(r'\n\s*\n', '\n\n', text)
+        text = re.sub(r'[ \t]+', ' ', text)  # Collapse spaces/tabs but not newlines
+        # Normalize newlines: collapse 3+ blank lines into 2
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        # Remove leading/trailing whitespace per line
+        lines = [line.strip() for line in text.split('\n')]
+        text = '\n'.join(lines)
         return text.strip()
 
     def process_directory(self, directory_path: str,

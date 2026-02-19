@@ -56,9 +56,8 @@ def main():
 
     show_details = args.verbose
 
-    # Enable agent verbose mode if requested
-    if args.agent_verbose:
-        settings.agent_verbose = True
+    # Enable agent verbose mode by default for testing
+    settings.agent_verbose = True
 
     # Initialize RAG system
     print("Initializing RAG system...")
@@ -169,8 +168,16 @@ def main():
 
             print(result['response'])
 
-            # Add assistant response to memory
-            memory.add_assistant_message(result['response'])
+            # Add assistant response to memory with sources
+            source_docs = result.get('source_documents', [])
+            # Extract filenames - handle both dict and Document object formats
+            memory_sources = []
+            for doc in source_docs:
+                if isinstance(doc, dict):
+                    memory_sources.append({"filename": doc.get('filename', 'unknown')})
+                else:
+                    memory_sources.append({"filename": getattr(doc, 'metadata', {}).get('filename', 'unknown')})
+            memory.add_assistant_message(result['response'], sources=memory_sources)
 
             # Display total round trip time
             if 'total_time' in result:
@@ -219,4 +226,7 @@ def main():
 
 
 if __name__ == "__main__":
+    # Configure logger to show info
+    logger.remove()
+    logger.add(sys.stderr, level="INFO")
     main()

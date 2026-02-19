@@ -32,9 +32,10 @@ class Settings(BaseSettings):
     chroma_persist_directory: str = "./chroma_db"
 
     # OpenRouter Configuration (Free/Paid API)
-    openrouter_api_key: str = "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"
+    openrouter_api_key: str = "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"
     openrouter_api_base: str = "https://openrouter.ai/api/v1"
-    openrouter_chat_model: str = "openrouter/free"  # Free model auto-selector
+    openrouter_chat_model: str = "google/gemini-2.0-flash-001"  # Gemini 2.0 Flash
+    openrouter_metadata_model: str = "google/gemini-2.0-flash-001"  # Consistent model
     collection_name: str = "pedir_knowledge_base"
 
     # LEANN Vector Index Configuration
@@ -82,7 +83,7 @@ class Settings(BaseSettings):
     ollama_embedding_model: str = "qwen3-embedding:0.6b"
 
     # LLM Provider
-    llm_provider: Literal["openai", "ollama", "lmstudio", "openrouter"] = "lmstudio"
+    llm_provider: Literal["openai", "ollama", "lmstudio", "openrouter"] = "openrouter"
 
 
 

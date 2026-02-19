@@ -1,0 +1,799 @@
+D:\Development area\pedIRbot\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+2026-02-19 21:58:58.526 | DEBUG    | src.retriever:<module>:18 - BM25 (rank_bm25) loaded successfully for hybrid search
+2026-02-19 21:58:58.529 | DEBUG    | src.retriever:<module>:33 - SelfQueryRetriever not available. Using direct vector store search.
+2026-02-19 21:58:58.757 | INFO     | src.embeddings:__init__:309 - Initialized LM Studio embeddings with model: text-embedding-qwen3-embedding-0.6b
+2026-02-19 21:58:58.757 | INFO     | src.embeddings:__init__:310 - LM Studio API base: http://localhost:1234/v1
+2026-02-19 21:58:58.858 | INFO     | src.vector_store:__init__:114 - Initialized vector store with collection: pedir_knowledge_base
+2026-02-19 21:58:58.952 | INFO     | src.vector_store:__init__:116 - Current collection size: 1910
+2026-02-19 21:58:59.160 | INFO     | src.llm:__init__:200 - Initialized LM Studio provider with model: unsloth/medgemma-4b-it-GGUF
+2026-02-19 21:58:59.160 | INFO     | src.llm:__init__:201 - LM Studio API base: http://localhost:1234/v1
+2026-02-19 21:58:59.162 | INFO     | src.safety_guard:__init__:178 - Initialized SafetyGuard (LLM check: False)
+2026-02-19 21:58:59.162 | INFO     | src.rag_pipeline:__init__:89 - Initialized RAG pipeline with SafetyGuard
+2026-02-19 21:58:59.163 | INFO     | src.agentic_rag:create_agentic_rag_graph:164 - DEBUG: create_agentic_rag_graph called. Settings provider: lmstudio
+2026-02-19 21:58:59.856 | INFO     | src.agentic_rag:create_agentic_rag_graph:168 - Using orchestrator LLM from provider: lmstudio
+2026-02-19 21:58:59.857 | INFO     | src.agentic_rag:create_agentic_rag_graph:174 - Using answer LLM from provider: lmstudio
+2026-02-19 21:58:59.866 | INFO     | src.tools:get_knowledge_base_tools:258 - Created 1 custom knowledge base tool(s)
+2026-02-19 21:58:59.867 | INFO     | src.agentic_rag:create_agentic_rag_graph:198 - Initialized 1 SQL tools (PREFERRED) + 1 vector search tools (fallback) = 2 total tools
+2026-02-19 21:58:59.883 | INFO     | src.agentic_rag:create_agentic_rag_graph:963 - Agentic RAG graph compiled successfully
+2026-02-19 21:58:59.883 | INFO     | src.rag_pipeline:__init__:103 - Initialized RAG pipeline with LangGraph Agentic RAG
+2026-02-19 21:58:59.883 | INFO     | src.conversation_memory:__init__:43 - Initialized ConversationMemory (max_turns=10, session=20260219_215859)
+2026-02-19 21:58:59.953 | INFO     | src.rag_pipeline:generate_response:152 - ================================================================================
+2026-02-19 21:58:59.953 | INFO     | src.rag_pipeline:generate_response:153 - \U0001f504 STARTING QUERY PROCESSING
+2026-02-19 21:58:59.953 | INFO     | src.rag_pipeline:generate_response:154 - \U0001f4dd Query: What is PICC
+2026-02-19 21:58:59.954 | INFO     | src.rag_pipeline:generate_response:155 - \u23f0 Start Time: 21:58:59
+2026-02-19 21:58:59.954 | INFO     | src.rag_pipeline:generate_response:156 - ================================================================================
+2026-02-19 21:58:59.954 | INFO     | src.rag_pipeline:generate_response:162 - Safety assessment: none (emergency: False)
+2026-02-19 21:58:59.954 | INFO     | src.rag_pipeline:generate_response:198 - Invoking LangGraph agentic RAG...
+2026-02-19 21:58:59.956 | INFO     | src.agentic_rag:check_emergency_node:212 - === Node: emergency_check ===
+2026-02-19 21:58:59.957 | INFO     | src.agentic_rag:check_emergency_node:232 - No emergency detected, continuing
+2026-02-19 21:58:59.958 | INFO     | src.agentic_rag:generate_query_or_respond:303 - === Node: generate_query_or_respond ===
+2026-02-19 21:58:59.958 | INFO     | src.agentic_rag:generate_query_or_respond:304 - State messages count: 1
+2026-02-19 21:59:02.547 | INFO     | src.agentic_rag:generate_query_or_respond:462 - Manual tool call detected: search_kb
+2026-02-19 21:59:02.659 | INFO     | src.agentic_rag:generate_query_or_respond:475 - \U0001f504 Query cleaned: 'what is picc' \u2192 'What is PICC?'
+2026-02-19 21:59:02.661 | INFO     | src.agentic_rag:retrieve_with_timing:873 - ================================================================================
+2026-02-19 21:59:02.661 | INFO     | src.agentic_rag:retrieve_with_timing:875 - \U0001f527 TOOL CALLED: search_kb
+2026-02-19 21:59:02.661 | INFO     | src.agentic_rag:retrieve_with_timing:876 - \U0001f4dd Query/Arguments:
+2026-02-19 21:59:02.661 | INFO     | src.agentic_rag:retrieve_with_timing:878 -    query: What is PICC?
+2026-02-19 21:59:02.661 | INFO     | src.agentic_rag:retrieve_with_timing:879 - --------------------------------------------------------------------------------
+2026-02-19 21:59:02.663 | INFO     | src.tools:search_kb:197 - \U0001f50d Searching knowledge base with query: What is PICC?...
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 1 Metadata:
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:241 -    Score: 0.625
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 2 Metadata:
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:240 -    Filename: central_lines_overview.md
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:241 -    Score: 0.561
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 3 Metadata:
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html
+2026-02-19 21:59:07.011 | INFO     | src.tools:search_kb:241 -    Score: 0.558
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 4 Metadata:
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_4705.md
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:241 -    Score: 0.538
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 5 Metadata:
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_4705.md
+2026-02-19 21:59:07.012 | INFO     | src.tools:search_kb:241 -    Score: 0.504
+2026-02-19 21:59:07.014 | INFO     | src.agentic_rag:retrieve_with_timing:889 - \u23f1\ufe0f  Execution Time: 4.35 seconds
+2026-02-19 21:59:07.014 | INFO     | src.agentic_rag:retrieve_with_timing:890 - ================================================================================
+2026-02-19 21:59:07.015 | INFO     | src.agentic_rag:grade_documents:513 - === Node: grade_documents ===
+2026-02-19 21:59:07.015 | INFO     | src.agentic_rag:grade_documents:515 - State messages count: 3
+2026-02-19 21:59:07.015 | INFO     | src.agentic_rag:grade_documents:523 - Extracted question: What is PICC...
+2026-02-19 21:59:07.015 | INFO     | src.agentic_rag:grade_documents:531 - Found ToolMessage context (length: 2176 chars)
+2026-02-19 21:59:07.015 | INFO     | src.agentic_rag:grade_documents:532 - ToolMessage name: search_kb
+2026-02-19 21:59:07.015 | INFO     | src.agentic_rag:grade_documents:533 - ToolMessage content preview: [Document 1] Source: SickKids | Region: Non-Hong Kong | Category: Venous Access | sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html (Relevance: 0.625)
+## On the day of the PICC insertion...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Ca...
+2026-02-19 21:59:12.697 | INFO     | src.agentic_rag:grade_documents:575 - Structured output grade: :[{
+2026-02-19 21:59:12.697 | INFO     | src.agentic_rag:grade_documents:590 - Document grade: :[{
+2026-02-19 21:59:12.697 | INFO     | src.agentic_rag:grade_documents:591 - Routing to: rewrite_question
+2026-02-19 21:59:12.699 | INFO     | src.agentic_rag:rewrite_question:604 - === Node: rewrite_question ===
+2026-02-19 21:59:12.700 | INFO     | src.agentic_rag:rewrite_question:606 - State messages count: 3
+2026-02-19 21:59:12.700 | INFO     | src.agentic_rag:rewrite_question:628 - Original question: What is PICC
+2026-02-19 21:59:13.137 | INFO     | src.agentic_rag:rewrite_question:635 - Rewrite response type: AIMessage
+2026-02-19 21:59:13.137 | INFO     | src.agentic_rag:rewrite_question:638 - Raw rewritten response: Okay, I'll rewrite the question with keywords that are specific and relevant to the topic of PICC.
+
+**Revised Question:**
+
+"What is PICC?" (This assumes we want a definition or explanation of what PIC...
+2026-02-19 21:59:13.137 | INFO     | src.agentic_rag:rewrite_question:671 - Rewritten question: ll rewrite the question with keywords that are specific and relevant to the topic of PICC.
+
+**Revised Question:**
+
+
+2026-02-19 21:59:13.137 | INFO     | src.agentic_rag:rewrite_question:674 - ================================================================================
+2026-02-19 21:59:13.137 | INFO     | src.agentic_rag:rewrite_question:675 - \U0001f504 QUESTION REWRITTEN:
+2026-02-19 21:59:13.138 | INFO     | src.agentic_rag:rewrite_question:676 - Original Question: What is PICC
+2026-02-19 21:59:13.138 | INFO     | src.agentic_rag:rewrite_question:677 - Rewritten Question: ll rewrite the question with keywords that are specific and relevant to the topic of PICC.
+
+**Revised Question:**
+
+
+2026-02-19 21:59:13.138 | INFO     | src.agentic_rag:rewrite_question:678 - ================================================================================
+2026-02-19 21:59:13.139 | INFO     | src.agentic_rag:generate_query_or_respond:303 - === Node: generate_query_or_respond ===
+2026-02-19 21:59:13.139 | INFO     | src.agentic_rag:generate_query_or_respond:304 - State messages count: 4
+2026-02-19 21:59:13.851 | INFO     | src.agentic_rag:generate_query_or_respond:462 - Manual tool call detected: search_kb
+2026-02-19 21:59:13.971 | INFO     | src.agentic_rag:retrieve_with_timing:873 - ================================================================================
+2026-02-19 21:59:13.971 | INFO     | src.agentic_rag:retrieve_with_timing:875 - \U0001f527 TOOL CALLED: search_kb
+2026-02-19 21:59:13.972 | INFO     | src.agentic_rag:retrieve_with_timing:876 - \U0001f4dd Query/Arguments:
+2026-02-19 21:59:13.972 | INFO     | src.agentic_rag:retrieve_with_timing:878 -    query: What is PICC?
+2026-02-19 21:59:13.972 | INFO     | src.agentic_rag:retrieve_with_timing:879 - --------------------------------------------------------------------------------
+2026-02-19 21:59:13.973 | INFO     | src.tools:search_kb:197 - \U0001f50d Searching knowledge base with query: What is PICC?...
+2026-02-19 21:59:19.243 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 1 Metadata:
+2026-02-19 21:59:19.243 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:19.243 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:241 -    Score: 0.625
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 2 Metadata:
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:240 -    Filename: central_lines_overview.md
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:241 -    Score: 0.561
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 3 Metadata:
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:241 -    Score: 0.558
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 4 Metadata:
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_4705.md
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:241 -    Score: 0.538
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 5 Metadata:
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_4705.md
+2026-02-19 21:59:19.244 | INFO     | src.tools:search_kb:241 -    Score: 0.504
+2026-02-19 21:59:19.247 | INFO     | src.agentic_rag:retrieve_with_timing:889 - \u23f1\ufe0f  Execution Time: 5.27 seconds
+2026-02-19 21:59:19.247 | INFO     | src.agentic_rag:retrieve_with_timing:890 - ================================================================================
+2026-02-19 21:59:19.248 | INFO     | src.agentic_rag:grade_documents:513 - === Node: grade_documents ===
+2026-02-19 21:59:19.248 | INFO     | src.agentic_rag:grade_documents:515 - State messages count: 6
+2026-02-19 21:59:19.249 | INFO     | src.agentic_rag:grade_documents:523 - Extracted question: What is PICC...
+2026-02-19 21:59:19.249 | INFO     | src.agentic_rag:grade_documents:531 - Found ToolMessage context (length: 2176 chars)
+2026-02-19 21:59:19.249 | INFO     | src.agentic_rag:grade_documents:532 - ToolMessage name: search_kb
+2026-02-19 21:59:19.249 | INFO     | src.agentic_rag:grade_documents:533 - ToolMessage content preview: [Document 1] Source: SickKids | Region: Non-Hong Kong | Category: Venous Access | sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html (Relevance: 0.625)
+## On the day of the PICC insertion...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Ca...
+2026-02-19 21:59:25.856 | INFO     | src.agentic_rag:grade_documents:575 - Structured output grade: :[0.625,0.561,0.558,0.538], 
+2026-02-19 21:59:25.856 | INFO     | src.agentic_rag:grade_documents:590 - Document grade: :[0.625,0.561,0.558,0.538], 
+2026-02-19 21:59:25.856 | INFO     | src.agentic_rag:grade_documents:591 - Routing to: rewrite_question
+2026-02-19 21:59:25.859 | INFO     | src.agentic_rag:rewrite_question:604 - === Node: rewrite_question ===
+2026-02-19 21:59:25.859 | INFO     | src.agentic_rag:rewrite_question:606 - State messages count: 6
+2026-02-19 21:59:25.859 | INFO     | src.agentic_rag:rewrite_question:628 - Original question: What is PICC
+2026-02-19 21:59:26.532 | INFO     | src.agentic_rag:rewrite_question:635 - Rewrite response type: AIMessage
+2026-02-19 21:59:26.532 | INFO     | src.agentic_rag:rewrite_question:638 - Raw rewritten response: Okay, I'll rewrite the question with specific keywords for search.
+
+**Question:** What is PICC? (Specifically, what does it mean?)
+
+Keywords: PICC, PICCO, PICCO-ID, RFID, Identification, Tracking, Sec...
+2026-02-19 21:59:26.532 | INFO     | src.agentic_rag:rewrite_question:671 - Rewritten question: ll rewrite the question with specific keywords for search.
+
+**Question:** What is PICC? (Specifically, what does it mean?)
+
+Keywords: PICC, PICCO, PICCO-ID, RFID, Identification, Tracking, Security, Data Storage, Electronic ID, Smart Card, Government ID, Passport, Driver
+2026-02-19 21:59:26.532 | INFO     | src.agentic_rag:rewrite_question:674 - ================================================================================
+2026-02-19 21:59:26.532 | INFO     | src.agentic_rag:rewrite_question:675 - \U0001f504 QUESTION REWRITTEN:
+2026-02-19 21:59:26.532 | INFO     | src.agentic_rag:rewrite_question:676 - Original Question: What is PICC
+2026-02-19 21:59:26.532 | INFO     | src.agentic_rag:rewrite_question:677 - Rewritten Question: ll rewrite the question with specific keywords for search.
+
+**Question:** What is PICC? (Specifically, what does it mean?)
+
+Keywords: PICC, PICCO, PICCO-ID, RFID, Identification, Tracking, Security, Data Storage, Electronic ID, Smart Card, Government ID, Passport, Driver
+2026-02-19 21:59:26.532 | INFO     | src.agentic_rag:rewrite_question:678 - ================================================================================
+2026-02-19 21:59:26.534 | INFO     | src.agentic_rag:generate_query_or_respond:303 - === Node: generate_query_or_respond ===
+2026-02-19 21:59:26.534 | INFO     | src.agentic_rag:generate_query_or_respond:304 - State messages count: 7
+2026-02-19 21:59:27.368 | INFO     | src.agentic_rag:generate_query_or_respond:462 - Manual tool call detected: search_kb
+2026-02-19 21:59:27.491 | INFO     | src.agentic_rag:retrieve_with_timing:873 - ================================================================================
+2026-02-19 21:59:27.491 | INFO     | src.agentic_rag:retrieve_with_timing:875 - \U0001f527 TOOL CALLED: search_kb
+2026-02-19 21:59:27.491 | INFO     | src.agentic_rag:retrieve_with_timing:876 - \U0001f4dd Query/Arguments:
+2026-02-19 21:59:27.491 | INFO     | src.agentic_rag:retrieve_with_timing:878 -    query: What is PICC?
+2026-02-19 21:59:27.491 | INFO     | src.agentic_rag:retrieve_with_timing:879 - --------------------------------------------------------------------------------
+2026-02-19 21:59:27.493 | INFO     | src.tools:search_kb:197 - \U0001f50d Searching knowledge base with query: What is PICC?...
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 1 Metadata:
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:241 -    Score: 0.625
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 2 Metadata:
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:240 -    Filename: central_lines_overview.md
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:241 -    Score: 0.561
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 3 Metadata:
+2026-02-19 21:59:31.836 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:241 -    Score: 0.558
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 4 Metadata:
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_4705.md
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:241 -    Score: 0.538
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 5 Metadata:
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:239 -    Source Org: SickKids
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:240 -    Filename: sickkids_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_4705.md
+2026-02-19 21:59:31.837 | INFO     | src.tools:search_kb:241 -    Score: 0.504
+2026-02-19 21:59:31.841 | INFO     | src.agentic_rag:retrieve_with_timing:889 - \u23f1\ufe0f  Execution Time: 4.35 seconds
+2026-02-19 21:59:31.841 | INFO     | src.agentic_rag:retrieve_with_timing:890 - ================================================================================
+2026-02-19 21:59:31.842 | INFO     | src.agentic_rag:grade_documents:513 - === Node: grade_documents ===
+2026-02-19 21:59:31.842 | INFO     | src.agentic_rag:grade_documents:515 - State messages count: 9
+2026-02-19 21:59:31.843 | INFO     | src.agentic_rag:grade_documents:523 - Extracted question: What is PICC...
+2026-02-19 21:59:31.843 | INFO     | src.agentic_rag:grade_documents:531 - Found ToolMessage context (length: 2176 chars)
+2026-02-19 21:59:31.843 | INFO     | src.agentic_rag:grade_documents:532 - ToolMessage name: search_kb
+2026-02-19 21:59:31.843 | INFO     | src.agentic_rag:grade_documents:533 - ToolMessage content preview: [Document 1] Source: SickKids | Region: Non-Hong Kong | Category: Venous Access | sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html (Relevance: 0.625)
+## On the day of the PICC insertion...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Ca...
+2026-02-19 21:59:31.843 | WARNING  | src.agentic_rag:grade_documents:547 - Maximum rewrite attempts reached (2), forcing generate_answer
+2026-02-19 21:59:31.844 | INFO     | src.agentic_rag:generate_answer:690 - === Node: generate_answer ===
+2026-02-19 21:59:31.844 | INFO     | src.agentic_rag:generate_answer:711 - Total context length: 6532 chars
+2026-02-19 21:59:31.844 | INFO     | src.agentic_rag:generate_answer:712 - Context preview: [Document 1] Source: SickKids | Region: Non-Hong Kong | Category: Venous Access | sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html (Relevance: 0.625)
+## On the day of the PICC insertion...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Ca...
+2026-02-19 21:59:31.844 | INFO     | src.agentic_rag:generate_answer:713 - Generating answer for question: What is PICC...
+2026-02-19 21:59:39.707 | INFO     | src.agentic_rag:generate_answer:734 - === Running post-agent safety check ===
+2026-02-19 21:59:39.707 | INFO     | src.agentic_rag:generate_answer:735 - Generated Answer to check: A PICC is a type of intravenous line that is inserted into a vein in the arm and threaded up to a large vein near the heart.
+2026-02-19 21:59:39.819 | INFO     | src.guardrails:check_safety:165 - Safety Check Raw Output: SAFE
+
+2026-02-19 21:59:39.819 | INFO     | src.agentic_rag:generate_answer:742 - \u2705 Safety check passed
+2026-02-19 21:59:39.820 | INFO     | src.rag_pipeline:generate_response:211 - ================================================================================
+2026-02-19 21:59:39.820 | INFO     | src.rag_pipeline:generate_response:212 - \U0001f4e8 CONVERSATION MESSAGES (10 total)
+2026-02-19 21:59:39.820 | INFO     | src.rag_pipeline:generate_response:213 - ================================================================================
+2026-02-19 21:59:39.820 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 1 ---
+2026-02-19 21:59:39.820 | INFO     | src.rag_pipeline:generate_response:255 - Type: HumanMessage (User Query)
+2026-02-19 21:59:39.820 | INFO     | src.rag_pipeline:generate_response:258 - Content:
+What is PICC
+2026-02-19 21:59:39.820 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 2 ---
+2026-02-19 21:59:39.820 | INFO     | src.rag_pipeline:generate_response:220 - Type: AIMessage (AI Response)
+2026-02-19 21:59:39.820 | INFO     | src.rag_pipeline:generate_response:225 - Content: (empty)
+2026-02-19 21:59:39.820 | INFO     | src.rag_pipeline:generate_response:229 - 
+Tool Calls (1):
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:233 -   1. Tool: search_kb
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:234 -      Arguments:
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:236 -        - query: What is PICC?
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 3 ---
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:240 - Type: ToolMessage (Tool Result)
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:241 - Tool: search_kb
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:247 - Content (first 1000 chars):
+[Document 1] Source: SickKids | Region: Non-Hong Kong | Category: Venous Access | sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html (Relevance: 0.625)
+## On the day of the PICC insertion...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | central_lines_overview.md (Relevance: 0.561)
+### PICC Lines (Peripherally Inserted Central Catheter) PICC\u7ba1\uff08\u7d93\u5916\u5468\u63d2\u5165\u7684\u4e2d\u592e\u5c0e\u7ba1\uff09
+Inserted through a vein in the arm and threaded up to a large vein near the heart.
+\u901a\u904e\u624b\u81c2\u975c\u8108\u63d2\u5165\uff0c\u7a7f\u7dda\u81f3\u9760\u8fd1\u5fc3\u81df\u7684\u5927\u975c\u8108\u3002
+
+---...
+
+---
+[Document 3] Source: SickKids | Region: Non-Hong Kong | Category: Venous Access | sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html (Relevance: 0.558)
+# Peripherally inserted central catheter (PICC) insertion using image guidance
+
+Learn about what a PICC is and how and why this type of intravenous line is inserted....
+
+---
+[Document 4] Source: SickKids | Region: Non-Hong Kong | Category: ...
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:248 - ... (1176 more characters)
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 4 ---
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:255 - Type: HumanMessage (User Query)
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:258 - Content:
+ll rewrite the question with keywords that are specific and relevant to the topic of PICC.
+
+**Revised Question:**
+
+
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 5 ---
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:220 - Type: AIMessage (AI Response)
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:225 - Content: (empty)
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:229 - 
+Tool Calls (1):
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:233 -   1. Tool: search_kb
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:234 -      Arguments:
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:236 -        - query: What is PICC?
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 6 ---
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:240 - Type: ToolMessage (Tool Result)
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:241 - Tool: search_kb
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:247 - Content (first 1000 chars):
+[Document 1] Source: SickKids | Region: Non-Hong Kong | Category: Venous Access | sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html (Relevance: 0.625)
+## On the day of the PICC insertion...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | central_lines_overview.md (Relevance: 0.561)
+### PICC Lines (Peripherally Inserted Central Catheter) PICC\u7ba1\uff08\u7d93\u5916\u5468\u63d2\u5165\u7684\u4e2d\u592e\u5c0e\u7ba1\uff09
+Inserted through a vein in the arm and threaded up to a large vein near the heart.
+\u901a\u904e\u624b\u81c2\u975c\u8108\u63d2\u5165\uff0c\u7a7f\u7dda\u81f3\u9760\u8fd1\u5fc3\u81df\u7684\u5927\u975c\u8108\u3002
+
+---...
+
+---
+[Document 3] Source: SickKids | Region: Non-Hong Kong | Category: Venous Access | sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html (Relevance: 0.558)
+# Peripherally inserted central catheter (PICC) insertion using image guidance
+
+Learn about what a PICC is and how and why this type of intravenous line is inserted....
+
+---
+[Document 4] Source: SickKids | Region: Non-Hong Kong | Category: ...
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:248 - ... (1176 more characters)
+2026-02-19 21:59:39.821 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 7 ---
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:255 - Type: HumanMessage (User Query)
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:258 - Content:
+ll rewrite the question with specific keywords for search.
+
+**Question:** What is PICC? (Specifically, what does it mean?)
+
+Keywords: PICC, PICCO, PICCO-ID, RFID, Identification, Tracking, Security, Data Storage, Electronic ID, Smart Card, Government ID, Passport, Driver
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 8 ---
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:220 - Type: AIMessage (AI Response)
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:225 - Content: (empty)
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:229 - 
+Tool Calls (1):
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:233 -   1. Tool: search_kb
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:234 -      Arguments:
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:236 -        - query: What is PICC?
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 9 ---
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:240 - Type: ToolMessage (Tool Result)
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:241 - Tool: search_kb
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:247 - Content (first 1000 chars):
+[Document 1] Source: SickKids | Region: Non-Hong Kong | Category: Venous Access | sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html (Relevance: 0.625)
+## On the day of the PICC insertion...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | central_lines_overview.md (Relevance: 0.561)
+### PICC Lines (Peripherally Inserted Central Catheter) PICC\u7ba1\uff08\u7d93\u5916\u5468\u63d2\u5165\u7684\u4e2d\u592e\u5c0e\u7ba1\uff09
+Inserted through a vein in the arm and threaded up to a large vein near the heart.
+\u901a\u904e\u624b\u81c2\u975c\u8108\u63d2\u5165\uff0c\u7a7f\u7dda\u81f3\u9760\u8fd1\u5fc3\u81df\u7684\u5927\u975c\u8108\u3002
+
+---...
+
+---
+[Document 3] Source: SickKids | Region: Non-Hong Kong | Category: Venous Access | sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html (Relevance: 0.558)
+# Peripherally inserted central catheter (PICC) insertion using image guidance
+
+Learn about what a PICC is and how and why this type of intravenous line is inserted....
+
+---
+[Document 4] Source: SickKids | Region: Non-Hong Kong | Category: ...
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:248 - ... (1176 more characters)
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 10 ---
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:220 - Type: AIMessage (AI Response)
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:223 - Content:
+{"answer":"A PICC is a type of intravenous line that is inserted into a vein in the arm and threaded up to a large vein near the heart.","confidence":"high","reasoning":"The context provided describes what a PICC is. Therefore, I will answer based on the information available.","sources":["sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html","central_lines_overview.md","sickkids_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_4705.md"]}
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:279 - ================================================================================
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:366 - Successfully parsed structured output from LLM
+2026-02-19 21:59:39.822 | INFO     | src.rag_pipeline:generate_response:372 - LLM cited sources: ['sickkids_igt_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_9480.html', 'central_lines_overview.md', 'sickkids_Peripherally_inserted_central_catheter_PICC_insertion_using_image_guidance_4705.md']
+2026-02-19 21:59:39.823 | INFO     | src.rag_pipeline:generate_response:390 - ================================================================================
+2026-02-19 21:59:39.823 | INFO     | src.rag_pipeline:generate_response:391 - \u2705 QUERY COMPLETED
+2026-02-19 21:59:39.823 | INFO     | src.rag_pipeline:generate_response:392 - \U0001f4dd Original Query: What is PICC
+2026-02-19 21:59:39.823 | INFO     | src.rag_pipeline:generate_response:393 - \U0001f4e4 Response Length: 124 characters
+2026-02-19 21:59:39.823 | INFO     | src.rag_pipeline:generate_response:394 - \U0001f4da Sources Used: 15
+2026-02-19 21:59:39.823 | INFO     | src.rag_pipeline:generate_response:395 - \u23f1\ufe0f  Total Round Trip Time: 39.87 seconds
+2026-02-19 21:59:39.823 | INFO     | src.rag_pipeline:generate_response:396 - \u23f0 End Time: 21:59:39
+2026-02-19 21:59:39.823 | INFO     | src.rag_pipeline:generate_response:397 - ================================================================================
+2026-02-19 21:59:39.823 | INFO     | src.rag_pipeline:generate_response:152 - ================================================================================
+2026-02-19 21:59:39.824 | INFO     | src.rag_pipeline:generate_response:153 - \U0001f504 STARTING QUERY PROCESSING
+2026-02-19 21:59:39.824 | INFO     | src.rag_pipeline:generate_response:154 - \U0001f4dd Query: Can you further explain?
+2026-02-19 21:59:39.824 | INFO     | src.rag_pipeline:generate_response:155 - \u23f0 Start Time: 21:59:39
+2026-02-19 21:59:39.824 | INFO     | src.rag_pipeline:generate_response:156 - ================================================================================
+2026-02-19 21:59:39.824 | INFO     | src.rag_pipeline:generate_response:162 - Safety assessment: none (emergency: False)
+2026-02-19 21:59:39.824 | INFO     | src.rag_pipeline:generate_response:198 - Invoking LangGraph agentic RAG...
+2026-02-19 21:59:39.825 | INFO     | src.agentic_rag:check_emergency_node:212 - === Node: emergency_check ===
+2026-02-19 21:59:39.825 | INFO     | src.agentic_rag:check_emergency_node:232 - No emergency detected, continuing
+2026-02-19 21:59:39.827 | INFO     | src.agentic_rag:generate_query_or_respond:303 - === Node: generate_query_or_respond ===
+2026-02-19 21:59:39.827 | INFO     | src.agentic_rag:generate_query_or_respond:304 - State messages count: 1
+2026-02-19 21:59:40.347 | INFO     | src.agentic_rag:generate_query_or_respond:462 - Manual tool call detected: search_kb
+2026-02-19 21:59:40.472 | INFO     | src.agentic_rag:retrieve_with_timing:873 - ================================================================================
+2026-02-19 21:59:40.472 | INFO     | src.agentic_rag:retrieve_with_timing:875 - \U0001f527 TOOL CALLED: search_kb
+2026-02-19 21:59:40.472 | INFO     | src.agentic_rag:retrieve_with_timing:876 - \U0001f4dd Query/Arguments:
+2026-02-19 21:59:40.472 | INFO     | src.agentic_rag:retrieve_with_timing:878 -    query: Can you further explain?
+2026-02-19 21:59:40.472 | INFO     | src.agentic_rag:retrieve_with_timing:879 - --------------------------------------------------------------------------------
+2026-02-19 21:59:40.473 | INFO     | src.tools:search_kb:197 - \U0001f50d Searching knowledge base with query: Can you further explain?...
+2026-02-19 21:59:45.546 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 1 Metadata:
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:240 -    Filename: complications_qa.md
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:241 -    Score: 0.004
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 2 Metadata:
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:240 -    Filename: radiologist_brief.md
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:241 -    Score: 0.003
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 3 Metadata:
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:238 -    Procedure Category: Pain Injection Relief Related
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:240 -    Filename: anesthesia_what_to_expect.md
+2026-02-19 21:59:45.547 | INFO     | src.tools:search_kb:241 -    Score: 0.499
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 4 Metadata:
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:238 -    Procedure Category: Embolization Related
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:240 -    Filename: embolization_overview.md
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:241 -    Score: 0.498
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 5 Metadata:
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:238 -    Procedure Category: Pain Injection Relief Related
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:240 -    Filename: procedure_day_preparation.md
+2026-02-19 21:59:45.548 | INFO     | src.tools:search_kb:241 -    Score: 0.498
+2026-02-19 21:59:45.551 | INFO     | src.agentic_rag:retrieve_with_timing:889 - \u23f1\ufe0f  Execution Time: 5.08 seconds
+2026-02-19 21:59:45.551 | INFO     | src.agentic_rag:retrieve_with_timing:890 - ================================================================================
+2026-02-19 21:59:45.552 | INFO     | src.agentic_rag:grade_documents:513 - === Node: grade_documents ===
+2026-02-19 21:59:45.552 | INFO     | src.agentic_rag:grade_documents:515 - State messages count: 3
+2026-02-19 21:59:45.552 | INFO     | src.agentic_rag:grade_documents:523 - Extracted question: Can you further explain?...
+2026-02-19 21:59:45.552 | INFO     | src.agentic_rag:grade_documents:531 - Found ToolMessage context (length: 1036 chars)
+2026-02-19 21:59:45.552 | INFO     | src.agentic_rag:grade_documents:532 - ToolMessage name: search_kb
+2026-02-19 21:59:45.552 | INFO     | src.agentic_rag:grade_documents:533 - ToolMessage content preview: [Document 1] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | complications_qa.md (Relevance: 0.004)
+# Complications Q&A: When to Seek Help...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | radiologist_brief.md (Relevance: 0.003)
+### 3\ufe0f\u20e3 Comp...
+2026-02-19 21:59:52.076 | INFO     | src.agentic_rag:grade_documents:575 - Structured output grade: :[0.004,0.003,0.499,0.498]} }
+2026-02-19 21:59:52.076 | INFO     | src.agentic_rag:grade_documents:590 - Document grade: :[0.004,0.003,0.499,0.498]} }
+2026-02-19 21:59:52.076 | INFO     | src.agentic_rag:grade_documents:591 - Routing to: rewrite_question
+2026-02-19 21:59:52.077 | INFO     | src.agentic_rag:rewrite_question:604 - === Node: rewrite_question ===
+2026-02-19 21:59:52.077 | INFO     | src.agentic_rag:rewrite_question:606 - State messages count: 3
+2026-02-19 21:59:52.077 | INFO     | src.agentic_rag:rewrite_question:628 - Original question: Can you further explain?
+2026-02-19 21:59:59.355 | INFO     | src.agentic_rag:rewrite_question:635 - Rewrite response type: AIMessage
+2026-02-19 21:59:59.355 | INFO     | src.agentic_rag:rewrite_question:638 - Raw rewritten response: Okay, I understand. Let's rewrite the question with specific keywords that will help me find relevant information.
+
+**Original:** Can you further explain?
+
+**Rewritten (with keywords):** "Can you furt...
+2026-02-19 21:59:59.355 | INFO     | src.agentic_rag:rewrite_question:671 - Rewritten question: s rewrite the question with specific keywords that will help me find relevant information.
+
+**Original:** Can you further explain?
+
+**Rewritten (with keywords):** 
+2026-02-19 21:59:59.355 | INFO     | src.agentic_rag:rewrite_question:674 - ================================================================================
+2026-02-19 21:59:59.355 | INFO     | src.agentic_rag:rewrite_question:675 - \U0001f504 QUESTION REWRITTEN:
+2026-02-19 21:59:59.355 | INFO     | src.agentic_rag:rewrite_question:676 - Original Question: Can you further explain?
+2026-02-19 21:59:59.355 | INFO     | src.agentic_rag:rewrite_question:677 - Rewritten Question: s rewrite the question with specific keywords that will help me find relevant information.
+
+**Original:** Can you further explain?
+
+**Rewritten (with keywords):** 
+2026-02-19 21:59:59.355 | INFO     | src.agentic_rag:rewrite_question:678 - ================================================================================
+2026-02-19 21:59:59.357 | INFO     | src.agentic_rag:generate_query_or_respond:303 - === Node: generate_query_or_respond ===
+2026-02-19 21:59:59.357 | INFO     | src.agentic_rag:generate_query_or_respond:304 - State messages count: 4
+2026-02-19 22:00:00.025 | INFO     | src.agentic_rag:generate_query_or_respond:462 - Manual tool call detected: search_kb
+2026-02-19 22:00:00.160 | INFO     | src.agentic_rag:retrieve_with_timing:873 - ================================================================================
+2026-02-19 22:00:00.160 | INFO     | src.agentic_rag:retrieve_with_timing:875 - \U0001f527 TOOL CALLED: search_kb
+2026-02-19 22:00:00.160 | INFO     | src.agentic_rag:retrieve_with_timing:876 - \U0001f4dd Query/Arguments:
+2026-02-19 22:00:00.160 | INFO     | src.agentic_rag:retrieve_with_timing:878 -    query: Can you further explain?
+2026-02-19 22:00:00.160 | INFO     | src.agentic_rag:retrieve_with_timing:879 - --------------------------------------------------------------------------------
+2026-02-19 22:00:00.162 | INFO     | src.tools:search_kb:197 - \U0001f50d Searching knowledge base with query: Can you further explain?...
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 1 Metadata:
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:240 -    Filename: complications_qa.md
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:241 -    Score: 0.004
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 2 Metadata:
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:240 -    Filename: radiologist_brief.md
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:241 -    Score: 0.003
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 3 Metadata:
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:238 -    Procedure Category: Pain Injection Relief Related
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:240 -    Filename: anesthesia_what_to_expect.md
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:241 -    Score: 0.499
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 4 Metadata:
+2026-02-19 22:00:04.965 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 22:00:04.966 | INFO     | src.tools:search_kb:238 -    Procedure Category: Embolization Related
+2026-02-19 22:00:04.966 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 22:00:04.966 | INFO     | src.tools:search_kb:240 -    Filename: embolization_overview.md
+2026-02-19 22:00:04.966 | INFO     | src.tools:search_kb:241 -    Score: 0.498
+2026-02-19 22:00:04.966 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 5 Metadata:
+2026-02-19 22:00:04.966 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 22:00:04.966 | INFO     | src.tools:search_kb:238 -    Procedure Category: Pain Injection Relief Related
+2026-02-19 22:00:04.966 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 22:00:04.966 | INFO     | src.tools:search_kb:240 -    Filename: procedure_day_preparation.md
+2026-02-19 22:00:04.966 | INFO     | src.tools:search_kb:241 -    Score: 0.498
+2026-02-19 22:00:04.969 | INFO     | src.agentic_rag:retrieve_with_timing:889 - \u23f1\ufe0f  Execution Time: 4.81 seconds
+2026-02-19 22:00:04.969 | INFO     | src.agentic_rag:retrieve_with_timing:890 - ================================================================================
+2026-02-19 22:00:04.970 | INFO     | src.agentic_rag:grade_documents:513 - === Node: grade_documents ===
+2026-02-19 22:00:04.970 | INFO     | src.agentic_rag:grade_documents:515 - State messages count: 6
+2026-02-19 22:00:04.970 | INFO     | src.agentic_rag:grade_documents:523 - Extracted question: Can you further explain?...
+2026-02-19 22:00:04.970 | INFO     | src.agentic_rag:grade_documents:531 - Found ToolMessage context (length: 1036 chars)
+2026-02-19 22:00:04.970 | INFO     | src.agentic_rag:grade_documents:532 - ToolMessage name: search_kb
+2026-02-19 22:00:04.970 | INFO     | src.agentic_rag:grade_documents:533 - ToolMessage content preview: [Document 1] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | complications_qa.md (Relevance: 0.004)
+# Complications Q&A: When to Seek Help...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | radiologist_brief.md (Relevance: 0.003)
+### 3\ufe0f\u20e3 Comp...
+2026-02-19 22:00:10.304 | INFO     | src.agentic_rag:grade_documents:575 - Structured output grade: }**
+2026-02-19 22:00:10.304 | INFO     | src.agentic_rag:grade_documents:590 - Document grade: }**
+2026-02-19 22:00:10.304 | INFO     | src.agentic_rag:grade_documents:591 - Routing to: rewrite_question
+2026-02-19 22:00:10.305 | INFO     | src.agentic_rag:rewrite_question:604 - === Node: rewrite_question ===
+2026-02-19 22:00:10.305 | INFO     | src.agentic_rag:rewrite_question:606 - State messages count: 6
+2026-02-19 22:00:10.305 | INFO     | src.agentic_rag:rewrite_question:628 - Original question: Can you further explain?
+2026-02-19 22:00:11.167 | INFO     | src.agentic_rag:rewrite_question:635 - Rewrite response type: AIMessage
+2026-02-19 22:00:11.167 | INFO     | src.agentic_rag:rewrite_question:638 - Raw rewritten response: Okay, I need more information about what you're asking me to do. Please provide some context or a specific task that I can perform. For example:
+
+*   **"Can you further explain?"** (This implies the u...
+2026-02-19 22:00:11.167 | INFO     | src.agentic_rag:rewrite_question:671 - Rewritten question: re asking me to do. Please provide some context or a specific task that I can perform. For example:
+
+*   **
+2026-02-19 22:00:11.167 | INFO     | src.agentic_rag:rewrite_question:674 - ================================================================================
+2026-02-19 22:00:11.167 | INFO     | src.agentic_rag:rewrite_question:675 - \U0001f504 QUESTION REWRITTEN:
+2026-02-19 22:00:11.167 | INFO     | src.agentic_rag:rewrite_question:676 - Original Question: Can you further explain?
+2026-02-19 22:00:11.167 | INFO     | src.agentic_rag:rewrite_question:677 - Rewritten Question: re asking me to do. Please provide some context or a specific task that I can perform. For example:
+
+*   **
+2026-02-19 22:00:11.167 | INFO     | src.agentic_rag:rewrite_question:678 - ================================================================================
+2026-02-19 22:00:11.168 | INFO     | src.agentic_rag:generate_query_or_respond:303 - === Node: generate_query_or_respond ===
+2026-02-19 22:00:11.168 | INFO     | src.agentic_rag:generate_query_or_respond:304 - State messages count: 7
+2026-02-19 22:00:12.062 | INFO     | src.agentic_rag:generate_query_or_respond:462 - Manual tool call detected: search_kb
+2026-02-19 22:00:12.170 | INFO     | src.agentic_rag:retrieve_with_timing:873 - ================================================================================
+2026-02-19 22:00:12.170 | INFO     | src.agentic_rag:retrieve_with_timing:875 - \U0001f527 TOOL CALLED: search_kb
+2026-02-19 22:00:12.170 | INFO     | src.agentic_rag:retrieve_with_timing:876 - \U0001f4dd Query/Arguments:
+2026-02-19 22:00:12.170 | INFO     | src.agentic_rag:retrieve_with_timing:878 -    query: Can you further explain?
+2026-02-19 22:00:12.170 | INFO     | src.agentic_rag:retrieve_with_timing:879 - --------------------------------------------------------------------------------
+2026-02-19 22:00:12.172 | INFO     | src.tools:search_kb:197 - \U0001f50d Searching knowledge base with query: Can you further explain?...
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 1 Metadata:
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:240 -    Filename: complications_qa.md
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:241 -    Score: 0.004
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 2 Metadata:
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:238 -    Procedure Category: Venous Access
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:240 -    Filename: radiologist_brief.md
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:241 -    Score: 0.003
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 3 Metadata:
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:238 -    Procedure Category: Pain Injection Relief Related
+2026-02-19 22:00:17.029 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:240 -    Filename: anesthesia_what_to_expect.md
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:241 -    Score: 0.499
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 4 Metadata:
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:238 -    Procedure Category: Embolization Related
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:240 -    Filename: embolization_overview.md
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:241 -    Score: 0.498
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:236 - \U0001f4c4 Document 5 Metadata:
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:237 -    Region: Non-Hong Kong
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:238 -    Procedure Category: Pain Injection Relief Related
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:239 -    Source Org: Unknown
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:240 -    Filename: procedure_day_preparation.md
+2026-02-19 22:00:17.030 | INFO     | src.tools:search_kb:241 -    Score: 0.498
+2026-02-19 22:00:17.032 | INFO     | src.agentic_rag:retrieve_with_timing:889 - \u23f1\ufe0f  Execution Time: 4.86 seconds
+2026-02-19 22:00:17.033 | INFO     | src.agentic_rag:retrieve_with_timing:890 - ================================================================================
+2026-02-19 22:00:17.033 | INFO     | src.agentic_rag:grade_documents:513 - === Node: grade_documents ===
+2026-02-19 22:00:17.034 | INFO     | src.agentic_rag:grade_documents:515 - State messages count: 9
+2026-02-19 22:00:17.034 | INFO     | src.agentic_rag:grade_documents:523 - Extracted question: Can you further explain?...
+2026-02-19 22:00:17.034 | INFO     | src.agentic_rag:grade_documents:531 - Found ToolMessage context (length: 1036 chars)
+2026-02-19 22:00:17.034 | INFO     | src.agentic_rag:grade_documents:532 - ToolMessage name: search_kb
+2026-02-19 22:00:17.034 | INFO     | src.agentic_rag:grade_documents:533 - ToolMessage content preview: [Document 1] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | complications_qa.md (Relevance: 0.004)
+# Complications Q&A: When to Seek Help...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | radiologist_brief.md (Relevance: 0.003)
+### 3\ufe0f\u20e3 Comp...
+2026-02-19 22:00:17.034 | WARNING  | src.agentic_rag:grade_documents:547 - Maximum rewrite attempts reached (2), forcing generate_answer
+2026-02-19 22:00:17.035 | INFO     | src.agentic_rag:generate_answer:690 - === Node: generate_answer ===
+2026-02-19 22:00:17.035 | INFO     | src.agentic_rag:generate_answer:711 - Total context length: 3112 chars
+2026-02-19 22:00:17.035 | INFO     | src.agentic_rag:generate_answer:712 - Context preview: [Document 1] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | complications_qa.md (Relevance: 0.004)
+# Complications Q&A: When to Seek Help...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | radiologist_brief.md (Relevance: 0.003)
+### 3\ufe0f\u20e3 Comp...
+2026-02-19 22:00:17.036 | INFO     | src.agentic_rag:generate_answer:713 - Generating answer for question: Can you further explain?...
+2026-02-19 22:00:23.473 | INFO     | src.agentic_rag:generate_answer:734 - === Running post-agent safety check ===
+2026-02-19 22:00:23.473 | INFO     | src.agentic_rag:generate_answer:735 - Generated Answer to check: Please remember, this information is for educational purposes only and is not a substitute for professional medical advice. Always discuss any specific medical questions or concerns with your doctor or nurse.
+2026-02-19 22:00:23.714 | INFO     | src.guardrails:check_safety:165 - Safety Check Raw Output: Okay, I understand the context. I will respond as SAFE if it aligns with the provided guidelines.
+
+2026-02-19 22:00:23.714 | INFO     | src.agentic_rag:generate_answer:742 - \u2705 Safety check passed
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:211 - ================================================================================
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:212 - \U0001f4e8 CONVERSATION MESSAGES (10 total)
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:213 - ================================================================================
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 1 ---
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:255 - Type: HumanMessage (User Query)
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:258 - Content:
+Can you further explain?
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 2 ---
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:220 - Type: AIMessage (AI Response)
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:225 - Content: (empty)
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:229 - 
+Tool Calls (1):
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:233 -   1. Tool: search_kb
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:234 -      Arguments:
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:236 -        - query: Can you further explain?
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 3 ---
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:240 - Type: ToolMessage (Tool Result)
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:241 - Tool: search_kb
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:247 - Content (first 1000 chars):
+[Document 1] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | complications_qa.md (Relevance: 0.004)
+# Complications Q&A: When to Seek Help...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | radiologist_brief.md (Relevance: 0.003)
+### 3\ufe0f\u20e3 Completeness (1-3 scale)
+> "Does the answer provide sufficient information without being overly verbose?"
+
+| Score | Meaning |
+|:---:|---|
+| 3 | Fully Complete |
+| 2 | Adequate |
+| 1 | Incomplete |
+
+---...
+
+---
+[Document 3] Source: Unknown | Region: Non-Hong Kong | Category: Pain Injection Relief Related | anesthesia_what_to_expect.md (Relevance: 0.499)
+# What to Expect with Anesthesia...
+
+---
+[Document 4] Source: Unknown | Region: Non-Hong Kong | Category: Embolization Related | embolization_overview.md (Relevance: 0.498)
+## How to Prepare \u5982\u4f55\u6e96\u5099...
+
+---
+[Document 5] Source: Unknown | Region: Non-Hong Kong | Category: Pain Injection Relief Related | procedure_day_preparation.md (Relevance: 0.498)...
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:248 - ... (36 more characters)
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 4 ---
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:255 - Type: HumanMessage (User Query)
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:258 - Content:
+s rewrite the question with specific keywords that will help me find relevant information.
+
+**Original:** Can you further explain?
+
+**Rewritten (with keywords):** 
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 5 ---
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:220 - Type: AIMessage (AI Response)
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:225 - Content: (empty)
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:229 - 
+Tool Calls (1):
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:233 -   1. Tool: search_kb
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:234 -      Arguments:
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:236 -        - query: Can you further explain?
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 6 ---
+2026-02-19 22:00:23.716 | INFO     | src.rag_pipeline:generate_response:240 - Type: ToolMessage (Tool Result)
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:241 - Tool: search_kb
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:247 - Content (first 1000 chars):
+[Document 1] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | complications_qa.md (Relevance: 0.004)
+# Complications Q&A: When to Seek Help...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | radiologist_brief.md (Relevance: 0.003)
+### 3\ufe0f\u20e3 Completeness (1-3 scale)
+> "Does the answer provide sufficient information without being overly verbose?"
+
+| Score | Meaning |
+|:---:|---|
+| 3 | Fully Complete |
+| 2 | Adequate |
+| 1 | Incomplete |
+
+---...
+
+---
+[Document 3] Source: Unknown | Region: Non-Hong Kong | Category: Pain Injection Relief Related | anesthesia_what_to_expect.md (Relevance: 0.499)
+# What to Expect with Anesthesia...
+
+---
+[Document 4] Source: Unknown | Region: Non-Hong Kong | Category: Embolization Related | embolization_overview.md (Relevance: 0.498)
+## How to Prepare \u5982\u4f55\u6e96\u5099...
+
+---
+[Document 5] Source: Unknown | Region: Non-Hong Kong | Category: Pain Injection Relief Related | procedure_day_preparation.md (Relevance: 0.498)...
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:248 - ... (36 more characters)
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 7 ---
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:255 - Type: HumanMessage (User Query)
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:258 - Content:
+re asking me to do. Please provide some context or a specific task that I can perform. For example:
+
+*   **
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 8 ---
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:220 - Type: AIMessage (AI Response)
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:225 - Content: (empty)
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:229 - 
+Tool Calls (1):
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:233 -   1. Tool: search_kb
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:234 -      Arguments:
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:236 -        - query: Can you further explain?
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 9 ---
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:240 - Type: ToolMessage (Tool Result)
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:241 - Tool: search_kb
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:247 - Content (first 1000 chars):
+[Document 1] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | complications_qa.md (Relevance: 0.004)
+# Complications Q&A: When to Seek Help...
+
+---
+[Document 2] Source: Unknown | Region: Non-Hong Kong | Category: Venous Access | radiologist_brief.md (Relevance: 0.003)
+### 3\ufe0f\u20e3 Completeness (1-3 scale)
+> "Does the answer provide sufficient information without being overly verbose?"
+
+| Score | Meaning |
+|:---:|---|
+| 3 | Fully Complete |
+| 2 | Adequate |
+| 1 | Incomplete |
+
+---...
+
+---
+[Document 3] Source: Unknown | Region: Non-Hong Kong | Category: Pain Injection Relief Related | anesthesia_what_to_expect.md (Relevance: 0.499)
+# What to Expect with Anesthesia...
+
+---
+[Document 4] Source: Unknown | Region: Non-Hong Kong | Category: Embolization Related | embolization_overview.md (Relevance: 0.498)
+## How to Prepare \u5982\u4f55\u6e96\u5099...
+
+---
+[Document 5] Source: Unknown | Region: Non-Hong Kong | Category: Pain Injection Relief Related | procedure_day_preparation.md (Relevance: 0.498)...
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:248 - ... (36 more characters)
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:216 - 
+--- Message 10 ---
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:220 - Type: AIMessage (AI Response)
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:223 - Content:
+{"answer":"Please remember, this information is for educational purposes only and is not a substitute for professional medical advice. Always discuss any specific medical questions or concerns with your doctor or nurse.","confidence":"high","reasoning":"The provided context indicates that the answer should be in English as the question is in English.","sources":["Document 1","Document 2","Document 3","Document 4","Document 5"]}
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:279 - ================================================================================
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:366 - Successfully parsed structured output from LLM
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:372 - LLM cited sources: ['Document 1', 'Document 2', 'Document 3', 'Document 4', 'Document 5']
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:390 - ================================================================================
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:391 - \u2705 QUERY COMPLETED
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:392 - \U0001f4dd Original Query: Can you further explain?
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:393 - \U0001f4e4 Response Length: 208 characters
+2026-02-19 22:00:23.717 | INFO     | src.rag_pipeline:generate_response:394 - \U0001f4da Sources Used: 15
+2026-02-19 22:00:23.718 | INFO     | src.rag_pipeline:generate_response:395 - \u23f1\ufe0f  Total Round Trip Time: 43.89 seconds
+2026-02-19 22:00:23.718 | INFO     | src.rag_pipeline:generate_response:396 - \u23f0 End Time: 22:00:23
+2026-02-19 22:00:23.718 | INFO     | src.rag_pipeline:generate_response:397 - ================================================================================
+Initializing components...
+
+
+==================================================
+Round 1: What is PICC
+==================================================
+
+Response:
+A PICC is a type of intravenous line that is inserted into a vein in the arm and threaded up to a large vein near the heart.
+
+
+==================================================
+Round 2: Can you further explain?
+==================================================
+
+Response:
+Please remember, this information is for educational purposes only and is not a substitute for professional medical advice. Always discuss any specific medical questions or concerns with your doctor or nurse.

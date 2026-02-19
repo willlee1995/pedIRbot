@@ -19,7 +19,7 @@ class ConversationTurn:
 class ConversationMemory:
     """
     Manages conversation history for multi-turn RAG interactions.
-    
+
     Features:
     - Maintains rolling window of conversation turns
     - Summarizes older context when window is full
@@ -39,7 +39,7 @@ class ConversationMemory:
         self.history: deque[ConversationTurn] = deque(maxlen=max_turns * 2)
         self.summary: str = ""
         self.session_id: str = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
+
         logger.info(f"Initialized ConversationMemory (max_turns={max_turns}, session={self.session_id})")
 
     def add_turn(self, role: str, content: str, metadata: Optional[Dict[str, Any]] = None) -> None:
@@ -63,7 +63,7 @@ class ConversationMemory:
         """Add a user message to memory."""
         self.add_turn("user", content)
 
-    def add_assistant_message(self, content: str, sources: List[Dict] = None, 
+    def add_assistant_message(self, content: str, sources: List[Dict] = None,
                                safety_info: Dict = None) -> None:
         """Add an assistant message to memory with optional metadata."""
         metadata = {}
@@ -72,7 +72,7 @@ class ConversationMemory:
             metadata["source_files"] = [s.get("filename", "unknown") for s in sources[:5]]
         if safety_info:
             metadata["safety_assessment"] = safety_info
-        
+
         self.add_turn("assistant", content, metadata)
 
     def get_context_for_query(self, current_query: str, num_turns: int = 4) -> str:
@@ -91,7 +91,7 @@ class ConversationMemory:
 
         # Get recent turns
         recent_turns = list(self.history)[-num_turns:]
-        
+
         if not recent_turns:
             return ""
 
@@ -104,8 +104,8 @@ class ConversationMemory:
 
         return "\n".join(context_parts)
 
-    def get_messages_for_llm(self, system_prompt: str, current_query: str, 
-                             include_history: bool = True, 
+    def get_messages_for_llm(self, system_prompt: str, current_query: str,
+                             include_history: bool = True,
                              max_history_turns: int = 4) -> List[Dict[str, str]]:
         """
         Build message list for LLM including conversation history.
@@ -189,7 +189,8 @@ class ConversationMemory:
         follow_up_patterns = [
             "what about", "how about", "and ", "also ", "more about",
             "tell me more", "explain more", "what else", "anything else",
-            "why", "how long", "when", "is it", "can i", "should i",
+            "why", "how long", "when", "is it", "can i", "can you", "could you",
+            "should i", "would you", "further", "explain",
             "那", "還有", "另外", "為什麼", "怎麼", "可以", "需要"
         ]
 

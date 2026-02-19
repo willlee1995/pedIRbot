@@ -41,12 +41,34 @@ class DocumentDatabase:
                 region TEXT,
                 procedure_category TEXT,
                 procedure_type TEXT,
+                doc_type TEXT,
+                age_group TEXT,
+                target_audience TEXT,
                 file_path TEXT,
                 metadata_json TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
+
+        # Create chunks table
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS chunks (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                chunk_id TEXT UNIQUE NOT NULL,
+                document_id TEXT NOT NULL,
+                content TEXT NOT NULL,
+                section_title TEXT,
+                chunk_index INTEGER,
+                chunking_method TEXT,
+                metadata_json TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY(document_id) REFERENCES documents(document_id)
+            )
+        """)
+
+        # Migrate: add new columns to existing documents table if missing
+        self._migrate_add_columns(cursor)
 
         # Create indexes for faster queries
         cursor.execute("""
@@ -64,9 +86,37 @@ class DocumentDatabase:
         cursor.execute("""
             CREATE INDEX IF NOT EXISTS idx_filename ON documents(filename)
         """)
+        cursor.execute("""
+            CREATE INDEX IF NOT EXISTS idx_doc_type ON documents(doc_type)
+        """)
+        cursor.execute("""
+            CREATE INDEX IF NOT EXISTS idx_age_group ON documents(age_group)
+        """)
+        cursor.execute("""
+            CREATE INDEX IF NOT EXISTS idx_chunks_document_id ON chunks(document_id)
+        """)
+        cursor.execute("""
+            CREATE INDEX IF NOT EXISTS idx_chunk_id ON chunks(chunk_id)
+        """)
 
         self.connection.commit()
         logger.info(f"Initialized document database at {self.db_path}")
+
+    def _migrate_add_columns(self, cursor):
+        """Add new columns to existing tables if they don't exist (safe migration)."""
+        # Check existing columns
+        cursor.execute("PRAGMA table_info(documents)")
+        existing_cols = {row[1] for row in cursor.fetchall()}
+
+        new_cols = {
+            'doc_type': 'TEXT',
+            'age_group': 'TEXT',
+            'target_audience': 'TEXT',
+        }
+        for col_name, col_type in new_cols.items():
+            if col_name not in existing_cols:
+                cursor.execute(f"ALTER TABLE documents ADD COLUMN {col_name} {col_type}")
+                logger.info(f"Migrated: added column '{col_name}' to documents table")
 
     def store_document(
         self,
@@ -96,6 +146,9 @@ class DocumentDatabase:
             region = metadata.get('region', '')
             procedure_category = metadata.get('procedure_category', '')
             procedure_type = metadata.get('procedure_type', '')
+            doc_type = metadata.get('doc_type', '')
+            age_group = metadata.get('age_group', '')
+            target_audience = metadata.get('target_audience', '')
             file_path = metadata.get('source', '')
 
             # Store full metadata as JSON
@@ -104,8 +157,9 @@ class DocumentDatabase:
             cursor.execute("""
                 INSERT OR REPLACE INTO documents (
                     document_id, filename, content, source_org, region,
-                    procedure_category, procedure_type, file_path, metadata_json, updated_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    procedure_category, procedure_type, doc_type, age_group,
+                    target_audience, file_path, metadata_json, updated_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 document_id,
                 filename,
@@ -114,6 +168,9 @@ class DocumentDatabase:
                 region,
                 procedure_category,
                 procedure_type,
+                doc_type,
+                age_group,
+                target_audience,
                 file_path,
                 metadata_json,
                 datetime.now().isoformat()
@@ -126,6 +183,124 @@ class DocumentDatabase:
             logger.error(f"Error storing document {document_id}: {e}")
             logger.exception(e)
             return False
+
+    def store_chunk(
+        self,
+        chunk_id: str,
+        document_id: str,
+        content: str,
+        section_title: str = '',
+        chunk_index: int = 0,
+        chunking_method: str = '',
+        metadata: Dict[str, Any] = None
+    ) -> bool:
+        """
+        Store a document chunk in the chunks table.
+
+        Args:
+            chunk_id: Unique chunk identifier
+            document_id: Parent document ID
+            content: Chunk text content
+            section_title: Section heading this chunk belongs to
+            chunk_index: Position of chunk within the document
+            chunking_method: How the chunk was created (semantic, sliding_window, etc.)
+            metadata: Additional metadata as dict
+
+        Returns:
+            True if successful
+        """
+        try:
+            cursor = self.connection.cursor()
+            metadata_json = json.dumps(metadata or {})
+
+            cursor.execute("""
+                INSERT OR REPLACE INTO chunks (
+                    chunk_id, document_id, content, section_title,
+                    chunk_index, chunking_method, metadata_json
+                ) VALUES (?, ?, ?, ?, ?, ?, ?)
+            """, (
+                chunk_id,
+                document_id,
+                content,
+                section_title,
+                chunk_index,
+                chunking_method,
+                metadata_json,
+            ))
+
+            self.connection.commit()
+            return True
+        except Exception as e:
+            logger.error(f"Error storing chunk {chunk_id}: {e}")
+            return False
+
+    def get_chunks_by_document(self, document_id: str) -> List[Dict[str, Any]]:
+        """
+        Retrieve all chunks for a given document.
+
+        Args:
+            document_id: Parent document ID
+
+        Returns:
+            List of chunk dicts ordered by chunk_index
+        """
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("""
+                SELECT * FROM chunks WHERE document_id = ? ORDER BY chunk_index
+            """, (document_id,))
+
+            chunks = []
+            for row in cursor.fetchall():
+                metadata = json.loads(row['metadata_json']) if row['metadata_json'] else {}
+                chunks.append({
+                    'chunk_id': row['chunk_id'],
+                    'document_id': row['document_id'],
+                    'content': row['content'],
+                    'section_title': row['section_title'],
+                    'chunk_index': row['chunk_index'],
+                    'chunking_method': row['chunking_method'],
+                    'metadata': metadata,
+                })
+            return chunks
+        except Exception as e:
+            logger.error(f"Error retrieving chunks for {document_id}: {e}")
+            return []
+
+    def get_all_documents(self) -> List[Dict[str, Any]]:
+        """
+        Retrieve all documents (for review export).
+
+        Returns:
+            List of all document dicts
+        """
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT * FROM documents ORDER BY filename")
+
+            documents = []
+            for row in cursor.fetchall():
+                metadata = json.loads(row['metadata_json']) if row['metadata_json'] else {}
+                documents.append({
+                    'document_id': row['document_id'],
+                    'filename': row['filename'],
+                    'content': row['content'],
+                    'source_org': row['source_org'],
+                    'region': row['region'],
+                    'procedure_category': row['procedure_category'],
+                    'procedure_type': row['procedure_type'],
+                    'doc_type': row['doc_type'] if 'doc_type' in row.keys() else '',
+                    'age_group': row['age_group'] if 'age_group' in row.keys() else '',
+                    'target_audience': row['target_audience'] if 'target_audience' in row.keys() else '',
+                    'file_path': row['file_path'],
+                    'metadata': metadata,
+                    'created_at': row['created_at'],
+                    'updated_at': row['updated_at']
+                })
+            return documents
+        except Exception as e:
+            logger.error(f"Error retrieving all documents: {e}")
+            return []
 
     def get_document(self, document_id: str) -> Optional[Dict[str, Any]]:
         """
@@ -271,7 +446,7 @@ class DocumentDatabase:
             query = f"""
                 SELECT * FROM documents
                 WHERE {where_clause}
-                ORDER BY 
+                ORDER BY
                     CASE WHEN region = 'Hong Kong' THEN 1 ELSE 2 END ASC,
                     updated_at DESC
                 LIMIT ?
@@ -330,12 +505,13 @@ class DocumentDatabase:
             return {}
 
     def reset_database(self):
-        """Reset database (delete all documents)."""
+        """Reset database (delete all documents and chunks)."""
         try:
             cursor = self.connection.cursor()
+            cursor.execute("DELETE FROM chunks")
             cursor.execute("DELETE FROM documents")
             self.connection.commit()
-            logger.warning("Database reset - all documents deleted")
+            logger.warning("Database reset - all documents and chunks deleted")
         except Exception as e:
             logger.error(f"Error resetting database: {e}")
 

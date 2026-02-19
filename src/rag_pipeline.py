@@ -399,6 +399,7 @@ If you have urgent questions about your procedure, please contact the HKCH IR nu
             return {
                 'response': response_text,
                 'sources': sources,
+                'source_documents': sources,  # Alias for compatibility
                 'is_emergency': False,
                 'total_time': total_time,
             }

@@ -47,71 +47,48 @@ The process will be executed in three steps:
 2. **Paraphrasing and Question Variation Generation:** To ensure the chatbot is robust to the myriad ways users might phrase a query, the LLM will be used for data augmentation. For each canonical Q\&A pair generated in the previous step, the model will be prompted to create 5 to 10 semantically equivalent variations of the question. For example, for the question "How long does my child need to fast before the procedure?", variations might include "What are the rules for eating and drinking?", "Can she have a sip of water in the morning?", and "When should he have his last meal?". This step is crucial for the retriever's ability to find the correct context regardless of the user's specific wording.
 3. **Mandatory Manual Verification:** This is the most critical quality control step in the entire data preparation pipeline. Following the rigorous protocol of the NeuroBot study, every single LLM-generated Q\&A pair and its variations will be exported into a structured format (e.g., a spreadsheet) and undergo a manual review by the HKCH pediatric IR clinical team (nurses and radiologists).1 The clinicians will verify the accuracy of each answer against the source text and the clinical appropriateness of each question. Any pairs that are inaccurate, ambiguous, or clinically irrelevant will be either corrected or discarded. This human-in-the-loop validation is a non-negotiable safeguard to ensure 100% clinical accuracy of the data that will ultimately power the chatbot.
 
-### **1.5 Phase 5: Structuring the Knowledge Base for Optimal Retrieval**
 
-The final step in preparing the knowledge base is to structure the validated data for efficient ingestion and processing by the RAG system's retrieval component. The collection of verified Q\&A pairs will be converted from its review format into a structured data format, such as JSONL (JSON Lines).
-Each entry in the JSONL file will represent a single knowledge chunk and will contain several key fields:
 
-- question: The canonical question.
-- answer: The verified, detailed answer.
-- metadata: A nested object containing crucial tags for filtering and analysis, such as:
-  - procedure_type: (e.g., "biopsy," "embolization").
-  - information_category: (e.g., "Preparation," "Risks," "Post-Procedure Care," "Medication").
-  - source_document: The original document from which the information was derived.
-  - age_band: (e.g., "5-8," "9-12," "13-17," "Parent").
+## **II. Architecting a Dual-Path Agentic RAG Pipeline**
 
-This structured format allows the data to be easily parsed, processed by a text embedding model, and loaded into a vector database. The metadata, in particular, will enable more advanced retrieval strategies in the future, such as filtering results based on the specific procedure a user is asking about.
+A dual-path RAG pipeline solves the limitations of traditional vector-only search by running two retrieval strategies in parallel—semantic search and metadata filtering. These paths merge into a refined candidate set, which is then handed off to an intelligent agent for deeper reading and reasoning.
 
-## **II. Architectural Blueprint for the RAG-Powered Patient Education Chatbot**
+### **2.1 Phase 1: Ingestion & Indexing (Data Layout)**
 
-The technical architecture of the chatbot is designed with two primary objectives: accuracy and safety. It employs a RAG pipeline to ensure that all generated responses are strictly grounded in the curated and validated knowledge base, thereby minimizing the risk of factual errors or clinical "hallucinations." Every component of the architecture, from data embedding to final response generation, is selected and configured to reinforce this principle of safe, reliable, and contextually relevant information delivery.
+Before you can query your data, it needs to be processed into structured, searchable formats.
 
-### **2.1 The End-to-End RAG Pipeline**
+- **Document Ingestion:** Raw files (PDFs, HTML, DOCX) are converted into a normalized Markdown format. This raw text and parsed text are stored in a central documents table.
+- **Smart Chunking:** Instead of splitting text by arbitrary token counts, the Markdown is chunked semantically (by headings, paragraphs, or bullet blocks). These are saved in a chunks table with positional metadata (e.g., page number, section).
+- **Embedding Computation:** An embedding model (like Gemini Embeddings) processes each chunk. The resulting vectors are stored in an embeddings table linked to their parent chunk IDs.
+- **Metadata Extraction:** An LLM scans the documents to extract structured, schema-driven fields (e.g., procedure_type, age_group, doc_type). This is stored in a structured store, such as DuckDB, enabling hard filtering later.
 
-The system operates on a well-defined data flow that begins with a user query and ends with a generated response. This pipeline will be orchestrated using a framework like LangChain or LlamaIndex, which provides robust, modular components for building complex LLM applications.
-The end-to-end process is as follows:
+### **2.2 Phase 2: Dual-Path Retrieval (Query Time)**
 
-1. **User Query Input:** The user (a patient or parent) submits a query in either English or Traditional Chinese through the front-end interface (developed using Streamlit or Gradio).
-2. **Query Embedding:** The user's raw text query is passed to a high-performance text embedding model. This model converts the query into a high-dimensional vector representation that captures its semantic meaning.
-3. **Context Retrieval:** This vector is then used to query a vector database (e.g., Pinecone, ChromaDB, or a local instance of FAISS). The database performs a similarity search and returns the top-k (e.g., top 5\) most semantically similar Q\&A chunks from the pre-indexed knowledge base. This retrieved information constitutes the "context."
-4. **Prompt Augmentation:** The retrieved context chunks are combined with the original user query and a carefully engineered metaprompt (see Section 2.4) into a single, comprehensive prompt for the LLM.
-5. **Response Generation:** The augmented prompt is sent to the selected LLM (e.g., Gemini-2.5 Pro, GPT-5-mini). The LLM processes the prompt and generates a natural language response that directly answers the user's query, using only the information provided in the retrieved context.
-6. **Post-processing and Output:** The generated response undergoes a final safety check (e.g., for any flagged keywords) and is then displayed to the user in the chat interface.
+When a user asks a question, the system fans the query out into two distinct, parallel paths.
 
-This architecture ensures that the LLM does not operate in a vacuum. Instead of relying on its vast but potentially flawed internal knowledge, its primary task is transformed into one of synthesis and summarization based on a small, highly relevant, and pre-vetted set of facts.
+#### **Path 1: Semantic Search (The "Fuzzy" Concept Matcher)**
+- **Embed Query:** The user's prompt is embedded using the same model from the ingestion phase.
+- **Vector Search:** The system runs a similarity search over the embeddings table to fetch the top N chunks (e.g., 50–200) that are conceptually similar to the query.
+- **Result:** A candidate list of top-ranked chunks and their parent documents.
 
-### **2.2 Embedding Strategy for Bilingual Medical Text**
+#### **Path 2: Metadata Filtering (The "Hard" Constraint Matcher)**
+- **Interpret Query:** An LLM translates the natural language question into structured SQL/metadata constraints (e.g., “Which leaflets mention fasting for children under 5?” becomes `doc_type = 'patient_leaflet' AND age_group = 'under_5'`).
+- **Filter Store:** These constraints run against the structured metadata tables (e.g., in DuckDB) to isolate exact document matches.
+- **Result:** A candidate list of documents matching the hard parameters.
 
-The effectiveness of the retrieval step hinges on the quality of the text embedding model. The chosen model must be capable of creating similar vector representations for queries and documents that are semantically equivalent, even if they use different wording. For this project, the challenge is compounded by the requirement to handle both English and Traditional Chinese, including complex medical terminology in both languages.
-To address this, a formal evaluation will be conducted to select the optimal embedding model. The leading candidates for this task include:
+#### **Merging the Paths**
+- **Deduplicate & Union:** The system combines the document IDs from both Path 1 and Path 2 into a single set.
+- **Score & Prioritize:** Documents are ranked using a combined score (e.g., maximum semantic chunk similarity + a bonus for metadata matches).
+- **Size Control:** The list is aggressively trimmed to a manageable maximum (e.g., 20–50 documents) to save time and token costs for the next phase.
 
-- **Proprietary Models:**
-  - **OpenAI text-embedding-3-large:** A state-of-the-art model known for its strong performance across a wide range of languages and its high ranking on multilingual benchmarks.
-  - **Cohere embed-multilingual-v3.0:** A model specifically designed and optimized for high-performance multilingual retrieval tasks, making it a strong contender.
-- **Open-Source Models:**
-  - **BGE-M3 (Beijing Academy of AI):** A leading open-source model that supports over 100 languages, including Traditional Chinese, and has demonstrated top-tier performance on the Massive Text Embedding Benchmark (MTEB).
+### **2.3 Phase 3: Agentic File Exploration (The Brains)**
 
-The selection process will involve creating a "golden dataset" of approximately 100 English medical questions relevant to pediatric IR, which will then be professionally translated into Traditional Chinese by a bilingual clinical expert. For each candidate model, the cosine similarity between the vector embeddings of the English question and its Chinese translation will be calculated. The model that consistently produces the highest average cosine similarity across the dataset will be selected, as this indicates the strongest ability to understand and map the semantic meaning of medical concepts across both target languages.
+Instead of just dumping the retrieved text into an LLM context window, an agent iteratively explores the refined candidate set.
 
-### **2.3 Retrieval Mechanisms: A Hybrid Approach**
-
-Relying solely on semantic (vector) search can sometimes be insufficient, particularly when user queries contain very specific, low-frequency keywords such as drug names, procedure acronyms, or specific clinician names. To create a more robust and resilient retrieval system, a hybrid approach combining semantic search with traditional keyword search will be implemented.
-
-- **Semantic Search:** This will be the primary retrieval method. As described above, it uses the vector database to find documents based on their conceptual meaning, which is highly effective for handling paraphrased questions and natural language queries.
-- **Keyword Search:** In parallel with the semantic search, the user's query will also be sent to a keyword-based search index, such as one implemented with BM25 (a ranking function used by search engines like Elasticsearch). This index will excel at matching exact terms and acronyms.
-- **Re-ranking:** The results from both the semantic and keyword searches will be collected and passed to a final re-ranking step. This can be accomplished using a sophisticated cross-encoder model or a dedicated re-ranking API (e.g., Cohere Rerank). The re-ranker's job is to take the top 10-20 candidate documents from both search methods and intelligently re-order them to produce the final top 3-5 most relevant documents. This multi-stage retrieval process, which includes query optimization and re-ranking, mirrors the advanced features of the high-performing OpenAI Assistants API noted in the NeuroBot study and significantly increases the likelihood of providing the most accurate context to the LLM.1
-
-### **2.4 Generation and Advanced Prompt Engineering**
-
-The final layer of control and safety within the RAG architecture is the prompt sent to the generative LLM. A carefully constructed "metaprompt" will be used to strictly guide the LLM's behavior, ensuring it adheres to its designated role and safety constraints. This prompt is not merely a request for information; it is a set of binding instructions.
-The metaprompt will consist of several key components:
-
-- **Role and Persona Instruction:** "You are 'PediIR-Bot,' a helpful and friendly AI assistant from the Hong Kong Children's Hospital Radiology department. Your purpose is to provide clear and simple information to patients and their families about pediatric interventional radiology procedures."
-- **Grounding and Hallucination Prevention Instruction:** "You MUST base your answer EXCLUSIVELY on the information provided in the 'CONTEXT' section below. Do not use any of your own internal knowledge or information from outside this context. If the provided context does not contain the information needed to answer the question, you MUST respond with the exact phrase: 'I'm sorry, I don't have the specific information to answer that question. It's a very good question, and I recommend you ask one of the nurses or your doctor. Would you like me to provide the contact number for the IR nurse coordinator?'"
-- **Medical Advice Prohibition and Liability Disclaimer:** "You are strictly forbidden from providing any form of medical advice, diagnosis, treatment recommendations, or interpretation of a patient's personal medical situation. Your role is purely educational. Every response you provide must end with the following disclaimer: 'Please remember, this information is for educational purposes only and is not a substitute for professional medical advice. Always discuss any specific medical questions or concerns with your doctor or nurse.'"
-- **Tone and Language Instruction:** "Your tone must always be empathetic, reassuring, and easy to understand. Use simple language and avoid complex medical jargon. The user may ask questions in English or Traditional Chinese. You must generate your response in the same language as the user's original query."
-
-This detailed prompt engineering serves as a critical safeguard, transforming the powerful but unpredictable LLM into a constrained and reliable tool fit for a sensitive clinical application.
+- **Parallel Shallow Scan:** The agent uses tools to quickly read summaries, headings, or abstracts across the candidate documents to build a mental map of what is relevant.
+- **Targeted Deep Dive:** For the most promising files, the agent issues specific tool calls to read full sections, search for exact terms inside a document, or extract structured data (like specific risks or instructions).
+- **Backtracking & Cross-Referencing:** If the initial deep dive lacks context, the agent can backtrack to deprioritized documents or follow cross-references (e.g., opening a linked procedure annex from a general guide).
+- **Answer Synthesis:** Once sufficient evidence is gathered, the agent drafts a final response, summarizing the findings and providing precise pointers/citations to the supporting document sections.
 
 ## **III. A Multi-faceted Evaluation Framework for Large Language Model Selection**
 
